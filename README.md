@@ -4,6 +4,7 @@ Main differences:
 
 * Unstable, used mostly as playground
 * Removed legacy code which not works with newest versions of Tcl/Tk
+* Removed creating relocatable version of the library
 * More to come
 
 ## Build the library from sources
