@@ -82,13 +82,10 @@ tcl_record_sizes$(EXE): tcl_record_sizes.c
 tcl_record_sizes.c: tcl_record_sizes.tcl
 	tclsh $< >$@
 
-build:: lib-static lib-relocatable
+build:: lib-static
 
 lib-static:
 	$(GPRBUILD) -p -P $(TASH_GPR) $< -XLIBRARY_TYPE=static
-
-lib-relocatable:
-	$(GPRBUILD) -p -P $(TASH_GPR) -XLIBRARY_TYPE=relocatable
 
 # To distribute source ...
 dist:
@@ -101,8 +98,7 @@ test:
 
 clean:
 	-$(GPRCLEAN) -P $(TASH_GPR) -XLIBRARY_TYPE=static
-	-$(GPRCLEAN) -P $(TASH_GPR) -XLIBRARY_TYPE=relocatable
 	-rm -f *~ \
 	  tcl_record_sizes.c tcl_record_sizes$(EXE) tcl_record_sizes.ads
 
-.PHONY: all build clean dist install test lib-static lib-relocatable
+.PHONY: all build clean dist install test lib-static
