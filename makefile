@@ -43,7 +43,7 @@ clean:
 
 # Rule "install" does not depend on rule "all":
 # "make install" should be executed as root but not necessarily "make all".
-install: install-static install-relocatable
+install: install-static
 
 install-static:
 	gprinstall					\
@@ -57,19 +57,6 @@ install-static:
 	  --create-missing-dirs				\
 	  --build-var=LIBRARY_TYPE			\
 	  --build-name=static
-
-install-relocatable:
-	gprinstall					\
-	  -f						\
-	  --prefix=$(prefix)				\
-	  -P tashy.gpr					\
-	  --install-name=tashy				\
-	  --project-subdir=$(GPR_INSTALL_SUBDIR)	\
-	  -XLIBRARY_TYPE=relocatable			\
-	  --mode=dev					\
-	  --create-missing-dirs				\
-	  --build-var=LIBRARY_TYPE			\
-	  --build-name=relocatable
 
 # Rules for constructing a distribution.
 
