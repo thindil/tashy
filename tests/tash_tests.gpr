@@ -1,0 +1,60 @@
+--  Copyright (C) Simon Wright <simon@pushface.org>
+
+--  This package is free software; you can redistribute it and/or
+--  modify it under terms of the GNU General Public License as
+--  published by the Free Software Foundation; either version 2, or
+--  (at your option) any later version. This package is distributed in
+--  the hope that it will be useful, but WITHOUT ANY WARRANTY; without
+--  even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+--  PARTICULAR PURPOSE. See the GNU General Public License for more
+--  details. You should have received a copy of the GNU General Public
+--  License distributed with this package; see file COPYING.  If not,
+--  write to the Free Software Foundation, 59 Temple Place - Suite
+--  330, Boston, MA 02111-1307, USA.
+
+--  This file provides the compilation options for building the Tash
+--  tests.
+
+with "../tashy";
+
+project Tash_Tests is
+
+   Tcl_Mains :=
+     (
+      "compare",
+      "tashtest"
+     );
+
+   for Main use Tcl_Mains;
+
+   for Exec_Dir use ".";
+
+   --  The source locations for the project.
+   for Source_Dirs use (".");
+
+   --  Each Project that contains source must have its own build
+   --  directory.
+   for Object_Dir use ".build";
+
+   --  GNATMAKE configuration options.
+   package Builder is
+      for Default_Switches ("ada") use ("-m", "-g");
+   end Builder;
+
+   --  GCC configuration options.
+   package Compiler is
+      for Default_Switches ("ada") use
+        (
+         "-O2",
+         "-gnatqQafoy",
+         "-gnatwaL"
+        );
+
+   end Compiler;
+
+   -- GNATBIND configuration options.
+   package Binder is
+      for Default_Switches ("ada") use ("-E");
+   end Binder;
+
+end Tash_Tests;

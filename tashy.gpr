@@ -1,0 +1,109 @@
+--  Copyright (C) Simon Wright <simon@pushface.org>
+
+--  This package is free software; you can redistribute it and/or
+--  modify it under terms of the GNU General Public License as
+--  published by the Free Software Foundation; either version 2, or
+--  (at your option) any later version. This package is distributed in
+--  the hope that it will be useful, but WITHOUT ANY WARRANTY; without
+--  even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+--  PARTICULAR PURPOSE. See the GNU General Public License for more
+--  details. You should have received a copy of the GNU General Public
+--  License distributed with this package; see file COPYING.  If not,
+--  write to the Free Software Foundation, 59 Temple Place - Suite
+--  330, Boston, MA 02111-1307, USA.
+
+--  This file provides the compilation options for building the
+--  tcladashell library libtash.{a,dll,so,dylib}.
+--
+--  The withed 'tash_options.gpr' is created by running the script
+--  'setup.tcl' in the parent directory.
+
+with "tash_options";
+
+project Tashy is
+
+   type Library_T is ("static", "relocatable");
+   Library_Type : Library_T := external ("LIBRARY_TYPE", "static");
+
+   for Library_Name use "tashy";
+
+   for Languages use ("ada", "c");
+
+   for Source_Dirs use ("src");
+
+   Basic_Ada_Source_Files :=
+     (
+      "cargv.adb",
+      "cargv.ads",
+      "chelper.adb",
+      "chelper.ads",
+      "tcl-ada.adb",
+      "tcl-ada.ads",
+      "tcl-async.adb",
+      "tcl-async.ads",
+      "tcl-tk-ada.adb",
+      "tcl-tk-ada.ads",
+      "tcl-tk.adb",
+      "tcl-tk.ads",
+      "tcl.adb",
+      "tcl.ads",
+      "tcl_record_sizes.ads"
+     );
+
+   Basic_Ada_Units :=
+     (
+      "cargv",
+      "chelper",
+      "tcl.ada",
+      "tcl.async",
+      "tcl.tk.ada",
+      "tcl.tk",
+      "tcl",
+      "tcl_record_sizes"
+     );
+
+   Basic_C_Source_Files :=
+     (
+      "tclmacro.c",
+      "tkmacro.c"
+     );
+
+   Source_Units := Basic_Ada_Units;
+   --  Variable can't be declared for the first time in a case
+   --  alternative.
+
+   for Source_Files use
+      Basic_Ada_Source_Files & Basic_C_Source_Files;
+
+   for Object_Dir use ".build_lib-" & Library_Type;
+   for Library_Kind use Library_Type;
+   for Library_Dir use "lib-" & Library_Type;
+   for Library_Src_Dir use "include-" & Library_Type;
+   case Library_Type is
+      when "relocatable" =>
+         for Library_Interface use Source_Units;
+         for Library_Options use Tash_Options.Linker_Options;
+      when "static" =>
+         null;
+   end case;
+
+   package Builder is
+      for Default_Switches ("ada") use ("-m", "-g");
+   end Builder;
+
+   package Compiler is
+      for Default_Switches ("ada") use Tash_Options.Compiler_Options;
+      for Default_Switches ("c") use Tash_Options.C_Compiler_Options;
+   end Compiler;
+
+   package Linker is
+      for Linker_Options use Tash_Options.Linker_Options;
+   end Linker;
+
+   --  Pretty printer (useful with GPS while reformatting the code to
+   --  avoid style & other warnings).
+   package Pretty_Printer is
+      for Default_Switches ("ada") use ("-l2", "-c3");
+   end Pretty_Printer;
+
+end Tashy;
