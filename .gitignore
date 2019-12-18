@@ -9,8 +9,8 @@ makeconf
 tash_options.gpr
 
 include
-lib-static
-lib-relocatable
+lib
+obj
 
 demos/freq
 demos/futurevalue
