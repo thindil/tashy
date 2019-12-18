@@ -85,7 +85,7 @@ tcl_record_sizes.c: tcl_record_sizes.tcl
 build:: lib-static
 
 lib-static:
-	$(GPRBUILD) -p -P $(TASH_GPR) $< -XLIBRARY_TYPE=static
+	$(GPRBUILD) -p -P $(TASH_GPR) $<
 
 # To distribute source ...
 dist:
@@ -97,7 +97,7 @@ test:
 	# no action
 
 clean:
-	-$(GPRCLEAN) -P $(TASH_GPR) -XLIBRARY_TYPE=static
+	-$(GPRCLEAN) -P $(TASH_GPR)
 	-rm -f *~ \
 	  tcl_record_sizes.c tcl_record_sizes$(EXE) tcl_record_sizes.ads
 
