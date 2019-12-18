@@ -22,9 +22,6 @@ with "tash_options";
 
 project Tashy is
 
-   type Library_T is ("static", "relocatable");
-   Library_Type : Library_T := external ("LIBRARY_TYPE", "static");
-
    for Library_Name use "tashy";
 
    for Languages use ("ada", "c");
@@ -50,42 +47,19 @@ project Tashy is
       "tcl_record_sizes.ads"
      );
 
-   Basic_Ada_Units :=
-     (
-      "cargv",
-      "chelper",
-      "tcl.ada",
-      "tcl.async",
-      "tcl.tk.ada",
-      "tcl.tk",
-      "tcl",
-      "tcl_record_sizes"
-     );
-
    Basic_C_Source_Files :=
      (
       "tclmacro.c",
       "tkmacro.c"
      );
 
-   Source_Units := Basic_Ada_Units;
-   --  Variable can't be declared for the first time in a case
-   --  alternative.
-
    for Source_Files use
       Basic_Ada_Source_Files & Basic_C_Source_Files;
 
-   for Object_Dir use ".build_lib-" & Library_Type;
-   for Library_Kind use Library_Type;
-   for Library_Dir use "lib-" & Library_Type;
-   for Library_Src_Dir use "include-" & Library_Type;
-   case Library_Type is
-      when "relocatable" =>
-         for Library_Interface use Source_Units;
-         for Library_Options use Tash_Options.Linker_Options;
-      when "static" =>
-         null;
-   end case;
+   for Object_Dir use "obj";
+   for Library_Kind use "static";
+   for Library_Dir use "lib";
+   for Library_Src_Dir use "include";
 
    package Builder is
       for Default_Switches ("ada") use ("-m", "-g");
@@ -100,10 +74,18 @@ project Tashy is
       for Linker_Options use Tash_Options.Linker_Options;
    end Linker;
 
-   --  Pretty printer (useful with GPS while reformatting the code to
-   --  avoid style & other warnings).
-   package Pretty_Printer is
-      for Default_Switches ("ada") use ("-l2", "-c3");
-   end Pretty_Printer;
+    package Pretty_Printer is
+        for Default_Switches("ada") use ("--RM-style-spacing",
+                "--no-separate-loop-then",
+                "--no-separate-is",
+                "-rnb",
+                "-j0");
+    end Pretty_Printer;
+
+    package GnatTest is
+       for Tests_Dir use "../tests";
+       for Harness_Dir use "../tests/driver";
+       for GnatTest_Switches use ("--omit-sloc", "--test-case-only");
+    end GnatTest;
 
 end Tashy;
