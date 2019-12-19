@@ -62,7 +62,7 @@ project Tashy is
    for Library_Src_Dir use "include";
 
    package Builder is
-      for Default_Switches ("ada") use ("-m", "-g");
+      for Default_Switches ("ada") use ("-m", "-g", "-j0", "-gnat2012");
    end Builder;
 
    package Compiler is
