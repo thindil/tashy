@@ -48,15 +48,8 @@ install: install-static
 install-static:
 	gprinstall					\
 	  -f						\
-	  --prefix=$(prefix)				\
 	  -P tashy.gpr					\
-	  --install-name=tashy				\
-	  --project-subdir=$(GPR_INSTALL_SUBDIR)	\
-	  -XLIBRARY_TYPE=static				\
-	  --mode=dev					\
-	  --create-missing-dirs				\
-	  --build-var=LIBRARY_TYPE			\
-	  --build-name=static
+	  --create-missing-dirs
 
 # Rules for constructing a distribution.
 
