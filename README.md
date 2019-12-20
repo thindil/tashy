@@ -27,7 +27,7 @@ To build you need:
 If you have all the required packages, navigate to the main directory(where
 this file is) to compile and type in the console:
 
-1. `./setup.tcl` to setup all configuration needed for compilation
+1. `scripts/setup.tcl` to setup all configuration needed for compilation
 2. `make all` to compile library
 3. `make install` to install it with gprinstall which allow use it inside
    GNAT project files. On Unix systems this steps may require root privileges.
