@@ -27,7 +27,7 @@
 
 include makeconf
 
-SUBDIRS = src tests demos
+SUBDIRS = src demos
 
 FOR_ALL_SUBUNITS = +for i in ${SUBDIRS}; do ${MAKE} -w -C $${i} $@ || exit 1; done
 
