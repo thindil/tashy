@@ -33,14 +33,16 @@ project Tash_Demos is
 
   for Main use Tcl_Mains;
 
-  for Exec_Dir use ".";
+  for Exec_Dir use "bin";
 
   --  The source locations for the project.
   for Source_Dirs use (".");
 
   --  Each Project that contains source must have its own build
   --  directory.
-  for Object_Dir use ".build";
+  for Object_Dir use "obj";
+
+   for Create_Missing_Dirs use "True";
 
   --  GNATMAKE configuration options.
   package Builder renames Tashy.Builder;
