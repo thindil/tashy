@@ -5,6 +5,7 @@ Main differences:
 * Unstable, used mostly as playground
 * Removed legacy code which not works with newest versions of Tcl/Tk
 * Removed creating relocatable version of the library
+* Removed tests
 * More to come
 
 ## Build the library from sources
@@ -27,7 +28,8 @@ To build you need:
 If you have all the required packages, navigate to the main directory(where
 this file is) to compile and type in the console:
 
-1. `scripts/setup.tcl` to setup all configuration needed for compilation
+1. `wish scripts/setup.tcl` to setup all configuration needed for compilation.
+   On Windows it will be `wish scripts\setup.tcl`.
 2. `make all` to compile library
 3. `make install` to install it with gprinstall which allow use it inside
    GNAT project files. On Unix systems this steps may require root privileges.
