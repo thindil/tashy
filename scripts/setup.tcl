@@ -1,8 +1,3 @@
-#!/bin/sh
-# -*- Tcl -*- (for Emacs)
-#\
-exec wish $0 $@
-
 # Copyright (C) 1997-2000 Terry J. Westley
 # Copyright (C) Simon Wright <simon@pushface.org>
 
@@ -49,45 +44,6 @@ proc WriteOneMacro {f name value comments} {
 	puts $f "# [string trimleft $line]"
     }
     puts $f [format "%-18s = %s" $name $value]
-}
-
-# Where is GNAT installed?
-proc FindInstallationPrefix {} {
-    # This proc finds the directory one up from where "gnatls" is
-    # found. If we were only running on Unix, 'which' would help; but
-    # Windows is trickier.
-
-    global env tcl_platform
-
-    if {$tcl_platform(platform) == "windows"} {
-        set path_sep ";"
-        set dir_sep "\\"
-        set gnatls "gnatls.exe"
-    } else {
-        set path_sep ":"
-        set dir_sep "/"
-        set gnatls "gnatls"
-    }
-    set paths [split $env(PATH) $path_sep]
-    foreach p $paths {
-        set candidate $p$dir_sep$gnatls
-        if [file executable "$candidate"] {
-            return [file dirname $p]
-        }
-    }
-    puts "*** couldn't find $gnatls on the PATH."
-    set prefix "."
-    return $prefix
-}
-
-# Where are GPRs installed?
-proc FindGprInstallSubdir {} {
-    set prefix [FindInstallationPrefix]
-    if {[file exists /etc/debian_version] && [cequal $prefix /usr]} {
-        return share/ada/adainclude
-    } else {
-        return lib/gnat
-    }
 }
 
 # Create the makeconf file
@@ -296,11 +252,6 @@ proc Set_Macros {platform os osVersion} {
     setvar OSVERSION         $osVersion           {Operating system version}
     setvar TASH_VERSION      "$tash_version"      {TASH version}
     setvar TASH_RELEASE      "$tash_release"      {TASH release}
-    setvar prefix            "[FindInstallationPrefix]" \
-                                                  {GNAT installation directory}
-    setvar GPR_INSTALL_SUBDIR \
-                             "[FindGprInstallSubdir]" \
-                                                  {GPR installation subdir}
     if [lempty $x11home] {
 	setvar X11HOME       ""                   {X11 home directory}
     } else {
