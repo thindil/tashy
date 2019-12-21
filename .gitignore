@@ -8,7 +8,6 @@ auto.cgpr
 makeconf
 tash_options.gpr
 
-include
 lib
 obj
 
@@ -25,9 +24,3 @@ demos/freq.unsorted
 demos/freq.*.out
 demos/watching.in
 demos/words
-
-src/tcl_record_sizes*
-
-tests/compare
-tests/tashtest
-tests/test_compare.ada
