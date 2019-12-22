@@ -146,12 +146,21 @@ proc Save_GUI {g} {
 }
 
 # Implement Save command.  Creates makefile and tash_options.gpr
+# Also, create tcl_record_sizes.ads file
 #-----------------------------------------------------------------
 proc Save {} {
-   global makefile
+   global makefile tashvar tcl_platform
    CreateMakeconfFile $makefile
    CreateGprFile
    source [file join [pwd] scripts tcl_record_sizes.tcl]
+   exec gcc $tashvar(TCL_INCLUDE) -o tcl_record_sizes [file join [pwd] src tcl_record_sizes.c]
+   file delete [file join [pwd] src tcl_record_sizes.c]
+   exec [file join [pwd] tcl_record_sizes] > [file join [pwd] src tcl_record_sizes.ads]
+   if [cequal $tcl_platform(platform) "windows"] {
+      file delete [file join [pwd] tcl_record_sizes.exe]
+   } else {
+      file delete [file join [pwd] tcl_record_sizes]
+   }
 }
 
 
@@ -199,6 +208,7 @@ proc Set_Macros {platform os osVersion} {
          set tcldll "tcl${tcl_short_version}.dll"
          set libtk ""
          set tkdll  "tk${tk_short_version}.dll"
+         set tcl_include [file join $tclhome include]
          append library_switches "-L$tclhome/lib "
          append library_switches "-ltk$tk_short_version "
          append library_switches "-ltcl$tcl_short_version "
