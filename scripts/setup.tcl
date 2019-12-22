@@ -151,6 +151,7 @@ proc Save {} {
    global makefile
    CreateMakeconfFile $makefile
    CreateGprFile
+   source [file join [pwd] scripts tcl_record_sizes.tcl]
 }
 
 
