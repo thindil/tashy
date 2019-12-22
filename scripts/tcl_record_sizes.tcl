@@ -19,7 +19,9 @@
 # Used during configuration to determine sizes of various structs
 # whose contents are "private" (or would be, if C supported it!)
 
-puts -nonewline {/*
+set fp [open [file join [pwd] src tcl_record_sizes.c] w]
+
+puts -nonewline $fp {/*
  *  Tash is free software; you can redistribute it and/or modify it
  *  under terms of the GNU General Public License as published by the
  *  Free Software Foundation; either version 2, or (at your option)
@@ -44,15 +46,15 @@ puts -nonewline {/*
 #include <stdio.h>
 #include <tcl.h>
 
-#define TYPE_ALIGNMENT(t) offsetof(struct { char x; t test; }, test) 
+#define TYPE_ALIGNMENT(t) offsetof(struct { char x; t test; }, test)
 
 int main()
 }
 
-puts -nonewline "{"
+puts -nonewline $fp "{"
 
 # front matter
-puts -nonewline {
+puts -nonewline $fp {
   printf("--  Tash is free software; you can redistribute it and/or modify it\n");
   printf("--  under terms of the GNU General Public License as published by the\n");
   printf("--  Free Software Foundation; either version 2, or (at your option)\n");
@@ -79,7 +81,7 @@ puts -nonewline {
 
 # Macros defined in tcl.h
 
-puts -nonewline {
+puts -nonewline $fp {
   printf("\n");
   printf("   --  Size macros defined in tcl.h.\n");
 }
@@ -88,7 +90,7 @@ foreach {m} {
     NUM_STATIC_TOKENS
     TCL_DSTRING_STATIC_SIZE
 } {
-    puts -nonewline "
+    puts -nonewline $fp "
   printf(\"\\n\");
   printf(\"   ${m} : constant := %d;\\n\",
          ${m});"
@@ -96,7 +98,7 @@ foreach {m} {
 
 # Sizes, alignments of structs
 
-puts -nonewline {
+puts -nonewline $fp {
   printf("\n");
   printf("   --  Sizes of structs defined in tcl.h.\n");
 }
@@ -108,7 +110,7 @@ foreach {s} {
     Tcl_Interp
     Tcl_SavedResult
 } {
-    puts -nonewline "
+    puts -nonewline $fp "
   printf(\"\\n\");
   printf(\"   ${s}_Size : constant := %d;\\n\",
            sizeof(struct ${s}));
@@ -119,10 +121,11 @@ foreach {s} {
 
 # Closing
 
-puts -nonewline {
+puts -nonewline $fp {
   printf("\n");
   printf("end Tcl_Record_Sizes;\n");
   return 0;
 }
 
-puts "}"
+puts $fp "}"
+close $fp
