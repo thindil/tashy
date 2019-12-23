@@ -33,7 +33,7 @@ project Tash_Demos is
 
   for Main use Tcl_Mains;
 
-  for Exec_Dir use "bin";
+  for Exec_Dir use ".";
 
   --  The source locations for the project.
   for Source_Dirs use (".");
