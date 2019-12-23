@@ -5,7 +5,6 @@
 gpr_query.db*
 auto.cgpr
 
-makeconf
 tash_options.gpr
 
 lib
@@ -24,3 +23,5 @@ demos/freq.unsorted
 demos/freq.*.out
 demos/watching.in
 demos/words
+
+src/tcl_record_sizes.ads
