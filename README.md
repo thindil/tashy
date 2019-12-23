@@ -6,6 +6,7 @@ Main differences:
 * Removed legacy code which not works with newest versions of Tcl/Tk
 * Removed creating relocatable version of the library
 * Removed tests
+* Removed makefiles
 * More to come
 
 ## Build the library from sources
@@ -30,9 +31,19 @@ this file is) to compile and type in the console:
 
 1. `wish scripts/setup.tcl` to setup all configuration needed for compilation.
    On Windows it will be `wish scripts\setup.tcl`.
-2. `make all` to compile library
-3. `make install` to install it with gprinstall which allow use it inside
-   GNAT project files. On Unix systems this steps may require root privileges.
+2. `gprbuild -P tashy.gpr` to compile the library.
+3. `gprinstall -P tashy.gpr -p` to install it with gprinstall which allow use
+   it inside GNAT project files. On Unix systems this step may require root
+   privileges.
+
+If you have installed [Bob](https://github.com/thindil/bob) you can use it in
+that way:
+
+1. `bob setup` to setup all configuration needed for compilation.
+2. `bob build` to compile the library.
+3. `bob install` to install it with gprinstall which allow use
+   it inside GNAT project files. On Unix systems this step may require root
+   privileges.
 
 ## Using the library in your project
 
