@@ -45,6 +45,11 @@ that way:
    it inside GNAT project files. On Unix systems this step may require root
    privileges.
 
+To remove all generated/compiled files type in the console:
+`tclsh scripts/clean.tcl` (on Unix) or `tclsh scripts\clean.tcl` (on Windows).
+If you have installed [Bob](https://github.com/thindil/bob) you can type:
+`bob clean`
+
 ## Using the library in your project
 
 If you use a GNAT project file in your project, simply add `with "tashy"` at
