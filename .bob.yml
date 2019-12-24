@@ -1,0 +1,64 @@
+- command:
+   name: setup
+   execute:
+      - wish scripts/setup.tcl
+   description: Open configuration UI
+   flags:
+      - unixonly
+- command:
+   name: setup
+   execute:
+      - wish scripts\setup.tcl
+   description: Open configuration UI
+   flags:
+      - windowsonly
+- command:
+   name: autosetup
+   execute:
+      - wish scripts/setup.tcl --nogui
+   description: Auto configure build variables
+   flags:
+      - unixonly
+- command:
+   name: autosetup
+   execute:
+      - wish scripts\setup.tcl --nogui
+   description: Auto configure build variables
+   flags:
+      - windowsonly
+- command:
+   name: install
+   execute:
+      - gprinstall -f -P tashy.gpr --create-missing-dirs
+   description: Install the library for use with GNAT
+- command:
+   name: build
+   execute:
+      - gprbuild -P tashy.gpr
+   description: Build the library
+- command:
+   name: clean
+   execute:
+      - tclsh scripts/clean.tcl
+   description: Clear compilation of the library.
+   flags:
+      - unixonly
+- command:
+   name: clean
+   execute:
+      - tclsh scripts\clean.tcl
+   description: Clear compilation of the library.
+   flags:
+      - windowsonly
+- command:
+   name: builddemos
+   execute:
+      - cd demos
+      - gprbuild -P tash_demos.gpr
+   description: Build the library demos
+- command:
+   name: cleardemos
+   execute:
+      - cd demos
+      - gprclean -P tash_demos.gpr
+   description: Clear the library demos
