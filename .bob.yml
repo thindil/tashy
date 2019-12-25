@@ -62,3 +62,10 @@
       - cd demos
       - gprclean -P tash_demos.gpr
    description: Clear the library demos
+- command:
+   name: docs
+   execute:
+      - scripts/generatedocs.py
+   description: Generate code documentation
+   flags:
+      - unixonly
