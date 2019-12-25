@@ -17,14 +17,25 @@
 with Interfaces.C.Pointers;
 with Interfaces.C.Strings;
 
+-- ****h* Tashy/CArgv
+-- FUNCTION
+--  This package provides the data type Chars_Ptr_Ptr which corresponds
+--  to the char** of C and subprograms for creating and manipulating
+--  arrays of C strings.
+-- SOURCE
 package CArgv is
+-- ****
 
    package C renames Interfaces.C;
 
    subtype CNatural is C.int range 0 .. C.int'Last;
 
-   type Vector is array (CNatural range <>) of aliased C.Strings.chars_ptr;
+   -- ****t* CArgv/Vector
+   -- FUNCTION
    --  This is a C-style "argv" vector.
+   -- SOURCE
+   type Vector is array (CNatural range <>) of aliased C.Strings.chars_ptr;
+   -- ****
 
    package Argv_Pointer
    is new C.Pointers (Index => CNatural,
@@ -32,8 +43,12 @@ package CArgv is
                       Element_Array => Vector,
                       Default_Terminator => C.Strings.Null_Ptr);
 
-   subtype Chars_Ptr_Ptr is Argv_Pointer.Pointer;
+   -- ****t* CArgv/Chars_Ptr_Ptr
+   -- FUNCTION
    --  This is C char **
+   -- SOURCE
+   subtype Chars_Ptr_Ptr is Argv_Pointer.Pointer;
+   -- ****
 
    ---------------------------------------------------------------------
    --
@@ -42,15 +57,27 @@ package CArgv is
    --
    ---------------------------------------------------------------------
 
-   procedure Create (Argc : out CNatural; Argv : out Chars_Ptr_Ptr);
+   -- ****f* CArgv/Create
+   -- FUNCTION
    --  Create returns the command line arguments from Ada.Command_Line
    --  and converts them to a C-style, null-terminated argument vector.
+   -- SOURCE
+   procedure Create (Argc : out CNatural; Argv : out Chars_Ptr_Ptr);
+   -- ****
 
-   procedure Show (Argc : in CNatural; Argv : in Chars_Ptr_Ptr);
+   -- ****f* CArgv/Show
+   -- FUNCTION
    --  Prints Argc and Argv to standard out.
+   -- SOURCE
+   procedure Show (Argc : in CNatural; Argv : in Chars_Ptr_Ptr);
+   -- ****
 
-   procedure Free (Argv : in out Chars_Ptr_Ptr);
+   -- ****f* CArgv/Free
+   -- FUNCTION
    --  Free all space used by Argv.
+   -- SOURCE
+   procedure Free (Argv : in out Chars_Ptr_Ptr);
+   -- ****
 
    --  Example of getting Ada command line arguments and passing them
    --  to a C function requiring argc/argv arguments:
@@ -71,8 +98,12 @@ package CArgv is
    --
    ---------------------------------------------------------------------
 
-   function Arg (Argv : Chars_Ptr_Ptr; N : CNatural) return String;
+   -- ****f* CArgv/Arg
+   -- FUNCTION
    --  Returns the Nth argument from Argv.
+   -- SOURCE
+   function Arg (Argv : Chars_Ptr_Ptr; N : CNatural) return String;
+   -- ****
 
    ---------------------------------------------------------------------
    --
@@ -81,14 +112,26 @@ package CArgv is
    --
    ---------------------------------------------------------------------
 
-   function Empty return Chars_Ptr_Ptr;
+   -- ****f* CArgv/Empty
+   -- FUNCTION
    --  An empty Chars_Ptr_Ptr, used for constructors.
+   -- SOURCE
+   function Empty return Chars_Ptr_Ptr;
+   -- ****
 
-   function "&" (Argv : Chars_Ptr_Ptr; Arg : String) return Chars_Ptr_Ptr;
+   -- ****f* CArgv/"&"
+   -- FUNCTION
    --  Construct a Chars_Ptr_Ptr using concat operation.
+   -- SOURCE
+   function "&" (Argv : Chars_Ptr_Ptr; Arg : String) return Chars_Ptr_Ptr;
+   -- ****
 
-   function Argc (Argv : in Chars_Ptr_Ptr) return CNatural;
+   -- ****f* CArgv/Argc
+   -- FUNCTION
    --  Returns the number of arguments in a Chars_Ptr_Ptr.
+   -- SOURCE
+   function Argc (Argv : in Chars_Ptr_Ptr) return CNatural;
+   -- ****
 
    --  Example of creating a Chars_Ptr_Ptr to pass to a C function requiring
    --  argc/argv arguments:
