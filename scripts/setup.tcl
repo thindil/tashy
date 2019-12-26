@@ -1,3 +1,7 @@
+#!/bin/sh
+# the next line restarts using wish \
+exec wish "$0" ${1+"$@"}
+
 # Copyright (C) 1997-2000 Terry J. Westley
 # Copyright (C) Simon Wright <simon@pushface.org>
 
