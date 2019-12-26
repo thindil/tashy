@@ -29,7 +29,7 @@ To build you need:
 If you have all the required packages, navigate to the main directory(where
 this file is) to compile and type in the console:
 
-1. `wish scripts/setup.tcl` to setup all configuration needed for compilation.
+1. `scripts/setup.tcl` to setup all configuration needed for compilation.
    On Windows it will be `wish scripts\setup.tcl`.
 2. `gprbuild -P tashy.gpr` to compile the library.
 3. `gprinstall -P tashy.gpr -p` to install it with gprinstall which allow use
@@ -46,7 +46,7 @@ that way:
    privileges.
 
 To remove all generated/compiled files type in the console:
-`tclsh scripts/clean.tcl` (on Unix) or `tclsh scripts\clean.tcl` (on Windows).
+`scripts/clean.tcl` (on Unix) or `tclsh scripts\clean.tcl` (on Windows).
 If you have installed [Bob](https://github.com/thindil/bob) you can type:
 `bob clean`
 
