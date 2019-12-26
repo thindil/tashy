@@ -1,3 +1,7 @@
+#!/bin/sh
+# the next line restarts using tclsh \
+exec tclsh "$0" ${1+"$@"}
+
 # Copyright (c) 2019 Bartek thindil Jasicki <thindil@laeran.pl>
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
