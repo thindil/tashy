@@ -1,7 +1,7 @@
 - command:
    name: setup
    execute:
-      - wish scripts/setup.tcl
+      - scripts/setup.tcl
    description: Open configuration UI
    flags:
       - unixonly
@@ -15,7 +15,7 @@
 - command:
    name: autosetup
    execute:
-      - wish scripts/setup.tcl --nogui
+      - scripts/setup.tcl --nogui
    description: Auto configure build variables
    flags:
       - unixonly
@@ -39,7 +39,7 @@
 - command:
    name: clean
    execute:
-      - tclsh scripts/clean.tcl
+      - scripts/clean.tcl
    description: Clear compilation of the library.
    flags:
       - unixonly
@@ -65,7 +65,14 @@
 - command:
    name: docs
    execute:
-      - scripts/generatedocs.py
+      - scripts/generatedocs.tcl
    description: Generate code documentation
    flags:
       - unixonly
+- command:
+   name: docs
+   execute:
+      - tclsh scripts\generatedocs.tcl
+   description: Generate code documentation
+   flags:
+      - windowsonly
