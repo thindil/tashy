@@ -237,7 +237,7 @@ proc Set_Macros {platform os} {
    setvar TK_VERSION        "$tk_version"        {Tk version}
    setvar TK_LIBRARY        "$libtk"             {Tk library}
    setvar CARGS             "-g -O2"             {C compiler switches}
-   setvar AARGS             "-g -O2 -gnatqQafoy -gnatwaL" \
+   setvar AARGS             "-g -O2 -gnatqQafo -gnatwaL" \
       {Ada compiler switches}
    setvar BARGS             "-E"                 {gnatbind switches}
    setvar EXE               "$exec_suffix"       {suffix for executable files}
