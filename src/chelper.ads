@@ -15,14 +15,46 @@
 with Ada.Strings.Maps;
 with Interfaces.C.Strings;
 
+-- ****h* Tashy/CHelper
+-- FUNCTION
+-- Provides additional C data types not in Interfaces.C.
+-- Also provides for the type Interfaces.C.Strings those
+-- operations available for manipulating Ada strings in
+-- Ada.Strings.Fixed.
+-- SOURCE
 package CHelper is
+-- ****
 
    package C renames Interfaces.C;
 
-   type Int_Ptr is access all C.int;                --  int *
-   type Int_Ptr_Ptr is access all Int_Ptr;              --  int **
-   type Long_Ptr is access all C.long;               --  long *
-   type Double_Ptr is access all C.double;             --  double *
+   -- ****t* CHelper/Int_Ptr
+   -- FUNCTION
+   -- int *
+   -- SOURCE
+   type Int_Ptr is access all C.int;
+   -- ****
+
+   -- ****t* CHelper/Int_Ptr_Ptr
+   -- FUNCTION
+   -- int **
+   -- SOURCE
+   type Int_Ptr_Ptr is access all Int_Ptr;
+   -- ****
+
+   -- ****t* CHelper/Long_Ptr
+   -- FUNCTION
+   -- long *
+   -- SOURCE
+   type Long_Ptr is access all C.long;
+   -- ****
+
+   -- ****t* CHelper/Double_Ptr
+   -- FUNCTION
+   -- double *
+   -- SOURCE
+   type Double_Ptr is access all C.double;
+   -- ****
+
    type Int_Array is array (C.int range <>) of C.int;
 
    function To_C (Str : in String) return C.Strings.chars_ptr renames
