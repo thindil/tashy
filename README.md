@@ -22,9 +22,9 @@ To build you need:
   lacks full support for Ada 2012.
 
 * Tcl/Tk library. Should be available in every Linux distribution. For
-  Windows it is recommended to use ActiveTcl version:
+  Windows it is recommended to use MagicSplat version:
 
-  https://www.activestate.com/products/tcl/
+  https://www.magicsplat.com/tcl-installer/index.html
 
 If you have all the required packages, navigate to the main directory(where
 this file is) to compile and type in the console:
