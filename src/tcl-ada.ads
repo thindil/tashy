@@ -47,7 +47,12 @@
 
 with CArgv;
 
+-- ****h* Tashy/Tcl.Ada
+-- FUNCTION
+-- This package provides the "thin" binding to Tcl.
+-- SOURCE
 package Tcl.Ada is
+-- ****
 
    package C renames Interfaces.C;
 
