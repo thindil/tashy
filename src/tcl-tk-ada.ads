@@ -32,25 +32,34 @@
 
 with CArgv;
 
+-- ****h* Tashy/Tcl.Tk.Ada
+-- FUNCTION
+-- This package provides the "thick" binding to Tcl.Tk.
+-- SOURCE
 package Tcl.Tk.Ada is
+-- ****
 
    package C renames Interfaces.C;
 
+   -- ****f* Tcl.Tk.Ada/Set_Trace
+   -- FUNCTION
+   -- Turn on tracing of Tcl/Tk command execution.
+   -- SOURCE
    procedure Set_Trace (State : in Boolean);
-   --  Turn on tracing of Tcl/Tk command execution.
+   -- ****
 
-   ---------------------------------------------
+   -- ****t* Tcl.Tk.Ada/Widget
+   -- FUNCTION
+   -- The Widget data type, parent of all objects displayed on the screen.
    --
-   --   The Widget data type, parent of all objects displayed on the screen.
+   -- It is abstract because it is just a convenience for creating a Widget
+   -- class and for creating non-abstract derived widget types.  Since there
+   -- is no such data type in Tk, we make it abstract so that no instance of
+   -- type Widget may be created.
    --
-   --   It is abstract because it is just a convenience for creating a Widget
-   --   class and for creating non-abstract derived widget types.  Since there
-   --   is no such data type in Tk, we make it abstract so that no instance of
-   --   type Widget may be created.
-   --
-   ---------------------------------------------
-
+   -- SOURCE
    type Widget is abstract tagged private;
+   -- ****
 
    ---------------------------------------------
    --
