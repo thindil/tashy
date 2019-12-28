@@ -46,7 +46,7 @@ proc fixdocs {dir} {
                }
             }
             regsub -all {(?!\">)(\)|:=|:|\(|&gt;|&lt;|;|,)+(?!</span>)} $line "<span class=\"sign\">&</span>" line
-            regsub -all {(?!\">)(\mis\M|\mpragma\M|\mreturn\M|\mconstant\M|\mwith\M|\maccess\M)+(?!</span>)} $line "<span class=\"keyword\">&</span>" line
+            regsub -all {(?!\">)(\mis\M|\mpragma\M|\mreturn\M|\mconstant\M|\mwith\M|\maccess\M|\mfunction\M|\mprocedure\M|\min\M|\mabstract\M)+(?!</span>)} $line "<span class=\"keyword\">&</span>" line
             if [regexp {</span>\"\w+\"} $line result] {
                set quote [string range $result 7 end]
                regsub {</span>\"\w+\"} $line "</span><span class=\"quote\">$quote</span>" line
@@ -65,6 +65,12 @@ proc fixdocs {dir} {
 
 set docsdir docs
 set configfile [file join scripts robodocada.rc]
+if {$argc > 0} {
+   set configfile [lindex $argv 0]
+}
+if {$argc > 1} {
+   set docsdir [lindex $argv 1]
+}
 
 exec robodoc --rc $configfile
 fixdocs $docsdir
