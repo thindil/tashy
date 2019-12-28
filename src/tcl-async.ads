@@ -29,21 +29,39 @@
 --
 --------------------------------------------------------------------
 
+-- ****h* Tashy/Tcl.Async
+-- FUNCTION
+-- This package supports asynchronous setting of Tcl
+-- variables or array elements from Ada.
+-- SOURCE
 package Tcl.Async is
+-- ****
 
-   --  Must be called before any other subprogram in the package.
+   -- ****f* Tcl.Async/Register
+   -- FUNCTION
+   -- Must be called before any other subprogram in the package.
+   -- SOURCE
    procedure Register (Interp : Tcl_Interp);
+   -- ****
 
-   --  Called to set the named Tcl variable in the global scope to the
-   --  given value.
+   -- ****f* Tcl.Async/Set (variable)
+   -- FUNCTION
+   -- Called to set the named Tcl variable in the global scope to the
+   -- given value.
    --
-   --  The variable will be created if necessary.
+   -- The variable will be created if necessary.
+   -- SOURCE
    procedure Set (Tcl_Variable : String; Value : String);
+   -- ****
 
+   -- ****f* Tcl.Async/Set (array)
+   -- FUNCTION
    --  Called to set the indexed element of the named Tcl array in
    --  the global scope to the given value.
    --
    --  The array will be created if necessary.
+   -- SOURCE
    procedure Set (Tcl_Array : String; Index : String; Value : String);
+   -- ****
 
 end Tcl.Async;
