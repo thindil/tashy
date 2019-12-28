@@ -67,29 +67,49 @@ package Tcl.Tk.Ada is
    --
    ---------------------------------------------
 
+   -- ****f* Tcl.Tk.Ada/Widget_Image
+   -- FUNCTION
+   -- Returns the string name of Win.
+   -- SOURCE
    function Widget_Image (Win : in Widget'Class) return String;
-   --  Returns the string name of Win.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/"&"
+   -- FUNCTION
+   -- Concatenates and returns the string names of Left and Right.
+   -- Does not insert the separating dot.
+   -- SOURCE
    function "&"
      (Left  : in Widget'Class;
       Right : in Widget'Class)
       return  String;
    function "&" (Left : in Widget'Class; Right : in String) return String;
    function "&" (Left : in String; Right : in Widget'Class) return String;
-   --  Concatenates and returns the string names of Left and Right.
-   --  Does not insert the separating dot.
+   -- ****
 
    pragma Inline (Widget_Image, "&");
 
+   -- ****f* Tcl.Tk.Ada/Set_Context
+   -- FUNCTION
+   -- Sets the interpreter context for all Tk calls which do not include
+   -- either an Interp or Widget parameter.
+   -- SOURCE
    procedure Set_Context (Interp : in Tcl_Interp);
-   --  Sets the interpreter context for all Tk calls which do not include
-   --  either an Interp or Widget parameter.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/Get_Context
+   -- FUNCTION
+   -- Gets the current interpreter context.
+   -- SOURCE
    function Get_Context return Tcl_Interp;
-   --  Gets the current interpreter context.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/Get_Interp
+   -- FUNCTION
+   -- Gets the interpreter of the specified Widget.
+   -- SOURCE
    function Get_Interp (Widgt : in Widget'Class) return Tcl_Interp;
-   --  Gets the interpreter of the specified Widget.
+   -- ****
 
    ---------------------------------------------
    --
@@ -97,6 +117,12 @@ package Tcl.Tk.Ada is
    --
    ---------------------------------------------
 
+   -- ****f* Tcl.Tk.Ada/Create1
+   -- FUNCTION
+   -- Creates a new widget in the "contextual" interpreter.  Options
+   -- may be specified via the "options" parameter or the option
+   -- database to configure the widget.
+   -- SOURCE
    function Create
      (pathName : in String;
       options  : in String := "")
@@ -107,10 +133,15 @@ package Tcl.Tk.Ada is
       pathName : in String;
       options  : in String := "")
      is abstract;
-   --  Creates a new widget in the "contextual" interpreter.  Options
-   --  may be specified via the "options" parameter or the option
-   --  database to configure the widget.
+     -- ****
 
+     -- ****f* Tcl.Tk.Ada/Create2
+     -- FUNCTION
+     -- Creates a new widget in the specified interpreter.  Options
+     -- may be specified via the "options" parameter or the option
+     -- database to configure the widget.
+     --
+     -- SOURCE
    function Create
      (Interp   : in Tcl_Interp;
       pathName : in String;
@@ -123,9 +154,7 @@ package Tcl.Tk.Ada is
       pathName : in String;
       options  : in String := "")
      is abstract;
-   --  Creates a new widget in the specified interpreter.  Options
-   --  may be specified via the "options" parameter or the option
-   --  database to configure the widget.
+     -- ****
 
    ---------------------------------------------
    --
@@ -133,8 +162,12 @@ package Tcl.Tk.Ada is
    --
    ---------------------------------------------
 
+     -- ****f* Tcl.Tk.Ada/Destroy
+     -- FUNCTION
+     -- Destroys a widget.
+     -- SOURCE
    procedure Destroy (Widgt : in out Widget'Class);
-   --  Destroys a widget.
+   -- ****
 
    ---------------------------------------------
    --
@@ -142,20 +175,28 @@ package Tcl.Tk.Ada is
    --
    ---------------------------------------------
 
+   -- ****f* Tcl.Tk.Ada/cget
+   -- FUNCTION
+   --  Returns the current value of the specified configuration option.
+   -- SOURCE
    function cget
      (Widgt  : in Widget'Class;
       option : in String)
       return   String;
-   --  Returns the current value of the specified configuration option.
+      -- ****
 
+      -- ****f* Tcl.Tk.Ada/configure
+      -- FUNCTION
+      -- Queries or modifies the configuration options.  If options is
+      -- an empty string, returns a list of all available options
+      -- for the widget.
+      -- SOURCE
    function configure
      (Widgt   : in Widget'Class;
       options : in String := "")
       return    String;
    procedure configure (Widgt : in Widget'Class; options : in String := "");
-   --  Queries or modifies the configuration options.  If options is
-   --  an empty string, returns a list of all available options
-   --  for the widget.
+   -- ****
 
    ---------------------------------------------
    --
