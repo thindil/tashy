@@ -580,6 +580,12 @@ package Tcl.Tk.Ada is
 
    type CheckButton is new Button with private;
 
+   -- ****f* Tcl.Tk.Ada/CreateCheckButton
+   -- FUNCTION
+   -- Creates a new widget in the "contextual" interpreter and makes it
+   -- into a checkbutton widget.  Options may be specified via the "options"
+   -- parameter or the option database to configure the widget.
+   -- SOURCE
    function Create
      (pathName : in String;
       options  : in String := "")
@@ -588,10 +594,14 @@ package Tcl.Tk.Ada is
      (Widgt    : out CheckButton;
       pathName : in String;
       options  : in String := "");
-   --  Creates a new widget in the "contextual" interpreter and makes it
-   --  into a checkbutton widget.  Options may be specified via the "options"
-   --  parameter or the option database to configure the widget.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/CreateCheckButton2
+   -- FUNCTION
+   -- Creates a new widget in the specified interpreter and makes it
+   -- into a checkbutton widget.  Options may be specified via the "options"
+   -- parameter or the option database to configure the widget.
+   -- SOURCE
    function Create
      (Interp   : in Tcl_Interp;
       pathName : in String;
@@ -602,18 +612,28 @@ package Tcl.Tk.Ada is
       Interp   : in Tcl_Interp;
       pathName : in String;
       options  : in String := "");
-   --  Creates a new widget in the specified interpreter and makes it
-   --  into a checkbutton widget.  Options may be specified via the "options"
-   --  parameter or the option database to configure the widget.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/DeselectCheckButton
+   -- FUNCTION
+   -- Deselect the button.
+   -- SOURCE
    procedure Deselect (Buttn : in CheckButton);
-   --  Deselect the button.
+   -- ****
 
-   procedure Tk_Select (Buttn : in CheckButton);
+   -- ****f* Tcl.Tk.Ada/Tk_SelectCheckButton
+   -- FUNCTION
    --  Select the button.
+   -- SOURCE
+   procedure Tk_Select (Buttn : in CheckButton);
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/ToggleCheckButton
+   -- FUNCTION
+   -- Toggle the button.
+   -- SOURCE
    procedure Toggle (Buttn : in CheckButton);
-   --  Toggle the button.
+   -- ****
 
    ---------------------------------------------
    --
@@ -623,6 +643,12 @@ package Tcl.Tk.Ada is
 
    type EntryWidget is new Frame with private;
 
+   -- ****f* Tcl.Tk.Ada/CreateEntry
+   -- FUNCTION
+   -- Creates a new widget in the "contextual" interpreter and makes it
+   -- into a entry widget.  Options may be specified via the "options"
+   -- parameter or the option database to configure the widget.
+   -- SOURCE
    function Create
      (pathName : in String;
       options  : in String := "")
@@ -631,10 +657,14 @@ package Tcl.Tk.Ada is
      (Widgt    : out EntryWidget;
       pathName : in String;
       options  : in String := "");
-   --  Creates a new widget in the "contextual" interpreter and makes it
-   --  into a entry widget.  Options may be specified via the "options"
-   --  parameter or the option database to configure the widget.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/CreateEntry2
+   -- FUNCTION
+   -- Creates a new widget in the specified interpreter and makes it
+   -- into a entry widget.  Options may be specified via the "options"
+   -- parameter or the option database to configure the widget.
+   -- SOURCE
    function Create
      (Interp   : in Tcl_Interp;
       pathName : in String;
@@ -645,12 +675,14 @@ package Tcl.Tk.Ada is
       Interp   : in Tcl_Interp;
       pathName : in String;
       options  : in String := "");
-   --  Creates a new widget in the specified interpreter and makes it
-   --  into a entry widget.  Options may be specified via the "options"
-   --  parameter or the option database to configure the widget.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/get
+   -- FUNCTION
+   -- Returns the entry's string.
+   -- SOURCE
    function get (Widgt : in EntryWidget) return String;
-   --  Returns the entry's string.
+   -- ****
 
    ---------------------------------------------
    --
@@ -661,18 +693,36 @@ package Tcl.Tk.Ada is
    --
    ---------------------------------------------
 
+   -- ****f* Tcl.Tk.Ada/After
+   -- FUNCTION
+   -- Sleeps for Ms milliseconds in the "contextual" interpreter.
+   -- SOURCE
    procedure After (Ms : in Natural);
-   --  Sleeps for Ms milliseconds in the "contextual" interpreter.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/After2
+   -- FUNCTION
+   -- Sleeps for Ms milliseconds in the specified interpreter.
+   -- SOURCE
    procedure After (Interp : in Tcl_Interp; Ms : in Natural);
-   --  Sleeps for Ms milliseconds in the specified interpreter.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/After3
+   -- FUNCTION
+   -- Arranges for the Tcl Script to be executed after Ms milliseconds
+   -- in the "contextual" interpreter.  The function returns an
+   -- identifier suitable for canceling the command.
+   -- SOURCE
    function After (Ms : in Natural; Script : in String) return String;
    procedure After (Ms : in Natural; Script : in String);
-   --  Arranges for the Tcl Script to be executed after Ms milliseconds
-   --  in the "contextual" interpreter.  The function returns an
-   --  identifier suitable for canceling the command.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/After4
+   -- FUNCTION
+   -- Arranges for the Tcl Script to be executed after Ms milliseconds
+   -- in the specified interpreter.  The function returns an
+   -- identifier suitable for canceling the command.
+   -- SOURCE
    function After
      (Interp : in Tcl_Interp;
       Ms     : in Natural;
@@ -682,40 +732,62 @@ package Tcl.Tk.Ada is
      (Interp : in Tcl_Interp;
       Ms     : in Natural;
       Script : in String);
-   --  Arranges for the Tcl Script to be executed after Ms milliseconds
-   --  in the specified interpreter.  The function returns an
-   --  identifier suitable for canceling the command.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/Cancel
+   -- FUNCTION
+   -- Cancels the execution of a delayed command in the "contextual"
+   -- interpreter.
+   -- SOURCE
    procedure Cancel (id_or_script : in String);
-   --  Cancels the execution of a delayed command in the "contextual"
-   --  interpreter.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/Cancel2
+   -- FUNCTION
+   -- Cancels the execution of a delayed command in the specified
+   -- interpreter.
+   -- SOURCE
    procedure Cancel (Interp : in Tcl_Interp; id_or_script : in String);
-   --  Cancels the execution of a delayed command in the specified
-   --  interpreter.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/Idle
+   -- FUNCTION
+   -- Arranges for the Tcl Script to be executed later as an idle
+   -- handler in the "contextual" interpreter.  The function returns
+   -- an identifier suitable for canceling the command.
+   -- SOURCE
    function Idle (Script : in String) return String;
    procedure Idle (Script : in String);
-   --  Arranges for the Tcl Script to be executed later as an idle
-   --  handler in the "contextual" interpreter.  The function returns
-   --  an identifier suitable for canceling the command.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/Idle2
+   -- FUNCTION
+   -- Arranges for the Tcl Script to be executed later as an idle
+   -- handler in the specified interpreter.  The function returns
+   -- an identifier suitable for canceling the command.
+   -- SOURCE
    function Idle (Interp : in Tcl_Interp; Script : in String) return String;
    procedure Idle (Interp : in Tcl_Interp; Script : in String);
-   --  Arranges for the Tcl Script to be executed later as an idle
-   --  handler in the specified interpreter.  The function returns
-   --  an identifier suitable for canceling the command.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/Info
+   -- FUNCTION
+   -- Returns information about existing event handlers in the
+   -- "contextual" interpreter.
+   -- SOURCE
    function Info (id : in String := "") return String;
-   --  Returns information about existing event handlers in the
-   --  "contextual" interpreter.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/Info2
+   -- FUNCTION
+   -- Returns information about existing event handlers in the
+   -- "contextual" interpreter.
+   -- SOURCE
    function Info
      (Interp : in Tcl_Interp;
       id     : in String := "")
       return   String;
-   --  Returns information about existing event handlers in the
-   --  "contextual" interpreter.
+      -- ****
 
    ---------------------------------------------
    --
@@ -727,26 +799,51 @@ package Tcl.Tk.Ada is
    ---------------------------------------------
 
    procedure Pack (Slave : in Widget'Class; Options : in String);
+
+   -- ****f* Tcl.Tk.Ada/Pack_Configure
+   -- FUNCTION
+   -- Tells the packer how to configure the specified Slave window.
+   -- SOURCE
    procedure Pack_Configure (Slave : in Widget'Class; Options : in String);
-   --  Tells the packer how to configure the specified Slave window.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/Pack_Forget
+   -- FUNCTION
+   -- Removes the Slave window from the packing list for its master
+   -- and unmaps their windows.
+   -- SOURCE
    procedure Pack_Forget (Slave : in Widget'Class);
-   --  Removes the Slave window from the packing list for its master
-   --  and unmaps their windows.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/Pack_Info
+   -- FUNCTION
+   -- Returns a list whose elements are the current configuration
+   -- state of the specified Slave window.
+   -- SOURCE
    function Pack_Info (Slave : in Widget'Class) return String;
-   --  Returns a list whose elements are the current configuration
-   --  state of the specified Slave window.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/Pack_Propagate
+   -- FUNCTION
+   -- Enables or disables propagation for the specified Master window.
+   -- SOURCE
    procedure Pack_Propagate (Master : in Widget'Class; State : in Boolean);
-   --  Enables or disables propagation for the specified Master window.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/Pack_Propagate2
+   -- FUNCTION
+   -- Returns state of propagation in the specified Master window.
+   -- SOURCE
    function Pack_Propagate (Master : in Widget'Class) return Boolean;
-   --  Returns state of propagation in the specified Master window.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/Pack_Slaves
+   -- FUNCTION
+   -- Returns a list of slaves in the packing order of the specified
+   -- Master window.
+   -- SOURCE
    function Pack_Slaves (Master : in Widget'Class) return String;
-   --  Returns a list of slaves in the packing order of the specified
-   --  Master window.
+   -- ****
 
    function Tk_PathName (tkwin : in Tk_Window) return String;
 
