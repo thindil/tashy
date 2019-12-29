@@ -206,18 +206,31 @@ package Tcl.Tk.Ada is
    --
    ---------------------------------------------
 
+   -- ****f* Tcl.Tk.Ada/Bind
+   -- FUNCTION
+   -- Associates Tcl script Script with the event Sequence.
+   -- SOURCE
    procedure Bind
      (Widgt    : in Widget'Class;
       Sequence : in String;
       Script   : in String);
-   --  Associates Tcl script Script with the event Sequence.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/Unbind
+   -- FUNCTION
+   -- Disassociates the binding from the event Sequence.
+   -- SOURCE
    procedure Unbind (Widgt : in Widget'Class; Sequence : in String);
    function Unbind
      (Widgt    : in Widget'Class;
       Sequence : in String)
       return     String;
-   --  Disassociates the binding from the event Sequence.
+      -- ****
+
+      -- ****f* Tcl.Tk.Ada/Bind2
+      -- FUNCTION
+      -- Retained for backward compatibility.
+      -- SOURCE
    procedure Bind (Widgt : in Widget'Class; Sequence : in String)
      renames Unbind;
    function Bind
@@ -225,14 +238,22 @@ package Tcl.Tk.Ada is
       Sequence : in String)
      return     String
      renames Unbind;
-   --  Retained for backward compatibility.
+     -- ****
 
+     -- ****f* Tcl.Tk.Ada/Bind_To_Main_Window
+     -- FUNCTION
+     -- Associates Tcl script Script with the event Sequence in the main window.
+     -- SOURCE
    procedure Bind_To_Main_Window
      (Interp   : in Tcl_Interp;
       Sequence : in String;
       Script   : in String);
-   --  Associates Tcl script Script with the event Sequence in the main window.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/Unbind_From_Main_Window
+   -- FUNCTION
+   -- Disassociates the binding from the event Sequence in the main window.
+   -- SOURCE
    procedure Unbind_From_Main_Window
      (Interp   : in Tcl_Interp;
       Sequence : in String);
@@ -240,7 +261,12 @@ package Tcl.Tk.Ada is
      (Interp   : in Tcl_Interp;
       Sequence : in String)
       return     String;
-   --  Disassociates the binding from the event Sequence in the main window.
+      -- ****
+
+      -- ****f* Tcl.Tk.Ada/Bind_To_Main_Window2
+      -- FUNCTION
+      -- Retained for backward compatibility.
+      -- SOURCE
    procedure Bind_To_Main_Window
      (Interp   : in Tcl_Interp;
      Sequence : in String)
@@ -250,7 +276,7 @@ package Tcl.Tk.Ada is
       Sequence : in String)
      return     String
      renames Unbind_From_Main_Window;
-   --  Retained for backward compatibility.
+     -- ****
 
    ---------------------------------------------
    --
@@ -264,6 +290,12 @@ package Tcl.Tk.Ada is
 
    type Frame is new Widget with private;
 
+   -- ****f* Tcl.Tk.Ada/CreateFrame
+   -- FUNCTION
+   -- Creates a new widget in the "contextual" interpreter and makes
+   -- it into a frame widget.  Options may be specified via the "options"
+   -- parameter or the option database to configure the widget.
+   -- SOURCE
    function Create
      (pathName : in String;
       options  : in String := "")
@@ -272,10 +304,14 @@ package Tcl.Tk.Ada is
      (Widgt    : out Frame;
       pathName : in String;
       options  : in String := "");
-   --  Creates a new widget in the "contextual" interpreter and makes
-   --  it into a frame widget.  Options may be specified via the "options"
-   --  parameter or the option database to configure the widget.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/CreateFrame2
+   -- FUNCTION
+   -- Creates a new widget in the specified interpreter and makes it
+   -- into a frame widget.  Options may be specified via the "options"
+   -- parameter or the option database to configure the widget.
+   -- SOURCE
    function Create
      (Interp   : in Tcl_Interp;
       pathName : in String;
@@ -286,9 +322,7 @@ package Tcl.Tk.Ada is
       Interp   : in Tcl_Interp;
       pathName : in String;
       options  : in String := "");
-   --  Creates a new widget in the specified interpreter and makes it
-   --  into a frame widget.  Options may be specified via the "options"
-   --  parameter or the option database to configure the widget.
+   -- ****
 
    ---------------------------------------------
    --
@@ -298,6 +332,12 @@ package Tcl.Tk.Ada is
 
    type Toplevel is new Frame with private;
 
+   -- ****f* Tcl.Tk.Ada/CreateTopLevel
+   -- FUNCTION
+   -- Creates a new widget in the "contextual" interpreter and makes it
+   -- into a toplevel widget.  Options may be specified via the "options"
+   -- parameter or the option database to configure the widget.
+   -- SOURCE
    function Create
      (pathName : in String;
       options  : in String := "")
@@ -306,10 +346,14 @@ package Tcl.Tk.Ada is
      (Widgt    : out Toplevel;
       pathName : in String;
       options  : in String := "");
-   --  Creates a new widget in the "contextual" interpreter and makes it
-   --  into a toplevel widget.  Options may be specified via the "options"
-   --  parameter or the option database to configure the widget.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/CreateTopLevel2
+   -- FUNCTION
+   -- Creates a new widget in the specified interpreter and makes it
+   -- into a toplevel widget.  Options may be specified via the "options"
+   -- parameter or the option database to configure the widget.
+   -- SOURCE
    function Create
      (Interp   : in Tcl_Interp;
       pathName : in String;
@@ -320,9 +364,7 @@ package Tcl.Tk.Ada is
       Interp   : in Tcl_Interp;
       pathName : in String;
       options  : in String := "");
-   --  Creates a new widget in the specified interpreter and makes it
-   --  into a toplevel widget.  Options may be specified via the "options"
-   --  parameter or the option database to configure the widget.
+   -- ****
 
    ---------------------------------------------
    --
@@ -332,6 +374,12 @@ package Tcl.Tk.Ada is
 
    type Label is new Frame with private;
 
+   -- ****f* Tcl.Tk.Ada/CreateLabel
+   -- FUNCTION
+   -- Creates a new widget in the "contextual" interpreter and makes it
+   -- into a label widget.  Options may be specified via the "options"
+   -- parameter or the option database to configure the widget.
+   -- SOURCE
    function Create
      (pathName : in String;
       options  : in String := "")
@@ -340,10 +388,14 @@ package Tcl.Tk.Ada is
      (Widgt    : out Label;
       pathName : in String;
       options  : in String := "");
-   --  Creates a new widget in the "contextual" interpreter and makes it
-   --  into a label widget.  Options may be specified via the "options"
-   --  parameter or the option database to configure the widget.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/CreateLabel2
+   -- FUNCTION
+   -- Creates a new widget in the specified interpreter and makes it
+   -- into a label widget.  Options may be specified via the "options"
+   -- parameter or the option database to configure the widget.
+   -- SOURCE
    function Create
      (Interp   : in Tcl_Interp;
       pathName : in String;
@@ -354,8 +406,7 @@ package Tcl.Tk.Ada is
       Interp   : in Tcl_Interp;
       pathName : in String;
       options  : in String := "");
-   --  into a label widget.  Options may be specified via the "options"
-   --  parameter or the option database to configure the widget.
+   -- ****
 
    ---------------------------------------------
    --
@@ -365,6 +416,12 @@ package Tcl.Tk.Ada is
 
    type Message is new Frame with private;
 
+   -- ****f* Tcl.Tk.Ada/CreateMessage
+   -- FUNCTION
+   -- Creates a new widget in the "contextual" interpreter and makes it
+   -- into a message widget.  Options may be specified via the "options"
+   -- parameter or the option database to configure the widget.
+   -- SOURCE
    function Create
      (pathName : in String;
       options  : in String := "")
@@ -373,10 +430,14 @@ package Tcl.Tk.Ada is
      (Widgt    : out Message;
       pathName : in String;
       options  : in String := "");
-   --  Creates a new widget in the "contextual" interpreter and makes it
-   --  into a message widget.  Options may be specified via the "options"
-   --  parameter or the option database to configure the widget.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/CreateMessage2
+   -- FUNCTION
+   -- Creates a new widget in the specified interpreter and makes it
+   -- into a message widget.  Options may be specified via the "options"
+   -- parameter or the option database to configure the widget.
+   -- SOURCE
    function Create
      (Interp   : in Tcl_Interp;
       pathName : in String;
@@ -387,9 +448,7 @@ package Tcl.Tk.Ada is
       Interp   : in Tcl_Interp;
       pathName : in String;
       options  : in String := "");
-   --  Creates a new widget in the specified interpreter and makes it
-   --  into a message widget.  Options may be specified via the "options"
-   --  parameter or the option database to configure the widget.
+   -- ****
 
    ---------------------------------------------
    --
@@ -399,6 +458,12 @@ package Tcl.Tk.Ada is
 
    type Button is new Frame with private;
 
+   -- ****f* Tcl.Tk.Ada/CreateButton
+   -- FUNCTION
+   -- Creates a new widget in the "contextual" interpreter and makes it
+   -- into a button widget.  Options may be specified via the "options"
+   -- parameter or the option database to configure the widget.
+   -- SOURCE
    function Create
      (pathName : in String;
       options  : in String := "")
@@ -407,10 +472,14 @@ package Tcl.Tk.Ada is
      (Widgt    : out Button;
       pathName : in String;
       options  : in String := "");
-   --  Creates a new widget in the "contextual" interpreter and makes it
-   --  into a button widget.  Options may be specified via the "options"
-   --  parameter or the option database to configure the widget.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/CreateButton2
+   -- FUNCTION
+   -- Creates a new widget in the specified interpreter and makes it
+   -- into a button widget.  Options may be specified via the "options"
+   -- parameter or the option database to configure the widget.
+   -- SOURCE
    function Create
      (Interp   : in Tcl_Interp;
       pathName : in String;
@@ -421,17 +490,24 @@ package Tcl.Tk.Ada is
       Interp   : in Tcl_Interp;
       pathName : in String;
       options  : in String := "");
-   --  into a button widget.  Options may be specified via the "options"
-   --  parameter or the option database to configure the widget.
+   -- ****
 
-   procedure Flash (Buttn : in Button'Class);
+   -- ****f* Tcl.Tk.Ada/Flash
+   -- FUNCTION
    --  Flash the button.
+   -- SOURCE
+   procedure Flash (Buttn : in Button'Class);
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/Invoke
+   -- FUNCTION
+   --  Invoke the Tcl command associated with the button.
+   -- SOURCE
    function Invoke
      (Buttn   : in Button'Class;
       options : in String := "")
       return    String;
-   --  Invoke the Tcl command associated with the button.
+      -- ****
 
    ---------------------------------------------
    --
@@ -441,6 +517,12 @@ package Tcl.Tk.Ada is
 
    type RadioButton is new Button with private;
 
+   -- ****f* Tcl.Tk.Ada/CreateRadioButton
+   -- FUNCTION
+   -- Creates a new widget in the "contextual" interpreter and makes it
+   -- into a radiobutton widget.  Options may be specified via the "options"
+   -- parameter or the option database to configure the widget.
+   -- SOURCE
    function Create
      (pathName : in String;
       options  : in String := "")
@@ -449,10 +531,14 @@ package Tcl.Tk.Ada is
      (Widgt    : out RadioButton;
       pathName : in String;
       options  : in String := "");
-   --  Creates a new widget in the "contextual" interpreter and makes it
-   --  into a radiobutton widget.  Options may be specified via the "options"
-   --  parameter or the option database to configure the widget.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/CreateRadioButton2
+   -- FUNCTION
+   -- Creates a new widget in the specified interpreter and makes it
+   -- into a radiobutton widget.  Options may be specified via the "options"
+   -- parameter or the option database to configure the widget.
+   -- SOURCE
    function Create
      (Interp   : in Tcl_Interp;
       pathName : in String;
@@ -463,18 +549,28 @@ package Tcl.Tk.Ada is
       Interp   : in Tcl_Interp;
       pathName : in String;
       options  : in String := "");
-   --  Creates a new widget in the specified interpreter and makes it
-   --  into a radiobutton widget.  Options may be specified via the "options"
-   --  parameter or the option database to configure the widget.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/Deselect
+   -- FUNCTION
+   -- Deselect the button.
+   -- SOURCE
    procedure Deselect (Buttn : in RadioButton);
-   --  Deselect the button.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/Tk_Select
+   -- FUNCTION
+   -- Select the button.
+   -- SOURCE
    procedure Tk_Select (Buttn : in RadioButton);
-   --  Select the button.
+   -- ****
 
+   -- ****f* Tcl.Tk.Ada/Toggle
+   -- FUNCTION
+   -- Toggle the button.
+   -- SOURCE
    procedure Toggle (Buttn : in RadioButton);
-   --  Toggle the button.
+   -- ****
 
    ---------------------------------------------
    --
