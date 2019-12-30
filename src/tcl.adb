@@ -44,256 +44,206 @@ package body Tcl is
    --  So we have to call the C functions from Ada code, rather than
    --  having pragma Import in the package spec.
 
-   procedure Tcl_IncrRefCount (objPtr : not null Tcl_Obj) is
-      procedure Tcl_CallIncrRefCount (objPtr : not null Tcl_Obj);
-      pragma Import (C, Tcl_CallIncrRefCount, "Tcl_CallIncrRefCount");
+   procedure Tcl_IncrRefCount(objPtr: not null Tcl_Obj) is
+      procedure Tcl_CallIncrRefCount(objPtr: not null Tcl_Obj);
+      pragma Import(C, Tcl_CallIncrRefCount, "Tcl_CallIncrRefCount");
    begin
-      Tcl_CallIncrRefCount (objPtr);
+      Tcl_CallIncrRefCount(objPtr);
    end Tcl_IncrRefCount;
 
-   procedure Tcl_DecrRefCount (objPtr : not null Tcl_Obj) is
-      procedure Tcl_CallDecrRefCount (objPtr : not null Tcl_Obj);
-      pragma Import (C, Tcl_CallDecrRefCount, "Tcl_CallDecrRefCount");
+   procedure Tcl_DecrRefCount(objPtr: not null Tcl_Obj) is
+      procedure Tcl_CallDecrRefCount(objPtr: not null Tcl_Obj);
+      pragma Import(C, Tcl_CallDecrRefCount, "Tcl_CallDecrRefCount");
    begin
-      Tcl_CallDecrRefCount (objPtr);
+      Tcl_CallDecrRefCount(objPtr);
    end Tcl_DecrRefCount;
 
-   function Tcl_IsShared (objPtr : not null Tcl_Obj) return C.int is
-      function Tcl_CallIsShared (objPtr : not null Tcl_Obj) return C.int;
-      pragma Import (C, Tcl_CallIsShared, "Tcl_CallIsShared");
+   function Tcl_IsShared(objPtr: not null Tcl_Obj) return C.int is
+      function Tcl_CallIsShared(objPtr: not null Tcl_Obj) return C.int;
+      pragma Import(C, Tcl_CallIsShared, "Tcl_CallIsShared");
    begin
-      return Tcl_CallIsShared (objPtr);
+      return Tcl_CallIsShared(objPtr);
    end Tcl_IsShared;
 
    function Tcl_GetHashValue
-     (HashEntry : not null Tcl_HashEntry)
-     return       ClientData is
+     (HashEntry: not null Tcl_HashEntry) return ClientData is
       function Tcl_CallGetHashValue
-        (HashEntry : not null Tcl_HashEntry)
-        return      ClientData;
-      pragma Import (C, Tcl_CallGetHashValue, "Tcl_CallGetHashValue");
+        (HashEntry: not null Tcl_HashEntry) return ClientData;
+      pragma Import(C, Tcl_CallGetHashValue, "Tcl_CallGetHashValue");
    begin
-      return Tcl_CallGetHashValue (HashEntry);
+      return Tcl_CallGetHashValue(HashEntry);
    end Tcl_GetHashValue;
 
    procedure Tcl_SetHashValue
-     (HashEntry : not null Tcl_HashEntry;
-      value     : in ClientData) is
+     (HashEntry: not null Tcl_HashEntry; value: in ClientData) is
       procedure Tcl_CallSetHashValue
-        (HashEntry : not null Tcl_HashEntry;
-         value     : in ClientData);
-      pragma Import (C, Tcl_CallSetHashValue, "Tcl_CallSetHashValue");
+        (HashEntry: not null Tcl_HashEntry; value: in ClientData);
+      pragma Import(C, Tcl_CallSetHashValue, "Tcl_CallSetHashValue");
    begin
-      Tcl_CallSetHashValue (HashEntry, value);
+      Tcl_CallSetHashValue(HashEntry, value);
    end Tcl_SetHashValue;
 
    function Tcl_GetHashKey
-     (HashTable : not null Tcl_HashTable;
-      HashEntry : not null Tcl_HashEntry)
-     return      C.Strings.chars_ptr is
+     (HashTable: not null Tcl_HashTable; HashEntry: not null Tcl_HashEntry)
+      return C.Strings.chars_ptr is
       function Tcl_CallGetHashKey
-        (HashTable : not null Tcl_HashTable;
-         HashEntry : not null Tcl_HashEntry)
-        return      C.Strings.chars_ptr;
-      pragma Import (C, Tcl_CallGetHashKey, "Tcl_CallGetHashKey");
+        (HashTable: not null Tcl_HashTable; HashEntry: not null Tcl_HashEntry)
+         return C.Strings.chars_ptr;
+      pragma Import(C, Tcl_CallGetHashKey, "Tcl_CallGetHashKey");
    begin
-      return Tcl_CallGetHashKey (HashTable, HashEntry);
+      return Tcl_CallGetHashKey(HashTable, HashEntry);
    end Tcl_GetHashKey;
 
    function Tcl_FindHashEntry
-     (HashTable : not null Tcl_HashTable;
-      key       : in C.Strings.chars_ptr)
-     return      Tcl_HashEntry is
+     (HashTable: not null Tcl_HashTable; key: in C.Strings.chars_ptr)
+      return Tcl_HashEntry is
       function Tcl_CallFindHashEntry
-        (HashTable : not null Tcl_HashTable;
-         key       : in C.Strings.chars_ptr)
-        return      Tcl_HashEntry;
-      pragma Import (C, Tcl_CallFindHashEntry, "Tcl_CallFindHashEntry");
+        (HashTable: not null Tcl_HashTable; key: in C.Strings.chars_ptr)
+         return Tcl_HashEntry;
+      pragma Import(C, Tcl_CallFindHashEntry, "Tcl_CallFindHashEntry");
    begin
-      return Tcl_CallFindHashEntry (HashTable, key);
+      return Tcl_CallFindHashEntry(HashTable, key);
    end Tcl_FindHashEntry;
 
    function Tcl_CreateHashEntry
-     (HashTable : not null Tcl_HashTable;
-      key       : in C.Strings.chars_ptr;
-      newPtr    : not null access C.int)
-     return      Tcl_HashEntry is
+     (HashTable: not null Tcl_HashTable; key: in C.Strings.chars_ptr;
+      newPtr: not null access C.int) return Tcl_HashEntry is
       function Tcl_CallCreateHashEntry
-        (HashTable : not null Tcl_HashTable;
-         key       : in C.Strings.chars_ptr;
-         newPtr    : not null access C.int)
-        return      Tcl_HashEntry;
-      pragma Import (C, Tcl_CallCreateHashEntry, "Tcl_CallCreateHashEntry");
+        (HashTable: not null Tcl_HashTable; key: in C.Strings.chars_ptr;
+         newPtr: not null access C.int) return Tcl_HashEntry;
+      pragma Import(C, Tcl_CallCreateHashEntry, "Tcl_CallCreateHashEntry");
    begin
-      return Tcl_CallCreateHashEntry (HashTable, key, newPtr);
+      return Tcl_CallCreateHashEntry(HashTable, key, newPtr);
    end Tcl_CreateHashEntry;
 
    --  End of C macro interfaces.
 
    procedure AppendStringsToObj
-     (objPtr    : in Tcl_Obj;
-      String1   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String2   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String3   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String4   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String5   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String6   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String7   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String8   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String9   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      ForceNull : in C.Strings.chars_ptr := C.Strings.Null_Ptr);
-   pragma Import (C, AppendStringsToObj, "Tcl_AppendStringsToObj");
+     (objPtr: in Tcl_Obj;
+      String1: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String2: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String3: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String4: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String5: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String6: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String7: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String8: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String9: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      ForceNull: in C.Strings.chars_ptr := C.Strings.Null_Ptr);
+   pragma Import(C, AppendStringsToObj, "Tcl_AppendStringsToObj");
 
    procedure Tcl_AppendStringsToObj
-     (objPtr  : not null Tcl_Obj;
-      String1 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String2 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String3 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String4 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String5 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String6 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String7 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String8 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String9 : in C.Strings.chars_ptr := C.Strings.Null_Ptr)
-   is
+     (objPtr: not null Tcl_Obj;
+      String1: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String2: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String3: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String4: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String5: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String6: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String7: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String8: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String9: in C.Strings.chars_ptr := C.Strings.Null_Ptr) is
    begin --  Tcl_AppendStringsToObj
       AppendStringsToObj
-        (objPtr,
-         String1,
-         String2,
-         String3,
-         String4,
-         String5,
-         String6,
-         String7,
-         String8,
-         String9);
+        (objPtr, String1, String2, String3, String4, String5, String6, String7,
+         String8, String9);
    end Tcl_AppendStringsToObj;
 
    procedure AppendResult
-     (interp    : in Tcl_Interp;
-      String1   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String2   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String3   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String4   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String5   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String6   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String7   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String8   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String9   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      ForceNull : in C.Strings.chars_ptr := C.Strings.Null_Ptr);
-   pragma Import (C, AppendResult, "Tcl_AppendResult");
+     (interp: in Tcl_Interp;
+      String1: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String2: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String3: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String4: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String5: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String6: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String7: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String8: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String9: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      ForceNull: in C.Strings.chars_ptr := C.Strings.Null_Ptr);
+   pragma Import(C, AppendResult, "Tcl_AppendResult");
 
    procedure Tcl_AppendResult
-     (interp  : not null Tcl_Interp;
-      String1 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String2 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String3 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String4 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String5 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String6 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String7 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String8 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String9 : in C.Strings.chars_ptr := C.Strings.Null_Ptr)
-   is
+     (interp: not null Tcl_Interp;
+      String1: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String2: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String3: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String4: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String5: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String6: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String7: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String8: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String9: in C.Strings.chars_ptr := C.Strings.Null_Ptr) is
    begin --  Tcl_AppendResult
       AppendResult
-        (interp,
-         String1,
-         String2,
-         String3,
-         String4,
-         String5,
-         String6,
-         String7,
-         String8,
-         String9);
+        (interp, String1, String2, String3, String4, String5, String6, String7,
+         String8, String9);
    end Tcl_AppendResult;
 
    procedure SetErrorCode
-     (interp    : in Tcl_Interp;
-      String1   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String2   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String3   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String4   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String5   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String6   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String7   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String8   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String9   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      ForceNull : in C.Strings.chars_ptr := C.Strings.Null_Ptr);
-   pragma Import (C, SetErrorCode, "Tcl_SetErrorCode");
+     (interp: in Tcl_Interp;
+      String1: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String2: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String3: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String4: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String5: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String6: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String7: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String8: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String9: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      ForceNull: in C.Strings.chars_ptr := C.Strings.Null_Ptr);
+   pragma Import(C, SetErrorCode, "Tcl_SetErrorCode");
 
    procedure Tcl_SetErrorCode
-     (interp  : not null Tcl_Interp;
-      String1 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String2 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String3 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String4 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String5 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String6 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String7 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String8 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String9 : in C.Strings.chars_ptr := C.Strings.Null_Ptr)
-   is
+     (interp: not null Tcl_Interp;
+      String1: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String2: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String3: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String4: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String5: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String6: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String7: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String8: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String9: in C.Strings.chars_ptr := C.Strings.Null_Ptr) is
    begin --  Tcl_SetErrorCode
       SetErrorCode
-        (interp,
-         String1,
-         String2,
-         String3,
-         String4,
-         String5,
-         String6,
-         String7,
-         String8,
-         String9);
+        (interp, String1, String2, String3, String4, String5, String6, String7,
+         String8, String9);
    end Tcl_SetErrorCode;
 
    function VarEval
-     (interp    : in Tcl_Interp;
-      String1   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String2   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String3   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String4   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String5   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String6   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String7   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String8   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String9   : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      ForceNull : in C.Strings.chars_ptr := C.Strings.Null_Ptr)
-      return      C.int;
-   pragma Import (C, VarEval, "Tcl_VarEval");
+     (interp: in Tcl_Interp;
+      String1: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String2: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String3: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String4: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String5: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String6: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String7: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String8: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String9: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      ForceNull: in C.Strings.chars_ptr := C.Strings.Null_Ptr) return C.int;
+   pragma Import(C, VarEval, "Tcl_VarEval");
 
    function Tcl_VarEval
-     (interp  : not null Tcl_Interp;
-      String1 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String2 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String3 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String4 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String5 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String6 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String7 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String8 : in C.Strings.chars_ptr := C.Strings.Null_Ptr;
-      String9 : in C.Strings.chars_ptr := C.Strings.Null_Ptr)
-      return    C.int
-   is
+     (interp: not null Tcl_Interp;
+      String1: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String2: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String3: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String4: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String5: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String6: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String7: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String8: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
+      String9: in C.Strings.chars_ptr := C.Strings.Null_Ptr) return C.int is
    begin --  Tcl_VarEval
       return VarEval
-               (interp,
-                String1,
-                String2,
-                String3,
-                String4,
-                String5,
-                String6,
-                String7,
-                String8,
-                String9);
+          (interp, String1, String2, String3, String4, String5, String6,
+           String7, String8, String9);
    end Tcl_VarEval;
 
    function Tcl_GetObjTypeName
-     (objPtr : in Tcl_Obj) return C.Strings.chars_ptr is
+     (objPtr: in Tcl_Obj) return C.Strings.chars_ptr is
    begin
       if objPtr = null or else objPtr.typePtr = null then
          return C.Strings.Null_Ptr;
@@ -301,7 +251,7 @@ package body Tcl is
       return objPtr.typePtr.name;
    end Tcl_GetObjTypeName;
 
-   function Tcl_GetRefCount (objPtr : in Tcl_Obj) return C.int is
+   function Tcl_GetRefCount(objPtr: in Tcl_Obj) return C.int is
    begin
       if objPtr = null then
          return 0;
@@ -309,21 +259,19 @@ package body Tcl is
       return objPtr.refCount;
    end Tcl_GetRefCount;
 
-   procedure Tcl_PrintObj (Ptr : in Tcl_Obj) is
-      Len : aliased C.int;
-      StringFromValue : constant C.Strings.chars_ptr
-         := Tcl_GetStringFromObj (Ptr, Len'Access);
-      ObjTypeName : constant C.Strings.chars_ptr
-         := Tcl_GetObjTypeName (Ptr);
-      RefCount : constant C.int := Tcl_GetRefCount (Ptr);
+   procedure Tcl_PrintObj(Ptr: in Tcl_Obj) is
+      Len: aliased C.int;
+      StringFromValue: constant C.Strings.chars_ptr :=
+        Tcl_GetStringFromObj(Ptr, Len'Access);
+      ObjTypeName: constant C.Strings.chars_ptr := Tcl_GetObjTypeName(Ptr);
+      RefCount: constant C.int := Tcl_GetRefCount(Ptr);
    begin
       if Ptr = null then
-         Ada.Text_IO.Put ("NULL");
+         Ada.Text_IO.Put("NULL");
       else
          Ada.Text_IO.Put
-           ("s=""" & C.Strings.Value (StringFromValue) & """ " &
-            "t=" & C.Strings.Value (ObjTypeName) & " " &
-            "c=" & C.int'Image (RefCount));
+           ("s=""" & C.Strings.Value(StringFromValue) & """ " & "t=" &
+            C.Strings.Value(ObjTypeName) & " " & "c=" & C.int'Image(RefCount));
       end if;
    end Tcl_PrintObj;
 

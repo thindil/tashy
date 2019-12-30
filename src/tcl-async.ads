@@ -41,7 +41,7 @@ package Tcl.Async is
    -- FUNCTION
    -- Must be called before any other subprogram in the package.
    -- SOURCE
-   procedure Register (Interp : Tcl_Interp);
+   procedure Register(Interp: Tcl_Interp);
    -- ****
 
    -- ****f* Tcl.Async/Set (variable)
@@ -51,7 +51,7 @@ package Tcl.Async is
    --
    -- The variable will be created if necessary.
    -- SOURCE
-   procedure Set (Tcl_Variable : String; Value : String);
+   procedure Set(Tcl_Variable: String; Value: String);
    -- ****
 
    -- ****f* Tcl.Async/Set (array)
@@ -61,7 +61,7 @@ package Tcl.Async is
    --
    --  The array will be created if necessary.
    -- SOURCE
-   procedure Set (Tcl_Array : String; Index : String; Value : String);
+   procedure Set(Tcl_Array: String; Index: String; Value: String);
    -- ****
 
 end Tcl.Async;

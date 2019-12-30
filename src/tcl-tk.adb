@@ -37,25 +37,23 @@ package body Tcl.Tk is
    --  having pragma Import in the package spec.
 
    function Tk_PathName
-     (tkwin : not null Tk_Window) return C.Strings.chars_ptr is
+     (tkwin: not null Tk_Window) return C.Strings.chars_ptr is
       function Tk_CallPathName
-        (tkwin : not null Tk_Window) return C.Strings.chars_ptr;
-      pragma Import (C, Tk_CallPathName, "Tk_CallPathName");
+        (tkwin: not null Tk_Window) return C.Strings.chars_ptr;
+      pragma Import(C, Tk_CallPathName, "Tk_CallPathName");
    begin
-      return Tk_CallPathName (tkwin);
+      return Tk_CallPathName(tkwin);
    end Tk_PathName;
 
    procedure Tk_Main
-     (argc : in C.int;
-      argv : in CArgv.Chars_Ptr_Ptr;
-      proc : not null Tcl_AppInitProc) is
+     (argc: in C.int; argv: in CArgv.Chars_Ptr_Ptr;
+      proc: not null Tcl_AppInitProc) is
       procedure Tk_CallMain
-        (argc : in C.int;
-         argv : in CArgv.Chars_Ptr_Ptr;
-         proc : not null Tcl_AppInitProc);
-      pragma Import (C, Tk_CallMain, "Tk_CallMain");
+        (argc: in C.int; argv: in CArgv.Chars_Ptr_Ptr;
+         proc: not null Tcl_AppInitProc);
+      pragma Import(C, Tk_CallMain, "Tk_CallMain");
    begin
-      Tk_CallMain (argc, argv, proc);
+      Tk_CallMain(argc, argv, proc);
    end Tk_Main;
 
 end Tcl.Tk;
