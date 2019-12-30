@@ -7,6 +7,7 @@ Main differences:
 * Removed creating relocatable version of the library
 * Removed tests
 * Removed makefiles
+* Added [ROBODoc](https://rfsber.home.xs4all.nl/Robo/) documentation
 * More to come
 
 ## Build the library from sources
@@ -55,6 +56,28 @@ If you have installed [Bob](https://github.com/thindil/bob) you can type:
 If you use a GNAT project file in your project, simply add `with "tashy"` at
 beginning of your project file.
 
+## Versioning
+
+TASHY versioning is in X.Y.Z schema where:
+
+* X.Y are Tcl/Tk version with which TASHY was created and tested. For example,
+  version 8.6.5 means that this TASHY was tested with Tcl 8.6.
+* Z is number of release of TASHY for selected Tcl version. Release numbers
+  starts from 0. For example, version 8.6.2 means third release of TASHY for
+  Tcl 8.6
+
+## Generating code documentation
+
+To generate (or regenerate) code documentation, you need [ROBODoc](https://rfsber.home.xs4all.nl/Robo/)
+If you have it, in main program directory (where this file is) enter terminal
+command: `others/generatedocs.tcl`. For more information about this script,
+please look [here](https://github.com/thindil/roboada#generatedocstcl). This
+version of script have set all default settings for TASHY code. If you have
+[Bob](https://github.com/thindil/bob) installed, you can type `bob docs`.
+
+## Contributing to the project
+For detailed informations about contributing to the project (bugs reporting,
+ideas propositions, code conduct, etc), see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Licenses
 TASHY is available under [GPLv2](COPYING) license with exception:
