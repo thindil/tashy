@@ -45,7 +45,7 @@ package Tcl.Tk.Ada is
    -- FUNCTION
    -- Turn on tracing of Tcl/Tk command execution.
    -- SOURCE
-   procedure Set_Trace (State : in Boolean);
+   procedure Set_Trace(State: in Boolean);
    -- ****
 
    -- ****t* Tcl.Tk.Ada/Widget
@@ -71,7 +71,7 @@ package Tcl.Tk.Ada is
    -- FUNCTION
    -- Returns the string name of Win.
    -- SOURCE
-   function Widget_Image (Win : in Widget'Class) return String;
+   function Widget_Image(Win: in Widget'Class) return String;
    -- ****
 
    -- ****f* Tcl.Tk.Ada/"&"
@@ -79,22 +79,19 @@ package Tcl.Tk.Ada is
    -- Concatenates and returns the string names of Left and Right.
    -- Does not insert the separating dot.
    -- SOURCE
-   function "&"
-     (Left  : in Widget'Class;
-      Right : in Widget'Class)
-      return  String;
-   function "&" (Left : in Widget'Class; Right : in String) return String;
-   function "&" (Left : in String; Right : in Widget'Class) return String;
+   function "&"(Left: in Widget'Class; Right: in Widget'Class) return String;
+   function "&"(Left: in Widget'Class; Right: in String) return String;
+   function "&"(Left: in String; Right: in Widget'Class) return String;
    -- ****
 
-   pragma Inline (Widget_Image, "&");
+   pragma Inline(Widget_Image, "&");
 
    -- ****f* Tcl.Tk.Ada/Set_Context
    -- FUNCTION
    -- Sets the interpreter context for all Tk calls which do not include
    -- either an Interp or Widget parameter.
    -- SOURCE
-   procedure Set_Context (Interp : in Tcl_Interp);
+   procedure Set_Context(Interp: in Tcl_Interp);
    -- ****
 
    -- ****f* Tcl.Tk.Ada/Get_Context
@@ -108,7 +105,7 @@ package Tcl.Tk.Ada is
    -- FUNCTION
    -- Gets the interpreter of the specified Widget.
    -- SOURCE
-   function Get_Interp (Widgt : in Widget'Class) return Tcl_Interp;
+   function Get_Interp(Widgt: in Widget'Class) return Tcl_Interp;
    -- ****
 
    ---------------------------------------------
@@ -124,37 +121,26 @@ package Tcl.Tk.Ada is
    -- database to configure the widget.
    -- SOURCE
    function Create
-     (pathName : in String;
-      options  : in String := "")
-      return     Widget
-     is abstract;
+     (pathName: in String; options: in String := "") return Widget is abstract;
    procedure Create
-     (Widgt    : out Widget;
-      pathName : in String;
-      options  : in String := "")
-     is abstract;
-     -- ****
+     (Widgt: out Widget; pathName: in String;
+      options: in String := "") is abstract;
+   -- ****
 
-     -- ****f* Tcl.Tk.Ada/Create2
-     -- FUNCTION
-     -- Creates a new widget in the specified interpreter.  Options
-     -- may be specified via the "options" parameter or the option
-     -- database to configure the widget.
-     --
-     -- SOURCE
+   -- ****f* Tcl.Tk.Ada/Create2
+   -- FUNCTION
+   -- Creates a new widget in the specified interpreter.  Options
+   -- may be specified via the "options" parameter or the option
+   -- database to configure the widget.
+   --
+   -- SOURCE
    function Create
-     (Interp   : in Tcl_Interp;
-      pathName : in String;
-      options  : in String := "")
-      return     Widget
-     is abstract;
+     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
+      return Widget is abstract;
    procedure Create
-     (Widgt    : out Widget;
-      Interp   : in Tcl_Interp;
-      pathName : in String;
-      options  : in String := "")
-     is abstract;
-     -- ****
+     (Widgt: out Widget; Interp: in Tcl_Interp; pathName: in String;
+      options: in String := "") is abstract;
+   -- ****
 
    ---------------------------------------------
    --
@@ -162,11 +148,11 @@ package Tcl.Tk.Ada is
    --
    ---------------------------------------------
 
-     -- ****f* Tcl.Tk.Ada/Destroy
-     -- FUNCTION
-     -- Destroys a widget.
-     -- SOURCE
-   procedure Destroy (Widgt : in out Widget'Class);
+   -- ****f* Tcl.Tk.Ada/Destroy
+   -- FUNCTION
+   -- Destroys a widget.
+   -- SOURCE
+   procedure Destroy(Widgt: in out Widget'Class);
    -- ****
 
    ---------------------------------------------
@@ -179,23 +165,18 @@ package Tcl.Tk.Ada is
    -- FUNCTION
    --  Returns the current value of the specified configuration option.
    -- SOURCE
-   function cget
-     (Widgt  : in Widget'Class;
-      option : in String)
-      return   String;
-      -- ****
+   function cget(Widgt: in Widget'Class; option: in String) return String;
+   -- ****
 
-      -- ****f* Tcl.Tk.Ada/configure
-      -- FUNCTION
-      -- Queries or modifies the configuration options.  If options is
-      -- an empty string, returns a list of all available options
-      -- for the widget.
-      -- SOURCE
+   -- ****f* Tcl.Tk.Ada/configure
+   -- FUNCTION
+   -- Queries or modifies the configuration options.  If options is
+   -- an empty string, returns a list of all available options
+   -- for the widget.
+   -- SOURCE
    function configure
-     (Widgt   : in Widget'Class;
-      options : in String := "")
-      return    String;
-   procedure configure (Widgt : in Widget'Class; options : in String := "");
+     (Widgt: in Widget'Class; options: in String := "") return String;
+   procedure configure(Widgt: in Widget'Class; options: in String := "");
    -- ****
 
    ---------------------------------------------
@@ -211,43 +192,33 @@ package Tcl.Tk.Ada is
    -- Associates Tcl script Script with the event Sequence.
    -- SOURCE
    procedure Bind
-     (Widgt    : in Widget'Class;
-      Sequence : in String;
-      Script   : in String);
+     (Widgt: in Widget'Class; Sequence: in String; Script: in String);
    -- ****
 
    -- ****f* Tcl.Tk.Ada/Unbind
    -- FUNCTION
    -- Disassociates the binding from the event Sequence.
    -- SOURCE
-   procedure Unbind (Widgt : in Widget'Class; Sequence : in String);
-   function Unbind
-     (Widgt    : in Widget'Class;
-      Sequence : in String)
-      return     String;
-      -- ****
+   procedure Unbind(Widgt: in Widget'Class; Sequence: in String);
+   function Unbind(Widgt: in Widget'Class; Sequence: in String) return String;
+   -- ****
 
-      -- ****f* Tcl.Tk.Ada/Bind2
-      -- FUNCTION
-      -- Retained for backward compatibility.
-      -- SOURCE
-   procedure Bind (Widgt : in Widget'Class; Sequence : in String)
-     renames Unbind;
+   -- ****f* Tcl.Tk.Ada/Bind2
+   -- FUNCTION
+   -- Retained for backward compatibility.
+   -- SOURCE
+   procedure Bind(Widgt: in Widget'Class; Sequence: in String) renames Unbind;
    function Bind
-     (Widgt    : in Widget'Class;
-      Sequence : in String)
-     return     String
-     renames Unbind;
-     -- ****
+     (Widgt: in Widget'Class; Sequence: in String) return String renames
+     Unbind;
+   -- ****
 
-     -- ****f* Tcl.Tk.Ada/Bind_To_Main_Window
-     -- FUNCTION
-     -- Associates Tcl script Script with the event Sequence in the main window.
-     -- SOURCE
+   -- ****f* Tcl.Tk.Ada/Bind_To_Main_Window
+   -- FUNCTION
+   -- Associates Tcl script Script with the event Sequence in the main window.
+   -- SOURCE
    procedure Bind_To_Main_Window
-     (Interp   : in Tcl_Interp;
-      Sequence : in String;
-      Script   : in String);
+     (Interp: in Tcl_Interp; Sequence: in String; Script: in String);
    -- ****
 
    -- ****f* Tcl.Tk.Ada/Unbind_From_Main_Window
@@ -255,28 +226,22 @@ package Tcl.Tk.Ada is
    -- Disassociates the binding from the event Sequence in the main window.
    -- SOURCE
    procedure Unbind_From_Main_Window
-     (Interp   : in Tcl_Interp;
-      Sequence : in String);
+     (Interp: in Tcl_Interp; Sequence: in String);
    function Unbind_From_Main_Window
-     (Interp   : in Tcl_Interp;
-      Sequence : in String)
-      return     String;
-      -- ****
+     (Interp: in Tcl_Interp; Sequence: in String) return String;
+   -- ****
 
-      -- ****f* Tcl.Tk.Ada/Bind_To_Main_Window2
-      -- FUNCTION
-      -- Retained for backward compatibility.
-      -- SOURCE
+   -- ****f* Tcl.Tk.Ada/Bind_To_Main_Window2
+   -- FUNCTION
+   -- Retained for backward compatibility.
+   -- SOURCE
    procedure Bind_To_Main_Window
-     (Interp   : in Tcl_Interp;
-     Sequence : in String)
-     renames Unbind_From_Main_Window;
+     (Interp: in Tcl_Interp; Sequence: in String) renames
+     Unbind_From_Main_Window;
    function Bind_To_Main_Window
-     (Interp   : in Tcl_Interp;
-      Sequence : in String)
-     return     String
-     renames Unbind_From_Main_Window;
-     -- ****
+     (Interp: in Tcl_Interp; Sequence: in String) return String renames
+     Unbind_From_Main_Window;
+   -- ****
 
    ---------------------------------------------
    --
@@ -296,14 +261,9 @@ package Tcl.Tk.Ada is
    -- it into a frame widget.  Options may be specified via the "options"
    -- parameter or the option database to configure the widget.
    -- SOURCE
-   function Create
-     (pathName : in String;
-      options  : in String := "")
-      return     Frame;
+   function Create(pathName: in String; options: in String := "") return Frame;
    procedure Create
-     (Widgt    : out Frame;
-      pathName : in String;
-      options  : in String := "");
+     (Widgt: out Frame; pathName: in String; options: in String := "");
    -- ****
 
    -- ****f* Tcl.Tk.Ada/CreateFrame2
@@ -313,15 +273,11 @@ package Tcl.Tk.Ada is
    -- parameter or the option database to configure the widget.
    -- SOURCE
    function Create
-     (Interp   : in Tcl_Interp;
-      pathName : in String;
-      options  : in String := "")
-      return     Frame;
+     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
+      return Frame;
    procedure Create
-     (Widgt    : out Frame;
-      Interp   : in Tcl_Interp;
-      pathName : in String;
-      options  : in String := "");
+     (Widgt: out Frame; Interp: in Tcl_Interp; pathName: in String;
+      options: in String := "");
    -- ****
 
    ---------------------------------------------
@@ -339,13 +295,9 @@ package Tcl.Tk.Ada is
    -- parameter or the option database to configure the widget.
    -- SOURCE
    function Create
-     (pathName : in String;
-      options  : in String := "")
-      return     Toplevel;
+     (pathName: in String; options: in String := "") return Toplevel;
    procedure Create
-     (Widgt    : out Toplevel;
-      pathName : in String;
-      options  : in String := "");
+     (Widgt: out Toplevel; pathName: in String; options: in String := "");
    -- ****
 
    -- ****f* Tcl.Tk.Ada/CreateTopLevel2
@@ -355,15 +307,11 @@ package Tcl.Tk.Ada is
    -- parameter or the option database to configure the widget.
    -- SOURCE
    function Create
-     (Interp   : in Tcl_Interp;
-      pathName : in String;
-      options  : in String := "")
-      return     Toplevel;
+     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
+      return Toplevel;
    procedure Create
-     (Widgt    : out Toplevel;
-      Interp   : in Tcl_Interp;
-      pathName : in String;
-      options  : in String := "");
+     (Widgt: out Toplevel; Interp: in Tcl_Interp; pathName: in String;
+      options: in String := "");
    -- ****
 
    ---------------------------------------------
@@ -380,14 +328,9 @@ package Tcl.Tk.Ada is
    -- into a label widget.  Options may be specified via the "options"
    -- parameter or the option database to configure the widget.
    -- SOURCE
-   function Create
-     (pathName : in String;
-      options  : in String := "")
-      return     Label;
+   function Create(pathName: in String; options: in String := "") return Label;
    procedure Create
-     (Widgt    : out Label;
-      pathName : in String;
-      options  : in String := "");
+     (Widgt: out Label; pathName: in String; options: in String := "");
    -- ****
 
    -- ****f* Tcl.Tk.Ada/CreateLabel2
@@ -397,15 +340,11 @@ package Tcl.Tk.Ada is
    -- parameter or the option database to configure the widget.
    -- SOURCE
    function Create
-     (Interp   : in Tcl_Interp;
-      pathName : in String;
-      options  : in String := "")
-      return     Label;
+     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
+      return Label;
    procedure Create
-     (Widgt    : out Label;
-      Interp   : in Tcl_Interp;
-      pathName : in String;
-      options  : in String := "");
+     (Widgt: out Label; Interp: in Tcl_Interp; pathName: in String;
+      options: in String := "");
    -- ****
 
    ---------------------------------------------
@@ -423,13 +362,9 @@ package Tcl.Tk.Ada is
    -- parameter or the option database to configure the widget.
    -- SOURCE
    function Create
-     (pathName : in String;
-      options  : in String := "")
-      return     Message;
+     (pathName: in String; options: in String := "") return Message;
    procedure Create
-     (Widgt    : out Message;
-      pathName : in String;
-      options  : in String := "");
+     (Widgt: out Message; pathName: in String; options: in String := "");
    -- ****
 
    -- ****f* Tcl.Tk.Ada/CreateMessage2
@@ -439,15 +374,11 @@ package Tcl.Tk.Ada is
    -- parameter or the option database to configure the widget.
    -- SOURCE
    function Create
-     (Interp   : in Tcl_Interp;
-      pathName : in String;
-      options  : in String := "")
-      return     Message;
+     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
+      return Message;
    procedure Create
-     (Widgt    : out Message;
-      Interp   : in Tcl_Interp;
-      pathName : in String;
-      options  : in String := "");
+     (Widgt: out Message; Interp: in Tcl_Interp; pathName: in String;
+      options: in String := "");
    -- ****
 
    ---------------------------------------------
@@ -465,13 +396,9 @@ package Tcl.Tk.Ada is
    -- parameter or the option database to configure the widget.
    -- SOURCE
    function Create
-     (pathName : in String;
-      options  : in String := "")
-      return     Button;
+     (pathName: in String; options: in String := "") return Button;
    procedure Create
-     (Widgt    : out Button;
-      pathName : in String;
-      options  : in String := "");
+     (Widgt: out Button; pathName: in String; options: in String := "");
    -- ****
 
    -- ****f* Tcl.Tk.Ada/CreateButton2
@@ -481,22 +408,18 @@ package Tcl.Tk.Ada is
    -- parameter or the option database to configure the widget.
    -- SOURCE
    function Create
-     (Interp   : in Tcl_Interp;
-      pathName : in String;
-      options  : in String := "")
-      return     Button;
+     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
+      return Button;
    procedure Create
-     (Widgt    : out Button;
-      Interp   : in Tcl_Interp;
-      pathName : in String;
-      options  : in String := "");
+     (Widgt: out Button; Interp: in Tcl_Interp; pathName: in String;
+      options: in String := "");
    -- ****
 
    -- ****f* Tcl.Tk.Ada/Flash
    -- FUNCTION
    --  Flash the button.
    -- SOURCE
-   procedure Flash (Buttn : in Button'Class);
+   procedure Flash(Buttn: in Button'Class);
    -- ****
 
    -- ****f* Tcl.Tk.Ada/Invoke
@@ -504,10 +427,8 @@ package Tcl.Tk.Ada is
    --  Invoke the Tcl command associated with the button.
    -- SOURCE
    function Invoke
-     (Buttn   : in Button'Class;
-      options : in String := "")
-      return    String;
-      -- ****
+     (Buttn: in Button'Class; options: in String := "") return String;
+   -- ****
 
    ---------------------------------------------
    --
@@ -524,13 +445,9 @@ package Tcl.Tk.Ada is
    -- parameter or the option database to configure the widget.
    -- SOURCE
    function Create
-     (pathName : in String;
-      options  : in String := "")
-      return     RadioButton;
+     (pathName: in String; options: in String := "") return RadioButton;
    procedure Create
-     (Widgt    : out RadioButton;
-      pathName : in String;
-      options  : in String := "");
+     (Widgt: out RadioButton; pathName: in String; options: in String := "");
    -- ****
 
    -- ****f* Tcl.Tk.Ada/CreateRadioButton2
@@ -540,36 +457,32 @@ package Tcl.Tk.Ada is
    -- parameter or the option database to configure the widget.
    -- SOURCE
    function Create
-     (Interp   : in Tcl_Interp;
-      pathName : in String;
-      options  : in String := "")
-      return     RadioButton;
+     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
+      return RadioButton;
    procedure Create
-     (Widgt    : out RadioButton;
-      Interp   : in Tcl_Interp;
-      pathName : in String;
-      options  : in String := "");
+     (Widgt: out RadioButton; Interp: in Tcl_Interp; pathName: in String;
+      options: in String := "");
    -- ****
 
    -- ****f* Tcl.Tk.Ada/Deselect
    -- FUNCTION
    -- Deselect the button.
    -- SOURCE
-   procedure Deselect (Buttn : in RadioButton);
+   procedure Deselect(Buttn: in RadioButton);
    -- ****
 
    -- ****f* Tcl.Tk.Ada/Tk_Select
    -- FUNCTION
    -- Select the button.
    -- SOURCE
-   procedure Tk_Select (Buttn : in RadioButton);
+   procedure Tk_Select(Buttn: in RadioButton);
    -- ****
 
    -- ****f* Tcl.Tk.Ada/Toggle
    -- FUNCTION
    -- Toggle the button.
    -- SOURCE
-   procedure Toggle (Buttn : in RadioButton);
+   procedure Toggle(Buttn: in RadioButton);
    -- ****
 
    ---------------------------------------------
@@ -587,13 +500,9 @@ package Tcl.Tk.Ada is
    -- parameter or the option database to configure the widget.
    -- SOURCE
    function Create
-     (pathName : in String;
-      options  : in String := "")
-      return     CheckButton;
+     (pathName: in String; options: in String := "") return CheckButton;
    procedure Create
-     (Widgt    : out CheckButton;
-      pathName : in String;
-      options  : in String := "");
+     (Widgt: out CheckButton; pathName: in String; options: in String := "");
    -- ****
 
    -- ****f* Tcl.Tk.Ada/CreateCheckButton2
@@ -603,36 +512,32 @@ package Tcl.Tk.Ada is
    -- parameter or the option database to configure the widget.
    -- SOURCE
    function Create
-     (Interp   : in Tcl_Interp;
-      pathName : in String;
-      options  : in String := "")
-      return     CheckButton;
+     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
+      return CheckButton;
    procedure Create
-     (Widgt    : out CheckButton;
-      Interp   : in Tcl_Interp;
-      pathName : in String;
-      options  : in String := "");
+     (Widgt: out CheckButton; Interp: in Tcl_Interp; pathName: in String;
+      options: in String := "");
    -- ****
 
    -- ****f* Tcl.Tk.Ada/DeselectCheckButton
    -- FUNCTION
    -- Deselect the button.
    -- SOURCE
-   procedure Deselect (Buttn : in CheckButton);
+   procedure Deselect(Buttn: in CheckButton);
    -- ****
 
    -- ****f* Tcl.Tk.Ada/Tk_SelectCheckButton
    -- FUNCTION
    --  Select the button.
    -- SOURCE
-   procedure Tk_Select (Buttn : in CheckButton);
+   procedure Tk_Select(Buttn: in CheckButton);
    -- ****
 
    -- ****f* Tcl.Tk.Ada/ToggleCheckButton
    -- FUNCTION
    -- Toggle the button.
    -- SOURCE
-   procedure Toggle (Buttn : in CheckButton);
+   procedure Toggle(Buttn: in CheckButton);
    -- ****
 
    ---------------------------------------------
@@ -650,13 +555,9 @@ package Tcl.Tk.Ada is
    -- parameter or the option database to configure the widget.
    -- SOURCE
    function Create
-     (pathName : in String;
-      options  : in String := "")
-      return     EntryWidget;
+     (pathName: in String; options: in String := "") return EntryWidget;
    procedure Create
-     (Widgt    : out EntryWidget;
-      pathName : in String;
-      options  : in String := "");
+     (Widgt: out EntryWidget; pathName: in String; options: in String := "");
    -- ****
 
    -- ****f* Tcl.Tk.Ada/CreateEntry2
@@ -666,22 +567,18 @@ package Tcl.Tk.Ada is
    -- parameter or the option database to configure the widget.
    -- SOURCE
    function Create
-     (Interp   : in Tcl_Interp;
-      pathName : in String;
-      options  : in String := "")
-      return     EntryWidget;
+     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
+      return EntryWidget;
    procedure Create
-     (Widgt    : out EntryWidget;
-      Interp   : in Tcl_Interp;
-      pathName : in String;
-      options  : in String := "");
+     (Widgt: out EntryWidget; Interp: in Tcl_Interp; pathName: in String;
+      options: in String := "");
    -- ****
 
    -- ****f* Tcl.Tk.Ada/get
    -- FUNCTION
    -- Returns the entry's string.
    -- SOURCE
-   function get (Widgt : in EntryWidget) return String;
+   function get(Widgt: in EntryWidget) return String;
    -- ****
 
    ---------------------------------------------
@@ -697,14 +594,14 @@ package Tcl.Tk.Ada is
    -- FUNCTION
    -- Sleeps for Ms milliseconds in the "contextual" interpreter.
    -- SOURCE
-   procedure After (Ms : in Natural);
+   procedure After(Ms: in Natural);
    -- ****
 
    -- ****f* Tcl.Tk.Ada/After2
    -- FUNCTION
    -- Sleeps for Ms milliseconds in the specified interpreter.
    -- SOURCE
-   procedure After (Interp : in Tcl_Interp; Ms : in Natural);
+   procedure After(Interp: in Tcl_Interp; Ms: in Natural);
    -- ****
 
    -- ****f* Tcl.Tk.Ada/After3
@@ -713,8 +610,8 @@ package Tcl.Tk.Ada is
    -- in the "contextual" interpreter.  The function returns an
    -- identifier suitable for canceling the command.
    -- SOURCE
-   function After (Ms : in Natural; Script : in String) return String;
-   procedure After (Ms : in Natural; Script : in String);
+   function After(Ms: in Natural; Script: in String) return String;
+   procedure After(Ms: in Natural; Script: in String);
    -- ****
 
    -- ****f* Tcl.Tk.Ada/After4
@@ -724,14 +621,8 @@ package Tcl.Tk.Ada is
    -- identifier suitable for canceling the command.
    -- SOURCE
    function After
-     (Interp : in Tcl_Interp;
-      Ms     : in Natural;
-      Script : in String)
-      return   String;
-   procedure After
-     (Interp : in Tcl_Interp;
-      Ms     : in Natural;
-      Script : in String);
+     (Interp: in Tcl_Interp; Ms: in Natural; Script: in String) return String;
+   procedure After(Interp: in Tcl_Interp; Ms: in Natural; Script: in String);
    -- ****
 
    -- ****f* Tcl.Tk.Ada/Cancel
@@ -739,7 +630,7 @@ package Tcl.Tk.Ada is
    -- Cancels the execution of a delayed command in the "contextual"
    -- interpreter.
    -- SOURCE
-   procedure Cancel (id_or_script : in String);
+   procedure Cancel(id_or_script: in String);
    -- ****
 
    -- ****f* Tcl.Tk.Ada/Cancel2
@@ -747,7 +638,7 @@ package Tcl.Tk.Ada is
    -- Cancels the execution of a delayed command in the specified
    -- interpreter.
    -- SOURCE
-   procedure Cancel (Interp : in Tcl_Interp; id_or_script : in String);
+   procedure Cancel(Interp: in Tcl_Interp; id_or_script: in String);
    -- ****
 
    -- ****f* Tcl.Tk.Ada/Idle
@@ -756,8 +647,8 @@ package Tcl.Tk.Ada is
    -- handler in the "contextual" interpreter.  The function returns
    -- an identifier suitable for canceling the command.
    -- SOURCE
-   function Idle (Script : in String) return String;
-   procedure Idle (Script : in String);
+   function Idle(Script: in String) return String;
+   procedure Idle(Script: in String);
    -- ****
 
    -- ****f* Tcl.Tk.Ada/Idle2
@@ -766,8 +657,8 @@ package Tcl.Tk.Ada is
    -- handler in the specified interpreter.  The function returns
    -- an identifier suitable for canceling the command.
    -- SOURCE
-   function Idle (Interp : in Tcl_Interp; Script : in String) return String;
-   procedure Idle (Interp : in Tcl_Interp; Script : in String);
+   function Idle(Interp: in Tcl_Interp; Script: in String) return String;
+   procedure Idle(Interp: in Tcl_Interp; Script: in String);
    -- ****
 
    -- ****f* Tcl.Tk.Ada/Info
@@ -775,7 +666,7 @@ package Tcl.Tk.Ada is
    -- Returns information about existing event handlers in the
    -- "contextual" interpreter.
    -- SOURCE
-   function Info (id : in String := "") return String;
+   function Info(id: in String := "") return String;
    -- ****
 
    -- ****f* Tcl.Tk.Ada/Info2
@@ -783,11 +674,8 @@ package Tcl.Tk.Ada is
    -- Returns information about existing event handlers in the
    -- "contextual" interpreter.
    -- SOURCE
-   function Info
-     (Interp : in Tcl_Interp;
-      id     : in String := "")
-      return   String;
-      -- ****
+   function Info(Interp: in Tcl_Interp; id: in String := "") return String;
+   -- ****
 
    ---------------------------------------------
    --
@@ -798,13 +686,13 @@ package Tcl.Tk.Ada is
    --
    ---------------------------------------------
 
-   procedure Pack (Slave : in Widget'Class; Options : in String);
+   procedure Pack(Slave: in Widget'Class; Options: in String);
 
    -- ****f* Tcl.Tk.Ada/Pack_Configure
    -- FUNCTION
    -- Tells the packer how to configure the specified Slave window.
    -- SOURCE
-   procedure Pack_Configure (Slave : in Widget'Class; Options : in String);
+   procedure Pack_Configure(Slave: in Widget'Class; Options: in String);
    -- ****
 
    -- ****f* Tcl.Tk.Ada/Pack_Forget
@@ -812,7 +700,7 @@ package Tcl.Tk.Ada is
    -- Removes the Slave window from the packing list for its master
    -- and unmaps their windows.
    -- SOURCE
-   procedure Pack_Forget (Slave : in Widget'Class);
+   procedure Pack_Forget(Slave: in Widget'Class);
    -- ****
 
    -- ****f* Tcl.Tk.Ada/Pack_Info
@@ -820,21 +708,21 @@ package Tcl.Tk.Ada is
    -- Returns a list whose elements are the current configuration
    -- state of the specified Slave window.
    -- SOURCE
-   function Pack_Info (Slave : in Widget'Class) return String;
+   function Pack_Info(Slave: in Widget'Class) return String;
    -- ****
 
    -- ****f* Tcl.Tk.Ada/Pack_Propagate
    -- FUNCTION
    -- Enables or disables propagation for the specified Master window.
    -- SOURCE
-   procedure Pack_Propagate (Master : in Widget'Class; State : in Boolean);
+   procedure Pack_Propagate(Master: in Widget'Class; State: in Boolean);
    -- ****
 
    -- ****f* Tcl.Tk.Ada/Pack_Propagate2
    -- FUNCTION
    -- Returns state of propagation in the specified Master window.
    -- SOURCE
-   function Pack_Propagate (Master : in Widget'Class) return Boolean;
+   function Pack_Propagate(Master: in Widget'Class) return Boolean;
    -- ****
 
    -- ****f* Tcl.Tk.Ada/Pack_Slaves
@@ -842,321 +730,198 @@ package Tcl.Tk.Ada is
    -- Returns a list of slaves in the packing order of the specified
    -- Master window.
    -- SOURCE
-   function Pack_Slaves (Master : in Widget'Class) return String;
+   function Pack_Slaves(Master: in Widget'Class) return String;
    -- ****
 
-   function Tk_PathName (tkwin : in Tk_Window) return String;
+   function Tk_PathName(tkwin: in Tk_Window) return String;
 
    procedure Tk_AddOption
-     (tkwin    : in Tk_Window;
-      name     : in String;
-      value    : in String;
-      priority : in C.int);
+     (tkwin: in Tk_Window; name: in String; value: in String;
+      priority: in C.int);
 
    function Tk_CanvasGetCoord
-     (interp    : in Tcl_Interp;
-      canvas    : in Tk_Canvas;
-      str       : in String;
-      doublePtr : access C.double)
-      return      C.int;
+     (interp: in Tcl_Interp; canvas: in Tk_Canvas; str: in String;
+      doublePtr: access C.double) return C.int;
 
    function Tk_CanvasTagsParseProc
-     (data    : in ClientData;
-      interp  : in Tcl_Interp;
-      tkwin   : in Tk_Window;
-      value   : in String;
-      widgRec : in String;
-      offset  : in C.int)
-      return    C.int;
+     (data: in ClientData; interp: in Tcl_Interp; tkwin: in Tk_Window;
+      value: in String; widgRec: in String; offset: in C.int) return C.int;
 
    function Tk_CanvasTagsPrintProc
-     (data        : in ClientData;
-      tkwin       : in Tk_Window;
-      widgRec     : in String;
-      offset      : in C.int;
-      freeProcPtr : in Tcl_FreeProc)
-      return        String;
+     (data: in ClientData; tkwin: in Tk_Window; widgRec: in String;
+      offset: in C.int; freeProcPtr: in Tcl_FreeProc) return String;
 
    function Tk_ConfigureInfo
-     (interp   : in Tcl_Interp;
-      tkwin    : in Tk_Window;
-      specs    : in Tk_ConfigSpec;
-      widgRec  : in String;
-      argvName : in String;
-      flags    : in C.int)
-      return     C.int;
+     (interp: in Tcl_Interp; tkwin: in Tk_Window; specs: in Tk_ConfigSpec;
+      widgRec: in String; argvName: in String; flags: in C.int) return C.int;
 
    function Tk_ConfigureValue
-     (interp   : in Tcl_Interp;
-      tkwin    : in Tk_Window;
-      specs    : in Tk_ConfigSpec;
-      widgRec  : in String;
-      argvName : in String;
-      flags    : in C.int)
-      return     C.int;
+     (interp: in Tcl_Interp; tkwin: in Tk_Window; specs: in Tk_ConfigSpec;
+      widgRec: in String; argvName: in String; flags: in C.int) return C.int;
 
    function Tk_ConfigureWidget
-     (interp  : in Tcl_Interp;
-      tkwin   : in Tk_Window;
-      specs   : in Tk_ConfigSpec;
-      argc    : in C.int;
-      argv    : in CArgv.Chars_Ptr_Ptr;
-      widgRec : in String;
-      flags   : in C.int)
-      return    C.int;
+     (interp: in Tcl_Interp; tkwin: in Tk_Window; specs: in Tk_ConfigSpec;
+      argc: in C.int; argv: in CArgv.Chars_Ptr_Ptr; widgRec: in String;
+      flags: in C.int) return C.int;
 
    function Tk_ComputeTextLayout
-     (font       : in Tk_Font;
-      str        : in String;
-      numChars   : in C.int;
-      wrapLength : in C.int;
-      justify    : in Tk_Justify;
-      flags      : in C.int;
-      widthPtr   : access C.int;
-      heightPtr  : access C.int)
-      return       Tk_TextLayout;
+     (font: in Tk_Font; str: in String; numChars: in C.int;
+      wrapLength: in C.int; justify: in Tk_Justify; flags: in C.int;
+      widthPtr: access C.int; heightPtr: access C.int) return Tk_TextLayout;
 
    function Tk_CreateBinding
-     (interp       : in Tcl_Interp;
-      bindingTable : in Tk_BindingTable;
-      object       : in ClientData;
-      eventStr     : in String;
-      command      : in String;
-      append       : in C.int)
-      return         C.unsigned_long;
+     (interp: in Tcl_Interp; bindingTable: in Tk_BindingTable;
+      object: in ClientData; eventStr: in String; command: in String;
+      append: in C.int) return C.unsigned_long;
 
    function Tk_CreateWindow
-     (interp     : in Tcl_Interp;
-      parent     : in Tk_Window;
-      name       : in String;
-      screenName : in String)
-      return       Tk_Window;
+     (interp: in Tcl_Interp; parent: in Tk_Window; name: in String;
+      screenName: in String) return Tk_Window;
 
    function Tk_CreateWindowFromPath
-     (interp     : in Tcl_Interp;
-      tkwin      : in Tk_Window;
-      pathName   : in String;
-      screenName : in String)
-      return       Tk_Window;
+     (interp: in Tcl_Interp; tkwin: in Tk_Window; pathName: in String;
+      screenName: in String) return Tk_Window;
 
    function Tk_DefineBitmap
-     (interp : in Tcl_Interp;
-      name   : in String;
-      source : in String;
-      width  : in C.int;
-      height : in C.int)
-      return   C.int;
+     (interp: in Tcl_Interp; name: in String; source: in String;
+      width: in C.int; height: in C.int) return C.int;
 
    function Tk_DeleteBinding
-     (interp       : in Tcl_Interp;
-      bindingTable : in Tk_BindingTable;
-      object       : in ClientData;
-      eventStr     : in String)
-      return         C.int;
+     (interp: in Tcl_Interp; bindingTable: in Tk_BindingTable;
+      object: in ClientData; eventStr: in String) return C.int;
 
-   procedure Tk_DeleteImage (interp : in Tcl_Interp; name : in String);
+   procedure Tk_DeleteImage(interp: in Tcl_Interp; name: in String);
 
-   function Tk_DisplayName (tkwin : in Tk_Window) return String;
+   function Tk_DisplayName(tkwin: in Tk_Window) return String;
 
    function Tk_FindPhoto
-     (interp    : in Tcl_Interp;
-      imageName : in String)
-      return      Tk_PhotoHandle;
+     (interp: in Tcl_Interp; imageName: in String) return Tk_PhotoHandle;
 
    function Tk_GetAnchor
-     (interp    : in Tcl_Interp;
-      str       : in String;
-      anchorPtr : in Tk_Anchor)
-      return      C.int;
+     (interp: in Tcl_Interp; str: in String; anchorPtr: in Tk_Anchor) return C
+     .int;
 
    function Tk_GetBinding
-     (interp       : in Tcl_Interp;
-      bindingTable : in Tk_BindingTable;
-      object       : in ClientData;
-      eventStr     : in String)
-      return         String;
+     (interp: in Tcl_Interp; bindingTable: in Tk_BindingTable;
+      object: in ClientData; eventStr: in String) return String;
 
    function Tk_GetCapStyle
-     (interp : in Tcl_Interp;
-      str    : in String;
-      capPtr : access C.int)
-      return   C.int;
+     (interp: in Tcl_Interp; str: in String; capPtr: access C.int) return C
+     .int;
 
    function Tk_GetCursorFromData
-     (interp : in Tcl_Interp;
-      tkwin  : in Tk_Window;
-      source : in String;
-      mask   : in String;
-      width  : in C.int;
-      height : in C.int;
-      xHot   : in C.int;
-      yHot   : in C.int;
-      fg     : in Tk_Uid;
-      bg     : in Tk_Uid)
-      return   Tk_Cursor;
+     (interp: in Tcl_Interp; tkwin: in Tk_Window; source: in String;
+      mask: in String; width: in C.int; height: in C.int; xHot: in C.int;
+      yHot: in C.int; fg: in Tk_Uid; bg: in Tk_Uid) return Tk_Cursor;
 
    function Tk_GetFont
-     (interp : in Tcl_Interp;
-      tkwin  : in Tk_Window;
-      str    : in String)
-      return   Tk_Font;
+     (interp: in Tcl_Interp; tkwin: in Tk_Window; str: in String)
+      return Tk_Font;
 
    function Tk_GetImage
-     (interp     : in Tcl_Interp;
-      tkwin      : in Tk_Window;
-      name       : in String;
-      changeProc : in Tk_ImageChangedProc;
-      data       : in ClientData)
-      return       Tk_Image;
+     (interp: in Tcl_Interp; tkwin: in Tk_Window; name: in String;
+      changeProc: in Tk_ImageChangedProc; data: in ClientData) return Tk_Image;
 
    function Tk_GetImageMasterData
-     (interp     : in Tcl_Interp;
-      name       : in String;
-      typePtrPtr : in Tk_ImageType)
-      return       ClientData;
+     (interp: in Tcl_Interp; name: in String; typePtrPtr: in Tk_ImageType)
+      return ClientData;
 
    function Tk_GetJoinStyle
-     (interp  : in Tcl_Interp;
-      str     : in String;
-      joinPtr : access C.int)
-      return    C.int;
+     (interp: in Tcl_Interp; str: in String; joinPtr: access C.int) return C
+     .int;
 
    function Tk_GetJustify
-     (interp     : in Tcl_Interp;
-      str        : in String;
-      justifyPtr : in Tk_Justify)
-      return       C.int;
+     (interp: in Tcl_Interp; str: in String; justifyPtr: in Tk_Justify)
+      return C.int;
 
    function Tk_GetOption
-     (tkwin     : in Tk_Window;
-      name      : in String;
-      className : in String)
-      return      Tk_Uid;
+     (tkwin: in Tk_Window; name: in String; className: in String)
+      return Tk_Uid;
 
    function Tk_GetPixels
-     (interp : in Tcl_Interp;
-      tkwin  : in Tk_Window;
-      str    : in String;
-      intPtr : access C.int)
-      return   C.int;
+     (interp: in Tcl_Interp; tkwin: in Tk_Window; str: in String;
+      intPtr: access C.int) return C.int;
 
    function Tk_GetRelief
-     (interp    : in Tcl_Interp;
-      name      : in String;
-      reliefPtr : access C.int)
-      return      C.int;
+     (interp: in Tcl_Interp; name: in String; reliefPtr: access C.int) return C
+     .int;
 
    function Tk_GetScreenMM
-     (interp    : in Tcl_Interp;
-      tkwin     : in Tk_Window;
-      str       : in String;
-      doublePtr : access C.double)
-      return      C.int;
+     (interp: in Tcl_Interp; tkwin: in Tk_Window; str: in String;
+      doublePtr: access C.double) return C.int;
 
-   function Tk_GetUid (str : in String) return Tk_Uid;
+   function Tk_GetUid(str: in String) return Tk_Uid;
 
    function Tk_MeasureChars
-     (tkfont    : in Tk_Font;
-      source    : in String;
-      numBytes  : in C.int;
-      maxPixels : in C.int;
-      flags     : in C.int;
-      lengthPtr : access C.int)
-      return      C.int;
+     (tkfont: in Tk_Font; source: in String; numBytes: in C.int;
+      maxPixels: in C.int; flags: in C.int; lengthPtr: access C.int) return C
+     .int;
 
-   function Tk_NameOf3DBorder (border : in Tk_3DBorder) return String;
+   function Tk_NameOf3DBorder(border: in Tk_3DBorder) return String;
 
-   function Tk_NameOfAnchor (anchor : in Tk_Anchor) return String;
+   function Tk_NameOfAnchor(anchor: in Tk_Anchor) return String;
 
-   function Tk_NameOfCapStyle (cap : in C.int) return String;
+   function Tk_NameOfCapStyle(cap: in C.int) return String;
 
-   function Tk_NameOfFont (font : in Tk_Font) return String;
+   function Tk_NameOfFont(font: in Tk_Font) return String;
 
-   function Tk_NameOfImage (imageMaster : in Tk_ImageMaster) return String;
+   function Tk_NameOfImage(imageMaster: in Tk_ImageMaster) return String;
 
-   function Tk_NameOfJoinStyle (join : in C.int) return String;
+   function Tk_NameOfJoinStyle(join: in C.int) return String;
 
-   function Tk_NameOfJustify (justify : in Tk_Justify) return String;
+   function Tk_NameOfJustify(justify: in Tk_Justify) return String;
 
-   function Tk_NameOfRelief (relief : in C.int) return String;
+   function Tk_NameOfRelief(relief: in C.int) return String;
 
    function Tk_NameToWindow
-     (interp   : in Tcl_Interp;
-      pathName : in String;
-      tkwin    : in Tk_Window)
-      return     Tk_Window;
+     (interp: in Tcl_Interp; pathName: in String; tkwin: in Tk_Window)
+      return Tk_Window;
 
-   function Tk_SetAppName
-     (tkwin : in Tk_Window;
-      name  : in String)
-      return  String;
+   function Tk_SetAppName(tkwin: in Tk_Window; name: in String) return String;
 
-   procedure Tk_SetClass (tkwin : in Tk_Window; className : in String);
+   procedure Tk_SetClass(tkwin: in Tk_Window; className: in String);
 
    function Tk_TextWidth
-     (font     : in Tk_Font;
-      str      : in String;
-      numBytes : in C.int)
-      return     C.int;
+     (font: in Tk_Font; str: in String; numBytes: in C.int) return C.int;
 
    procedure Tk_FreeConfigOptions
-     (recordPtr   : in String;
-      optionToken : in Tk_OptionTable;
-      tkwin       : in Tk_Window);
+     (recordPtr: in String; optionToken: in Tk_OptionTable;
+      tkwin: in Tk_Window);
 
    function Tk_GetOptionInfo
-     (interp      : in Tcl_Interp;
-      recordPtr   : in String;
-      optionTable : in Tk_OptionTable;
-      namePtr     : in Tcl_Obj;
-      tkwin       : in Tk_Window)
-      return        Tcl_Obj;
+     (interp: in Tcl_Interp; recordPtr: in String;
+      optionTable: in Tk_OptionTable; namePtr: in Tcl_Obj; tkwin: in Tk_Window)
+      return Tcl_Obj;
 
    function Tk_GetOptionValue
-     (interp      : in Tcl_Interp;
-      recordPtr   : in String;
-      optionTable : in Tk_OptionTable;
-      namePtr     : in Tcl_Obj;
-      tkwin       : in Tk_Window)
-      return        Tcl_Obj;
+     (interp: in Tcl_Interp; recordPtr: in String;
+      optionTable: in Tk_OptionTable; namePtr: in Tcl_Obj; tkwin: in Tk_Window)
+      return Tcl_Obj;
 
    function Tk_InitOptions
-     (interp      : in Tcl_Interp;
-      recordPtr   : in String;
-      optionToken : in Tk_OptionTable;
-      tkwin       : in Tk_Window)
-      return        C.int;
+     (interp: in Tcl_Interp; recordPtr: in String;
+      optionToken: in Tk_OptionTable; tkwin: in Tk_Window) return C.int;
 
    function Tk_SetOptions
-     (interp      : in Tcl_Interp;
-      recordPtr   : in String;
-      optionTable : in Tk_OptionTable;
-      objc        : in C.int;
-      objv        : in Tcl_Obj_Array;
-      tkwin       : in Tk_Window;
-      savePtr     : in Tk_SavedOptions;
-      maskPtr     : access C.int)
-      return        C.int;
+     (interp: in Tcl_Interp; recordPtr: in String;
+      optionTable: in Tk_OptionTable; objc: in C.int; objv: in Tcl_Obj_Array;
+      tkwin: in Tk_Window; savePtr: in Tk_SavedOptions; maskPtr: access C.int)
+      return C.int;
 
    function Tk_GetDash
-     (interp : in Tcl_Interp;
-      value  : in String;
-      dash   : in Tk_Dash)
-      return   C.int;
+     (interp: in Tcl_Interp; value: in String; dash: in Tk_Dash) return C.int;
 
 private
 
    type Widget is abstract tagged record
-      Name   : C.Strings.chars_ptr;
-      Interp : Tcl_Interp;
+      Name: C.Strings.chars_ptr;
+      Interp: Tcl_Interp;
    end record;
 
-   Context : Tcl_Interp;
+   Context: Tcl_Interp;
 
    procedure Execute_Widget_Command
-     (Widgt   : in Widget'Class;
-      command : in String;
-      options : in String := "");
+     (Widgt: in Widget'Class; command: in String; options: in String := "");
 
    type Frame is new Widget with null record;
    type Toplevel is new Frame with null record;

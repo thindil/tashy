@@ -34,14 +34,12 @@ package CArgv is
    -- FUNCTION
    --  This is a C-style "argv" vector.
    -- SOURCE
-   type Vector is array (CNatural range <>) of aliased C.Strings.chars_ptr;
+   type Vector is array(CNatural range <>) of aliased C.Strings.chars_ptr;
    -- ****
 
-   package Argv_Pointer
-   is new C.Pointers (Index => CNatural,
-                      Element => C.Strings.chars_ptr,
-                      Element_Array => Vector,
-                      Default_Terminator => C.Strings.Null_Ptr);
+   package Argv_Pointer is new C.Pointers(Index => CNatural,
+      Element => C.Strings.chars_ptr, Element_Array => Vector,
+      Default_Terminator => C.Strings.Null_Ptr);
 
    -- ****t* CArgv/Chars_Ptr_Ptr
    -- FUNCTION
@@ -62,21 +60,21 @@ package CArgv is
    --  Create returns the command line arguments from Ada.Command_Line
    --  and converts them to a C-style, null-terminated argument vector.
    -- SOURCE
-   procedure Create (Argc : out CNatural; Argv : out Chars_Ptr_Ptr);
+   procedure Create(Argc: out CNatural; Argv: out Chars_Ptr_Ptr);
    -- ****
 
    -- ****f* CArgv/Show
    -- FUNCTION
    --  Prints Argc and Argv to standard out.
    -- SOURCE
-   procedure Show (Argc : in CNatural; Argv : in Chars_Ptr_Ptr);
+   procedure Show(Argc: in CNatural; Argv: in Chars_Ptr_Ptr);
    -- ****
 
    -- ****f* CArgv/Free
    -- FUNCTION
    --  Free all space used by Argv.
    -- SOURCE
-   procedure Free (Argv : in out Chars_Ptr_Ptr);
+   procedure Free(Argv: in out Chars_Ptr_Ptr);
    -- ****
 
    --  Example of getting Ada command line arguments and passing them
@@ -102,7 +100,7 @@ package CArgv is
    -- FUNCTION
    --  Returns the Nth argument from Argv.
    -- SOURCE
-   function Arg (Argv : Chars_Ptr_Ptr; N : CNatural) return String;
+   function Arg(Argv: Chars_Ptr_Ptr; N: CNatural) return String;
    -- ****
 
    ---------------------------------------------------------------------
@@ -123,14 +121,14 @@ package CArgv is
    -- FUNCTION
    --  Construct a Chars_Ptr_Ptr using concat operation.
    -- SOURCE
-   function "&" (Argv : Chars_Ptr_Ptr; Arg : String) return Chars_Ptr_Ptr;
+   function "&"(Argv: Chars_Ptr_Ptr; Arg: String) return Chars_Ptr_Ptr;
    -- ****
 
    -- ****f* CArgv/Argc
    -- FUNCTION
    --  Returns the number of arguments in a Chars_Ptr_Ptr.
    -- SOURCE
-   function Argc (Argv : in Chars_Ptr_Ptr) return CNatural;
+   function Argc(Argv: in Chars_Ptr_Ptr) return CNatural;
    -- ****
 
    --  Example of creating a Chars_Ptr_Ptr to pass to a C function requiring
