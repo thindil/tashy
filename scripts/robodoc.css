@@ -30,25 +30,25 @@
 
 body
 {
-    background-color:    #282a36;
-    color:               #f8f8f2;
-    font-family: Verdana, serif;
+    background-color:    rgb(23,23,23);
+    color:               rgb(238,232,170);
+    font-family:         Arial, serif;
     border-color:        rgb(226,199,143);
 }
 
 pre
 {
-    font:        Monospace;
+    font-family:      monospace;
     margin:      15px;
     padding:     5px;
     white-space: pre;
-    color:       #f8f8f2;
+    color:       #ebdbb2;
 }
 
 pre.source
 {
-    background-color: #333640;
-    border: dashed #f1fa8c 1px;
+    background-color: #1d2021;
+    border: dashed #aa9 1px;
 }
 
 p
@@ -66,8 +66,8 @@ p.item_name
 #content
 {
     font-size:           100%;
-    color:               #f8f8f2;
-    background-color:    #282a36;
+    color:               rgb(238,232,170);
+    background-color:    rgb(23,23,23);
     border-left-width:   0px; 
     border-right-width:  0px; 
     border-top-width:    0px; 
@@ -77,23 +77,24 @@ p.item_name
     border-top-style:    none; 
     border-bottom-style: none;
     padding:             40px 31px 14px 17px;
-    border-color:        #44475a;
+    border-color:        rgb(0,0,0);
     text-align:          justify;
 }
 
 #navigation
 {
-    background-color: #44475a;
-    color:            #bd93f9;
+    background-color: rgb(98,84,55);
+    color:            rgb(230,221,202);
+    font-family:      "Times New Roman", serif;
     font-style:       normal;
-    border-color:     #44475a;
+    border-color:     rgb(0,0,0);
 }
 
 a.menuitem
 {
     font-size: 120%;
-    background-color:    #282a36;
-    color:               #ffb86c;
+    background-color:    rgb(0,0,0);
+    color:               rgb(195,165,100);
     font-variant:        normal;
     text-transform:      none;
     font-weight:         normal;
@@ -102,29 +103,30 @@ a.menuitem
     margin-right:        5px; 
     margin-top:          5px; 
     margin-bottom:       5px;
-    border-color:        #282a36;
+    border-color:        rgb(159,126,57);
     text-align:          right;
 }
 
 #logo, #logo a
 {
     font-size: 130%;
-    background-color:   #44475a;
-    color:              #f8f8f2;
+    background-color:   #3c3836;
+    color:              #fbf17c;
+    font-family:        Georgia, serif;
     font-style:         normal;
     font-variant:       normal;
     text-transform:     none;
     font-weight:        bold;
     padding:            20px 18px 20px 18px;
-    border-color:       #f8f8f2;
+    border-color:       rgb(255,255,255);
     text-align:         right;
 }
 
 #extra, #extra a
 {
     font-size: 128%;
-    background-color:    #282a36;
-    color:               #ffb86c;
+    background-color:    rgb(0,0,0);
+    color:               rgb(230,221,202);
     font-style:          normal;
     font-variant:        normal;
     text-transform:      none;
@@ -138,19 +140,20 @@ a.menuitem
     border-top-style:    none; 
     border-bottom-style: none;
     padding: 12px 12px 12px 12px;
-    border-color:        #ffb86c;
+    border-color:        rgb(195,165,100);
     text-align:          center;
 }
 
 #content a
 {
-    color:              #ffb86c;
+    color:              #d79921;
     text-decoration:    none;
 }
 
 #content a:hover, #content a:active
 {
-    color:              #ff5555;
+    color:              #282828;
+    background-color:   #d79921;
 }
 
 a.indexitem
@@ -160,7 +163,8 @@ a.indexitem
 
 h1, h2, h3, h4, h5, h6
 {
-    background-color: #44475a;
+    background-color: #3c3836;
+    font-family:      Arial, serif;
     font-style:       normal;
     font-variant:     normal;
     text-transform:   none;
@@ -204,8 +208,8 @@ h6
 
 .menuitem:hover
 {
-    background-color:   #ffb86c;
-    color:              #282a36;
+    background-color:   rgb(195,165,100);
+    color:              rgb(0,0,0);
 }
 
 #extra a
@@ -241,6 +245,8 @@ h6
 
 div#footer
 {
+    background-color: #3c3836;
+    color:      #a89984;
     clear:      left;
     width:      100%;
     font-size:   71%;
@@ -248,13 +254,10 @@ div#footer
 
 div#footer a
 {
-    color:           #ff5555;
+    background-color: #3c3836;
+    color:            #a89984;
 }
 
-div#footer a:hover
-{
-    color:           #ffb86c;
-}
 div#footer p
 {
     margin:0;
@@ -263,32 +266,32 @@ div#footer p
 
 span.keyword
 {
-    color: #8be9fd;
+    color: #b16286;
 }
 
 span.comment
 {
-    color: #6272a4;
+    color: #080;
 }
 
 span.quote
 {
-    color: #50fa7b;
+    color: #cc241d;
 }
 
 span.squote
 {
-    color: #ff79c6;
+    color: #cc241d;
 }
 
 span.sign
 {
-    color: #ff5555;
+    color: #d65d0e;
 }
 
 span.line_number
 {
-    color: #f1fa8c;
+    color: #808080;
 }
 
 @media print
