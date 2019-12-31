@@ -72,5 +72,8 @@ if {$argc > 1} {
    set docsdir [lindex $argv 1]
 }
 
+if [file exists docsdir ] {
+   file delete docsdir
+}
 exec robodoc --rc $configfile
 fixdocs $docsdir
