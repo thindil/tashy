@@ -76,10 +76,12 @@ version of script have set all default settings for TASHY code. If you have
 [Bob](https://github.com/thindil/bob) installed, you can type `bob docs`.
 
 ## Contributing to the project
+
 For detailed informations about contributing to the project (bugs reporting,
 ideas propositions, code conduct, etc), see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Licenses
+
 TASHY is available under [GPLv2](COPYING) license with exception:
 
 As a special exception, if other files instantiate generics from this unit,
@@ -87,6 +89,14 @@ or you link this unit with other files to produce an executable, this unit
 does not by itself cause the resulting executable to be covered by the GNU
 General Public License. This exception does not however invalidate any other
 reasons why the executable file might be covered by the GNU Public License.
+
+## TODO
+
+* More widgets to Tcl.Tk.Ada
+* More and better code documentation
+* Update code to newest Tcl version
+* Update code to newest Tk version
+* Your proposition :)
 
 ----
 
