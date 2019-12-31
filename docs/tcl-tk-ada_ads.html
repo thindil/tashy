@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" href="./robodoc.css" type="text/css" />
+<title>./src/tcl-tk-ada.ads</title>
+<!-- Source: ./src/tcl-tk-ada.ads -->
+<!-- Generated with ROBODoc Version 4.99.43 (Jul 26 2019) -->
+</head>
+<body>
+<div id="logo">
+<a name="robo_top_of_doc">TASHY v8.6.0 code documentation</a>
+</div> <!-- logo -->
+<div id="navigation">
+<a class="menuitem" href="./toc_index.html#top">Table of Contents</a>
+<a class="menuitem" href="./sources.html#top">Source files</a>
+<a class="menuitem" href="./index.html#top">Index</a>
+<a class="menuitem" href="./robo_subprograms.html#top">Subprograms</a>
+<a class="menuitem" href="./robo_packages.html#top">Packages</a>
+<a class="menuitem" href="./robo_types.html#top">Types</a>
+</div> <!-- navigation -->
+<div id="content">
+<h3>TABLE OF CONTENTS</h3>
+<ul>
+<li>1. <a href="#robo4">Tashy/Tcl.Tk.Ada</a></li>
+<ul>
+<li>1.1. <a href="#robo11">Tcl.Tk.Ada/Widget</a></li>
+<li>1.2. <a href="#robo22">Tcl.Tk.Ada/"&amp;"</a></li>
+<li>1.3. <a href="#robo23">Tcl.Tk.Ada/After</a></li>
+<li>1.4. <a href="#robo24">Tcl.Tk.Ada/After2</a></li>
+<li>1.5. <a href="#robo25">Tcl.Tk.Ada/After3</a></li>
+<li>1.6. <a href="#robo26">Tcl.Tk.Ada/After4</a></li>
+<li>1.7. <a href="#robo27">Tcl.Tk.Ada/Bind</a></li>
+<li>1.8. <a href="#robo28">Tcl.Tk.Ada/Bind2</a></li>
+<li>1.9. <a href="#robo29">Tcl.Tk.Ada/Bind_To_Main_Window</a></li>
+<li>1.10. <a href="#robo30">Tcl.Tk.Ada/Bind_To_Main_Window2</a></li>
+<li>1.11. <a href="#robo31">Tcl.Tk.Ada/Cancel</a></li>
+<li>1.12. <a href="#robo32">Tcl.Tk.Ada/Cancel2</a></li>
+<li>1.13. <a href="#robo33">Tcl.Tk.Ada/cget</a></li>
+<li>1.14. <a href="#robo34">Tcl.Tk.Ada/configure</a></li>
+<li>1.15. <a href="#robo35">Tcl.Tk.Ada/Create1</a></li>
+<li>1.16. <a href="#robo36">Tcl.Tk.Ada/Create2</a></li>
+<li>1.17. <a href="#robo37">Tcl.Tk.Ada/CreateButton</a></li>
+<li>1.18. <a href="#robo38">Tcl.Tk.Ada/CreateButton2</a></li>
+<li>1.19. <a href="#robo39">Tcl.Tk.Ada/CreateCheckButton</a></li>
+<li>1.20. <a href="#robo40">Tcl.Tk.Ada/CreateCheckButton2</a></li>
+<li>1.21. <a href="#robo41">Tcl.Tk.Ada/CreateEntry</a></li>
+<li>1.22. <a href="#robo42">Tcl.Tk.Ada/CreateEntry2</a></li>
+<li>1.23. <a href="#robo43">Tcl.Tk.Ada/CreateFrame</a></li>
+<li>1.24. <a href="#robo44">Tcl.Tk.Ada/CreateFrame2</a></li>
+<li>1.25. <a href="#robo45">Tcl.Tk.Ada/CreateLabel</a></li>
+<li>1.26. <a href="#robo46">Tcl.Tk.Ada/CreateLabel2</a></li>
+<li>1.27. <a href="#robo47">Tcl.Tk.Ada/CreateMessage</a></li>
+<li>1.28. <a href="#robo48">Tcl.Tk.Ada/CreateMessage2</a></li>
+<li>1.29. <a href="#robo49">Tcl.Tk.Ada/CreateRadioButton</a></li>
+<li>1.30. <a href="#robo50">Tcl.Tk.Ada/CreateRadioButton2</a></li>
+<li>1.31. <a href="#robo51">Tcl.Tk.Ada/CreateTopLevel</a></li>
+<li>1.32. <a href="#robo52">Tcl.Tk.Ada/CreateTopLevel2</a></li>
+<li>1.33. <a href="#robo53">Tcl.Tk.Ada/Deselect</a></li>
+<li>1.34. <a href="#robo54">Tcl.Tk.Ada/DeselectCheckButton</a></li>
+<li>1.35. <a href="#robo55">Tcl.Tk.Ada/Destroy</a></li>
+<li>1.36. <a href="#robo56">Tcl.Tk.Ada/Flash</a></li>
+<li>1.37. <a href="#robo57">Tcl.Tk.Ada/get</a></li>
+<li>1.38. <a href="#robo58">Tcl.Tk.Ada/Get_Context</a></li>
+<li>1.39. <a href="#robo59">Tcl.Tk.Ada/Get_Interp</a></li>
+<li>1.40. <a href="#robo60">Tcl.Tk.Ada/Idle</a></li>
+<li>1.41. <a href="#robo61">Tcl.Tk.Ada/Idle2</a></li>
+<li>1.42. <a href="#robo62">Tcl.Tk.Ada/Info</a></li>
+<li>1.43. <a href="#robo63">Tcl.Tk.Ada/Info2</a></li>
+<li>1.44. <a href="#robo64">Tcl.Tk.Ada/Invoke</a></li>
+<li>1.45. <a href="#robo65">Tcl.Tk.Ada/Pack_Configure</a></li>
+<li>1.46. <a href="#robo66">Tcl.Tk.Ada/Pack_Forget</a></li>
+<li>1.47. <a href="#robo67">Tcl.Tk.Ada/Pack_Info</a></li>
+<li>1.48. <a href="#robo68">Tcl.Tk.Ada/Pack_Propagate</a></li>
+<li>1.49. <a href="#robo69">Tcl.Tk.Ada/Pack_Propagate2</a></li>
+<li>1.50. <a href="#robo70">Tcl.Tk.Ada/Pack_Slaves</a></li>
+<li>1.51. <a href="#robo71">Tcl.Tk.Ada/Set_Context</a></li>
+<li>1.52. <a href="#robo72">Tcl.Tk.Ada/Set_Trace</a></li>
+<li>1.53. <a href="#robo73">Tcl.Tk.Ada/Tk_Select</a></li>
+<li>1.54. <a href="#robo74">Tcl.Tk.Ada/Tk_SelectCheckButton</a></li>
+<li>1.55. <a href="#robo75">Tcl.Tk.Ada/Toggle</a></li>
+<li>1.56. <a href="#robo76">Tcl.Tk.Ada/ToggleCheckButton</a></li>
+<li>1.57. <a href="#robo77">Tcl.Tk.Ada/Unbind</a></li>
+<li>1.58. <a href="#robo78">Tcl.Tk.Ada/Unbind_From_Main_Window</a></li>
+<li>1.59. <a href="#robo79">Tcl.Tk.Ada/Widget_Image</a></li>
+</ul>
+</ul>
+<hr />
+<a name="Tashy2fTcl2eTk2eAda"></a>
+<a name="robo4"></a><h2>Tashy/Tcl.Tk.Ada [ Packages ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> This package provides the "thick" binding to Tcl.Tk.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source"><span class="keyword">package</span> <strong>Tcl.Tk.Ada</strong> <span class="keyword">is</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fWidget"></a>
+<a name="robo11"></a><h2>Tcl.Tk.Ada/Widget [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> The <strong>Widget</strong> data type, parent of all objects displayed on the screen.
+
+ It is abstract because it is just a convenience for creating a <strong>Widget</strong>
+ class and for creating non-abstract derived widget types.  Since there
+ is no such data type in Tk, we make it abstract so that no instance of
+ type <strong>Widget</strong> may be created.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">type</span> <strong>Widget</strong> <span class="keyword">is</span> <span class="keyword">abstract</span> tagged <span class="keyword">private</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2f222622"></a>
+<a name="robo22"></a><h2>Tcl.Tk.Ada/"&amp;" [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Concatenates and returns the string names of Left and Right.
+ Does not insert the separating dot.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <span class="quote">"&amp<span class="sign">;</span>"</span><span class="sign">(</span>Left<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Right<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a>'</span>Class<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+   <span class="keyword">function</span> <span class="quote">"&amp<span class="sign">;</span>"</span><span class="sign">(</span>Left<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Right<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+   <span class="keyword">function</span> "&amp<span class="sign">;</span>"<span class="sign">(</span>Left<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Right<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a>'</span>Class<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fAfter"></a>
+<a name="robo23"></a><h2>Tcl.Tk.Ada/After [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Sleeps for Ms milliseconds in the "contextual" interpreter.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>After</strong><span class="sign">(</span>Ms<span class="sign">:</span> <span class="keyword">in</span> Natural<span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fAfter2"></a>
+<a name="robo24"></a><h2>Tcl.Tk.Ada/After2 [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Sleeps for Ms milliseconds in the specified interpreter.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <a href="#robo23">After</a><span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> Ms<span class="sign">:</span> <span class="keyword">in</span> Natural<span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fAfter3"></a>
+<a name="robo25"></a><h2>Tcl.Tk.Ada/After3 [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Arranges for the Tcl Script to be executed after Ms milliseconds
+ in the "contextual" interpreter.  The function returns an
+ identifier suitable for canceling the command.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="#robo23">After</a><span class="sign">(</span>Ms<span class="sign">:</span> <span class="keyword">in</span> Natural<span class="sign">;</span> Script<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+   <span class="keyword">procedure</span> <a href="#robo23">After</a><span class="sign">(</span>Ms<span class="sign">:</span> <span class="keyword">in</span> Natural<span class="sign">;</span> Script<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fAfter4"></a>
+<a name="robo26"></a><h2>Tcl.Tk.Ada/After4 [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Arranges for the Tcl Script to be executed after Ms milliseconds
+ in the specified interpreter.  The function returns an
+ identifier suitable for canceling the command.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="#robo23">After</a>
+     <span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> Ms<span class="sign">:</span> <span class="keyword">in</span> Natural<span class="sign">;</span> Script<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+   <span class="keyword">procedure</span> <a href="#robo23">After</a><span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> Ms<span class="sign">:</span> <span class="keyword">in</span> Natural<span class="sign">;</span> Script<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fBind"></a>
+<a name="robo27"></a><h2>Tcl.Tk.Ada/Bind [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Associates Tcl script Script with the event Sequence.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Bind</strong>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Sequence<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Script<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">);</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fBind2"></a>
+<a name="robo28"></a><h2>Tcl.Tk.Ada/Bind2 [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Retained for backward compatibility.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <a href="#robo27">Bind</a><span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Sequence<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> renames <a href="#robo77">Unbind</a><span class="sign">;</span>
+   <span class="keyword">function</span> <a href="#robo27">Bind</a>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a>'</span>Class<span class="sign">;</span> Sequence<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">renames</span>
+     <a href="#robo77">Unbind</a><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fBind5fTo5fMain5fWindow"></a>
+<a name="robo29"></a><h2>Tcl.Tk.Ada/Bind_To_Main_Window [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Associates Tcl script Script with the event Sequence in the main window.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Bind_To_Main_Window</strong>
+     <span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> Sequence<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Script<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fBind5fTo5fMain5fWindow2"></a>
+<a name="robo30"></a><h2>Tcl.Tk.Ada/Bind_To_Main_Window2 [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Retained for backward compatibility.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <a href="#robo29">Bind_To_Main_Window</a>
+     <span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> Sequence<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">renames</span>
+     <a href="#robo78">Unbind_From_Main_Window</a><span class="sign">;</span>
+   <span class="keyword">function</span> <a href="#robo29">Bind_To_Main_Window</a>
+     <span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> Sequence<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">renames</span>
+     <a href="#robo78">Unbind_From_Main_Window</a><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fCancel"></a>
+<a name="robo31"></a><h2>Tcl.Tk.Ada/Cancel [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Cancels the execution of a delayed command in the "contextual"
+ interpreter.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Cancel</strong><span class="sign">(</span>id_or_script<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fCancel2"></a>
+<a name="robo32"></a><h2>Tcl.Tk.Ada/Cancel2 [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Cancels the execution of a delayed command in the specified
+ interpreter.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <a href="#robo31">Cancel</a><span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> id_or_script<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fcget"></a>
+<a name="robo33"></a><h2>Tcl.Tk.Ada/cget [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre>  Returns the current value of the specified configuration option.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>cget</strong><span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">;</span> option<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fconfigure"></a>
+<a name="robo34"></a><h2>Tcl.Tk.Ada/configure [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Queries or modifies the configuration options.  If options is
+ an empty string, returns a list of all available options
+ for the widget.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>configure</strong>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+   <span class="keyword">procedure</span> <strong>configure</strong><span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a>'</span>Class<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fCreate1"></a>
+<a name="robo35"></a><h2>Tcl.Tk.Ada/Create1 [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Creates a new widget in the "contextual" interpreter.  Options
+ may be specified via the "options" parameter or the option
+ database to <a href="#robo34">configure</a> the widget.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo11">Widget</a> <span class="keyword">is</span> <span class="keyword">abstract</span><span class="sign">;</span>
+   <span class="keyword">procedure</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo11">Widget</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+      options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">is</span> <span class="keyword">abstract</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fCreate2"></a>
+<a name="robo36"></a><h2>Tcl.Tk.Ada/Create2 [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Creates a new widget in the specified interpreter.  Options
+ may be specified via the "options" parameter or the option
+ database to <a href="#robo34">configure</a> the widget.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span>
+      <span class="keyword">return</span> <a href="#robo11">Widget</a> <span class="keyword">is</span> <span class="keyword">abstract</span><span class="sign">;</span>
+   <span class="keyword">procedure</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo11">Widget</a><span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+      options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">is</span> <span class="keyword">abstract</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fCreateButton"></a>
+<a name="robo37"></a><h2>Tcl.Tk.Ada/CreateButton [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Creates a new widget in the "contextual" interpreter and makes it
+ into a button widget.  Options may be specified via the "options"
+ parameter or the option database to <a href="#robo34">configure</a> the widget.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> Button<span class="sign">;</span>
+   <span class="keyword">procedure</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> Button<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fCreateButton2"></a>
+<a name="robo38"></a><h2>Tcl.Tk.Ada/CreateButton2 [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Creates a new widget in the specified interpreter and makes it
+ into a button widget.  Options may be specified via the "options"
+ parameter or the option database to <a href="#robo34">configure</a> the widget.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span>
+      <span class="keyword">return</span> Button<span class="sign">;</span>
+   <span class="keyword">procedure</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> Button<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+      options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fCreateCheckButton"></a>
+<a name="robo39"></a><h2>Tcl.Tk.Ada/CreateCheckButton [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Creates a new widget in the "contextual" interpreter and makes it
+ into a checkbutton widget.  Options may be specified via the "options"
+ parameter or the option database to <a href="#robo34">configure</a> the widget.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> CheckButton<span class="sign">;</span>
+   <span class="keyword">procedure</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> CheckButton<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fCreateCheckButton2"></a>
+<a name="robo40"></a><h2>Tcl.Tk.Ada/CreateCheckButton2 [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Creates a new widget in the specified interpreter and makes it
+ into a checkbutton widget.  Options may be specified via the "options"
+ parameter or the option database to <a href="#robo34">configure</a> the widget.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span>
+      <span class="keyword">return</span> CheckButton<span class="sign">;</span>
+   <span class="keyword">procedure</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> CheckButton<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+      options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fCreateEntry"></a>
+<a name="robo41"></a><h2>Tcl.Tk.Ada/CreateEntry [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Creates a new widget in the "contextual" interpreter and makes it
+ into a entry widget.  Options may be specified via the "options"
+ parameter or the option database to <a href="#robo34">configure</a> the widget.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> EntryWidget<span class="sign">;</span>
+   <span class="keyword">procedure</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> EntryWidget<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fCreateEntry2"></a>
+<a name="robo42"></a><h2>Tcl.Tk.Ada/CreateEntry2 [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Creates a new widget in the specified interpreter and makes it
+ into a entry widget.  Options may be specified via the "options"
+ parameter or the option database to <a href="#robo34">configure</a> the widget.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span>
+      <span class="keyword">return</span> EntryWidget<span class="sign">;</span>
+   <span class="keyword">procedure</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> EntryWidget<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+      options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fCreateFrame"></a>
+<a name="robo43"></a><h2>Tcl.Tk.Ada/CreateFrame [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Creates a new widget in the "contextual" interpreter and makes
+ it into a frame widget.  Options may be specified via the "options"
+ parameter or the option database to <a href="#robo34">configure</a> the widget.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="./cargv_ads.html#robo15">Create</a><span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> Frame<span class="sign">;</span>
+   <span class="keyword">procedure</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> Frame<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fCreateFrame2"></a>
+<a name="robo44"></a><h2>Tcl.Tk.Ada/CreateFrame2 [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Creates a new widget in the specified interpreter and makes it
+ into a frame widget.  Options may be specified via the "options"
+ parameter or the option database to <a href="#robo34">configure</a> the widget.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span>
+      <span class="keyword">return</span> Frame<span class="sign">;</span>
+   <span class="keyword">procedure</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> Frame<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+      options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fCreateLabel"></a>
+<a name="robo45"></a><h2>Tcl.Tk.Ada/CreateLabel [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Creates a new widget in the "contextual" interpreter and makes it
+ into a label widget.  Options may be specified via the "options"
+ parameter or the option database to <a href="#robo34">configure</a> the widget.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="./cargv_ads.html#robo15">Create</a><span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> Label<span class="sign">;</span>
+   <span class="keyword">procedure</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> Label<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fCreateLabel2"></a>
+<a name="robo46"></a><h2>Tcl.Tk.Ada/CreateLabel2 [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Creates a new widget in the specified interpreter and makes it
+ into a label widget.  Options may be specified via the "options"
+ parameter or the option database to <a href="#robo34">configure</a> the widget.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span>
+      <span class="keyword">return</span> Label<span class="sign">;</span>
+   <span class="keyword">procedure</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> Label<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+      options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fCreateMessage"></a>
+<a name="robo47"></a><h2>Tcl.Tk.Ada/CreateMessage [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Creates a new widget in the "contextual" interpreter and makes it
+ into a message widget.  Options may be specified via the "options"
+ parameter or the option database to <a href="#robo34">configure</a> the widget.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> Message<span class="sign">;</span>
+   <span class="keyword">procedure</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> Message<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fCreateMessage2"></a>
+<a name="robo48"></a><h2>Tcl.Tk.Ada/CreateMessage2 [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Creates a new widget in the specified interpreter and makes it
+ into a message widget.  Options may be specified via the "options"
+ parameter or the option database to <a href="#robo34">configure</a> the widget.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span>
+      <span class="keyword">return</span> Message<span class="sign">;</span>
+   <span class="keyword">procedure</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> Message<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+      options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fCreateRadioButton"></a>
+<a name="robo49"></a><h2>Tcl.Tk.Ada/CreateRadioButton [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Creates a new widget in the "contextual" interpreter and makes it
+ into a radiobutton widget.  Options may be specified via the "options"
+ parameter or the option database to <a href="#robo34">configure</a> the widget.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> RadioButton<span class="sign">;</span>
+   <span class="keyword">procedure</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> RadioButton<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fCreateRadioButton2"></a>
+<a name="robo50"></a><h2>Tcl.Tk.Ada/CreateRadioButton2 [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Creates a new widget in the specified interpreter and makes it
+ into a radiobutton widget.  Options may be specified via the "options"
+ parameter or the option database to <a href="#robo34">configure</a> the widget.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span>
+      <span class="keyword">return</span> RadioButton<span class="sign">;</span>
+   <span class="keyword">procedure</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> RadioButton<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+      options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fCreateTopLevel"></a>
+<a name="robo51"></a><h2>Tcl.Tk.Ada/CreateTopLevel [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Creates a new widget in the "contextual" interpreter and makes it
+ into a toplevel widget.  Options may be specified via the "options"
+ parameter or the option database to <a href="#robo34">configure</a> the widget.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> Toplevel<span class="sign">;</span>
+   <span class="keyword">procedure</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> Toplevel<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fCreateTopLevel2"></a>
+<a name="robo52"></a><h2>Tcl.Tk.Ada/CreateTopLevel2 [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Creates a new widget in the specified interpreter and makes it
+ into a toplevel widget.  Options may be specified via the "options"
+ parameter or the option database to <a href="#robo34">configure</a> the widget.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span>
+      <span class="keyword">return</span> Toplevel<span class="sign">;</span>
+   <span class="keyword">procedure</span> <a href="./cargv_ads.html#robo15">Create</a>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> Toplevel<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+      options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fDeselect"></a>
+<a name="robo53"></a><h2>Tcl.Tk.Ada/Deselect [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <strong>Deselect</strong> the button.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Deselect</strong><span class="sign">(</span>Buttn<span class="sign">:</span> <span class="keyword">in</span> RadioButton<span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fDeselectCheckButton"></a>
+<a name="robo54"></a><h2>Tcl.Tk.Ada/DeselectCheckButton [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="#robo53">Deselect</a> the button.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <a href="#robo53">Deselect</a><span class="sign">(</span>Buttn<span class="sign">:</span> <span class="keyword">in</span> CheckButton<span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fDestroy"></a>
+<a name="robo55"></a><h2>Tcl.Tk.Ada/Destroy [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Destroys a widget.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Destroy</strong><span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">in</span> <span class="keyword">out</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">);</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fFlash"></a>
+<a name="robo56"></a><h2>Tcl.Tk.Ada/Flash [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre>  <strong>Flash</strong> the button.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Flash</strong><span class="sign">(</span>Buttn<span class="sign">:</span> <span class="keyword">in</span> Button<span class="keyword">'Class</span><span class="sign">);</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fget"></a>
+<a name="robo57"></a><h2>Tcl.Tk.Ada/get [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Returns the entry's string.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>get</strong><span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">in</span> EntryWidget<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fGet5fContext"></a>
+<a name="robo58"></a><h2>Tcl.Tk.Ada/Get_Context [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Gets the current interpreter context.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Get_Context</strong> <span class="keyword">return</span> Tcl_Interp<span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fGet5fInterp"></a>
+<a name="robo59"></a><h2>Tcl.Tk.Ada/Get_Interp [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Gets the interpreter of the specified <a href="#robo11">Widget</a>.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Get_Interp</strong><span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> Tcl_Interp<span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fIdle"></a>
+<a name="robo60"></a><h2>Tcl.Tk.Ada/Idle [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Arranges for the Tcl Script to be executed later as an idle
+ handler in the "contextual" interpreter.  The function returns
+ an identifier suitable for canceling the command.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Idle</strong><span class="sign">(</span>Script<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+   <span class="keyword">procedure</span> <strong>Idle</strong><span class="sign">(</span>Script<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fIdle2"></a>
+<a name="robo61"></a><h2>Tcl.Tk.Ada/Idle2 [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Arranges for the Tcl Script to be executed later as an idle
+ handler in the specified interpreter.  The function returns
+ an identifier suitable for canceling the command.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="#robo60">Idle</a><span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> Script<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+   <span class="keyword">procedure</span> <a href="#robo60">Idle</a><span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> Script<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fInfo"></a>
+<a name="robo62"></a><h2>Tcl.Tk.Ada/Info [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Returns information about existing event handlers in the
+ "contextual" interpreter.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Info</strong><span class="sign">(</span>id<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fInfo2"></a>
+<a name="robo63"></a><h2>Tcl.Tk.Ada/Info2 [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Returns information about existing event handlers in the
+ "contextual" interpreter.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="#robo62">Info</a><span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> id<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fInvoke"></a>
+<a name="robo64"></a><h2>Tcl.Tk.Ada/Invoke [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre>  <strong>Invoke</strong> the Tcl command associated with the button.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Invoke</strong>
+     <span class="sign">(</span>Buttn<span class="sign">:</span> <span class="keyword">in</span> Button<span class="keyword">'Class</span><span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fPack5fConfigure"></a>
+<a name="robo65"></a><h2>Tcl.Tk.Ada/Pack_Configure [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Tells the packer how to <a href="#robo34">configure</a> the specified Slave window.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Pack_Configure</strong><span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">);</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fPack5fForget"></a>
+<a name="robo66"></a><h2>Tcl.Tk.Ada/Pack_Forget [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Removes the Slave window from the packing list for its master
+ and unmaps their windows.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Pack_Forget</strong><span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">);</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fPack5fInfo"></a>
+<a name="robo67"></a><h2>Tcl.Tk.Ada/Pack_Info [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Returns a list whose elements are the current configuration
+ state of the specified Slave window.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Pack_Info</strong><span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fPack5fPropagate"></a>
+<a name="robo68"></a><h2>Tcl.Tk.Ada/Pack_Propagate [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Enables or disables propagation for the specified Master window.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Pack_Propagate</strong><span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">;</span> State<span class="sign">:</span> <span class="keyword">in</span> Boolean<span class="sign">);</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fPack5fPropagate2"></a>
+<a name="robo69"></a><h2>Tcl.Tk.Ada/Pack_Propagate2 [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Returns state of propagation in the specified Master window.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="#robo68">Pack_Propagate</a><span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> Boolean<span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fPack5fSlaves"></a>
+<a name="robo70"></a><h2>Tcl.Tk.Ada/Pack_Slaves [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Returns a list of slaves in the packing order of the specified
+ Master window.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Pack_Slaves</strong><span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fSet5fContext"></a>
+<a name="robo71"></a><h2>Tcl.Tk.Ada/Set_Context [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Sets the interpreter context for all Tk calls which do not include
+ either an Interp or <a href="#robo11">Widget</a> parameter.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Set_Context</strong><span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fSet5fTrace"></a>
+<a name="robo72"></a><h2>Tcl.Tk.Ada/Set_Trace [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Turn on tracing of Tcl/Tk command execution.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Set_Trace</strong><span class="sign">(</span>State<span class="sign">:</span> <span class="keyword">in</span> Boolean<span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fTk5fSelect"></a>
+<a name="robo73"></a><h2>Tcl.Tk.Ada/Tk_Select [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Select the button.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Tk_Select</strong><span class="sign">(</span>Buttn<span class="sign">:</span> <span class="keyword">in</span> RadioButton<span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fTk5fSelectCheckButton"></a>
+<a name="robo74"></a><h2>Tcl.Tk.Ada/Tk_SelectCheckButton [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre>  Select the button.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <a href="#robo73">Tk_Select</a><span class="sign">(</span>Buttn<span class="sign">:</span> <span class="keyword">in</span> CheckButton<span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fToggle"></a>
+<a name="robo75"></a><h2>Tcl.Tk.Ada/Toggle [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <strong>Toggle</strong> the button.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Toggle</strong><span class="sign">(</span>Buttn<span class="sign">:</span> <span class="keyword">in</span> RadioButton<span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fToggleCheckButton"></a>
+<a name="robo76"></a><h2>Tcl.Tk.Ada/ToggleCheckButton [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="#robo75">Toggle</a> the button.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <a href="#robo75">Toggle</a><span class="sign">(</span>Buttn<span class="sign">:</span> <span class="keyword">in</span> CheckButton<span class="sign">)</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fUnbind"></a>
+<a name="robo77"></a><h2>Tcl.Tk.Ada/Unbind [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Disassociates the binding from the event Sequence.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Unbind</strong><span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Sequence<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">);</span>
+   <span class="keyword">function</span> <strong>Unbind</strong><span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a>'</span>Class<span class="sign">;</span> Sequence<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fUnbind5fFrom5fMain5fWindow"></a>
+<a name="robo78"></a><h2>Tcl.Tk.Ada/Unbind_From_Main_Window [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Disassociates the binding from the event Sequence in the main window.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Unbind_From_Main_Window</strong>
+     <span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> Sequence<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span><span class="sign">;</span>
+   <span class="keyword">function</span> <strong>Unbind_From_Main_Window</strong>
+     <span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> Sequence<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Tcl2eTk2eAda2fWidget5fImage"></a>
+<a name="robo79"></a><h2>Tcl.Tk.Ada/Widget_Image [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">Tcl.Tk.Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Returns the string name of Win.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Widget_Image</strong><span class="sign">(</span>Win<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+</pre>
+
+</div> <!-- content -->
+<div id="footer">
+<p>Generated from ./src/tcl-tk-ada.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Dec 31 2019 10:13:12
+</p>
+</div> <!-- footer -->
+</body>
+</html>
+

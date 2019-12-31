@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" href="./robodoc.css" type="text/css" />
+<title>./src/chelper.ads</title>
+<!-- Source: ./src/chelper.ads -->
+<!-- Generated with ROBODoc Version 4.99.43 (Jul 26 2019) -->
+</head>
+<body>
+<div id="logo">
+<a name="robo_top_of_doc">TASHY v8.6.0 code documentation</a>
+</div> <!-- logo -->
+<div id="navigation">
+<a class="menuitem" href="./toc_index.html#top">Table of Contents</a>
+<a class="menuitem" href="./sources.html#top">Source files</a>
+<a class="menuitem" href="./index.html#top">Index</a>
+<a class="menuitem" href="./robo_subprograms.html#top">Subprograms</a>
+<a class="menuitem" href="./robo_packages.html#top">Packages</a>
+<a class="menuitem" href="./robo_types.html#top">Types</a>
+</div> <!-- navigation -->
+<div id="content">
+<h3>TABLE OF CONTENTS</h3>
+<ul>
+<li>1. <a href="#robo1">Tashy/CHelper</a></li>
+<ul>
+<li>1.1. <a href="#robo7">CHelper/Double_Ptr</a></li>
+<li>1.2. <a href="#robo8">CHelper/Int_Ptr</a></li>
+<li>1.3. <a href="#robo9">CHelper/Int_Ptr_Ptr</a></li>
+<li>1.4. <a href="#robo10">CHelper/Long_Ptr</a></li>
+</ul>
+</ul>
+<hr />
+<a name="Tashy2fCHelper"></a>
+<a name="robo1"></a><h2>Tashy/CHelper [ Packages ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Provides additional C data types not in Interfaces.C.
+ Also provides for the type Interfaces.C.Strings those
+ operations available for manipulating Ada strings in
+ Ada.Strings.Fixed.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source"><span class="keyword">package</span> <strong>CHelper</strong> <span class="keyword">is</span>
+</pre>
+
+<hr />
+<a name="CHelper2fDouble5fPtr"></a>
+<a name="robo7"></a><h2>CHelper/Double_Ptr [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo1">CHelper</a> ] [ <a href="./robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> double *
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">type</span> <strong>Double_Ptr</strong> <span class="keyword">is</span> <span class="keyword">access</span> all C<span class="sign">.</span>double<span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="CHelper2fInt5fPtr"></a>
+<a name="robo8"></a><h2>CHelper/Int_Ptr [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo1">CHelper</a> ] [ <a href="./robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> int *
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">type</span> <strong>Int_Ptr</strong> <span class="keyword">is</span> <span class="keyword">access</span> all C<span class="sign">.</span>int<span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="CHelper2fInt5fPtr5fPtr"></a>
+<a name="robo9"></a><h2>CHelper/Int_Ptr_Ptr [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo1">CHelper</a> ] [ <a href="./robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> int **
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">type</span> <strong>Int_Ptr_Ptr</strong> <span class="keyword">is</span> <span class="keyword">access</span> all <a href="#robo8">Int_Ptr</a><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="CHelper2fLong5fPtr"></a>
+<a name="robo10"></a><h2>CHelper/Long_Ptr [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo1">CHelper</a> ] [ <a href="./robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> long *
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">type</span> <strong>Long_Ptr</strong> <span class="keyword">is</span> <span class="keyword">access</span> all C<span class="sign">.</span>long<span class="sign">;</span>
+</pre>
+
+</div> <!-- content -->
+<div id="footer">
+<p>Generated from ./src/chelper.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Dec 31 2019 10:13:12
+</p>
+</div> <!-- footer -->
+</body>
+</html>
+
