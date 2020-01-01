@@ -4,6 +4,7 @@ exec wish "$0" ${1+"$@"}
 
 # Copyright (C) 1997-2000 Terry J. Westley
 # Copyright (C) Simon Wright <simon@pushface.org>
+# Copyright (C) 2019-2020 Bartek Jasicki <thindil@laeran.pl>
 
 # This package is free software; you can redistribute it and/or
 # modify it under terms of the GNU General Public License as
@@ -137,7 +138,7 @@ proc Set_Macros {platform os} {
    } else {
       set tclhome [file dirname [file dirname [info nameofexecutable]]]
       set tcl_include [file join $tclhome include]
-      if {![info exists [file join $tcl_include tcl.h]]} {
+      if {![file exists [file join $tcl_include tcl.h]]} {
          set tcl_include [file join $tcl_include [file tail $tcl_library]]
       }
    }
@@ -147,11 +148,11 @@ proc Set_Macros {platform os} {
 
    switch $platform {
       "windows" {
-         # This assumes ActiveTcl. Cygwin Tcl/Tk (at 30 Oct 2006)
-         # wouldn't run properly when called from Ada.
+         # It assumes a GNAT that recognises tcl86.lib as a
+         # candidate for the linker switch -ltcl86.
          #
-         # It also assumes a GNAT that recognises tcl84.lib as a
-         # candidate for the linker switch -ltcl84.
+         # Should works with ActiveState Tcl and Magicsplat Tcl
+         # distributions
          #
          # Most development tools get confused by paths with spaces.
          regsub {PROGRAM FILES} $tclhome "PROGRA~1" tclhome
@@ -162,10 +163,13 @@ proc Set_Macros {platform os} {
          set tcldll "tcl${tcl_short_version}.dll"
          set libtk ""
          set tkdll  "tk${tk_short_version}.dll"
-         set tcl_include [file join $tclhome include]
          append library_switches "-L$tclhome/lib "
-         append library_switches "-ltk$tk_short_version "
-         append library_switches "-ltcl$tcl_short_version "
+         set tail " "
+         if {![file exists [file join $tclhome lib tcl$tk_short_version.lib]]} {
+            set tail "t "
+         }
+         append library_switches "-ltk$tk_short_version$tail"
+         append library_switches "-ltcl$tcl_short_version$tail"
          set exec_suffix ".exe"
       }
       "unix" {
