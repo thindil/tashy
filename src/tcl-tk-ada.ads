@@ -277,6 +277,13 @@ package Tcl.Tk.Ada is
       options: in String := "");
    -- ****
 
+   -- ****f* Tcl.Tk.Ada/Get_Main_Window
+   -- FUNCTION
+   -- Get main window of the specified interpreter
+   -- SOURCE
+   function Get_Main_Window(Interp: in Tcl_Interp) return Frame;
+   -- ****
+
    ---------------------------------------------
    --
    --   Toplevel widget
@@ -619,7 +626,7 @@ package Tcl.Tk.Ada is
      (MenuWidget: in Menu'Class; WidgetType: in String;
       Options: in String := "");
    -- ****
-   --
+
    ---------------------------------------------
    --
    --   After commands
