@@ -3,8 +3,9 @@
 -- tcl-tk-ada.adb --
 --
 --  Copyright (c) 1995-2000 Terry J. Westley
+--  Copyright (c) 2020 Bartek Jasicki <thindil@laeran.pl>
 --
---  Tash is free software; you can redistribute it and/or modify it under
+--  Tashy is free software; you can redistribute it and/or modify it under
 --  terms of the GNU General Public License as published by the Free
 --  Software Foundation; either version 2, or (at your option) any later
 --  version. Tash is distributed in the hope that it will be useful, but
@@ -23,8 +24,6 @@
 --  covered by the GNU General Public License. This exception does not
 --  however invalidate any other reasons why the executable file might be
 --  covered by the GNU Public License.
---
---  Tash is maintained at http://tcladashell.sourceforge.net/.
 --
 --------------------------------------------------------------------
 
@@ -373,6 +372,45 @@ package body Tcl.Tk.Ada is
    begin --  Create
       Widgt := Create(Interp, pathName, options);
    end Create;
+
+   function Create
+     (pathName: in String; options: in String := "") return Menu is
+   begin --  Create
+      return Create(Context, pathName, options);
+   end Create;
+
+   procedure Create
+     (Widgt: out Menu; pathName: in String; options: in String := "") is
+   begin --  Create
+      Widgt := Create(Context, pathName, options);
+   end Create;
+
+   function Create
+     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
+      return Menu is
+      --
+      The_Widget: Menu;
+   begin --  Create
+      The_Widget.Interp := Interp;
+      The_Widget.Name := C.Strings.New_String(pathName);
+      Tcl_Eval(The_Widget.Interp, "menu " & pathName & " " & options);
+      return The_Widget;
+   end Create;
+
+   procedure Create
+     (Widgt: out Menu; Interp: in Tcl_Interp; pathName: in String;
+      options: in String := "") is
+   begin --  Create
+      Widgt := Create(Interp, pathName, options);
+   end Create;
+
+   procedure Add
+     (MenuWidget: in Menu'Class; WidgetType: in String;
+      Options: in String := "") is
+   begin
+      Execute_Widget_Command
+        (Widget'Class(MenuWidget), "add", WidgetType & " " & Options);
+   end Add;
 
    procedure Flash(Buttn: in Button'Class) is
    begin --  Flash

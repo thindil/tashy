@@ -3,8 +3,9 @@
 --  tcl-tk-ada.ads -- This package provides the "thick" binding to Tcl.Tk.
 --
 --  Copyright (c) 1995-2000 Terry J. Westley
+--  Copyrigth (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
 --
---  Tash is free software; you can redistribute it and/or modify it under
+--  Tashy is free software; you can redistribute it and/or modify it under
 --  terms of the GNU General Public License as published by the Free
 --  Software Foundation; either version 2, or (at your option) any later
 --  version. Tash is distributed in the hope that it will be useful, but
@@ -24,10 +25,6 @@
 --  however invalidate any other reasons why the executable file might be
 --  covered by the GNU Public License.
 --
---  Tash is maintained at http://tcladashell.sourceforge.net/.
---
---------------------------------------------------------------------
-
 --------------------------------------------------------------------
 
 with CArgv;
@@ -583,6 +580,48 @@ package Tcl.Tk.Ada is
 
    ---------------------------------------------
    --
+   --   Menu widget
+   --
+   ---------------------------------------------
+
+   type Menu is new Frame with private;
+
+   -- ****f* Tcl.Tk.Ada/CreateMenu
+   -- FUNCTION
+   -- Creates a new widget in the "contextual" interpreter and makes it
+   -- into a menu widget.  Options may be specified via the "options"
+   -- parameter or the option database to configure the widget.
+   -- SOURCE
+   function Create(pathName: in String; options: in String := "") return Menu;
+   procedure Create
+     (Widgt: out Menu; pathName: in String; options: in String := "");
+   -- ****
+
+   -- ****f* Tcl.Tk.Ada/CreateMenu2
+   -- FUNCTION
+   -- Creates a new widget in the specified interpreter and makes it
+   -- into a menu widget.  Options may be specified via the "options"
+   -- parameter or the option database to configure the widget.
+   -- SOURCE
+   function Create
+     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
+      return Menu;
+   procedure Create
+     (Widgt: out Menu; Interp: in Tcl_Interp; pathName: in String;
+      options: in String := "");
+   -- ****
+
+   -- ****f* Tcl.Tk.Ada/AddMenu
+   -- FUNCTION
+   --  Add element to the menu.
+   -- SOURCE
+   procedure Add
+     (MenuWidget: in Menu'Class; WidgetType: in String;
+      Options: in String := "");
+   -- ****
+   --
+   ---------------------------------------------
+   --
    --   After commands
    --
    --   These commands delay execution and schedule (and unschedule)
@@ -931,5 +970,6 @@ private
    type RadioButton is new Button with null record;
    type CheckButton is new Button with null record;
    type EntryWidget is new Frame with null record;
+   type Menu is new Frame with null record;
 
 end Tcl.Tk.Ada;
