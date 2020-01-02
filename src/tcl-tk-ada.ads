@@ -240,6 +240,18 @@ package Tcl.Tk.Ada is
      Unbind_From_Main_Window;
    -- ****
 
+   -- ****f* Tcl.Tk.Ada/Wm_Set
+   -- FUNCTION
+   -- Communicate with the window manager
+   -- PARAMETERS
+   -- Widget   - Widget which will be modified
+   -- Action   - WM action to do
+   -- Options  - Options for selected action. Default is empty
+   -- SOURCE
+   procedure Wm_Set
+     (Widgt: in Widget'Class; Action: in String; Options: in String := "");
+   -- ****
+
    ---------------------------------------------
    --
    --   Frame widget
