@@ -6,6 +6,9 @@ All notable changes to this project will be documented in this file.
 ### Added
 - Menu widget
 
+### Changed
+- Enabled Get\_Main\_Window function
+
 ### Fixed
 - Detecting Tcl libraries by setup.tcl script on Windows
 
