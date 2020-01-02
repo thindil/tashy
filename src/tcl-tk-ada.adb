@@ -147,6 +147,14 @@ package body Tcl.Tk.Ada is
       return Tcl.Ada.Tcl_GetResult(Interp);
    end Unbind_From_Main_Window;
 
+   procedure Wm_Set
+     (Widgt: in Widget'Class; Action: in String; Options: in String := "") is
+   begin
+      Tcl_Eval
+        (Widgt.Interp,
+         "wm " & Action & " " & Widget_Image(Widgt) & " " & Options);
+   end Wm_Set;
+
    function Create
      (pathName: in String; options: in String := "") return Frame is
    begin --  Create
