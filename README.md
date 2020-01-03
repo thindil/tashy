@@ -8,7 +8,7 @@ Main differences:
 * Removed tests
 * Removed makefiles
 * Added [ROBODoc](https://rfsber.home.xs4all.nl/Robo/) documentation
-* More to come
+* [And more](CHANGELOG.md)
 
 ## Build the library from sources
 
@@ -61,10 +61,10 @@ beginning of your project file.
 TASHY versioning is in X.Y.Z schema where:
 
 * X.Y are Tcl/Tk version with which TASHY was created and tested. For example,
-  version 8.6.5 means that this TASHY was tested with Tcl 8.6.
+  version 8.6.5 means that this TASHY was tested with Tcl/Tk 8.6.
 * Z is number of release of TASHY for selected Tcl version. Release numbers
   starts from 0. For example, version 8.6.2 means third release of TASHY for
-  Tcl 8.6
+  Tcl/Tk 8.6
 
 ## Generating code documentation
 
