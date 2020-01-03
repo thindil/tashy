@@ -41,6 +41,8 @@ package Tcl.Tk.Ada is
    -- ****f* Tcl.Tk.Ada/Set_Trace
    -- FUNCTION
    -- Turn on tracing of Tcl/Tk command execution.
+   -- PARAMETERS
+   -- State - If true, turn on tracing.
    -- SOURCE
    procedure Set_Trace(State: in Boolean);
    -- ****
@@ -67,6 +69,10 @@ package Tcl.Tk.Ada is
    -- ****f* Tcl.Tk.Ada/Widget_Image
    -- FUNCTION
    -- Returns the string name of Win.
+   -- PARAMETERS
+   -- Win - Widget which name will be returned.
+   -- RESULT
+   -- String with name of Widget
    -- SOURCE
    function Widget_Image(Win: in Widget'Class) return String;
    -- ****
@@ -75,6 +81,11 @@ package Tcl.Tk.Ada is
    -- FUNCTION
    -- Concatenates and returns the string names of Left and Right.
    -- Does not insert the separating dot.
+   -- PARAMETERS
+   -- Left  - First Widget or String to concatenate
+   -- Right - Second Widget or String to concatenate
+   -- RESULT
+   -- String with concantenate name
    -- SOURCE
    function "&"(Left: in Widget'Class; Right: in Widget'Class) return String;
    function "&"(Left: in Widget'Class; Right: in String) return String;
@@ -87,6 +98,8 @@ package Tcl.Tk.Ada is
    -- FUNCTION
    -- Sets the interpreter context for all Tk calls which do not include
    -- either an Interp or Widget parameter.
+   -- PARAMETERS
+   -- Interp - Tcl interpreter to which context will be set
    -- SOURCE
    procedure Set_Context(Interp: in Tcl_Interp);
    -- ****
@@ -94,6 +107,8 @@ package Tcl.Tk.Ada is
    -- ****f* Tcl.Tk.Ada/Get_Context
    -- FUNCTION
    -- Gets the current interpreter context.
+   -- RESULT
+   -- Current Tcl interpreter
    -- SOURCE
    function Get_Context return Tcl_Interp;
    -- ****
@@ -101,6 +116,10 @@ package Tcl.Tk.Ada is
    -- ****f* Tcl.Tk.Ada/Get_Interp
    -- FUNCTION
    -- Gets the interpreter of the specified Widget.
+   -- PARAMETERS
+   -- Widgt - Widget which belongs to Tcl interpreter
+   -- RESULT
+   -- Tcl interpreter of the specified Widget
    -- SOURCE
    function Get_Interp(Widgt: in Widget'Class) return Tcl_Interp;
    -- ****
