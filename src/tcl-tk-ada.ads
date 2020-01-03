@@ -660,6 +660,39 @@ package Tcl.Tk.Ada is
 
    ---------------------------------------------
    --
+   --   Ttk::Button widget
+   --
+   ---------------------------------------------
+
+   type Ttk_Button is new Frame with private;
+
+   -- ****f* Tcl.Tk.Ada/CreateTtkButton
+   -- FUNCTION
+   -- Creates a new widget in the "contextual" interpreter and makes it
+   -- into a ttk::button widget.  Options may be specified via the "options"
+   -- parameter or the option database to configure the widget.
+   -- SOURCE
+   function Create
+     (pathName: in String; options: in String := "") return Ttk_Button;
+   procedure Create
+     (Widgt: out Ttk_Button; pathName: in String; options: in String := "");
+   -- ****
+
+   -- ****f* Tcl.Tk.Ada/CreateTtkButton2
+   -- FUNCTION
+   -- Creates a new widget in the specified interpreter and makes it
+   -- into a ttk::button widget.  Options may be specified via the "options"
+   -- parameter or the option database to configure the widget.
+   -- SOURCE
+   function Create
+     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
+      return Ttk_Button;
+   procedure Create
+     (Widgt: out Ttk_Button; Interp: in Tcl_Interp; pathName: in String;
+      options: in String := "");
+   -- ****
+   ---------------------------------------------
+   --
    --   After commands
    --
    --   These commands delay execution and schedule (and unschedule)
@@ -1009,5 +1042,6 @@ private
    type CheckButton is new Button with null record;
    type EntryWidget is new Frame with null record;
    type Menu is new Frame with null record;
+   type Ttk_Button is new Frame with null record;
 
 end Tcl.Tk.Ada;
