@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 ### Added
 - Menu widget
 - Binding for Tk `wm` command
+- Binding for Tk `ttk:button` widget
 
 ### Changed
 - Enabled Get\_Main\_Window function
