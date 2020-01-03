@@ -3,11 +3,6 @@ TASHY is short from Tcl Ada SHell Younger. It is derivate of [TASH](http://tclad
 Main differences:
 
 * Unstable, used mostly as playground
-* Removed legacy code which not works with newest versions of Tcl/Tk
-* Removed creating relocatable version of the library
-* Removed tests
-* Removed makefiles
-* Added [ROBODoc](https://rfsber.home.xs4all.nl/Robo/) documentation
 * [And more](CHANGELOG.md)
 
 ## Build the library from sources
