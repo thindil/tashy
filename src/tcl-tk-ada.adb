@@ -410,6 +410,37 @@ package body Tcl.Tk.Ada is
       Widgt := Create(Interp, pathName, options);
    end Create;
 
+   function Create
+     (pathName: in String; options: in String := "") return Ttk_Button is
+   begin --  Create
+      return Create(Context, pathName, options);
+   end Create;
+
+   procedure Create
+     (Widgt: out Ttk_Button; pathName: in String; options: in String := "") is
+   begin --  Create
+      Widgt := Create(Context, pathName, options);
+   end Create;
+
+   function Create
+     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
+      return Ttk_Button is
+      --
+      The_Widget: Ttk_Button;
+   begin --  Create
+      The_Widget.Interp := Interp;
+      The_Widget.Name := C.Strings.New_String(pathName);
+      Tcl_Eval(The_Widget.Interp, "ttk::button " & pathName & " " & options);
+      return The_Widget;
+   end Create;
+
+   procedure Create
+     (Widgt: out Ttk_Button; Interp: in Tcl_Interp; pathName: in String;
+      options: in String := "") is
+   begin --  Create
+      Widgt := Create(Interp, pathName, options);
+   end Create;
+
    procedure Add
      (MenuWidget: in Menu'Class; WidgetType: in String;
       Options: in String := "") is
