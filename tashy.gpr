@@ -27,35 +27,6 @@ project Tashy is
    for Languages use ("ada", "c");
 
    for Source_Dirs use ("src");
-
-   Basic_Ada_Source_Files :=
-     (
-      "cargv.adb",
-      "cargv.ads",
-      "chelper.adb",
-      "chelper.ads",
-      "tcl-ada.adb",
-      "tcl-ada.ads",
-      "tcl-async.adb",
-      "tcl-async.ads",
-      "tcl-tk-ada.adb",
-      "tcl-tk-ada.ads",
-      "tcl-tk.adb",
-      "tcl-tk.ads",
-      "tcl.adb",
-      "tcl.ads",
-      "tcl_record_sizes.ads"
-     );
-
-   Basic_C_Source_Files :=
-     (
-      "tclmacro.c",
-      "tkmacro.c"
-     );
-
-   for Source_Files use
-      Basic_Ada_Source_Files & Basic_C_Source_Files;
-
    for Object_Dir use "obj";
    for Library_Kind use "static";
    for Library_Dir use "lib";
