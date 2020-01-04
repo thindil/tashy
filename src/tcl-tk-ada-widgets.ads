@@ -27,22 +27,22 @@
 package Tcl.Tk.Ada.Widgets is
 -- ****
 
-   -- ****t* Widgets/Widget
+   -- ****t* Widgets/Tk_Widget
    -- FUNCTION
-   -- The Widget data type, parent of all objects displayed on the screen.
+   -- The Tk_Widget data type, parent of all objects displayed on the screen.
    --
-   -- It is abstract because it is just a convenience for creating a Widget
+   -- It is abstract because it is just a convenience for creating a Tk_Widget
    -- class and for creating non-abstract derived widget types.  Since there
    -- is no such data type in Tk, we make it abstract so that no instance of
-   -- type Widget may be created.
+   -- type Tk_Widget may be created.
    --
    -- SOURCE
-   type Widget is abstract tagged private;
+   type Tk_Widget is abstract tagged private;
    -- ****
 
    ---------------------------------------------
    --
-   --   Widget path name constructors
+   --   Tk_Widget path name constructors
    --
    ---------------------------------------------
 
@@ -50,11 +50,11 @@ package Tcl.Tk.Ada.Widgets is
    -- FUNCTION
    -- Returns the string name of Win.
    -- PARAMETERS
-   -- Win - Widget which name will be returned.
+   -- Win - Tk_Widget which name will be returned.
    -- RESULT
-   -- String with name of Widget
+   -- String with name of Tk_Widget
    -- SOURCE
-   function Widget_Image(Win: in Widget'Class) return String;
+   function Widget_Image(Win: in Tk_Widget'Class) return String;
    -- ****
 
    -- ****f* Widgets/"&"
@@ -62,79 +62,79 @@ package Tcl.Tk.Ada.Widgets is
    -- Concatenates and returns the string names of Left and Right.
    -- Does not insert the separating dot.
    -- PARAMETERS
-   -- Left  - First Widget or String to concatenate
-   -- Right - Second Widget or String to concatenate
+   -- Left  - First Tk_Widget or String to concatenate
+   -- Right - Second Tk_Widget or String to concatenate
    -- RESULT
    -- String with concantenate name
    -- SOURCE
-   function "&"(Left: in Widget'Class; Right: in Widget'Class) return String;
-   function "&"(Left: in Widget'Class; Right: in String) return String;
-   function "&"(Left: in String; Right: in Widget'Class) return String;
+   function "&"(Left: in Tk_Widget'Class; Right: in Tk_Widget'Class) return String;
+   function "&"(Left: in Tk_Widget'Class; Right: in String) return String;
+   function "&"(Left: in String; Right: in Tk_Widget'Class) return String;
    -- ****
 
    pragma Inline(Widget_Image, "&");
 
    -- ****f* Widgets/Get_Interp
    -- FUNCTION
-   -- Gets the interpreter of the specified Widget.
+   -- Gets the interpreter of the specified Tk_Widget.
    -- PARAMETERS
-   -- Widgt - Widget which belongs to Tcl interpreter
+   -- Widgt - Tk_Widget which belongs to Tcl interpreter
    -- RESULT
-   -- Tcl interpreter of the specified Widget
+   -- Tcl interpreter of the specified Tk_Widget
    -- SOURCE
-   function Get_Interp(Widgt: in Widget'Class) return Tcl_Interp;
+   function Get_Interp(Widgt: in Tk_Widget'Class) return Tcl_Interp;
    -- ****
 
    ---------------------------------------------
    --
-   --   Widget constructors
+   --   Tk_Widget constructors
    --
    ---------------------------------------------
 
    -- ****f* Widgets/Create1
    -- FUNCTION
-   -- Creates a new widget in the "contextual" interpreter.  Options
+   -- Creates a new Tk_Widget in the "contextual" interpreter.  Options
    -- may be specified via the "options" parameter or the option
-   -- database to configure the widget.
+   -- database to configure the Tk_Widget.
    -- SOURCE
    function Create
-     (pathName: in String; options: in String := "") return Widget is abstract;
+     (pathName: in String; options: in String := "") return Tk_Widget is abstract;
    procedure Create
-     (Widgt: out Widget; pathName: in String;
+     (Widgt: out Tk_Widget; pathName: in String;
       options: in String := "") is abstract;
    -- ****
 
    -- ****f* Widgets/Create2
    -- FUNCTION
-   -- Creates a new widget in the specified interpreter.  Options
+   -- Creates a new Tk_Widget in the specified interpreter.  Options
    -- may be specified via the "options" parameter or the option
-   -- database to configure the widget.
+   -- database to configure the Tk_Widget.
    --
    -- SOURCE
    function Create
      (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
-      return Widget is abstract;
+      return Tk_Widget is abstract;
    procedure Create
-     (Widgt: out Widget; Interp: in Tcl_Interp; pathName: in String;
+     (Widgt: out Tk_Widget; Interp: in Tcl_Interp; pathName: in String;
       options: in String := "") is abstract;
    -- ****
 
    ---------------------------------------------
    --
-   --   Widget destructor
+   --   Tk_Widget destructor
    --
    ---------------------------------------------
 
    -- ****f* Widgets/Destroy
    -- FUNCTION
-   -- Destroys a widget.
+   -- Destroys a Tk_Widget.
    -- SOURCE
-   procedure Destroy(Widgt: in out Widget'Class);
+   procedure Destroy(Widgt: in out Tk_Widget'Class);
    -- ****
 
    ---------------------------------------------
    --
-   --   Widget configuration query and modify
+   --   Tk_Widget configuration query and modify
    --
    ---------------------------------------------
 
@@ -142,18 +142,18 @@ package Tcl.Tk.Ada.Widgets is
    -- FUNCTION
    --  Returns the current value of the specified configuration option.
    -- SOURCE
-   function cget(Widgt: in Widget'Class; option: in String) return String;
+   function cget(Widgt: in Tk_Widget'Class; option: in String) return String;
    -- ****
 
    -- ****f* Widgets/configure
    -- FUNCTION
    -- Queries or modifies the configuration options.  If options is
    -- an empty string, returns a list of all available options
-   -- for the widget.
+   -- for the Tk_Widget.
    -- SOURCE
    function configure
-     (Widgt: in Widget'Class; options: in String := "") return String;
-   procedure configure(Widgt: in Widget'Class; options: in String := "");
+     (Widgt: in Tk_Widget'Class; options: in String := "") return String;
+   procedure configure(Widgt: in Tk_Widget'Class; options: in String := "");
    -- ****
 
    ---------------------------------------------
@@ -169,15 +169,15 @@ package Tcl.Tk.Ada.Widgets is
    -- Associates Tcl script Script with the event Sequence.
    -- SOURCE
    procedure Bind
-     (Widgt: in Widget'Class; Sequence: in String; Script: in String);
+     (Widgt: in Tk_Widget'Class; Sequence: in String; Script: in String);
    -- ****
 
    -- ****f* Widgets/Unbind
    -- FUNCTION
    -- Disassociates the binding from the event Sequence.
    -- SOURCE
-   procedure Unbind(Widgt: in Widget'Class; Sequence: in String);
-   function Unbind(Widgt: in Widget'Class; Sequence: in String) return String;
+   procedure Unbind(Widgt: in Tk_Widget'Class; Sequence: in String);
+   function Unbind(Widgt: in Tk_Widget'Class; Sequence: in String) return String;
    -- ****
 
    -- ****f* Widgets/Bind_To_Main_Window
@@ -202,25 +202,25 @@ package Tcl.Tk.Ada.Widgets is
    -- FUNCTION
    -- Communicate with the window manager
    -- PARAMETERS
-   -- Widget   - Widget which will be modified
+   -- Tk_Widget   - Tk_Widget which will be modified
    -- Action   - WM action to do
    -- Options  - Options for selected action. Default is empty
    -- SOURCE
    procedure Wm_Set
-     (Widgt: in Widget'Class; Action: in String; Options: in String := "");
+     (Widgt: in Tk_Widget'Class; Action: in String; Options: in String := "");
    -- ****
 
    ---------------------------------------------
    --
    --   Frame widget
    --
-   --   This is a non-abstract type derived directly from Widget.
+   --   This is a non-abstract type derived directly from Tk_Widget.
    --   Each of the derived widgets redefines the Create subprogram
    --   in order to create the correct type of widget.
    --
    ---------------------------------------------
 
-   type Frame is new Widget with private;
+   type Frame is new Tk_Widget with private;
 
    -- ****f* Widgets/CreateFrame
    -- FUNCTION
@@ -640,13 +640,13 @@ package Tcl.Tk.Ada.Widgets is
    --
    ---------------------------------------------
 
-   procedure Pack(Slave: in Widget'Class; Options: in String);
+   procedure Pack(Slave: in Tk_Widget'Class; Options: in String);
 
    -- ****f* Widgets/Pack_Configure
    -- FUNCTION
    -- Tells the packer how to configure the specified Slave window.
    -- SOURCE
-   procedure Pack_Configure(Slave: in Widget'Class; Options: in String);
+   procedure Pack_Configure(Slave: in Tk_Widget'Class; Options: in String);
    -- ****
 
    -- ****f* Widgets/Pack_Forget
@@ -654,7 +654,7 @@ package Tcl.Tk.Ada.Widgets is
    -- Removes the Slave window from the packing list for its master
    -- and unmaps their windows.
    -- SOURCE
-   procedure Pack_Forget(Slave: in Widget'Class);
+   procedure Pack_Forget(Slave: in Tk_Widget'Class);
    -- ****
 
    -- ****f* Widgets/Pack_Info
@@ -662,21 +662,21 @@ package Tcl.Tk.Ada.Widgets is
    -- Returns a list whose elements are the current configuration
    -- state of the specified Slave window.
    -- SOURCE
-   function Pack_Info(Slave: in Widget'Class) return String;
+   function Pack_Info(Slave: in Tk_Widget'Class) return String;
    -- ****
 
    -- ****f* Widgets/Pack_Propagate
    -- FUNCTION
    -- Enables or disables propagation for the specified Master window.
    -- SOURCE
-   procedure Pack_Propagate(Master: in Widget'Class; State: in Boolean);
+   procedure Pack_Propagate(Master: in Tk_Widget'Class; State: in Boolean);
    -- ****
 
    -- ****f* Widgets/Pack_Propagate2
    -- FUNCTION
    -- Returns state of propagation in the specified Master window.
    -- SOURCE
-   function Pack_Propagate(Master: in Widget'Class) return Boolean;
+   function Pack_Propagate(Master: in Tk_Widget'Class) return Boolean;
    -- ****
 
    -- ****f* Widgets/Pack_Slaves
@@ -684,20 +684,20 @@ package Tcl.Tk.Ada.Widgets is
    -- Returns a list of slaves in the packing order of the specified
    -- Master window.
    -- SOURCE
-   function Pack_Slaves(Master: in Widget'Class) return String;
+   function Pack_Slaves(Master: in Tk_Widget'Class) return String;
    -- ****
 
 private
 
-   type Widget is abstract tagged record
+   type Tk_Widget is abstract tagged record
       Name: C.Strings.chars_ptr;
       Interp: Tcl_Interp;
    end record;
 
    procedure Execute_Widget_Command
-     (Widgt: in Widget'Class; command: in String; options: in String := "");
+     (Widgt: in Tk_Widget'Class; command: in String; options: in String := "");
 
-   type Frame is new Widget with null record;
+   type Frame is new Tk_Widget with null record;
    type Toplevel is new Frame with null record;
    type Label is new Frame with null record;
    type Message is new Frame with null record;
