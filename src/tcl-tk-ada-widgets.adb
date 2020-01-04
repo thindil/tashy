@@ -24,70 +24,70 @@ with Tcl.Ada;
 
 package body Tcl.Tk.Ada.Widgets is
 
-   function Widget_Image(Win: in Widget'Class) return String is
+   function Widget_Image(Win: in Tk_Widget'Class) return String is
    begin --  Widget_Image
       return CHelper.Value(Win.Name);
    end Widget_Image;
 
-   function "&"(Left: in Widget'Class; Right: in Widget'Class) return String is
+   function "&"(Left: in Tk_Widget'Class; Right: in Tk_Widget'Class) return String is
    begin --  "&"
       return Widget_Image(Left) & Widget_Image(Right);
    end "&";
 
-   function "&"(Left: in Widget'Class; Right: in String) return String is
+   function "&"(Left: in Tk_Widget'Class; Right: in String) return String is
    begin --  "&"
       return Widget_Image(Left) & Right;
    end "&";
 
-   function "&"(Left: in String; Right: in Widget'Class) return String is
+   function "&"(Left: in String; Right: in Tk_Widget'Class) return String is
    begin --  "&"
       return Left & Widget_Image(Right);
    end "&";
 
-   function Get_Interp(Widgt: in Widget'Class) return Tcl_Interp is
+   function Get_Interp(Widgt: in Tk_Widget'Class) return Tcl_Interp is
    begin --  Get_Interp
       return Widgt.Interp;
    end Get_Interp;
 
-   procedure Destroy(Widgt: in out Widget'Class) is
+   procedure Destroy(Widgt: in out Tk_Widget'Class) is
    begin --  Destroy
       Execute_Widget_Command(Widgt, "destroy");
       C.Strings.Free(Widgt.Name);
    end Destroy;
 
-   function cget(Widgt: in Widget'Class; option: in String) return String is
+   function cget(Widgt: in Tk_Widget'Class; option: in String) return String is
    begin --  cget
       Execute_Widget_Command(Widgt, "cget", option);
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end cget;
 
    function configure
-     (Widgt: in Widget'Class; options: in String := "") return String is
+     (Widgt: in Tk_Widget'Class; options: in String := "") return String is
    begin --  configure
       Execute_Widget_Command(Widgt, "configure", options);
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end configure;
 
-   procedure configure(Widgt: in Widget'Class; options: in String := "") is
+   procedure configure(Widgt: in Tk_Widget'Class; options: in String := "") is
    begin --  configure
       Execute_Widget_Command(Widgt, "configure", options);
    end configure;
 
    procedure Bind
-     (Widgt: in Widget'Class; Sequence: in String; Script: in String) is
+     (Widgt: in Tk_Widget'Class; Sequence: in String; Script: in String) is
    begin --  Bind
       Tcl_Eval
         (Widgt.Interp,
          "bind " & Widget_Image(Widgt) & " " & Sequence & " " & Script);
    end Bind;
 
-   procedure Unbind(Widgt: in Widget'Class; Sequence: in String) is
+   procedure Unbind(Widgt: in Tk_Widget'Class; Sequence: in String) is
    begin --  Unbind
       Tcl_Eval(Widgt.Interp, "bind " & Widget_Image(Widgt) & " " & Sequence);
    end Unbind;
 
    function Unbind
-     (Widgt: in Widget'Class; Sequence: in String) return String is
+     (Widgt: in Tk_Widget'Class; Sequence: in String) return String is
    begin --  Unbind
       Tcl_Eval(Widgt.Interp, "bind " & Widget_Image(Widgt) & " " & Sequence);
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
@@ -113,7 +113,7 @@ package body Tcl.Tk.Ada.Widgets is
    end Unbind_From_Main_Window;
 
    procedure Wm_Set
-     (Widgt: in Widget'Class; Action: in String; Options: in String := "") is
+     (Widgt: in Tk_Widget'Class; Action: in String; Options: in String := "") is
    begin
       Tcl_Eval
         (Widgt.Interp,
@@ -411,49 +411,49 @@ package body Tcl.Tk.Ada.Widgets is
       Options: in String := "") is
    begin
       Execute_Widget_Command
-        (Widget'Class(MenuWidget), "add", WidgetType & " " & Options);
+        (Tk_Widget'Class(MenuWidget), "add", WidgetType & " " & Options);
    end Add;
 
    procedure Flash(Buttn: in Button'Class) is
    begin --  Flash
-      Execute_Widget_Command(Widget'Class(Buttn), "flash");
+      Execute_Widget_Command(Tk_Widget'Class(Buttn), "flash");
    end Flash;
 
    function Invoke
      (Buttn: in Button'Class; options: in String := "") return String is
    begin --  Invoke
-      Execute_Widget_Command(Widget'Class(Buttn), "invoke", options);
+      Execute_Widget_Command(Tk_Widget'Class(Buttn), "invoke", options);
       return Tcl.Ada.Tcl_GetResult(Buttn.Interp);
    end Invoke;
 
    procedure Deselect(Buttn: in RadioButton) is
    begin --  Deselect
-      Execute_Widget_Command(Widget'Class(Buttn), "deselect");
+      Execute_Widget_Command(Tk_Widget'Class(Buttn), "deselect");
    end Deselect;
 
    procedure Tk_Select(Buttn: in RadioButton) is
    begin --  Tk_Select
-      Execute_Widget_Command(Widget'Class(Buttn), "select");
+      Execute_Widget_Command(Tk_Widget'Class(Buttn), "select");
    end Tk_Select;
 
    procedure Toggle(Buttn: in RadioButton) is
    begin --  Toggle
-      Execute_Widget_Command(Widget'Class(Buttn), "toggle");
+      Execute_Widget_Command(Tk_Widget'Class(Buttn), "toggle");
    end Toggle;
 
    procedure Deselect(Buttn: in CheckButton) is
    begin --  Deselect
-      Execute_Widget_Command(Widget'Class(Buttn), "deselect");
+      Execute_Widget_Command(Tk_Widget'Class(Buttn), "deselect");
    end Deselect;
 
    procedure Tk_Select(Buttn: in CheckButton) is
    begin --  Tk_Select
-      Execute_Widget_Command(Widget'Class(Buttn), "select");
+      Execute_Widget_Command(Tk_Widget'Class(Buttn), "select");
    end Tk_Select;
 
    procedure Toggle(Buttn: in CheckButton) is
    begin --  Toggle
-      Execute_Widget_Command(Widget'Class(Buttn), "toggle");
+      Execute_Widget_Command(Tk_Widget'Class(Buttn), "toggle");
    end Toggle;
 
    function Create
@@ -493,30 +493,30 @@ package body Tcl.Tk.Ada.Widgets is
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end get;
 
-   procedure Pack(Slave: in Widget'Class; Options: in String) is
+   procedure Pack(Slave: in Tk_Widget'Class; Options: in String) is
    begin --  Pack
       Tcl_Eval(Slave.Interp, "pack " & Widget_Image(Slave) & " " & Options);
    end Pack;
 
-   procedure Pack_Configure(Slave: in Widget'Class; Options: in String) is
+   procedure Pack_Configure(Slave: in Tk_Widget'Class; Options: in String) is
    begin --  Pack_Configure
       Tcl_Eval
         (Slave.Interp,
          "pack configure " & Widget_Image(Slave) & " " & Options);
    end Pack_Configure;
 
-   procedure Pack_Forget(Slave: in Widget'Class) is
+   procedure Pack_Forget(Slave: in Tk_Widget'Class) is
    begin --  Pack_Forget
       Tcl_Eval(Slave.Interp, "pack forget " & Widget_Image(Slave));
    end Pack_Forget;
 
-   function Pack_Info(Slave: in Widget'Class) return String is
+   function Pack_Info(Slave: in Tk_Widget'Class) return String is
    begin --  Pack_Info
       Tcl_Eval(Slave.Interp, "pack info " & Widget_Image(Slave));
       return Tcl.Ada.Tcl_GetResult(Slave.Interp);
    end Pack_Info;
 
-   procedure Pack_Propagate(Master: in Widget'Class; State: in Boolean) is
+   procedure Pack_Propagate(Master: in Tk_Widget'Class; State: in Boolean) is
    begin --  Pack_Propagate
       Tcl_Eval
         (Master.Interp,
@@ -524,20 +524,20 @@ package body Tcl.Tk.Ada.Widgets is
          Integer'Image(Boolean'Pos(State)));
    end Pack_Propagate;
 
-   function Pack_Propagate(Master: in Widget'Class) return Boolean is
+   function Pack_Propagate(Master: in Tk_Widget'Class) return Boolean is
    begin --  Pack_Propagate
       Tcl_Eval(Master.Interp, "pack propagate " & Widget_Image(Master));
       return Integer'Value(Tcl.Ada.Tcl_GetResult(Master.Interp)) = 1;
    end Pack_Propagate;
 
-   function Pack_Slaves(Master: in Widget'Class) return String is
+   function Pack_Slaves(Master: in Tk_Widget'Class) return String is
    begin --  Pack_Slaves
       Tcl_Eval(Master.Interp, "pack slaves " & Widget_Image(Master));
       return Tcl.Ada.Tcl_GetResult(Master.Interp);
    end Pack_Slaves;
 
    procedure Execute_Widget_Command
-     (Widgt: in Widget'Class; command: in String; options: in String := "") is
+     (Widgt: in Tk_Widget'Class; command: in String; options: in String := "") is
    begin --  Execute_Widget_Command
       Tcl_Eval
         (Widgt.Interp, Widget_Image(Widgt) & " " & command & " " & options);
