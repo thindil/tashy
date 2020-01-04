@@ -1,9 +1,12 @@
 TASHY is short from Tcl Ada SHell Younger. It is derivate of [TASH](http://tcladashell.sourceforge.net/)
 
-Main differences:
+**IMPORTANT:** TASHY is not compatible with TASH. Here are many breaking
+changes in the code, thus TASHY should be used only with the new code. At
+this moment, TASHY is "a bit" unstable, used mostly as playgroud. All changes
+(compared with TASH too) can be found [in CHANGELOG.md](CHANGELOG.md)
 
-* Unstable, used mostly as playground
-* [And more](CHANGELOG.md)
+TASHY is the Ada binding to Tcl/Tk. It allow to use Tcl code in Ada code and
+vice versa.
 
 ## Build the library from sources
 
