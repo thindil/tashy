@@ -14,6 +14,7 @@ of the project.
 ### Changed
 - Enabled Get\_Main\_Window function
 - Updated README.md
+- **BREAKING:** Renamed Widget type to Tk\_Widget
 
 ### Fixed
 - Detecting Tcl libraries by setup.tcl script on Windows
