@@ -42,7 +42,8 @@ package Tcl.Tk.Ada.Widgets.Frame is
    -- it into a frame widget.  Options may be specified via the "options"
    -- parameter or the option database to configure the widget.
    -- SOURCE
-   function Create(pathName: in String; options: in String := "") return Tk_Frame;
+   function Create
+     (pathName: in String; options: in String := "") return Tk_Frame;
    procedure Create
      (Widgt: out Tk_Frame; pathName: in String; options: in String := "");
    -- ****
