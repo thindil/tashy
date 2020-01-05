@@ -54,7 +54,7 @@ package body Tcl.Tk.Ada.Widgets.Frame is
    end Create;
 
    function Get_Main_Window(Interp: in Tcl_Interp) return Tk_Frame is
-      --
+   --
    begin --  Get_Main_Window
       return (C.Strings.New_String("."), Interp);
    end Get_Main_Window;
