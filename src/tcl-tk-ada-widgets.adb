@@ -153,9 +153,8 @@ package body Tcl.Tk.Ada.Widgets is
 
    function Get_Main_Window(Interp: in Tcl_Interp) return Frame is
       --
-      Prime_Window: aliased C.char_array := C.To_C(".");
    begin --  Get_Main_Window
-      return (C.Strings.To_Chars_Ptr(Prime_Window'Unchecked_Access), Interp);
+      return (C.Strings.New_String("."), Interp);
    end Get_Main_Window;
 
    function Create
