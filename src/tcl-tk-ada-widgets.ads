@@ -67,7 +67,8 @@ package Tcl.Tk.Ada.Widgets is
    -- RESULT
    -- String with concantenate name
    -- SOURCE
-   function "&"(Left: in Tk_Widget'Class; Right: in Tk_Widget'Class) return String;
+   function "&"
+     (Left: in Tk_Widget'Class; Right: in Tk_Widget'Class) return String;
    function "&"(Left: in Tk_Widget'Class; Right: in String) return String;
    function "&"(Left: in String; Right: in Tk_Widget'Class) return String;
    -- ****
@@ -98,7 +99,8 @@ package Tcl.Tk.Ada.Widgets is
    -- database to configure the Tk_Widget.
    -- SOURCE
    function Create
-     (pathName: in String; options: in String := "") return Tk_Widget is abstract;
+     (pathName: in String; options: in String := "")
+      return Tk_Widget is abstract;
    procedure Create
      (Widgt: out Tk_Widget; pathName: in String;
       options: in String := "") is abstract;
@@ -177,7 +179,8 @@ package Tcl.Tk.Ada.Widgets is
    -- Disassociates the binding from the event Sequence.
    -- SOURCE
    procedure Unbind(Widgt: in Tk_Widget'Class; Sequence: in String);
-   function Unbind(Widgt: in Tk_Widget'Class; Sequence: in String) return String;
+   function Unbind
+     (Widgt: in Tk_Widget'Class; Sequence: in String) return String;
    -- ****
 
    -- ****f* Widgets/Bind_To_Main_Window
@@ -208,40 +211,6 @@ package Tcl.Tk.Ada.Widgets is
    -- SOURCE
    procedure Wm_Set
      (Widgt: in Tk_Widget'Class; Action: in String; Options: in String := "");
-   -- ****
-
-   ---------------------------------------------
-   --
-   --   Toplevel widget
-   --
-   ---------------------------------------------
-
-   type Toplevel is new Tk_Widget with private;
-
-   -- ****f* Widgets/CreateTopLevel
-   -- FUNCTION
-   -- Creates a new widget in the "contextual" interpreter and makes it
-   -- into a toplevel widget.  Options may be specified via the "options"
-   -- parameter or the option database to configure the widget.
-   -- SOURCE
-   function Create
-     (pathName: in String; options: in String := "") return Toplevel;
-   procedure Create
-     (Widgt: out Toplevel; pathName: in String; options: in String := "");
-   -- ****
-
-   -- ****f* Widgets/CreateTopLevel2
-   -- FUNCTION
-   -- Creates a new widget in the specified interpreter and makes it
-   -- into a toplevel widget.  Options may be specified via the "options"
-   -- parameter or the option database to configure the widget.
-   -- SOURCE
-   function Create
-     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
-      return Toplevel;
-   procedure Create
-     (Widgt: out Toplevel; Interp: in Tcl_Interp; pathName: in String;
-      options: in String := "");
    -- ****
 
    ---------------------------------------------
@@ -653,7 +622,6 @@ private
    procedure Execute_Widget_Command
      (Widgt: in Tk_Widget'Class; command: in String; options: in String := "");
 
-   type Toplevel is new Tk_Widget with null record;
    type Label is new Tk_Widget with null record;
    type Message is new Tk_Widget with null record;
    type Button is new Tk_Widget with null record;

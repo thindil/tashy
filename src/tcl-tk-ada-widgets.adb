@@ -29,7 +29,8 @@ package body Tcl.Tk.Ada.Widgets is
       return CHelper.Value(Win.Name);
    end Widget_Image;
 
-   function "&"(Left: in Tk_Widget'Class; Right: in Tk_Widget'Class) return String is
+   function "&"
+     (Left: in Tk_Widget'Class; Right: in Tk_Widget'Class) return String is
    begin --  "&"
       return Widget_Image(Left) & Widget_Image(Right);
    end "&";
@@ -113,43 +114,13 @@ package body Tcl.Tk.Ada.Widgets is
    end Unbind_From_Main_Window;
 
    procedure Wm_Set
-     (Widgt: in Tk_Widget'Class; Action: in String; Options: in String := "") is
+     (Widgt: in Tk_Widget'Class; Action: in String;
+      Options: in String := "") is
    begin
       Tcl_Eval
         (Widgt.Interp,
          "wm " & Action & " " & Widget_Image(Widgt) & " " & Options);
    end Wm_Set;
-
-   function Create
-     (pathName: in String; options: in String := "") return Toplevel is
-   begin --  Create
-      return Create(Context, pathName, options);
-   end Create;
-
-   procedure Create
-     (Widgt: out Toplevel; pathName: in String; options: in String := "") is
-   begin --  Create
-      Widgt := Create(Context, pathName, options);
-   end Create;
-
-   function Create
-     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
-      return Toplevel is
-      --
-      The_Widget: Toplevel;
-   begin --  Create
-      The_Widget.Interp := Interp;
-      The_Widget.Name := C.Strings.New_String(pathName);
-      Tcl_Eval(The_Widget.Interp, "toplevel " & pathName & " " & options);
-      return The_Widget;
-   end Create;
-
-   procedure Create
-     (Widgt: out Toplevel; Interp: in Tcl_Interp; pathName: in String;
-      options: in String := "") is
-   begin --  Create
-      Widgt := Create(Interp, pathName, options);
-   end Create;
 
    function Create
      (pathName: in String; options: in String := "") return Label is
@@ -499,7 +470,8 @@ package body Tcl.Tk.Ada.Widgets is
    end Pack_Slaves;
 
    procedure Execute_Widget_Command
-     (Widgt: in Tk_Widget'Class; command: in String; options: in String := "") is
+     (Widgt: in Tk_Widget'Class; command: in String;
+      options: in String := "") is
    begin --  Execute_Widget_Command
       Tcl_Eval
         (Widgt.Interp, Widget_Image(Widgt) & " " & command & " " & options);
