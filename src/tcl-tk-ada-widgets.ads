@@ -215,39 +215,6 @@ package Tcl.Tk.Ada.Widgets is
 
    ---------------------------------------------
    --
-   --   Label widget
-   --
-   ---------------------------------------------
-
-   type Label is new Tk_Widget with private;
-
-   -- ****f* Widgets/CreateLabel
-   -- FUNCTION
-   -- Creates a new widget in the "contextual" interpreter and makes it
-   -- into a label widget.  Options may be specified via the "options"
-   -- parameter or the option database to configure the widget.
-   -- SOURCE
-   function Create(pathName: in String; options: in String := "") return Label;
-   procedure Create
-     (Widgt: out Label; pathName: in String; options: in String := "");
-   -- ****
-
-   -- ****f* Widgets/CreateLabel2
-   -- FUNCTION
-   -- Creates a new widget in the specified interpreter and makes it
-   -- into a label widget.  Options may be specified via the "options"
-   -- parameter or the option database to configure the widget.
-   -- SOURCE
-   function Create
-     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
-      return Label;
-   procedure Create
-     (Widgt: out Label; Interp: in Tcl_Interp; pathName: in String;
-      options: in String := "");
-   -- ****
-
-   ---------------------------------------------
-   --
    --   Message widget
    --
    ---------------------------------------------
@@ -622,7 +589,6 @@ private
    procedure Execute_Widget_Command
      (Widgt: in Tk_Widget'Class; command: in String; options: in String := "");
 
-   type Label is new Tk_Widget with null record;
    type Message is new Tk_Widget with null record;
    type Button is new Tk_Widget with null record;
    type RadioButton is new Button with null record;
