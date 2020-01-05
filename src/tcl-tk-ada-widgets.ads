@@ -260,7 +260,7 @@ package Tcl.Tk.Ada.Widgets is
    --
    ---------------------------------------------
 
-   type Toplevel is new Frame with private;
+   type Toplevel is new Tk_Widget with private;
 
    -- ****f* Widgets/CreateTopLevel
    -- FUNCTION
@@ -294,7 +294,7 @@ package Tcl.Tk.Ada.Widgets is
    --
    ---------------------------------------------
 
-   type Label is new Frame with private;
+   type Label is new Tk_Widget with private;
 
    -- ****f* Widgets/CreateLabel
    -- FUNCTION
@@ -327,7 +327,7 @@ package Tcl.Tk.Ada.Widgets is
    --
    ---------------------------------------------
 
-   type Message is new Frame with private;
+   type Message is new Tk_Widget with private;
 
    -- ****f* Widgets/CreateMessage
    -- FUNCTION
@@ -361,7 +361,7 @@ package Tcl.Tk.Ada.Widgets is
    --
    ---------------------------------------------
 
-   type Button is new Frame with private;
+   type Button is new Tk_Widget with private;
 
    -- ****f* Widgets/CreateButton
    -- FUNCTION
@@ -520,7 +520,7 @@ package Tcl.Tk.Ada.Widgets is
    --
    ---------------------------------------------
 
-   type EntryWidget is new Frame with private;
+   type EntryWidget is new Tk_Widget with private;
 
    -- ****f* Widgets/CreateEntry
    -- FUNCTION
@@ -561,7 +561,7 @@ package Tcl.Tk.Ada.Widgets is
    --
    ---------------------------------------------
 
-   type Menu is new Frame with private;
+   type Menu is new Tk_Widget with private;
 
    -- ****f* Widgets/CreateMenu
    -- FUNCTION
@@ -603,7 +603,7 @@ package Tcl.Tk.Ada.Widgets is
    --
    ---------------------------------------------
 
-   type Ttk_Button is new Frame with private;
+   type Ttk_Button is new Tk_Widget with private;
 
    -- ****f* Widgets/CreateTtkButton
    -- FUNCTION
@@ -698,14 +698,14 @@ private
      (Widgt: in Tk_Widget'Class; command: in String; options: in String := "");
 
    type Frame is new Tk_Widget with null record;
-   type Toplevel is new Frame with null record;
-   type Label is new Frame with null record;
-   type Message is new Frame with null record;
-   type Button is new Frame with null record;
+   type Toplevel is new Tk_Widget with null record;
+   type Label is new Tk_Widget with null record;
+   type Message is new Tk_Widget with null record;
+   type Button is new Tk_Widget with null record;
    type RadioButton is new Button with null record;
    type CheckButton is new Button with null record;
-   type EntryWidget is new Frame with null record;
-   type Menu is new Frame with null record;
-   type Ttk_Button is new Frame with null record;
+   type EntryWidget is new Tk_Widget with null record;
+   type Menu is new Tk_Widget with null record;
+   type Ttk_Button is new Tk_Widget with null record;
 
 end Tcl.Tk.Ada.Widgets;
