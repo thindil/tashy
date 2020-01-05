@@ -76,3 +76,8 @@
    description: Generate code documentation
    flags:
       - windowsonly
+- command:
+   name: uninstall
+   execute:
+      - gprinstall --uninstall -P tashy.gpr
+   description: Uninstall the library for use with GNAT
