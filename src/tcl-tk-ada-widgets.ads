@@ -212,50 +212,6 @@ package Tcl.Tk.Ada.Widgets is
 
    ---------------------------------------------
    --
-   --   Frame widget
-   --
-   --   This is a non-abstract type derived directly from Tk_Widget.
-   --   Each of the derived widgets redefines the Create subprogram
-   --   in order to create the correct type of widget.
-   --
-   ---------------------------------------------
-
-   type Frame is new Tk_Widget with private;
-
-   -- ****f* Widgets/CreateFrame
-   -- FUNCTION
-   -- Creates a new widget in the "contextual" interpreter and makes
-   -- it into a frame widget.  Options may be specified via the "options"
-   -- parameter or the option database to configure the widget.
-   -- SOURCE
-   function Create(pathName: in String; options: in String := "") return Frame;
-   procedure Create
-     (Widgt: out Frame; pathName: in String; options: in String := "");
-   -- ****
-
-   -- ****f* Widgets/CreateFrame2
-   -- FUNCTION
-   -- Creates a new widget in the specified interpreter and makes it
-   -- into a frame widget.  Options may be specified via the "options"
-   -- parameter or the option database to configure the widget.
-   -- SOURCE
-   function Create
-     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
-      return Frame;
-   procedure Create
-     (Widgt: out Frame; Interp: in Tcl_Interp; pathName: in String;
-      options: in String := "");
-   -- ****
-
-   -- ****f* Widgets/Get_Main_Window
-   -- FUNCTION
-   -- Get main window of the specified interpreter
-   -- SOURCE
-   function Get_Main_Window(Interp: in Tcl_Interp) return Frame;
-   -- ****
-
-   ---------------------------------------------
-   --
    --   Toplevel widget
    --
    ---------------------------------------------
@@ -697,7 +653,6 @@ private
    procedure Execute_Widget_Command
      (Widgt: in Tk_Widget'Class; command: in String; options: in String := "");
 
-   type Frame is new Tk_Widget with null record;
    type Toplevel is new Tk_Widget with null record;
    type Label is new Tk_Widget with null record;
    type Message is new Tk_Widget with null record;
