@@ -121,43 +121,6 @@ package body Tcl.Tk.Ada.Widgets is
    end Wm_Set;
 
    function Create
-     (pathName: in String; options: in String := "") return Frame is
-   begin --  Create
-      return Create(Context, pathName, options);
-   end Create;
-
-   procedure Create
-     (Widgt: out Frame; pathName: in String; options: in String := "") is
-   begin --  Create
-      Widgt := Create(Context, pathName, options);
-   end Create;
-
-   function Create
-     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
-      return Frame is
-      --
-      The_Widget: Frame;
-   begin --  Create
-      The_Widget.Interp := Interp;
-      The_Widget.Name := C.Strings.New_String(pathName);
-      Tcl_Eval(The_Widget.Interp, "frame " & pathName & " " & options);
-      return The_Widget;
-   end Create;
-
-   procedure Create
-     (Widgt: out Frame; Interp: in Tcl_Interp; pathName: in String;
-      options: in String := "") is
-   begin --  Create
-      Widgt := Create(Interp, pathName, options);
-   end Create;
-
-   function Get_Main_Window(Interp: in Tcl_Interp) return Frame is
-      --
-   begin --  Get_Main_Window
-      return (C.Strings.New_String("."), Interp);
-   end Get_Main_Window;
-
-   function Create
      (pathName: in String; options: in String := "") return Toplevel is
    begin --  Create
       return Create(Context, pathName, options);
