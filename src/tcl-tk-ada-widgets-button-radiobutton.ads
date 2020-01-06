@@ -20,7 +20,12 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
+-- ****h* Tashy/RadioButton
+-- FUNCTION
+-- Provides code for manipulate Tk widget RadioButton
+-- SOURCE
 package Tcl.Tk.Ada.Widgets.Button.RadioButton is
+-- ****
 
    type Tk_RadioButton is new Tk_Button with private;
 
