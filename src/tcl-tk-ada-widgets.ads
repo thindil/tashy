@@ -215,47 +215,6 @@ package Tcl.Tk.Ada.Widgets is
 
    ---------------------------------------------
    --
-   --   Entry widget
-   --
-   ---------------------------------------------
-
-   type EntryWidget is new Tk_Widget with private;
-
-   -- ****f* Widgets/CreateEntry
-   -- FUNCTION
-   -- Creates a new widget in the "contextual" interpreter and makes it
-   -- into a entry widget.  Options may be specified via the "options"
-   -- parameter or the option database to configure the widget.
-   -- SOURCE
-   function Create
-     (pathName: in String; options: in String := "") return EntryWidget;
-   procedure Create
-     (Widgt: out EntryWidget; pathName: in String; options: in String := "");
-   -- ****
-
-   -- ****f* Widgets/CreateEntry2
-   -- FUNCTION
-   -- Creates a new widget in the specified interpreter and makes it
-   -- into a entry widget.  Options may be specified via the "options"
-   -- parameter or the option database to configure the widget.
-   -- SOURCE
-   function Create
-     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
-      return EntryWidget;
-   procedure Create
-     (Widgt: out EntryWidget; Interp: in Tcl_Interp; pathName: in String;
-      options: in String := "");
-   -- ****
-
-   -- ****f* Widgets/get
-   -- FUNCTION
-   -- Returns the entry's string.
-   -- SOURCE
-   function get(Widgt: in EntryWidget) return String;
-   -- ****
-
-   ---------------------------------------------
-   --
    --   Menu widget
    --
    ---------------------------------------------
@@ -396,7 +355,6 @@ private
    procedure Execute_Widget_Command
      (Widgt: in Tk_Widget'Class; command: in String; options: in String := "");
 
-   type EntryWidget is new Tk_Widget with null record;
    type Menu is new Tk_Widget with null record;
    type Ttk_Button is new Tk_Widget with null record;
 
