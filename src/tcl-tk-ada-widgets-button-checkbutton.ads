@@ -20,58 +20,65 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
--- ****h* Tashy/Button
+-- ****h* Tashy/CheckButton
 -- FUNCTION
--- Provides code for manipulate Tk widget Button
+-- Provides code for manipulate Tk widget CheckButton
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.Button is
+package Tcl.Tk.Ada.Widgets.Button.CheckButton is
 -- ****
 
-   type Tk_Button is new Tk_Widget with private;
+   type Tk_CheckButton is new Tk_Button with private;
 
-   -- ****f* Button/Create
+   -- ****f* CheckButton/Create
    -- FUNCTION
    -- Creates a new widget in the "contextual" interpreter and makes it
-   -- into a button widget.  Options may be specified via the "options"
+   -- into a checkbutton widget.  Options may be specified via the "options"
    -- parameter or the option database to configure the widget.
    -- SOURCE
    function Create
-     (pathName: in String; options: in String := "") return Tk_Button;
+     (pathName: in String; options: in String := "") return Tk_CheckButton;
    procedure Create
-     (Widgt: out Tk_Button; pathName: in String; options: in String := "");
+     (Widgt: out Tk_CheckButton; pathName: in String;
+      options: in String := "");
    -- ****
 
-   -- ****f* Button/Create2
+   -- ****f* CheckButton/Create
    -- FUNCTION
    -- Creates a new widget in the specified interpreter and makes it
-   -- into a button widget.  Options may be specified via the "options"
+   -- into a checkbutton widget.  Options may be specified via the "options"
    -- parameter or the option database to configure the widget.
    -- SOURCE
    function Create
      (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
-      return Tk_Button;
+      return Tk_CheckButton;
    procedure Create
-     (Widgt: out Tk_Button; Interp: in Tcl_Interp; pathName: in String;
+     (Widgt: out Tk_CheckButton; Interp: in Tcl_Interp; pathName: in String;
       options: in String := "");
    -- ****
 
-   -- ****f* Button/Flash
+   -- ****f* CheckButton/Deselect
    -- FUNCTION
-   -- Flash the button.
+   -- Deselect the button.
    -- SOURCE
-   procedure Flash(Buttn: in Tk_Button'Class);
+   procedure Deselect(Buttn: in Tk_CheckButton);
    -- ****
 
-   -- ****f* Button/Invoke
+   -- ****f* CheckButton/Tk_Select
    -- FUNCTION
-   -- Invoke the Tcl command associated with the button.
+   --  Select the button.
    -- SOURCE
-   function Invoke
-     (Buttn: in Tk_Button'Class; options: in String := "") return String;
+   procedure Tk_Select(Buttn: in Tk_CheckButton);
+   -- ****
+
+   -- ****f* CheckButton/Toggle
+   -- FUNCTION
+   -- Toggle the button.
+   -- SOURCE
+   procedure Toggle(Buttn: in Tk_CheckButton);
    -- ****
 
 private
 
-   type Tk_Button is new Tk_Widget with null record;
+   type Tk_CheckButton is new Tk_Button with null record;
 
-end Tcl.Tk.Ada.Widgets.Button;
+end Tcl.Tk.Ada.Widgets.Button.CheckButton;
