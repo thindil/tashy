@@ -59,4 +59,4 @@ private
 
    type Tk_Message is new Tk_Widget with null record;
 
-end ;
+end Tcl.Tk.Ada.Widgets.Message;
