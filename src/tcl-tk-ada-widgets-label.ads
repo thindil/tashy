@@ -34,7 +34,8 @@ package Tcl.Tk.Ada.Widgets.Label is
    -- into a label widget.  Options may be specified via the "options"
    -- parameter or the option database to configure the widget.
    -- SOURCE
-   function Create(pathName: in String; options: in String := "") return Tk_Label;
+   function Create
+     (pathName: in String; options: in String := "") return Tk_Label;
    procedure Create
      (Widgt: out Tk_Label; pathName: in String; options: in String := "");
    -- ****
