@@ -20,97 +20,53 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
-with Tcl.Ada;
-
-package body Tcl.Tk.Ada.Widgets.Button is
+package body Tcl.Tk.Ada.Widgets.Button.RadioButton is
 
    function Create
-     (pathName: in String; options: in String := "") return Tk_Button is
+     (pathName: in String; options: in String := "") return Tk_RadioButton is
    begin --  Create
       return Create(Context, pathName, options);
    end Create;
 
    procedure Create
-     (Widgt: out Tk_Button; pathName: in String; options: in String := "") is
+     (Widgt: out Tk_RadioButton; pathName: in String;
+      options: in String := "") is
    begin --  Create
       Widgt := Create(Context, pathName, options);
    end Create;
 
    function Create
      (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
-      return Tk_Button is
+      return Tk_RadioButton is
       --
-      The_Widget: Tk_Button;
+      The_Widget: Tk_RadioButton;
    begin --  Create
       The_Widget.Interp := Interp;
       The_Widget.Name := C.Strings.New_String(pathName);
-      Tcl_Eval(The_Widget.Interp, "button " & pathName & " " & options);
+      Tcl_Eval(The_Widget.Interp, "radiobutton " & pathName & " " & options);
       return The_Widget;
    end Create;
 
    procedure Create
-     (Widgt: out Tk_Button; Interp: in Tcl_Interp; pathName: in String;
+     (Widgt: out Tk_RadioButton; Interp: in Tcl_Interp; pathName: in String;
       options: in String := "") is
    begin --  Create
       Widgt := Create(Interp, pathName, options);
    end Create;
 
-   function Create
-     (pathName: in String; options: in String := "") return CheckButton is
-   begin --  Create
-      return Create(Context, pathName, options);
-   end Create;
-
-   procedure Create
-     (Widgt: out CheckButton; pathName: in String; options: in String := "") is
-   begin --  Create
-      Widgt := Create(Context, pathName, options);
-   end Create;
-
-   function Create
-     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
-      return CheckButton is
-      --
-      The_Widget: CheckButton;
-   begin --  Create
-      The_Widget.Interp := Interp;
-      The_Widget.Name := C.Strings.New_String(pathName);
-      Tcl_Eval(The_Widget.Interp, "checkbutton " & pathName & " " & options);
-      return The_Widget;
-   end Create;
-
-   procedure Create
-     (Widgt: out CheckButton; Interp: in Tcl_Interp; pathName: in String;
-      options: in String := "") is
-   begin --  Create
-      Widgt := Create(Interp, pathName, options);
-   end Create;
-
-   procedure Flash(Buttn: in Tk_Button'Class) is
-   begin --  Flash
-      Execute_Widget_Command(Tk_Widget'Class(Buttn), "flash");
-   end Flash;
-
-   function Invoke
-     (Buttn: in Tk_Button'Class; options: in String := "") return String is
-   begin --  Invoke
-      Execute_Widget_Command(Tk_Widget'Class(Buttn), "invoke", options);
-      return Tcl.Ada.Tcl_GetResult(Buttn.Interp);
-   end Invoke;
-
-   procedure Deselect(Buttn: in CheckButton) is
+   procedure Deselect(Buttn: in Tk_RadioButton) is
    begin --  Deselect
       Execute_Widget_Command(Tk_Widget'Class(Buttn), "deselect");
    end Deselect;
 
-   procedure Tk_Select(Buttn: in CheckButton) is
+   procedure Tk_Select(Buttn: in Tk_RadioButton) is
    begin --  Tk_Select
       Execute_Widget_Command(Tk_Widget'Class(Buttn), "select");
    end Tk_Select;
 
-   procedure Toggle(Buttn: in CheckButton) is
+   procedure Toggle(Buttn: in Tk_RadioButton) is
    begin --  Toggle
       Execute_Widget_Command(Tk_Widget'Class(Buttn), "toggle");
    end Toggle;
 
-end Tcl.Tk.Ada.Widgets.Button;
+end Tcl.Tk.Ada.Widgets.Button.RadioButton;
