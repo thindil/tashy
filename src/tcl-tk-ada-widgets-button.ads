@@ -78,61 +78,6 @@ package Tcl.Tk.Ada.Widgets.Button is
 
    ---------------------------------------------
    --
-   --   RadioButton widget
-   --
-   ---------------------------------------------
-
-   type RadioButton is new Tk_Button with private;
-
-   -- ****f* Widgets/CreateRadioButton
-   -- FUNCTION
-   -- Creates a new widget in the "contextual" interpreter and makes it
-   -- into a radiobutton widget.  Options may be specified via the "options"
-   -- parameter or the option database to configure the widget.
-   -- SOURCE
-   function Create
-     (pathName: in String; options: in String := "") return RadioButton;
-   procedure Create
-     (Widgt: out RadioButton; pathName: in String; options: in String := "");
-   -- ****
-
-   -- ****f* Widgets/CreateRadioButton2
-   -- FUNCTION
-   -- Creates a new widget in the specified interpreter and makes it
-   -- into a radiobutton widget.  Options may be specified via the "options"
-   -- parameter or the option database to configure the widget.
-   -- SOURCE
-   function Create
-     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
-      return RadioButton;
-   procedure Create
-     (Widgt: out RadioButton; Interp: in Tcl_Interp; pathName: in String;
-      options: in String := "");
-   -- ****
-
-   -- ****f* Widgets/Deselect
-   -- FUNCTION
-   -- Deselect the button.
-   -- SOURCE
-   procedure Deselect(Buttn: in RadioButton);
-   -- ****
-
-   -- ****f* Widgets/Tk_Select
-   -- FUNCTION
-   -- Select the button.
-   -- SOURCE
-   procedure Tk_Select(Buttn: in RadioButton);
-   -- ****
-
-   -- ****f* Widgets/Toggle
-   -- FUNCTION
-   -- Toggle the button.
-   -- SOURCE
-   procedure Toggle(Buttn: in RadioButton);
-   -- ****
-
-   ---------------------------------------------
-   --
    --   CheckButton widget
    --
    ---------------------------------------------
@@ -189,7 +134,6 @@ package Tcl.Tk.Ada.Widgets.Button is
 private
 
    type Tk_Button is new Tk_Widget with null record;
-   type RadioButton is new Tk_Button with null record;
    type CheckButton is new Tk_Button with null record;
 
 end Tcl.Tk.Ada.Widgets.Button;
