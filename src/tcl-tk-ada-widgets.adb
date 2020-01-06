@@ -199,43 +199,6 @@ package body Tcl.Tk.Ada.Widgets is
         (Tk_Widget'Class(MenuWidget), "add", WidgetType & " " & Options);
    end Add;
 
-   function Create
-     (pathName: in String; options: in String := "") return EntryWidget is
-   begin --  Create
-      return Create(Context, pathName, options);
-   end Create;
-
-   procedure Create
-     (Widgt: out EntryWidget; pathName: in String; options: in String := "") is
-   begin --  Create
-      Widgt := Create(Context, pathName, options);
-   end Create;
-
-   function Create
-     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
-      return EntryWidget is
-      --
-      The_Widget: EntryWidget;
-   begin --  Create
-      The_Widget.Interp := Interp;
-      The_Widget.Name := C.Strings.New_String(pathName);
-      Tcl_Eval(The_Widget.Interp, "entry " & pathName & " " & options);
-      return The_Widget;
-   end Create;
-
-   procedure Create
-     (Widgt: out EntryWidget; Interp: in Tcl_Interp; pathName: in String;
-      options: in String := "") is
-   begin --  Create
-      Widgt := Create(Interp, pathName, options);
-   end Create;
-
-   function get(Widgt: in EntryWidget) return String is
-   begin --  get
-      Execute_Widget_Command(Widgt, "get");
-      return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
-   end get;
-
    procedure Pack(Slave: in Tk_Widget'Class; Options: in String) is
    begin --  Pack
       Tcl_Eval(Slave.Interp, "pack " & Widget_Image(Slave) & " " & Options);
