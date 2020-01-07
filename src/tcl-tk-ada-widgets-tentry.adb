@@ -25,34 +25,25 @@ with Tcl.Ada;
 package body Tcl.Tk.Ada.Widgets.TEntry is
 
    function Create
-     (pathName: in String; options: in String := "") return Tk_Entry is
-   begin --  Create
-      return Create(Context, pathName, options);
-   end Create;
-
-   procedure Create
-     (Widgt: out Tk_Entry; pathName: in String; options: in String := "") is
-   begin --  Create
-      Widgt := Create(Context, pathName, options);
-   end Create;
-
-   function Create
-     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
-      return Tk_Entry is
-      --
+     (pathName: in String; options: in String := "";
+      Interp: in Tcl_Interp := null) return Tk_Entry is
       The_Widget: Tk_Entry;
-   begin --  Create
-      The_Widget.Interp := Interp;
+   begin
+      if Interp = null then
+         The_Widget.Interp := Context;
+      else
+         The_Widget.Interp := Interp;
+      end if;
       The_Widget.Name := C.Strings.New_String(pathName);
       Tcl_Eval(The_Widget.Interp, "entry " & pathName & " " & options);
       return The_Widget;
    end Create;
 
    procedure Create
-     (Widgt: out Tk_Entry; Interp: in Tcl_Interp; pathName: in String;
-      options: in String := "") is
-   begin --  Create
-      Widgt := Create(Interp, pathName, options);
+     (Widgt: out Tk_Entry; pathName: in String; options: in String := "";
+      Interp: in Tcl_Interp := null) is
+   begin
+      Widgt := Create(pathName, options, Interp);
    end Create;
 
    function get(Widgt: in Tk_Entry) return String is

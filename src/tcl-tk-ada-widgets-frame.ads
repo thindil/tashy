@@ -45,28 +45,16 @@ package Tcl.Tk.Ada.Widgets.Frame is
 
    -- ****f* Frame/Create
    -- FUNCTION
-   -- Creates a new widget in the "contextual" interpreter and makes
-   -- it into a frame widget.  Options may be specified via the "options"
-   -- parameter or the option database to configure the widget.
+   -- Creates a new Tk_Frame in the specified interpreter. If interpreter
+   -- is null, use "contextual" interpreter. Options may be specified via the
+   -- "options" parameter or the option database to configure the widget.
    -- SOURCE
    function Create
-     (pathName: in String; options: in String := "") return Tk_Frame;
+     (pathName: in String; options: in String := "";
+      Interp: in Tcl_Interp := null) return Tk_Frame;
    procedure Create
-     (Widgt: out Tk_Frame; pathName: in String; options: in String := "");
-   -- ****
-
-   -- ****f* Frame/Create2
-   -- FUNCTION
-   -- Creates a new widget in the specified interpreter and makes it
-   -- into a frame widget.  Options may be specified via the "options"
-   -- parameter or the option database to configure the widget.
-   -- SOURCE
-   function Create
-     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
-      return Tk_Frame;
-   procedure Create
-     (Widgt: out Tk_Frame; Interp: in Tcl_Interp; pathName: in String;
-      options: in String := "");
+     (Widgt: out Tk_Frame; pathName: in String; options: in String := "";
+      Interp: in Tcl_Interp := null);
    -- ****
 
    -- ****f* Frame/Get_Main_Window

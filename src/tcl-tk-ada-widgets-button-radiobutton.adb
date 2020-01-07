@@ -23,35 +23,25 @@
 package body Tcl.Tk.Ada.Widgets.Button.RadioButton is
 
    function Create
-     (pathName: in String; options: in String := "") return Tk_RadioButton is
-   begin --  Create
-      return Create(Context, pathName, options);
-   end Create;
-
-   procedure Create
-     (Widgt: out Tk_RadioButton; pathName: in String;
-      options: in String := "") is
-   begin --  Create
-      Widgt := Create(Context, pathName, options);
-   end Create;
-
-   function Create
-     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
-      return Tk_RadioButton is
-      --
+     (pathName: in String; options: in String := "";
+      Interp: in Tcl_Interp := null) return Tk_RadioButton is
       The_Widget: Tk_RadioButton;
-   begin --  Create
-      The_Widget.Interp := Interp;
+   begin
+      if Interp = null then
+         The_Widget.Interp := Context;
+      else
+         The_Widget.Interp := Interp;
+      end if;
       The_Widget.Name := C.Strings.New_String(pathName);
       Tcl_Eval(The_Widget.Interp, "radiobutton " & pathName & " " & options);
       return The_Widget;
    end Create;
 
    procedure Create
-     (Widgt: out Tk_RadioButton; Interp: in Tcl_Interp; pathName: in String;
-      options: in String := "") is
-   begin --  Create
-      Widgt := Create(Interp, pathName, options);
+     (Widgt: out Tk_RadioButton; pathName: in String; options: in String := "";
+      Interp: in Tcl_Interp := null) is
+   begin
+      Widgt := Create(pathName, options, Interp);
    end Create;
 
    procedure Deselect(Buttn: in Tk_RadioButton) is

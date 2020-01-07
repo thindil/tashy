@@ -30,28 +30,16 @@ package Tcl.Tk.Ada.Widgets.Label is
 
    -- ****f* Label/Create
    -- FUNCTION
-   -- Creates a new widget in the "contextual" interpreter and makes it
-   -- into a label widget.  Options may be specified via the "options"
-   -- parameter or the option database to configure the widget.
+   -- Creates a new Tk_Label in the specified interpreter. If interpreter
+   -- is null, use "contextual" interpreter. Options may be specified via the
+   -- "options" parameter or the option database to configure the widget.
    -- SOURCE
    function Create
-     (pathName: in String; options: in String := "") return Tk_Label;
+     (pathName: in String; options: in String := "";
+      Interp: in Tcl_Interp := null) return Tk_Label;
    procedure Create
-     (Widgt: out Tk_Label; pathName: in String; options: in String := "");
-   -- ****
-
-   -- ****f* Label/Create2
-   -- FUNCTION
-   -- Creates a new widget in the specified interpreter and makes it
-   -- into a label widget.  Options may be specified via the "options"
-   -- parameter or the option database to configure the widget.
-   -- SOURCE
-   function Create
-     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
-      return Tk_Label;
-   procedure Create
-     (Widgt: out Tk_Label; Interp: in Tcl_Interp; pathName: in String;
-      options: in String := "");
+     (Widgt: out Tk_Label; pathName: in String; options: in String := "";
+      Interp: in Tcl_Interp := null);
    -- ****
 
 private

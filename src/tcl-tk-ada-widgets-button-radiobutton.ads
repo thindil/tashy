@@ -31,29 +31,16 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
 
    -- ****f* RadioButton/Create
    -- FUNCTION
-   -- Creates a new widget in the "contextual" interpreter and makes it
-   -- into a radiobutton widget.  Options may be specified via the "options"
-   -- parameter or the option database to configure the widget.
+   -- Creates a new Tk_RadioButton in the specified interpreter. If interpreter
+   -- is null, use "contextual" interpreter. Options may be specified via the
+   -- "options" parameter or the option database to configure the widget.
    -- SOURCE
    function Create
-     (pathName: in String; options: in String := "") return Tk_RadioButton;
+     (pathName: in String; options: in String := "";
+      Interp: in Tcl_Interp := null) return Tk_RadioButton;
    procedure Create
-     (Widgt: out Tk_RadioButton; pathName: in String;
-      options: in String := "");
-   -- ****
-
-   -- ****f* RadioButton/Create2
-   -- FUNCTION
-   -- Creates a new widget in the specified interpreter and makes it
-   -- into a radiobutton widget.  Options may be specified via the "options"
-   -- parameter or the option database to configure the widget.
-   -- SOURCE
-   function Create
-     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
-      return Tk_RadioButton;
-   procedure Create
-     (Widgt: out Tk_RadioButton; Interp: in Tcl_Interp; pathName: in String;
-      options: in String := "");
+     (Widgt: out Tk_RadioButton; pathName: in String; options: in String := "";
+      Interp: in Tcl_Interp := null);
    -- ****
 
    -- ****f* RadioButton/Deselect

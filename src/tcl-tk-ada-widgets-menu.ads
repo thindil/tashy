@@ -29,30 +29,18 @@ package Tcl.Tk.Ada.Widgets.Menu is
 
    type Tk_Menu is new Tk_Widget with private;
 
-   -- ****f* Widgets/CreateMenu
+   -- ****f* Widgets/Create
    -- FUNCTION
-   -- Creates a new widget in the "contextual" interpreter and makes it
-   -- into a menu widget.  Options may be specified via the "options"
-   -- parameter or the option database to configure the widget.
+   -- Creates a new Tk_Menu in the specified interpreter. If interpreter
+   -- is null, use "contextual" interpreter. Options may be specified via the
+   -- "options" parameter or the option database to configure the widget.
    -- SOURCE
    function Create
-     (pathName: in String; options: in String := "") return Tk_Menu;
+     (pathName: in String; options: in String := "";
+      Interp: in Tcl_Interp := null) return Tk_Menu;
    procedure Create
-     (Widgt: out Tk_Menu; pathName: in String; options: in String := "");
-   -- ****
-
-   -- ****f* Widgets/CreateMenu2
-   -- FUNCTION
-   -- Creates a new widget in the specified interpreter and makes it
-   -- into a menu widget.  Options may be specified via the "options"
-   -- parameter or the option database to configure the widget.
-   -- SOURCE
-   function Create
-     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
-      return Tk_Menu;
-   procedure Create
-     (Widgt: out Tk_Menu; Interp: in Tcl_Interp; pathName: in String;
-      options: in String := "");
+     (Widgt: out Tk_Menu; pathName: in String; options: in String := "";
+      Interp: in Tcl_Interp := null);
    -- ****
 
    -- ****f* Widgets/AddMenu

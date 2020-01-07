@@ -16,34 +16,25 @@
 package body Tcl.Tk.Ada.Widgets.Toplevel is
 
    function Create
-     (pathName: in String; options: in String := "") return Tk_Toplevel is
-   begin --  Create
-      return Create(Context, pathName, options);
-   end Create;
-
-   procedure Create
-     (Widgt: out Tk_Toplevel; pathName: in String; options: in String := "") is
-   begin --  Create
-      Widgt := Create(Context, pathName, options);
-   end Create;
-
-   function Create
-     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
-      return Tk_Toplevel is
-      --
+     (pathName: in String; options: in String := "";
+      Interp: in Tcl_Interp := null) return Tk_Toplevel is
       The_Widget: Tk_Toplevel;
-   begin --  Create
-      The_Widget.Interp := Interp;
+   begin
+      if Interp = null then
+         The_Widget.Interp := Context;
+      else
+         The_Widget.Interp := Interp;
+      end if;
       The_Widget.Name := C.Strings.New_String(pathName);
       Tcl_Eval(The_Widget.Interp, "toplevel " & pathName & " " & options);
       return The_Widget;
    end Create;
 
    procedure Create
-     (Widgt: out Tk_Toplevel; Interp: in Tcl_Interp; pathName: in String;
-      options: in String := "") is
-   begin --  Create
-      Widgt := Create(Interp, pathName, options);
+     (Widgt: out Tk_Toplevel; pathName: in String; options: in String := "";
+      Interp: in Tcl_Interp := null) is
+   begin
+      Widgt := Create(pathName, options, Interp);
    end Create;
 
 end Tcl.Tk.Ada.Widgets.Toplevel;
