@@ -215,48 +215,6 @@ package Tcl.Tk.Ada.Widgets is
 
    ---------------------------------------------
    --
-   --   Menu widget
-   --
-   ---------------------------------------------
-
-   type Menu is new Tk_Widget with private;
-
-   -- ****f* Widgets/CreateMenu
-   -- FUNCTION
-   -- Creates a new widget in the "contextual" interpreter and makes it
-   -- into a menu widget.  Options may be specified via the "options"
-   -- parameter or the option database to configure the widget.
-   -- SOURCE
-   function Create(pathName: in String; options: in String := "") return Menu;
-   procedure Create
-     (Widgt: out Menu; pathName: in String; options: in String := "");
-   -- ****
-
-   -- ****f* Widgets/CreateMenu2
-   -- FUNCTION
-   -- Creates a new widget in the specified interpreter and makes it
-   -- into a menu widget.  Options may be specified via the "options"
-   -- parameter or the option database to configure the widget.
-   -- SOURCE
-   function Create
-     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
-      return Menu;
-   procedure Create
-     (Widgt: out Menu; Interp: in Tcl_Interp; pathName: in String;
-      options: in String := "");
-   -- ****
-
-   -- ****f* Widgets/AddMenu
-   -- FUNCTION
-   --  Add element to the menu.
-   -- SOURCE
-   procedure Add
-     (MenuWidget: in Menu'Class; WidgetType: in String;
-      Options: in String := "");
-   -- ****
-
-   ---------------------------------------------
-   --
    --   Ttk::Button widget
    --
    ---------------------------------------------
@@ -355,7 +313,6 @@ private
    procedure Execute_Widget_Command
      (Widgt: in Tk_Widget'Class; command: in String; options: in String := "");
 
-   type Menu is new Tk_Widget with null record;
    type Ttk_Button is new Tk_Widget with null record;
 
 end Tcl.Tk.Ada.Widgets;
