@@ -215,40 +215,6 @@ package Tcl.Tk.Ada.Widgets is
 
    ---------------------------------------------
    --
-   --   Ttk::Button widget
-   --
-   ---------------------------------------------
-
-   type Ttk_Button is new Tk_Widget with private;
-
-   -- ****f* Widgets/CreateTtkButton
-   -- FUNCTION
-   -- Creates a new widget in the "contextual" interpreter and makes it
-   -- into a ttk::button widget.  Options may be specified via the "options"
-   -- parameter or the option database to configure the widget.
-   -- SOURCE
-   function Create
-     (pathName: in String; options: in String := "") return Ttk_Button;
-   procedure Create
-     (Widgt: out Ttk_Button; pathName: in String; options: in String := "");
-   -- ****
-
-   -- ****f* Widgets/CreateTtkButton2
-   -- FUNCTION
-   -- Creates a new widget in the specified interpreter and makes it
-   -- into a ttk::button widget.  Options may be specified via the "options"
-   -- parameter or the option database to configure the widget.
-   -- SOURCE
-   function Create
-     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
-      return Ttk_Button;
-   procedure Create
-     (Widgt: out Ttk_Button; Interp: in Tcl_Interp; pathName: in String;
-      options: in String := "");
-   -- ****
-
-   ---------------------------------------------
-   --
    --   Pack commands
    --
    --   These commands provide for packing widgets within other
@@ -312,7 +278,5 @@ private
 
    procedure Execute_Widget_Command
      (Widgt: in Tk_Widget'Class; command: in String; options: in String := "");
-
-   type Ttk_Button is new Tk_Widget with null record;
 
 end Tcl.Tk.Ada.Widgets;

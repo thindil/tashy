@@ -129,37 +129,6 @@ package body Tcl.Tk.Ada.Widgets is
          "wm " & Action & " " & Widget_Image(Widgt) & " " & Options);
    end Wm_Set;
 
-   function Create
-     (pathName: in String; options: in String := "") return Ttk_Button is
-   begin --  Create
-      return Create(Context, pathName, options);
-   end Create;
-
-   procedure Create
-     (Widgt: out Ttk_Button; pathName: in String; options: in String := "") is
-   begin --  Create
-      Widgt := Create(Context, pathName, options);
-   end Create;
-
-   function Create
-     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
-      return Ttk_Button is
-      --
-      The_Widget: Ttk_Button;
-   begin --  Create
-      The_Widget.Interp := Interp;
-      The_Widget.Name := C.Strings.New_String(pathName);
-      Tcl_Eval(The_Widget.Interp, "ttk::button " & pathName & " " & options);
-      return The_Widget;
-   end Create;
-
-   procedure Create
-     (Widgt: out Ttk_Button; Interp: in Tcl_Interp; pathName: in String;
-      options: in String := "") is
-   begin --  Create
-      Widgt := Create(Interp, pathName, options);
-   end Create;
-
    procedure Pack(Slave: in Tk_Widget'Class; Options: in String) is
    begin --  Pack
       Tcl_Eval(Slave.Interp, "pack " & Widget_Image(Slave) & " " & Options);
