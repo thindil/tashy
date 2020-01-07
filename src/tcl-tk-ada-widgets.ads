@@ -95,33 +95,19 @@ package Tcl.Tk.Ada.Widgets is
    --
    ---------------------------------------------
 
-   -- ****f* Widgets/Create1
+   -- ****f* Widgets/Create
    -- FUNCTION
-   -- Creates a new Tk_Widget in the "contextual" interpreter.  Options
+   -- Creates a new Tk_Widget in the specified interpreter. If interpreter
+   -- is null, use "contextual" interpreter. Options
    -- may be specified via the "options" parameter or the option
    -- database to configure the Tk_Widget.
    -- SOURCE
    function Create
-     (pathName: in String; options: in String := "")
-      return Tk_Widget is abstract;
+     (pathName: in String; options: in String := "";
+      Interp: in Tcl_Interp := null) return Tk_Widget is abstract;
    procedure Create
-     (Widgt: out Tk_Widget; pathName: in String;
-      options: in String := "") is abstract;
-   -- ****
-
-   -- ****f* Widgets/Create2
-   -- FUNCTION
-   -- Creates a new Tk_Widget in the specified interpreter.  Options
-   -- may be specified via the "options" parameter or the option
-   -- database to configure the Tk_Widget.
-   --
-   -- SOURCE
-   function Create
-     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
-      return Tk_Widget is abstract;
-   procedure Create
-     (Widgt: out Tk_Widget; Interp: in Tcl_Interp; pathName: in String;
-      options: in String := "") is abstract;
+     (Widgt: out Tk_Widget; pathName: in String; options: in String := "";
+      Interp: in Tcl_Interp := null) is abstract;
    -- ****
 
    ---------------------------------------------

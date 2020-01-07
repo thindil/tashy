@@ -31,28 +31,16 @@ package Tcl.Tk.Ada.Widgets.Button is
 
    -- ****f* Button/Create
    -- FUNCTION
-   -- Creates a new widget in the "contextual" interpreter and makes it
-   -- into a button widget.  Options may be specified via the "options"
-   -- parameter or the option database to configure the widget.
+   -- Creates a new Tk_Button in the specified interpreter. If interpreter
+   -- is null, use "contextual" interpreter. Options may be specified via the
+   -- "options" parameter or the option database to configure the widget.
    -- SOURCE
    function Create
-     (pathName: in String; options: in String := "") return Tk_Button;
+     (pathName: in String; options: in String := "";
+      Interp: in Tcl_Interp := null) return Tk_Button;
    procedure Create
-     (Widgt: out Tk_Button; pathName: in String; options: in String := "");
-   -- ****
-
-   -- ****f* Button/Create2
-   -- FUNCTION
-   -- Creates a new widget in the specified interpreter and makes it
-   -- into a button widget.  Options may be specified via the "options"
-   -- parameter or the option database to configure the widget.
-   -- SOURCE
-   function Create
-     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
-      return Tk_Button;
-   procedure Create
-     (Widgt: out Tk_Button; Interp: in Tcl_Interp; pathName: in String;
-      options: in String := "");
+     (Widgt: out Tk_Button; pathName: in String; options: in String := "";
+      Interp: in Tcl_Interp := null);
    -- ****
 
    -- ****f* Button/Flash

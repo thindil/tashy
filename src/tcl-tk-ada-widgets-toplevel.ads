@@ -24,28 +24,16 @@ package Tcl.Tk.Ada.Widgets.Toplevel is
 
    -- ****f* Toplevel/Create
    -- FUNCTION
-   -- Creates a new widget in the "contextual" interpreter and makes it
-   -- into a toplevel widget.  Options may be specified via the "options"
-   -- parameter or the option database to configure the widget.
+   -- Creates a new Tk_Toplevel in the specified interpreter. If interpreter
+   -- is null, use "contextual" interpreter. Options may be specified via the
+   -- "options" parameter or the option database to configure the widget.
    -- SOURCE
    function Create
-     (pathName: in String; options: in String := "") return Tk_Toplevel;
+     (pathName: in String; options: in String := "";
+      Interp: in Tcl_Interp := null) return Tk_Toplevel;
    procedure Create
-     (Widgt: out Tk_Toplevel; pathName: in String; options: in String := "");
-   -- ****
-
-   -- ****f* Toplevel/Create2
-   -- FUNCTION
-   -- Creates a new widget in the specified interpreter and makes it
-   -- into a toplevel widget.  Options may be specified via the "options"
-   -- parameter or the option database to configure the widget.
-   -- SOURCE
-   function Create
-     (Interp: in Tcl_Interp; pathName: in String; options: in String := "")
-      return Tk_Toplevel;
-   procedure Create
-     (Widgt: out Tk_Toplevel; Interp: in Tcl_Interp; pathName: in String;
-      options: in String := "");
+     (Widgt: out Tk_Toplevel; pathName: in String; options: in String := "";
+      Interp: in Tcl_Interp := null);
    -- ****
 
 private
