@@ -37,7 +37,10 @@ package Tcl.Tk.Ada.Widgets is
    -- type Tk_Widget may be created.
    --
    -- SOURCE
-   type Tk_Widget is abstract tagged private;
+   type Tk_Widget is abstract tagged record
+      Name: C.Strings.chars_ptr;
+      Interp: Tcl_Interp;
+   end record;
    -- ****
 
    ---------------------------------------------
@@ -201,18 +204,6 @@ package Tcl.Tk.Ada.Widgets is
      (Interp: in Tcl_Interp; Sequence: in String) return String;
    -- ****
 
-   -- ****f* Widgets/Wm_Set
-   -- FUNCTION
-   -- Communicate with the window manager
-   -- PARAMETERS
-   -- Tk_Widget   - Tk_Widget which will be modified
-   -- Action   - WM action to do
-   -- Options  - Options for selected action. Default is empty
-   -- SOURCE
-   procedure Wm_Set
-     (Widgt: in Tk_Widget'Class; Action: in String; Options: in String := "");
-   -- ****
-
    ---------------------------------------------
    --
    --   Pack commands
@@ -270,11 +261,6 @@ package Tcl.Tk.Ada.Widgets is
    -- ****
 
 private
-
-   type Tk_Widget is abstract tagged record
-      Name: C.Strings.chars_ptr;
-      Interp: Tcl_Interp;
-   end record;
 
    procedure Execute_Widget_Command
      (Widgt: in Tk_Widget'Class; command: in String; options: in String := "");

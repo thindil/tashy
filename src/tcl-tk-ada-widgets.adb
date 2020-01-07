@@ -120,15 +120,6 @@ package body Tcl.Tk.Ada.Widgets is
       return Tcl.Ada.Tcl_GetResult(Interp);
    end Unbind_From_Main_Window;
 
-   procedure Wm_Set
-     (Widgt: in Tk_Widget'Class; Action: in String;
-      Options: in String := "") is
-   begin
-      Tcl_Eval
-        (Widgt.Interp,
-         "wm " & Action & " " & Widget_Image(Widgt) & " " & Options);
-   end Wm_Set;
-
    procedure Pack(Slave: in Tk_Widget'Class; Options: in String) is
    begin --  Pack
       Tcl_Eval(Slave.Interp, "pack " & Widget_Image(Slave) & " " & Options);
