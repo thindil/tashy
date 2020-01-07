@@ -19,6 +19,7 @@ of the project.
   Tk\_Frame, Tk\_Toplevel, Tk\_CheckButton, Tk\_RadioButton, Tk\_Label,
   Tk\_Entry, Tk\_Message
 - **BREAKING:** Moved all widgets to separated packages
+- **BREAKING:** Merged all Tcl.Tk.Ada Create procedures and functions
 
 ### Fixed
 - Detecting Tcl libraries by setup.tcl script on Windows
