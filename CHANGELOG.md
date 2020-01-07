@@ -14,7 +14,11 @@ of the project.
 ### Changed
 - Enabled Get\_Main\_Window function
 - Updated README.md
-- **BREAKING:** Renamed Widget type to Tk\_Widget
+- **BREAKING:** Renamed Widget, Button, Frame, Toplevel, Checkbutton,
+  Radiobutton, Label, EntryWidget, Message type to Tk\_Widget, Tk\_Button,
+  Tk\_Frame, Tk\_Toplevel, Tk\_CheckButton, Tk\_RadioButton, Tk\_Label,
+  Tk\_Entry, Tk\_Message
+- **BREAKING:** Moved all widgets to separated packages
 
 ### Fixed
 - Detecting Tcl libraries by setup.tcl script on Windows
