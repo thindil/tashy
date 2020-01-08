@@ -34,6 +34,7 @@ project Tashy is
 
    package Builder is
       for Default_Switches ("ada") use ("-m", "-g", "-j0", "-gnat2012");
+      for Global_Configuration_Pragmas use "gnat.adc";
    end Builder;
 
    package Compiler is
