@@ -20,6 +20,7 @@ of the project.
   Tk\_Entry, Tk\_Message
 - **BREAKING:** Moved all widgets to separated packages
 - **BREAKING:** Merged all Tcl.Tk.Ada Create procedures and functions
+- **BREAKING:** Replaced obsolescent code
 
 ### Fixed
 - Detecting Tcl libraries by setup.tcl script on Windows
