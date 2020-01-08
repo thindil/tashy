@@ -28,7 +28,7 @@
 --------------------------------------------------------------------
 
 with Tcl.Ada;
-with Text_IO;
+with Ada.Text_IO; use Ada.Text_IO;
 
 package body Tcl.Tk.Ada is
 
@@ -37,7 +37,7 @@ package body Tcl.Tk.Ada is
    procedure Tcl_Eval(Interp: in Tcl_Interp; Cmd: in String) is
    begin --  Tcl_Eval
       if Trace then
-         Text_IO.Put_Line(Cmd);
+         Put_Line(Cmd);
       end if;
       Tcl.Ada.Tcl_Eval(Interp, Cmd);
    end Tcl_Eval;
