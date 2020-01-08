@@ -12,6 +12,7 @@
 --                compiled OK.
 --
 --  Copyright (c) 1999-2000 Terry J. Westley
+--  Copyright (c) 2020 Bartek Jasicki <thindil@laeran.pl>
 --
 --  Tash is free software; you can redistribute it and/or modify it under
 --  terms of the GNU General Public License as published by the Free
@@ -42,6 +43,8 @@ with CArgv;
 with Interfaces.C;
 with Tcl.Ada;
 with Tcl.Tk.Ada;
+with Tcl.Tk.Ada.Widgets;
+with Tcl.Tk.Ada.Widgets.Button;
 
 procedure Hello_World is --  Hello_World
 
@@ -52,8 +55,8 @@ procedure Hello_World is --  Hello_World
    Argc         : Interfaces.C.int;
    Argv         : CArgv.Chars_Ptr_Ptr;
    Interp       : Tcl.Tcl_Interp;
-   Hello_Button : Tcl.Tk.Ada.Button;
-   Exit_Button  : Tcl.Tk.Ada.Button;
+   Hello_Button : Tcl.Tk.Ada.Widgets.Button.Tk_Button;
+   Exit_Button  : Tcl.Tk.Ada.Widgets.Button.Tk_Button;
    Command      : Tcl.Tcl_Command;
    pragma Unreferenced (Command);
 
@@ -163,13 +166,13 @@ begin --  Hello_World
 
    --  Create and pack the Hello button
    -----------------------------------
-   Hello_Button := Tcl.Tk.Ada.Create (".hello", "-text Hello -command Hello");
-   Tcl.Tk.Ada.Pack (Hello_Button, "-side left -fill both -expand yes");
+   Hello_Button := Tcl.Tk.Ada.Widgets.Button.Create (".hello", "-text Hello -command Hello");
+   Tcl.Tk.Ada.Widgets.Pack (Hello_Button, "-side left -fill both -expand yes");
 
    --  Create and pack the Exit button
    ----------------------------------
-   Exit_Button := Tcl.Tk.Ada.Create (".exit", "-text Exit -command Exit");
-   Tcl.Tk.Ada.Pack (Exit_Button, "-side left -fill both -expand yes");
+   Exit_Button := Tcl.Tk.Ada.Widgets.Button.Create (".exit", "-text Exit -command Exit");
+   Tcl.Tk.Ada.Widgets.Pack (Exit_Button, "-side left -fill both -expand yes");
 
    --  Loop inside Tk, waiting for commands to execute.
    --  When there are no windows left, Tcl.Tk.Tk_MainLoop returns and we exit.

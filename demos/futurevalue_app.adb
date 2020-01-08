@@ -9,6 +9,7 @@
 --
 --  Copyright (c) 2017 Simon Wright <simon@pushface.org>
 --  Copyright (c) 1997 Terry J. Westley
+--  Copyright (c) 2020 Bartek Jasicki <thindil@laeran.pl>
 --
 --  See the file "license.htm" for information on usage and
 --  redistribution of this file, and  a DISCLAIMER OF ALL WARRANTIES.
@@ -19,19 +20,24 @@ with CArgv;
 with Tcl.Ada;
 with Tcl.Tk;
 with Tcl.Tk.Ada;
+with Tcl.Tk.Ada.Widgets;
+with Tcl.Tk.Ada.Widgets.Button;
+with Tcl.Tk.Ada.Widgets.TEntry;
+with Tcl.Tk.Ada.Widgets.Label;
+with Tcl.Tk.Ada.Widgets.Frame;
 
 package body FutureValue_App is
 
    --  use a decimal type for ease in formatting for display
    type Money is delta 0.01 digits 14;
 
-   Frame        : Tcl.Tk.Ada.Frame;
-   Label        : Tcl.Tk.Ada.Label;
-   Button       : Tcl.Tk.Ada.Button;
-   Amt_Entry    : Tcl.Tk.Ada.EntryWidget;
-   Rate_Entry   : Tcl.Tk.Ada.EntryWidget;
-   Yrs_Entry    : Tcl.Tk.Ada.EntryWidget;
-   Result       : Tcl.Tk.Ada.Label;
+   Frame        : Tcl.Tk.Ada.Widgets.Frame.Tk_Frame;
+   Label        : Tcl.Tk.Ada.Widgets.Label.Tk_Label;
+   Button       : Tcl.Tk.Ada.Widgets.Button.Tk_Button;
+   Amt_Entry    : Tcl.Tk.Ada.Widgets.TEntry.Tk_Entry;
+   Rate_Entry   : Tcl.Tk.Ada.Widgets.TEntry.Tk_Entry;
+   Yrs_Entry    : Tcl.Tk.Ada.Widgets.TEntry.Tk_Entry;
+   Result       : Tcl.Tk.Ada.Widgets.Label.Tk_Label;
 
    function Compute_Future_Value_Command
      (ClientData : in Integer;
@@ -66,7 +72,7 @@ package body FutureValue_App is
       --  and make sure it is not less than zero
       ----------------------------------------------------------------
       Amount :=
-        Money (Tcl.Ada.Tcl_ExprDouble (Interp, Tcl.Tk.Ada.get (Amt_Entry)));
+        Money (Tcl.Ada.Tcl_ExprDouble (Interp, Tcl.Tk.Ada.Widgets.TEntry.get (Amt_Entry)));
       if Amount < 0.0 then
          return Tcl.TCL_OK;
       end if;
@@ -76,7 +82,7 @@ package body FutureValue_App is
       --  and make sure it is not less than zero
       ----------------------------------------------------------
       Annual_Rate :=
-        Float (Tcl.Ada.Tcl_ExprDouble (Interp, Tcl.Tk.Ada.get (Rate_Entry)));
+        Float (Tcl.Ada.Tcl_ExprDouble (Interp, Tcl.Tk.Ada.Widgets.TEntry.get (Rate_Entry)));
       if Annual_Rate < 0.0 then
          return Tcl.TCL_OK;
       end if;
@@ -86,7 +92,7 @@ package body FutureValue_App is
       --  and make sure it is not less than zero
       -----------------------------------------------------
       Years :=
-        Integer (Tcl.Ada.Tcl_ExprLong (Interp, Tcl.Tk.Ada.get (Yrs_Entry)));
+        Integer (Tcl.Ada.Tcl_ExprLong (Interp, Tcl.Tk.Ada.Widgets.TEntry.get (Yrs_Entry)));
       if Years < 0 then
          return Tcl.TCL_OK;
       end if;
@@ -114,7 +120,7 @@ package body FutureValue_App is
 
       --  put the future value into the result label
       ----------------------------------------------
-      Tcl.Tk.Ada.configure (Result, "-text " & Money'Image (Future_Value));
+      Tcl.Tk.Ada.Widgets.configure (Result, "-text " & Money'Image (Future_Value));
 
       --  return TCL_OK to keep Tcl happy
       -----------------------------------
@@ -159,55 +165,55 @@ package body FutureValue_App is
       Tcl.Tk.Ada.Set_Context (Interp);
 
       --  Create a frame, label and entry field for savings amount
-      Tcl.Tk.Ada.Create (Frame, ".amt", "-bd 2");
-      Tcl.Tk.Ada.Pack (Frame, "-side top -fill x");
-      Tcl.Tk.Ada.Create (Amt_Entry, ".amt.entry", "-width 20 -bg white");
-      Tcl.Tk.Ada.Pack (Amt_Entry, "-side right");
-      Tcl.Tk.Ada.Create
+      Tcl.Tk.Ada.Widgets.Frame.Create (Frame, ".amt", "-bd 2");
+      Tcl.Tk.Ada.Widgets.Pack (Frame, "-side top -fill x");
+      Tcl.Tk.Ada.Widgets.TEntry.Create (Amt_Entry, ".amt.entry", "-width 20 -bg white");
+      Tcl.Tk.Ada.Widgets.Pack (Amt_Entry, "-side right");
+      Tcl.Tk.Ada.Widgets.Label.Create
         (Label,
          ".amt.label",
          "-text ""Monthly Savings Amount:""");
-      Tcl.Tk.Ada.Pack (Label, "-side right");
+      Tcl.Tk.Ada.Widgets.Pack (Label, "-side right");
 
       --  Initialize savings amount
       Tcl.Ada.Tcl_Eval (Interp, ".amt.entry insert end 100");
 
       --  Create a frame, label and entry field for interest rate
-      Tcl.Tk.Ada.Create (Frame, ".rate", "-bd 2");
-      Tcl.Tk.Ada.Pack (Frame, "-side top -fill x");
-      Tcl.Tk.Ada.Create (Rate_Entry, ".rate.entry", "-width 20 -bg white");
-      Tcl.Tk.Ada.Pack (Rate_Entry, "-side right");
-      Tcl.Tk.Ada.Create
+      Tcl.Tk.Ada.Widgets.Frame.Create (Frame, ".rate", "-bd 2");
+      Tcl.Tk.Ada.Widgets.Pack (Frame, "-side top -fill x");
+      Tcl.Tk.Ada.Widgets.TEntry.Create (Rate_Entry, ".rate.entry", "-width 20 -bg white");
+      Tcl.Tk.Ada.Widgets.Pack (Rate_Entry, "-side right");
+      Tcl.Tk.Ada.Widgets.Label.Create
         (Label,
          ".rate.label",
          "-text ""Annual Interest Rate:""");
-      Tcl.Tk.Ada.Pack (Label, "-side right");
+      Tcl.Tk.Ada.Widgets.Pack (Label, "-side right");
 
       --  Initialize interest rate
       Tcl.Ada.Tcl_Eval (Interp, ".rate.entry insert end 0.10");
 
       --  Create a frame, label and entry field for number of years
-      Tcl.Tk.Ada.Create (Frame, ".yrs", "-bd 2");
-      Tcl.Tk.Ada.Pack (Frame, "-side top -fill x");
-      Tcl.Tk.Ada.Create (Yrs_Entry, ".yrs.entry", "-width 20 -bg white");
-      Tcl.Tk.Ada.Pack (Yrs_Entry, "-side right");
-      Tcl.Tk.Ada.Create (Label, ".yrs.label", "-text ""Number of Years:""");
-      Tcl.Tk.Ada.Pack (Label, "-side right");
+      Tcl.Tk.Ada.Widgets.Frame.Create (Frame, ".yrs", "-bd 2");
+      Tcl.Tk.Ada.Widgets.Pack (Frame, "-side top -fill x");
+      Tcl.Tk.Ada.Widgets.TEntry.Create (Yrs_Entry, ".yrs.entry", "-width 20 -bg white");
+      Tcl.Tk.Ada.Widgets.Pack (Yrs_Entry, "-side right");
+      Tcl.Tk.Ada.Widgets.Label.Create (Label, ".yrs.label", "-text ""Number of Years:""");
+      Tcl.Tk.Ada.Widgets.Pack (Label, "-side right");
 
       --  Initialize savings amount
       Tcl.Ada.Tcl_Eval (Interp, ".yrs.entry insert end 10");
 
       --  Create a frame, button, and result label for computed result
-      Tcl.Tk.Ada.Create (Frame, ".fv", "-bd 2");
-      Tcl.Tk.Ada.Pack (Frame, "-side top -fill x");
-      Tcl.Tk.Ada.Create (Result, ".fv.result", "-width 20 -relief sunken");
-      Tcl.Tk.Ada.Pack (Result, "-side right");
-      Tcl.Tk.Ada.Create
+      Tcl.Tk.Ada.Widgets.Frame.Create (Frame, ".fv", "-bd 2");
+      Tcl.Tk.Ada.Widgets.Pack (Frame, "-side top -fill x");
+      Tcl.Tk.Ada.Widgets.Label.Create (Result, ".fv.result", "-width 20 -relief sunken");
+      Tcl.Tk.Ada.Widgets.Pack (Result, "-side right");
+      Tcl.Tk.Ada.Widgets.Button.Create
         (Button,
          ".fv.button",
          "-text ""Compute Future Value:"""
            & " -command computeFutureValue -pady 1");
-      Tcl.Tk.Ada.Pack (Button, "-side right");
+      Tcl.Tk.Ada.Widgets.Pack (Button, "-side right");
 
       --  Add a window title
       Tcl.Ada.Tcl_Eval (Interp, "wm title . ""Future Value of Savings""");
@@ -216,7 +222,7 @@ package body FutureValue_App is
       Tcl.Ada.Tcl_Eval (Interp, "focus .amt.entry");
 
       --  bind Return to the button
-      Tcl.Tk.Ada.Bind (Button, "<Return>", "computeFutureValue");
+      Tcl.Tk.Ada.Widgets.Bind (Button, "<Return>", "computeFutureValue");
 
       return Tcl.TCL_OK;
 
