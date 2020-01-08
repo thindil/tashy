@@ -172,24 +172,6 @@ package Tcl.Tk.Ada.Widgets is
      (Widgt: in Tk_Widget'Class; Sequence: in String) return String;
    -- ****
 
-   -- ****f* Widgets/Bind_To_Main_Window
-   -- FUNCTION
-   -- Associates Tcl script Script with the event Sequence in the main window.
-   -- SOURCE
-   procedure Bind_To_Main_Window
-     (Interp: in Tcl_Interp; Sequence: in String; Script: in String);
-   -- ****
-
-   -- ****f* Widgets/Unbind_From_Main_Window
-   -- FUNCTION
-   -- Disassociates the binding from the event Sequence in the main window.
-   -- SOURCE
-   procedure Unbind_From_Main_Window
-     (Interp: in Tcl_Interp; Sequence: in String);
-   function Unbind_From_Main_Window
-     (Interp: in Tcl_Interp; Sequence: in String) return String;
-   -- ****
-
    ---------------------------------------------
    --
    --   Pack commands
