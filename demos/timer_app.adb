@@ -5,6 +5,7 @@
 --
 --  Copyright (c) 2017 Simon Wright <simon@pushface.org>
 --  Copyright (c) 1997 Terry J. Westley
+--  Copyright (c) 2020 Bartek Jasicki <thindil@laeran.pl>
 --
 --  See the file "license.htm" for information on usage and
 --  redistribution of this file, and  a DISCLAIMER OF ALL WARRANTIES.
@@ -21,6 +22,9 @@ with CArgv;
 with Tcl.Ada;
 with Tcl.Tk;
 with Tcl.Tk.Ada;
+with Tcl.Tk.Ada.Widgets;
+with Tcl.Tk.Ada.Widgets.Label;
+with Tcl.Tk.Ada.Widgets.Button;
 
 package body Timer_App is
 
@@ -28,9 +32,9 @@ package body Timer_App is
 
    type Timer_Type is delta 0.01 digits 8 range 0.0 .. 999999.99;
 
-   Counter      : Tcl.Tk.Ada.Label;
-   Start_Button : Tcl.Tk.Ada.Button;
-   Stop_Button  : Tcl.Tk.Ada.Button;
+   Counter      : Tcl.Tk.Ada.Widgets.Label.Tk_Label;
+   Start_Button : Tcl.Tk.Ada.Widgets.Button.Tk_Button;
+   Stop_Button  : Tcl.Tk.Ada.Widgets.Button.Tk_Button;
    Time_Value   : Timer_Type := 0.0;
    Stopped      : Boolean    := True;
 
@@ -39,7 +43,7 @@ package body Timer_App is
    procedure Update;
    procedure Update is
    begin --  Update
-      Tcl.Tk.Ada.configure
+      Tcl.Tk.Ada.Widgets.configure
         (Counter,
          "-text " & Timer_Type'Image (Time_Value));
    end Update;
@@ -119,7 +123,7 @@ package body Timer_App is
    begin --  Start_Command
       if Stopped then
          Stopped := False;
-         Tcl.Tk.Ada.configure (Stop_Button, "-text Stop -command Stop");
+         Tcl.Tk.Ada.Widgets.configure (Stop_Button, "-text Stop -command Stop");
          Tick;
          Tcl.Tk.Ada.Set_Trace (False);
       end if;
@@ -149,7 +153,7 @@ package body Timer_App is
    begin --  Stop_Command
       Tcl.Tk.Ada.Set_Trace (True);
       Stopped := True;
-      Tcl.Tk.Ada.configure (Stop_Button, "-text Reset -command Reset");
+      Tcl.Tk.Ada.Widgets.configure (Stop_Button, "-text Reset -command Reset");
       return Tcl.TCL_OK;
    end Stop_Command;
 
@@ -243,25 +247,25 @@ package body Timer_App is
 
       --  Create and pack the counter text widget
       Counter :=
-        Tcl.Tk.Ada.Create (".counter", "-text 0.00 -relief raised -width 10");
-      Tcl.Tk.Ada.Pack (Counter, "-side bottom -fill both");
+        Tcl.Tk.Ada.Widgets.Label.Create (".counter", "-text 0.00 -relief raised -width 10");
+      Tcl.Tk.Ada.Widgets.Pack (Counter, "-side bottom -fill both");
 
       --  Create and pack the Start button
-      Start_Button := Tcl.Tk.Ada.Create (".start",
+      Start_Button := Tcl.Tk.Ada.Widgets.Button.Create (".start",
                                          "-text Start -command Start");
-      Tcl.Tk.Ada.Pack (Start_Button, "-side left -fill both -expand yes");
+      Tcl.Tk.Ada.Widgets.Pack (Start_Button, "-side left -fill both -expand yes");
 
       --  Create and pack the Stop button
    -----------------------------------
-      Stop_Button := Tcl.Tk.Ada.Create (".stop", "-text Reset -command Reset");
-      Tcl.Tk.Ada.Pack (Stop_Button, "-side left -fill both -expand yes");
+      Stop_Button := Tcl.Tk.Ada.Widgets.Button.Create (".stop", "-text Reset -command Reset");
+      Tcl.Tk.Ada.Widgets.Pack (Stop_Button, "-side left -fill both -expand yes");
 
       --  Bind ^C and ^Q keys to exit
    -------------------------------
-      Tcl.Tk.Ada.Bind_To_Main_Window (Interp,
+      Tcl.Tk.Ada.Widgets.Bind_To_Main_Window (Interp,
                                       "<Control-c>",
                                       "{destroy .;exit}");
-      Tcl.Tk.Ada.Bind_To_Main_Window (Interp,
+      Tcl.Tk.Ada.Widgets.Bind_To_Main_Window (Interp,
                                       "<Control-q>",
                                       "{destroy .;exit}");
 
