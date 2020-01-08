@@ -101,25 +101,6 @@ package body Tcl.Tk.Ada.Widgets is
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end Unbind;
 
-   procedure Bind_To_Main_Window
-     (Interp: in Tcl_Interp; Sequence: in String; Script: in String) is
-   begin --  Bind_To_Main_Window
-      Tcl_Eval(Interp, "bind . " & Sequence & " " & Script);
-   end Bind_To_Main_Window;
-
-   procedure Unbind_From_Main_Window
-     (Interp: in Tcl_Interp; Sequence: in String) is
-   begin --  Unbind_From_Main_Window
-      Tcl_Eval(Interp, "bind . " & Sequence);
-   end Unbind_From_Main_Window;
-
-   function Unbind_From_Main_Window
-     (Interp: in Tcl_Interp; Sequence: in String) return String is
-   begin --  Unbind_From_Main_Window
-      Tcl_Eval(Interp, "bind . " & Sequence);
-      return Tcl.Ada.Tcl_GetResult(Interp);
-   end Unbind_From_Main_Window;
-
    procedure Pack(Slave: in Tk_Widget'Class; Options: in String) is
    begin --  Pack
       Tcl_Eval(Slave.Interp, "pack " & Widget_Image(Slave) & " " & Options);

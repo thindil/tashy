@@ -57,13 +57,6 @@ package Tcl.Tk.Ada.Widgets.Frame is
       Interp: in Tcl_Interp := null);
    -- ****
 
-   -- ****f* Frame/Get_Main_Window
-   -- FUNCTION
-   -- Get main window of the specified interpreter
-   -- SOURCE
-   function Get_Main_Window(Interp: in Tcl_Interp) return Tk_Frame;
-   -- ****
-
 private
 
    type Tk_Frame is new Tk_Widget with null record;

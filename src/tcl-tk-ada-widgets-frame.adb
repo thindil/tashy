@@ -44,10 +44,4 @@ package body Tcl.Tk.Ada.Widgets.Frame is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
-   function Get_Main_Window(Interp: in Tcl_Interp) return Tk_Frame is
-   --
-   begin --  Get_Main_Window
-      return (C.Strings.New_String("."), Interp);
-   end Get_Main_Window;
-
 end Tcl.Tk.Ada.Widgets.Frame;
