@@ -21,6 +21,7 @@ of the project.
 - **BREAKING:** Moved all widgets to separated packages
 - **BREAKING:** Merged all Tcl.Tk.Ada Create procedures and functions
 - **BREAKING:** Replaced obsolescent code
+- **BREAKING:** Updated demos to new version of the library
 
 ### Fixed
 - Detecting Tcl libraries by setup.tcl script on Windows
