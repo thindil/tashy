@@ -38,7 +38,12 @@
 
 with CHelper;
 
+-- ****h* Tcl/Tk
+-- FUNCTION
+-- This package is the "thin" binding to Tcl.Tk.
+-- SOURCE
 package Tcl.Tk is
+-- ****
 
    --
    --  Dummy types that are used by clients:

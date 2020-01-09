@@ -20,7 +20,7 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
--- ****h* Tashy/Message
+-- ****h* Widgets/Message
 -- FUNCTION
 -- Provides code for manipulate Tk widget Message
 -- SOURCE

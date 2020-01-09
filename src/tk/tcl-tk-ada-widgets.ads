@@ -20,7 +20,7 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
--- ****h* Tashy/Tcl.Tk.Ada.Widgets
+-- ****h* TkAda/Widgets
 -- FUNCTION
 -- Provides code for Tk widgets
 -- SOURCE

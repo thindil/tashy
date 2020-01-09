@@ -45,7 +45,12 @@ with Interfaces.C.Strings;
 with System;
 with Tcl_Record_Sizes;
 
+-- ****h* Tashy/Tcl
+-- FUNCTION
+-- This package is the "thin" binding to Tcl.
+-- SOURCE
 package Tcl is
+-- ****
 
    package C renames Interfaces.C;
 

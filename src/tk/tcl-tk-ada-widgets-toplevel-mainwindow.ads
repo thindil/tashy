@@ -13,7 +13,7 @@
 -- You should have received a copy of the GNU General Public License
 -- along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
--- ****h* Tashy/MainWindow
+-- ****h* Toplevel/MainWindow
 -- FUNCTION
 -- Provides code for manipulate main window widget
 -- SOURCE

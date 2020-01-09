@@ -20,7 +20,7 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
--- ****h* Tashy/Menu
+-- ****h* Widgets/Menu
 -- FUNCTION
 -- Provides code for manipulate Tk widget Menu
 -- SOURCE
@@ -29,7 +29,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
 
    type Tk_Menu is new Tk_Widget with private;
 
-   -- ****f* Widgets/Create
+   -- ****f* Menu/Create
    -- FUNCTION
    -- Creates a new Tk_Menu in the specified interpreter. If interpreter
    -- is null, use "contextual" interpreter. Options may be specified via the
@@ -43,7 +43,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       Interp: in Tcl_Interp := null);
    -- ****
 
-   -- ****f* Widgets/AddMenu
+   -- ****f* Menu/AddMenu
    -- FUNCTION
    --  Add element to the menu.
    -- SOURCE

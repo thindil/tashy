@@ -20,7 +20,7 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
--- ****h* Tashy/RadioButton
+-- ****h* Button/RadioButton
 -- FUNCTION
 -- Provides code for manipulate Tk widget RadioButton
 -- SOURCE

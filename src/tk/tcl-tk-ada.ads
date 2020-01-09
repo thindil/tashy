@@ -29,7 +29,7 @@
 
 with CArgv;
 
--- ****h* Tashy/Tcl.Tk.Ada
+-- ****h* Tk/TkAda
 -- FUNCTION
 -- This package provides the "thick" binding to Tcl.Tk.
 -- SOURCE
@@ -38,7 +38,7 @@ package Tcl.Tk.Ada is
 
    package C renames Interfaces.C;
 
-   -- ****f* Tcl.Tk.Ada/Set_Trace
+   -- ****f* TkAda/Set_Trace
    -- FUNCTION
    -- Turn on tracing of Tcl/Tk command execution.
    -- PARAMETERS
@@ -47,7 +47,7 @@ package Tcl.Tk.Ada is
    procedure Set_Trace(State: in Boolean);
    -- ****
 
-   -- ****f* Tcl.Tk.Ada/Set_Context
+   -- ****f* TkAda/Set_Context
    -- FUNCTION
    -- Sets the interpreter context for all Tk calls which do not include
    -- either an Interp or Widget parameter.
@@ -57,7 +57,7 @@ package Tcl.Tk.Ada is
    procedure Set_Context(Interp: in Tcl_Interp);
    -- ****
 
-   -- ****f* Tcl.Tk.Ada/Get_Context
+   -- ****f* TkAda/Get_Context
    -- FUNCTION
    -- Gets the current interpreter context.
    -- RESULT
@@ -75,21 +75,21 @@ package Tcl.Tk.Ada is
    --
    ---------------------------------------------
 
-   -- ****f* Tcl.Tk.Ada/After
+   -- ****f* TkAda/After
    -- FUNCTION
    -- Sleeps for Ms milliseconds in the "contextual" interpreter.
    -- SOURCE
    procedure After(Ms: in Natural);
    -- ****
 
-   -- ****f* Tcl.Tk.Ada/After2
+   -- ****f* TkAda/After2
    -- FUNCTION
    -- Sleeps for Ms milliseconds in the specified interpreter.
    -- SOURCE
    procedure After(Interp: in Tcl_Interp; Ms: in Natural);
    -- ****
 
-   -- ****f* Tcl.Tk.Ada/After3
+   -- ****f* TkAda/After3
    -- FUNCTION
    -- Arranges for the Tcl Script to be executed after Ms milliseconds
    -- in the "contextual" interpreter.  The function returns an
@@ -99,7 +99,7 @@ package Tcl.Tk.Ada is
    procedure After(Ms: in Natural; Script: in String);
    -- ****
 
-   -- ****f* Tcl.Tk.Ada/After4
+   -- ****f* TkAda/After4
    -- FUNCTION
    -- Arranges for the Tcl Script to be executed after Ms milliseconds
    -- in the specified interpreter.  The function returns an
@@ -110,7 +110,7 @@ package Tcl.Tk.Ada is
    procedure After(Interp: in Tcl_Interp; Ms: in Natural; Script: in String);
    -- ****
 
-   -- ****f* Tcl.Tk.Ada/Cancel
+   -- ****f* TkAda/Cancel
    -- FUNCTION
    -- Cancels the execution of a delayed command in the "contextual"
    -- interpreter.
@@ -118,7 +118,7 @@ package Tcl.Tk.Ada is
    procedure Cancel(id_or_script: in String);
    -- ****
 
-   -- ****f* Tcl.Tk.Ada/Cancel2
+   -- ****f* TkAda/Cancel2
    -- FUNCTION
    -- Cancels the execution of a delayed command in the specified
    -- interpreter.
@@ -126,7 +126,7 @@ package Tcl.Tk.Ada is
    procedure Cancel(Interp: in Tcl_Interp; id_or_script: in String);
    -- ****
 
-   -- ****f* Tcl.Tk.Ada/Idle
+   -- ****f* TkAda/Idle
    -- FUNCTION
    -- Arranges for the Tcl Script to be executed later as an idle
    -- handler in the "contextual" interpreter.  The function returns
@@ -136,7 +136,7 @@ package Tcl.Tk.Ada is
    procedure Idle(Script: in String);
    -- ****
 
-   -- ****f* Tcl.Tk.Ada/Idle2
+   -- ****f* TkAda/Idle2
    -- FUNCTION
    -- Arranges for the Tcl Script to be executed later as an idle
    -- handler in the specified interpreter.  The function returns
@@ -146,7 +146,7 @@ package Tcl.Tk.Ada is
    procedure Idle(Interp: in Tcl_Interp; Script: in String);
    -- ****
 
-   -- ****f* Tcl.Tk.Ada/Info
+   -- ****f* TkAda/Info
    -- FUNCTION
    -- Returns information about existing event handlers in the
    -- "contextual" interpreter.
@@ -154,7 +154,7 @@ package Tcl.Tk.Ada is
    function Info(id: in String := "") return String;
    -- ****
 
-   -- ****f* Tcl.Tk.Ada/Info2
+   -- ****f* TkAda/Info2
    -- FUNCTION
    -- Returns information about existing event handlers in the
    -- "contextual" interpreter.

@@ -13,7 +13,7 @@
 -- You should have received a copy of the GNU General Public License
 -- along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
--- ****h* Tashy/Toplevel
+-- ****h* Widgets/Toplevel
 -- FUNCTION
 -- Provides code for manipulate Tk widget Toplevel
 -- SOURCE
