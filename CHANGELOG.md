@@ -7,7 +7,7 @@ of the project.
 ## [Unreleased]
 
 ### Added
-- Menu widget
+- Binding for Tk `menu` widget
 - Binding for Tk `wm` command
 - Binding for Tk `ttk:button` widget
 
@@ -22,6 +22,7 @@ of the project.
 - **BREAKING:** Merged all Tcl.Tk.Ada Create procedures and functions
 - **BREAKING:** Replaced obsolescent code
 - **BREAKING:** Updated demos to new version of the library
+- **BREAKING:** Moved all main window code to separated package
 
 ### Fixed
 - Detecting Tcl libraries by setup.tcl script on Windows
