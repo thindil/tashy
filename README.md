@@ -5,8 +5,8 @@ changes in the code, thus TASHY should be used only with the new code. At
 this moment, TASHY is "a bit" unstable, used mostly as playgroud. All changes
 (compared with TASH too) can be found [in CHANGELOG.md](CHANGELOG.md)
 
-TASHY is the Ada binding to Tcl/Tk. It allow to use Tcl code in Ada code and
-vice versa.
+TASHY is the Ada 2012 binding to Tcl/Tk. It allow to use Tcl code in Ada code
+and vice versa.
 
 ## Build the library from sources
 
@@ -91,6 +91,7 @@ reasons why the executable file might be covered by the GNU Public License.
 ## TODO
 
 * More widgets to Tcl.Tk.Ada
+* More bindings for Tcl, Tk commands
 * More and better code documentation
 * Update code to newest Tcl version
 * Update code to newest Tk version
