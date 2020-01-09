@@ -20,7 +20,7 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
--- ****h* Tashy/CheckButton
+-- ****h* Button/CheckButton
 -- FUNCTION
 -- Provides code for manipulate Tk widget CheckButton
 -- SOURCE

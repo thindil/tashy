@@ -22,7 +22,7 @@
 
 with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
 
--- ****h* Tashy/Wm
+-- ****h* TkAda/Wm
 -- FUNCTION
 -- Provides code for communicate with windows manager
 -- SOURCE

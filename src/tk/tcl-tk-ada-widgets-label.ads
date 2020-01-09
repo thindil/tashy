@@ -20,11 +20,12 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
--- ****h* Tashy/Label
+-- ****h* Widgets/Label
 -- FUNCTION
 -- Provides code for manipulate Tk widget Label
 -- SOURCE
 package Tcl.Tk.Ada.Widgets.Label is
+-- ****
 
    type Tk_Label is new Tk_Widget with private;
 

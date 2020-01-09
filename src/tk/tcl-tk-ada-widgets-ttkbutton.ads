@@ -20,7 +20,7 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
--- ****h* Tashy/TtkButton
+-- ****h* Widgets/TtkButton
 -- FUNCTION
 -- Provides code for Tk Ttk::Button
 -- SOURCE

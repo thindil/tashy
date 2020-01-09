@@ -47,7 +47,7 @@
 
 with CArgv;
 
--- ****h* Tashy/Tcl.Ada
+-- ****h* Tcl/Ada
 -- FUNCTION
 -- This package provides the "thin" binding to Tcl.
 -- SOURCE
