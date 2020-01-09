@@ -35,7 +35,9 @@ package Tcl.Tk.Ada.Widgets is
    -- class and for creating non-abstract derived widget types.  Since there
    -- is no such data type in Tk, we make it abstract so that no instance of
    -- type Tk_Widget may be created.
-   --
+   -- PARAMETERS
+   -- Name   - Name (Tk path) of the widget
+   -- Interp - Tcl interpreter to which the widget is added
    -- SOURCE
    type Tk_Widget is abstract tagged record
       Name: C.Strings.chars_ptr;
@@ -97,10 +99,18 @@ package Tcl.Tk.Ada.Widgets is
 
    -- ****f* Widgets/Create
    -- FUNCTION
-   -- Creates a new Tk_Widget in the specified interpreter. If interpreter
-   -- is null, use "contextual" interpreter. Options
-   -- may be specified via the "options" parameter or the option
-   -- database to configure the Tk_Widget.
+   -- Creates a new Tk_Widget in the specified interpreter. This is abstract
+   -- function. Its content depends on each child widget code.
+   -- PARAMETERS
+   -- Widgt    - Tk_Widget which will be created
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Default value is
+   --            empty
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+   --            the widget will be created in the "contextual" interpreter.
+   --            Default value is null.
+   -- RESULT
+   -- Newly created Tk_Widget
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
@@ -119,6 +129,8 @@ package Tcl.Tk.Ada.Widgets is
    -- ****f* Widgets/Destroy
    -- FUNCTION
    -- Destroys a Tk_Widget.
+   -- PARAMETERS
+   -- Widgt - Tk_Widget to destroy
    -- SOURCE
    procedure Destroy(Widgt: in out Tk_Widget'Class);
    -- ****
@@ -131,16 +143,26 @@ package Tcl.Tk.Ada.Widgets is
 
    -- ****f* Widgets/cget
    -- FUNCTION
-   --  Returns the current value of the specified configuration option.
+   -- Get the current value of the specified option for specified widget
+   -- PARAMETERS
+   -- Widgt  - Tk_Widget which option will be get
+   -- option - Name of the option to get
+   -- RESULT
+   -- Returns the current value of the specified configuration option.
    -- SOURCE
    function cget(Widgt: in Tk_Widget'Class; option: in String) return String;
    -- ****
 
    -- ****f* Widgets/configure
    -- FUNCTION
-   -- Queries or modifies the configuration options.  If options is
-   -- an empty string, returns a list of all available options
-   -- for the Tk_Widget.
+   -- Queries or modifies the configuration options.
+   -- PARAMETERS
+   -- Widgt   - Tk_Widget from which options will be queried or modified
+   -- options - Options to configure. If empty, return list of available
+   --           options. Default is empty.
+   -- RESULT
+   -- String with Tcl information about finished action (for example, list
+   -- of options).
    -- SOURCE
    function configure
      (Widgt: in Tk_Widget'Class; options: in String := "") return String;
