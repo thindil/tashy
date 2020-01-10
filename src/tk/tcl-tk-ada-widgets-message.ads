@@ -27,13 +27,28 @@
 package Tcl.Tk.Ada.Widgets.Message is
 -- ****
 
+   -- ****t* Tcl.Tk.Ada.Widgets.Message/Tk_Message
+   -- FUNCTION
+   -- This is a non-abstract type derived directly from Tk_Widget.
+   -- Each of the derived widgets redefines the Create subprogram
+   -- in order to create the correct type of widget.
+   -- SOURCE
    type Tk_Message is new Tk_Widget with private;
+   -- ****
 
    -- ****f* Message/Create
    -- FUNCTION
-   -- Creates a new Tk_Message in the specified interpreter. If interpreter
-   -- is null, use "contextual" interpreter. Options may be specified via the
-   -- "options" parameter or the option database to configure the widget.
+   -- Creates a new Tk_Message in the specified interpreter.
+   -- PARAMETERS
+   -- Widgt    - Tk_Message which will be created
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Default value is
+   --            empty
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+   --            the widget will be created in the "contextual" interpreter.
+   --            Default value is null.
+   -- RESULT
+   -- Newly created Tk_Message
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
