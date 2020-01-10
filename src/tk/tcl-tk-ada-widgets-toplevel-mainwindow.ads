@@ -23,6 +23,10 @@ package Tcl.Tk.Ada.Widgets.Toplevel.MainWindow is
    -- ****f* MainWindow/Get_Main_Window
    -- FUNCTION
    -- Get main window of the specified interpreter
+   -- PARAMETERS
+   -- Interp - Tcl interpreter from which main window will be get
+   -- RESULT
+   -- Main Tk window as Tk_Toplevel widget
    -- SOURCE
    function Get_Main_Window(Interp: in Tcl_Interp) return Tk_Toplevel;
    -- ****
@@ -30,6 +34,10 @@ package Tcl.Tk.Ada.Widgets.Toplevel.MainWindow is
    -- ****f* MainWindow/Bind_To_Main_Window
    -- FUNCTION
    -- Associates Tcl script Script with the event Sequence in the main window.
+   -- PARAMETERS
+   -- Interp   - Tcl interpreter to which main window scrip will be binded
+   -- Sequence - Name of Tk event which will be binded with the script
+   -- Script   - Tcl code which will be binded to the Tk_Widget
    -- SOURCE
    procedure Bind_To_Main_Window
      (Interp: in Tcl_Interp; Sequence: in String; Script: in String);
@@ -38,6 +46,12 @@ package Tcl.Tk.Ada.Widgets.Toplevel.MainWindow is
    -- ****f* MainWindow/Unbind_From_Main_Window
    -- FUNCTION
    -- Disassociates the binding from the event Sequence in the main window.
+   -- PARAMETERS
+   -- Interp   - Tcl interpreter from which event will be unbinded from main
+   --            window
+   -- Sequence - Name of Tk event to remove
+   -- RESULT
+   -- String with Tcl information about finished action
    -- SOURCE
    procedure Unbind_From_Main_Window
      (Interp: in Tcl_Interp; Sequence: in String);
