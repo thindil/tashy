@@ -180,6 +180,10 @@ package Tcl.Tk.Ada.Widgets is
    -- ****f* Widgets/Bind
    -- FUNCTION
    -- Associates Tcl script Script with the event Sequence.
+   -- PARAMETERS
+   -- Widgt    - Tk_Widget to which script will be binded
+   -- Sequence - Name of Tk event which will be binded with the script
+   -- Script   - Tcl code which will be binded to the Tk_Widget
    -- SOURCE
    procedure Bind
      (Widgt: in Tk_Widget'Class; Sequence: in String; Script: in String);
@@ -188,6 +192,11 @@ package Tcl.Tk.Ada.Widgets is
    -- ****f* Widgets/Unbind
    -- FUNCTION
    -- Disassociates the binding from the event Sequence.
+   -- PARAMETERS
+   -- Widgt    - Tk_Widget from which selected event will be removed
+   -- Sequence - Name of Tk event which will be removed from the widget
+   -- RESULT
+   -- String with Tcl information about finished action
    -- SOURCE
    procedure Unbind(Widgt: in Tk_Widget'Class; Sequence: in String);
    function Unbind
@@ -203,11 +212,22 @@ package Tcl.Tk.Ada.Widgets is
    --
    ---------------------------------------------
 
+     -- ****f* Widgets/Pack
+     -- FUNCTION
+     -- Pack selected widget with selected options
+     -- PARAMETERS
+     -- Slave   - Tk_Widget to pack
+     -- Options - Option to pack action
+     -- SOURCE
    procedure Pack(Slave: in Tk_Widget'Class; Options: in String);
+   -- ****
 
    -- ****f* Widgets/Pack_Configure
    -- FUNCTION
    -- Tells the packer how to configure the specified Slave window.
+   -- PARAMETERS
+   -- Slave   - Tk_Widget to configure
+   -- Options - Pack options for the slave
    -- SOURCE
    procedure Pack_Configure(Slave: in Tk_Widget'Class; Options: in String);
    -- ****
@@ -216,13 +236,19 @@ package Tcl.Tk.Ada.Widgets is
    -- FUNCTION
    -- Removes the Slave window from the packing list for its master
    -- and unmaps their windows.
+   -- PARAMETERS
+   -- Slave - Tk_Widget to remove
    -- SOURCE
    procedure Pack_Forget(Slave: in Tk_Widget'Class);
    -- ****
 
    -- ****f* Widgets/Pack_Info
    -- FUNCTION
-   -- Returns a list whose elements are the current configuration
+   -- Get pack options of the selected widget
+   -- PARAMETERS
+   -- Slave - Tk_Widget to query
+   -- RESULT
+   -- String with list whose elements are the current configuration
    -- state of the specified Slave window.
    -- SOURCE
    function Pack_Info(Slave: in Tk_Widget'Class) return String;
@@ -231,12 +257,19 @@ package Tcl.Tk.Ada.Widgets is
    -- ****f* Widgets/Pack_Propagate
    -- FUNCTION
    -- Enables or disables propagation for the specified Master window.
+   -- PARAMETERS
+   -- Master - Tk_Widget which propagation will be set
+   -- State  - If true, enable propagation, false disable it
    -- SOURCE
    procedure Pack_Propagate(Master: in Tk_Widget'Class; State: in Boolean);
    -- ****
 
    -- ****f* Widgets/Pack_Propagate2
    -- FUNCTION
+   -- Get propagation state of selected widget
+   -- PARAMETERS
+   -- Master - Tk_Widget which propagation state will be check
+   -- RESULT
    -- Returns state of propagation in the specified Master window.
    -- SOURCE
    function Pack_Propagate(Master: in Tk_Widget'Class) return Boolean;
@@ -244,6 +277,10 @@ package Tcl.Tk.Ada.Widgets is
 
    -- ****f* Widgets/Pack_Slaves
    -- FUNCTION
+   -- Get list of slaves widget of selected widget
+   -- PARAMETERS
+   -- Master - Tk_Widget which will be queried for slaves
+   -- RESULT
    -- Returns a list of slaves in the packing order of the specified
    -- Master window.
    -- SOURCE
@@ -252,7 +289,15 @@ package Tcl.Tk.Ada.Widgets is
 
 private
 
+-- ****f* Widgets/Execute_Widget_Command
+-- FUNCTION
+-- Execute selected Tcl command in the selected widget. Private.
+-- Widgt   - Tk_Widget in which command will be executed
+-- command - Tcl command to execute
+-- options - Options for the selected Tcl command
+-- SOURCE
    procedure Execute_Widget_Command
      (Widgt: in Tk_Widget'Class; command: in String; options: in String := "");
+-- ****
 
 end Tcl.Tk.Ada.Widgets;
