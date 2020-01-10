@@ -27,13 +27,27 @@
 package Tcl.Tk.Ada.Widgets.TEntry is
 -- ****
 
+   -- ****t* TEntry/Tk_Entry
+   -- FUNCTION
+   -- This is a non-abstract type derived directly from Tk_Widget.
+   -- Each of the derived widgets redefines the Create subprogram
+   -- in order to create the correct type of widget.
+   -- SOURCE
    type Tk_Entry is new Tk_Widget with private;
+   -- ****
 
    -- ****f* TEntry/Create
-   -- FUNCTION
-   -- Creates a new Tk_Entry in the specified interpreter. If interpreter
-   -- is null, use "contextual" interpreter. Options may be specified via the
-   -- "options" parameter or the option database to configure the widget.
+   -- Creates a new Tk_Entry in the specified interpreter.
+   -- PARAMETERS
+   -- Widgt    - Tk_Entry which will be created
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Default value is
+   --            empty
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+   --            the widget will be created in the "contextual" interpreter.
+   --            Default value is null.
+   -- RESULT
+   -- Newly created Tk_Entry
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
@@ -45,6 +59,10 @@ package Tcl.Tk.Ada.Widgets.TEntry is
 
    -- ****f* TEntry/get
    -- FUNCTION
+   -- Get entry's text.
+   -- PARAMETERS
+   -- Widgt - Tk_Entry from which text will be taken
+   -- RESULT
    -- Returns the entry's string.
    -- SOURCE
    function get(Widgt: in Tk_Entry) return String;
