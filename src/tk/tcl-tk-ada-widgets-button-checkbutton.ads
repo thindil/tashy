@@ -27,13 +27,26 @@
 package Tcl.Tk.Ada.Widgets.Button.CheckButton is
 -- ****
 
+   -- ****t* CheckButton/Tk_CheckButton
+   -- FUNCTION
+   -- This is a type derived from Tk_Button.
+   -- SOURCE
    type Tk_CheckButton is new Tk_Button with private;
+   -- ****
 
    -- ****f* CheckButton/Create
    -- FUNCTION
-   -- Creates a new Tk_CheckButton in the specified interpreter. If interpreter
-   -- is null, use "contextual" interpreter. Options may be specified via the
-   -- "options" parameter or the option database to configure the widget.
+   -- Creates a new Tk_CheckButton in the specified interpreter.
+   -- PARAMETERS
+   -- Widgt    - Tk_CheckButton which will be created
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Default value is
+   --            empty
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+   --            the widget will be created in the "contextual" interpreter.
+   --            Default value is null.
+   -- RESULT
+   -- Newly created Tk_CheckButton
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
@@ -46,13 +59,17 @@ package Tcl.Tk.Ada.Widgets.Button.CheckButton is
    -- ****f* CheckButton/Deselect
    -- FUNCTION
    -- Deselect the button.
+   -- PARAMETERS
+   -- Buttn - Tk_CheckButton to deselect
    -- SOURCE
    procedure Deselect(Buttn: in Tk_CheckButton);
    -- ****
 
    -- ****f* CheckButton/Tk_Select
    -- FUNCTION
-   --  Select the button.
+   -- Select the button.
+   -- PARAMETERS
+   -- Buttn - Tk_CheckButton to select
    -- SOURCE
    procedure Tk_Select(Buttn: in Tk_CheckButton);
    -- ****
@@ -60,6 +77,8 @@ package Tcl.Tk.Ada.Widgets.Button.CheckButton is
    -- ****f* CheckButton/Toggle
    -- FUNCTION
    -- Toggle the button.
+   -- PARAMETERS
+   -- Buttn - Tk_CheckButton to toggle
    -- SOURCE
    procedure Toggle(Buttn: in Tk_CheckButton);
    -- ****
