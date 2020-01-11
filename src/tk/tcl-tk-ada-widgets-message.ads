@@ -27,7 +27,7 @@
 package Tcl.Tk.Ada.Widgets.Message is
 -- ****
 
-   -- ****t* Tcl.Tk.Ada.Widgets.Message/Tk_Message
+   -- ****t* Message/Tk_Message
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
