@@ -27,13 +27,26 @@
 package Tcl.Tk.Ada.Widgets.Button.RadioButton is
 -- ****
 
+   -- ****t* RadioButton/Tk_RadioButton
+   -- FUNCTION
+   -- This is a type derived from Tk_Button.
+   -- SOURCE
    type Tk_RadioButton is new Tk_Button with private;
+   -- ****
 
    -- ****f* RadioButton/Create
    -- FUNCTION
-   -- Creates a new Tk_RadioButton in the specified interpreter. If interpreter
-   -- is null, use "contextual" interpreter. Options may be specified via the
-   -- "options" parameter or the option database to configure the widget.
+   -- Creates a new Tk_RadioButton in the specified interpreter.
+   -- PARAMETERS
+   -- Widgt    - Tk_RadioButton which will be created
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Default value is
+   --            empty
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+   --            the widget will be created in the "contextual" interpreter.
+   --            Default value is null.
+   -- RESULT
+   -- Newly created Tk_RadioButton
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
@@ -46,6 +59,8 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
    -- ****f* RadioButton/Deselect
    -- FUNCTION
    -- Deselect the button.
+   -- PARAMETERS
+   -- Buttn - Tk_RadioButton to deselect
    -- SOURCE
    procedure Deselect(Buttn: in Tk_RadioButton);
    -- ****
@@ -53,6 +68,8 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
    -- ****f* RadioButton/Tk_Select
    -- FUNCTION
    -- Select the button.
+   -- PARAMETERS
+   -- Buttn - Tk_RadioButton to select
    -- SOURCE
    procedure Tk_Select(Buttn: in Tk_RadioButton);
    -- ****
@@ -60,6 +77,8 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
    -- ****f* RadioButton/Toggle
    -- FUNCTION
    -- Toggle the button.
+   -- PARAMETERS
+   -- Buttn - Tk_RadioButton to toggle
    -- SOURCE
    procedure Toggle(Buttn: in Tk_RadioButton);
    -- ****
