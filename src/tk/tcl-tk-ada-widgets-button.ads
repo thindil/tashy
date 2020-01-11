@@ -27,13 +27,28 @@
 package Tcl.Tk.Ada.Widgets.Button is
 -- ****
 
+   -- ****t* Button/Tk_Button
+   -- FUNCTION
+   -- This is a non-abstract type derived directly from Tk_Widget.
+   -- Each of the derived widgets redefines the Create subprogram
+   -- in order to create the correct type of widget.
+   -- SOURCE
    type Tk_Button is new Tk_Widget with private;
+   -- ****
 
    -- ****f* Button/Create
    -- FUNCTION
-   -- Creates a new Tk_Button in the specified interpreter. If interpreter
-   -- is null, use "contextual" interpreter. Options may be specified via the
-   -- "options" parameter or the option database to configure the widget.
+   -- Creates a new Tk_Button in the specified interpreter.
+   -- PARAMETERS
+   -- Widgt    - Tk_Button which will be created
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Default value is
+   --            empty
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+   --            the widget will be created in the "contextual" interpreter.
+   --            Default value is null.
+   -- RESULT
+   -- Newly created Tk_Button
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
@@ -46,6 +61,8 @@ package Tcl.Tk.Ada.Widgets.Button is
    -- ****f* Button/Flash
    -- FUNCTION
    -- Flash the button.
+   -- PARAMETERS
+   -- Buttn - Tk_Button to flash
    -- SOURCE
    procedure Flash(Buttn: in Tk_Button'Class);
    -- ****
@@ -53,6 +70,9 @@ package Tcl.Tk.Ada.Widgets.Button is
    -- ****f* Button/Invoke
    -- FUNCTION
    -- Invoke the Tcl command associated with the button.
+   -- PARAMETERS
+   -- Buttn   - Tk_Button from which Tcl command will be invoked
+   -- options - Tk options for the Tcl command invoke
    -- SOURCE
    function Invoke
      (Buttn: in Tk_Button'Class; options: in String := "") return String;
