@@ -78,6 +78,8 @@ package Tcl.Tk.Ada is
    -- ****f* TkAda/After
    -- FUNCTION
    -- Sleeps for Ms milliseconds in the "contextual" interpreter.
+   -- PARAMETERS
+   -- Ms - Amount of miliseconds to sleep
    -- SOURCE
    procedure After(Ms: in Natural);
    -- ****
@@ -85,6 +87,9 @@ package Tcl.Tk.Ada is
    -- ****f* TkAda/After2
    -- FUNCTION
    -- Sleeps for Ms milliseconds in the specified interpreter.
+   -- PARAMETERS
+   -- Interp - Tcl interpreter to sleep
+   -- Ms     - Amount of miliseconds to sleep
    -- SOURCE
    procedure After(Interp: in Tcl_Interp; Ms: in Natural);
    -- ****
@@ -92,8 +97,12 @@ package Tcl.Tk.Ada is
    -- ****f* TkAda/After3
    -- FUNCTION
    -- Arranges for the Tcl Script to be executed after Ms milliseconds
-   -- in the "contextual" interpreter.  The function returns an
-   -- identifier suitable for canceling the command.
+   -- in the "contextual" interpreter.
+   -- PARAMETERS
+   -- Ms     - Amount of miliseconds after which script will be executed
+   -- Script - Tcl script to execute
+   -- RESULT
+   -- The function returns an identifier suitable for canceling the command.
    -- SOURCE
    function After(Ms: in Natural; Script: in String) return String;
    procedure After(Ms: in Natural; Script: in String);
@@ -102,8 +111,13 @@ package Tcl.Tk.Ada is
    -- ****f* TkAda/After4
    -- FUNCTION
    -- Arranges for the Tcl Script to be executed after Ms milliseconds
-   -- in the specified interpreter.  The function returns an
-   -- identifier suitable for canceling the command.
+   -- in the specified interpreter.
+   -- PARAMETERS
+   -- Interp - Tcl interpreter in which script will be executed
+   -- Ms     - Amount of miliseconds after which script will be executed
+   -- Script - Tcl script to execute
+   -- RESULT
+   -- The function returns an identifier suitable for canceling the command.
    -- SOURCE
    function After
      (Interp: in Tcl_Interp; Ms: in Natural; Script: in String) return String;
@@ -114,6 +128,8 @@ package Tcl.Tk.Ada is
    -- FUNCTION
    -- Cancels the execution of a delayed command in the "contextual"
    -- interpreter.
+   -- PARAMETERS
+   -- id_or_script - Id or script to cancel
    -- SOURCE
    procedure Cancel(id_or_script: in String);
    -- ****
@@ -122,6 +138,9 @@ package Tcl.Tk.Ada is
    -- FUNCTION
    -- Cancels the execution of a delayed command in the specified
    -- interpreter.
+   -- PARAMETERS
+   -- Interp       - Tcl interpreter in which command will be cancelled
+   -- id_or_script - Id or script to cancel
    -- SOURCE
    procedure Cancel(Interp: in Tcl_Interp; id_or_script: in String);
    -- ****
@@ -129,8 +148,11 @@ package Tcl.Tk.Ada is
    -- ****f* TkAda/Idle
    -- FUNCTION
    -- Arranges for the Tcl Script to be executed later as an idle
-   -- handler in the "contextual" interpreter.  The function returns
-   -- an identifier suitable for canceling the command.
+   -- handler in the "contextual" interpreter.
+   -- PARAMETERS
+   -- Script - Tcl script to execute
+   -- RESULT
+   -- The function returns an identifier suitable for canceling the command.
    -- SOURCE
    function Idle(Script: in String) return String;
    procedure Idle(Script: in String);
@@ -139,8 +161,12 @@ package Tcl.Tk.Ada is
    -- ****f* TkAda/Idle2
    -- FUNCTION
    -- Arranges for the Tcl Script to be executed later as an idle
-   -- handler in the specified interpreter.  The function returns
-   -- an identifier suitable for canceling the command.
+   -- handler in the specified interpreter.
+   -- PARAMETERS
+   -- Interp - Tcl interpreter in which script will be executed
+   -- Script - Tcl script to execute
+   -- RESULT
+   -- The function returns an identifier suitable for canceling the command.
    -- SOURCE
    function Idle(Interp: in Tcl_Interp; Script: in String) return String;
    procedure Idle(Interp: in Tcl_Interp; Script: in String);
@@ -148,6 +174,11 @@ package Tcl.Tk.Ada is
 
    -- ****f* TkAda/Info
    -- FUNCTION
+   -- Get information about existing event handlers in the
+   -- "contextual" interpreter.
+   -- PARAMETERS
+   -- id - Id of the event hander to query
+   -- RESULT
    -- Returns information about existing event handlers in the
    -- "contextual" interpreter.
    -- SOURCE
@@ -156,8 +187,14 @@ package Tcl.Tk.Ada is
 
    -- ****f* TkAda/Info2
    -- FUNCTION
+   -- Get information about existing event handlers in the
+   -- specified interpreter.
+   -- PARAMETERS
+   -- Interp - Tcl interpreter in which the selected event handler is
+   -- id     - Id of the event hander to query
+   -- RESULT
    -- Returns information about existing event handlers in the
-   -- "contextual" interpreter.
+   -- specified interpreter.
    -- SOURCE
    function Info(Interp: in Tcl_Interp; id: in String := "") return String;
    -- ****
