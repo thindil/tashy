@@ -10,6 +10,7 @@ of the project.
 - Binding for Tk `menu` widget
 - Binding for Tk `wm` command
 - Binding for Tk `ttk:button` widget
+- Binding fot Tk `image` command
 
 ### Changed
 - Enabled Get\_Main\_Window function
