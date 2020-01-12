@@ -502,13 +502,33 @@ package Tcl.Ada is
 
    end Generic_ObjCommand;
 
+   -- ****h* Ada/Generic_PkgRequire
+   -- FUNCTION
+   -- Generic package to manipulate Tcl packages
+   -- SOURCE
    generic
       type ClientData is private;
    package Generic_PkgRequire is
+      -- ****
 
       pragma Assert(ClientData'Size <= System.Address'Size,
          "ClientData too big");
 
+      -- ****f* Generic_PkgRequire/Tcl_PkgPresentEx
+      -- FUNCTION
+      -- Load selected Tcl package if it is not loaded yet.
+      -- PARAMETERS
+      -- interp        - Tcl interpeter to which package will be loaded
+      -- name          - Name of Tcl package to load
+      -- version       - Version of Tcl package which will be loaded
+      -- exact         - If 0 version can be higher than desired. If greater
+      --                 than 0, version of package must be exactly that same
+      --                 as parameter version
+      -- clientdataptr - Additional data for Tcl command, can be null
+      -- RESULT
+      -- String with version of package loaded, if package was not loaded,
+      -- return empty string
+      -- SOURCE
       function Tcl_PkgPresentEx
         (interp: not null Tcl_Interp;
          name: in C.Strings.chars_ptr;
@@ -527,7 +547,18 @@ package Tcl.Ada is
          clientdataptr: access ClientData)    -- can be null
 
          return String;
+      -- ****
 
+      -- ****f* Generic_PkgRequire/Tcl_PkgProvideEx
+      -- FUNCTION
+      -- Check if selected Tcl package is loaded into Tcl interpreter
+      -- interp  - Tcl interpreter to check
+      -- name    - Name of Tcl package to check
+      -- version - Version of package to check
+      -- data    - Additonal data for Tcl command
+      -- RESULT
+      -- Returns TCL_OK if package is loaded, otherwise TCL_ERROR
+      -- SOURCE
       function Tcl_PkgProvideEx
         (interp: not null Tcl_Interp; name: in C.Strings.chars_ptr;
          version: in C.Strings.chars_ptr; data: in ClientData) return C.int;
@@ -540,7 +571,23 @@ package Tcl.Ada is
       procedure Tcl_PkgProvideEx
         (interp: not null Tcl_Interp; name: in String; version: in String;
          data: in ClientData);
+      -- ****
 
+      -- ****f* Generic_PkgRequire/Tcl_PkgRequireEx
+      -- FUNCTION
+      -- Load selected Tcl package into selected Tcl interpreter
+      -- PARAMETERS
+      -- interp        - Tcl interpeter to which package will be loaded
+      -- name          - Name of Tcl package to load
+      -- version       - Version of Tcl package which will be loaded
+      -- exact         - If 0 version can be higher than desired. If greater
+      --                 than 0, version of package must be exactly that same
+      --                 as parameter version
+      -- clientdataptr - Additional data for Tcl command, can be null
+      -- RESULT
+      -- String with version of package loaded, if package was not loaded,
+      -- return empty string
+      -- SOURCE
       function Tcl_PkgRequireEx
         (interp: not null Tcl_Interp;
          name: in C.Strings.chars_ptr;
@@ -559,6 +606,7 @@ package Tcl.Ada is
          clientdataptr: access ClientData)    -- can be null
 
          return String;
+      -- ****
 
    end Generic_PkgRequire;
 
