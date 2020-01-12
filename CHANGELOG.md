@@ -11,6 +11,7 @@ of the project.
 - Binding for Tk `wm` command
 - Binding for Tk `ttk:button` widget
 - Binding fot Tk `image` command
+- Binding for Tk `photo` object
 
 ### Changed
 - Enabled Get\_Main\_Window function
