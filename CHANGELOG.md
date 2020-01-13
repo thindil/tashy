@@ -12,6 +12,7 @@ of the project.
 - Binding for Tk `ttk:button` widget
 - Binding fot Tk `image` command
 - Binding for Tk `photo` object
+- Binding for Tk `ttk:treeview` widget
 
 ### Changed
 - Enabled Get\_Main\_Window function
