@@ -33,7 +33,7 @@ package body Tcl.Tk.Ada.Widgets.PanedWindow is
          The_Widget.Interp := Interp;
       end if;
       The_Widget.Name := C.Strings.New_String(pathName);
-      Tcl_Eval(The_Widget.Interp, "frame " & pathName & " " & options);
+      Tcl_Eval(The_Widget.Interp, "panedwindow " & pathName & " " & options);
       return The_Widget;
    end Create;
 
