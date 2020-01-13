@@ -83,18 +83,20 @@ p.item_name
 
 #navigation
 {
-    background-color:  black;
+    background-color: #1d2021;
     color:            rgb(230,221,202);
     font-family:      "Times New Roman", serif;
     font-style:       normal;
-    border-color:     rgb(0,0,0);
+    border-color:     #a89984;
+    border-width:     1px;
+    border-style:     dotted;
 }
 
 a.menuitem
 {
     font-size: 120%;
-    background-color:    black;
-    color:               #98971a;
+    background-color:    #1d2021;
+    color:               #d79921;
     font-variant:        normal;
     text-transform:      none;
     font-weight:         normal;
@@ -209,8 +211,8 @@ h6
 
 .menuitem:hover
 {
-    background-color:   #98971a;
-    color:              black;
+    background-color:   #d79921;
+    color:              #1d2021;
 }
 
 #extra a
