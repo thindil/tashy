@@ -14,6 +14,7 @@ of the project.
 - Binding for Tk `photo` object
 - Binding for Tk `ttk:treeview` widget
 - Binding for Tk `panedwindow` widget
+- Binding for Tk `scrollbar` widget
 
 ### Changed
 - Enabled Get\_Main\_Window function
