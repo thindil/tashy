@@ -15,6 +15,7 @@ of the project.
 - Binding for Tk `ttk:treeview` widget
 - Binding for Tk `panedwindow` widget
 - Binding for Tk `scrollbar` widget
+- Binding for Tk `scale` widget
 
 ### Changed
 - Enabled Get\_Main\_Window function
