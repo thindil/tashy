@@ -19,6 +19,7 @@ of the project.
 - Binding for Tk `menubutton` widget
 - Binding for Tk `ttk::progresbar` widget
 - Binding for Tk `ttk::frame` widget
+- Binding for Tk `spinbox` widget
 
 ### Changed
 - Enabled Get\_Main\_Window function
