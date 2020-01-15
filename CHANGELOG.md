@@ -18,6 +18,7 @@ of the project.
 - Binding for Tk `scale` widget
 - Binding for Tk `menubutton` widget
 - Binding for Tk `ttk::progresbar` widget
+- Binding for Tk `ttk::frame` widget
 
 ### Changed
 - Enabled Get\_Main\_Window function
