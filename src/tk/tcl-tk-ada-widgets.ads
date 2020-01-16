@@ -212,13 +212,13 @@ package Tcl.Tk.Ada.Widgets is
    --
    ---------------------------------------------
 
-     -- ****f* Widgets/Pack
-     -- FUNCTION
-     -- Pack selected widget with selected options
-     -- PARAMETERS
-     -- Slave   - Tk_Widget to pack
-     -- Options - Option to pack action
-     -- SOURCE
+   -- ****f* Widgets/Pack
+   -- FUNCTION
+   -- Pack selected widget with selected options
+   -- PARAMETERS
+   -- Slave   - Tk_Widget to pack
+   -- Options - Option to pack action
+   -- SOURCE
    procedure Pack(Slave: in Tk_Widget'Class; Options: in String);
    -- ****
 
