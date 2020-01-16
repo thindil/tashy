@@ -61,8 +61,8 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Ttk_ProgressBar;
    procedure Create
-     (Widgt: out Ttk_ProgressBar; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null);
+     (Widgt: out Ttk_ProgressBar; pathName: in String;
+      options: in String := ""; Interp: in Tcl_Interp := null);
    -- ****
 
 private
