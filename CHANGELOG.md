@@ -22,6 +22,7 @@ of the project.
 - Binding for Tk `spinbox` widget
 - Binding for Tk `ttk::separator` widget
 - Binding for Tk `ttk::panedwindow` widget
+- Binding for Tk `ttk::scrollbar` widget
 
 ### Changed
 - Enabled Get\_Main\_Window function
