@@ -38,6 +38,13 @@ package Tcl.Tk.Ada.Image is
    function Types return String;
    -- ****
 
+   -- ****f* Image/Delete
+   -- FUNCTION
+   -- Delete the selected image widget
+   -- PARAMETERS
+   -- Img - Image to delete
+   -- SOURCE
    procedure Delete(Img: in out Tk_Widget'Class);
+   -- ****
 
 end Tcl.Tk.Ada.Image;
