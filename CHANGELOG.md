@@ -25,6 +25,7 @@ of the project.
 - Binding for Tk `ttk::scrollbar` widget
 - Binding for Tk Dialogs commands: `tk_chooseDirectory`, `tk_Dialog`,
   `tk_getOpenFile`, `tk_getSaveFile`, `tk_messageBox`
+- Binding for Tk `ttk::menubutton` widget
 
 ### Changed
 - Enabled Get\_Main\_Window function
