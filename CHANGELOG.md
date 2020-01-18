@@ -27,6 +27,7 @@ of the project.
   `tk_getOpenFile`, `tk_getSaveFile`, `tk_messageBox`
 - Binding for Tk `ttk::menubutton` widget
 - Binding for Tk `ttk::scale` widget
+- Binding for Tk `ttk::checkbutton` widget
 
 ### Changed
 - Enabled Get\_Main\_Window function
