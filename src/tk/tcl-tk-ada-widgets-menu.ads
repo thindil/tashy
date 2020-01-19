@@ -78,21 +78,21 @@ package Tcl.Tk.Ada.Widgets.Menu is
    --                 which value of the menu entry will be stored when the
    --                 menu entry will be activated
    -- SOURCE
-   type Menu_Entry_Options(MType: Menu_Items := COMMAND) is record
-      Label: Unbounded_String := Null_Unbounded_String;
-      Command: Unbounded_String := Null_Unbounded_String;
-      Underline: Integer := -1;
-      Accelerator: Unbounded_String := Null_Unbounded_String;
-      State: Menu_Entry_States := NORMAL;
-      Other: Unbounded_String := Null_Unbounded_String;
+   type Menu_Entry_Options(MType: Menu_Items) is record
+      Label: Unbounded_String;
+      Command: Unbounded_String;
+      Underline: Integer range -1 .. Integer'Last;
+      Accelerator: Unbounded_String;
+      State: Menu_Entry_States;
+      Other: Unbounded_String;
       case MType is
          when CASCADE =>
             SubMenu: Unbounded_String;
          when CHECKBUTTON =>
-            CheckVariable: Unbounded_String := Null_Unbounded_String;
+            CheckVariable: Unbounded_String;
          when RADIOBUTTON =>
-            Value: Unbounded_String := Null_Unbounded_String;
-            RadioVariable: Unbounded_String := Null_Unbounded_String;
+            Value: Unbounded_String;
+            RadioVariable: Unbounded_String;
          when others =>
             null;
       end case;
@@ -128,8 +128,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
    -- MenuWidget - Tk_Menu widget to which the element will be added
    -- Options    - Menu_Entry_Options options for menu entry
    -- SOURCE
-   procedure Add
-     (MenuWidget: in Tk_Menu'Class; Options: in Menu_Entry_Options);
+   procedure Add(MenuWidget: in Tk_Menu'Class; Options: in Menu_Entry_Options);
    -- ****
 
 private
