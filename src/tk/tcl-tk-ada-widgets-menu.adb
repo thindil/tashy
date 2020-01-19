@@ -20,6 +20,9 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
+with Ada.Strings.Fixed; use Ada.Strings.Fixed;
+with Ada.Strings.Maps.Constants; use Ada.Strings.Maps.Constants;
+
 package body Tcl.Tk.Ada.Widgets.Menu is
 
    function Create
@@ -45,11 +48,13 @@ package body Tcl.Tk.Ada.Widgets.Menu is
    end Create;
 
    procedure Add
-     (MenuWidget: in Tk_Menu'Class; WidgetType: in String;
+     (MenuWidget: in Tk_Menu'Class; WidgetType: in Menu_Items;
       Options: in String := "") is
    begin
       Execute_Widget_Command
-        (Tk_Widget'Class(MenuWidget), "add", WidgetType & " " & Options);
+        (Tk_Widget'Class(MenuWidget), "add",
+         Translate(Menu_Items'Image(WidgetType), Lower_Case_Map) & " " &
+         Options);
    end Add;
 
 end Tcl.Tk.Ada.Widgets.Menu;

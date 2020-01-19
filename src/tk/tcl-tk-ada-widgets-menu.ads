@@ -36,6 +36,13 @@ package Tcl.Tk.Ada.Widgets.Menu is
    type Tk_Menu is new Tk_Widget with private;
    -- ****
 
+   -- ****t* Menu/Menu_Items
+   -- FUNCTION
+   -- Types of menu entries
+   -- SOURCE
+   type Menu_Items is (CASCADE, CHECKBUTTON, COMMAND, RADIOBUTTON, SEPARATOR);
+   -- ****
+
    -- ****f* Menu/Create
    -- FUNCTION
    -- Creates a new Tk_Menu in the specified interpreter.
@@ -63,12 +70,11 @@ package Tcl.Tk.Ada.Widgets.Menu is
    -- Add element to the menu.
    -- PARAMETERS
    -- MenuWidget - Tk_Menu widget to which the element will be added
-   -- WidgetType - Tk name of element type. Can be: cascade, checkbutton,
-   --              command, radiobutton
+   -- WidgetType - Menu_Items type of element to add
    -- Options    - Tk options for menu entry
    -- SOURCE
    procedure Add
-     (MenuWidget: in Tk_Menu'Class; WidgetType: in String;
+     (MenuWidget: in Tk_Menu'Class; WidgetType: in Menu_Items;
       Options: in String := "");
    -- ****
 
