@@ -28,6 +28,7 @@ of the project.
 - Binding for Tk `ttk::menubutton` widget
 - Binding for Tk `ttk::scale` widget
 - Binding for Tk `ttk::checkbutton` widget
+- Binding for Tk `ttk::radiobutton` widget
 
 ### Changed
 - Enabled Get\_Main\_Window function
