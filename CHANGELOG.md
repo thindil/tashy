@@ -29,6 +29,7 @@ of the project.
 - Binding for Tk `ttk::scale` widget
 - Binding for Tk `ttk::checkbutton` widget
 - Binding for Tk `ttk::radiobutton` widget
+- Binding for Tk `ttk::spinbox` widget
 
 ### Changed
 - Enabled Get\_Main\_Window function
