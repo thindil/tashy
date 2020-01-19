@@ -78,7 +78,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
    --                 which value of the menu entry will be stored when the
    --                 menu entry will be activated
    -- SOURCE
-   type Menu_Entry_Options(MType: Menu_Items) is record
+   type Menu_Entry_Options(MType: Menu_Items := COMMAND) is record
       Label: Unbounded_String;
       Command: Unbounded_String;
       Underline: Integer range -1 .. Integer'Last;
