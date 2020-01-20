@@ -20,9 +20,6 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
-with Ada.Strings.Fixed; use Ada.Strings.Fixed;
-with Ada.Strings.Maps.Constants; use Ada.Strings.Maps.Constants;
-
 package body Tcl.Tk.Ada.Widgets.Menu is
 
    function Create
@@ -48,77 +45,11 @@ package body Tcl.Tk.Ada.Widgets.Menu is
    end Create;
 
    procedure Add
-     (MenuWidget: in Tk_Menu'Class; Options: in Menu_Entry_Options) is
-      TkOptions: Unbounded_String :=
-        To_Unbounded_String
-          (Translate(Menu_Items'Image(Options.MType), Lower_Case_Map));
+     (MenuWidget: in Tk_Menu'Class; EntryType: in String;
+      Options: in String := "") is
    begin
-      if Options.Label /= Null_Unbounded_String then
-         if Options.MType = SEPARATOR then
-            raise Constraint_Error
-              with "Option label is not available for separators";
-         end if;
-         Append(TkOptions, " -label """ & Options.Label & """");
-      end if;
-      if Options.Command /= Null_Unbounded_String then
-         if Options.MType = SEPARATOR then
-            raise Constraint_Error
-              with "Option command is not available for separators";
-         end if;
-         Append(TkOptions, " -command " & Options.Command);
-      end if;
-      if Options.Underline > -1 then
-         if Options.MType = SEPARATOR then
-            raise Constraint_Error
-              with "Option underline is not available for separators";
-         end if;
-         if Options.Underline >= Length(Options.Label) then
-            raise Constraint_Error
-              with "Option underline is bigger than length of menu entry label";
-         end if;
-         Append(TkOptions, " -underline" & Integer'Image(Options.Underline));
-      end if;
-      if Options.Accelerator /= Null_Unbounded_String then
-         if Options.MType = SEPARATOR then
-            raise Constraint_Error
-              with "Option accelerator is not available for separators";
-         end if;
-         Append(TkOptions, " -accelerator " & Options.Accelerator);
-      end if;
-      if Options.State /= NORMAL then
-         if Options.MType = SEPARATOR then
-            raise Constraint_Error
-              with "Option state is not available for separators";
-         end if;
-         Append
-           (TkOptions,
-            " -state " &
-            Translate(Menu_Entry_States'Image(Options.State), Lower_Case_Map));
-      end if;
-      if Options.Other /= Null_Unbounded_String then
-         Append(TkOptions, " " & Options.Other);
-      end if;
-      case Options.MType is
-         when CASCADE =>
-            if Options.SubMenu /= Null_Unbounded_String then
-               Append(TkOptions, " -menu " & Options.SubMenu);
-            end if;
-         when CHECKBUTTON =>
-            if Options.CheckVariable /= Null_Unbounded_String then
-               Append(TkOptions, " -variable " & Options.CheckVariable);
-            end if;
-         when RADIOBUTTON =>
-            if Options.Value /= Null_Unbounded_String then
-               Append(TkOptions, " -value """ & Options.Value & """");
-            end if;
-            if Options.RadioVariable /= Null_Unbounded_String then
-               Append(TkOptions, " -variable " & Options.RadioVariable);
-            end if;
-         when others =>
-            null;
-      end case;
       Execute_Widget_Command
-        (Tk_Widget'Class(MenuWidget), "add", To_String(TkOptions));
+        (Tk_Widget'Class(MenuWidget), "add", EntryType & " " & Options);
    end Add;
 
 end Tcl.Tk.Ada.Widgets.Menu;
