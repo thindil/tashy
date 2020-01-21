@@ -52,20 +52,22 @@ package Tcl.Tk.Ada.Image.Photo is
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Tk_Photo;
+      Interp: in Tcl_Interp := null) return Tk_Photo with
+      Pre => (pathName /= "");
    procedure Create
      (Widgt: out Tk_Photo; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null);
-   -- ****
+      Interp: in Tcl_Interp := null) with
+      Pre => (pathName /= "");
+      -- ****
 
-   -- ****f* Photo/Copy
-   -- FUNCTION
-   -- Copy one photo to another
-   -- PARAMETERS
-   -- Source  - Tk_Photo which will be used as source
-   -- Target  - Tk_Photo which will be used as destination
-   -- Options - Aditional Tk options for copy command
-   -- SOURCE
+      -- ****f* Photo/Copy
+      -- FUNCTION
+      -- Copy one photo to another
+      -- PARAMETERS
+      -- Source  - Tk_Photo which will be used as source
+      -- Target  - Tk_Photo which will be used as destination
+      -- Options - Aditional Tk options for copy command
+      -- SOURCE
    procedure Copy(Source, Target: in Tk_Photo; Options: in String);
    -- ****
 
