@@ -52,7 +52,8 @@ package Tcl.Tk.Ada.Dialogs is
    -- Title   - Title of the dialog
    -- Text    - Text to display in the dialog
    -- Bitmap  - Tk bitmap name to show in dialog
-   -- Default - Default button in dialog. Buttons counts from 0.
+   -- Default - Default button in dialog. Buttons counts from 0. If less than
+   --           0 no button will be set as default.
    -- Buttons - Array with text to show on buttons. One element is one button
    -- RESULT
    -- Index of button which was clicked or -1 if no button was clicked.
