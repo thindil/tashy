@@ -59,18 +59,21 @@ package Tcl.Tk.Ada.Dialogs is
    -- SOURCE
    function Dialog
      (Widget: in out Tk_Toplevel; Title, Text, Bitmap: in String;
-      Default: in Integer; Buttons: in DialogButtons) return Integer;
-   -- ****
+      Default: in Integer; Buttons: in DialogButtons) return Integer with
+      Pre =>
+      (Title /= "" and Text /= "" and Bitmap /= "" and
+       Default <= Buttons'Length);
+      -- ****
 
-   -- ****f* Dialogs/Get_Open_File
-   -- FUNCTION
-   -- Create dialog which allow the user select file to open.
-   -- PARAMETERS
-   -- Options - Tk options which will be passed to the dialog. Default value
-   --           is empty string
-   -- RESULT
-   -- Name of selected file or empty string if no file was selected
-   -- SOURCE
+      -- ****f* Dialogs/Get_Open_File
+      -- FUNCTION
+      -- Create dialog which allow the user select file to open.
+      -- PARAMETERS
+      -- Options - Tk options which will be passed to the dialog. Default value
+      --           is empty string
+      -- RESULT
+      -- Name of selected file or empty string if no file was selected
+      -- SOURCE
    function Get_Open_File(Options: in String := "") return String;
    -- ****
 
