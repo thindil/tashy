@@ -66,9 +66,10 @@ package Tcl.Tk.Ada.Image.Photo is
       -- PARAMETERS
       -- Source  - Tk_Photo which will be used as source
       -- Target  - Tk_Photo which will be used as destination
-      -- Options - Aditional Tk options for copy command
+      -- Options - Aditional Tk options for copy command. Default value is
+      --           empty
       -- SOURCE
-   procedure Copy(Source, Target: in Tk_Photo; Options: in String);
+   procedure Copy(Source, Target: in Tk_Photo; Options: in String := "");
    -- ****
 
 private

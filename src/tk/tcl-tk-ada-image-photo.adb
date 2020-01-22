@@ -45,7 +45,7 @@ package body Tcl.Tk.Ada.Image.Photo is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
-   procedure Copy(Source, Target: in Tk_Photo; Options: in String) is
+   procedure Copy(Source, Target: in Tk_Photo; Options: in String := "") is
    begin
       Tcl_Eval
         (Target.Interp,
