@@ -31,6 +31,7 @@ of the project.
 - Binding for Tk `ttk::radiobutton` widget
 - Binding for Tk `ttk::spinbox` widget
 - Binding for Tk `ttk::style` command
+- Binding for Tk `grid` command
 
 ### Changed
 - Enabled Get\_Main\_Window function
