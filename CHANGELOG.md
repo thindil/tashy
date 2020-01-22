@@ -32,6 +32,7 @@ of the project.
 - Binding for Tk `ttk::spinbox` widget
 - Binding for Tk `ttk::style` command
 - Binding for Tk `grid` command
+- Binding for Tk `ttk::label` widget
 
 ### Changed
 - Enabled Get\_Main\_Window function
