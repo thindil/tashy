@@ -30,7 +30,7 @@ package body Tcl.Tk.Ada.TtkStyle is
       return Tcl_GetResult(Get_Context);
    end Theme_Names;
 
-   procedure Theme_Use(ThemeName: String) is
+   procedure Theme_Use(ThemeName: in String) is
    begin
       Tcl_Eval(Get_Context, "ttk::style theme use " & ThemeName);
    end Theme_Use;
@@ -40,5 +40,10 @@ package body Tcl.Tk.Ada.TtkStyle is
       Tcl_Eval(Get_Context, "ttk::style theme use");
       return Tcl_GetResult(Get_Context);
    end Theme_Use;
+
+   procedure Style_Configure(Name, Options: in String) is
+   begin
+      Tcl_Eval(Get_Context, "ttk::style configure " & Name & " " & Options);
+   end Style_Configure;
 
 end Tcl.Tk.Ada.TtkStyle;

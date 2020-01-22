@@ -27,7 +27,7 @@
 package Tcl.Tk.Ada.TtkStyle is
 -- ****
 
-   -- ****f* Tcl.Tk.Ada.TtkStyle/Theme_Names
+   -- ****f* TtkStyle/Theme_Names
    -- FUNCTION
    -- Get list of all available Ttk themes
    -- RESULT
@@ -36,22 +36,32 @@ package Tcl.Tk.Ada.TtkStyle is
    function Theme_Names return String;
    -- ****
 
-   -- ****f* Tcl.Tk.Ada.TtkStyle/Theme_Use
+   -- ****f* TtkStyle/Theme_Use
    -- FUNCTION
    -- Set new Ttk theme and redraw all widgets
    -- PARAMETERS
    -- Name of Ttk theme to set
    -- SOURCE
-   procedure Theme_Use(ThemeName: String);
+   procedure Theme_Use(ThemeName: in String);
    -- ****
 
-   -- ****f* Tcl.Tk.Ada.TtkStyle/Theme_Use
+   -- ****f* TtkStyle/Theme_Use
    -- FUNCTION
    -- Get currenlty used Ttk theme
    -- RESULT
    -- Name of currently used Ttk theme
    -- SOURCE
    function Theme_Use return String;
+   -- ****
+
+   -- ****f* TtkStyle/Style_Configure
+   -- FUNCTION
+   -- Configure selected or create new Ttk style
+   -- PARAMETERS
+   -- Name    - Name of style to configure or create
+   -- Options - Options for the style
+   -- SOURCE
+   procedure Style_Configure(Name, Options: in String);
    -- ****
 
 end Tcl.Tk.Ada.TtkStyle;
