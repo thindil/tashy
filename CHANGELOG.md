@@ -46,6 +46,7 @@ of the project.
 - **BREAKING:** Replaced obsolescent code
 - **BREAKING:** Updated demos to new version of the library
 - **BREAKING:** Moved all main window code to separated package
+- **BREAKING:** Moved all pack binding code to separated package
 
 ### Fixed
 - Detecting Tcl libraries by setup.tcl script on Windows
