@@ -20,6 +20,8 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
+with Tcl.Ada;
+
 package body Tcl.Tk.Ada.Widgets.TtkTreeView is
 
    function Create
@@ -43,5 +45,51 @@ package body Tcl.Tk.Ada.Widgets.TtkTreeView is
    begin
       Widgt := Create(pathName, options, Interp);
    end Create;
+
+   procedure Heading
+     (TreeViewWidget: in Ttk_Tree_View'Class; Column, Options: in String) is
+   begin
+      Execute_Widget_Command
+        (Tk_Widget'Class(TreeViewWidget), "heading", Column & " " & Options);
+   end Heading;
+
+   function Heading
+     (TreeViewWidget: in Ttk_Tree_View'Class; Column: in String)
+      return String is
+   begin
+      Execute_Widget_Command
+        (Tk_Widget'Class(TreeViewWidget), "heading", Column);
+      return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
+   end Heading;
+
+   procedure Insert
+     (TreeViewWidget: in Ttk_Tree_View'Class; Options: in String) is
+   begin
+      Execute_Widget_Command
+        (Tk_Widget'Class(TreeViewWidget), "insert", Options);
+   end Insert;
+
+   procedure Delete
+     (TreeViewWidget: in Ttk_Tree_View'Class; ItemsList: in String) is
+   begin
+      Execute_Widget_Command
+        (Tk_Widget'Class(TreeViewWidget), "delete", ItemsList);
+   end Delete;
+
+   procedure Item
+     (TreeViewWidget: in Ttk_Tree_View'Class; Item, Options: in String) is
+   begin
+      Execute_Widget_Command
+        (Tk_Widget'Class(TreeViewWidget), "item", Item & " " & Options);
+   end Item;
+
+   function Item
+     (TreeViewWidget: in Ttk_Tree_View'Class; Item: in String;
+      Options: in String := "") return String is
+   begin
+      Execute_Widget_Command
+        (Tk_Widget'Class(TreeViewWidget), "item", Item & " " & Options);
+      return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
+   end Item;
 
 end Tcl.Tk.Ada.Widgets.TtkTreeView;

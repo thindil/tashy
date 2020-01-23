@@ -58,6 +58,79 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Interp: in Tcl_Interp := null);
    -- ****
 
+   -- ****f* TtkTreeView/Heading
+   -- FUNCTION
+   -- Configure selected column header
+   -- PARAMETERS
+   -- TreeViewWidget - Ttk_Tree_View in which header will be configured
+   -- Column         - Id of column which header will be configured
+   -- Options        - Tk options for selected header
+   -- SOURCE
+   procedure Heading
+     (TreeViewWidget: in Ttk_Tree_View'Class; Column, Options: in String);
+   -- ****
+
+   -- ****f* TtkTreeView/Heading2
+   -- FUNCTION
+   -- Get configuration of selected column header
+   -- PARAMETERS
+   -- TreeViewWidget - Ttk_Tree_View in which header will be queried
+   -- Column         - Id of column which header will be queried
+   -- RESULT
+   -- Configuration options of selected header
+   -- SOURCE
+   function Heading
+     (TreeViewWidget: in Ttk_Tree_View'Class; Column: in String) return String;
+   -- ****
+
+   -- ****f* TtkTreeView/Insert
+   -- FUNCTION
+   -- Insert new item to tree view
+   -- PARAMETERS
+   -- TreeViewWidget - Ttk_Tree_View in which item will be inserted
+   -- Options        - Tk options for the item which will be inserted
+   -- SOURCE
+   procedure Insert
+     (TreeViewWidget: in Ttk_Tree_View'Class; Options: in String);
+   -- ****
+
+   -- ****f* TtkTreeView/Delete
+   -- FUNCTION
+   -- Delete selected items from the tree view
+   -- PARAMETERS
+   -- TreeViewWidget - Ttk_Tree_View in which items will be deleted
+   -- ItemsList      - List of items to delete
+   -- SOURCE
+   procedure Delete
+     (TreeViewWidget: in Ttk_Tree_View'Class; ItemsList: in String);
+   -- ****
+
+   -- ****f* Tcl.Tk.Ada.Widgets.TtkTreeView/Item
+   -- FUNCTION
+   -- Modify options of selected item in tree view
+   -- PARAMETERS
+   -- TreeViewWidget - Ttk_Tree_View in which item options will be modified
+   -- Item           - Id of the item to modify
+   -- Options        - Tk options to set for the selected item
+   -- SOURCE
+   procedure Item
+     (TreeViewWidget: in Ttk_Tree_View'Class; Item, Options: in String);
+   -- ****
+
+   -- ****f* Tcl.Tk.Ada.Widgets.TtkTreeView/Item
+   -- FUNCTION
+   -- Get options of the selected item in tree view
+   -- PARAMETERS
+   -- TreeViewWidget - Ttk_Tree_View in which item options will be queried
+   -- Item           - Id of the item to querry
+   -- Options        - Tk options to get from the selected item. If empty, get
+   --                  all options. Default is empty.
+   -- SOURCE
+   function Item
+     (TreeViewWidget: in Ttk_Tree_View'Class; Item: in String;
+      Options: in String := "") return String;
+   -- ****
+
 private
 
    type Ttk_Tree_View is new Tk_Widget with null record;
