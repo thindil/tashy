@@ -42,15 +42,16 @@ package Tcl.Tk.Ada.TtkStyle is
    -- PARAMETERS
    -- Name of Ttk theme to set
    -- SOURCE
-   procedure Theme_Use(ThemeName: in String);
-   -- ****
+   procedure Theme_Use(ThemeName: in String) with
+      Pre => ThemeName /= "";
+      -- ****
 
-   -- ****f* TtkStyle/Theme_Use
-   -- FUNCTION
-   -- Get currenlty used Ttk theme
-   -- RESULT
-   -- Name of currently used Ttk theme
-   -- SOURCE
+      -- ****f* TtkStyle/Theme_Use
+      -- FUNCTION
+      -- Get currenlty used Ttk theme
+      -- RESULT
+      -- Name of currently used Ttk theme
+      -- SOURCE
    function Theme_Use return String;
    -- ****
 
@@ -61,7 +62,8 @@ package Tcl.Tk.Ada.TtkStyle is
    -- Name    - Name of style to configure or create
    -- Options - Options for the style
    -- SOURCE
-   procedure Style_Configure(Name, Options: in String);
-   -- ****
+   procedure Style_Configure(Name, Options: in String) with
+      Pre => Name /= "" and Options /= "";
+      -- ****
 
 end Tcl.Tk.Ada.TtkStyle;
