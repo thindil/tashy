@@ -46,7 +46,8 @@ package Tcl.Tk.Ada.Grid is
    -- Slave   - Tk_Widget to configure
    -- Options - Grid options for the slave
    -- SOURCE
-   procedure Grid_Configure(Slave: in Tk_Widget'Class; Options: in String := "");
+   procedure Grid_Configure
+     (Slave: in Tk_Widget'Class; Options: in String := "");
    -- ****
 
    -- ****f* Grid/Grid_Forget
@@ -69,6 +70,56 @@ package Tcl.Tk.Ada.Grid is
    -- state of the specified Slave window.
    -- SOURCE
    function Grid_Info(Slave: in Tk_Widget'Class) return String;
+   -- ****
+
+   -- ****f* Grid/Row_Configure
+   -- FUNCTION
+   -- Set row configuration options for Slave widget in Master grid.
+   -- PARAMETERS
+   -- Master  - Tk_Widget which is set as grid
+   -- Slave   - Tk_Widget inside Master
+   -- Options - Tk options for selected Slave
+   -- SOURCE
+   procedure Row_Configure
+     (Master, Slave: in Tk_Widget'Class; Options: in String) with
+      Pre => Options /= "";
+      -- ****
+
+      -- ****f* Grid/Row_Configure
+      -- FUNCTION
+      -- Get row configuration options for Slave widget in Master grid.
+      -- PARAMETERS
+      -- Master  - Tk_Widget which is set as grid
+      -- Slave   - Tk_Widget inside Master
+      -- RESULT
+      -- String with row configuration options for selected Slave widget
+      -- SOURCE
+   function Row_Configure(Master, Slave: in Tk_Widget'Class) return String;
+   -- ****
+
+   -- ****f* Grid/Column_Configure
+   -- FUNCTION
+   -- Set column configuration options for Slave widget in Master grid.
+   -- PARAMETERS
+   -- Master  - Tk_Widget which is set as grid
+   -- Slave   - Tk_Widget inside Master
+   -- Options - Tk options for selected Slave
+   -- SOURCE
+   procedure Column_Configure
+     (Master, Slave: in Tk_Widget'Class; Options: in String) with
+      Pre => Options /= "";
+      -- ****
+
+      -- ****f* Grid/Column_Configure
+      -- FUNCTION
+      -- Get column configuration options for Slave widget in Master grid.
+      -- PARAMETERS
+      -- Master  - Tk_Widget which is set as grid
+      -- Slave   - Tk_Widget inside Master
+      -- RESULT
+      -- String with column configuration options for selected Slave widget
+      -- SOURCE
+   function Column_Configure(Master, Slave: in Tk_Widget'Class) return String;
    -- ****
 
 end Tcl.Tk.Ada.Grid;
