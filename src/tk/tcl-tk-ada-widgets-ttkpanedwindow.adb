@@ -45,4 +45,12 @@ package body Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   procedure Add
+     (Paned: in Ttk_PanedWindow; SubWindow: in Tk_Widget'Class;
+     Options: in String := "") is
+   begin
+      Execute_Widget_Command
+        (Paned, "add", Widget_Image(SubWindow) & " " & Options);
+   end Add;
+
 end Tcl.Tk.Ada.Widgets.TtkPanedWindow;
