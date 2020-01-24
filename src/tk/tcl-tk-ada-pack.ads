@@ -36,7 +36,7 @@ package Tcl.Tk.Ada.Pack is
    -- Slave   - Tk_Widget to pack
    -- Options - Option to pack action
    -- SOURCE
-   procedure Pack(Slave: in Tk_Widget'Class; Options: in String);
+   procedure Pack(Slave: in Tk_Widget'Class; Options: in String := "");
    -- ****
 
    -- ****f* Pack/Pack_Configure
@@ -46,7 +46,8 @@ package Tcl.Tk.Ada.Pack is
    -- Slave   - Tk_Widget to configure
    -- Options - Pack options for the slave
    -- SOURCE
-   procedure Pack_Configure(Slave: in Tk_Widget'Class; Options: in String);
+   procedure Pack_Configure
+     (Slave: in Tk_Widget'Class; Options: in String := "");
    -- ****
 
    -- ****f* Pack/Pack_Forget
