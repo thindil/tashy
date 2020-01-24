@@ -29,7 +29,8 @@ package body Tcl.Tk.Ada.Grid is
       Tcl_Eval(Slave.Interp, "grid " & Widget_Image(Slave) & " " & Options);
    end Grid;
 
-   procedure Grid_Configure(Slave: in Tk_Widget'Class; Options: in String := "") is
+   procedure Grid_Configure
+     (Slave: in Tk_Widget'Class; Options: in String := "") is
    begin
       Tcl_Eval
         (Slave.Interp,
@@ -46,5 +47,42 @@ package body Tcl.Tk.Ada.Grid is
       Tcl_Eval(Slave.Interp, "grid info " & Widget_Image(Slave));
       return Tcl.Ada.Tcl_GetResult(Slave.Interp);
    end Grid_Info;
+
+   procedure Row_Configure
+     (Master, Slave: in Tk_Widget'Class; Options: in String) is
+   begin
+      Tcl_Eval
+        (Master.Interp,
+         "grid rowconfigure " & Widget_Image(Master) & " " &
+         Widget_Image(Slave) & " " & Options);
+   end Row_Configure;
+
+   function Row_Configure(Master, Slave: in Tk_Widget'Class) return String is
+   begin
+      Tcl_Eval
+        (Master.Interp,
+         "grid rowconfigure " & Widget_Image(Master) & " " &
+         Widget_Image(Slave));
+      return Tcl.Ada.Tcl_GetResult(Master.Interp);
+   end Row_Configure;
+
+   procedure Column_Configure
+     (Master, Slave: in Tk_Widget'Class; Options: in String) is
+   begin
+      Tcl_Eval
+        (Master.Interp,
+         "grid columnconfigure " & Widget_Image(Master) & " " &
+         Widget_Image(Slave) & " " & Options);
+   end Column_Configure;
+
+   function Column_Configure
+     (Master, Slave: in Tk_Widget'Class) return String is
+   begin
+      Tcl_Eval
+        (Master.Interp,
+         "grid columnconfigure " & Widget_Image(Master) & " " &
+         Widget_Image(Slave));
+      return Tcl.Ada.Tcl_GetResult(Master.Interp);
+   end Column_Configure;
 
 end Tcl.Tk.Ada.Grid;
