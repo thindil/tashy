@@ -24,12 +24,13 @@ with Tcl.Ada;
 
 package body Tcl.Tk.Ada.Pack is
 
-   procedure Pack(Slave: in Tk_Widget'Class; Options: in String) is
+   procedure Pack(Slave: in Tk_Widget'Class; Options: in String := "") is
    begin --  Pack
       Tcl_Eval(Slave.Interp, "pack " & Widget_Image(Slave) & " " & Options);
    end Pack;
 
-   procedure Pack_Configure(Slave: in Tk_Widget'Class; Options: in String) is
+   procedure Pack_Configure
+     (Slave: in Tk_Widget'Class; Options: in String := "") is
    begin --  Pack_Configure
       Tcl_Eval
         (Slave.Interp,
