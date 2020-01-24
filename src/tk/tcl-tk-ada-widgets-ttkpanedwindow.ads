@@ -65,6 +65,19 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       options: in String := ""; Interp: in Tcl_Interp := null);
    -- ****
 
+   -- ****f* TtkPanedWindow/Add
+   -- FUNCTION
+   -- Adds the Tk_Widget to the Ttk_PanedWindow.
+   -- PARAMETERS
+   -- Paned     - Ttk_PanedWindow to which SubWindow will be added
+   -- SubWindow - Tk_Widget which will be added to the Ttk_PanedWindow
+   -- Options   - Tk options which will be passed to the command. Default
+   --             value is empty.
+   -- SOURCE
+   procedure Add
+     (Paned: in Ttk_PanedWindow; SubWindow: in Tk_Widget'Class;
+     Options: in String := "");
+
 private
 
    type Ttk_PanedWindow is new Tk_Widget with null record;
