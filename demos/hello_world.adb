@@ -43,6 +43,7 @@ with CArgv;
 with Interfaces.C;
 with Tcl.Ada;
 with Tcl.Tk.Ada;
+with Tcl.Tk.Ada.Pack;
 with Tcl.Tk.Ada.Widgets;
 with Tcl.Tk.Ada.Widgets.Button;
 
@@ -167,12 +168,12 @@ begin --  Hello_World
    --  Create and pack the Hello button
    -----------------------------------
    Hello_Button := Tcl.Tk.Ada.Widgets.Button.Create (".hello", "-text Hello -command Hello");
-   Tcl.Tk.Ada.Widgets.Pack (Hello_Button, "-side left -fill both -expand yes");
+   Tcl.Tk.Ada.Pack.Pack (Hello_Button, "-side left -fill both -expand yes");
 
    --  Create and pack the Exit button
    ----------------------------------
    Exit_Button := Tcl.Tk.Ada.Widgets.Button.Create (".exit", "-text Exit -command Exit");
-   Tcl.Tk.Ada.Widgets.Pack (Exit_Button, "-side left -fill both -expand yes");
+   Tcl.Tk.Ada.Pack.Pack (Exit_Button, "-side left -fill both -expand yes");
 
    --  Loop inside Tk, waiting for commands to execute.
    --  When there are no windows left, Tcl.Tk.Tk_MainLoop returns and we exit.

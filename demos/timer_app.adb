@@ -22,9 +22,11 @@ with CArgv;
 with Tcl.Ada;
 with Tcl.Tk;
 with Tcl.Tk.Ada;
+with Tcl.Tk.Ada.Pack;
 with Tcl.Tk.Ada.Widgets;
 with Tcl.Tk.Ada.Widgets.Label;
 with Tcl.Tk.Ada.Widgets.Button;
+with Tcl.Tk.Ada.Widgets.Toplevel.MainWindow;
 
 package body Timer_App is
 
@@ -248,24 +250,24 @@ package body Timer_App is
       --  Create and pack the counter text widget
       Counter :=
         Tcl.Tk.Ada.Widgets.Label.Create (".counter", "-text 0.00 -relief raised -width 10");
-      Tcl.Tk.Ada.Widgets.Pack (Counter, "-side bottom -fill both");
+      Tcl.Tk.Ada.Pack.Pack (Counter, "-side bottom -fill both");
 
       --  Create and pack the Start button
       Start_Button := Tcl.Tk.Ada.Widgets.Button.Create (".start",
                                          "-text Start -command Start");
-      Tcl.Tk.Ada.Widgets.Pack (Start_Button, "-side left -fill both -expand yes");
+      Tcl.Tk.Ada.Pack.Pack (Start_Button, "-side left -fill both -expand yes");
 
       --  Create and pack the Stop button
    -----------------------------------
       Stop_Button := Tcl.Tk.Ada.Widgets.Button.Create (".stop", "-text Reset -command Reset");
-      Tcl.Tk.Ada.Widgets.Pack (Stop_Button, "-side left -fill both -expand yes");
+      Tcl.Tk.Ada.Pack.Pack (Stop_Button, "-side left -fill both -expand yes");
 
       --  Bind ^C and ^Q keys to exit
    -------------------------------
-      Tcl.Tk.Ada.Widgets.Bind_To_Main_Window (Interp,
+      Tcl.Tk.Ada.Widgets.TopLevel.MainWindow.Bind_To_Main_Window (Interp,
                                       "<Control-c>",
                                       "{destroy .;exit}");
-      Tcl.Tk.Ada.Widgets.Bind_To_Main_Window (Interp,
+      Tcl.Tk.Ada.Widgets.TopLevel.MainWindow.Bind_To_Main_Window (Interp,
                                       "<Control-q>",
                                       "{destroy .;exit}");
 
