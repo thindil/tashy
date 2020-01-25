@@ -68,8 +68,9 @@ package Tcl.Tk.Ada.Widgets.Menu is
    -- SOURCE
    procedure Add
      (MenuWidget: in Tk_Menu'Class; EntryType: in String;
-      Options: in String := "");
-   -- ****
+      Options: in String := "") with
+      Pre => EntryType /= "";
+      -- ****
 
 private
 
