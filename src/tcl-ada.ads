@@ -232,28 +232,66 @@ package Tcl.Ada is
 
    end Generic_CloseHandler;
 
+   -- ****h* Ada/Generic_Command
+   -- FUNCTION
+   -- Generic package to add new commands to Tcl
+   -- SOURCE
    generic
       type ClientData is private;
    package Generic_Command is
+      -- ****
 
       pragma Assert(ClientData'Size <= System.Address'Size,
          "ClientData too big");
 
+      -- ****t* Generic_Command/Tcl_CmdProc
+      -- FUNCTION
+      -- Generic function for Tcl command
+      -- PARAMETERS
+      -- data   - ClientData passed to command
+      -- interp - Tcl interpreter with which command will be used
+      -- argc   - Number of arguments passed to the command
+      -- argv   - String with argumentts passed to the command. First argument
+      --          is the command name
+      -- RESULT
+      -- Tcl result code
+      -- SOURCE
       type Tcl_CmdProc is access function
         (data: in ClientData; interp: in Tcl_Interp; argc: in C.int;
          argv: in CArgv.Chars_Ptr_Ptr) return C.int;
       pragma Convention(C, Tcl_CmdProc);
+      -- ****
 
+      -- ****t* Generic_Command/Tcl_CmdDeleteProc
+      -- FUNCTION
+      -- Generic procedure which will be executed before command is deleted
+      -- PARAMETERS
+      -- data - ClientData passed to the command
+      -- SOURCE
       type Tcl_CmdDeleteProc is access procedure(data: in ClientData);
       pragma Convention(C, Tcl_CmdDeleteProc);
+      -- ****
 
+      -- ****f* Generic_Command/Tcl_CreateCommand
+      -- FUNCTION
+      -- Create new Tcl command
+      -- PARAMETERS
+      -- interp     - Tcl interpreter to which command will be added
+      -- cmdName    - Name of the command used to execute it in Tcl scripts
+      -- proc       - Tcl_CmdProc which will be executed when command will be
+      --              called
+      -- data       - ClientData which will be passed to the command
+      -- deleteProc - Tcl_CmdDeleteProc which will be executed before command
+      --              will be removed from interpreter. Can be null
+      -- RESULT
+      -- Newly created Tcl_Command
+      -- SOURCE
       function Tcl_CreateCommand
         (interp: not null Tcl_Interp;
          cmdName: in C.Strings.chars_ptr;
          proc: not null Tcl_CmdProc;
          data: in ClientData;
-         deleteProc: in Tcl_CmdDeleteProc)    -- can be null
-
+         deleteProc: in Tcl_CmdDeleteProc)
          return Tcl_Command;
       pragma Import(C, Tcl_CreateCommand, "Tcl_CreateCommand");
 
@@ -262,9 +300,9 @@ package Tcl.Ada is
          cmdName: in String;
          proc: not null Tcl_CmdProc;
          data: in ClientData;
-         deleteProc: in Tcl_CmdDeleteProc)    -- can be null
-
+         deleteProc: in Tcl_CmdDeleteProc)
          return Tcl_Command;
+         -- ****
 
    end Generic_Command;
 
