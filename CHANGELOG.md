@@ -33,6 +33,7 @@ of the project.
 - Binding for Tk `ttk::style` command
 - Binding for Tk `grid` command
 - Binding for Tk `ttk::label` widget
+- Binding for Tk `ttk::labelframe` widget
 
 ### Changed
 - Enabled Get\_Main\_Window function
