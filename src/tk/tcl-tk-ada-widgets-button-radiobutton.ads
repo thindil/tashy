@@ -50,18 +50,20 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Tk_RadioButton;
+      Interp: in Tcl_Interp := null) return Tk_RadioButton with
+      Pre => pathName /= "";
    procedure Create
      (Widgt: out Tk_RadioButton; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null);
-   -- ****
+      Interp: in Tcl_Interp := null) with
+      Pre => pathName /= "";
+      -- ****
 
-   -- ****f* RadioButton/Deselect
-   -- FUNCTION
-   -- Deselect the button.
-   -- PARAMETERS
-   -- Buttn - Tk_RadioButton to deselect
-   -- SOURCE
+      -- ****f* RadioButton/Deselect
+      -- FUNCTION
+      -- Deselect the button.
+      -- PARAMETERS
+      -- Buttn - Tk_RadioButton to deselect
+      -- SOURCE
    procedure Deselect(Buttn: in Tk_RadioButton);
    -- ****
 
