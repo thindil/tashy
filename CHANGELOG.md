@@ -34,6 +34,7 @@ of the project.
 - Binding for Tk `grid` command
 - Binding for Tk `ttk::label` widget
 - Binding for Tk `ttk::labelframe` widget
+- Binding for Tk `canvas` widget
 
 ### Changed
 - Enabled Get\_Main\_Window function
