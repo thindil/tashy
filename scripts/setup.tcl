@@ -18,7 +18,7 @@ exec wish "$0" ${1+"$@"}
 # write to the Free Software Foundation, 59 Temple Place - Suite
 # 330, Boston, MA 02111-1307, USA.
 
-# This is a Tcl/Tk script which helps install TASH.  It collects
+# This is a Tcl/Tk script which helps install TASHY.  It collects
 # information about the environment and creates files makeconf and
 # tash_options.gpr, which are included in makefiles/withed by GPRs to
 # customize to the local environment.
@@ -273,7 +273,7 @@ message .instructions -justify left -aspect 500 -pady 10 -padx 20 -text \
 
 pack .instructions -side top -fill x -expand yes
 
-set g [frame .grid]
+set g [ttk::frame .grid]
 pack $g -side top
 
 set row 0
@@ -288,9 +288,9 @@ foreach name $tashorder {
       }
       default {
          set w [string tolower $name]
-         label $g.$w-label -text "$name: " -anchor e
+         ttk::label $g.$w-label -text "$name: " -anchor e
          grid $g.$w-label  -row $row -column 0 -sticky e
-         entry $g.$w-entry -width 40
+         ttk::entry $g.$w-entry -width 40
          $g.$w-entry insert end $tashvar($name)
          grid $g.$w-entry  -row $row -column 1
          incr row
@@ -298,8 +298,8 @@ foreach name $tashorder {
    }
 }
 
-frame .buttons
+ttk::frame .buttons
 pack .buttons -side bottom -fill x -pady 2m
-button .buttons.save   -text Save   -command "Save_GUI $g; exit"
-button .buttons.cancel -text Cancel -command exit
+ttk::button .buttons.save   -text Save   -command "Save_GUI $g; exit"
+ttk::button .buttons.cancel -text Cancel -command exit
 pack .buttons.save .buttons.cancel -side left -expand 1
