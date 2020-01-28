@@ -52,18 +52,20 @@ package Tcl.Tk.Ada.Widgets.Button is
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Tk_Button;
+      Interp: in Tcl_Interp := null) return Tk_Button with
+      Pre => pathName /= "";
    procedure Create
      (Widgt: out Tk_Button; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null);
-   -- ****
+      Interp: in Tcl_Interp := null) with
+      Pre => pathName /= "";
+      -- ****
 
-   -- ****f* Button/Flash
-   -- FUNCTION
-   -- Flash the button.
-   -- PARAMETERS
-   -- Buttn - Tk_Button to flash
-   -- SOURCE
+      -- ****f* Button/Flash
+      -- FUNCTION
+      -- Flash the button.
+      -- PARAMETERS
+      -- Buttn - Tk_Button to flash
+      -- SOURCE
    procedure Flash(Buttn: in Tk_Button'Class);
    -- ****
 
