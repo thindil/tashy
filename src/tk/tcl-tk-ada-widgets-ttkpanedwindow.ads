@@ -76,7 +76,18 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    -- SOURCE
    procedure Add
      (Paned: in Ttk_PanedWindow; SubWindow: in Tk_Widget'Class;
-     Options: in String := "");
+      Options: in String := "");
+   -- ****
+
+   -- ****f* TtkPanedWindow/Forget
+   -- FUNCTION
+   -- Remove the Tk_Widget from the Ttk_PanedWindow
+   -- PARAMETERS
+   -- Paned     - Ttk_PanedWindow from which SubWindow will be removed
+   -- SubWindow - Tk_Widget which will be removed from the Ttk_PanedWindow
+   -- SOURCE
+   procedure Forget(Paned: in Ttk_PanedWindow; SubWindow: in Tk_Widget'Class);
+   -- ****
 
 private
 
