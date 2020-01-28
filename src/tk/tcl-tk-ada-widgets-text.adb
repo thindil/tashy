@@ -46,7 +46,7 @@ package body Tcl.Tk.Ada.Widgets.Text is
 
    procedure Insert(TextWidget: in Tk_Text; Index, Text: in String) is
    begin
-      Execute_Widget_Command(TextWidget, "insert", Index & " """ & Text & """");
+      Execute_Widget_Command(TextWidget, "insert", Index & " " & Text);
    end Insert;
 
 end Tcl.Tk.Ada.Widgets.Text;
