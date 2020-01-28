@@ -23,6 +23,8 @@ exec wish "$0" ${1+"$@"}
 # tash_options.gpr, which are included in makefiles/withed by GPRs to
 # customize to the local environment.
 
+set buildoption all
+
 proc cequal {left right} {
    return [expr [string compare $left $right] == 0]
 }
@@ -41,7 +43,7 @@ proc setvar {name value comments} {
 # Create the tash_options.gpr file
 #--------------------------------
 proc CreateGprFile {} {
-   global library_switches gpr tashvar
+   global library_switches gpr tashvar installtk
    if [catch {open $gpr w} gprfid] {
       puts stderr $gprfid
       exit
@@ -60,13 +62,16 @@ proc CreateGprFile {} {
 
    for Source_Dirs use ();
 
-   --  These are the Ada compiler options used to build Tash.
+   -- The source files used to compile Tashy
+   Source_Files := (\"$tashvar(SOURCES)\");
+
+   --  These are the Ada compiler options used to build Tashy.
    Compiler_Options :=
    (
    \"[join $tashvar(AARGS) "\",\n      \""]\"
    );
 
-   --  These are the C compiler options used to build Tash.
+   --  These are the C compiler options used to build Tashy.
    C_Compiler_Options :=
    (
    \"[join [concat $tashvar(CARGS) $tashvar(TCL_INCLUDE) $tashvar(X11_INCLUDE)] "\",\n      \""]\"
@@ -109,7 +114,18 @@ proc Save_GUI {g} {
 # Also, create tcl_record_sizes.ads file
 #-----------------------------------------------------------------
 proc Save {} {
-   global tashvar tcl_platform
+   global tashvar tcl_platform buildoption library_switches
+   if {$buildoption == "tcl"} {
+      setvar TK_VERSION    ""        {Tk version}
+      setvar TK_LIBRARY    ""        {Tk library}
+      setvar X11HOME       ""        {X11 home directory}
+      setvar X11_LIB       ""        {X11 library directory}
+      setvar X11_INCLUDE   ""        {X11 include directory}
+      setvar SOURCES       "src"   {Source files}
+      set library_switches [string range $library_switches 0 [string first "-ltk" $library_switches]-1]
+   } else {
+      setvar SOURCES       "src/**"   {Source files}
+   }
    CreateGprFile
    source [file join [pwd] scripts tcl_record_sizes.tcl]
    exec gcc $tashvar(TCL_INCLUDE) -o tcl_record_sizes [file join [pwd] src tcl_record_sizes.c]
@@ -168,8 +184,8 @@ proc Set_Macros {platform os} {
          if {![file exists [file join $tclhome lib tcl$tk_short_version.lib]]} {
             set tail "t "
          }
-         append library_switches "-ltk$tk_short_version$tail"
          append library_switches "-ltcl$tcl_short_version$tail"
+         append library_switches "-ltk$tk_short_version$tail"
          set exec_suffix ".exe"
       }
       "unix" {
@@ -203,15 +219,15 @@ proc Set_Macros {platform os} {
          }
          if [cequal $os "SunOS"] {
             append library_switches " -R$tclhome/lib -L$tclhome/lib"
-            append library_switches " -ltk$tk_version -ltcl$tcl_version"
+            append library_switches " -ltcl$tcl_version -ltk$tk_version"
          } elseif [cequal $os "Darwin"] {
             append library_switches " -L$tclhome/lib"
-            append library_switches " -ltk$tk_version -ltcl$tcl_version"
+            append library_switches " -ltcl$tcl_version -ltk$tk_version"
          } else {
             # Must be Linux (?)
             append library_switches " -Wl,-rpath,$tclhome/lib"
             append library_switches " -L$tclhome/lib"
-            append library_switches " -ltk$tk_version -ltcl$tcl_version"
+            append library_switches " -ltcl$tcl_version -ltk$tk_version"
          }
       }
    }
@@ -271,7 +287,13 @@ message .instructions -justify left -aspect 500 -pady 10 -padx 20 -text \
    values for the macros, but you may have to edit them.  After you're\
    happy with the macro values, press \"Save\" to save the files."
 
-pack .instructions -side top -fill x -expand yes
+pack .instructions -side top -fill x
+
+set modulesframe [ttk::labelframe .modules -text "Select modules"]
+pack $modulesframe -side top
+
+pack [ttk::radiobutton .modules.all -text "Everything" -value all -variable buildoption]
+pack [ttk::radiobutton .modules.select -text "Tcl only" -value tcl -variable buildoption]
 
 set g [ttk::frame .grid]
 pack $g -side top
