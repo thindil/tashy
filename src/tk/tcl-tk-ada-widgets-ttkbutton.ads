@@ -58,6 +58,17 @@ package Tcl.Tk.Ada.Widgets.TtkButton is
       Interp: in Tcl_Interp := null);
    -- ****
 
+   -- ****f* TtkButton/Invoke
+   -- FUNCTION
+   -- Invoke the Tcl command associated with the button.
+   -- PARAMETERS
+   -- Buttn   - Ttk_Button from which Tcl command will be invoked
+   -- options - Tk options for the Tcl command invoke
+   -- SOURCE
+   function Invoke
+     (Buttn: in Ttk_Button'Class; options: in String := "") return String;
+   -- ****
+
 private
 
    type Ttk_Button is new Tk_Widget with null record;
