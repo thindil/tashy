@@ -89,6 +89,17 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    procedure Forget(Paned: in Ttk_PanedWindow; SubWindow: in Tk_Widget'Class);
    -- ****
 
+   -- ****f* TtkPanedWindow/Panes
+   -- FUNCTION
+   -- Get list of names of all widgets managed by the Ttk_PanedWindow
+   -- PARAMETERS
+   -- Paned - Ttk_PanedWindow which will be queried for widgets
+   -- RESULT
+   -- List of widgets inside of Ttk_PanedWindow
+   -- SOURCE
+   function Panes(Paned: in Ttk_PanedWindow) return String;
+   -- ****
+
 private
 
    type Ttk_PanedWindow is new Tk_Widget with null record;
