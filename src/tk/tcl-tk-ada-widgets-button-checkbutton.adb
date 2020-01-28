@@ -46,17 +46,17 @@ package body Tcl.Tk.Ada.Widgets.Button.CheckButton is
 
    procedure Deselect(Buttn: in Tk_CheckButton) is
    begin --  Deselect
-      Execute_Widget_Command(Tk_Widget'Class(Buttn), "deselect");
+      Execute_Widget_Command(Buttn, "deselect");
    end Deselect;
 
    procedure Tk_Select(Buttn: in Tk_CheckButton) is
    begin --  Tk_Select
-      Execute_Widget_Command(Tk_Widget'Class(Buttn), "select");
+      Execute_Widget_Command(Buttn, "select");
    end Tk_Select;
 
    procedure Toggle(Buttn: in Tk_CheckButton) is
    begin --  Toggle
-      Execute_Widget_Command(Tk_Widget'Class(Buttn), "toggle");
+      Execute_Widget_Command(Buttn, "toggle");
    end Toggle;
 
 end Tcl.Tk.Ada.Widgets.Button.CheckButton;
