@@ -1067,9 +1067,20 @@ package Tcl.Ada is
 
    function Tcl_GetStringResult(interp: not null Tcl_Interp) return String;
 
+   -- ****f* Ada/Tcl_GetVar
+   -- FUNCTION
+   -- Get value of selected variable
+   -- PARAMETERS
+   -- interp  - Tcl interpreter in which variable will be queried
+   -- varName - Tcl variable to get
+   -- flags   - Tcl flags to variable
+   -- RESULT
+   -- String with value of selected variable
+   -- SOURCE
    function Tcl_GetVar
      (interp: not null Tcl_Interp; varName: in String;
       flags: in C.int := TCL_GLOBAL_ONLY) return String;
+      -- ****
 
    function Tcl_GetVar2
      (interp: not null Tcl_Interp; part1: in String; part2: in String;
@@ -1150,6 +1161,17 @@ package Tcl.Ada is
 
    procedure Tcl_SetResult(interp: not null Tcl_Interp; str: in String);
 
+   -- ****f* Ada/Tcl_SetVar
+   -- FUNCTION
+   -- Set value for the selected variable
+   -- PARAMETERS
+   -- interp   - Tcl interpreter in which the variable will be set
+   -- varName  - Name of variable to set
+   -- newValue - Value of variable to set
+   -- flags    - Tcl flags for variable
+   -- RESULT
+   -- If variable cannot be set, return empty string.
+   -- SOURCE
    function Tcl_SetVar
      (interp: not null Tcl_Interp; varName: in String; newValue: in String;
       flags: in C.int := TCL_GLOBAL_ONLY) return String;
@@ -1157,6 +1179,7 @@ package Tcl.Ada is
    procedure Tcl_SetVar
      (interp: not null Tcl_Interp; varName: in String; newValue: in String;
       flags: in C.int := TCL_GLOBAL_ONLY);
+   -- ****
 
    function Tcl_SetVar2
      (interp: not null Tcl_Interp; part1: in String; part2: in String;
