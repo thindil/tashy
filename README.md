@@ -6,7 +6,12 @@ this moment, TASHY is "a bit" unstable, used mostly as playgroud. All changes
 (compared with TASH too) can be found [in CHANGELOG.md](CHANGELOG.md)
 
 TASHY is the Ada 2012 binding to Tcl/Tk. It allow to use Tcl code in Ada code
-and vice versa.
+and vice versa. Included bindings (most of them are incomplete):
+
+* Tcl - It is the base binding. Allow use Tcl scripts in the Ada code.
+* Tk - Requires Tcl binding. Allows use Tk GUI in the Ada code.
+* Tklib - Requires Tcl and Tk bindings. Allows use additional packages for
+  Tk GUI in the Ada code.
 
 ## Build the library from sources
 
@@ -25,11 +30,17 @@ To build you need:
 
   https://www.magicsplat.com/tcl-installer/index.html
 
+* If you want Tklib library binding, you will be need this library too. Should
+  be available in every Linux distribution. For Windows it is included in the
+  MagicSplat version.
+
 If you have all the required packages, navigate to the main directory(where
 this file is) to compile and type in the console:
 
 1. `scripts/setup.tcl` to setup all configuration needed for compilation.
-   On Windows it will be `wish scripts\setup.tcl`.
+   On Windows it will be `wish scripts\setup.tcl`. If you want to use default
+   settings (like include all other bindings), you can use auto setup by
+   adding parameter `--nogui`.
 2. `gprbuild -P tashy.gpr` to compile the library.
 3. `gprinstall -P tashy.gpr -p` to install it with gprinstall which allow use
    it inside GNAT project files. On Unix systems this step may require root
@@ -38,7 +49,9 @@ this file is) to compile and type in the console:
 If you have installed [Bob](https://github.com/thindil/bob) you can use it in
 that way:
 
-1. `bob setup` to setup all configuration needed for compilation.
+1. `bob setup` to setup all configuration needed for compilation. If you want
+    to use default settings (like include all other bindings), you can use
+    auto setup by typing `bob autosetup`.
 2. `bob build` to compile the library.
 3. `bob install` to install it with gprinstall which allow use
    it inside GNAT project files. On Unix systems this step may require root
