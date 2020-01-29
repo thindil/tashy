@@ -24,6 +24,7 @@ exec wish "$0" ${1+"$@"}
 # customize to the local environment.
 
 set buildoption all
+set installtklib 0
 
 proc cequal {left right} {
    return [expr [string compare $left $right] == 0]
@@ -63,7 +64,7 @@ proc CreateGprFile {} {
    for Source_Dirs use ();
 
    -- The source files used to compile Tashy
-   Source_Files := (\"$tashvar(SOURCES)\");
+   Source_Files := ($tashvar(SOURCES));
 
    --  These are the Ada compiler options used to build Tashy.
    Compiler_Options :=
@@ -114,17 +115,23 @@ proc Save_GUI {g} {
 # Also, create tcl_record_sizes.ads file
 #-----------------------------------------------------------------
 proc Save {} {
-   global tashvar tcl_platform buildoption library_switches
+   global tashvar tcl_platform buildoption library_switches installtklib
    if {$buildoption == "tcl"} {
       setvar TK_VERSION    ""        {Tk version}
       setvar TK_LIBRARY    ""        {Tk library}
       setvar X11HOME       ""        {X11 home directory}
       setvar X11_LIB       ""        {X11 library directory}
       setvar X11_INCLUDE   ""        {X11 include directory}
-      setvar SOURCES       "src"   {Source files}
+      setvar SOURCES       "\"src\""   {Source directories}
       set library_switches [string range $library_switches 0 [string first "-ltk" $library_switches]-1]
+   } elseif {$buildoption != "all"} {
+      set sources "\"src\", \"src/tk\""
+      if {$installtklib == 1} {
+         append sources ", \"src/tklib\""
+      }
+      setvar SOURCES       $sources   {Source directories}
    } else {
-      setvar SOURCES       "src/**"   {Source files}
+      setvar SOURCES       "\"src/**\""   {Source directories}
    }
    CreateGprFile
    source [file join [pwd] scripts tcl_record_sizes.tcl]
@@ -292,8 +299,10 @@ pack .instructions -side top -fill x
 set modulesframe [ttk::labelframe .modules -text "Select modules"]
 pack $modulesframe -side top
 
-pack [ttk::radiobutton .modules.all -text "Everything" -value all -variable buildoption]
-pack [ttk::radiobutton .modules.select -text "Tcl only" -value tcl -variable buildoption]
+pack [ttk::radiobutton .modules.all -text "Everything" -value "all" -variable buildoption]
+pack [ttk::radiobutton .modules.tcl -text "Tcl only" -value "tcl" -variable buildoption]
+pack [ttk::radiobutton .modules.select -text "Tcl, Tk and ..." -value "tcltk" -variable buildoption]
+pack [ttk::checkbutton .modules.tklib -text "Tklib" -variable installtklib]
 
 set g [ttk::frame .grid]
 pack $g -side top
