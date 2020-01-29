@@ -36,6 +36,7 @@ of the project.
 - Binding for Tk `ttk::labelframe` widget
 - Binding for Tk `canvas` widget
 - Binding for Tk `text` widget
+- Binding for Tklib `tooltip` package
 
 ### Changed
 - Enabled Get\_Main\_Window function
