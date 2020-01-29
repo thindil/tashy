@@ -50,6 +50,7 @@ of the project.
 - **BREAKING:** Updated demos to new version of the library
 - **BREAKING:** Moved all main window code to separated package
 - **BREAKING:** Moved all pack binding code to separated package
+- **BREAKING:** Made Tk binding as module
 
 ### Fixed
 - Detecting Tcl libraries by setup.tcl script on Windows
