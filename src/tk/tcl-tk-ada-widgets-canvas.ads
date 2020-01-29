@@ -52,23 +52,27 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Tk_Canvas;
+      Interp: in Tcl_Interp := null) return Tk_Canvas with
+      Pre => pathName /= "";
    procedure Create
      (Widgt: out Tk_Canvas; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null);
-   -- ****
+      Interp: in Tcl_Interp := null) with
+      Pre => pathName /= "";
+      -- ****
 
-   -- ****f* Canvas/Canvas_Create
-   -- FUNCTION
-   -- Add the child to the canvas
-   -- PARAMETERS
-   -- Parent     - Tk_Canvas to which child will be added
-   -- Child_Type - Tk type of child to add
-   -- Options    - Tk options to create command
-   -- SOURCE
+      -- ****f* Canvas/Canvas_Create
+      -- FUNCTION
+      -- Add the child to the canvas
+      -- PARAMETERS
+      -- Parent     - Tk_Canvas to which child will be added
+      -- Child_Type - Tk type of child to add
+      -- Options    - Tk options to create command
+      -- SOURCE
    procedure Canvas_Create
-     (Parent: in Tk_Canvas; Child_Type: in String; Options: in String := "");
-   -- ****
+     (Parent: in Tk_Canvas; Child_Type: in String;
+      Options: in String := "") with
+      Pre => Child_Type /= "";
+      -- ****
 
 private
 
