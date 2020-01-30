@@ -46,15 +46,15 @@ package body Tcl.Tk.Ada.Widgets.Button is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
-   procedure Flash(Buttn: in Tk_Button'Class) is
+   procedure Flash(Buttn: in Tk_Button) is
    begin --  Flash
-      Execute_Widget_Command(Tk_Widget'Class(Buttn), "flash");
+      Execute_Widget_Command(Buttn, "flash");
    end Flash;
 
    function Invoke
-     (Buttn: in Tk_Button'Class; options: in String := "") return String is
+     (Buttn: in Tk_Button; options: in String := "") return String is
    begin --  Invoke
-      Execute_Widget_Command(Tk_Widget'Class(Buttn), "invoke", options);
+      Execute_Widget_Command(Buttn, "invoke", options);
       return Tcl.Ada.Tcl_GetResult(Buttn.Interp);
    end Invoke;
 
