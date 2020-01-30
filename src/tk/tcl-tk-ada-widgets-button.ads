@@ -66,7 +66,7 @@ package Tcl.Tk.Ada.Widgets.Button is
       -- PARAMETERS
       -- Buttn - Tk_Button to flash
       -- SOURCE
-   procedure Flash(Buttn: in Tk_Button'Class);
+   procedure Flash(Buttn: in Tk_Button);
    -- ****
 
    -- ****f* Button/Invoke
@@ -77,7 +77,7 @@ package Tcl.Tk.Ada.Widgets.Button is
    -- options - Tk options for the Tcl command invoke
    -- SOURCE
    function Invoke
-     (Buttn: in Tk_Button'Class; options: in String := "") return String;
+     (Buttn: in Tk_Button; options: in String := "") return String;
    -- ****
 
 private
