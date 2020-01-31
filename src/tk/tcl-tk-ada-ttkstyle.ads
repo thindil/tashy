@@ -46,7 +46,7 @@ package Tcl.Tk.Ada.TtkStyle is
       Pre => ThemeName /= "";
       -- ****
 
-      -- ****f* TtkStyle/Theme_Use
+      -- ****f* TtkStyle/Theme_Use2
       -- FUNCTION
       -- Get currenlty used Ttk theme
       -- RESULT

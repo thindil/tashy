@@ -27,14 +27,14 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
--- ****h* Widgets/MenuButton
+-- ****h* Widgets/TtkMenuButton
 -- FUNCTION
 -- Provides code for manipulate Tk widget Ttk:menubutton
 -- SOURCE
 package Tcl.Tk.Ada.Widgets.TtkMenuButton is
 -- ****
 
-   -- ****t* MenuButton/Ttk_MenuButton
+   -- ****t* TtkMenuButton/Ttk_MenuButton
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -43,7 +43,7 @@ package Tcl.Tk.Ada.Widgets.TtkMenuButton is
    type Ttk_MenuButton is new Tk_Widget with private;
    -- ****
 
-   -- ****f* MenuButton/Create
+   -- ****f* TtkMenuButton/Create
    -- FUNCTION
    -- Creates a new Ttk_MenuButton in the specified interpreter.
    -- PARAMETERS

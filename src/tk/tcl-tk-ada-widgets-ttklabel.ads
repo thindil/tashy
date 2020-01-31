@@ -36,7 +36,7 @@ package Tcl.Tk.Ada.Widgets.TtkLabel is
    type Ttk_Label is new Tk_Widget with private;
    -- ****
 
-   -- ****f* Label/Create
+   -- ****f* TtkLabel/Create
    -- FUNCTION
    -- Creates a new Ttk_Label in the specified interpreter.
    -- PARAMETERS
