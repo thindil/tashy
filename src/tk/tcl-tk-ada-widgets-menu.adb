@@ -48,8 +48,7 @@ package body Tcl.Tk.Ada.Widgets.Menu is
      (MenuWidget: in Tk_Menu'Class; EntryType: in String;
       Options: in String := "") is
    begin
-      Execute_Widget_Command
-        (Tk_Widget'Class(MenuWidget), "add", EntryType & " " & Options);
+      Execute_Widget_Command(MenuWidget, "add", EntryType & " " & Options);
    end Add;
 
 end Tcl.Tk.Ada.Widgets.Menu;
