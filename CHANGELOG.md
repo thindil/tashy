@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 Tag **BREAKING:** means that change breaks compatybility with ealier version
 of the project.
 
-## [Unreleased]
+## [8.6.1] - 2020-01-31
 
 ### Added
 - Binding for Tk `menu` widget
@@ -52,6 +52,7 @@ of the project.
 - **BREAKING:** Moved all main window code to separated package
 - **BREAKING:** Moved all pack binding code to separated package
 - **BREAKING:** Made Tk binding as module
+- Updated [ROBODoc](https://rfsber.home.xs4all.nl/Robo/) documentation
 
 ### Fixed
 - Detecting Tcl libraries by setup.tcl script on Windows
