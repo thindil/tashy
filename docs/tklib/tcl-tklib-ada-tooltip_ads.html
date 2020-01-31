@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" href="../robodoc.css" type="text/css" />
+<title>./src/tklib/tcl-tklib-ada-tooltip.ads</title>
+<!-- Source: ./src/tklib/tcl-tklib-ada-tooltip.ads -->
+<!-- Generated with ROBODoc Version 4.99.43 (Jul 26 2019) -->
+</head>
+<body>
+<div id="logo">
+<a name="robo_top_of_doc">TASHY v8.6.1 code documentation</a>
+</div> <!-- logo -->
+<div id="navigation">
+<a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
+<a class="menuitem" href="../sources.html#top">Source files</a>
+<a class="menuitem" href="../index.html#top">Index</a>
+<a class="menuitem" href="../robo_subprograms.html#top">Subprograms</a>
+<a class="menuitem" href="../robo_packages.html#top">Packages</a>
+<a class="menuitem" href="../robo_types.html#top">Types</a>
+</div> <!-- navigation -->
+<div id="content">
+<h3>TABLE OF CONTENTS</h3>
+<ul>
+<li>1. <a href="#robo21">TklibAda/Tooltip</a></li>
+<ul>
+<li>1.1. <a href="#robo178">Tooltip/Add</a></li>
+<li>1.2. <a href="#robo179">Tooltip/Tooltip_Init</a></li>
+</ul>
+</ul>
+<hr />
+<a name="TklibAda2fTooltip"></a>
+<a name="robo21"></a><h2>TklibAda/Tooltip [ Packages ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tklib-ada_ads.html#robo20">TklibAda</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Provides code for manipulate <a href="./tcl-tklib_ads.html#robo11">Tklib</a> tooltip package
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo7">Tcl</a><span class="sign">.</span><a href="./tcl-tklib_ads.html#robo11">Tklib</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo8">Ada</a><span class="sign">.</span><strong>Tooltip</strong> <span class="keyword">is</span>
+</pre>
+
+<hr />
+<a name="Tooltip2fAdd"></a>
+<a name="robo178"></a><h2>Tooltip/Add [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Tooltip</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <strong>Add</strong> the tooltip to selected <a href="../tk/tcl-tk-ada-widgets_ads.html#robo91">Tk_Widget</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Add</strong>
+     <span class="sign">(</span>Widget<span class="sign">:</span> <span class="keyword">in</span> <a href="../tk/tcl-tk-ada-widgets_ads.html#robo91">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> <a href="../tk/tcl-tk-ada-widgets-message_ads.html#robo31">Message</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+      Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">)</span> <span class="keyword">with</span>
+      Pre =<span class="sign">&gt;</span> <a href="../tk/tcl-tk-ada-widgets-message_ads.html#robo31">Message</a> /= ""<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Widget  - <a href="../tk/tcl-tk-ada-widgets_ads.html#robo91">Tk_Widget</a> to which the tooltip will be added
+ <a href="../tk/tcl-tk-ada-widgets-message_ads.html#robo31">Message</a> - <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo37">Text</a> which will be show in the tooltip
+ Options - Additional tooltip options
+</pre>
+
+<hr />
+<a name="Tooltip2fTooltip5fInit"></a>
+<a name="robo179"></a><h2>Tooltip/Tooltip_Init [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Tooltip</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Load package <a href="#robo21">Tooltip</a>. Raise Program_Error if package can't be loaded
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Tooltip_Init</strong><span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Interp: <a href="../tcl_ads.html#robo7">Tcl</a> interpreter to which tooltip package will be added
+</pre>
+
+</div> <!-- content -->
+<div id="footer">
+<p>Generated from ./src/tklib/tcl-tklib-ada-tooltip.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Jan 31 2020 07:13:13
+</p>
+</div> <!-- footer -->
+</body>
+</html>
+

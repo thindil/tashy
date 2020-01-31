@@ -85,7 +85,7 @@ package Tcl.Tk.Ada.Grid is
       Pre => Options /= "";
       -- ****
 
-      -- ****f* Grid/Row_Configure
+      -- ****f* Grid/Row_Configure2
       -- FUNCTION
       -- Get row configuration options for Slave widget in Master grid.
       -- PARAMETERS
@@ -110,7 +110,7 @@ package Tcl.Tk.Ada.Grid is
       Pre => Options /= "";
       -- ****
 
-      -- ****f* Grid/Column_Configure
+      -- ****f* Grid/Column_Configure2
       -- FUNCTION
       -- Get column configuration options for Slave widget in Master grid.
       -- PARAMETERS

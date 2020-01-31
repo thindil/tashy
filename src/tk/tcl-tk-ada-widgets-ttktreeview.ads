@@ -117,7 +117,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
      (TreeViewWidget: in Ttk_Tree_View'Class; Item, Options: in String);
    -- ****
 
-   -- ****f* Tcl.Tk.Ada.Widgets.TtkTreeView/Item
+   -- ****f* Tcl.Tk.Ada.Widgets.TtkTreeView/Item2
    -- FUNCTION
    -- Get options of the selected item in tree view
    -- PARAMETERS

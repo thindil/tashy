@@ -197,7 +197,7 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Bind</strong>
-     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Sequence<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Script<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">);</span>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Sequence<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Script<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign"><span class="sign">)</span>;</span>
 </pre>
 
 <hr />
@@ -295,7 +295,7 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>configure</strong>
-     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign"><span class="sign">:</span>=</span> ""<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
    <span class="keyword">procedure</span> <strong>configure</strong><span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a>'</span>Class<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 
@@ -655,7 +655,7 @@
 <pre> Destroys a widget.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Destroy</strong><span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">in</span> <span class="keyword">out</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">);</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Destroy</strong><span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">in</span> <span class="keyword">out</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign"><span class="sign">)</span>;</span>
 </pre>
 
 <hr />
@@ -667,7 +667,7 @@
 <pre>  <strong>Flash</strong> the button.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Flash</strong><span class="sign">(</span>Buttn<span class="sign">:</span> <span class="keyword">in</span> Button<span class="keyword">'Class</span><span class="sign">);</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Flash</strong><span class="sign">(</span>Buttn<span class="sign">:</span> <span class="keyword">in</span> Button<span class="keyword">'Class</span><span class="sign"><span class="sign">)</span>;</span>
 </pre>
 
 <hr />
@@ -772,7 +772,7 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Invoke</strong>
-     <span class="sign">(</span>Buttn<span class="sign">:</span> <span class="keyword">in</span> Button<span class="keyword">'Class</span><span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+     <span class="sign">(</span>Buttn<span class="sign">:</span> <span class="keyword">in</span> Button<span class="keyword">'Class</span><span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign"><span class="sign">:</span>=</span> ""<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 
 <hr />
@@ -784,7 +784,7 @@
 <pre> Tells the packer how to <a href="#robo34">configure</a> the specified Slave window.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Pack_Configure</strong><span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">);</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Pack_Configure</strong><span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign"><span class="sign">)</span>;</span>
 </pre>
 
 <hr />
@@ -797,7 +797,7 @@
  and unmaps their windows.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Pack_Forget</strong><span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">);</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Pack_Forget</strong><span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign"><span class="sign">)</span>;</span>
 </pre>
 
 <hr />
@@ -822,7 +822,7 @@
 <pre> Enables or disables propagation for the specified Master window.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Pack_Propagate</strong><span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">;</span> State<span class="sign">:</span> <span class="keyword">in</span> Boolean<span class="sign">);</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Pack_Propagate</strong><span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">;</span> State<span class="sign">:</span> <span class="keyword">in</span> Boolean<span class="sign"><span class="sign">)</span>;</span>
 </pre>
 
 <hr />
@@ -932,7 +932,7 @@
 <pre> Disassociates the binding from the event Sequence.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Unbind</strong><span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Sequence<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">);</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Unbind</strong><span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Sequence<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign"><span class="sign">)</span>;</span>
    <span class="keyword">function</span> <strong>Unbind</strong><span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo11">Widget</a>'</span>Class<span class="sign">;</span> Sequence<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 
@@ -970,4 +970,5 @@
 </div> <!-- footer -->
 </body>
 </html>
+
 
