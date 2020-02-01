@@ -6,6 +6,9 @@ of the project.
 
 ## [Unreleased]
 
+### Added
+- Binding for Tk `winfo` command
+
 ### Fixed
 - Typos in changelog
 
