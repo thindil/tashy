@@ -11,7 +11,7 @@ options:
   --multidoc
   --index
   --internal
-  --documenttitle "TASHY v8.6.1 code documentation"
+  --documenttitle "TASHY v8.6.2 code documentation"
   --syntaxcolors
   --css scripts/robodoc.css
   --sections
