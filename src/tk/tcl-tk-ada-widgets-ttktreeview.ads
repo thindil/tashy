@@ -67,7 +67,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- Options        - Tk options for selected header
    -- SOURCE
    procedure Heading
-     (TreeViewWidget: in Ttk_Tree_View'Class; Column, Options: in String);
+     (TreeViewWidget: in Ttk_Tree_View; Column, Options: in String);
    -- ****
 
    -- ****f* TtkTreeView/Heading2
@@ -80,7 +80,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- Configuration options of selected header
    -- SOURCE
    function Heading
-     (TreeViewWidget: in Ttk_Tree_View'Class; Column: in String) return String;
+     (TreeViewWidget: in Ttk_Tree_View; Column: in String) return String;
    -- ****
 
    -- ****f* TtkTreeView/Insert
@@ -90,8 +90,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- TreeViewWidget - Ttk_Tree_View in which item will be inserted
    -- Options        - Tk options for the item which will be inserted
    -- SOURCE
-   procedure Insert
-     (TreeViewWidget: in Ttk_Tree_View'Class; Options: in String);
+   procedure Insert(TreeViewWidget: in Ttk_Tree_View; Options: in String);
    -- ****
 
    -- ****f* TtkTreeView/Delete
@@ -101,8 +100,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- TreeViewWidget - Ttk_Tree_View in which items will be deleted
    -- ItemsList      - List of items to delete
    -- SOURCE
-   procedure Delete
-     (TreeViewWidget: in Ttk_Tree_View'Class; ItemsList: in String);
+   procedure Delete(TreeViewWidget: in Ttk_Tree_View; ItemsList: in String);
    -- ****
 
    -- ****f* Tcl.Tk.Ada.Widgets.TtkTreeView/Item
@@ -113,8 +111,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- Item           - Id of the item to modify
    -- Options        - Tk options to set for the selected item
    -- SOURCE
-   procedure Item
-     (TreeViewWidget: in Ttk_Tree_View'Class; Item, Options: in String);
+   procedure Item(TreeViewWidget: in Ttk_Tree_View; Item, Options: in String);
    -- ****
 
    -- ****f* Tcl.Tk.Ada.Widgets.TtkTreeView/Item2
@@ -127,7 +124,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    --                  all options. Default is empty.
    -- SOURCE
    function Item
-     (TreeViewWidget: in Ttk_Tree_View'Class; Item: in String;
+     (TreeViewWidget: in Ttk_Tree_View; Item: in String;
       Options: in String := "") return String;
    -- ****
 
