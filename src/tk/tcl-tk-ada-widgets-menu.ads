@@ -52,20 +52,22 @@ package Tcl.Tk.Ada.Widgets.Menu is
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Tk_Menu;
+      Interp: in Tcl_Interp := null) return Tk_Menu with
+      Pre => pathName /= "";
    procedure Create
      (Widgt: out Tk_Menu; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null);
-   -- ****
+      Interp: in Tcl_Interp := null) with
+      Pre => pathName /= "";
+      -- ****
 
-   -- ****f* Menu/AddMenu
-   -- FUNCTION
-   -- Add element to the menu.
-   -- PARAMETERS
-   -- MenuWidget - Tk_Menu widget to which the element will be added
-   -- EntryType  - Tk type of entry to add
-   -- Options    - Tk options for menu entry to add. Default value is empty
-   -- SOURCE
+      -- ****f* Menu/AddMenu
+      -- FUNCTION
+      -- Add element to the menu.
+      -- PARAMETERS
+      -- MenuWidget - Tk_Menu widget to which the element will be added
+      -- EntryType  - Tk type of entry to add
+      -- Options    - Tk options for menu entry to add. Default value is empty
+      -- SOURCE
    procedure Add
      (MenuWidget: in Tk_Menu'Class; EntryType: in String;
       Options: in String := "") with
