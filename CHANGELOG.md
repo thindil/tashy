@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-Tag **BREAKING:** means that change breaks compatybility with ealier version
+Tag **BREAKING:** means that change breaks compatibility with earlier version
 of the project.
 
 ## [8.6.1] - 2020-01-31
