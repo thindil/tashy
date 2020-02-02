@@ -12,6 +12,7 @@ of the project.
 ### Fixed
 - Typos in changelog
 - Creating missing directories when build the library
+- Info about failed to load  Tklib `tooltip` package
 
 ## [8.6.1] - 2020-01-31
 
