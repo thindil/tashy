@@ -59,11 +59,13 @@ package Tcl.Tk.Ada.Widgets.MenuButton is
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Tk_MenuButton;
+      Interp: in Tcl_Interp := null) return Tk_MenuButton with
+      Pre => pathName /= "";
    procedure Create
      (Widgt: out Tk_MenuButton; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null);
-   -- ****
+      Interp: in Tcl_Interp := null) with
+      Pre => pathName /= "";
+      -- ****
 
 private
 
