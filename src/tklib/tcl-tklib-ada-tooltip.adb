@@ -26,13 +26,11 @@ with Tcl.Ada;
 package body Tcl.Tklib.Ada.Tooltip is
 
    procedure Tooltip_Init(Interp: in Tcl_Interp) is
-      package GetPackages is new Tcl.Ada.Generic_PkgRequire(Integer);
    begin
-      if GetPackages.Tcl_PkgRequireEx(Interp, "tooltip", "1.4.6", 0, null)'
-          Length =
-        0 then
+      if Tcl.Ada.Tcl_Eval(Interp, "package require tooltip") /= 0 then
          raise Program_Error
-           with "Failed to load tooltip package. Can't find it in path.";
+           with "Failed to load tooltip package: " &
+           Tcl.Ada.Tcl_GetStringResult(Interp);
       end if;
    end Tooltip_Init;
 
