@@ -32,8 +32,7 @@ package body Tcl.Tklib.Ada.Tooltip is
           Length =
         0 then
          raise Program_Error
-           with "Failed to load tooltip package: " &
-           Tcl.Ada.Tcl_GetStringResult(Interp);
+           with "Failed to load tooltip package. Can't find it in path.";
       end if;
    end Tooltip_Init;
 
