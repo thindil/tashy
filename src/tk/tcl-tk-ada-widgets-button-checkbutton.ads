@@ -85,6 +85,18 @@ package Tcl.Tk.Ada.Widgets.Button.CheckButton is
    procedure Toggle(Buttn: in Tk_CheckButton);
    -- ****
 
+   -- ****f* CheckButton/Run_CheckButton_Command
+   -- FUNCTION
+   -- Run any Tk Checkbutton command
+   -- PARAMETERS
+   -- Buttn   - Tk_CheckButton on which command will be executed
+   -- Command - Tk_CheckButton command to execute
+   -- Options - Tk options for selected command. Default is empty
+   -- SOURCE
+   procedure Run_CheckButton_Command(Buttn: in Tk_CheckButton; Command: in String; Options: in String := "") with
+      Pre => Command /= "";
+      -- ****
+
 private
 
    type Tk_CheckButton is new Tk_Button with null record;
