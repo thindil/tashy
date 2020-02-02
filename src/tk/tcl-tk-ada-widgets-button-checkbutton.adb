@@ -59,4 +59,11 @@ package body Tcl.Tk.Ada.Widgets.Button.CheckButton is
       Execute_Widget_Command(Buttn, "toggle");
    end Toggle;
 
+   procedure Run_CheckButton_Command
+     (Buttn: in Tk_CheckButton; Command: in String;
+      Options: in String := "") is
+   begin
+      Execute_Widget_Command(Buttn, Command, Options);
+   end Run_CheckButton_Command;
+
 end Tcl.Tk.Ada.Widgets.Button.CheckButton;
