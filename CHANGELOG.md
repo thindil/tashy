@@ -8,6 +8,7 @@ of the project.
 
 ### Added
 - Binding for Tk `winfo` command
+- Binding for Tk Menu `delete` command
 
 ### Fixed
 - Typos in changelog
