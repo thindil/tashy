@@ -74,6 +74,20 @@ package Tcl.Tk.Ada.Widgets.Menu is
       Pre => EntryType /= "";
       -- ****
 
+      -- ****f* Menu/Delete
+      -- FUNCTION
+      -- Delete elements from the menu.
+      -- PARAMETERS
+      -- MenuWidget - Tk_Menu widget from which elementrs will be deleted
+      -- StartIndex - Index of first element which will be deleted
+      -- EndIndex   - Index of last element which will be deleted. If empty,
+      --              it will be that same like StartIndex. Default is empty.
+      -- SOURCE
+   procedure Delete
+     (MenuWidget: in Tk_Menu; StartIndex: in String;
+      EndIndex: in String := "") with
+      Pre => StartIndex /= "";
+
 private
 
    type Tk_Menu is new Tk_Widget with null record;

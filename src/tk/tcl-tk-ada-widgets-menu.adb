@@ -51,4 +51,12 @@ package body Tcl.Tk.Ada.Widgets.Menu is
       Execute_Widget_Command(MenuWidget, "add", EntryType & " " & Options);
    end Add;
 
+   procedure Delete
+     (MenuWidget: in Tk_Menu; StartIndex: in String;
+      EndIndex: in String := "") is
+   begin
+      Execute_Widget_Command
+        (MenuWidget, "delete", StartIndex & " " & EndIndex);
+   end Delete;
+
 end Tcl.Tk.Ada.Widgets.Menu;
