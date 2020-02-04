@@ -10,6 +10,9 @@ of the project.
 - Binding for Tk `winfo` command
 - Binding for Tk Menu `delete` command
 
+### Changed
+- Made procedure `Execute_Widget_Command` public
+
 ### Fixed
 - Typos in changelog
 - Creating missing directories when build the library
