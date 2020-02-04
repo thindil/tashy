@@ -85,20 +85,6 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
    procedure Toggle(Buttn: in Tk_RadioButton);
    -- ****
 
-   -- ****f* RadioButton/Run_RadioButton_Command
-   -- FUNCTION
-   -- Run any Tk Radiobutton command
-   -- PARAMETERS
-   -- Buttn   - Tk_RadioButton on which command will be executed
-   -- Command - Tk_RadioButton command to execute
-   -- Options - Tk options for selected command. Default is empty
-   -- SOURCE
-   procedure Run_RadioButton_Command
-     (Buttn: in Tk_RadioButton; Command: in String;
-      Options: in String := "") with
-      Pre => Command /= "";
-      -- ****
-
 private
 
    type Tk_RadioButton is new Tk_Button with null record;
