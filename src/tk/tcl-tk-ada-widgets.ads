@@ -203,17 +203,17 @@ package Tcl.Tk.Ada.Widgets is
      (Widgt: in Tk_Widget'Class; Sequence: in String) return String;
    -- ****
 
-private
-
--- ****f* Widgets/Execute_Widget_Command
--- FUNCTION
--- Execute selected Tcl command in the selected widget. Private.
--- Widgt   - Tk_Widget in which command will be executed
--- command - Tcl command to execute
--- options - Options for the selected Tcl command
--- SOURCE
+   -- ****f* Widgets/Execute_Widget_Command
+   -- FUNCTION
+   -- Execute selected Tcl command in the selected widget. Generally, you
+   -- should not use this procedure outside library, unless here are no
+   -- direct binding for selected Tk widget command.
+   -- Widgt   - Tk_Widget in which command will be executed
+   -- command - Tcl command to execute
+   -- options - Options for the selected Tcl command
+   -- SOURCE
    procedure Execute_Widget_Command
      (Widgt: in Tk_Widget'Class; command: in String; options: in String := "");
--- ****
+   -- ****
 
 end Tcl.Tk.Ada.Widgets;
