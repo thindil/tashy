@@ -59,11 +59,13 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Tk_PanedWindow;
+      Interp: in Tcl_Interp := null) return Tk_PanedWindow with
+      Pre => pathName /= "";
    procedure Create
      (Widgt: out Tk_PanedWindow; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null);
-   -- ****
+      Interp: in Tcl_Interp := null) with
+      Pre => pathName /= "";
+      -- ****
 
 private
 
