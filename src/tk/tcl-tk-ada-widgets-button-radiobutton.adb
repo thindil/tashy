@@ -59,11 +59,4 @@ package body Tcl.Tk.Ada.Widgets.Button.RadioButton is
       Execute_Widget_Command(Buttn, "toggle");
    end Toggle;
 
-   procedure Run_RadioButton_Command
-     (Buttn: in Tk_RadioButton; Command: in String;
-      Options: in String := "") is
-   begin
-      Execute_Widget_Command(Buttn, Command, Options);
-   end Run_RadioButton_Command;
-
 end Tcl.Tk.Ada.Widgets.Button.RadioButton;
