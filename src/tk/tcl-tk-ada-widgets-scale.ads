@@ -59,11 +59,13 @@ package Tcl.Tk.Ada.Widgets.Scale is
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Tk_Scale;
+      Interp: in Tcl_Interp := null) return Tk_Scale with
+      Pre => pathName /= "";
    procedure Create
      (Widgt: out Tk_Scale; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null);
-   -- ****
+      Interp: in Tcl_Interp := null) with
+      Pre => pathName /= "";
+      -- ****
 
 private
 
