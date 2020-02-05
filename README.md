@@ -77,6 +77,15 @@ TASHY versioning is in X.Y.Z schema where:
   starts from 0. For example, version 8.6.2 means third release of TASHY for
   Tcl/Tk 8.6
 
+## Documentation
+
+For the last release, the library code documenation is available online at:
+
+https://thindil.github.io/tashy/
+
+Also, in directory [demos](demos/) you will find some examples of usage of the
+library.
+
 ## Generating code documentation
 
 To generate (or regenerate) code documentation, you need [ROBODoc](https://rfsber.home.xs4all.nl/Robo/)
