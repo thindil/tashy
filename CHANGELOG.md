@@ -12,6 +12,7 @@ of the project.
 
 ### Changed
 - Made procedure `Execute_Widget_Command` public
+- Updated README.md
 
 ### Fixed
 - Typos in changelog
