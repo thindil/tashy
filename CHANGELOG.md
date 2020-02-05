@@ -19,6 +19,7 @@ of the project.
 - Creating missing directories when build the library
 - Info about failed to load  Tklib `tooltip` package
 - Loading Tklib `tooltip` package
+- Crash setup script with -Wformat enabled
 
 ## [8.6.1] - 2020-01-31
 
