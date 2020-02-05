@@ -135,7 +135,7 @@ proc Save {} {
    }
    CreateGprFile
    source [file join [pwd] scripts tcl_record_sizes.tcl]
-   exec gcc $tashvar(TCL_INCLUDE) -o tcl_record_sizes [file join [pwd] src tcl_record_sizes.c]
+   exec gcc -Wno-format $tashvar(TCL_INCLUDE) -o tcl_record_sizes [file join [pwd] src tcl_record_sizes.c]
    file delete [file join [pwd] src tcl_record_sizes.c]
    exec [file join [pwd] tcl_record_sizes] > [file join [pwd] src tcl_record_sizes.ads]
    file delete [file join [pwd] tcl_record_sizes$tashvar(EXE)]
