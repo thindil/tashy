@@ -9,6 +9,7 @@ of the project.
 ### Added
 - Binding for Tk `winfo` command
 - Binding for Tk Menu `delete` command
+- **BREAKING:** creating relocatable version of library
 
 ### Changed
 - Made procedure `Execute_Widget_Command` public
