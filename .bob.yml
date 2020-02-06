@@ -1,3 +1,4 @@
+version: 2.0
 - command:
    name: setup
    execute:
@@ -29,13 +30,33 @@
 - command:
    name: install
    execute:
-      - gprinstall -f -P tashy.gpr --create-missing-dirs
+      - gprinstall -f -P tashy.gpr --create-missing-dirs -XLIBRARY_TYPE=static --build-var=LIBRARY_TYPE --build-name=static
+      - gprinstall -f -P tashy.gpr --create-missing-dirs -XLIBRARY_TYPE=relocatable --build-var=LIBRARY_TYPE --build-name=relocatable
    description: Install the library for use with GNAT
+   flags:
+      - unixonly
 - command:
    name: build
    execute:
-      - gprbuild -P tashy.gpr
+      - gprbuild -P tashy.gpr -XLIBRARY_TYPE=static
+      - gprbuild -P tashy.gpr -XLIBRARY_TYPE=relocatable
    description: Build the library
+   flags:
+      - unixonly
+- command:
+   name: install
+   execute:
+      - gprinstall -f -P tashy.gpr --create-missing-dirs -XLIBRARY_TYPE=static --build-var=LIBRARY_TYPE --build-name=static
+   description: Install the library for use with GNAT
+   flags:
+      - windowsonly
+- command:
+   name: build
+   execute:
+      - gprbuild -P tashy.gpr -XLIBRARY_TYPE=static
+   description: Build the library
+   flags:
+      - windowsonly
 - command:
    name: clean
    execute:
