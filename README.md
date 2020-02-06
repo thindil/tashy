@@ -41,10 +41,15 @@ this file is) to compile and type in the console:
    On Windows it will be `wish scripts\setup.tcl`. If you want to use default
    settings (like include all other bindings), you can use auto setup by
    adding parameter `--nogui`.
-2. `gprbuild -P tashy.gpr` to compile the library.
-3. `gprinstall -P tashy.gpr -p` to install it with gprinstall which allow use
-   it inside GNAT project files. On Unix systems this step may require root
-   privileges.
+2. `gprbuild -P tashy.gpr` to compile the library in static mode. If you want
+   to build relocatable version of the library, use command
+   `gprbuild -P tashy.gpr -XLIBRARY_TYPE=relocatable`.
+3. `gprinstall -P tashy.gpr -p -XLIBRARY_TYPE=static --build-var=LIBRARY_TYPE --build-name=static`
+   to install static version of the library with gprinstall which allow use
+   it inside GNAT project files. To install also relocatable version of the
+   library use command
+   `gprinstall -P tashy.gpr -p -XLIBRARY_TYPE=relocatable --build-var=LIBRARY_TYPE --build-name=relocatable`.
+   On Unix systems this step may require root privileges.
 
 If you have installed [Bob](https://github.com/thindil/bob) you can use it in
 that way:
@@ -52,9 +57,10 @@ that way:
 1. `bob setup` to setup all configuration needed for compilation. If you want
     to use default settings (like include all other bindings), you can use
     auto setup by typing `bob autosetup`.
-2. `bob build` to compile the library.
-3. `bob install` to install it with gprinstall which allow use
-   it inside GNAT project files. On Unix systems this step may require root
+2. `bob build` to compile the library in static and relocatable versions on
+   Unix and static only on Windows.
+3. `bob install` to install the library with gprinstall which allow use it
+   inside GNAT project files. On Unix systems this step may require root
    privileges.
 
 To remove all generated/compiled files type in the console:
