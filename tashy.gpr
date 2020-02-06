@@ -22,15 +22,18 @@ with "tash_options";
 
 project Tashy is
 
+   type Library_T is ("static", "relocatable");
+   Library_Type : Library_T := external ("LIBRARY_TYPE", "static");
+
    for Library_Name use "tashy";
 
    for Languages use ("ada", "c");
 
    for Source_Dirs use Tash_Options.Source_Files;
-   for Object_Dir use "obj";
-   for Library_Kind use "static";
-   for Library_Dir use "lib";
-   for Library_Src_Dir use "include";
+   for Object_Dir use "obj/" & Library_Type;
+   for Library_Kind use Library_Type;
+   for Library_Dir use "lib/" & Library_Type;
+   for Library_Src_Dir use "include/" & Library_Type;
 
    for Create_Missing_Dirs use "True";
 
