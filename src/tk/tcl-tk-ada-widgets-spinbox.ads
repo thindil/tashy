@@ -59,10 +59,12 @@ package Tcl.Tk.Ada.Widgets.SpinBox is
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Tk_SpinBox;
+      Interp: in Tcl_Interp := null) return Tk_SpinBox with
+      Pre => pathName /= "";
    procedure Create
      (Widgt: out Tk_SpinBox; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null);
+      Interp: in Tcl_Interp := null) with
+      Pre => pathName /= "";
    -- ****
 
 private
