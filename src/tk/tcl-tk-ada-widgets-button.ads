@@ -50,11 +50,11 @@ package Tcl.Tk.Ada.Widgets.Button is
    -- RESULT
    -- Newly created Tk_Button
    -- SOURCE
-   function Create
+   overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Tk_Button with
       Pre => pathName /= "";
-   procedure Create
+   overriding procedure Create
      (Widgt: out Tk_Button; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
