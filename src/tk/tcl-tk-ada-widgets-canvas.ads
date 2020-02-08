@@ -50,11 +50,11 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    -- RESULT
    -- Newly created Tk_Canvas
    -- SOURCE
-   function Create
+   overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Tk_Canvas with
       Pre => pathName /= "";
-   procedure Create
+   overriding procedure Create
      (Widgt: out Tk_Canvas; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
