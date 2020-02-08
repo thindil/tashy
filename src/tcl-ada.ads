@@ -284,7 +284,7 @@ package Tcl.Ada is
       -- deleteProc - Tcl_CmdDeleteProc which will be executed before command
       --              will be removed from interpreter. Can be null
       -- RESULT
-      -- Newly created Tcl_Command
+      -- Newly created Tcl_Command or null if command wasn't created.
       -- SOURCE
       function Tcl_CreateCommand
         (interp: not null Tcl_Interp;
