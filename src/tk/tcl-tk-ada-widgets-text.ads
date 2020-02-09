@@ -52,23 +52,26 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Tk_Text;
+      Interp: in Tcl_Interp := null) return Tk_Text with
+      Pre => pathName /= "";
    procedure Create
      (Widgt: out Tk_Text; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null);
-   -- ****
+      Interp: in Tcl_Interp := null) with
+      Pre => pathName /= "";
+      -- ****
 
-   -- ****f* Text/Insert
-   -- FUNCTION
-   -- Insert text into text widget at selected index
-   -- PARAMETERS
-   -- TextWidget - Tk_Text to which text will be inserted
-   -- Index      - Tk_Text position on which text will be inserted. Lines
-   --              starts from 1, characters starts from 0
-   -- Text       - Text to insert to Tk_Text widget
-   -- SOURCE
-   procedure Insert(TextWidget: in Tk_Text; Index, Text: in String);
-   -- ****
+      -- ****f* Text/Insert
+      -- FUNCTION
+      -- Insert text into text widget at selected index
+      -- PARAMETERS
+      -- TextWidget - Tk_Text to which text will be inserted
+      -- Index      - Tk_Text position on which text will be inserted. Lines
+      --              starts from 1, characters starts from 0
+      -- Text       - Text to insert to Tk_Text widget
+      -- SOURCE
+   procedure Insert(TextWidget: in Tk_Text; Index, Text: in String) with
+      Pre => Index /= "" and Text /= "";
+      -- ****
 
 private
 
