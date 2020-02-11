@@ -44,12 +44,14 @@ package Tcl.Tk.Ada.Widgets.Toplevel is
    -- Newly created Tk_Toplevel
    -- SOURCE
    function Create
-     (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Tk_Toplevel;
+     (pathName : in String; options : in String := "";
+      Interp   : in Tcl_Interp := null) return Tk_Toplevel with
+      Pre => pathName /= "";
    procedure Create
-     (Widgt: out Tk_Toplevel; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null);
-   -- ****
+     (Widgt : out Tk_Toplevel; pathName : in String; options : in String := "";
+      Interp : in     Tcl_Interp := null) with
+      Pre => pathName /= "";
+      -- ****
 
 private
 
