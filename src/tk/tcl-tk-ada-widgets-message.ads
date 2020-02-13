@@ -50,11 +50,11 @@ package Tcl.Tk.Ada.Widgets.Message is
    -- RESULT
    -- Newly created Tk_Message
    -- SOURCE
-   function Create
+   overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Tk_Message with
       Pre => pathName /= "";
-   procedure Create
+   overriding procedure Create
      (Widgt: out Tk_Message; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
