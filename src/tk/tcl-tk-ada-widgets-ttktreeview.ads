@@ -103,7 +103,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    procedure Delete(TreeViewWidget: in Ttk_Tree_View; ItemsList: in String);
    -- ****
 
-   -- ****f* Tcl.Tk.Ada.Widgets.TtkTreeView/Item
+   -- ****f* TtkTreeView/Item
    -- FUNCTION
    -- Modify options of selected item in tree view
    -- PARAMETERS
@@ -114,7 +114,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    procedure Item(TreeViewWidget: in Ttk_Tree_View; Item, Options: in String);
    -- ****
 
-   -- ****f* Tcl.Tk.Ada.Widgets.TtkTreeView/Item2
+   -- ****f* TtkTreeView/Item2
    -- FUNCTION
    -- Get options of the selected item in tree view
    -- PARAMETERS
@@ -126,6 +126,58 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    function Item
      (TreeViewWidget: in Ttk_Tree_View; Item: in String;
       Options: in String := "") return String;
+   -- ****
+
+      -- ****f* TtkTreeView/Selection
+      -- FUNCTION
+      -- Get selected items from the selected Ttk_Tree_View
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View from which selection will be taken
+      -- RESULT
+      -- List of items currently selected in TreeViewWidget
+      -- SOURCE
+   function Selection(TreeViewWidget: in Ttk_Tree_View) return String;
+   -- ****
+
+   -- ****f* TtkTreeView/Selection_Set
+   -- FUNCTION
+   -- Set new selection for the selected Ttk_Tree_View
+   -- PARAMETERS
+   -- TreeViewWidget - Ttk_Tree_View in which selection will be set
+   -- Items          - Tcl list of items to set as selected
+   -- SOURCE
+   procedure Selection_Set(TreeViewWidget: in Ttk_Tree_View; Items: in String);
+   -- ****
+
+   -- ****f* TtkTreeView/Selection_Add
+   -- FUNCTION
+   -- Add new items to the selection in the selected Ttk_Tree_View
+   -- PARAMETERS
+   -- TreeViewWidget - Ttk_Tree_View in which items will be added to selection
+   -- Items          - Tcl list of items to add to the selection
+   -- SOURCE
+   procedure Selection_Add(TreeViewWidget: in Ttk_Tree_View; Items: in String);
+   -- ****
+
+   -- ****f* TtkTreeView/Selection_Remove
+   -- FUNCTION
+   -- Remove selected items from the selection of the selected Ttk_Tree_View
+   -- PARAMETERS
+   -- TreeViewWidget - Ttk_Tree_View from which items will be removed
+   -- Items          - Tcl list of items to remove from the selection
+   -- SOURCE
+   procedure Selection_Remove(TreeViewWidget: in Ttk_Tree_View; Items: in String);
+   -- ****
+
+   -- ****f* TtkTreeView/Selection_Toggle
+   -- FUNCTION
+   -- Toggle selection state for selected items in the selected Ttk_Tree_View
+   -- PARAMETERS
+   -- TreeViewWidget - Ttk_Tree_View in which items will have toggled selection
+   --                  state
+   -- Items          - Tcl list of items to toggle
+   -- SOURCE
+   procedure Selection_Toggle(TreeViewWidget: in Ttk_Tree_View; Items: in String);
    -- ****
 
 private
