@@ -10,6 +10,8 @@ of the project.
 - Binding for Tk `winfo` command
 - Binding for Tk Menu `delete` command
 - **BREAKING:** creating relocatable version of library
+- Binding for Tk `ttk::tree_view` commands: `selection`, `selection add`,
+  `selection set`, `selection remove`, `selection toggle`
 
 ### Changed
 - Made procedure `Execute_Widget_Command` public
@@ -18,7 +20,7 @@ of the project.
 ### Fixed
 - Typos in changelog
 - Creating missing directories when build the library
-- Info about failed to load  Tklib `tooltip` package
+- Info about failed to load Tklib `tooltip` package
 - Loading Tklib `tooltip` package
 - Crash setup script with -Wformat enabled
 
