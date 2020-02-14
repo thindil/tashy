@@ -119,7 +119,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- Get options of the selected item in tree view
    -- PARAMETERS
    -- TreeViewWidget - Ttk_Tree_View in which item options will be queried
-   -- Item           - Id of the item to querry
+   -- Item           - Id of the item to query
    -- Options        - Tk options to get from the selected item. If empty, get
    --                  all options. Default is empty.
    -- SOURCE
@@ -186,7 +186,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- FUNCTION
    -- Get children of the selected item in the selected Ttk_Tree_View
    -- PARAMETERS
-   -- TreeViewWidget - Ttk_Tree_View in which items will be querried
+   -- TreeViewWidget - Ttk_Tree_View in which items will be queried
    -- Item           - Item ID from TreeViewWidget or {} for root item
    -- RESULT
    -- String with list of items which belong to the selected item
@@ -194,6 +194,21 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    function Children
      (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
       Pre => Item /= "";
+      -- ****
+
+      -- ****f* TtkTreeView/Exists
+      -- FUNCTION
+      -- Check if selected item is presented in the selected Ttk_Tree_View
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View which will be checked
+      -- Item           - Item identifier which will be looking for
+      -- RESULT
+      -- 0 if item don't exists in the selected TreeViewWidget, otherwise 1.
+      -- SOURCE
+   function Exists
+     (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
+      Pre => Item /= "";
+      -- ****
 
 private
 

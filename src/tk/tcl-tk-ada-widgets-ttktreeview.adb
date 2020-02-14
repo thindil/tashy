@@ -121,4 +121,11 @@ package body Tcl.Tk.Ada.Widgets.TtkTreeView is
       return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
    end Children;
 
+   function Exists
+     (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String is
+   begin
+      Execute_Widget_Command(TreeViewWidget, "exists", Item);
+      return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
+   end Exists;
+
 end Tcl.Tk.Ada.Widgets.TtkTreeView;
