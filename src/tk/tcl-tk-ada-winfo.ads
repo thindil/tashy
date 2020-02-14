@@ -40,7 +40,8 @@ package Tcl.Tk.Ada.Winfo is
    -- Selected information about selected Tk_Widget
    -- SOURCE
    function Winfo_Get
-     (Widgt: in Tk_Widget'Class; Info: in String; Options: in String := "") return String;
+     (Widgt: in Tk_Widget'Class; Info: in String; Options: in String := "")
+      return String;
    -- ****
 
 end Tcl.Tk.Ada.Winfo;

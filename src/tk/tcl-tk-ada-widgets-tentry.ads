@@ -57,16 +57,16 @@ package Tcl.Tk.Ada.Widgets.TEntry is
      (Widgt: out Tk_Entry; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
-   -- ****
+      -- ****
 
-   -- ****f* TEntry/get
-   -- FUNCTION
-   -- Get entry's text.
-   -- PARAMETERS
-   -- Widgt - Tk_Entry from which text will be taken
-   -- RESULT
-   -- Returns the entry's string.
-   -- SOURCE
+      -- ****f* TEntry/get
+      -- FUNCTION
+      -- Get entry's text.
+      -- PARAMETERS
+      -- Widgt - Tk_Entry from which text will be taken
+      -- RESULT
+      -- Returns the entry's string.
+      -- SOURCE
    function get(Widgt: in Tk_Entry) return String;
    -- ****
 

@@ -25,8 +25,8 @@ with Tcl.Ada;
 package body Tcl.Tk.Ada.Winfo is
 
    function Winfo_Get
-     (Widgt: in Tk_Widget'Class; Info: in String;
-      Options: in String := "") return String is
+     (Widgt: in Tk_Widget'Class; Info: in String; Options: in String := "")
+      return String is
    begin
       Tcl_Eval
         (Widgt.Interp,

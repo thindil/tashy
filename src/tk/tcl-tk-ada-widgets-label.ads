@@ -58,7 +58,7 @@ package Tcl.Tk.Ada.Widgets.Label is
      (Widgt: out Tk_Label; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
-   -- ****
+      -- ****
 
 private
 

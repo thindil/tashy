@@ -287,22 +287,16 @@ package Tcl.Ada is
       -- Newly created Tcl_Command or null if command wasn't created.
       -- SOURCE
       function Tcl_CreateCommand
-        (interp: not null Tcl_Interp;
-         cmdName: in C.Strings.chars_ptr;
-         proc: not null Tcl_CmdProc;
-         data: in ClientData;
-         deleteProc: in Tcl_CmdDeleteProc)
-         return Tcl_Command;
+        (interp: not null Tcl_Interp; cmdName: in C.Strings.chars_ptr;
+         proc: not null Tcl_CmdProc; data: in ClientData;
+         deleteProc: in Tcl_CmdDeleteProc) return Tcl_Command;
       pragma Import(C, Tcl_CreateCommand, "Tcl_CreateCommand");
 
       function Tcl_CreateCommand
-        (interp: not null Tcl_Interp;
-         cmdName: in String;
-         proc: not null Tcl_CmdProc;
-         data: in ClientData;
-         deleteProc: in Tcl_CmdDeleteProc)
-         return Tcl_Command;
-         -- ****
+        (interp: not null Tcl_Interp; cmdName: in String;
+         proc: not null Tcl_CmdProc; data: in ClientData;
+         deleteProc: in Tcl_CmdDeleteProc) return Tcl_Command;
+      -- ****
 
    end Generic_Command;
 
@@ -1080,7 +1074,7 @@ package Tcl.Ada is
    function Tcl_GetVar
      (interp: not null Tcl_Interp; varName: in String;
       flags: in C.int := TCL_GLOBAL_ONLY) return String;
-      -- ****
+   -- ****
 
    function Tcl_GetVar2
      (interp: not null Tcl_Interp; part1: in String; part2: in String;
