@@ -128,14 +128,14 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Options: in String := "") return String;
    -- ****
 
-      -- ****f* TtkTreeView/Selection
-      -- FUNCTION
-      -- Get selected items from the selected Ttk_Tree_View
-      -- PARAMETERS
-      -- TreeViewWidget - Ttk_Tree_View from which selection will be taken
-      -- RESULT
-      -- List of items currently selected in TreeViewWidget
-      -- SOURCE
+   -- ****f* TtkTreeView/Selection
+   -- FUNCTION
+   -- Get selected items from the selected Ttk_Tree_View
+   -- PARAMETERS
+   -- TreeViewWidget - Ttk_Tree_View from which selection will be taken
+   -- RESULT
+   -- List of items currently selected in TreeViewWidget
+   -- SOURCE
    function Selection(TreeViewWidget: in Ttk_Tree_View) return String;
    -- ****
 
@@ -166,7 +166,8 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- TreeViewWidget - Ttk_Tree_View from which items will be removed
    -- Items          - Tcl list of items to remove from the selection
    -- SOURCE
-   procedure Selection_Remove(TreeViewWidget: in Ttk_Tree_View; Items: in String);
+   procedure Selection_Remove
+     (TreeViewWidget: in Ttk_Tree_View; Items: in String);
    -- ****
 
    -- ****f* TtkTreeView/Selection_Toggle
@@ -177,8 +178,22 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    --                  state
    -- Items          - Tcl list of items to toggle
    -- SOURCE
-   procedure Selection_Toggle(TreeViewWidget: in Ttk_Tree_View; Items: in String);
+   procedure Selection_Toggle
+     (TreeViewWidget: in Ttk_Tree_View; Items: in String);
    -- ****
+
+   -- ****f* TtkTreeView/Children
+   -- FUNCTION
+   -- Get children of the selected item in the selected Ttk_Tree_View
+   -- PARAMETERS
+   -- TreeViewWidget - Ttk_Tree_View in which items will be querried
+   -- Item           - Item ID from TreeViewWidget or {} for root item
+   -- RESULT
+   -- String with list of items which belong to the selected item
+   -- SOURCE
+   function Children
+     (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
+      Pre => Item /= "";
 
 private
 
