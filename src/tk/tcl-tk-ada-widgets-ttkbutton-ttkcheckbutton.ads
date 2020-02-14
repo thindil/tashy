@@ -55,10 +55,10 @@ package Tcl.Tk.Ada.Widgets.TtkButton.TtkCheckButton is
       Interp: in Tcl_Interp := null) return Ttk_CheckButton with
       Pre => pathName /= "";
    procedure Create
-     (Widgt: out Ttk_CheckButton; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) with
+     (Widgt: out Ttk_CheckButton; pathName: in String;
+      options: in String := ""; Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
-   -- ****
+      -- ****
 
 private
 

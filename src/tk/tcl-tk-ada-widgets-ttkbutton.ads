@@ -58,15 +58,15 @@ package Tcl.Tk.Ada.Widgets.TtkButton is
      (Widgt: out Ttk_Button; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
-   -- ****
+      -- ****
 
-   -- ****f* TtkButton/Invoke
-   -- FUNCTION
-   -- Invoke the Tcl command associated with the button.
-   -- PARAMETERS
-   -- Buttn   - Ttk_Button from which Tcl command will be invoked
-   -- options - Tk options for the Tcl command invoke
-   -- SOURCE
+      -- ****f* TtkButton/Invoke
+      -- FUNCTION
+      -- Invoke the Tcl command associated with the button.
+      -- PARAMETERS
+      -- Buttn   - Ttk_Button from which Tcl command will be invoked
+      -- options - Tk options for the Tcl command invoke
+      -- SOURCE
    function Invoke
      (Buttn: in Ttk_Button'Class; options: in String := "") return String;
    -- ****

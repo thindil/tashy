@@ -33,13 +33,14 @@ package body Tcl.Tk.Ada.Widgets.TtkButton.TtkCheckButton is
          The_Widget.Interp := Interp;
       end if;
       The_Widget.Name := C.Strings.New_String(pathName);
-      Tcl_Eval(The_Widget.Interp, "ttk::checkbutton " & pathName & " " & options);
+      Tcl_Eval
+        (The_Widget.Interp, "ttk::checkbutton " & pathName & " " & options);
       return The_Widget;
    end Create;
 
    procedure Create
-     (Widgt: out Ttk_CheckButton; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) is
+     (Widgt: out Ttk_CheckButton; pathName: in String;
+      options: in String := ""; Interp: in Tcl_Interp := null) is
    begin
       Widgt := Create(pathName, options, Interp);
    end Create;
