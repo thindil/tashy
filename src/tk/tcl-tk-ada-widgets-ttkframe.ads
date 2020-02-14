@@ -59,11 +59,13 @@ package Tcl.Tk.Ada.Widgets.TtkFrame is
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Ttk_Frame;
+      Interp: in Tcl_Interp := null) return Ttk_Frame with
+      Pre => pathName /= "";
    procedure Create
      (Widgt: out Ttk_Frame; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null);
-   -- ****
+      Interp: in Tcl_Interp := null) with
+      Pre => pathName /= "";
+      -- ****
 
 private
 
