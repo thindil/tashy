@@ -52,10 +52,12 @@ package Tcl.Tk.Ada.Widgets.TtkButton is
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Ttk_Button;
+      Interp: in Tcl_Interp := null) return Ttk_Button with
+      Pre => pathName /= "";
    procedure Create
      (Widgt: out Ttk_Button; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null);
+      Interp: in Tcl_Interp := null) with
+      Pre => pathName /= "";
    -- ****
 
    -- ****f* TtkButton/Invoke
