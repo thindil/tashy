@@ -90,24 +90,35 @@ package body Tcl.Tk.Ada.Widgets.TtkTreeView is
       return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
    end Selection;
 
-   procedure Selection_Set(TreeViewWidget: in Ttk_Tree_View; Items: in String) is
+   procedure Selection_Set
+     (TreeViewWidget: in Ttk_Tree_View; Items: in String) is
    begin
       Execute_Widget_Command(TreeViewWidget, "selection set", Items);
    end Selection_Set;
 
-   procedure Selection_Add(TreeViewWidget: in Ttk_Tree_View; Items: in String) is
+   procedure Selection_Add
+     (TreeViewWidget: in Ttk_Tree_View; Items: in String) is
    begin
       Execute_Widget_Command(TreeViewWidget, "selection add", Items);
    end Selection_Add;
 
-   procedure Selection_Remove(TreeViewWidget: in Ttk_Tree_View; Items: in String) is
+   procedure Selection_Remove
+     (TreeViewWidget: in Ttk_Tree_View; Items: in String) is
    begin
       Execute_Widget_Command(TreeViewWidget, "selection remove", Items);
    end Selection_Remove;
 
-   procedure Selection_Toggle(TreeViewWidget: in Ttk_Tree_View; Items: in String) is
+   procedure Selection_Toggle
+     (TreeViewWidget: in Ttk_Tree_View; Items: in String) is
    begin
       Execute_Widget_Command(TreeViewWidget, "selection toggle", Items);
    end Selection_Toggle;
+
+   function Children
+     (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String is
+   begin
+      Execute_Widget_Command(TreeViewWidget, "children", Item);
+      return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
+   end Children;
 
 end Tcl.Tk.Ada.Widgets.TtkTreeView;
