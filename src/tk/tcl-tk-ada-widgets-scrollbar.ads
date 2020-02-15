@@ -57,11 +57,11 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
    -- RESULT
    -- Newly created Tk_Scrollbar
    -- SOURCE
-   function Create
+   overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Tk_Scrollbar with
       Pre => pathName /= "";
-   procedure Create
+   overriding procedure Create
      (Widgt: out Tk_Scrollbar; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
