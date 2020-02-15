@@ -221,9 +221,24 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       --                  root item
       -- Index          - Index to which the item will be moved
       -- SOURCE
-   procedure Move(TreeViewWidget: in Ttk_Tree_View; Item, Parent, Index: in String) with
+   procedure Move
+     (TreeViewWidget: in Ttk_Tree_View; Item, Parent, Index: in String) with
       Pre => Item /= "" and Parent /= "" and Index /= "";
       -- ****
+
+      -- ****f* TtkTreeView/Index
+      -- FUNCTION
+      -- Get index of selected item in the selected Ttk_Tree_View
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View which will be queried for item
+      -- Item           - Identifier of the selected item which will be
+      --                  looking for
+      -- RESULT
+      -- Numeric index of the selected item in the selected Ttk_Tree_View
+      -- SOURCE
+   function Index
+     (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
+      Pre => Item /= "";
 
 private
 
