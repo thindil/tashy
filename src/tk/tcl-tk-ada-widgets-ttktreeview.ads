@@ -210,6 +210,21 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Item /= "";
       -- ****
 
+      -- ****f* TtkTreeView/Move
+      -- FUNCTION
+      -- Move selected item to selected parent and on selected index in the
+      -- selected Ttk_Tree_View
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View in which item will be moved
+      -- Item           - Identifier of the item which will be moved
+      -- Parent         - Parent to which item will be moved. Use {} for
+      --                  root item
+      -- Index          - Index to which the item will be moved
+      -- SOURCE
+   procedure Move(TreeViewWidget: in Ttk_Tree_View; Item, Parent, Index: in String) with
+      Pre => Item /= "" and Parent /= "" and Index /= "";
+      -- ****
+
 private
 
    type Ttk_Tree_View is new Tk_Widget with null record;
