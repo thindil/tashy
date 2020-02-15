@@ -34,7 +34,7 @@
 package Tcl.Tk.Ada.Widgets.TtkProgressBar is
 -- ****
 
-   -- ****t* ProgressBar/Ttk_ProgressBar
+   -- ****t* TtkProgressBar/Ttk_ProgressBar
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -43,7 +43,7 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
    type Ttk_ProgressBar is new Tk_Widget with private;
    -- ****
 
-   -- ****f* ProgressBar/Create
+   -- ****f* TtkProgressBar/Create
    -- FUNCTION
    -- Creates a new Ttk_ProgressBar in the specified interpreter.
    -- PARAMETERS
