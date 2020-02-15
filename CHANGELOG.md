@@ -12,7 +12,7 @@ of the project.
 - **BREAKING:** creating relocatable version of library
 - Binding for Tk `ttk::tree_view` commands: `selection`, `selection add`,
   `selection set`, `selection remove`, `selection toggle`, `children`,
-  `exists`, `move`
+  `exists`, `move`, `index`
 
 ### Changed
 - Made procedure `Execute_Widget_Command` public
