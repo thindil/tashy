@@ -128,4 +128,11 @@ package body Tcl.Tk.Ada.Widgets.TtkTreeView is
       return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
    end Exists;
 
+   procedure Move
+     (TreeViewWidget: in Ttk_Tree_View; Item, Parent, Index: in String) is
+   begin
+      Execute_Widget_Command
+        (TreeViewWidget, "move", Item & " " & Parent & " " & Index);
+   end Move;
+
 end Tcl.Tk.Ada.Widgets.TtkTreeView;
