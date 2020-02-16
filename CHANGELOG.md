@@ -13,6 +13,7 @@ of the project.
 - Binding for Tk `ttk::tree_view` commands: `selection`, `selection add`,
   `selection set`, `selection remove`, `selection toggle`, `children`,
   `exists`, `move`, `index`
+- Binding for Tk `ttk:notebook` widget
 
 ### Changed
 - Made procedure `Execute_Widget_Command` public
