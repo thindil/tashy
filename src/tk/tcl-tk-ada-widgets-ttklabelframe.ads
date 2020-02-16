@@ -65,7 +65,7 @@ package Tcl.Tk.Ada.Widgets.TtkLabelFrame is
      (Widgt: out Ttk_LabelFrame; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
-   -- ****
+      -- ****
 
 private
 
