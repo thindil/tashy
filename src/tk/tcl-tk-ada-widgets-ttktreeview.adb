@@ -142,4 +142,18 @@ package body Tcl.Tk.Ada.Widgets.TtkTreeView is
       return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
    end Index;
 
+   procedure Column
+     (TreeViewWidget: in Ttk_Tree_View; Col: in String; Options: in String) is
+   begin
+      Execute_Widget_Command(TreeViewWidget, "column", Col & " " & Options);
+   end Column;
+
+   function Column
+     (TreeViewWidget: in Ttk_Tree_View; Col: in String;
+      Option: in String := "") return String is
+   begin
+      Execute_Widget_Command(TreeViewWidget, "column", Col & " " & Option);
+      return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
+   end Column;
+
 end Tcl.Tk.Ada.Widgets.TtkTreeView;

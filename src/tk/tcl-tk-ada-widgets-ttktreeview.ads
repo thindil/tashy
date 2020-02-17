@@ -239,6 +239,42 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    function Index
      (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
       Pre => Item /= "";
+      -- ****
+
+      -- ****f* TtkTreeView/Column
+      -- FUNCTION
+      -- Modify options of the selected column in the selected Ttk_Tree_View
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View in which column will be modified
+      -- Col            - Identificator of the column to modify
+      -- Options        - Tk options to pass to the column
+      -- SOURCE
+   procedure Column
+     (TreeViewWidget: in Ttk_Tree_View; Col: in String;
+      Options: in String) with
+      Pre => Col /= "" and Options /= "";
+      -- ****
+
+      -- ****f* TtkTreeView/Column2
+      -- FUNCTION
+      -- Get value or values of options of the selected column in the selected
+      -- Ttk_Tree_View
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View which will be queried for options
+      -- Col            - Identifier of the column from which options will be
+      --                  taken
+      -- Option         - Option value to take. If empty, return all options
+      --                  and their values. Default is empty
+      -- RESULT
+      -- If Option is set, return value of the selected option for the
+      -- selected column. Otherwise return all options with their values for
+      -- the selected column.
+      -- SOURCE
+   function Column
+     (TreeViewWidget: in Ttk_Tree_View; Col: in String;
+      Option: in String := "") return String with
+      Pre => Col /= "";
+      -- ****
 
 private
 
