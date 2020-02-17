@@ -85,4 +85,9 @@ package body Tcl.Tk.Ada.Grid is
       return Tcl.Ada.Tcl_GetResult(Master.Interp);
    end Column_Configure;
 
+   procedure Grid_Remove(Slave: in Tk_Widget'Class) is
+   begin
+      Tcl_Eval(Slave.Interp, "grid remove " & Widget_Image(Slave));
+   end Grid_Remove;
+
 end Tcl.Tk.Ada.Grid;

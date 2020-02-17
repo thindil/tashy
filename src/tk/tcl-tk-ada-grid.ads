@@ -122,4 +122,14 @@ package Tcl.Tk.Ada.Grid is
    function Column_Configure(Master, Slave: in Tk_Widget'Class) return String;
    -- ****
 
+   -- ****f* Grid/Grid_Remove
+   -- FUNCTION
+   -- Removes the Slave window from the grid list for its master
+   -- and unmaps their windows but remember their positions in the grid
+   -- PARAMETERS
+   -- Slave - Tk_Widget to remove
+   -- SOURCE
+   procedure Grid_Remove(Slave: in Tk_Widget'Class);
+   -- ****
+
 end Tcl.Tk.Ada.Grid;
