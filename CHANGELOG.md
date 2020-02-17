@@ -14,6 +14,7 @@ of the project.
   `selection set`, `selection remove`, `selection toggle`, `children`,
   `exists`, `move`, `index`, `column`
 - Binding for Tk `ttk:notebook` widget
+- Binding for Tk `grid remove` command
 
 ### Changed
 - Made procedure `Execute_Widget_Command` public
