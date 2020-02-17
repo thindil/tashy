@@ -59,21 +59,23 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Ttk_PanedWindow;
+      Interp: in Tcl_Interp := null) return Ttk_PanedWindow with
+      Pre => pathName /= "";
    procedure Create
      (Widgt: out Ttk_PanedWindow; pathName: in String;
-      options: in String := ""; Interp: in Tcl_Interp := null);
-   -- ****
+      options: in String := ""; Interp: in Tcl_Interp := null) with
+      Pre => pathName /= "";
+      -- ****
 
-   -- ****f* TtkPanedWindow/Add
-   -- FUNCTION
-   -- Adds the Tk_Widget to the Ttk_PanedWindow.
-   -- PARAMETERS
-   -- Paned     - Ttk_PanedWindow to which SubWindow will be added
-   -- SubWindow - Tk_Widget which will be added to the Ttk_PanedWindow
-   -- Options   - Tk options which will be passed to the command. Default
-   --             value is empty.
-   -- SOURCE
+      -- ****f* TtkPanedWindow/Add
+      -- FUNCTION
+      -- Adds the Tk_Widget to the Ttk_PanedWindow.
+      -- PARAMETERS
+      -- Paned     - Ttk_PanedWindow to which SubWindow will be added
+      -- SubWindow - Tk_Widget which will be added to the Ttk_PanedWindow
+      -- Options   - Tk options which will be passed to the command. Default
+      --             value is empty.
+      -- SOURCE
    procedure Add
      (Paned: in Ttk_PanedWindow; SubWindow: in Tk_Widget'Class;
       Options: in String := "");
