@@ -15,6 +15,7 @@ of the project.
   `exists`, `move`, `index`, `column`
 - Binding for Tk `ttk:notebook` widget
 - Binding for Tk `grid remove` command
+- Binding for Tk `listbox` widget
 
 ### Changed
 - Made procedure `Execute_Widget_Command` public
