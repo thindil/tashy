@@ -353,33 +353,79 @@ package Tcl.Ada is
 
    end Generic_EventQueueAndNotifier;
 
+   -- ****h* Ada/Generic_ExitHandler
+   -- FUNCTION
+   -- Generic packaged to add exit handlers to Tcl
+   -- SOURCE
    generic
       type ClientData is private;
    package Generic_ExitHandler is
+      -- ****
 
       pragma Assert(ClientData'Size <= System.Address'Size,
          "ClientData too big");
 
+      -- ****t* Generic_ExitHandler/Tcl_ExitProc
+      -- FUNCTION
+      -- Generic procedure for exit handlers
+      -- PARAMETERS
+      -- data - ClientData passed to the command
+      -- SOURCE
       type Tcl_ExitProc is access procedure(data: in ClientData);
       pragma Convention(C, Tcl_ExitProc);
+      -- ****
 
+      -- ****f* Generic_ExitHandler/Tcl_CreateExitHandler
+      -- FUNCTION
+      -- Set the selected procedure as a standard procedure called on Tcl exit
+      -- command
+      -- PARAMETERS
+      -- proc - Tcl_ExitProc which will be used as exit procedure
+      -- data - ClientData passed to the procedure
+      -- SOURCE
       procedure Tcl_CreateExitHandler
         (proc: not null Tcl_ExitProc; data: in ClientData);
       pragma Import(C, Tcl_CreateExitHandler, "Tcl_CreateExitHandler");
+      -- ****
 
+      -- ****f* Generic_ExitHandler/Tcl_CreateThreadExitHandler
+      -- FUNCTION
+      -- Set the selected procedure as a standart procedure called on exit
+      -- from a Tcl thread
+      -- PARAMETERS
+      -- proc - Tcl_ExitProc which will be used on exit from thread
+      -- data - ClientData passed to the procedure
+      -- SOURCE
       procedure Tcl_CreateThreadExitHandler
         (proc: not null Tcl_ExitProc; data: in ClientData);
       pragma Import(C, Tcl_CreateThreadExitHandler,
          "Tcl_CreateThreadExitHandler");
+      -- ****
 
+      -- ****f* Generic_ExitHandler/Tcl_DeleteExitHandler
+      -- FUNCTION
+      -- Delete previously set procedure as exit handler
+      -- PARAMETERS
+      -- proc - Tcl_ExitProc which was set as exit hander
+      -- data - ClientData passed to the procedure
+      -- SOURCE
       procedure Tcl_DeleteExitHandler
         (proc: not null Tcl_ExitProc; data: in ClientData);
       pragma Import(C, Tcl_DeleteExitHandler, "Tcl_DeleteExitHandler");
+      -- ****
 
+      -- ****f* Generic_ExitHandler/Tcl_DeleteThreadExitHandler
+      -- FUNCTION
+      -- Delete previously set procedure used on exit from Tcl thread
+      -- PARAMETERS
+      -- proc - Tcl_ExitProc which was set as exit hander
+      -- data - ClientData passed to the procedure
+      -- SOURCE
       procedure Tcl_DeleteThreadExitHandler
         (proc: not null Tcl_ExitProc; data: in ClientData);
       pragma Import(C, Tcl_DeleteThreadExitHandler,
          "Tcl_DeleteThreadExitHandler");
+      -- ****
 
    end Generic_ExitHandler;
 
