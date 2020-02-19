@@ -59,10 +59,12 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Ttk_Scrollbar;
+      Interp: in Tcl_Interp := null) return Ttk_Scrollbar with
+      Pre => pathName /= "";
    procedure Create
      (Widgt: out Ttk_Scrollbar; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null);
+      Interp: in Tcl_Interp := null) with
+      Pre => pathName /= "";
    -- ****
 
 private
