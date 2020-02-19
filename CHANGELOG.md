@@ -16,6 +16,7 @@ of the project.
 - Binding for Tk `ttk::notebook` widget
 - Binding for Tk `grid remove` command
 - Binding for Tk `listbox` widget
+- Binding for Tk `ttk::entry` widget
 
 ### Changed
 - Made procedure `Execute_Widget_Command` public
