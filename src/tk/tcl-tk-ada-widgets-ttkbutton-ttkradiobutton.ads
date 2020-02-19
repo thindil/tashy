@@ -50,11 +50,11 @@ package Tcl.Tk.Ada.Widgets.TtkButton.TtkRadioButton is
    -- RESULT
    -- Newly created Ttk_RadioButton
    -- SOURCE
-   function Create
+   overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Ttk_RadioButton with
       Pre => pathName /= "";
-   procedure Create
+   overriding procedure Create
      (Widgt: out Ttk_RadioButton; pathName: in String;
       options: in String := ""; Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
