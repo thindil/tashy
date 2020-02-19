@@ -57,11 +57,11 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
    -- RESULT
    -- Newly created Ttk_Entry
    -- SOURCE
-   function Create
+   overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Ttk_Entry with
       Pre => pathName /= "";
-   procedure Create
+   overriding procedure Create
      (Widgt: out Ttk_Entry; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
