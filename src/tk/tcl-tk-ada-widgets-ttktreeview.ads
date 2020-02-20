@@ -52,90 +52,100 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Ttk_Tree_View;
+      Interp: in Tcl_Interp := null) return Ttk_Tree_View with
+      Pre => pathName /= "";
    procedure Create
      (Widgt: out Ttk_Tree_View; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null);
-   -- ****
+      Interp: in Tcl_Interp := null) with
+      Pre => pathName /= "";
+      -- ****
 
-   -- ****f* TtkTreeView/Heading
-   -- FUNCTION
-   -- Configure selected column header
-   -- PARAMETERS
-   -- TreeViewWidget - Ttk_Tree_View in which header will be configured
-   -- Column         - Id of column which header will be configured
-   -- Options        - Tk options for selected header
-   -- SOURCE
+      -- ****f* TtkTreeView/Heading
+      -- FUNCTION
+      -- Configure selected column header
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View in which header will be configured
+      -- Column         - Id of column which header will be configured
+      -- Options        - Tk options for selected header
+      -- SOURCE
    procedure Heading
-     (TreeViewWidget: in Ttk_Tree_View; Column, Options: in String);
-   -- ****
+     (TreeViewWidget: in Ttk_Tree_View; Column, Options: in String) with
+      Pre => Column /= "" and Options /= "";
+      -- ****
 
-   -- ****f* TtkTreeView/Heading2
-   -- FUNCTION
-   -- Get configuration of selected column header
-   -- PARAMETERS
-   -- TreeViewWidget - Ttk_Tree_View in which header will be queried
-   -- Column         - Id of column which header will be queried
-   -- RESULT
-   -- Configuration options of selected header
-   -- SOURCE
+      -- ****f* TtkTreeView/Heading2
+      -- FUNCTION
+      -- Get configuration of selected column header
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View in which header will be queried
+      -- Column         - Id of column which header will be queried
+      -- RESULT
+      -- Configuration options of selected header
+      -- SOURCE
    function Heading
-     (TreeViewWidget: in Ttk_Tree_View; Column: in String) return String;
-   -- ****
+     (TreeViewWidget: in Ttk_Tree_View; Column: in String) return String with
+      Pre => Column /= "";
+      -- ****
 
-   -- ****f* TtkTreeView/Insert
-   -- FUNCTION
-   -- Insert new item to tree view
-   -- PARAMETERS
-   -- TreeViewWidget - Ttk_Tree_View in which item will be inserted
-   -- Options        - Tk options for the item which will be inserted
-   -- SOURCE
-   procedure Insert(TreeViewWidget: in Ttk_Tree_View; Options: in String);
-   -- ****
+      -- ****f* TtkTreeView/Insert
+      -- FUNCTION
+      -- Insert new item to tree view
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View in which item will be inserted
+      -- Options        - Tk options for the item which will be inserted
+      -- SOURCE
+   procedure Insert(TreeViewWidget: in Ttk_Tree_View; Options: in String) with
+      Pre => Options /= "";
+      -- ****
 
-   -- ****f* TtkTreeView/Delete
-   -- FUNCTION
-   -- Delete selected items from the tree view
-   -- PARAMETERS
-   -- TreeViewWidget - Ttk_Tree_View in which items will be deleted
-   -- ItemsList      - List of items to delete
-   -- SOURCE
-   procedure Delete(TreeViewWidget: in Ttk_Tree_View; ItemsList: in String);
-   -- ****
+      -- ****f* TtkTreeView/Delete
+      -- FUNCTION
+      -- Delete selected items from the tree view
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View in which items will be deleted
+      -- ItemsList      - List of items to delete
+      -- SOURCE
+   procedure Delete
+     (TreeViewWidget: in Ttk_Tree_View; ItemsList: in String) with
+      Pre => ItemsList /= "";
+      -- ****
 
-   -- ****f* TtkTreeView/Item
-   -- FUNCTION
-   -- Modify options of selected item in tree view
-   -- PARAMETERS
-   -- TreeViewWidget - Ttk_Tree_View in which item options will be modified
-   -- Item           - Id of the item to modify
-   -- Options        - Tk options to set for the selected item
-   -- SOURCE
-   procedure Item(TreeViewWidget: in Ttk_Tree_View; Item, Options: in String);
-   -- ****
+      -- ****f* TtkTreeView/Item
+      -- FUNCTION
+      -- Modify options of selected item in tree view
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View in which item options will be modified
+      -- Item           - Id of the item to modify
+      -- Options        - Tk options to set for the selected item
+      -- SOURCE
+   procedure Item
+     (TreeViewWidget: in Ttk_Tree_View; Item, Options: in String) with
+      Pre => Item /= "" and Options /= "";
+      -- ****
 
-   -- ****f* TtkTreeView/Item2
-   -- FUNCTION
+      -- ****f* TtkTreeView/Item2
+      -- FUNCTION
    -- Get options of the selected item in tree view
    -- PARAMETERS
    -- TreeViewWidget - Ttk_Tree_View in which item options will be queried
    -- Item           - Id of the item to query
    -- Options        - Tk options to get from the selected item. If empty, get
-   --                  all options. Default is empty.
-   -- SOURCE
+      --                  all options. Default is empty.
+      -- SOURCE
    function Item
      (TreeViewWidget: in Ttk_Tree_View; Item: in String;
-      Options: in String := "") return String;
-   -- ****
+      Options: in String := "") return String with
+      Pre => Item /= "";
+      -- ****
 
-   -- ****f* TtkTreeView/Selection
-   -- FUNCTION
-   -- Get selected items from the selected Ttk_Tree_View
-   -- PARAMETERS
-   -- TreeViewWidget - Ttk_Tree_View from which selection will be taken
-   -- RESULT
-   -- List of items currently selected in TreeViewWidget
-   -- SOURCE
+      -- ****f* TtkTreeView/Selection
+      -- FUNCTION
+      -- Get selected items from the selected Ttk_Tree_View
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View from which selection will be taken
+      -- RESULT
+      -- List of items currently selected in TreeViewWidget
+      -- SOURCE
    function Selection(TreeViewWidget: in Ttk_Tree_View) return String;
    -- ****
 
@@ -146,8 +156,10 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- TreeViewWidget - Ttk_Tree_View in which selection will be set
    -- Items          - Tcl list of items to set as selected
    -- SOURCE
-   procedure Selection_Set(TreeViewWidget: in Ttk_Tree_View; Items: in String);
-   -- ****
+   procedure Selection_Set
+     (TreeViewWidget: in Ttk_Tree_View; Items: in String) with
+      Pre => Items /= "";
+      -- ****
 
    -- ****f* TtkTreeView/Selection_Add
    -- FUNCTION
@@ -156,41 +168,45 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- TreeViewWidget - Ttk_Tree_View in which items will be added to selection
    -- Items          - Tcl list of items to add to the selection
    -- SOURCE
-   procedure Selection_Add(TreeViewWidget: in Ttk_Tree_View; Items: in String);
-   -- ****
+   procedure Selection_Add
+     (TreeViewWidget: in Ttk_Tree_View; Items: in String) with
+      Pre => Items /= "";
+      -- ****
 
-   -- ****f* TtkTreeView/Selection_Remove
-   -- FUNCTION
-   -- Remove selected items from the selection of the selected Ttk_Tree_View
-   -- PARAMETERS
-   -- TreeViewWidget - Ttk_Tree_View from which items will be removed
-   -- Items          - Tcl list of items to remove from the selection
-   -- SOURCE
+      -- ****f* TtkTreeView/Selection_Remove
+      -- FUNCTION
+      -- Remove selected items from the selection of the selected Ttk_Tree_View
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View from which items will be removed
+      -- Items          - Tcl list of items to remove from the selection
+      -- SOURCE
    procedure Selection_Remove
-     (TreeViewWidget: in Ttk_Tree_View; Items: in String);
-   -- ****
+     (TreeViewWidget: in Ttk_Tree_View; Items: in String) with
+      Pre => Items /= "";
+      -- ****
 
    -- ****f* TtkTreeView/Selection_Toggle
    -- FUNCTION
    -- Toggle selection state for selected items in the selected Ttk_Tree_View
    -- PARAMETERS
    -- TreeViewWidget - Ttk_Tree_View in which items will have toggled selection
-   --                  state
-   -- Items          - Tcl list of items to toggle
-   -- SOURCE
+      --                  state
+      -- Items          - Tcl list of items to toggle
+      -- SOURCE
    procedure Selection_Toggle
-     (TreeViewWidget: in Ttk_Tree_View; Items: in String);
-   -- ****
+     (TreeViewWidget: in Ttk_Tree_View; Items: in String) with
+      Pre => Items /= "";
+      -- ****
 
-   -- ****f* TtkTreeView/Children
-   -- FUNCTION
-   -- Get children of the selected item in the selected Ttk_Tree_View
-   -- PARAMETERS
-   -- TreeViewWidget - Ttk_Tree_View in which items will be queried
-   -- Item           - Item ID from TreeViewWidget or {} for root item
-   -- RESULT
-   -- String with list of items which belong to the selected item
-   -- SOURCE
+      -- ****f* TtkTreeView/Children
+      -- FUNCTION
+      -- Get children of the selected item in the selected Ttk_Tree_View
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View in which items will be queried
+      -- Item           - Item ID from TreeViewWidget or {} for root item
+      -- RESULT
+      -- String with list of items which belong to the selected item
+      -- SOURCE
    function Children
      (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
       Pre => Item /= "";
