@@ -121,8 +121,6 @@ reasons why the executable file might be covered by the GNU Public License.
 * More widgets to Tcl.Tk.Ada
 * More bindings for Tcl, Tk commands
 * More and better code documentation
-* Update code to newest Tcl version
-* Update code to newest Tk version
 * Your proposition :)
 
 ----
