@@ -20,6 +20,8 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
+with Tcl.Ada;
+
 package body Tcl.Tk.Ada.Widgets.Menu is
 
    function Create
@@ -58,5 +60,19 @@ package body Tcl.Tk.Ada.Widgets.Menu is
       Execute_Widget_Command
         (MenuWidget, "delete", StartIndex & " " & EndIndex);
    end Delete;
+
+   procedure Entry_Configure
+     (MenuWidget: in Tk_Menu; Index, Options: in String) is
+   begin
+      Execute_Widget_Command
+        (MenuWidget, "entryconfigure", Index & " " & Options);
+   end Entry_Configure;
+
+   function Entry_Configure
+     (MenuWidget: in Tk_Menu; Index: in String) return String is
+   begin
+      Execute_Widget_Command(MenuWidget, "entryconfigure", Index);
+      return Tcl.Ada.Tcl_GetResult(MenuWidget.Interp);
+   end Entry_Configure;
 
 end Tcl.Tk.Ada.Widgets.Menu;
