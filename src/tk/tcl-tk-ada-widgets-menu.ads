@@ -88,6 +88,35 @@ package Tcl.Tk.Ada.Widgets.Menu is
       EndIndex: in String := "") with
       Pre => StartIndex /= "";
 
+      -- ****f* Menu/Entry_Configure
+      -- FUNCTION
+      -- Configure selected menu entry
+      -- PARAMETERS
+      -- MenuWidget - Tk_Menu widget from which entry will be configured
+      -- Index      - Index of the menu entry to configure
+      -- Options    - Tk options for the menu entry
+      -- SOURCE
+   procedure Entry_Configure
+     (MenuWidget: in Tk_Menu; Index, Options: in String) with
+      Pre => Index /= "" and Options /= "";
+      -- ****
+
+      -- ****f* Menu/Entry_Configure2
+      -- FUNCTION
+      -- Get configuration of the selected menu entry
+      -- PARAMETERS
+      -- MenuWidget - Tk_Menu widget from which entry configuration will be
+      --              taken
+      -- Index      - Index of the menu entry to get configuration
+      -- RESULT
+      -- String with list of options and their values for the selected menu
+      -- entry
+      -- SOURCE
+   function Entry_Configure
+     (MenuWidget: in Tk_Menu; Index: in String) return String with
+      Pre => Index /= "";
+      -- ****
+
 private
 
    type Tk_Menu is new Tk_Widget with null record;
