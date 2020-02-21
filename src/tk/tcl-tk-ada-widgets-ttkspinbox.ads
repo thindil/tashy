@@ -57,11 +57,11 @@ package Tcl.Tk.Ada.Widgets.TtkSpinBox is
    -- RESULT
    -- Newly created Ttk_SpinBox
    -- SOURCE
-   function Create
+   overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Ttk_SpinBox with
       Pre => pathName /= "";
-   procedure Create
+   overriding procedure Create
      (Widgt: out Ttk_SpinBox; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
