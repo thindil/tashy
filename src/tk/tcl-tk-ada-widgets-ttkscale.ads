@@ -57,11 +57,11 @@ package Tcl.Tk.Ada.Widgets.TtkScale is
    -- RESULT
    -- Newly created Ttk_Scale
    -- SOURCE
-   function Create
+   overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Ttk_Scale with
       Pre => pathName /= "";
-   procedure Create
+   overriding procedure Create
      (Widgt: out Ttk_Scale; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
