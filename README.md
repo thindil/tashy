@@ -1,4 +1,4 @@
-TASHY is short from Tcl Ada SHell Younger. It is derivate of [TASH](http://tcladashell.sourceforge.net/)
+TASHY is short from Tcl Ada SHell Younger. It is derivate of [TASH](https://github.com/simonjwright/tcladashell)
 
 **IMPORTANT:** TASHY is not compatible with TASH. Here are many breaking
 changes in the code, thus TASHY should be used only with the new code. At
@@ -118,7 +118,6 @@ reasons why the executable file might be covered by the GNU Public License.
 
 ## TODO
 
-* More widgets to Tcl.Tk.Ada
 * More bindings for Tcl, Tk commands
 * More and better code documentation
 * Your proposition :)
