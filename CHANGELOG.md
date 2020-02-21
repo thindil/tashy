@@ -18,7 +18,8 @@ of the project.
 - Binding for Tk `listbox` widget
 - Binding for Tk `ttk::entry` widget
 - Binding for Tk `ttk::combobox` widget
-- Bindng for Tk `menu` command: `entryconfigure`
+- Binding for Tk `menu` command: `entryconfigure`
+- Binding for Tk `tk_optionMenu` widget
 
 ### Changed
 - Made procedure `Execute_Widget_Command` public
