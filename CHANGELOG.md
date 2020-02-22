@@ -66,6 +66,7 @@ of the project.
 - Binding for Tk `canvas` widget
 - Binding for Tk `text` widget
 - Binding for Tklib `tooltip` package
+- Binding for Tk `bitmap` object
 
 ### Changed
 - Enabled Get\_Main\_Window function
