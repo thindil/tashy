@@ -50,11 +50,11 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- RESULT
    -- Newly created Ttk_Tree_View
    -- SOURCE
-   function Create
+   overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Ttk_Tree_View with
       Pre => pathName /= "";
-   procedure Create
+   overriding procedure Create
      (Widgt: out Ttk_Tree_View; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
