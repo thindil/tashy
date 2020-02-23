@@ -27,12 +27,46 @@
 package Tcl.Tk.Ada.TtkStyle is
 -- ****
 
-   -- ****f* TtkStyle/Theme_Names
+   -- ****f* TtkStyle/Style_Configure
    -- FUNCTION
-   -- Get list of all available Ttk themes
-   -- RESULT
-   -- String with list of all available Ttk themes
+   -- Configure selected or create new Ttk style
+   -- PARAMETERS
+   -- Name    - Name of style to configure or create
+   -- Options - Options for the style
    -- SOURCE
+   procedure Style_Configure(Name, Options: in String) with
+      Pre => Name /= "" and Options /= "";
+      -- ****
+
+      -- ****f* TtkStyle/Style_Layout
+      -- FUNCTION
+      -- Define widget layout style for the selected style
+      -- PARAMETERS
+      -- Name    - Name of the style to modify
+      -- Options - Options for the layout
+      -- SOURCE
+   procedure Style_Layout(Name, Options: in String) with
+      Pre => Name /= "" and Options /= "";
+      -- ****
+
+      -- ****f* TtkStyle/Style_Layout2
+      -- FUNCTION
+      -- Get widget layout for the selected style
+      -- PARAMETERS
+      -- Name - Name of the style to query
+      -- RESULT
+      -- String with layout setting for the selected style
+      -- SOURCE
+   function Style_Layout(Name: in String) return String with
+      Pre => Name /= "";
+      -- ****
+
+      -- ****f* TtkStyle/Theme_Names
+      -- FUNCTION
+      -- Get list of all available Ttk themes
+      -- RESULT
+      -- String with list of all available Ttk themes
+      -- SOURCE
    function Theme_Names return String;
    -- ****
 
@@ -54,16 +88,5 @@ package Tcl.Tk.Ada.TtkStyle is
       -- SOURCE
    function Theme_Use return String;
    -- ****
-
-   -- ****f* TtkStyle/Style_Configure
-   -- FUNCTION
-   -- Configure selected or create new Ttk style
-   -- PARAMETERS
-   -- Name    - Name of style to configure or create
-   -- Options - Options for the style
-   -- SOURCE
-   procedure Style_Configure(Name, Options: in String) with
-      Pre => Name /= "" and Options /= "";
-      -- ****
 
 end Tcl.Tk.Ada.TtkStyle;
