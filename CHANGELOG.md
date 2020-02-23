@@ -14,7 +14,7 @@ of the project.
   `selection set`, `selection remove`, `selection toggle`, `children`,
   `exists`, `move`, `index`, `column`
 - Binding for Tk `ttk::notebook` widget
-- Binding for Tk `grid remove` command
+- Binding for Tk `grid` commands: `anchor`, `remove`
 - Binding for Tk `listbox` widget
 - Binding for Tk `ttk::entry` widget
 - Binding for Tk `ttk::combobox` widget
