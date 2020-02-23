@@ -20,7 +20,7 @@ of the project.
 - Binding for Tk `ttk::combobox` widget
 - Binding for Tk `menu` command: `entryconfigure`
 - Binding for Tk `tk_optionMenu` widget
-- Binding for Tk `ttk::style` command: `layout`
+- Binding for Tk `ttk::style` commands: `layout`, `map`
 
 ### Changed
 - Made procedure `Execute_Widget_Command` public
