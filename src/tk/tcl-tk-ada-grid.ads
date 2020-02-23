@@ -39,6 +39,53 @@ package Tcl.Tk.Ada.Grid is
    procedure Grid(Slave: in Tk_Widget'Class; Options: in String := "");
    -- ****
 
+   -- ****f* Grid/Grid_Anchor
+   -- FUNCTION
+   -- Set the anchor's direction for the selected grid
+   -- PARAMETERS
+   -- Master    - Tk_Widget which is set as grid
+   -- Direction - Direction in which anchor of the grid should be set.
+   -- SOURCE
+   procedure Grid_Anchor(Master: in Tk_Widget'Class; Direction: in String) with
+      Pre => Direction /= "";
+      -- ****
+
+      -- ****f* Grid/Grid_Anchor2
+      -- FUNCTION
+      -- Get the anchor's direction of the selected grid
+      -- PARAMETERS
+      -- Master - Tk_Widget which is set as grid
+      -- RESULT
+      -- A direction in which the grid anchor is set
+      -- SOURCE
+   function Grid_Anchor(Master: in Tk_Widget'Class) return String;
+   -- ****
+
+   -- ****f* Grid/Column_Configure
+   -- FUNCTION
+   -- Set column configuration options for Slave widget in Master grid.
+   -- PARAMETERS
+   -- Master  - Tk_Widget which is set as grid
+   -- Slave   - Tk_Widget inside Master
+   -- Options - Tk options for selected Slave
+   -- SOURCE
+   procedure Column_Configure
+     (Master, Slave: in Tk_Widget'Class; Options: in String) with
+      Pre => Options /= "";
+      -- ****
+
+      -- ****f* Grid/Column_Configure2
+      -- FUNCTION
+      -- Get column configuration options for Slave widget in Master grid.
+      -- PARAMETERS
+      -- Master  - Tk_Widget which is set as grid
+      -- Slave   - Tk_Widget inside Master
+      -- RESULT
+      -- String with column configuration options for selected Slave widget
+      -- SOURCE
+   function Column_Configure(Master, Slave: in Tk_Widget'Class) return String;
+   -- ****
+
    -- ****f* Grid/Grid_Configure
    -- FUNCTION
    -- Tells the grid how to configure the specified Slave window.
@@ -72,6 +119,16 @@ package Tcl.Tk.Ada.Grid is
    function Grid_Info(Slave: in Tk_Widget'Class) return String;
    -- ****
 
+   -- ****f* Grid/Grid_Remove
+   -- FUNCTION
+   -- Removes the Slave window from the grid list for its master
+   -- and unmaps their windows but remember their positions in the grid
+   -- PARAMETERS
+   -- Slave - Tk_Widget to remove
+   -- SOURCE
+   procedure Grid_Remove(Slave: in Tk_Widget'Class);
+   -- ****
+
    -- ****f* Grid/Row_Configure
    -- FUNCTION
    -- Set row configuration options for Slave widget in Master grid.
@@ -95,41 +152,6 @@ package Tcl.Tk.Ada.Grid is
       -- String with row configuration options for selected Slave widget
       -- SOURCE
    function Row_Configure(Master, Slave: in Tk_Widget'Class) return String;
-   -- ****
-
-   -- ****f* Grid/Column_Configure
-   -- FUNCTION
-   -- Set column configuration options for Slave widget in Master grid.
-   -- PARAMETERS
-   -- Master  - Tk_Widget which is set as grid
-   -- Slave   - Tk_Widget inside Master
-   -- Options - Tk options for selected Slave
-   -- SOURCE
-   procedure Column_Configure
-     (Master, Slave: in Tk_Widget'Class; Options: in String) with
-      Pre => Options /= "";
-      -- ****
-
-      -- ****f* Grid/Column_Configure2
-      -- FUNCTION
-      -- Get column configuration options for Slave widget in Master grid.
-      -- PARAMETERS
-      -- Master  - Tk_Widget which is set as grid
-      -- Slave   - Tk_Widget inside Master
-      -- RESULT
-      -- String with column configuration options for selected Slave widget
-      -- SOURCE
-   function Column_Configure(Master, Slave: in Tk_Widget'Class) return String;
-   -- ****
-
-   -- ****f* Grid/Grid_Remove
-   -- FUNCTION
-   -- Removes the Slave window from the grid list for its master
-   -- and unmaps their windows but remember their positions in the grid
-   -- PARAMETERS
-   -- Slave - Tk_Widget to remove
-   -- SOURCE
-   procedure Grid_Remove(Slave: in Tk_Widget'Class);
    -- ****
 
 end Tcl.Tk.Ada.Grid;
