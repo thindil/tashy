@@ -24,6 +24,22 @@ with Tcl.Ada; use Tcl.Ada;
 
 package body Tcl.Tk.Ada.TtkStyle is
 
+   procedure Style_Configure(Name, Options: in String) is
+   begin
+      Tcl_Eval(Get_Context, "ttk::style configure " & Name & " " & Options);
+   end Style_Configure;
+
+   procedure Style_Layout(Name, Options: in String) is
+   begin
+      Tcl_Eval(Get_Context, "ttk::style layout " & Name & " " & Options);
+   end Style_Layout;
+
+   function Style_Layout(Name: in String) return String is
+   begin
+      Tcl_Eval(Get_Context, "ttk::style layout " & Name);
+      return Tcl_GetResult(Get_Context);
+   end Style_Layout;
+
    function Theme_Names return String is
    begin
       Tcl_Eval(Get_Context, "ttk::style theme names");
@@ -40,10 +56,5 @@ package body Tcl.Tk.Ada.TtkStyle is
       Tcl_Eval(Get_Context, "ttk::style theme use");
       return Tcl_GetResult(Get_Context);
    end Theme_Use;
-
-   procedure Style_Configure(Name, Options: in String) is
-   begin
-      Tcl_Eval(Get_Context, "ttk::style configure " & Name & " " & Options);
-   end Style_Configure;
 
 end Tcl.Tk.Ada.TtkStyle;
