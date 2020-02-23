@@ -61,6 +61,17 @@ package Tcl.Tk.Ada.TtkStyle is
       Pre => Name /= "";
       -- ****
 
+      -- ****f* TtkStyle/Style_Map
+      -- FUNCTION
+      -- Define widget style dynamic map for the selected style
+      -- PARAMETERS
+      -- Name    - Name of the style to modify
+      -- Options - Options for the widget
+      -- SOURCE
+   procedure Style_Map(Name, Options: in String) with
+      Pre => Name /= "" and Options /= "";
+      -- ****
+
       -- ****f* TtkStyle/Theme_Names
       -- FUNCTION
       -- Get list of all available Ttk themes

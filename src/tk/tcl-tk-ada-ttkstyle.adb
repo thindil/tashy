@@ -40,6 +40,11 @@ package body Tcl.Tk.Ada.TtkStyle is
       return Tcl_GetResult(Get_Context);
    end Style_Layout;
 
+   procedure Style_Map(Name, Options: in String) is
+   begin
+      Tcl_Eval(Get_Context, "ttk::style map " & Name & " " & Options);
+   end Style_Map;
+
    function Theme_Names return String is
    begin
       Tcl_Eval(Get_Context, "ttk::style theme names");
