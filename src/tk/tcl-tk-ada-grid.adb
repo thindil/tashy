@@ -91,6 +91,15 @@ package body Tcl.Tk.Ada.Grid is
       return Tcl.Ada.Tcl_GetResult(Slave.Interp);
    end Grid_Info;
 
+   function Grid_Location
+     (Master: in Tk_Widget'Class; X, Y: in String) return String is
+   begin
+      Tcl_Eval
+        (Master.Interp,
+         "grid location " & Widget_Image(Master) & " " & X & " " & Y);
+      return Tcl.Ada.Tcl_GetResult(Master.Interp);
+   end Grid_Location;
+
    procedure Grid_Remove(Slave: in Tk_Widget'Class) is
    begin
       Tcl_Eval(Slave.Interp, "grid remove " & Widget_Image(Slave));
