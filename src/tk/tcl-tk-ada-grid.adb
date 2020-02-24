@@ -38,11 +38,20 @@ package body Tcl.Tk.Ada.Grid is
 
    function Grid_Anchor(Master: in Tk_Widget'Class) return String is
    begin
-      Tcl_Eval
-        (Master.Interp,
-         "grid anchor " & Widget_Image(Master));
+      Tcl_Eval(Master.Interp, "grid anchor " & Widget_Image(Master));
       return Tcl.Ada.Tcl_GetResult(Master.Interp);
    end Grid_Anchor;
+
+   function Grid_BBox
+     (Master: in Tk_Widget'Class; Column, Row, Column2, Row2: in String := "")
+      return String is
+   begin
+      Tcl_Eval
+        (Master.Interp,
+         "grid bbox " & Widget_Image(Master) & " " & Column & " " & Row & " " &
+         Column2 & " " & Row2);
+      return Tcl.Ada.Tcl_GetResult(Master.Interp);
+   end Grid_BBox;
 
    procedure Column_Configure
      (Master, Slave: in Tk_Widget'Class; Options: in String) is
