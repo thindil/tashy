@@ -26,6 +26,7 @@ of the project.
 - Made procedure `Execute_Widget_Command` public
 - Updated README.md
 - Updated code documentation
+- Funtion `heading` in `ttktreeview` can get value for the selected option
 
 ### Fixed
 - Typos in changelog
