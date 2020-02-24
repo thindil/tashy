@@ -54,9 +54,10 @@ package body Tcl.Tk.Ada.Widgets.TtkTreeView is
    end Heading;
 
    function Heading
-     (TreeViewWidget: in Ttk_Tree_View; Column: in String) return String is
+     (TreeViewWidget: in Ttk_Tree_View; Column: in String;
+      Option: in String := "") return String is
    begin
-      Execute_Widget_Command(TreeViewWidget, "heading", Column);
+      Execute_Widget_Command(TreeViewWidget, "heading", Column & " " & Option);
       return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
    end Heading;
 

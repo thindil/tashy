@@ -79,11 +79,14 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- PARAMETERS
       -- TreeViewWidget - Ttk_Tree_View in which header will be queried
       -- Column         - Id of column which header will be queried
+      -- Option         - Tk option to query. Default value is empty
       -- RESULT
-      -- Configuration options of selected header
+      -- Configuration options of selected header. If option is specified,
+      -- return selected option value
       -- SOURCE
    function Heading
-     (TreeViewWidget: in Ttk_Tree_View; Column: in String) return String with
+     (TreeViewWidget: in Ttk_Tree_View; Column: in String;
+      Option: in String := "") return String with
       Pre => Column /= "";
       -- ****
 
