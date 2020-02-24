@@ -61,6 +61,29 @@ package Tcl.Tk.Ada.Grid is
    function Grid_Anchor(Master: in Tk_Widget'Class) return String;
    -- ****
 
+   -- ****f* Grid/Grid_BBox
+   -- FUNCTION
+   -- Get size of bounding box of the selected grid
+   -- PARAMETERS
+   -- Master  - Tk_Widget which is set as grid
+   -- Column  - Starting column from which bounding box will be count. Default
+   --           is empty
+   -- Row     - Starting row from which bounding box will be count. Default is
+   --           empty
+   -- Column2 - Ending column from which bounding box will be count. Default
+   --           is empty
+   -- Row2    - Ending column from which bounding box will be count. Default
+   --           is empty
+   -- RESULT
+   -- If all parameters are empty, return bounding box for whole grid. If
+   -- only Column and Row specified, return box for the selected cell. If all
+   -- parameters are specified, return box for selected cells.
+   -- SOURCE
+   function Grid_BBox
+     (Master: in Tk_Widget'Class; Column, Row, Column2, Row2: in String := "")
+      return String;
+   -- ****
+
    -- ****f* Grid/Column_Configure
    -- FUNCTION
    -- Set column configuration options for Slave widget in Master grid.
