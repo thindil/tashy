@@ -142,6 +142,21 @@ package Tcl.Tk.Ada.Grid is
    function Grid_Info(Slave: in Tk_Widget'Class) return String;
    -- ****
 
+   -- ****f* Grid/Grid_Location
+   -- FUNCTION
+   -- Get column and row number on selected screen point in the selected grid
+   -- PARAMETERS
+   -- Master - Tk_Widget which is set as grid
+   -- X      - X coordinate of screen point to check
+   -- Y      - Y coordinate of screen point to check
+   -- RESULT
+   -- Number of column and row at selected screen point. If point is on the
+   -- or above the selected grid, return -1
+   -- SOURCE
+   function Grid_Location(Master: in Tk_Widget'Class; X, Y: in String) return String with
+      Pre => X /= "" and Y /= "";
+      -- ****
+
    -- ****f* Grid/Grid_Remove
    -- FUNCTION
    -- Removes the Slave window from the grid list for its master
