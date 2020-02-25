@@ -14,7 +14,8 @@ of the project.
   `selection set`, `selection remove`, `selection toggle`, `children`,
   `exists`, `move`, `index`, `column`
 - Binding for Tk `ttk::notebook` widget
-- Binding for Tk `grid` commands: `anchor`, `bbox`, `location` , `remove`
+- Binding for Tk `grid` commands: `anchor`, `bbox`, `location`, `propagate`,
+  `remove`
 - Binding for Tk `listbox` widget
 - Binding for Tk `ttk::entry` widget
 - Binding for Tk `ttk::combobox` widget
@@ -26,7 +27,7 @@ of the project.
 - Made procedure `Execute_Widget_Command` public
 - Updated README.md
 - Updated code documentation
-- Funtion `heading` in `ttktreeview` can get value for the selected option
+- Function `heading` in `ttktreeview` can get value for the selected option
 
 ### Fixed
 - Typos in changelog
