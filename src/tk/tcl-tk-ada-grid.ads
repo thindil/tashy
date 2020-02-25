@@ -157,6 +157,29 @@ package Tcl.Tk.Ada.Grid is
       Pre => X /= "" and Y /= "";
       -- ****
 
+      -- ****f* Grid/Grid_Propagate
+      -- FUNCTION
+      -- Enable or disable propagation for the selected grid
+      -- PARAMETERS
+      -- Master - Tk_Widget which is set as grid to modify
+      -- Value  - New value for propagation. 1, on, true enables, 0, off,
+      --          false disable propagation.
+      -- SOURCE
+   procedure Grid_Propagate(Master: in Tk_Widget'Class; Value: in String) with
+      Pre => Value /= "";
+      -- ****
+
+      -- ****f* Grid/Grid_Propagate2
+      -- FUNCTION
+      -- Get current state of propagatio for the selected grid
+      -- PARAMETERS
+      -- Master - Tk_Widget which is set as grid to query
+      -- RESULT
+      -- 0 if propagation is disabled, otherwise 1
+      -- SOURCE
+   function Grid_Propagate(Master: in Tk_Widget'Class) return String;
+   -- ****
+
    -- ****f* Grid/Grid_Remove
    -- FUNCTION
    -- Removes the Slave window from the grid list for its master

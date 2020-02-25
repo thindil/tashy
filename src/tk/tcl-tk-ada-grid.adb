@@ -100,6 +100,19 @@ package body Tcl.Tk.Ada.Grid is
       return Tcl.Ada.Tcl_GetResult(Master.Interp);
    end Grid_Location;
 
+   procedure Grid_Propagate(Master: in Tk_Widget'Class; Value: in String) is
+   begin
+      Tcl_Eval
+        (Master.Interp,
+         "grid propagate " & Widget_Image(Master) & " " & Value);
+   end Grid_Propagate;
+
+   function Grid_Propagate(Master: in Tk_Widget'Class) return String is
+   begin
+      Tcl_Eval(Master.Interp, "grid propagate " & Widget_Image(Master));
+      return Tcl.Ada.Tcl_GetResult(Master.Interp);
+   end Grid_Propagate;
+
    procedure Grid_Remove(Slave: in Tk_Widget'Class) is
    begin
       Tcl_Eval(Slave.Interp, "grid remove " & Widget_Image(Slave));
