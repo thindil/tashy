@@ -136,4 +136,10 @@ package body Tcl.Tk.Ada.Grid is
       return Tcl.Ada.Tcl_GetResult(Master.Interp);
    end Row_Configure;
 
+   function Grid_Size(Master: in Tk_Widget'Class) return String is
+   begin
+      Tcl_Eval(Master.Interp, "grid size " & Widget_Image(Master));
+      return Tcl.Ada.Tcl_GetResult(Master.Interp);
+   end Grid_Size;
+
 end Tcl.Tk.Ada.Grid;

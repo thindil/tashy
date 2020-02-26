@@ -215,4 +215,16 @@ package Tcl.Tk.Ada.Grid is
    function Row_Configure(Master, Slave: in Tk_Widget'Class) return String;
    -- ****
 
+   -- ****f* Grid/Grid_Size
+   -- FUNCTION
+   -- Get size of grid
+   -- PARAMETERS
+   -- Master - Tk_Widget which is set as grid
+   -- RESULT
+   -- First value is columns amount, second value is rows amount of the
+   -- selected grid
+   -- SOURCE
+   function Grid_Size(Master: in Tk_Widget'Class) return String;
+   -- ****
+
 end Tcl.Tk.Ada.Grid;
