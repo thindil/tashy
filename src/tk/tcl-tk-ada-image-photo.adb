@@ -45,6 +45,11 @@ package body Tcl.Tk.Ada.Image.Photo is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   procedure Blank(Image: in Tk_Photo) is
+   begin
+      Tcl_Eval(Image.Interp, Widget_Image(Image) & " blank");
+   end Blank;
+
    procedure Copy(Source, Target: in Tk_Photo; Options: in String := "") is
    begin
       Tcl_Eval

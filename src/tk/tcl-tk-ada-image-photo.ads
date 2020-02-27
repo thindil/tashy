@@ -60,15 +60,24 @@ package Tcl.Tk.Ada.Image.Photo is
       Pre => (pathName /= "");
       -- ****
 
-      -- ****f* Photo/Copy
+      -- ****f* Photo/Blank
       -- FUNCTION
-      -- Copy one photo to another
+      -- Blank the image, make it transparent
       -- PARAMETERS
-      -- Source  - Tk_Photo which will be used as source
-      -- Target  - Tk_Photo which will be used as destination
-      -- Options - Aditional Tk options for copy command. Default value is
-      --           empty
+      -- Image - Tk_Photo to blank
       -- SOURCE
+   procedure Blank(Image: in Tk_Photo);
+   -- ****
+
+   -- ****f* Photo/Copy
+   -- FUNCTION
+   -- Copy one photo to another
+   -- PARAMETERS
+   -- Source  - Tk_Photo which will be used as source
+   -- Target  - Tk_Photo which will be used as destination
+   -- Options - Aditional Tk options for copy command. Default value is
+   --           empty
+   -- SOURCE
    procedure Copy(Source, Target: in Tk_Photo; Options: in String := "");
    -- ****
 
