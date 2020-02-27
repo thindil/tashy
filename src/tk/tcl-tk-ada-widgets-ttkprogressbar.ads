@@ -67,6 +67,17 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
       Pre => pathName /= "";
    -- ****
 
+     -- ****f* TtkProgressBar/Step
+     -- FUNCTION
+     -- Increment value of the Ttk_ProgressBar by amount
+     -- PARAMETERS
+     -- Bar    - Ttk_ProgressBar which value will be modified
+     -- Amount - Amount to incremement. If empty, then value is incremented
+     --          by 1.0. Default value is empty
+     -- SOURCE
+   procedure Step(Bar: in Ttk_ProgressBar; Amount: in String := "");
+   -- ****
+
 private
 
    type Ttk_ProgressBar is new Tk_Widget with null record;

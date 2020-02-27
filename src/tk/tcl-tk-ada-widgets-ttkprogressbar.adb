@@ -45,4 +45,9 @@ package body Tcl.Tk.Ada.Widgets.TtkProgressBar is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   procedure Step(Bar: in Ttk_ProgressBar; Amount: in String := "") is
+   begin
+      Tcl_Eval(Bar.Interp, Widget_Image(Bar) & " step " & Amount);
+   end Step;
+
 end Tcl.Tk.Ada.Widgets.TtkProgressBar;
