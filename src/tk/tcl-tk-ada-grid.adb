@@ -142,4 +142,12 @@ package body Tcl.Tk.Ada.Grid is
       return Tcl.Ada.Tcl_GetResult(Master.Interp);
    end Grid_Size;
 
+   function Grid_Slaves
+     (Master: in Tk_Widget'Class; Option: in String := "") return String is
+   begin
+      Tcl_Eval
+        (Master.Interp, "grid slaves " & Widget_Image(Master) & " " & Option);
+      return Tcl.Ada.Tcl_GetResult(Master.Interp);
+   end Grid_Slaves;
+
 end Tcl.Tk.Ada.Grid;
