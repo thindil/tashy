@@ -24,6 +24,7 @@ of the project.
 - Binding for Tk `ttk::style` commands: `layout`, `map`
 - Binding for Tk `photo` command: `blank`
 - Binding for Tk `ttk::progressbar` command: `step`
+- Binding for Tk `busy` command
 
 ### Changed
 - Made procedure `Execute_Widget_Command` public
