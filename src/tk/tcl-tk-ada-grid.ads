@@ -153,7 +153,8 @@ package Tcl.Tk.Ada.Grid is
    -- Number of column and row at selected screen point. If point is on the
    -- or above the selected grid, return -1
    -- SOURCE
-   function Grid_Location(Master: in Tk_Widget'Class; X, Y: in String) return String with
+   function Grid_Location
+     (Master: in Tk_Widget'Class; X, Y: in String) return String with
       Pre => X /= "" and Y /= "";
       -- ****
 
@@ -226,5 +227,20 @@ package Tcl.Tk.Ada.Grid is
    -- SOURCE
    function Grid_Size(Master: in Tk_Widget'Class) return String;
    -- ****
+
+   -- ****f* Grid/Grid_Slaves
+   -- FUNCTION
+   -- Get list of slaves in the selected grid
+   -- PARAMETERS
+   -- Master  - Tk_Widget which is set as grid
+   -- Option  - Can be -row [number], -column [number] or empty. Default value
+   --           is empty
+   -- RESULT
+   -- If Option is empty, return all slaves of the selected grid. If option
+   -- is -row then return slaves in the selected row. If option is -column
+   -- then return slaves in the selected column
+   -- SOURCE
+   function Grid_Slaves
+     (Master: in Tk_Widget'Class; Option: in String := "") return String;
 
 end Tcl.Tk.Ada.Grid;
