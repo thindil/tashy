@@ -15,7 +15,7 @@ of the project.
   `exists`, `move`, `index`, `column`
 - Binding for Tk `ttk::notebook` widget
 - Binding for Tk `grid` commands: `anchor`, `bbox`, `location`, `propagate`,
-  `remove`, `size`
+  `remove`, `size`, `slaves`
 - Binding for Tk `listbox` widget
 - Binding for Tk `ttk::entry` widget
 - Binding for Tk `ttk::combobox` widget
