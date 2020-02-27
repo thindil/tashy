@@ -22,6 +22,7 @@ of the project.
 - Binding for Tk `menu` command: `entryconfigure`
 - Binding for Tk `tk_optionMenu` widget
 - Binding for Tk `ttk::style` commands: `layout`, `map`
+- Binding for Tk `photo` command: `blank`
 
 ### Changed
 - Made procedure `Execute_Widget_Command` public
