@@ -81,6 +81,18 @@ package Tcl.Tk.Ada.Image.Photo is
    procedure Copy(Source, Target: in Tk_Photo; Options: in String := "");
    -- ****
 
+   -- ****f* Photo/Data
+   -- FUNCTION
+   -- Get the selected image data
+   -- PARAMETERS
+   -- Image   - Tk_Photo which will be queried for the data
+   -- Options - Tk options for data to query. Default value is empty
+   -- RESULT
+   -- Image data, all if options are empty or specified option data
+   -- SOURCE
+   function Data(Image: in Tk_Photo; Options: in String := "") return String;
+   -- ****
+
 private
 
    type Tk_Photo is new Tk_Widget with null record;
