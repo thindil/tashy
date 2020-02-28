@@ -20,6 +20,8 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
+with Tcl.Ada;
+
 package body Tcl.Tk.Ada.Image.Photo is
 
    function Create
@@ -57,5 +59,11 @@ package body Tcl.Tk.Ada.Image.Photo is
          Widget_Image(Target) & " copy " & Widget_Image(Source) & " " &
          Options);
    end Copy;
+
+   function Data(Image: in Tk_Photo; Options: in String := "") return String is
+   begin
+      Tcl_Eval(Image.Interp, Widget_Image(Image) & " data " & Options);
+      return Tcl.Ada.Tcl_GetResult(Image.Interp);
+   end Data;
 
 end Tcl.Tk.Ada.Image.Photo;
