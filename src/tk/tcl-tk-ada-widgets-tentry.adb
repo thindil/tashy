@@ -46,10 +46,18 @@ package body Tcl.Tk.Ada.Widgets.TEntry is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
-   function get(Widgt: in Tk_Entry) return String is
+   procedure Delete
+     (TextEntry: in Tk_Entry; FirstIndex: in String;
+      LastIndex: in String := "") is
+   begin
+      Execute_Widget_Command
+        (TextEntry, "delete", FirstIndex & " " & LastIndex);
+   end Delete;
+
+   function Get(Widgt: in Tk_Entry) return String is
    begin --  get
       Execute_Widget_Command(Widgt, "get");
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
-   end get;
+   end Get;
 
 end Tcl.Tk.Ada.Widgets.TEntry;
