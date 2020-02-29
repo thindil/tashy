@@ -8,11 +8,11 @@
 <link rel="stylesheet" href="../robodoc.css" type="text/css" />
 <title>./src/tk/tcl-tk-ada-dialogs.ads</title>
 <!-- Source: ./src/tk/tcl-tk-ada-dialogs.ads -->
-<!-- Generated with ROBODoc Version 4.99.43 (Jul 26 2019) -->
+<!-- Generated with ROBODoc Version 4.99.43 (Feb  8 2020) -->
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.1 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.2 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -25,40 +25,40 @@
 <div id="content">
 <h3>TABLE OF CONTENTS</h3>
 <ul>
-<li>1. <a href="#robo13">TkAda/Dialogs</a></li>
+<li>1. <a href="#robo16">TkAda/Dialogs</a></li>
 <ul>
-<li>1.1. <a href="#robo113">Dialogs/Choose_Directory</a></li>
-<li>1.2. <a href="#robo114">Dialogs/Dialog</a></li>
-<li>1.3. <a href="#robo115">Dialogs/Get_Open_File</a></li>
-<li>1.4. <a href="#robo116">Dialogs/Get_Save_File</a></li>
-<li>1.5. <a href="#robo117">Dialogs/MessageBox</a></li>
+<li>1.1. <a href="#robo132">Dialogs/Choose_Directory</a></li>
+<li>1.2. <a href="#robo133">Dialogs/Dialog</a></li>
+<li>1.3. <a href="#robo134">Dialogs/Get_Open_File</a></li>
+<li>1.4. <a href="#robo135">Dialogs/Get_Save_File</a></li>
+<li>1.5. <a href="#robo136">Dialogs/MessageBox</a></li>
 </ul>
 </ul>
 <hr />
 <a name="TkAda2fDialogs"></a>
-<a name="robo13"></a><h2>TkAda/Dialogs [ Packages ]</h2>
+<a name="robo16"></a><h2>TkAda/Dialogs [ Packages ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada_ads.html#robo12">TkAda</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada_ads.html#robo14">TkAda</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo10">Tk</a> dialogs widgets
+<pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo12">Tk</a> dialogs widgets
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo7">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo10">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo8">Ada</a><span class="sign">.</span><strong>Dialogs</strong> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo9">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo12">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo10">Ada</a><span class="sign">.</span><strong>Dialogs</strong> <span class="keyword">is</span>
 </pre>
 
 <hr />
 <a name="Dialogs2fChoose5fDirectory"></a>
-<a name="robo113"></a><h2>Dialogs/Choose_Directory [ Subprograms ]</h2>
+<a name="robo132"></a><h2>Dialogs/Choose_Directory [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo13">Dialogs</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">Dialogs</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-spinbox_ads.html#robo158">Create</a> dialog which allow the user select directory.
+<pre> <a href="./tcl-tk-ada-widgets-ttkbutton-ttkcheckbutton_ads.html#robo222">Create</a> dialog which allow the user select directory.
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Choose_Directory</strong><span class="sign">(</span>Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Options - <a href="./tcl-tk_ads.html#robo10">Tk</a> options which will be passed to the dialog. Default value
+<pre> Options - <a href="./tcl-tk_ads.html#robo12">Tk</a> options which will be passed to the dialog. Default value
            is empty string
 </pre>
 <p class="item_name">RESULT</p>
@@ -67,46 +67,46 @@
 
 <hr />
 <a name="Dialogs2fDialog"></a>
-<a name="robo114"></a><h2>Dialogs/Dialog [ Subprograms ]</h2>
+<a name="robo133"></a><h2>Dialogs/Dialog [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo13">Dialogs</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">Dialogs</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-spinbox_ads.html#robo158">Create</a> the dialog from selected <a href="./tcl-tk-ada-widgets-toplevel_ads.html#robo77">Tk_Toplevel</a> widget
+<pre> <a href="./tcl-tk-ada-widgets-ttkbutton-ttkcheckbutton_ads.html#robo222">Create</a> the dialog from selected <a href="./tcl-tk-ada-widgets-toplevel_ads.html#robo89">Tk_Toplevel</a> widget
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Dialog</strong>
-     <span class="sign">(</span>Widget<span class="sign">:</span> <span class="keyword">in</span> <span class="keyword">out</span> <a href="./tcl-tk-ada-widgets-toplevel_ads.html#robo77">Tk_Toplevel</a><span class="sign">;</span> Title<span class="sign">,</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo37">Text</a><span class="sign">,</span> Bitmap<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+     <span class="sign">(</span>Widget<span class="sign">:</span> <span class="keyword">in</span> <span class="keyword">out</span> <a href="./tcl-tk-ada-widgets-toplevel_ads.html#robo89">Tk_Toplevel</a><span class="sign">;</span> Title<span class="sign">,</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo43">Text</a><span class="sign">,</span> <a href="./tcl-tk-ada-image-bitmap_ads.html#robo5">Bitmap</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
       Default<span class="sign">:</span> <span class="keyword">in</span> Integer<span class="sign">;</span> Buttons<span class="sign">:</span> <span class="keyword">in</span> DialogButtons<span class="sign">)</span> <span class="keyword">return</span> Integer <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span>
-      <span class="sign">(</span>Title <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and <a href="./tcl-tk-ada-widgets-text_ads.html#robo37">Text</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and Bitmap <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and
+      <span class="sign">(</span>Title <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and <a href="./tcl-tk-ada-widgets-text_ads.html#robo43">Text</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and <a href="./tcl-tk-ada-image-bitmap_ads.html#robo5">Bitmap</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and
        Default <span class="sign">&lt;</span><span class="sign">=</span> Buttons<span class="keyword">'Length</span><span class="sign">);</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Widget  - <a href="./tcl-tk-ada-widgets-toplevel_ads.html#robo77">Tk_Toplevel</a> widget which will be used as the dialog.
+<pre> Widget  - <a href="./tcl-tk-ada-widgets-toplevel_ads.html#robo89">Tk_Toplevel</a> widget which will be used as the dialog.
  Title   - Title of the dialog
- <a href="./tcl-tk-ada-widgets-text_ads.html#robo37">Text</a>    - <a href="./tcl-tk-ada-widgets-text_ads.html#robo37">Text</a> to display in the dialog
- Bitmap  - <a href="./tcl-tk_ads.html#robo10">Tk</a> bitmap name to show in dialog
+ <a href="./tcl-tk-ada-widgets-text_ads.html#robo43">Text</a>    - <a href="./tcl-tk-ada-widgets-text_ads.html#robo43">Text</a> to display in the dialog
+ <a href="./tcl-tk-ada-image-bitmap_ads.html#robo5">Bitmap</a>  - <a href="./tcl-tk_ads.html#robo12">Tk</a> bitmap name to show in dialog
  Default - Default button in dialog. Buttons counts from 0. If less than
            0 no button will be set as default.
  Buttons - Array with text to show on buttons. One element is one button
 </pre>
 <p class="item_name">RESULT</p>
-<pre> Index of button which was clicked or -1 if no button was clicked.
+<pre> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo261">Index</a> of button which was clicked or -1 if no button was clicked.
 </pre>
 
 <hr />
 <a name="Dialogs2fGet5fOpen5fFile"></a>
-<a name="robo115"></a><h2>Dialogs/Get_Open_File [ Subprograms ]</h2>
+<a name="robo134"></a><h2>Dialogs/Get_Open_File [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo13">Dialogs</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">Dialogs</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-spinbox_ads.html#robo158">Create</a> dialog which allow the user select file to open.
+<pre> <a href="./tcl-tk-ada-widgets-ttkbutton-ttkcheckbutton_ads.html#robo222">Create</a> dialog which allow the user select file to open.
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Get_Open_File</strong><span class="sign">(</span>Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Options - <a href="./tcl-tk_ads.html#robo10">Tk</a> options which will be passed to the dialog. Default value
+<pre> Options - <a href="./tcl-tk_ads.html#robo12">Tk</a> options which will be passed to the dialog. Default value
            is empty string
 </pre>
 <p class="item_name">RESULT</p>
@@ -115,17 +115,17 @@
 
 <hr />
 <a name="Dialogs2fGet5fSave5fFile"></a>
-<a name="robo116"></a><h2>Dialogs/Get_Save_File [ Subprograms ]</h2>
+<a name="robo135"></a><h2>Dialogs/Get_Save_File [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo13">Dialogs</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">Dialogs</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-spinbox_ads.html#robo158">Create</a> dialog which allow the user select file to save.
+<pre> <a href="./tcl-tk-ada-widgets-ttkbutton-ttkcheckbutton_ads.html#robo222">Create</a> dialog which allow the user select file to save.
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Get_Save_File</strong><span class="sign">(</span>Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Options - <a href="./tcl-tk_ads.html#robo10">Tk</a> options which will be passed to the dialog. Default value
+<pre> Options - <a href="./tcl-tk_ads.html#robo12">Tk</a> options which will be passed to the dialog. Default value
            is empty string
 </pre>
 <p class="item_name">RESULT</p>
@@ -134,17 +134,17 @@
 
 <hr />
 <a name="Dialogs2fMessageBox"></a>
-<a name="robo117"></a><h2>Dialogs/MessageBox [ Subprograms ]</h2>
+<a name="robo136"></a><h2>Dialogs/MessageBox [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo13">Dialogs</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">Dialogs</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-spinbox_ads.html#robo158">Create</a> message window and show it to user
+<pre> <a href="./tcl-tk-ada-widgets-ttkbutton-ttkcheckbutton_ads.html#robo222">Create</a> message window and show it to user
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>MessageBox</strong><span class="sign">(</span>Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Options - <a href="./tcl-tk_ads.html#robo10">Tk</a> options which will be passed to the dialog. Default value
+<pre> Options - <a href="./tcl-tk_ads.html#robo12">Tk</a> options which will be passed to the dialog. Default value
            is empty string
 </pre>
 <p class="item_name">RESULT</p>
@@ -153,7 +153,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-dialogs.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Jan 31 2020 07:13:13
+<p>Generated from ./src/tk/tcl-tk-ada-dialogs.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Sat Feb 29 2020 07:27:12
 </p>
 </div> <!-- footer -->
 </body>
