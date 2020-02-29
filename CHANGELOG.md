@@ -22,7 +22,7 @@ of the project.
 - Binding for Tk `menu` command: `entryconfigure`
 - Binding for Tk `tk_optionMenu` widget
 - Binding for Tk `ttk::style` commands: `layout`, `map`
-- Binding for Tk `photo` commands: `blank`, `data`
+- Binding for Tk `photo` commands: `blank`, `data`, `get`
 - Binding for Tk `ttk::progressbar` command: `step`
 - Binding for Tk `busy` command
 
