@@ -55,9 +55,16 @@ package body Tcl.Tk.Ada.Widgets.TEntry is
    end Delete;
 
    function Get(Widgt: in Tk_Entry) return String is
-   begin --  get
+   begin
       Execute_Widget_Command(Widgt, "get");
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end Get;
+
+   procedure Insert
+     (TextEntry: in Tk_Entry; Index: in String; Text: in String) is
+   begin
+      Execute_Widget_Command
+        (TextEntry, "insert", Index & " " & "{" & Text & "}");
+   end Insert;
 
 end Tcl.Tk.Ada.Widgets.TEntry;

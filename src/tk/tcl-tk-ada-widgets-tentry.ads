@@ -85,6 +85,19 @@ package Tcl.Tk.Ada.Widgets.TEntry is
    function Get(Widgt: in Tk_Entry) return String;
    -- ****
 
+   -- ****f* TEntry/Insert
+   -- FUNCTION
+   -- Insert text at selected index to the selected Tk_Entry
+   -- PARAMETERS
+   -- TextEntry - Tk_Entry to which text will be inserted
+   -- Index     - Index in which position text will be inserted
+   -- Text      - Text to insert
+   -- SOURCE
+   procedure Insert
+     (TextEntry: in Tk_Entry; Index: in String; Text: in String) with
+      Pre => Index /= "" and Text /= "";
+      -- ****
+
 private
 
    type Tk_Entry is new Tk_Widget with null record;
