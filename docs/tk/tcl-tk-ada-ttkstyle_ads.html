@@ -8,11 +8,11 @@
 <link rel="stylesheet" href="../robodoc.css" type="text/css" />
 <title>./src/tk/tcl-tk-ada-ttkstyle.ads</title>
 <!-- Source: ./src/tk/tcl-tk-ada-ttkstyle.ads -->
-<!-- Generated with ROBODoc Version 4.99.43 (Jul 26 2019) -->
+<!-- Generated with ROBODoc Version 4.99.43 (Feb  8 2020) -->
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.1 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.2 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -25,31 +25,34 @@
 <div id="content">
 <h3>TABLE OF CONTENTS</h3>
 <ul>
-<li>1. <a href="#robo17">TkAda/TtkStyle</a></li>
+<li>1. <a href="#robo20">TkAda/TtkStyle</a></li>
 <ul>
-<li>1.1. <a href="#robo197">TtkStyle/Style_Configure</a></li>
-<li>1.2. <a href="#robo198">TtkStyle/Theme_Names</a></li>
-<li>1.3. <a href="#robo199">TtkStyle/Theme_Use</a></li>
-<li>1.4. <a href="#robo200">TtkStyle/Theme_Use2</a></li>
+<li>1.1. <a href="#robo246">TtkStyle/Style_Configure</a></li>
+<li>1.2. <a href="#robo247">TtkStyle/Style_Layout</a></li>
+<li>1.3. <a href="#robo248">TtkStyle/Style_Layout2</a></li>
+<li>1.4. <a href="#robo249">TtkStyle/Style_Map</a></li>
+<li>1.5. <a href="#robo250">TtkStyle/Theme_Names</a></li>
+<li>1.6. <a href="#robo251">TtkStyle/Theme_Use</a></li>
+<li>1.7. <a href="#robo252">TtkStyle/Theme_Use2</a></li>
 </ul>
 </ul>
 <hr />
 <a name="TkAda2fTtkStyle"></a>
-<a name="robo17"></a><h2>TkAda/TtkStyle [ Packages ]</h2>
+<a name="robo20"></a><h2>TkAda/TtkStyle [ Packages ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada_ads.html#robo12">TkAda</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada_ads.html#robo14">TkAda</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo10">Tk</a> command ttk::style
+<pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo12">Tk</a> command ttk::style
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo7">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo10">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo8">Ada</a><span class="sign">.</span><strong>TtkStyle</strong> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo9">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo12">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo10">Ada</a><span class="sign">.</span><strong>TtkStyle</strong> <span class="keyword">is</span>
 </pre>
 
 <hr />
 <a name="TtkStyle2fStyle5fConfigure"></a>
-<a name="robo197"></a><h2>TtkStyle/Style_Configure [ Subprograms ]</h2>
+<a name="robo246"></a><h2>TtkStyle/Style_Configure [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo17">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Configure selected or create new Ttk style
 </pre>
@@ -58,17 +61,70 @@
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Name <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Name    - Name of style to <a href="./tcl-tk-ada-widgets_ads.html#robo209">configure</a> or create
+<pre> Name    - Name of style to <a href="./tcl-tk-ada-widgets_ads.html#robo274">configure</a> or create
  Options - Options for the style
 </pre>
 
 <hr />
-<a name="TtkStyle2fTheme5fNames"></a>
-<a name="robo198"></a><h2>TtkStyle/Theme_Names [ Subprograms ]</h2>
+<a name="TtkStyle2fStyle5fLayout"></a>
+<a name="robo247"></a><h2>TtkStyle/Style_Layout [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo17">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Get list of all available Ttk themes
+<pre> Define widget layout style for the selected style
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Style_Layout</strong><span class="sign">(</span>Name<span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> Name <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Name    - Name of the style to modify
+ Options - Options for the layout
+</pre>
+
+<hr />
+<a name="TtkStyle2fStyle5fLayout2"></a>
+<a name="robo248"></a><h2>TtkStyle/Style_Layout2 [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo225">Get</a> widget layout for the selected style
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="#robo247">Style_Layout</a><span class="sign">(</span>Name<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> Name <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Name - Name of the style to query
+</pre>
+<p class="item_name">RESULT</p>
+<pre> String with layout setting for the selected style
+</pre>
+
+<hr />
+<a name="TtkStyle2fStyle5fMap"></a>
+<a name="robo249"></a><h2>TtkStyle/Style_Map [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Define widget style dynamic map for the selected style
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Style_Map</strong><span class="sign">(</span>Name<span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> Name <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Name    - Name of the style to modify
+ Options - Options for the widget
+</pre>
+
+<hr />
+<a name="TtkStyle2fTheme5fNames"></a>
+<a name="robo250"></a><h2>TtkStyle/Theme_Names [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo225">Get</a> list of all available Ttk themes
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Theme_Names</strong> <span class="keyword">return</span> String<span class="sign">;</span>
@@ -79,9 +135,9 @@
 
 <hr />
 <a name="TtkStyle2fTheme5fUse"></a>
-<a name="robo199"></a><h2>TtkStyle/Theme_Use [ Subprograms ]</h2>
+<a name="robo251"></a><h2>TtkStyle/Theme_Use [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo17">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Set new Ttk theme and redraw all widgets
 </pre>
@@ -95,14 +151,14 @@
 
 <hr />
 <a name="TtkStyle2fTheme5fUse2"></a>
-<a name="robo200"></a><h2>TtkStyle/Theme_Use2 [ Subprograms ]</h2>
+<a name="robo252"></a><h2>TtkStyle/Theme_Use2 [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo17">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Get currenlty used Ttk theme
+<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo225">Get</a> currenlty used Ttk theme
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <a href="#robo199">Theme_Use</a> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> <a href="#robo251">Theme_Use</a> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">RESULT</p>
 <pre> Name of currently used Ttk theme
@@ -110,7 +166,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-ttkstyle.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Jan 31 2020 07:13:13
+<p>Generated from ./src/tk/tcl-tk-ada-ttkstyle.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Sat Feb 29 2020 07:27:12
 </p>
 </div> <!-- footer -->
 </body>

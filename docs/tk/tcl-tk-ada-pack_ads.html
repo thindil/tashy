@@ -8,11 +8,11 @@
 <link rel="stylesheet" href="../robodoc.css" type="text/css" />
 <title>./src/tk/tcl-tk-ada-pack.ads</title>
 <!-- Source: ./src/tk/tcl-tk-ada-pack.ads -->
-<!-- Generated with ROBODoc Version 4.99.43 (Jul 26 2019) -->
+<!-- Generated with ROBODoc Version 4.99.43 (Feb  8 2020) -->
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.1 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.2 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -25,93 +25,93 @@
 <div id="content">
 <h3>TABLE OF CONTENTS</h3>
 <ul>
-<li>1. <a href="#robo16">TkAda/Pack</a></li>
+<li>1. <a href="#robo19">TkAda/Pack</a></li>
 <ul>
-<li>1.1. <a href="#robo141">Pack/Pack</a></li>
+<li>1.1. <a href="#robo178">Pack/Pack</a></li>
 <ul>
-<li>1.1.1. <a href="#robo142">Pack/Pack_Configure</a></li>
-<li>1.1.2. <a href="#robo143">Pack/Pack_Forget</a></li>
-<li>1.1.3. <a href="#robo144">Pack/Pack_Info</a></li>
-<li>1.1.4. <a href="#robo145">Pack/Pack_Propagate</a></li>
-<li>1.1.5. <a href="#robo146">Pack/Pack_Propagate2</a></li>
-<li>1.1.6. <a href="#robo147">Pack/Pack_Slaves</a></li>
+<li>1.1.1. <a href="#robo179">Pack/Pack_Configure</a></li>
+<li>1.1.2. <a href="#robo180">Pack/Pack_Forget</a></li>
+<li>1.1.3. <a href="#robo181">Pack/Pack_Info</a></li>
+<li>1.1.4. <a href="#robo182">Pack/Pack_Propagate</a></li>
+<li>1.1.5. <a href="#robo183">Pack/Pack_Propagate2</a></li>
+<li>1.1.6. <a href="#robo184">Pack/Pack_Slaves</a></li>
 </ul>
 </ul>
 </ul>
 <hr />
 <a name="TkAda2fPack"></a>
-<a name="robo16"></a><h2>TkAda/Pack [ Packages ]</h2>
+<a name="robo19"></a><h2>TkAda/Pack [ Packages ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada_ads.html#robo12">TkAda</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada_ads.html#robo14">TkAda</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo10">Tk</a> command <strong>Pack</strong>
+<pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo12">Tk</a> command <strong>Pack</strong>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo7">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo10">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo8">Ada</a><span class="sign">.</span><strong>Pack</strong> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo9">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo12">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo10">Ada</a><span class="sign">.</span><strong>Pack</strong> <span class="keyword">is</span>
 </pre>
 
 <hr />
 <a name="Pack2fPack"></a>
-<a name="robo141"></a><h2>Pack/Pack [ Subprograms ]</h2>
+<a name="robo178"></a><h2>Pack/Pack [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">Pack</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo19">Pack</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> <strong>Pack</strong> selected widget with selected options
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Pack</strong><span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo91">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">);</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Pack</strong><span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo107">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">);</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Slave   - <a href="./tcl-tk-ada-widgets_ads.html#robo91">Tk_Widget</a> to pack
+<pre> Slave   - <a href="./tcl-tk-ada-widgets_ads.html#robo107">Tk_Widget</a> to pack
  Options - Option to pack action
 </pre>
 
 <hr />
 <a name="Pack2fPack5fConfigure"></a>
-<a name="robo142"></a><h2>Pack/Pack_Configure [ Subprograms ]</h2>
+<a name="robo179"></a><h2>Pack/Pack_Configure [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo141">Pack</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo178">Pack</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Tells the packer how to <a href="./tcl-tk-ada-widgets_ads.html#robo209">configure</a> the specified Slave window.
+<pre> Tells the packer how to <a href="./tcl-tk-ada-widgets_ads.html#robo274">configure</a> the specified Slave window.
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Pack_Configure</strong>
-     <span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo91">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">);</span>
+     <span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo107">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">);</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Slave   - <a href="./tcl-tk-ada-widgets_ads.html#robo91">Tk_Widget</a> to <a href="./tcl-tk-ada-widgets_ads.html#robo209">configure</a>
- Options - <a href="#robo141">Pack</a> options for the slave
+<pre> Slave   - <a href="./tcl-tk-ada-widgets_ads.html#robo107">Tk_Widget</a> to <a href="./tcl-tk-ada-widgets_ads.html#robo274">configure</a>
+ Options - <a href="#robo178">Pack</a> options for the slave
 </pre>
 
 <hr />
 <a name="Pack2fPack5fForget"></a>
-<a name="robo143"></a><h2>Pack/Pack_Forget [ Subprograms ]</h2>
+<a name="robo180"></a><h2>Pack/Pack_Forget [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo141">Pack</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo178">Pack</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Removes the Slave window from the packing list for its master
  and unmaps their windows.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Pack_Forget</strong><span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo91">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">);</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Pack_Forget</strong><span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo107">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">);</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Slave - <a href="./tcl-tk-ada-widgets_ads.html#robo91">Tk_Widget</a> to remove
+<pre> Slave - <a href="./tcl-tk-ada-widgets_ads.html#robo107">Tk_Widget</a> to remove
 </pre>
 
 <hr />
 <a name="Pack2fPack5fInfo"></a>
-<a name="robo144"></a><h2>Pack/Pack_Info [ Subprograms ]</h2>
+<a name="robo181"></a><h2>Pack/Pack_Info [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo141">Pack</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo178">Pack</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Get pack options of the selected widget
+<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo225">Get</a> pack options of the selected widget
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Pack_Info</strong><span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo91">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> <strong>Pack_Info</strong><span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo107">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Slave - <a href="./tcl-tk-ada-widgets_ads.html#robo91">Tk_Widget</a> to query
+<pre> Slave - <a href="./tcl-tk-ada-widgets_ads.html#robo107">Tk_Widget</a> to query
 </pre>
 <p class="item_name">RESULT</p>
 <pre> String with list whose elements are the current configuration
@@ -120,33 +120,33 @@
 
 <hr />
 <a name="Pack2fPack5fPropagate"></a>
-<a name="robo145"></a><h2>Pack/Pack_Propagate [ Subprograms ]</h2>
+<a name="robo182"></a><h2>Pack/Pack_Propagate [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo141">Pack</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo178">Pack</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Enables or disables propagation for the specified Master window.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Pack_Propagate</strong><span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo91">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> State<span class="sign">:</span> <span class="keyword">in</span> Boolean<span class="sign">);</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Pack_Propagate</strong><span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo107">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> State<span class="sign">:</span> <span class="keyword">in</span> Boolean<span class="sign">);</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Master - <a href="./tcl-tk-ada-widgets_ads.html#robo91">Tk_Widget</a> which propagation will be set
+<pre> Master - <a href="./tcl-tk-ada-widgets_ads.html#robo107">Tk_Widget</a> which propagation will be set
  State  - If true, enable propagation, false disable it
 </pre>
 
 <hr />
 <a name="Pack2fPack5fPropagate2"></a>
-<a name="robo146"></a><h2>Pack/Pack_Propagate2 [ Subprograms ]</h2>
+<a name="robo183"></a><h2>Pack/Pack_Propagate2 [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo141">Pack</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo178">Pack</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Get propagation state of selected widget
+<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo225">Get</a> propagation state of selected widget
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <a href="#robo145">Pack_Propagate</a><span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo91">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> Boolean<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> <a href="#robo182">Pack_Propagate</a><span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo107">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> Boolean<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Master - <a href="./tcl-tk-ada-widgets_ads.html#robo91">Tk_Widget</a> which propagation state will be check
+<pre> Master - <a href="./tcl-tk-ada-widgets_ads.html#robo107">Tk_Widget</a> which propagation state will be check
 </pre>
 <p class="item_name">RESULT</p>
 <pre> Returns state of propagation in the specified Master window.
@@ -154,17 +154,17 @@
 
 <hr />
 <a name="Pack2fPack5fSlaves"></a>
-<a name="robo147"></a><h2>Pack/Pack_Slaves [ Subprograms ]</h2>
+<a name="robo184"></a><h2>Pack/Pack_Slaves [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo141">Pack</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo178">Pack</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Get list of slaves widget of selected widget
+<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo225">Get</a> list of slaves widget of selected widget
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Pack_Slaves</strong><span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo91">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> <strong>Pack_Slaves</strong><span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo107">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Master - <a href="./tcl-tk-ada-widgets_ads.html#robo91">Tk_Widget</a> which will be queried for slaves
+<pre> Master - <a href="./tcl-tk-ada-widgets_ads.html#robo107">Tk_Widget</a> which will be queried for slaves
 </pre>
 <p class="item_name">RESULT</p>
 <pre> Returns a list of slaves in the packing order of the specified
@@ -173,7 +173,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-pack.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Jan 31 2020 07:13:13
+<p>Generated from ./src/tk/tcl-tk-ada-pack.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Sat Feb 29 2020 07:27:12
 </p>
 </div> <!-- footer -->
 </body>

@@ -8,11 +8,11 @@
 <link rel="stylesheet" href="../robodoc.css" type="text/css" />
 <title>./src/tk/tcl-tk-ada-widgets-canvas.ads</title>
 <!-- Source: ./src/tk/tcl-tk-ada-widgets-canvas.ads -->
-<!-- Generated with ROBODoc Version 4.99.43 (Jul 26 2019) -->
+<!-- Generated with ROBODoc Version 4.99.43 (Feb  8 2020) -->
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.1 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.2 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -25,93 +25,93 @@
 <div id="content">
 <h3>TABLE OF CONTENTS</h3>
 <ul>
-<li>1. <a href="#robo26">Widgets/Canvas</a></li>
+<li>1. <a href="#robo30">Widgets/Canvas</a></li>
 <ul>
-<li>1.1. <a href="#robo52">Canvas/Tk_Canvas</a></li>
-<li>1.2. <a href="#robo100">Canvas/Canvas_Create</a></li>
-<li>1.3. <a href="#robo101">Canvas/Create</a></li>
+<li>1.1. <a href="#robo62">Canvas/Tk_Canvas</a></li>
+<li>1.2. <a href="#robo119">Canvas/Canvas_Create</a></li>
+<li>1.3. <a href="#robo120">Canvas/Create</a></li>
 </ul>
 </ul>
 <hr />
 <a name="Widgets2fCanvas"></a>
-<a name="robo26"></a><h2>Widgets/Canvas [ Packages ]</h2>
+<a name="robo30"></a><h2>Widgets/Canvas [ Packages ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada-widgets_ads.html#robo18">Widgets</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada-widgets_ads.html#robo21">Widgets</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo10">Tk</a> widget <strong>Canvas</strong>
+<pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo12">Tk</a> widget <strong>Canvas</strong>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo7">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo10">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo8">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo18">Widgets</a><span class="sign">.</span><strong>Canvas</strong> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo9">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo12">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo10">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo21">Widgets</a><span class="sign">.</span><strong>Canvas</strong> <span class="keyword">is</span>
 </pre>
 
 <hr />
 <a name="Canvas2fTk5fCanvas"></a>
-<a name="robo52"></a><h2>Canvas/Tk_Canvas [ Types ]</h2>
+<a name="robo62"></a><h2>Canvas/Tk_Canvas [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo26">Canvas</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo91">Tk_Widget</a>.
- Each of the derived widgets redefines the <a href="./tcl-tk-ada-widgets-spinbox_ads.html#robo158">Create</a> subprogram
+<pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo107">Tk_Widget</a>.
+ Each of the derived widgets redefines the <a href="./tcl-tk-ada-widgets-ttkbutton-ttkcheckbutton_ads.html#robo222">Create</a> subprogram
  in order to create the correct type of widget.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">type</span> <strong>Tk_Canvas</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets_ads.html#robo91">Tk_Widget</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">type</span> <strong>Tk_Canvas</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets_ads.html#robo107">Tk_Widget</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
 </pre>
 
 <hr />
 <a name="Canvas2fCanvas5fCreate"></a>
-<a name="robo100"></a><h2>Canvas/Canvas_Create [ Subprograms ]</h2>
+<a name="robo119"></a><h2>Canvas/Canvas_Create [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo26">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="../tklib/tcl-tklib-ada-tooltip_ads.html#robo178">Add</a> the child to the canvas
+<pre> <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo235">Add</a> the child to the canvas
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Canvas_Create</strong>
-     <span class="sign">(</span>Parent<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo52">Tk_Canvas</a><span class="sign">;</span> Child_Type<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+     <span class="sign">(</span>Parent<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo62">Tk_Canvas</a><span class="sign">;</span> Child_Type<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
       Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Child_Type <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Parent     - <a href="#robo52">Tk_Canvas</a> to which child will be added
- Child_Type - <a href="./tcl-tk_ads.html#robo10">Tk</a> type of child to add
- Options    - <a href="./tcl-tk_ads.html#robo10">Tk</a> options to create command
+<pre> Parent     - <a href="#robo62">Tk_Canvas</a> to which child will be added
+ Child_Type - <a href="./tcl-tk_ads.html#robo12">Tk</a> type of child to add
+ Options    - <a href="./tcl-tk_ads.html#robo12">Tk</a> options to create command
 </pre>
 
 <hr />
 <a name="Canvas2fCreate"></a>
-<a name="robo101"></a><h2>Canvas/Create [ Subprograms ]</h2>
+<a name="robo120"></a><h2>Canvas/Create [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo26">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Creates a new <a href="#robo52">Tk_Canvas</a> in the specified interpreter.
+<pre> Creates a new <a href="#robo62">Tk_Canvas</a> in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Create</strong>
+<pre class="source">   overriding <span class="keyword">function</span> <strong>Create</strong>
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo52">Tk_Canvas</a> <span class="keyword">with</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo62">Tk_Canvas</a> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-   <span class="keyword">procedure</span> <strong>Create</strong>
-     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo52">Tk_Canvas</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+   overriding <span class="keyword">procedure</span> <strong>Create</strong>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo62">Tk_Canvas</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
       Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Widgt    - <a href="#robo52">Tk_Canvas</a> which will be created
- pathName - <a href="./tcl-tk_ads.html#robo10">Tk</a> path (starts with dot) for the widget
+<pre> Widgt    - <a href="#robo62">Tk_Canvas</a> which will be created
+ pathName - <a href="./tcl-tk_ads.html#robo12">Tk</a> path (starts with dot) for the widget
  options  - Options which will be passed to the widget. Default value is
             empty
- Interp   - <a href="../tcl_ads.html#robo7">Tcl</a> interpreter to which the widget will be created. If null,
+ Interp   - <a href="../tcl_ads.html#robo9">Tcl</a> interpreter to which the widget will be created. If null,
             the widget will be created in the "contextual" interpreter.
             Default value is null.
 </pre>
 <p class="item_name">RESULT</p>
-<pre> Newly created <a href="#robo52">Tk_Canvas</a>
+<pre> Newly created <a href="#robo62">Tk_Canvas</a>
 </pre>
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-canvas.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Jan 31 2020 07:13:13
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-canvas.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Sat Feb 29 2020 07:27:12
 </p>
 </div> <!-- footer -->
 </body>
