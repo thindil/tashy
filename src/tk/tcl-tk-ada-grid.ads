@@ -242,5 +242,6 @@ package Tcl.Tk.Ada.Grid is
    -- SOURCE
    function Grid_Slaves
      (Master: in Tk_Widget'Class; Option: in String := "") return String;
+     -- ****
 
 end Tcl.Tk.Ada.Grid;
