@@ -59,6 +59,21 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       Pre => pathName /= "";
       -- ****
 
+      -- ****f* TEntry/Delete
+      -- FUNCTION
+      -- Delete part of text from the selected entry
+      -- PARAMETERS
+      -- TextEntry  - Tk_Entry in which text will be deleted
+      -- FirstIndex - Index of text from which delete will start. Index starts from 0
+      -- LastIndex  - End index to which text will be deleted. If empty, delete only one
+      --              character. Default is empty.
+      -- SOURCE
+   procedure Delete
+     (TextEntry: in Tk_Entry; FirstIndex: in String;
+      LastIndex: in String := "") with
+      Pre => FirstIndex /= "";
+      -- ****
+
       -- ****f* TEntry/get
       -- FUNCTION
       -- Get entry's text.
@@ -67,7 +82,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- RESULT
       -- Returns the entry's string.
       -- SOURCE
-   function get(Widgt: in Tk_Entry) return String;
+   function Get(Widgt: in Tk_Entry) return String;
    -- ****
 
 private
