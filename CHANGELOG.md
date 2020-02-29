@@ -38,6 +38,7 @@ of the project.
 - Info about failed to load Tklib `tooltip` package
 - Loading Tklib `tooltip` package
 - Crash setup script with -Wformat enabled
+- Procedure `destroy` in Tcl.Tk.Ada.Widgets
 
 ## [8.6.1] - 2020-01-31
 
