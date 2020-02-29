@@ -67,6 +67,17 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       Pre => pathName /= "";
       -- ****
 
+      -- ****f* TtkEntry/Get
+      -- FUNCTION
+      -- Get selected Ttk_Entry text
+      -- PARAMETERS
+      -- TextEntry - Ttk_Entry to query
+      -- RESULT
+      -- String with value of the selected entry
+      -- SOURCE
+   function Get(TextEntry: in Ttk_Entry) return String;
+   -- ****
+
 private
 
    type Ttk_Entry is new Tk_Widget with null record;

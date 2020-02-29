@@ -20,6 +20,8 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
+with Tcl.Ada;
+
 package body Tcl.Tk.Ada.Widgets.TtkEntry is
 
    function Create
@@ -43,5 +45,11 @@ package body Tcl.Tk.Ada.Widgets.TtkEntry is
    begin
       Widgt := Create(pathName, options, Interp);
    end Create;
+
+   function Get(TextEntry: in Ttk_Entry) return String is
+   begin
+      Execute_Widget_Command(TextEntry, "get");
+      return Tcl.Ada.Tcl_GetResult(TextEntry.Interp);
+   end Get;
 
 end Tcl.Tk.Ada.Widgets.TtkEntry;
