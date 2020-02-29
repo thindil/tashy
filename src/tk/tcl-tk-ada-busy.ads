@@ -22,7 +22,7 @@
 
 with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
 
--- ****h* TkAda/Pack
+-- ****h* TkAda/Busy
 -- FUNCTION
 -- Provides code for manipulate Tk command Busy
 -- SOURCE

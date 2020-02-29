@@ -87,6 +87,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
      (MenuWidget: in Tk_Menu; StartIndex: in String;
       EndIndex: in String := "") with
       Pre => StartIndex /= "";
+      -- ****
 
       -- ****f* Menu/Entry_Configure
       -- FUNCTION
