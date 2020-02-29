@@ -59,7 +59,7 @@ package body Tcl.Tk.Ada.Widgets is
 
    procedure Destroy(Widgt: in out Tk_Widget'Class) is
    begin --  Destroy
-      Execute_Widget_Command(Widgt, "destroy");
+      Tcl_Eval(Widgt.Interp, "destroy " & Widget_Image(Widgt));
       C.Strings.Free(Widgt.Name);
    end Destroy;
 
