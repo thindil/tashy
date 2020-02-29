@@ -93,6 +93,20 @@ package Tcl.Tk.Ada.Image.Photo is
    function Data(Image: in Tk_Photo; Options: in String := "") return String;
    -- ****
 
+   -- ****f* Photo/Get
+   -- FUNCTION
+   -- Get color of the selected pixel in the image
+   -- PARAMETERS
+   -- Image - Tk_Photo which will be queried for data
+   -- X     - X coordinate of pixel to get color
+   -- Y     - Y coordinate of pixel to get color
+   -- RESULT
+   -- Three values of colors red, green, blue from 0 to 255
+   -- SOURCE
+   function Get(Image: in Tk_Photo; X, Y: in String) return String with
+      Pre => X /= "" and Y /= "";
+      -- ****
+
 private
 
    type Tk_Photo is new Tk_Widget with null record;

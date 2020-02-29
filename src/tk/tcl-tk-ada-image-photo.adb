@@ -66,4 +66,10 @@ package body Tcl.Tk.Ada.Image.Photo is
       return Tcl.Ada.Tcl_GetResult(Image.Interp);
    end Data;
 
+   function Get(Image: in Tk_Photo; X, Y: in String) return String is
+   begin
+      Tcl_Eval(Image.Interp, Widget_Image(Image) & " get " & X & " " & Y);
+      return Tcl.Ada.Tcl_GetResult(Image.Interp);
+   end Get;
+
 end Tcl.Tk.Ada.Image.Photo;
