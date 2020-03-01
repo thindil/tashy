@@ -285,7 +285,7 @@ if {[lindex $argv 0] == "--nogui"} {
 
 # Create window for installer to review and edit macro values
 #------------------------------------------------------------
-wm title    . "TASHY 8.6.2 Setup"
+wm title    . "TASHY 8.6.3 Setup"
 wm iconname . "TASHY Setup"
 
 message .instructions -justify left -aspect 500 -pady 10 -padx 20 -text \
