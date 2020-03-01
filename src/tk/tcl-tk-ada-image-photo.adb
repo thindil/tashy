@@ -72,4 +72,10 @@ package body Tcl.Tk.Ada.Image.Photo is
       return Tcl.Ada.Tcl_GetResult(Image.Interp);
    end Get;
 
+   procedure Put
+     (Image: in Tk_Photo; Data: in String; Options: in String := "") is
+   begin
+      Execute_Widget_Command(Image, "put", Data & " " & Options);
+   end Put;
+
 end Tcl.Tk.Ada.Image.Photo;
