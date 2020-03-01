@@ -107,6 +107,20 @@ package Tcl.Tk.Ada.Image.Photo is
       Pre => X /= "" and Y /= "";
       -- ****
 
+      -- ****f* Photo/Put
+      -- FUNCTION
+      -- Set pixels in the selected Tk_Photo to specified data
+      -- PARAMETERS
+      -- Image   - Tk_Photo which will be modified
+      -- Data    - Proper data for selected image format which will be changed
+      -- Options - Additional options: -format or -to with proper values.
+      --           Default value is empty
+      -- SOURCE
+   procedure Put
+     (Image: in Tk_Photo; Data: in String; Options: in String := "") with
+      Pre => Data /= "";
+      -- ****
+
 private
 
    type Tk_Photo is new Tk_Widget with null record;
