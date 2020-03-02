@@ -9,6 +9,9 @@ of the project.
 ### Added
 - Binding for Tk `photo` commands: `put`, `read`
 
+### Fixed
+- Configure the library on headless systems (mostly for Docker)
+
 ## [8.6.2] - 2020-02-29
 
 ### Added
