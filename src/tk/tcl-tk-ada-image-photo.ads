@@ -121,6 +121,19 @@ package Tcl.Tk.Ada.Image.Photo is
       Pre => Data /= "";
       -- ****
 
+      -- ****f* Photo/Read
+      -- FUNCTION
+      -- Read selected file and put it data to the selected Tk_Photo
+      -- PARAMETERS
+      -- Image    - Tk_Photo in which data will be loaded
+      -- FileName - Name of file which will be read
+      -- Options  - Additional options for read data. Default value is empty
+      -- SOURCE
+   procedure Read
+     (Image: in Tk_Photo; FileName: in String; Options: in String := "") with
+      Pre => FileName /= "";
+      -- ****
+
 private
 
    type Tk_Photo is new Tk_Widget with null record;
