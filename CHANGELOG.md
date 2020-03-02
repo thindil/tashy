@@ -7,7 +7,7 @@ of the project.
 ## [Unreleased]
 
 ### Added
-- Binding for Tk `photo` command: `put`
+- Binding for Tk `photo` commands: `put`, `read`
 
 ## [8.6.2] - 2020-02-29
 
