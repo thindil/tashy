@@ -78,4 +78,10 @@ package body Tcl.Tk.Ada.Image.Photo is
       Execute_Widget_Command(Image, "put", Data & " " & Options);
    end Put;
 
+   procedure Read
+     (Image: in Tk_Photo; FileName: in String; Options: in String := "") is
+   begin
+      Execute_Widget_Command(Image, "read", FileName & " " & Options);
+   end Read;
+
 end Tcl.Tk.Ada.Image.Photo;
