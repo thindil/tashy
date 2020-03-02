@@ -26,6 +26,12 @@ exec wish "$0" ${1+"$@"}
 set buildoption all
 set installtklib 0
 
+# Used for mostly for Docker, normally, Tk should set this variable
+# by self
+if {[info exists tk_version] == 0} {
+   set tk_version 8.6
+}
+
 proc cequal {left right} {
    return [expr [string compare $left $right] == 0]
 }
