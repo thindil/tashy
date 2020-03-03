@@ -84,4 +84,9 @@ package body Tcl.Tk.Ada.Image.Photo is
       Execute_Widget_Command(Image, "read", FileName & " " & Options);
    end Read;
 
+   procedure Redither(Image: in Tk_Photo) is
+   begin
+      Execute_Widget_Command(Image, "redither");
+   end Redither;
+
 end Tcl.Tk.Ada.Image.Photo;

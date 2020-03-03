@@ -134,6 +134,15 @@ package Tcl.Tk.Ada.Image.Photo is
       Pre => FileName /= "";
       -- ****
 
+      -- ****f* Photo/Redither
+      -- FUNCTION
+      -- Recalculate dithered image
+      -- PARAMETERS
+      -- Image - Tk_Photo to recalculate
+      -- SOURCE
+   procedure Redither(Image: in Tk_Photo);
+   -- ****
+
 private
 
    type Tk_Photo is new Tk_Widget with null record;
