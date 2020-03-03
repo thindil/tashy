@@ -9,6 +9,7 @@ of the project.
 ### Added
 - Binding for Tk `photo` commands: `put`, `read`, `redither`,
   `transparency get`
+- Binding for Tk `ttk::entry` commands: `delete`, `insert`
 
 ### Fixed
 - Configure the library on headless systems (mostly for Docker)
@@ -34,6 +35,7 @@ of the project.
 - Binding for Tk `photo` commands: `blank`, `data`, `get`
 - Binding for Tk `ttk::progressbar` command: `step`
 - Binding for Tk `busy` command
+- Binding for Tk `entry` commands: `delete`, `insert`
 
 ### Changed
 - Made procedure `Execute_Widget_Command` public
