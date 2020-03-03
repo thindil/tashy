@@ -67,16 +67,44 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       Pre => pathName /= "";
       -- ****
 
+      -- ****f* TtkEntry/Delete
+      -- FUNCTION
+      -- Delete part of text from the selected entry
+      -- PARAMETERS
+      -- TextEntry  - Ttk_Entry in which text will be deleted
+      -- FirstIndex - Index of text from which delete will start. Index starts from 0
+      -- LastIndex  - End index to which text will be deleted. If empty, delete only one
+      --              character. Default is empty.
+      -- SOURCE
+   procedure Delete
+     (TextEntry: in Ttk_Entry; FirstIndex: in String;
+      LastIndex: in String := "") with
+      Pre => FirstIndex /= "";
+      -- ****
+
       -- ****f* TtkEntry/Get
       -- FUNCTION
-      -- Get selected Ttk_Entry text
+      -- Get entry's text.
       -- PARAMETERS
-      -- TextEntry - Ttk_Entry to query
+      -- Widgt - Ttk_Entry from which text will be taken
       -- RESULT
-      -- String with value of the selected entry
+      -- Returns the entry's string.
       -- SOURCE
-   function Get(TextEntry: in Ttk_Entry) return String;
+   function Get(Widgt: in Ttk_Entry) return String;
    -- ****
+
+   -- ****f* TtkEntry/Insert
+   -- FUNCTION
+   -- Insert text at selected index to the selected Ttk_Entry
+   -- PARAMETERS
+   -- TextEntry - Ttk_Entry to which text will be inserted
+   -- Index     - Index in which position text will be inserted
+   -- Text      - Text to insert
+   -- SOURCE
+   procedure Insert
+     (TextEntry: in Ttk_Entry; Index: in String; Text: in String) with
+      Pre => Index /= "" and Text /= "";
+      -- ****
 
 private
 
