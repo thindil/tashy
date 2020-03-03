@@ -89,4 +89,11 @@ package body Tcl.Tk.Ada.Image.Photo is
       Execute_Widget_Command(Image, "redither");
    end Redither;
 
+   function Transparency_Get
+     (Image: in Tk_Photo; X, Y: in String) return String is
+   begin
+      Execute_Widget_Command(Image, "transparency get", X & " " & Y);
+      return Tcl.Ada.Tcl_GetResult(Image.Interp);
+   end Transparency_Get;
+
 end Tcl.Tk.Ada.Image.Photo;
