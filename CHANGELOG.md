@@ -7,7 +7,8 @@ of the project.
 ## [Unreleased]
 
 ### Added
-- Binding for Tk `photo` commands: `put`, `read`, `redither`
+- Binding for Tk `photo` commands: `put`, `read`, `redither`,
+  `transparency get`
 
 ### Fixed
 - Configure the library on headless systems (mostly for Docker)
