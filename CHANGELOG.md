@@ -7,7 +7,7 @@ of the project.
 ## [Unreleased]
 
 ### Added
-- Binding for Tk `photo` commands: `put`, `read`
+- Binding for Tk `photo` commands: `put`, `read`, `redither`
 
 ### Fixed
 - Configure the library on headless systems (mostly for Docker)
