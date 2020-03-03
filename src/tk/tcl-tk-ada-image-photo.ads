@@ -143,6 +143,21 @@ package Tcl.Tk.Ada.Image.Photo is
    procedure Redither(Image: in Tk_Photo);
    -- ****
 
+   -- ****f* Photo/Transparency_Get
+   -- FUNCTION
+   -- Get the selected pixel transparency in the selected image
+   -- PARAMETERS
+   -- Image - Tk_Photo to query for transparency
+   -- X     - X coordinate of pixel to check
+   -- Y     - Y coordinate of pixel to check
+   -- RESULT
+   -- If pixel is transparent return true, otherwise false
+   -- SOURCE
+   function Transparency_Get
+     (Image: in Tk_Photo; X, Y: in String) return String with
+      Pre => X /= "" and Y /= "";
+      -- ****
+
 private
 
    type Tk_Photo is new Tk_Widget with null record;
