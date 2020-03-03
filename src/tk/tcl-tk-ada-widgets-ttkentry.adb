@@ -46,10 +46,25 @@ package body Tcl.Tk.Ada.Widgets.TtkEntry is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
-   function Get(TextEntry: in Ttk_Entry) return String is
+   procedure Delete
+     (TextEntry: in Ttk_Entry; FirstIndex: in String;
+      LastIndex: in String := "") is
    begin
-      Execute_Widget_Command(TextEntry, "get");
-      return Tcl.Ada.Tcl_GetResult(TextEntry.Interp);
+      Execute_Widget_Command
+        (TextEntry, "delete", FirstIndex & " " & LastIndex);
+   end Delete;
+
+   function Get(Widgt: in Ttk_Entry) return String is
+   begin
+      Execute_Widget_Command(Widgt, "get");
+      return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end Get;
+
+   procedure Insert
+     (TextEntry: in Ttk_Entry; Index: in String; Text: in String) is
+   begin
+      Execute_Widget_Command
+        (TextEntry, "insert", Index & " " & "{" & Text & "}");
+   end Insert;
 
 end Tcl.Tk.Ada.Widgets.TtkEntry;
