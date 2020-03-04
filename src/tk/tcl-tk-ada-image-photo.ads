@@ -158,6 +158,18 @@ package Tcl.Tk.Ada.Image.Photo is
       Pre => X /= "" and Y /= "";
       -- ****
 
+      -- ****f* Photo/Transparency_Set
+      -- FUNCTION
+      -- Set transparency for the selected pixel in the selected image
+      -- PARAMETERS
+      -- Image - Tk_Photo in which pixel transparency will be set
+      -- X     - X coordinate of the pixel which transparency will be set
+      -- Y     - Y coordinate of the pixel which transparency will be set
+      -- SOURCE
+   procedure Transparency_Set(Image: in Tk_Photo; X, Y: in String) with
+      Pre => X /= "" and Y /= "";
+      -- ****
+
 private
 
    type Tk_Photo is new Tk_Widget with null record;

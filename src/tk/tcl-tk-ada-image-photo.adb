@@ -96,4 +96,8 @@ package body Tcl.Tk.Ada.Image.Photo is
       return Tcl.Ada.Tcl_GetResult(Image.Interp);
    end Transparency_Get;
 
+   procedure Transparency_Set(Image: in Tk_Photo; X, Y: in String) is
+   begin
+      Execute_Widget_Command(Image, "transparency set", X & " " & Y);
+   end Transparency_Set;
 end Tcl.Tk.Ada.Image.Photo;
