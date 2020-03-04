@@ -11,6 +11,9 @@ of the project.
   `transparency get`, `transparency set`
 - Binding for Tk `ttk::entry` commands: `delete`, `insert`
 
+### Changed
+- Updated README.md
+
 ### Fixed
 - Configure the library on headless systems (mostly for Docker)
 
