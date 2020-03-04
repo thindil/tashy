@@ -8,7 +8,7 @@ of the project.
 
 ### Added
 - Binding for Tk `photo` commands: `put`, `read`, `redither`,
-  `transparency get`, `transparency set`
+  `transparency get`, `transparency set`, `write`
 - Binding for Tk `ttk::entry` commands: `delete`, `insert`
 
 ### Changed
