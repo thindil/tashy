@@ -170,6 +170,20 @@ package Tcl.Tk.Ada.Image.Photo is
       Pre => X /= "" and Y /= "";
       -- ****
 
+      -- ****f* Photo/Write
+      -- FUNCTION
+      -- Write image to the specified file
+      -- PARAMETERS
+      -- Image    - Tk_Photo to write to the file
+      -- FileName - Name of the file to which image will be written
+      -- Options  - Additional options for writting image to file. Default
+      --            value is empty
+      -- SOURCE
+   procedure Write
+     (Image: in Tk_Photo; FileName: in String; Options: in String := "") with
+      Pre => FileName /= "";
+      -- ****
+
 private
 
    type Tk_Photo is new Tk_Widget with null record;

@@ -100,4 +100,11 @@ package body Tcl.Tk.Ada.Image.Photo is
    begin
       Execute_Widget_Command(Image, "transparency set", X & " " & Y);
    end Transparency_Set;
+
+   procedure Write
+     (Image: in Tk_Photo; FileName: in String; Options: in String := "") is
+   begin
+      Execute_Widget_Command(Image, "write", "{" & FileName & "} " & Options);
+   end Write;
+
 end Tcl.Tk.Ada.Image.Photo;
