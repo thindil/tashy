@@ -41,12 +41,26 @@ package Tcl.Tk.Ada.Busy is
      Busy;
    -- ****
 
-   -- ****f* Busy/Forget
+   -- ****f* Busy/cget
    -- FUNCTION
-   -- Make window enabled again
+   -- Get value of the selected option for the selected busy window
    -- PARAMETERS
-   -- Window - Tk_Widget which will be enabled
+   -- Window - Tk_Widget which is set as busy
+   -- Option - Busy option to query
+   -- RESULT
+   -- Value of the selected option of the selected busy window
    -- SOURCE
+   function cget
+     (Window: in Tk_Widget'Class; Option: in String) return String with
+      Pre => Option /= "";
+      -- ****
+
+      -- ****f* Busy/Forget
+      -- FUNCTION
+      -- Make window enabled again
+      -- PARAMETERS
+      -- Window - Tk_Widget which will be enabled
+      -- SOURCE
    procedure Forget(Window: in Tk_Widget'Class);
    -- ****
 
