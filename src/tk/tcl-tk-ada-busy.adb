@@ -20,6 +20,8 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
+with Tcl.Ada;
+
 package body Tcl.Tk.Ada.Busy is
 
    procedure Busy(Window: in Tk_Widget'Class; Options: in String := "") is
@@ -27,6 +29,14 @@ package body Tcl.Tk.Ada.Busy is
       Tcl_Eval
         (Window.Interp, "tk busy " & Widget_Image(Window) & " " & Options);
    end Busy;
+
+   function cget
+     (Window: in Tk_Widget'Class; Option: in String) return String is
+   begin
+      Tcl_Eval
+        (Window.Interp, "tk busy cget " & Widget_Image(Window) & " " & Option);
+      return Tcl.Ada.Tcl_GetResult(Window.Interp);
+   end cget;
 
    procedure Forget(Window: in Tk_Widget'Class) is
    begin
