@@ -68,6 +68,15 @@ To remove all generated/compiled files type in the console:
 If you have installed [Bob](https://github.com/thindil/bob) you can type:
 `bob clean`
 
+## Docker
+The library (in the static version) is available also as a Docker container with
+GNAT GPL version.
+
+* For the development version of the library, you can use this command to
+download:
+
+`docker pull thindil/gnat-tashy-devel`
+
 ## Using the library in your project
 
 If you use a GNAT project file in your project, simply add `with "tashy"` at
