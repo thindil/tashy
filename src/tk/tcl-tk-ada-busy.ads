@@ -64,4 +64,15 @@ package Tcl.Tk.Ada.Busy is
    procedure Forget(Window: in Tk_Widget'Class);
    -- ****
 
+   -- ****f* Busy/Status
+   -- FUNCTION
+   -- Get information if the selected Tk_Widget is busy or not
+   -- PARAMETERS
+   -- Window - Tk_Widget which will be queried for status
+   -- RESULT
+   -- 1 if Tk_Widget is busy, otherwise 0
+   -- SOURCE
+   function Status(Window: in Tk_Widget'Class) return String;
+   -- ****
+
 end Tcl.Tk.Ada.Busy;
