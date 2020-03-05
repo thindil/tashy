@@ -55,12 +55,38 @@ package Tcl.Tk.Ada.Busy is
       Pre => Option /= "";
       -- ****
 
-      -- ****f* Busy/Forget
+      -- ****f* Busy/Configure
       -- FUNCTION
-      -- Make window enabled again
+      -- Change configuration of the selected busy Tk_Widget
       -- PARAMETERS
-      -- Window - Tk_Widget which will be enabled
+      -- Window  - Busy Tk_Widget to configure
+      -- Options - Tk options to set to the selected Tk_Widget
       -- SOURCE
+   procedure Configure(Window: in Tk_Widget'Class; Options: in String) with
+      Pre => Options /= "";
+      -- ****
+
+      -- ****f* Busy/Configure2
+      -- FUNCTION
+      -- Get busy configuration values for the selected busy Tk_Widget
+      -- PARAMETERS
+      -- Window  - Busy Tk_Widget which will be queried for options
+      -- Option  - Tk busy option's value to get from the Tk_Widget. Default
+      --           value is empty
+      -- RESULT
+      -- If Option is empty, return all configuration options with their
+      -- values, otherwise return value of the selected option
+      -- SOURCE
+   function Configure
+     (Window: in Tk_Widget'Class; Option: in String := "") return String;
+   -- ****
+
+   -- ****f* Busy/Forget
+   -- FUNCTION
+   -- Make window enabled again
+   -- PARAMETERS
+   -- Window - Tk_Widget which will be enabled
+   -- SOURCE
    procedure Forget(Window: in Tk_Widget'Class);
    -- ****
 

@@ -38,6 +38,22 @@ package body Tcl.Tk.Ada.Busy is
       return Tcl.Ada.Tcl_GetResult(Window.Interp);
    end cget;
 
+   procedure Configure(Window: in Tk_Widget'Class; Options: in String) is
+   begin
+      Tcl_Eval
+        (Window.Interp,
+         "tk busy configure " & Widget_Image(Window) & " " & Options);
+   end Configure;
+
+   function Configure
+     (Window: in Tk_Widget'Class; Option: in String := "") return String is
+   begin
+      Tcl_Eval
+        (Window.Interp,
+         "tk busy configure " & Widget_Image(Window) & " " & Option);
+      return Tcl.Ada.Tcl_GetResult(Window.Interp);
+   end Configure;
+
    procedure Forget(Window: in Tk_Widget'Class) is
    begin
       Tcl_Eval(Window.Interp, "tk busy forget " & Widget_Image(Window));
