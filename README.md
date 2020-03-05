@@ -6,12 +6,20 @@ this moment TASHY API should be almost stable. All changes (compared with
 TASH too) can be found [in CHANGELOG.md](CHANGELOG.md)
 
 TASHY is the Ada 2012 binding to Tcl/Tk. It allow to use Tcl code in Ada code
-and vice versa. Included bindings (most of them are incomplete):
+and vice versa. Included bindings:
 
 * Tcl - It is the base binding. Allow use Tcl scripts in the Ada code.
-* Tk - Requires Tcl binding. Allows use Tk GUI in the Ada code.
+  This binding should be complete but have lack of the code documentation. If
+  you find that something is missing, please [open an issue](https://github.com/thindil/tashy/issues/new) with it.
+* Tk - Requires Tcl binding. Allows use Tk GUI in the Ada code. At this
+  moment it is a low level binding - mostly works like standard Tcl/Tk
+  commands. Additionally, this binding is still incomplete, but you can
+  use any Tk command/widget by `Tcl_Eval` or `Execute_Widget_Command`
+  procedures. This is the main focus of the development at this moment.
 * Tklib - Requires Tcl and Tk bindings. Allows use additional packages for
-  Tk GUI in the Ada code.
+  Tk GUI in the Ada code. At this moment it is a low level binding only to
+  tooltip package. If you want binding to any other package from this library,
+  feel free to [open an issue](https://github.com/thindil/tashy/issues/new) with it.
 
 ## Build the library from sources
 
