@@ -54,6 +54,12 @@ package body Tcl.Tk.Ada.Busy is
       return Tcl.Ada.Tcl_GetResult(Window.Interp);
    end Configure;
 
+   function Current(Pattern: in String := "") return String is
+   begin
+      Tcl_Eval(Get_Context, "tk busy current " & Pattern);
+      return Tcl.Ada.Tcl_GetResult(Get_Context);
+   end Current;
+
    procedure Forget(Window: in Tk_Widget'Class) is
    begin
       Tcl_Eval(Window.Interp, "tk busy forget " & Widget_Image(Window));

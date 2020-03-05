@@ -81,6 +81,19 @@ package Tcl.Tk.Ada.Busy is
      (Window: in Tk_Widget'Class; Option: in String := "") return String;
    -- ****
 
+   -- ****f* Busy/Current
+   -- FUNCTION
+   -- Get list of Tk_Widgets names currently set as busy
+   -- PARAMETERS
+   -- Pattern - Pattern which must be match in busy Tk_Widget names.
+   --           Default value is empty
+   -- RESULT
+   -- If Pattern is empty, return all busy Tk_Widgets names. If Pattern is
+   -- specified, return only this which match the Pattern.
+   -- SOURCE
+   function Current(Pattern: in String := "") return String;
+   -- ****
+
    -- ****f* Busy/Forget
    -- FUNCTION
    -- Make window enabled again
