@@ -43,4 +43,10 @@ package body Tcl.Tk.Ada.Busy is
       Tcl_Eval(Window.Interp, "tk busy forget " & Widget_Image(Window));
    end Forget;
 
+   function Status(Window: in Tk_Widget'Class) return String is
+   begin
+      Tcl_Eval(Window.Interp, "tk busy status " & Widget_Image(Window));
+      return Tcl.Ada.Tcl_GetResult(Window.Interp);
+   end Status;
+
 end Tcl.Tk.Ada.Busy;
