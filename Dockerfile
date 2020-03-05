@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y \
  tcl-dev \
  tk-dev \
  tklib \
+ libmagic-dev \
  && cd tashy \
  && wish scripts/setup.tcl --nogui \
  && gprbuild -P tashy.gpr \
