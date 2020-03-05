@@ -10,7 +10,7 @@ of the project.
 - Binding for Tk `photo` commands: `put`, `read`, `redither`,
   `transparency get`, `transparency set`, `write`
 - Binding for Tk `ttk::entry` commands: `delete`, `insert`
-- Binding for Tk `tk busy` command: `cget`
+- Binding for Tk `tk busy` commands: `cget`, `status`
 
 ### Changed
 - Updated README.md
