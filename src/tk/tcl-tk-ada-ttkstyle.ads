@@ -61,6 +61,25 @@ package Tcl.Tk.Ada.TtkStyle is
       Pre => Name /= "";
       -- ****
 
+      -- ****f* TtkStyle/Style_Lookup
+      -- FUNCTION
+      -- Get value of the selected option in the selected style
+      -- PARAMETERS
+      -- Name    - Name of the style to query
+      -- Option  - Name of the option to query
+      -- State   - List of the states names. If empty, mean "normal" state.
+      --           Default value is empty
+      -- Default - Default value to return when option was not found
+      -- RESULT
+      -- Value of the selected option in the selected style. If option was not
+      -- found, return value of Default parameter.
+      -- SOURCE
+   function Style_Lookup
+     (Name, Option: in String; State: in String := "";
+      Default: in String := "") return String with
+      Pre => Name /= "" and Option /= "";
+      -- ****
+
       -- ****f* TtkStyle/Style_Map
       -- FUNCTION
       -- Define widget style dynamic map for the selected style
