@@ -24,6 +24,15 @@ with Tcl.Ada; use Tcl.Ada;
 
 package body Tcl.Tk.Ada.TtkStyle is
 
+   procedure Element_Create
+     (Name, Element_Type: in String; Options: in String := "") is
+   begin
+      Tcl_Eval
+        (Get_Context,
+         "ttk::style element create " & Name & " " & Element_Type & " " &
+         Options);
+   end Element_Create;
+
    procedure Style_Configure(Name, Options: in String) is
    begin
       Tcl_Eval(Get_Context, "ttk::style configure " & Name & " " & Options);

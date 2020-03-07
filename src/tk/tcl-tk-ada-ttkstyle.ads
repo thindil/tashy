@@ -27,13 +27,26 @@
 package Tcl.Tk.Ada.TtkStyle is
 -- ****
 
-   -- ****f* TtkStyle/Style_Configure
+   -- ****f* TtkStyle/Element_Create
    -- FUNCTION
-   -- Configure selected or create new Ttk style
+   -- Creates a new element in the current theme of the selected type
    -- PARAMETERS
-   -- Name    - Name of style to configure or create
-   -- Options - Options for the style
+   -- Name         - Name of the element to create
+   -- Element_Type - Type of the element to create
+   -- Options      - Additional options for the created element
    -- SOURCE
+   procedure Element_Create
+     (Name, Element_Type: in String; Options: in String := "") with
+      Pre => Name /= "" and Element_Type /= "";
+      -- ****
+
+      -- ****f* TtkStyle/Style_Configure
+      -- FUNCTION
+      -- Configure selected or create new Ttk style
+      -- PARAMETERS
+      -- Name    - Name of style to configure or create
+      -- Options - Options for the style
+      -- SOURCE
    procedure Style_Configure(Name, Options: in String) with
       Pre => Name /= "" and Options /= "";
       -- ****
