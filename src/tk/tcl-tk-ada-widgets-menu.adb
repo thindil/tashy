@@ -75,4 +75,10 @@ package body Tcl.Tk.Ada.Widgets.Menu is
       return Tcl.Ada.Tcl_GetResult(MenuWidget.Interp);
    end Entry_Configure;
 
+   function Invoke(MenuWidget: in Tk_Menu; Index: in String) return String is
+   begin
+      Execute_Widget_Command(MenuWidget, "invoke", Index);
+      return Tcl.Ada.Tcl_GetResult(MenuWidget.Interp);
+   end Invoke;
+
 end Tcl.Tk.Ada.Widgets.Menu;
