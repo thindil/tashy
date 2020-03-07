@@ -118,6 +118,20 @@ package Tcl.Tk.Ada.Widgets.Menu is
       Pre => Index /= "";
       -- ****
 
+      -- ****f* Menu/Invoke
+      -- FUNCTION
+      -- Invoke command associated with the selected menu entry in the selected
+      -- menu
+      -- PARAMETERS
+      -- MenuWidget - Tk_Menu widget from which entry will be activated
+      -- Index      - Index of the menu entry to activate
+      -- RESULT
+      -- Value returned by the invoked command
+      -- SOURCE
+   function Invoke(MenuWidget: in Tk_Menu; Index: in String) return String with
+      Pre => Index /= "";
+      -- ****
+
 private
 
    type Tk_Menu is new Tk_Widget with null record;
