@@ -19,6 +19,7 @@ of the project.
 ### Fixed
 - Configure the library on headless systems (mostly for Docker)
 - Typos in contributing guide
+- Missing code documentation for Tk `button` and `ttk::button` `invoke` command
 
 ## [8.6.2] - 2020-02-29
 
