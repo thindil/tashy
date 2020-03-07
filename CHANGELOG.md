@@ -11,7 +11,8 @@ of the project.
   `transparency get`, `transparency set`, `write`
 - Binding for Tk `ttk::entry` commands: `delete`, `insert`
 - Binding for Tk `tk busy` commands: `cget`, `configure`, `current`, `status`
-- Binding for Tk `ttk::style` commands: `lookup`, `element create`
+- Binding for Tk `ttk::style` commands: `lookup`, `element create`,
+  `element names`
 
 ### Changed
 - Updated README.md
