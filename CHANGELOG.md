@@ -13,6 +13,7 @@ of the project.
 - Binding for Tk `tk busy` commands: `cget`, `configure`, `current`, `status`
 - Binding for Tk `ttk::style` commands: `lookup`, `element create`,
   `element names`
+- Binding for Tk `menu` command: `invoke`
 
 ### Changed
 - Updated README.md
