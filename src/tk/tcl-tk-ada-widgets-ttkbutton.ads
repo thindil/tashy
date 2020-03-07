@@ -66,6 +66,8 @@ package Tcl.Tk.Ada.Widgets.TtkButton is
       -- PARAMETERS
       -- Buttn   - Ttk_Button from which Tcl command will be invoked
       -- options - Tk options for the Tcl command invoke
+      -- RESULT
+      -- Value returned by the Tcl command associated with the button
       -- SOURCE
    function Invoke
      (Buttn: in Ttk_Button'Class; options: in String := "") return String;
