@@ -33,6 +33,12 @@ package body Tcl.Tk.Ada.TtkStyle is
          Options);
    end Element_Create;
 
+   function Element_Names return String is
+   begin
+      Tcl_Eval(Get_Context, "ttk::style element names");
+      return Tcl_GetResult(Get_Context);
+   end Element_Names;
+
    procedure Style_Configure(Name, Options: in String) is
    begin
       Tcl_Eval(Get_Context, "ttk::style configure " & Name & " " & Options);

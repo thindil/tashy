@@ -36,18 +36,25 @@ package Tcl.Tk.Ada.TtkStyle is
    -- Options      - Additional options for the created element
    -- SOURCE
    procedure Element_Create
-     (Name, Element_Type: in String; Options: in String := "") with
+     (Name, Element_Type : in String; Options : in String := "") with
       Pre => Name /= "" and Element_Type /= "";
       -- ****
 
-      -- ****f* TtkStyle/Style_Configure
+      -- ****f* TtkStyle/Element_Names
       -- FUNCTION
-      -- Configure selected or create new Ttk style
-      -- PARAMETERS
-      -- Name    - Name of style to configure or create
-      -- Options - Options for the style
+      -- Return list of elements in the current theme
       -- SOURCE
-   procedure Style_Configure(Name, Options: in String) with
+   function Element_Names return String;
+   -- ****
+
+   -- ****f* TtkStyle/Style_Configure
+   -- FUNCTION
+   -- Configure selected or create new Ttk style
+   -- PARAMETERS
+   -- Name    - Name of style to configure or create
+   -- Options - Options for the style
+   -- SOURCE
+   procedure Style_Configure (Name, Options : in String) with
       Pre => Name /= "" and Options /= "";
       -- ****
 
@@ -58,7 +65,7 @@ package Tcl.Tk.Ada.TtkStyle is
       -- Name    - Name of the style to modify
       -- Options - Options for the layout
       -- SOURCE
-   procedure Style_Layout(Name, Options: in String) with
+   procedure Style_Layout (Name, Options : in String) with
       Pre => Name /= "" and Options /= "";
       -- ****
 
@@ -70,7 +77,7 @@ package Tcl.Tk.Ada.TtkStyle is
       -- RESULT
       -- String with layout setting for the selected style
       -- SOURCE
-   function Style_Layout(Name: in String) return String with
+   function Style_Layout (Name : in String) return String with
       Pre => Name /= "";
       -- ****
 
@@ -88,8 +95,8 @@ package Tcl.Tk.Ada.TtkStyle is
       -- found, return value of Default parameter.
       -- SOURCE
    function Style_Lookup
-     (Name, Option: in String; State: in String := "";
-      Default: in String := "") return String with
+     (Name, Option : in String; State : in String := "";
+      Default      : in String := "") return String with
       Pre => Name /= "" and Option /= "";
       -- ****
 
@@ -100,7 +107,7 @@ package Tcl.Tk.Ada.TtkStyle is
       -- Name    - Name of the style to modify
       -- Options - Options for the widget
       -- SOURCE
-   procedure Style_Map(Name, Options: in String) with
+   procedure Style_Map (Name, Options : in String) with
       Pre => Name /= "" and Options /= "";
       -- ****
 
@@ -119,7 +126,7 @@ package Tcl.Tk.Ada.TtkStyle is
    -- PARAMETERS
    -- Name of Ttk theme to set
    -- SOURCE
-   procedure Theme_Use(ThemeName: in String) with
+   procedure Theme_Use (ThemeName : in String) with
       Pre => ThemeName /= "";
       -- ****
 
