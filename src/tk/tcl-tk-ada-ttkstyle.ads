@@ -47,6 +47,18 @@ package Tcl.Tk.Ada.TtkStyle is
    function Element_Names return String;
    -- ****
 
+   -- ****f* TtkStyle/Element_Options
+   -- FUNCTION
+   -- Get options set for the selected element in current theme
+   -- PARAMETERS
+   -- Element - Name of the element to query
+   -- RESULT
+   -- List of element options
+   -- SOURCE
+   function Element_Options(Element: in String) return String with
+      Pre => Element /= "";
+      -- ****
+
    -- ****f* TtkStyle/Style_Configure
    -- FUNCTION
    -- Configure selected or create new Ttk style
