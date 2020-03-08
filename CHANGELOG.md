@@ -12,7 +12,7 @@ of the project.
 - Binding for Tk `ttk::entry` commands: `delete`, `insert`
 - Binding for Tk `tk busy` commands: `cget`, `configure`, `current`, `status`
 - Binding for Tk `ttk::style` commands: `lookup`, `element create`,
-  `element names`
+  `element names`, `element options`
 - Binding for Tk `menu` command: `invoke`
 
 ### Changed
