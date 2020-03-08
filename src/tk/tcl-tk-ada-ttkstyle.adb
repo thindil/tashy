@@ -39,6 +39,12 @@ package body Tcl.Tk.Ada.TtkStyle is
       return Tcl_GetResult(Get_Context);
    end Element_Names;
 
+   function Element_Options(Element: in String) return String is
+   begin
+      Tcl_Eval(Get_Context, "ttk::style element options " & Element);
+      return Tcl_GetResult(Get_Context);
+   end Element_Options;
+
    procedure Style_Configure(Name, Options: in String) is
    begin
       Tcl_Eval(Get_Context, "ttk::style configure " & Name & " " & Options);
