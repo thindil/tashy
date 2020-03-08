@@ -44,6 +44,14 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   procedure Add_Tag
+     (CanvasWidget: in Tk_Canvas; Tag, SearchSpec: in String;
+      Arguments: in String := "") is
+   begin
+      Execute_Widget_Command
+        (CanvasWidget, "addtag", Tag & " " & SearchSpec & " " & Arguments);
+   end Add_Tag;
+
    procedure Canvas_Create
      (Parent: in Tk_Canvas; Child_Type: in String; Options: in String := "") is
    begin
