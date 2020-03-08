@@ -60,6 +60,22 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => pathName /= "";
       -- ****
 
+      -- ****f* Canvas/Add_Tag
+      -- FUNCTION
+      -- Add tag to the selected items in the Tk_Canvas
+      -- PARAMETERS
+      -- Tag        - Tag name to add
+      -- SearchSpec - Requirement which item must meet to be selected
+      -- Arguments  - Arguments for the SearchSpec. Default value is empty
+      -- SOURCE
+   procedure Add_Tag
+     (CanvasWidget: in Tk_Canvas; Tag, SearchSpec: in String;
+      Arguments: in String := "") with
+      Pre => Tag /= "" and
+      SearchSpec in "above" | "all" | "below" | "closest" | "enclosed" |
+          "overlapping" | "withtag";
+      -- ****
+
       -- ****f* Canvas/Canvas_Create
       -- FUNCTION
       -- Add the child to the canvas
