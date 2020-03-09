@@ -94,6 +94,40 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "";
       -- ****
 
+      -- ****f* Canvas/Bind
+      -- FUNCTION
+      -- Bind the selected command to the selected item in the selected canvas
+      -- with the selected sequence
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas in which bind will be done
+      -- TagOrId      - Tag or Id of items to which bind will be done
+      -- Sequence     - Sequence to which command will be bound
+      -- Command      - Tcl command which will be bound
+      -- SOURCE
+   procedure Bind
+     (CanvasWidget: in Tk_Canvas; TagOrId, Sequence, Command: in String) with
+      Pre => TagOrId /= "" and Sequence /= "" and Command /= "";
+      -- ****
+
+      -- ****f* Canvas/Bind2
+      -- FUNCTION
+      -- Get information about binding to selected items in the selected
+      -- canvas
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas which will be queried for the info
+      -- TagOrId      - Tag or Id of items which will be queried for the bindings
+      -- Sequence     - Sequence to query. Default is empty
+      -- RESULT
+      -- If sequence is empty, return all bindings associated with the selected
+      -- items. Otherwise, return command associated with the selected item and
+      -- its sequence
+      -- SOURCE
+   function Bind
+     (CanvasWidget: in Tk_Canvas; TagOrId: in String;
+      Sequence: in String := "") return String with
+      Pre => TagOrId /= "";
+      -- ****
+
       -- ****f* Canvas/Canvas_Create
       -- FUNCTION
       -- Add the child to the canvas

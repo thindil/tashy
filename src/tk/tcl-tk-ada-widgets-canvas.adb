@@ -61,6 +61,21 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
       return Tcl.Ada.Tcl_GetResult(CanvasWidget.Interp);
    end BBox;
 
+   procedure Bind
+     (CanvasWidget: in Tk_Canvas; TagOrId, Sequence, Command: in String) is
+   begin
+      Execute_Widget_Command
+        (CanvasWidget, "bind", TagOrId & " " & Sequence & " " & Command);
+   end Bind;
+
+   function Bind
+     (CanvasWidget: in Tk_Canvas; TagOrId: in String;
+      Sequence: in String := "") return String is
+   begin
+      Execute_Widget_Command(CanvasWidget, "bind", TagOrId & " " & Sequence);
+      return Tcl.Ada.Tcl_GetResult(CanvasWidget.Interp);
+   end Bind;
+
    procedure Canvas_Create
      (Parent: in Tk_Canvas; Child_Type: in String; Options: in String := "") is
    begin
