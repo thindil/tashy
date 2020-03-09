@@ -61,6 +61,15 @@ package body Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       Execute_Widget_Command(Paned, "forget", Widget_Image(SubWindow));
    end Forget;
 
+   procedure Insert
+     (Paned: in Ttk_PanedWindow; Position: in String;
+      SubWindow: in Tk_Widget'Class; Options: in String := "") is
+   begin
+      Execute_Widget_Command
+        (Paned, "insert",
+         Position & " " & Widget_Image(SubWindow) & " " & Options);
+   end Insert;
+
    function Panes(Paned: in Ttk_PanedWindow) return String is
    begin
       Execute_Widget_Command(Paned, "panes");

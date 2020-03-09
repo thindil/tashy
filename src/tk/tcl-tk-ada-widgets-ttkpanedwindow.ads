@@ -91,14 +91,31 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    procedure Forget(Paned: in Ttk_PanedWindow; SubWindow: in Tk_Widget'Class);
    -- ****
 
-   -- ****f* TtkPanedWindow/Panes
+   -- ****f* TtkPanedWindow/Insert
    -- FUNCTION
-   -- Get list of names of all widgets managed by the Ttk_PanedWindow
+   -- Insert the selected Tk_Widget in the selected Ttk_PanedWindow on the
+   -- selected position
    -- PARAMETERS
-   -- Paned - Ttk_PanedWindow which will be queried for widgets
-   -- RESULT
-   -- List of widgets inside of Ttk_PanedWindow
+   -- Paned     - Ttk_PanedWindow in which SubWindow will be inserted
+   -- Position  - Position on which SubWindow will be inserted
+   -- SubWindow - Tk_Widget to insert to the Ttk_PanedWindow
+   -- Options   - Tk options which will be passed to the command. Default
+   --             value is empty.
    -- SOURCE
+   procedure Insert
+     (Paned: in Ttk_PanedWindow; Position: in String;
+      SubWindow: in Tk_Widget'Class; Options: in String := "") with
+      Pre => Position /= "";
+      -- ****
+
+      -- ****f* TtkPanedWindow/Panes
+      -- FUNCTION
+      -- Get list of names of all widgets managed by the Ttk_PanedWindow
+      -- PARAMETERS
+      -- Paned - Ttk_PanedWindow which will be queried for widgets
+      -- RESULT
+      -- List of widgets inside of Ttk_PanedWindow
+      -- SOURCE
    function Panes(Paned: in Ttk_PanedWindow) return String;
    -- ****
 
