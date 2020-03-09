@@ -76,6 +76,24 @@ package Tcl.Tk.Ada.Widgets.Canvas is
           "overlapping" | "withtag";
       -- ****
 
+      -- ****f* Canvas/BBox
+      -- FUNCTION
+      -- Get size of bounding box of items with the selected Tag in the
+      -- selected Tk_Canvas
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas which will be queried
+      -- Tag          - Tag or Id of items from which bounding box will be
+      --                taken
+      -- RESULT
+      -- Four values: x1, y1 - coordinates of starting point of bounding box
+      -- from top left, x2, y2 - coordinates of ending point from bottom right
+      -- of bounding box.
+      -- SOURCE
+   function BBox
+     (CanvasWidget: in Tk_Canvas; TagOrId: in String) return String with
+      Pre => TagOrId /= "";
+      -- ****
+
       -- ****f* Canvas/Canvas_Create
       -- FUNCTION
       -- Add the child to the canvas
