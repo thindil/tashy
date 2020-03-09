@@ -20,6 +20,8 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
+with Tcl.Ada;
+
 package body Tcl.Tk.Ada.Widgets.Canvas is
 
    function Create
@@ -51,6 +53,13 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
       Execute_Widget_Command
         (CanvasWidget, "addtag", Tag & " " & SearchSpec & " " & Arguments);
    end Add_Tag;
+
+   function BBox
+     (CanvasWidget: in Tk_Canvas; TagOrId: in String) return String is
+   begin
+      Execute_Widget_Command(CanvasWidget, "bbox", TagOrId);
+      return Tcl.Ada.Tcl_GetResult(CanvasWidget.Interp);
+   end BBox;
 
    procedure Canvas_Create
      (Parent: in Tk_Canvas; Child_Type: in String; Options: in String := "") is
