@@ -15,6 +15,7 @@ of the project.
   `element names`, `element options`
 - Binding for Tk `menu` command: `invoke`
 - Binding for Tk `canvas` commands: `addtag`, `bbox`, `bind`
+- Binding for Tk `ttk::panedwindow` command: `insert`
 
 ### Changed
 - Updated README.md
