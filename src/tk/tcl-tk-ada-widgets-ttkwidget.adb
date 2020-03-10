@@ -25,11 +25,22 @@ with Tcl.Ada;
 package body Tcl.Tk.Ada.Widgets.TtkWidget is
 
    function InState
-     (Widget: in Tk_Widget; StateSpec: in String; Script: in String := "")
-      return String is
+     (Widget: in Tk_Widget'Class; StateSpec: in String;
+      Script: in String := "") return String is
    begin
       Execute_Widget_Command(Widget, "instate", StateSpec & " " & Script);
       return Tcl.Ada.Tcl_GetResult(Widget.Interp);
    end InState;
+
+   procedure State(Widget: in Tk_Widget'Class; StateSpec: in String) is
+   begin
+      Execute_Widget_Command(Widget, "state", StateSpec);
+   end State;
+
+   function State(Widget: in Tk_Widget'Class) return String is
+   begin
+      Execute_Widget_Command(Widget, "state");
+      return Tcl.Ada.Tcl_GetResult(Widget.Interp);
+   end State;
 
 end Tcl.Tk.Ada.Widgets.TtkWidget;

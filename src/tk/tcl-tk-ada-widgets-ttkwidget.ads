@@ -38,9 +38,31 @@ package Tcl.Tk.Ada.Widgets.TtkWidget is
    -- 1 if the selected widget is in the selected state, otherwise 0.
    -- SOURCE
    function InState
-     (Widget: in Tk_Widget; StateSpec: in String; Script: in String := "")
-      return String with
+     (Widget: in Tk_Widget'Class; StateSpec: in String;
+      Script: in String := "") return String with
       Pre => StateSpec /= "";
       -- ****
+
+      -- ****f* TtkWidget/State
+      -- FUNCTION
+      -- Set the selected widget to the new state
+      -- PARAMETERS
+      -- Widget    - Ttk widget which state will be set
+      -- StateSpec - Ttk state to set
+      -- SOURCE
+   procedure State(Widget: in Tk_Widget'Class; StateSpec: in String) with
+      Pre => StateSpec /= "";
+      -- ****
+
+      -- ****f* TtkWidget/State2
+      -- FUNCTION
+      -- Get the current state of the selected widget
+      -- PARAMETERS
+      -- Widget - Ttk widget which will be queried for the state
+      -- RESULT
+      -- List of currently enabled state flags
+      -- SOURCE
+   function State(Widget: in Tk_Widget'Class) return String;
+   -- ****
 
 end Tcl.Tk.Ada.Widgets.TtkWidget;
