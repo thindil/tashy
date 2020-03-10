@@ -17,6 +17,7 @@ of the project.
 - Binding for Tk `canvas` commands: `addtag`, `bbox`, `bind`, `canvasx`,
   `canvasy`
 - Binding for Tk `ttk::panedwindow` command: `insert`
+- Binding for Tk command: `instate`
 
 ### Changed
 - Updated README.md
