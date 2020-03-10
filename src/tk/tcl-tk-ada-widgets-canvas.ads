@@ -111,21 +111,39 @@ package Tcl.Tk.Ada.Widgets.Canvas is
 
       -- ****f* Canvas/Bind2
       -- FUNCTION
-      -- Get information about binding to selected items in the selected
-      -- canvas
-      -- PARAMETERS
-      -- CanvasWidget - Tk_Canvas which will be queried for the info
-      -- TagOrId      - Tag or Id of items which will be queried for the bindings
-      -- Sequence     - Sequence to query. Default is empty
-      -- RESULT
-      -- If sequence is empty, return all bindings associated with the selected
-      -- items. Otherwise, return command associated with the selected item and
-      -- its sequence
-      -- SOURCE
+   -- Get information about binding to selected items in the selected
+   -- canvas
+   -- PARAMETERS
+   -- CanvasWidget - Tk_Canvas which will be queried for the info
+   -- TagOrId      - Tag or Id of items which will be queried for the bindings
+   -- Sequence     - Sequence to query. Default is empty
+   -- RESULT
+   -- If sequence is empty, return all bindings associated with the selected
+   -- items. Otherwise, return command associated with the selected item and
+   -- its sequence
+   -- SOURCE
    function Bind
      (CanvasWidget: in Tk_Canvas; TagOrId: in String;
       Sequence: in String := "") return String with
       Pre => TagOrId /= "";
+      -- ****
+
+      -- ****f* Canvas/CanvasX
+      -- FUNCTION
+      -- Get canvas X coordinate for the selected screen X coordinate
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas which will be queried for X coordinate
+      -- ScreenX      - Screen X coordinate which will be looking for in the
+      --                CanvasWidget
+      -- GridSpacing  - If specified, round result to nearest multiple of
+      --                GridSpacing units. Default is empty
+      -- RESULT
+      -- Canvas X coordinate for the selected screen X coordinate
+      -- SOURCE
+   function CanvasX
+     (CanvasWidget: in Tk_Canvas; ScreenX: in String;
+      GridSpacing: in String := "") return String with
+      Pre => ScreenX /= "";
       -- ****
 
       -- ****f* Canvas/Canvas_Create
