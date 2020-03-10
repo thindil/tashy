@@ -85,6 +85,15 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
       return Tcl.Ada.Tcl_GetResult(CanvasWidget.Interp);
    end CanvasX;
 
+   function CanvasY
+     (CanvasWidget: in Tk_Canvas; ScreenY: in String;
+      GridSpacing: in String := "") return String is
+   begin
+      Execute_Widget_Command
+        (CanvasWidget, "canvasx", ScreenY & " " & GridSpacing);
+      return Tcl.Ada.Tcl_GetResult(CanvasWidget.Interp);
+   end CanvasY;
+
    procedure Canvas_Create
      (Parent: in Tk_Canvas; Child_Type: in String; Options: in String := "") is
    begin

@@ -146,6 +146,24 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => ScreenX /= "";
       -- ****
 
+      -- ****f* Canvas/CanvasY
+      -- FUNCTION
+      -- Get canvas Y coordinate for the selected screen Y coordinate
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas which will be queried for Y coordinate
+      -- ScreenX      - Screen Y coordinate which will be looking for in the
+      --                CanvasWidget
+      -- GridSpacing  - If specified, round result to nearest multiple of
+      --                GridSpacing units. Default is empty
+      -- RESULT
+      -- Canvas Y coordinate for the selected screen Y coordinate
+      -- SOURCE
+   function CanvasY
+     (CanvasWidget: in Tk_Canvas; ScreenY: in String;
+      GridSpacing: in String := "") return String with
+      Pre => ScreenY /= "";
+      -- ****
+
       -- ****f* Canvas/Canvas_Create
       -- FUNCTION
       -- Add the child to the canvas
