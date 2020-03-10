@@ -14,7 +14,7 @@ of the project.
 - Binding for Tk `ttk::style` commands: `lookup`, `element create`,
   `element names`, `element options`
 - Binding for Tk `menu` command: `invoke`
-- Binding for Tk `canvas` commands: `addtag`, `bbox`, `bind`
+- Binding for Tk `canvas` commands: `addtag`, `bbox`, `bind`, `canvasx`
 - Binding for Tk `ttk::panedwindow` command: `insert`
 
 ### Changed
