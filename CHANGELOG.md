@@ -15,7 +15,7 @@ of the project.
   `element names`, `element options`
 - Binding for Tk `menu` command: `invoke`
 - Binding for Tk `canvas` commands: `addtag`, `bbox`, `bind`, `canvasx`,
-  `canvasy`
+  `canvasy`, `coords`
 - Binding for Tk `ttk::panedwindow` command: `insert`
 - Binding for Tk commands: `instate`, `state`
 
