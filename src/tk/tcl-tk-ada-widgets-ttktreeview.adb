@@ -46,6 +46,39 @@ package body Tcl.Tk.Ada.Widgets.TtkTreeView is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   function Children
+     (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String is
+   begin
+      Execute_Widget_Command(TreeViewWidget, "children", Item);
+      return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
+   end Children;
+
+   procedure Column
+     (TreeViewWidget: in Ttk_Tree_View; Col: in String; Options: in String) is
+   begin
+      Execute_Widget_Command(TreeViewWidget, "column", Col & " " & Options);
+   end Column;
+
+   function Column
+     (TreeViewWidget: in Ttk_Tree_View; Col: in String;
+      Option: in String := "") return String is
+   begin
+      Execute_Widget_Command(TreeViewWidget, "column", Col & " " & Option);
+      return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
+   end Column;
+
+   procedure Delete(TreeViewWidget: in Ttk_Tree_View; ItemsList: in String) is
+   begin
+      Execute_Widget_Command(TreeViewWidget, "delete", ItemsList);
+   end Delete;
+
+   function Exists
+     (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String is
+   begin
+      Execute_Widget_Command(TreeViewWidget, "exists", Item);
+      return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
+   end Exists;
+
    procedure Heading
      (TreeViewWidget: in Ttk_Tree_View; Column, Options: in String) is
    begin
@@ -61,15 +94,17 @@ package body Tcl.Tk.Ada.Widgets.TtkTreeView is
       return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
    end Heading;
 
+   function Index
+     (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String is
+   begin
+      Execute_Widget_Command(TreeViewWidget, "index", Item);
+      return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
+   end Index;
+
    procedure Insert(TreeViewWidget: in Ttk_Tree_View; Options: in String) is
    begin
       Execute_Widget_Command(TreeViewWidget, "insert", Options);
    end Insert;
-
-   procedure Delete(TreeViewWidget: in Ttk_Tree_View; ItemsList: in String) is
-   begin
-      Execute_Widget_Command(TreeViewWidget, "delete", ItemsList);
-   end Delete;
 
    procedure Item
      (TreeViewWidget: in Ttk_Tree_View; Item, Options: in String) is
@@ -84,6 +119,13 @@ package body Tcl.Tk.Ada.Widgets.TtkTreeView is
       Execute_Widget_Command(TreeViewWidget, "item", Item & " " & Options);
       return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
    end Item;
+
+   procedure Move
+     (TreeViewWidget: in Ttk_Tree_View; Item, Parent, Index: in String) is
+   begin
+      Execute_Widget_Command
+        (TreeViewWidget, "move", Item & " " & Parent & " " & Index);
+   end Move;
 
    function Selection(TreeViewWidget: in Ttk_Tree_View) return String is
    begin
@@ -114,47 +156,5 @@ package body Tcl.Tk.Ada.Widgets.TtkTreeView is
    begin
       Execute_Widget_Command(TreeViewWidget, "selection toggle", Items);
    end Selection_Toggle;
-
-   function Children
-     (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String is
-   begin
-      Execute_Widget_Command(TreeViewWidget, "children", Item);
-      return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
-   end Children;
-
-   function Exists
-     (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String is
-   begin
-      Execute_Widget_Command(TreeViewWidget, "exists", Item);
-      return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
-   end Exists;
-
-   procedure Move
-     (TreeViewWidget: in Ttk_Tree_View; Item, Parent, Index: in String) is
-   begin
-      Execute_Widget_Command
-        (TreeViewWidget, "move", Item & " " & Parent & " " & Index);
-   end Move;
-
-   function Index
-     (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String is
-   begin
-      Execute_Widget_Command(TreeViewWidget, "index", Item);
-      return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
-   end Index;
-
-   procedure Column
-     (TreeViewWidget: in Ttk_Tree_View; Col: in String; Options: in String) is
-   begin
-      Execute_Widget_Command(TreeViewWidget, "column", Col & " " & Options);
-   end Column;
-
-   function Column
-     (TreeViewWidget: in Ttk_Tree_View; Col: in String;
-      Option: in String := "") return String is
-   begin
-      Execute_Widget_Command(TreeViewWidget, "column", Col & " " & Option);
-      return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
-   end Column;
 
 end Tcl.Tk.Ada.Widgets.TtkTreeView;
