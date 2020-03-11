@@ -114,4 +114,12 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
       Execute_Widget_Command(Parent, "create", Child_Type & " " & Options);
    end Canvas_Create;
 
+   procedure Dchars
+     (CanvasWidget: in Tk_Canvas; TagOrId, First: in String;
+      Last: in String := "") is
+   begin
+      Execute_Widget_Command
+        (CanvasWidget, "dchars", TagOrId & " " & First & " " & Last);
+   end Dchars;
+
 end Tcl.Tk.Ada.Widgets.Canvas;

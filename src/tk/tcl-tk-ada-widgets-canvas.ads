@@ -207,6 +207,23 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => Child_Type /= "";
       -- ****
 
+      -- ****f* Canvas/Dchars
+      -- FUNCTION
+      -- Delete characters in the selected items in the selected range
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas in which characters will be deleted
+      -- TagOrId      - Tag or Id of the items in which characters will be
+      --                deleted
+      -- First        - Index or coordinates where to start deleting characters
+      -- Last         - Index or coordinates where to end deleting characters.
+      --                Default value is empty
+      -- SOURCE
+   procedure Dchars
+     (CanvasWidget: in Tk_Canvas; TagOrId, First: in String;
+      Last: in String := "") with
+      Pre => TagOrId /= "" and First /= "";
+      -- ****
+
 private
 
    type Tk_Canvas is new Tk_Widget with null record;
