@@ -18,6 +18,7 @@ of the project.
   `canvasy`, `coords`, `dchars`
 - Binding for Tk `ttk::panedwindow` command: `insert`
 - Binding for Tk commands: `instate`, `state`
+- Bindinf for Tk `ttk::tree_view` command: `detach`
 
 ### Changed
 - Updated README.md
