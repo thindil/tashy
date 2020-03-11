@@ -60,6 +60,81 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => pathName /= "";
       -- ****
 
+      -- ****f* TtkTreeView/Children
+      -- FUNCTION
+      -- Get children of the selected item in the selected Ttk_Tree_View
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View in which items will be queried
+      -- Item           - Item ID from TreeViewWidget or {} for root item
+      -- RESULT
+      -- String with list of items which belong to the selected item
+      -- SOURCE
+   function Children
+     (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
+      Pre => Item /= "";
+      -- ****
+
+      -- ****f* TtkTreeView/Column
+      -- FUNCTION
+      -- Modify options of the selected column in the selected Ttk_Tree_View
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View in which column will be modified
+      -- Col            - Identificator of the column to modify
+      -- Options        - Tk options to pass to the column
+      -- SOURCE
+   procedure Column
+     (TreeViewWidget: in Ttk_Tree_View; Col: in String;
+      Options: in String) with
+      Pre => Col /= "" and Options /= "";
+      -- ****
+
+      -- ****f* TtkTreeView/Column2
+      -- FUNCTION
+      -- Get value or values of options of the selected column in the selected
+      -- Ttk_Tree_View
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View which will be queried for options
+      -- Col            - Identifier of the column from which options will be
+      --                  taken
+      -- Option         - Option value to take. If empty, return all options
+      --                  and their values. Default is empty
+      -- RESULT
+      -- If Option is set, return value of the selected option for the
+      -- selected column. Otherwise return all options with their values for
+      -- the selected column.
+      -- SOURCE
+   function Column
+     (TreeViewWidget: in Ttk_Tree_View; Col: in String;
+      Option: in String := "") return String with
+      Pre => Col /= "";
+      -- ****
+
+      -- ****f* TtkTreeView/Delete
+      -- FUNCTION
+      -- Delete selected items from the tree view
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View in which items will be deleted
+      -- ItemsList      - List of items to delete
+      -- SOURCE
+   procedure Delete
+     (TreeViewWidget: in Ttk_Tree_View; ItemsList: in String) with
+      Pre => ItemsList /= "";
+      -- ****
+
+      -- ****f* TtkTreeView/Exists
+      -- FUNCTION
+      -- Check if selected item is presented in the selected Ttk_Tree_View
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View which will be checked
+      -- Item           - Item identifier which will be looking for
+      -- RESULT
+      -- 0 if item don't exists in the selected TreeViewWidget, otherwise 1.
+      -- SOURCE
+   function Exists
+     (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
+      Pre => Item /= "";
+      -- ****
+
       -- ****f* TtkTreeView/Heading
       -- FUNCTION
       -- Configure selected column header
@@ -90,6 +165,21 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Column /= "";
       -- ****
 
+      -- ****f* TtkTreeView/Index
+      -- FUNCTION
+      -- Get index of selected item in the selected Ttk_Tree_View
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View which will be queried for item
+      -- Item           - Identifier of the selected item which will be
+      --                  looking for
+      -- RESULT
+      -- Numeric index of the selected item in the selected Ttk_Tree_View
+      -- SOURCE
+   function Index
+     (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
+      Pre => Item /= "";
+      -- ****
+
       -- ****f* TtkTreeView/Insert
       -- FUNCTION
       -- Insert new item to tree view
@@ -99,18 +189,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- SOURCE
    procedure Insert(TreeViewWidget: in Ttk_Tree_View; Options: in String) with
       Pre => Options /= "";
-      -- ****
-
-      -- ****f* TtkTreeView/Delete
-      -- FUNCTION
-      -- Delete selected items from the tree view
-      -- PARAMETERS
-      -- TreeViewWidget - Ttk_Tree_View in which items will be deleted
-      -- ItemsList      - List of items to delete
-      -- SOURCE
-   procedure Delete
-     (TreeViewWidget: in Ttk_Tree_View; ItemsList: in String) with
-      Pre => ItemsList /= "";
       -- ****
 
       -- ****f* TtkTreeView/Item
@@ -139,6 +217,22 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
      (TreeViewWidget: in Ttk_Tree_View; Item: in String;
       Options: in String := "") return String with
       Pre => Item /= "";
+      -- ****
+
+      -- ****f* TtkTreeView/Move
+      -- FUNCTION
+      -- Move selected item to selected parent and on selected index in the
+      -- selected Ttk_Tree_View
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View in which item will be moved
+      -- Item           - Identifier of the item which will be moved
+      -- Parent         - Parent to which item will be moved. Use {} for
+      --                  root item
+      -- Index          - Index to which the item will be moved
+      -- SOURCE
+   procedure Move
+     (TreeViewWidget: in Ttk_Tree_View; Item, Parent, Index: in String) with
+      Pre => Item /= "" and Parent /= "" and Index /= "";
       -- ****
 
       -- ****f* TtkTreeView/Selection
@@ -199,100 +293,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    procedure Selection_Toggle
      (TreeViewWidget: in Ttk_Tree_View; Items: in String) with
       Pre => Items /= "";
-      -- ****
-
-      -- ****f* TtkTreeView/Children
-      -- FUNCTION
-      -- Get children of the selected item in the selected Ttk_Tree_View
-      -- PARAMETERS
-      -- TreeViewWidget - Ttk_Tree_View in which items will be queried
-      -- Item           - Item ID from TreeViewWidget or {} for root item
-      -- RESULT
-      -- String with list of items which belong to the selected item
-      -- SOURCE
-   function Children
-     (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
-      Pre => Item /= "";
-      -- ****
-
-      -- ****f* TtkTreeView/Exists
-      -- FUNCTION
-      -- Check if selected item is presented in the selected Ttk_Tree_View
-      -- PARAMETERS
-      -- TreeViewWidget - Ttk_Tree_View which will be checked
-      -- Item           - Item identifier which will be looking for
-      -- RESULT
-      -- 0 if item don't exists in the selected TreeViewWidget, otherwise 1.
-      -- SOURCE
-   function Exists
-     (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
-      Pre => Item /= "";
-      -- ****
-
-      -- ****f* TtkTreeView/Move
-      -- FUNCTION
-      -- Move selected item to selected parent and on selected index in the
-      -- selected Ttk_Tree_View
-      -- PARAMETERS
-      -- TreeViewWidget - Ttk_Tree_View in which item will be moved
-      -- Item           - Identifier of the item which will be moved
-      -- Parent         - Parent to which item will be moved. Use {} for
-      --                  root item
-      -- Index          - Index to which the item will be moved
-      -- SOURCE
-   procedure Move
-     (TreeViewWidget: in Ttk_Tree_View; Item, Parent, Index: in String) with
-      Pre => Item /= "" and Parent /= "" and Index /= "";
-      -- ****
-
-      -- ****f* TtkTreeView/Index
-      -- FUNCTION
-      -- Get index of selected item in the selected Ttk_Tree_View
-      -- PARAMETERS
-      -- TreeViewWidget - Ttk_Tree_View which will be queried for item
-      -- Item           - Identifier of the selected item which will be
-      --                  looking for
-      -- RESULT
-      -- Numeric index of the selected item in the selected Ttk_Tree_View
-      -- SOURCE
-   function Index
-     (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
-      Pre => Item /= "";
-      -- ****
-
-      -- ****f* TtkTreeView/Column
-      -- FUNCTION
-      -- Modify options of the selected column in the selected Ttk_Tree_View
-      -- PARAMETERS
-      -- TreeViewWidget - Ttk_Tree_View in which column will be modified
-      -- Col            - Identificator of the column to modify
-      -- Options        - Tk options to pass to the column
-      -- SOURCE
-   procedure Column
-     (TreeViewWidget: in Ttk_Tree_View; Col: in String;
-      Options: in String) with
-      Pre => Col /= "" and Options /= "";
-      -- ****
-
-      -- ****f* TtkTreeView/Column2
-      -- FUNCTION
-      -- Get value or values of options of the selected column in the selected
-      -- Ttk_Tree_View
-      -- PARAMETERS
-      -- TreeViewWidget - Ttk_Tree_View which will be queried for options
-      -- Col            - Identifier of the column from which options will be
-      --                  taken
-      -- Option         - Option value to take. If empty, return all options
-      --                  and their values. Default is empty
-      -- RESULT
-      -- If Option is set, return value of the selected option for the
-      -- selected column. Otherwise return all options with their values for
-      -- the selected column.
-      -- SOURCE
-   function Column
-     (TreeViewWidget: in Ttk_Tree_View; Col: in String;
-      Option: in String := "") return String with
-      Pre => Col /= "";
       -- ****
 
 private
