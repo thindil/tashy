@@ -72,6 +72,11 @@ package body Tcl.Tk.Ada.Widgets.TtkTreeView is
       Execute_Widget_Command(TreeViewWidget, "delete", ItemsList);
    end Delete;
 
+   procedure Detach(TreeViewWidget: in Ttk_Tree_View; ItemsList: in String) is
+   begin
+      Execute_Widget_Command(TreeViewWidget, "detach", ItemsList);
+   end Detach;
+
    function Exists
      (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String is
    begin

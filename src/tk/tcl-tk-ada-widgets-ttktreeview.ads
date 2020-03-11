@@ -121,6 +121,19 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => ItemsList /= "";
       -- ****
 
+      -- ****f* TtkTreeView/Detach
+      -- FUNCTION
+      -- Unlink the selected items from the tree view. They are still present
+      -- and can be reinserted with procedure Move
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View in which items will be unlinked
+      -- ItemsList      - List of items to unlink
+      -- SOURCE
+   procedure Detach
+     (TreeViewWidget: in Ttk_Tree_View; ItemsList: in String) with
+      Pre => ItemsList /= "";
+      -- ****
+
       -- ****f* TtkTreeView/Exists
       -- FUNCTION
       -- Check if selected item is presented in the selected Ttk_Tree_View
