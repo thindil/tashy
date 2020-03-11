@@ -94,6 +94,20 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
       return Tcl.Ada.Tcl_GetResult(CanvasWidget.Interp);
    end CanvasY;
 
+   procedure Coords
+     (CanvasWidget: in Tk_Canvas; TagOrId, Coordinates: in String) is
+   begin
+      Execute_Widget_Command
+        (CanvasWidget, "coords", TagOrId & " " & Coordinates);
+   end Coords;
+
+   function Coords
+     (CanvasWidget: in Tk_Canvas; TagOrId: in String) return String is
+   begin
+      Execute_Widget_Command(CanvasWidget, "coords", TagOrId);
+      return Tcl.Ada.Tcl_GetResult(CanvasWidget.Interp);
+   end Coords;
+
    procedure Canvas_Create
      (Parent: in Tk_Canvas; Child_Type: in String; Options: in String := "") is
    begin

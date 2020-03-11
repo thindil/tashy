@@ -164,6 +164,35 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => ScreenY /= "";
       -- ****
 
+      -- ****f* Canvas/Coords
+      -- FUNCTION
+      -- Set new coordinates for the selected widget inside the selected
+      -- Tk_Canvas
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas in which the widget will be moved
+      -- TagOrId      - Tag or Id of the item which will be moved. If Tag
+      --                refers to multiple items, only first will be used.
+      -- Coordinates  - New coordinates for the item
+      -- SOURCE
+   procedure Coords
+     (CanvasWidget: in Tk_Canvas; TagOrId, Coordinates: in String) with
+      Pre => TagOrId /= "" and Coordinates /= "";
+      -- ****
+
+      -- ****f* Canvas/Coords2
+      -- FUNCTION
+      -- Get coordinates for the selected widgets inside the selected Tk_Canvas
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas in which the widgets will be queried
+      -- TagOrId      - Tag or Id of the items which will be queried.
+      -- RESULT
+      -- List with coordinates of the selected items
+      -- SOURCE
+   function Coords
+     (CanvasWidget: in Tk_Canvas; TagOrId: in String) return String with
+      Pre => TagOrId /= "";
+      -- ****
+
       -- ****f* Canvas/Canvas_Create
       -- FUNCTION
       -- Add the child to the canvas
