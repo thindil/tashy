@@ -91,13 +91,15 @@ package body Tcl.Tk.Ada.Widgets is
 
    procedure Unbind(Widgt: in Tk_Widget'Class; Sequence: in String) is
    begin --  Unbind
-      Tcl_Eval(Widgt.Interp, "bind " & Widget_Image(Widgt) & " " & Sequence);
+      Tcl_Eval
+        (Widgt.Interp, "bind " & Widget_Image(Widgt) & " " & Sequence & " {}");
    end Unbind;
 
    function Unbind
      (Widgt: in Tk_Widget'Class; Sequence: in String) return String is
    begin --  Unbind
-      Tcl_Eval(Widgt.Interp, "bind " & Widget_Image(Widgt) & " " & Sequence);
+      Tcl_Eval
+        (Widgt.Interp, "bind " & Widget_Image(Widgt) & " " & Sequence & " {}");
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end Unbind;
 
