@@ -122,4 +122,9 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
         (CanvasWidget, "dchars", TagOrId & " " & First & " " & Last);
    end Dchars;
 
+   procedure Delete(CanvasWidget: in Tk_Canvas; TagOrId: in String) is
+   begin
+      Execute_Widget_Command(CanvasWidget, "delete", TagOrId);
+   end Delete;
+
 end Tcl.Tk.Ada.Widgets.Canvas;
