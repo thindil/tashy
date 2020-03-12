@@ -27,7 +27,9 @@ of the project.
 - Configure the library on headless systems (mostly for Docker)
 - Typos in contributing guide
 - Missing code documentation for Tk `button` and `ttk::button` `invoke` command
-- Procedure and function `unbind` in Tcl.Tk.Ada.Widgets
+- Procedure and function `Unbind` in Tcl.Tk.Ada.Widgets
+- Procedure and function `Unbind_From_Main_Window` in
+  Tcl.Tk.Ada.Widgets.Toplevel.MainWindow
 
 ## [8.6.2] - 2020-02-29
 
