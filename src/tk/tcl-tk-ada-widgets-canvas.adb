@@ -127,4 +127,12 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
       Execute_Widget_Command(CanvasWidget, "delete", TagOrId);
    end Delete;
 
+   procedure DTag
+     (CanvasWidget: in Tk_Canvas; TagOrId: in String;
+      TagToDelete: in String := "") is
+   begin
+      Execute_Widget_Command
+        (CanvasWidget, "dtag", TagOrId & " " & TagToDelete);
+   end DTag;
+
 end Tcl.Tk.Ada.Widgets.Canvas;

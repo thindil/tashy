@@ -235,6 +235,21 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "";
       -- ****
 
+      -- ****f* Canvas/DTag
+      -- FUNCTION
+      -- Delete selected Tag from items in the selected canvas
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas in which tag will be deleted
+      -- TagOrId      - Tag or Id of items from which tag will be deleted
+      -- TagToDelete  - Tag to delete. If empty, delete value of parameter
+      --                TagOrId. Default value is empty
+      -- SOURCE
+   procedure DTag
+     (CanvasWidget: in Tk_Canvas; TagOrId: in String;
+      TagToDelete: in String := "") with
+      Pre => TagOrId /= "";
+      -- ****
+
 private
 
    type Tk_Canvas is new Tk_Widget with null record;
