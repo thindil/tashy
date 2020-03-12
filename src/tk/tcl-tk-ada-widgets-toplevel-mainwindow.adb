@@ -31,13 +31,13 @@ package body Tcl.Tk.Ada.Widgets.Toplevel.MainWindow is
    procedure Unbind_From_Main_Window
      (Interp: in Tcl_Interp; Sequence: in String) is
    begin --  Unbind_From_Main_Window
-      Tcl_Eval(Interp, "bind . " & Sequence);
+      Tcl_Eval(Interp, "bind . " & Sequence & " {}");
    end Unbind_From_Main_Window;
 
    function Unbind_From_Main_Window
      (Interp: in Tcl_Interp; Sequence: in String) return String is
    begin --  Unbind_From_Main_Window
-      Tcl_Eval(Interp, "bind . " & Sequence);
+      Tcl_Eval(Interp, "bind . " & Sequence & " {}");
       return Tcl.Ada.Tcl_GetResult(Interp);
    end Unbind_From_Main_Window;
 
