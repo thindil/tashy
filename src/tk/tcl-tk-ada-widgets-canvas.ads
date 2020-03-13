@@ -250,6 +250,25 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "";
       -- ****
 
+      -- ****f* Canvas/Find
+      -- FUNCTION
+      -- Find items in the selected canvas
+      -- PARAMETERS
+      -- CanvasWidget  - Tk_Canvas which will be queried for items
+      -- SearchCommand - Search criteria for items. It is that same as
+      --                 SearchSpec for Add_Tag procedure.
+      -- Arguements    - Arguments for SearchCommand. Must be that same as
+      --                 arguments for Add_Tag procedure. Default value is
+      --                 empty
+      -- RESULT
+      -- List of items in the stacking order, the lowest item first
+      -- SOURCE
+   function Find
+     (CanvasWidget: in Tk_Canvas; SearchCommand: in String;
+      Arguments: in String := "") return String with
+      Pre => SearchCommand /= "";
+      -- ****
+
 private
 
    type Tk_Canvas is new Tk_Widget with null record;

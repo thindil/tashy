@@ -135,4 +135,13 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
         (CanvasWidget, "dtag", TagOrId & " " & TagToDelete);
    end DTag;
 
+   function Find
+     (CanvasWidget: in Tk_Canvas; SearchCommand: in String;
+      Arguments: in String := "") return String is
+   begin
+      Execute_Widget_Command
+        (CanvasWidget, "find", SearchCommand & " " & Arguments);
+      return Tcl.Ada.Tcl_GetResult(CanvasWidget.Interp);
+   end Find;
+
 end Tcl.Tk.Ada.Widgets.Canvas;
