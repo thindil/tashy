@@ -269,6 +269,19 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => SearchCommand /= "";
       -- ****
 
+      -- ****f* Canvas/Focus
+      -- FUNCTION
+      -- Set focused item in the selected canvas
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas in which focus will be set
+      -- TagOrId      - Tag or Id of item to set as focused item. If few items
+      --                are with this same tag, only first will be used. If no
+      --                item with that tag or TagOrId is empty, reset focus.
+      --                Default value is empty
+      -- SOURCE
+   procedure Focus(CanvasWidget: in Tk_Canvas; TagOrId: in String := "");
+   -- ****
+
 private
 
    type Tk_Canvas is new Tk_Widget with null record;
