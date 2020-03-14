@@ -144,4 +144,9 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
       return Tcl.Ada.Tcl_GetResult(CanvasWidget.Interp);
    end Find;
 
+   procedure Focus(CanvasWidget: in Tk_Canvas; TagOrId: in String := "") is
+   begin
+      Execute_Widget_Command(CanvasWidget, "focus", TagOrId);
+   end Focus;
+
 end Tcl.Tk.Ada.Widgets.Canvas;
