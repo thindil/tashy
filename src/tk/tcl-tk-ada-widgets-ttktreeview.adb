@@ -111,6 +111,13 @@ package body Tcl.Tk.Ada.Widgets.TtkTreeView is
       Execute_Widget_Command(TreeViewWidget, "insert", Options);
    end Insert;
 
+   function Insert
+     (TreeViewWidget: in Ttk_Tree_View; Options: in String) return String is
+   begin
+      Execute_Widget_Command(TreeViewWidget, "insert", Options);
+      return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
+   end Insert;
+
    procedure Item
      (TreeViewWidget: in Ttk_Tree_View; Item, Options: in String) is
    begin
