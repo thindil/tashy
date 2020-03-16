@@ -18,7 +18,7 @@ of the project.
   `canvasy`, `coords`, `dchars`, `delete`, `dtag`, `find`, `focus`, `gettags`
 - Binding for Tk `ttk::panedwindow` command: `insert`
 - Binding for Tk commands: `instate`, `state`
-- Bindinf for Tk `ttk::tree_view` command: `detach`
+- Bindinf for Tk `ttk::tree_view` command: `detach`, `insert` as function
 
 ### Changed
 - Updated README.md
