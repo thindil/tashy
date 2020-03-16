@@ -149,4 +149,11 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
       Execute_Widget_Command(CanvasWidget, "focus", TagOrId);
    end Focus;
 
+   function Get_Tags
+     (CanvasWidget: in Tk_Canvas; TagOrId: in String) return String is
+   begin
+      Execute_Widget_Command(CanvasWidget, "gettags", TagOrId);
+      return Tcl.Ada.Tcl_GetResult(CanvasWidget.Interp);
+   end Get_Tags;
+
 end Tcl.Tk.Ada.Widgets.Canvas;
