@@ -282,6 +282,24 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    procedure Focus(CanvasWidget: in Tk_Canvas; TagOrId: in String := "");
    -- ****
 
+   -- ****f* Canvas/Get_Tags
+   -- FUNCTION
+   -- Get list of tags associated with the selected element in the selected
+   -- canvas
+   -- PARAMETERS
+   -- CanvasWidget - Tk_Canvas in which elements will be queried
+   -- TagOrId      - Tag or Id of element from which get tags
+   -- RESULT
+   -- List of tags associated with the selected TagOrId. If there is more than
+   -- one element in the CanvasWidget, return tags for the first element in
+   -- the list. If there no element with that TagOrId or element don't have
+   -- any tag, return empty string
+   -- SOURCE
+   function Get_Tags
+     (CanvasWidget: in Tk_Canvas; TagOrId: in String) return String with
+      Pre => TagOrId /= "";
+      -- ****
+
 private
 
    type Tk_Canvas is new Tk_Widget with null record;
