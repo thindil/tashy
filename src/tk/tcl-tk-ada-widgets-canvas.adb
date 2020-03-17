@@ -156,4 +156,9 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
       return Tcl.Ada.Tcl_GetResult(CanvasWidget.Interp);
    end Get_Tags;
 
+   procedure ICursor(CanvasWidget: in Tk_Canvas; TagOrId, Index: in String) is
+   begin
+      Execute_Widget_Command(CanvasWidget, "icursor", TagOrId & " " & Index);
+   end ICursor;
+
 end Tcl.Tk.Ada.Widgets.Canvas;
