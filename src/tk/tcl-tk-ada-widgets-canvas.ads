@@ -300,6 +300,23 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "";
       -- ****
 
+      -- ****f* Canvas/ICursor
+      -- FUNCTION
+      -- Set insertion cursor in the selected element on selected position
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas in which insertion cursor will be set
+      -- TagOrId      - Tag or Id of the element in which insertion cursor
+      --                will be set. If some or all elements specified by
+      --                Tag or Id don't support an insertion cursor, this
+      --                procedure do nothing
+      -- Index        - Index in characters before which an insertion cursor
+      --                will be insererted
+      -- SOURCE
+   procedure ICursor
+     (CanvasWidget: in Tk_Canvas; TagOrId, Index: in String) with
+      Pre => TagOrId /= "" and Index /= "";
+      -- ****
+
 private
 
    type Tk_Canvas is new Tk_Widget with null record;
