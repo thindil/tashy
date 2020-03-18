@@ -317,6 +317,22 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "" and Index /= "";
       -- ****
 
+      -- ****f* Canvas/IMove
+      -- FUNCTION
+      -- Move index'th coordinate of the selected items to a new location
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas in which items will be queried
+      -- TagOrId      - Tag or Id of items which coordinates will be moved
+      -- Index        - Index of coordinate to move. Each item interprets this
+      --                value independently
+      -- X            - A new X coordinate
+      -- Y            - A new Y coordinate
+      -- SOURCE
+   procedure IMove
+     (CanvasWidget: in Tk_Canvas; TagOrId, Index, X, Y: in String) with
+      Pre => TagOrId /= "" and Index /= "" and X /= "" and Y /= "";
+      -- ****
+
 private
 
    type Tk_Canvas is new Tk_Widget with null record;
