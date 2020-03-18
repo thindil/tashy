@@ -16,7 +16,7 @@ of the project.
 - Binding for Tk `menu` command: `invoke`
 - Binding for Tk `canvas` commands: `addtag`, `bbox`, `bind`, `canvasx`,
   `canvasy`, `coords`, `dchars`, `delete`, `dtag`, `find`, `focus`, `gettags`,
-  `icursor`
+  `icursor`, `imove`
 - Binding for Tk `ttk::panedwindow` command: `insert`
 - Binding for Tk commands: `instate`, `state`
 - Bindinf for Tk `ttk::tree_view` command: `detach`, `insert` as function
