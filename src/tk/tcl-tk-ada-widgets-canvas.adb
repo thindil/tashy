@@ -161,4 +161,11 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
       Execute_Widget_Command(CanvasWidget, "icursor", TagOrId & " " & Index);
    end ICursor;
 
+   procedure IMove
+     (CanvasWidget: in Tk_Canvas; TagOrId, Index, X, Y: in String) is
+   begin
+      Execute_Widget_Command
+        (CanvasWidget, "icursor", TagOrId & " " & Index & " " & X & " " & Y);
+   end IMove;
+
 end Tcl.Tk.Ada.Widgets.Canvas;
