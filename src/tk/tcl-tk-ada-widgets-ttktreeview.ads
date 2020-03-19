@@ -253,6 +253,22 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Item /= "" and Parent /= "" and Index /= "";
       -- ****
 
+      -- ****f* TtkTreeView/Parent
+      -- FUNCTION
+      -- Get ID of the parent of item
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View in which item will be queried
+      -- Item           - Identifier of the item which will be queried for
+      --                  parent
+      -- RESULT
+      -- ID of the parent of the selected Item or {} if item is at the top of
+      -- the hiearchy
+      -- SOURCE
+   function Parent
+     (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
+      Pre => Item /= "";
+      -- ****
+
       -- ****f* TtkTreeView/Selection
       -- FUNCTION
       -- Get selected items from the selected Ttk_Tree_View

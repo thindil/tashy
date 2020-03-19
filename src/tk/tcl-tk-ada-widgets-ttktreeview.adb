@@ -139,6 +139,13 @@ package body Tcl.Tk.Ada.Widgets.TtkTreeView is
         (TreeViewWidget, "move", Item & " " & Parent & " " & Index);
    end Move;
 
+   function Parent
+     (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String is
+   begin
+      Execute_Widget_Command(TreeViewWidget, "parent", Item);
+      return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
+   end Parent;
+
    function Selection(TreeViewWidget: in Ttk_Tree_View) return String is
    begin
       Execute_Widget_Command(TreeViewWidget, "selection");
