@@ -175,4 +175,11 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
       return Tcl.Ada.Tcl_GetResult(CanvasWidget.Interp);
    end Index;
 
+   procedure Insert
+     (CanvasWidget: in Tk_Canvas; TagOrId, BeforeThis, Item: in String) is
+   begin
+      Execute_Widget_Command
+        (CanvasWidget, "insert", TagOrId & " " & BeforeThis & " " & Item);
+   end Insert;
+
 end Tcl.Tk.Ada.Widgets.Canvas;
