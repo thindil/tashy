@@ -19,7 +19,8 @@ of the project.
   `icursor`, `imove`, `index`, `insert`
 - Binding for Tk `ttk::panedwindow` command: `insert`
 - Binding for Tk commands: `instate`, `state`
-- Bindinf for Tk `ttk::treeview` commands: `detach`, `insert` as function
+- Binding for Tk `ttk::treeview` commands: `detach`, `insert` as function,
+  `parent`
 
 ### Changed
 - Updated README.md
