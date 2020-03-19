@@ -333,6 +333,22 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "" and Index /= "" and X /= "" and Y /= "";
       -- ****
 
+      -- ****f* Canvas/Index
+      -- FUNCTION
+      -- Get numerical index of the selected Index in the selected items
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas in which index will be queried
+      -- TagOrId      - Tag or Id of items to query for index
+      -- Index        - Depends on the item, it can be coordinate or index of
+      --                character in textual description
+      -- RESULT
+      -- Numerical index of the selected Index in the selected items
+      -- SOURCE
+   function Index
+     (CanvasWidget: in Tk_Canvas; TagOrId, Index: in String) return String with
+      Pre => TagOrId /= "" and Index /= "";
+      -- ****
+
 private
 
    type Tk_Canvas is new Tk_Widget with null record;

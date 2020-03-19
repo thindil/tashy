@@ -168,4 +168,11 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
         (CanvasWidget, "icursor", TagOrId & " " & Index & " " & X & " " & Y);
    end IMove;
 
+   function Index
+     (CanvasWidget: in Tk_Canvas; TagOrId, Index: in String) return String is
+   begin
+      Execute_Widget_Command(CanvasWidget, "index", TagOrId & " " & Index);
+      return Tcl.Ada.Tcl_GetResult(CanvasWidget.Interp);
+   end Index;
+
 end Tcl.Tk.Ada.Widgets.Canvas;
