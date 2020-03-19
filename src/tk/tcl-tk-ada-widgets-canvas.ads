@@ -349,6 +349,23 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "" and Index /= "";
       -- ****
 
+      -- ****f* Canvas/Insert
+      -- FUNCTION
+      -- Insert item in the elements in the selected canvas
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas in which items will be modified
+      -- TagOrId      - Tag or Id of the elements in which Item will be
+      --                inserted
+      -- BeforeThis   - Insert Item before this value. For text elements, it
+      --                will be character number, for lines, polygons
+      --                coordinates
+      -- Item         - Text to insert to the selected elements
+      -- SOURCE
+   procedure Insert
+     (CanvasWidget: in Tk_Canvas; TagOrId, BeforeThis, Item: in String) with
+      Pre => TagOrId /= "" and BeforeThis /= "" and Item /= "";
+      -- ****
+
 private
 
    type Tk_Canvas is new Tk_Widget with null record;
