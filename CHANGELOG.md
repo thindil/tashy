@@ -16,10 +16,10 @@ of the project.
 - Binding for Tk `menu` command: `invoke`
 - Binding for Tk `canvas` commands: `addtag`, `bbox`, `bind`, `canvasx`,
   `canvasy`, `coords`, `dchars`, `delete`, `dtag`, `find`, `focus`, `gettags`,
-  `icursor`, `imove`
+  `icursor`, `imove`, `index`
 - Binding for Tk `ttk::panedwindow` command: `insert`
 - Binding for Tk commands: `instate`, `state`
-- Bindinf for Tk `ttk::tree_view` command: `detach`, `insert` as function
+- Bindinf for Tk `ttk::treeview` commands: `detach`, `insert` as function
 
 ### Changed
 - Updated README.md
@@ -38,7 +38,7 @@ of the project.
 - Binding for Tk `winfo` command
 - Binding for Tk Menu `delete` command
 - **BREAKING:** creating relocatable version of library
-- Binding for Tk `ttk::tree_view` commands: `selection`, `selection add`,
+- Binding for Tk `ttk::treeview` commands: `selection`, `selection add`,
   `selection set`, `selection remove`, `selection toggle`, `children`,
   `exists`, `move`, `index`, `column`
 - Binding for Tk `ttk::notebook` widget
