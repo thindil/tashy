@@ -182,4 +182,11 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
         (CanvasWidget, "insert", TagOrId & " " & BeforeThis & " " & Item);
    end Insert;
 
+   function Item_Cget
+     (CanvasWidget: in Tk_Canvas; TagOrId, Option: in String) return String is
+   begin
+      Execute_Widget_Command(CanvasWidget, "itemcget", TagOrId & " " & Option);
+      return Tcl.Ada.Tcl_GetResult(CanvasWidget.Interp);
+   end Item_Cget;
+
 end Tcl.Tk.Ada.Widgets.Canvas;
