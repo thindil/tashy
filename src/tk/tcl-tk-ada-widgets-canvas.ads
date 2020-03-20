@@ -366,6 +366,23 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "" and BeforeThis /= "" and Item /= "";
       -- ****
 
+      -- ****f* Canvas/Item_Cget
+      -- FUNCTION
+      -- Get configuration option for the selected item in the selected canvas
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas which will be queried for option
+      -- TagOrId      - Tag or Id of the item which will be queried for option
+      -- Option       - Tk option to query
+      -- RESULT
+      -- Current value of the selected option of the selected item. If TagOrId
+      -- refers to more than one item, only first item is checked.
+      -- SOURCE
+   function Item_Cget
+     (CanvasWidget: in Tk_Canvas; TagOrId, Option: in String)
+      return String with
+      Pre => TagOrId /= "" and Option /= "";
+      -- ****
+
 private
 
    type Tk_Canvas is new Tk_Widget with null record;
