@@ -383,6 +383,28 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "" and Option /= "";
       -- ****
 
+      -- ****f* Canvas/Item_Configure
+      -- FUNCTION
+      -- Queries or modifies the configuration options of the selected item
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas which will be queried or modified for options
+      -- TagOrId      - Tag or Id of the item which will be queried or modified
+      --                for options
+      -- Options      - Options to modify or get.
+      -- RESULT
+      -- If Options is empty, return all available options and their values for
+      -- the selected item. Otherwise, return selected option's value for the
+      -- selected item
+      -- SOURCE
+   procedure Item_Configure
+     (CanvasWidget: in Tk_Canvas; TagOrId, Options: in String) with
+      Pre => TagOrId /= "" and Options /= "";
+   function Item_Configure
+     (CanvasWidget: in Tk_Canvas; TagOrId: in String; Options: in String := "")
+      return String with
+      Pre => TagOrId /= "";
+      -- ****
+
 private
 
    type Tk_Canvas is new Tk_Widget with null record;
