@@ -405,6 +405,23 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "";
       -- ****
 
+      -- ****f* Canvas/Lower
+      -- FUNCTION
+      -- Move selected item lower in the display
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas in which items will be moved
+      -- TagOrId      - Tag or Id of the items to move. If refers to more than
+      --                one item, all items will be moved but they relative
+      --                order will be preserved
+      -- BelowThis    - Tag or Id of the item below which selected items will
+      --                be moved. Default value is empty
+      -- SOURCE
+   procedure Lower
+     (CanvasWidget: in Tk_Canvas; TagOrId: in String;
+      BelowThis: in String := "") with
+      Pre => TagOrId /= "";
+      -- ****
+
 private
 
    type Tk_Canvas is new Tk_Widget with null record;
