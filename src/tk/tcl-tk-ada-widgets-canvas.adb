@@ -205,4 +205,11 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
       return Tcl.Ada.Tcl_GetResult(CanvasWidget.Interp);
    end Item_Configure;
 
+   procedure Lower
+     (CanvasWidget: in Tk_Canvas; TagOrId: in String;
+      BelowThis: in String := "") is
+   begin
+      Execute_Widget_Command(CanvasWidget, "lower", TagOrId & " " & BelowThis);
+   end Lower;
+
 end Tcl.Tk.Ada.Widgets.Canvas;
