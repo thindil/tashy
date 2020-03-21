@@ -286,6 +286,23 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Item /= "";
       -- ****
 
+      -- ****f* TtkTreeView/Prev
+      -- FUNCTION
+      -- Get identifier of previous sibling of the item in the selected
+      -- Ttk_Tree_View
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View which will be queried for item
+      -- Item           - Identifier of the item which sibling will be looking
+      --                  for
+      -- RESULT
+      -- Identifier of the previous sibling of the selected item or empty
+      -- string if Item is the first element of its parent
+      -- SOURCE
+   function Prev
+     (TreeViewWidget: in Ttk_Tree_View; Item: String) return String with
+      Pre => Item /= "";
+      -- ****
+
       -- ****f* TtkTreeView/Selection
       -- FUNCTION
       -- Get selected items from the selected Ttk_Tree_View
