@@ -20,7 +20,7 @@ of the project.
 - Binding for Tk `ttk::panedwindow` command: `insert`
 - Binding for Tk commands: `instate`, `state`
 - Binding for Tk `ttk::treeview` commands: `detach`, `insert` as function,
-  `parent`, `next`
+  `parent`, `next`, `prev`
 
 ### Changed
 - Updated README.md
