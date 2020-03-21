@@ -253,6 +253,23 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Item /= "" and Parent /= "" and Index /= "";
       -- ****
 
+      -- ****f* TtkTreeView/Next
+      -- FUNCTION
+      -- Get identifier of next sibling of the item in the selected
+      -- Ttk_Tree_View
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View which will be queried for item
+      -- Item           - Identifier of the item which sibling will be looking
+      --                  for
+      -- RESULT
+      -- Identifier of the next sibling of the selected item or empty string if
+      -- Item is the last element of its parent
+      -- SOURCE
+   function Next
+     (TreeViewWidget: in Ttk_Tree_View; Item: String) return String with
+      Pre => Item /= "";
+      -- ****
+
       -- ****f* TtkTreeView/Parent
       -- FUNCTION
       -- Get ID of the parent of item
