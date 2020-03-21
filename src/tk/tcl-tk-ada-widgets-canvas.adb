@@ -189,4 +189,20 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
       return Tcl.Ada.Tcl_GetResult(CanvasWidget.Interp);
    end Item_Cget;
 
+   procedure Item_Configure
+     (CanvasWidget: in Tk_Canvas; TagOrId, Options: in String) is
+   begin
+      Execute_Widget_Command
+        (CanvasWidget, "itemconfigure", TagOrId & " " & Options);
+   end Item_Configure;
+
+   function Item_Configure
+     (CanvasWidget: in Tk_Canvas; TagOrId: in String; Options: in String := "")
+      return String is
+   begin
+      Execute_Widget_Command
+        (CanvasWidget, "itemconfigure", TagOrId & " " & Options);
+      return Tcl.Ada.Tcl_GetResult(CanvasWidget.Interp);
+   end Item_Configure;
+
 end Tcl.Tk.Ada.Widgets.Canvas;
