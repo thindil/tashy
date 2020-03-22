@@ -422,6 +422,20 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "";
       -- ****
 
+      -- ****f* Canvas/Move
+      -- FUNCTION
+      -- Move selected items in the canvas coodinate space
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas in which items will be moved
+      -- TagOrId      - Tag or Id of the items to move
+      -- XAmount      - Amount to add to X coordinate of the items
+      -- YAmount      - Amount to add to Y coordinate of the items
+      -- SOURCE
+   procedure Move
+     (CanvasWidget: in Tk_Canvas; TagOrId, XAmount, YAmount: in String) with
+      Pre => TagOrId /= "" and XAmount /= "" and YAmount /= "";
+      -- ****
+
 private
 
    type Tk_Canvas is new Tk_Widget with null record;
