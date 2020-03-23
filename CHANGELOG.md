@@ -17,7 +17,7 @@ of the project.
 - Binding for Tk `canvas` commands: `addtag`, `bbox`, `bind`, `canvasx`,
   `canvasy`, `coords`, `dchars`, `delete`, `dtag`, `find`, `focus`, `gettags`,
   `icursor`, `imove`, `index`, `insert`, `itemcget`, `itemconfigure`, `lower`,
-  `move`, `moveto`
+  `move`, `moveto`, `postscript`
 - Binding for Tk `ttk::panedwindow` command: `insert`
 - Binding for Tk commands: `instate`, `state`
 - Binding for Tk `ttk::treeview` commands: `detach`, `insert` as function,
