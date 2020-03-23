@@ -103,6 +103,19 @@ package body Tcl.Tk.Ada.Widgets is
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end Unbind;
 
+   procedure Focus(Widgt: in Tk_Widget'Class; Option: in String := "") is
+   begin
+      Tcl_Eval(Widgt.Interp, "focus " & Option & " " & Widget_Image(Widgt));
+   end Focus;
+
+   function Focus
+     (Interp: Tcl_Interp := Get_Context; Option: in String := "")
+      return String is
+   begin
+      Tcl_Eval(Interp, "focus " & Option);
+      return Tcl.Ada.Tcl_GetResult(Interp);
+   end Focus;
+
    procedure Execute_Widget_Command
      (Widgt: in Tk_Widget'Class; command: in String;
       options: in String := "") is

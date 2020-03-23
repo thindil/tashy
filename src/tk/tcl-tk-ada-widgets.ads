@@ -203,6 +203,34 @@ package Tcl.Tk.Ada.Widgets is
      (Widgt: in Tk_Widget'Class; Sequence: in String) return String;
    -- ****
 
+   -- ****f* Widgets/Focus
+   -- FUNCTION
+   -- Set input focus on the selected Tk_Widget with the selected option
+   -- PARAMETERS
+   -- Widgt  - Tk_Widget to set as input focus
+   -- Option - Set to "-force" to set input focus even if application don't
+   --        have it. Default value is empty
+   -- SOURCE
+   procedure Focus(Widgt: in Tk_Widget'Class; Option: in String := "") with
+      Pre => Option in "" | "-force";
+      -- ****
+
+      -- ****f* Widgets/Focus2
+      -- FUNCTION
+      -- Get input focus Tk widget name in the selected Tcl interpreter
+      -- PARAMETERS
+      -- Interp - Tcl interpreter in which input focus will be queried.
+      --          Default value is current interpreter
+      -- Option - Additional option for command.
+      -- RESULT
+      -- A name of a Tk widget which have input focus or empty string if
+      -- no window in this application has focus (depending on the option)
+      -- SOURCE
+   function Focus
+     (Interp: Tcl_Interp := Get_Context; Option: in String := "")
+      return String;
+   -- ****
+
    -- ****f* Widgets/Execute_Widget_Command
    -- FUNCTION
    -- Execute selected Tcl command in the selected widget. Generally, you
