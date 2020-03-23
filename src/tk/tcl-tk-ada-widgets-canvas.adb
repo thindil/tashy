@@ -219,4 +219,11 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
         (CanvasWidget, "move", TagOrId & " " & XAmount & " " & YAmount);
    end Move;
 
+   procedure MoveTo
+     (CanvasWidget: in Tk_Canvas; TagOrId, XPos, YPos: in String) is
+   begin
+      Execute_Widget_Command
+        (CanvasWidget, "moveto", TagOrId & " " & XPos & " " & YPos);
+   end MoveTo;
+
 end Tcl.Tk.Ada.Widgets.Canvas;
