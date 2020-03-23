@@ -226,4 +226,11 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
         (CanvasWidget, "moveto", TagOrId & " " & XPos & " " & YPos);
    end MoveTo;
 
+   function Postscript
+     (CanvasWidget: in Tk_Canvas; Options: in String) return String is
+   begin
+      Execute_Widget_Command(CanvasWidget, "postscript", Options);
+      return Tcl.Ada.Tcl_GetResult(CanvasWidget.Interp);
+   end Postscript;
+
 end Tcl.Tk.Ada.Widgets.Canvas;

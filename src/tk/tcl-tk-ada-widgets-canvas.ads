@@ -450,6 +450,22 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => XPos /= "" and YPos /= "";
       -- ****
 
+      -- ****f* Canvas/Postscript
+      -- FUNCTION
+      -- Generate a Postscript representation of part or all of the canvas
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas which Postscrip representation will be
+      --                created
+      -- Options      - Additional options passed to the command
+      -- RESULT
+      -- A Postscript representation of the CanvasWidget or empty string if
+      -- representation was selected to write to file
+      -- SOURCE
+   function Postscript
+     (CanvasWidget: in Tk_Canvas; Options: in String) return String with
+      Pre => Options /= "";
+      -- ****
+
 private
 
    type Tk_Canvas is new Tk_Widget with null record;
