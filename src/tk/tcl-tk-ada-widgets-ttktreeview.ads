@@ -148,14 +148,37 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Item /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Heading
+      -- ****f* TtkTreeView/Focus
       -- FUNCTION
-      -- Configure selected column header
+      -- Set focus item in the selected Ttk_Tree_View
       -- PARAMETERS
-      -- TreeViewWidget - Ttk_Tree_View in which header will be configured
-      -- Column         - Id of column which header will be configured
-      -- Options        - Tk options for selected header
+      -- TreeViewWidget - Ttk_Tree_View in which item will be set
+      -- Item           - Identifier of the item which will be set as focused
       -- SOURCE
+   procedure Focus(TreeViewWidget: in Ttk_Tree_View; Item: in String) with
+      Pre => Item /= "";
+      -- ****
+
+      -- ****f* TtkTreeView/Focus2
+      -- FUNCTION
+      -- Get currently focused item in the selected Ttk_Tree_View
+      -- PARAMETERS
+      -- TreeViewWidget - TreeViewWidget which will be queried for focused
+      --                  item
+      -- RESULT
+      -- Identifier ot the currently focused item or empty string if none
+      -- SOURCE
+   function Focus(TreeViewWidget: in Ttk_Tree_View) return String;
+   -- ****
+
+   -- ****f* TtkTreeView/Heading
+   -- FUNCTION
+   -- Configure selected column header
+   -- PARAMETERS
+   -- TreeViewWidget - Ttk_Tree_View in which header will be configured
+   -- Column         - Id of column which header will be configured
+   -- Options        - Tk options for selected header
+   -- SOURCE
    procedure Heading
      (TreeViewWidget: in Ttk_Tree_View; Column, Options: in String) with
       Pre => Column /= "" and Options /= "";

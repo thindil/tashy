@@ -84,6 +84,17 @@ package body Tcl.Tk.Ada.Widgets.TtkTreeView is
       return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
    end Exists;
 
+   procedure Focus(TreeViewWidget: in Ttk_Tree_View; Item: in String) is
+   begin
+      Execute_Widget_Command(TreeViewWidget, "focus", Item);
+   end Focus;
+
+   function Focus(TreeViewWidget: in Ttk_Tree_View) return String is
+   begin
+      Execute_Widget_Command(TreeViewWidget, "focus");
+      return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
+   end Focus;
+
    procedure Heading
      (TreeViewWidget: in Ttk_Tree_View; Column, Options: in String) is
    begin
