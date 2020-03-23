@@ -19,7 +19,7 @@ of the project.
   `icursor`, `imove`, `index`, `insert`, `itemcget`, `itemconfigure`, `lower`,
   `move`, `moveto`, `postscript`
 - Binding for Tk `ttk::panedwindow` command: `insert`
-- Binding for Tk commands: `instate`, `state`
+- Binding for Tk commands: `instate`, `state`, `focus`
 - Binding for Tk `ttk::treeview` commands: `detach`, `insert` as function,
   `parent`, `next`, `prev`, `focus`
 
