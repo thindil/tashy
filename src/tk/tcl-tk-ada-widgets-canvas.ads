@@ -466,6 +466,23 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => Options /= "";
       -- ****
 
+      -- ****f* Canvas/Canvas_Raise
+      -- FUNCTION
+      -- Move selected item higher in the display
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas in which items will be moved
+      -- TagOrId      - Tag or Id of the items to move. If refers to more than
+      --                one item, all items will be moved but they relative
+      --                order will be preserved
+      -- AfterThis    - Tag or Id of the item after which selected items will
+      --                be moved. Default value is empty
+      -- SOURCE
+   procedure Canvas_Raise
+     (CanvasWidget: in Tk_Canvas; TagOrId: in String;
+      AboveThis: in String := "") with
+      Pre => TagOrId /= "";
+      -- ****
+
 private
 
    type Tk_Canvas is new Tk_Widget with null record;
