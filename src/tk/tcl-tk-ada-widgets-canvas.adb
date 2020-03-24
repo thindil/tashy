@@ -233,4 +233,11 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
       return Tcl.Ada.Tcl_GetResult(CanvasWidget.Interp);
    end Postscript;
 
+   procedure Canvas_Raise
+     (CanvasWidget: in Tk_Canvas; TagOrId: in String;
+      AboveThis: in String := "") is
+   begin
+      Execute_Widget_Command(CanvasWidget, "raise", TagOrId & " " & AboveThis);
+   end Canvas_Raise;
+
 end Tcl.Tk.Ada.Widgets.Canvas;
