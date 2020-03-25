@@ -25,6 +25,7 @@ of the project.
 
 ### Changed
 - Updated README.md
+- Updated code documentation
 
 ### Fixed
 - Configure the library on headless systems (mostly for Docker)
