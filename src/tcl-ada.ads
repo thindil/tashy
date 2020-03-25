@@ -1260,6 +1260,16 @@ package Tcl.Ada is
 
    procedure Tcl_UnlinkVar(interp: not null Tcl_Interp; varName: in String);
 
+   -- ****f* Ada/Tcl_UnsetVar
+   -- FUNCTION
+   -- Unset the selected variable
+   -- PARAMETERS
+   -- interp   - Tcl interpreter in which the variable will be removed
+   -- varName  - Name of variable to removed
+   -- flags    - Tcl flags for variable
+   -- RESULT
+   -- If variable cannot be removed, return TCL_ERROR.
+   -- SOURCE
    function Tcl_UnsetVar
      (interp: not null Tcl_Interp; varName: in String;
       flags: in C.int := TCL_GLOBAL_ONLY) return C.int;
@@ -1267,6 +1277,7 @@ package Tcl.Ada is
    procedure Tcl_UnsetVar
      (interp: not null Tcl_Interp; varName: in String;
       flags: in C.int := TCL_GLOBAL_ONLY);
+   -- ****
 
    function Tcl_UnsetVar2
      (interp: not null Tcl_Interp; part1: in String; part2: in String;
