@@ -240,4 +240,12 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
       Execute_Widget_Command(CanvasWidget, "raise", TagOrId & " " & AboveThis);
    end Canvas_Raise;
 
+   procedure Rchars
+     (CanvasWidget: in Tk_Canvas; TagOrId, First, Last, Text: in String) is
+   begin
+      Execute_Widget_Command
+        (CanvasWidget, "rchars",
+         TagOrId & " " & First & " " & Last & " " & Text);
+   end Rchars;
+
 end Tcl.Tk.Ada.Widgets.Canvas;
