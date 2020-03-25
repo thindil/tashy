@@ -483,6 +483,24 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "";
       -- ****
 
+      -- ****f* Canvas/Rchars
+      -- FUNCTION
+      -- Replace text at selected position in the selected items. How text is
+      -- replaced depends on the item type
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas in which items text will be replaced
+      -- TagOrId      - Tag or Id of the items in which text will be replaced
+      -- First        - Character position or coordinate at which replace text
+      --                starts
+      -- Last         - Character position or coordinate at which replace text
+      --                ends
+      -- Text         - Text to replace
+      -- SOURCE
+   procedure Rchars
+     (CanvasWidget: in Tk_Canvas; TagOrId, First, Last, Text: in String) with
+      Pre => TagOrId /= "" and First /= "" and Last /= "" and Text /= "";
+      -- ****
+
 private
 
    type Tk_Canvas is new Tk_Widget with null record;
