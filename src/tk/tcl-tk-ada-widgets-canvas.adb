@@ -248,4 +248,13 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
          TagOrId & " " & First & " " & Last & " " & Text);
    end Rchars;
 
+   procedure Scale
+     (CanvasWidget: in Tk_Canvas;
+      TagOrId, XOrgin, YOrgin, XScale, YScale: in String) is
+   begin
+      Execute_Widget_Command
+        (CanvasWidget, "scale",
+         TagOrId & " " & XOrgin & " " & YOrgin & " " & XScale & " " & YScale);
+   end Scale;
+
 end Tcl.Tk.Ada.Widgets.Canvas;
