@@ -501,6 +501,26 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "" and First /= "" and Last /= "" and Text /= "";
       -- ****
 
+      -- ****f* Canvas/Scale
+      -- FUNCTION
+      -- Rescale coordinates of the selected items in canvas coordinate space.
+      -- Each point is scaled by distance between XOrgin and XScale and YOrgin
+      -- and YScale respectively.
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas in which items will be scaled
+      -- TagOrId      - Tag or Id of the items to scale
+      -- XOrgin       - X coordinate of the scale starting point
+      -- YOrgin       - Y coordinate of the scale starting point
+      -- XScale       - X factor to scale points. 1.0 mean no scaling
+      -- YScale       - Y factor to scale points. 1.0 mean no scaling
+      -- SOURCE
+   procedure Scale
+     (CanvasWidget: in Tk_Canvas;
+      TagOrId, XOrgin, YOrgin, XScale, YScale: in String) with
+      Pre => TagOrId /= "" and XOrgin /= "" and YOrgin /= "" and
+      XScale /= "" and YScale /= "";
+      -- ****
+
 private
 
    type Tk_Canvas is new Tk_Widget with null record;
