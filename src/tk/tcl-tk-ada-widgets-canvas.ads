@@ -521,6 +521,20 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       XScale /= "" and YScale /= "";
       -- ****
 
+      -- ****f* Canvas/Select_Adjust
+      -- FUNCTION
+      -- Resize current selection in the item in canvas to the selected index
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas in which selection will be resized
+      -- TagOrId      - Tag or Id of the item in which selection will be
+      --                resized
+      -- Index        - New index to which selection will be done in the item
+      -- SOURCE
+   procedure Select_Adjust
+     (CanvasWidget: in Tk_Canvas; TagOrId, Index: in String) with
+      Pre => TagOrId /= "" and Index /= "";
+      -- ****
+
 private
 
    type Tk_Canvas is new Tk_Widget with null record;
