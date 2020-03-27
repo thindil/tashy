@@ -257,4 +257,11 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
          TagOrId & " " & XOrgin & " " & YOrgin & " " & XScale & " " & YScale);
    end Scale;
 
+   procedure Select_Adjust
+     (CanvasWidget: in Tk_Canvas; TagOrId, Index: in String) is
+   begin
+      Execute_Widget_Command
+        (CanvasWidget, "select adjust", TagOrId & " " & Index);
+   end Select_Adjust;
+
 end Tcl.Tk.Ada.Widgets.Canvas;
