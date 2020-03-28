@@ -535,6 +535,15 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "" and Index /= "";
       -- ****
 
+      -- ****f* Canvas/Select_Clear
+      -- FUNCTION
+      -- Clear the selection in the selected Tk_Canvas
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas in which selection will be cleared
+      -- SOURCE
+   procedure Select_Clear(CanvasWidget: in Tk_Canvas);
+   -- ****
+
 private
 
    type Tk_Canvas is new Tk_Widget with null record;
