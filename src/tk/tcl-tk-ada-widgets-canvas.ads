@@ -544,6 +544,21 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    procedure Select_Clear(CanvasWidget: in Tk_Canvas);
    -- ****
 
+   -- ****f* Canvas/Select_From
+   -- FUNCTION
+   -- Set the selection anchor point for the canvas in the selected item at
+   -- selected character. This procedure does not change selection it just
+   -- set fixed end selection for future Select_To procedure
+   -- PARAMETERS
+   -- CanvasWidget - Tk_Canvas in which the selection will be set
+   -- TagOrId      - Tag or Id of the item in which the selection will be set
+   -- Index        - Index of character before which the selection will be set
+   -- SOURCE
+   procedure Select_From
+     (CanvasWidget: in Tk_Canvas; TagOrId, Index: in String) with
+      Pre => TagOrId /= "" and Index /= "";
+      -- ****
+
 private
 
    type Tk_Canvas is new Tk_Widget with null record;

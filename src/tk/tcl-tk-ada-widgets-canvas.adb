@@ -269,4 +269,11 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
       Execute_Widget_Command(CanvasWidget, "select clear");
    end Select_Clear;
 
+   procedure Select_From
+     (CanvasWidget: in Tk_Canvas; TagOrId, Index: in String) is
+   begin
+      Execute_Widget_Command
+        (CanvasWidget, "select from", TagOrId & " " & Index);
+   end Select_From;
+
 end Tcl.Tk.Ada.Widgets.Canvas;
