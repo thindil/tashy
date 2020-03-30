@@ -288,4 +288,11 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
       Execute_Widget_Command(CanvasWidget, "select to", TagOrId & " " & Index);
    end Select_To;
 
+   function Canvas_Type
+     (CanvasWidget: in Tk_Canvas; TagOrId: in String) return String is
+   begin
+      Execute_Widget_Command(CanvasWidget, "type", TagOrId);
+      return Tcl.Ada.Tcl_GetResult(CanvasWidget.Interp);
+   end Canvas_Type;
+
 end Tcl.Tk.Ada.Widgets.Canvas;
