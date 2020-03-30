@@ -73,6 +73,23 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => Index /= "" and Text /= "";
       -- ****
 
+      -- ****f* Text/Tag_Add
+      -- FUNCTION
+      -- Add the selected tag to the text in Tk_Text
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which the new tag will be added
+      -- TagName    - Name of the tag to add
+      -- StartIndex - Starting position on which add the tag
+      -- Indexes    - End position for adding the tag or more ranges for add
+      --              the tag. If empty, tag will be added only for one
+      --              character. Default value is empty
+      -- SOURCE
+   procedure Tag_Add
+     (TextWidget: in Tk_Text; TagName, StartIndex: in String;
+      Indexes: in String := "") with
+      Pre => TagName /= "" and StartIndex /= "";
+      -- ****
+
 private
 
    type Tk_Text is new Tk_Widget with null record;
