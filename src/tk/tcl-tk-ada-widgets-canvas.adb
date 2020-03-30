@@ -282,4 +282,10 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
       return Tcl.Ada.Tcl_GetResult(CanvasWidget.Interp);
    end Select_Item;
 
+   procedure Select_To
+     (CanvasWidget: in Tk_Canvas; TagOrId, Index: in String) is
+   begin
+      Execute_Widget_Command(CanvasWidget, "select to", TagOrId & " " & Index);
+   end Select_To;
+
 end Tcl.Tk.Ada.Widgets.Canvas;
