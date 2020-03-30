@@ -20,6 +20,8 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
+with Tcl.Ada;
+
 package body Tcl.Tk.Ada.Widgets.Text is
 
    function Create
@@ -56,5 +58,21 @@ package body Tcl.Tk.Ada.Widgets.Text is
       Execute_Widget_Command
         (TextWidget, "tag add", TagName & " " & StartIndex & " " & Indexes);
    end Tag_Add;
+
+   procedure Tag_Configure
+     (TextWidget: in Tk_Text; TagName, Options: in String) is
+   begin
+      Execute_Widget_Command
+        (TextWidget, "tag configure", TagName & " " & Options);
+   end Tag_Configure;
+
+   function Tag_Configure
+     (TextWidget: in Tk_Text; TagName: in String; Option: in String := "")
+      return String is
+   begin
+      Execute_Widget_Command
+        (TextWidget, "tag configure", TagName & " " & Option);
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end Tag_Configure;
 
 end Tcl.Tk.Ada.Widgets.Text;
