@@ -570,6 +570,21 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    function Select_Item(CanvasWidget: in Tk_Canvas) return String;
    -- ****
 
+   -- ****f* Canvas/Select_To
+   -- FUNCTION
+   -- Set selection end for the canvas in the selected item at the selected
+   -- character. Starting point is set by the most recent Select_Adjust or
+   -- Select_From procedures
+   -- PARAMETERS
+   -- CanvasWidget - Tk_Canvas in which selection will be set
+   -- TagOrId      - Tag or Id of the item in which selection will be set
+   -- Index        - Index of character which will be added to the selection
+   -- SOURCE
+   procedure Select_To
+     (CanvasWidget: in Tk_Canvas; TagOrId, Index: in String) with
+      Pre => TagOrId /= "" and Index /= "";
+      -- ****
+
 private
 
    type Tk_Canvas is new Tk_Widget with null record;
