@@ -585,6 +585,22 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "" and Index /= "";
       -- ****
 
+      -- ****f* Canvas/Canvas_Type
+      -- FUNCTION
+      -- Get type of the selected item in the selected Tk_Canvas
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas in which item's type will be queried
+      -- TagOrId      - Tag or Id of the item from which type will be get
+      -- RESULT
+      -- Type of the selected item. If TagOrId refers to more than one item,
+      -- return type of the first item. If no item with the selected TagOrId,
+      -- return {}
+      -- SOURCE
+   function Canvas_Type
+     (CanvasWidget: in Tk_Canvas; TagOrId: in String) return String with
+      Pre => TagOrId /= "";
+      -- ****
+
 private
 
    type Tk_Canvas is new Tk_Widget with null record;
