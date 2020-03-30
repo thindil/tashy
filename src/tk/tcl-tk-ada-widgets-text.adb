@@ -49,4 +49,12 @@ package body Tcl.Tk.Ada.Widgets.Text is
       Execute_Widget_Command(TextWidget, "insert", Index & " " & Text);
    end Insert;
 
+   procedure Tag_Add
+     (TextWidget: in Tk_Text; TagName, StartIndex: in String;
+      Indexes: in String := "") is
+   begin
+      Execute_Widget_Command
+        (TextWidget, "tag add", TagName & " " & StartIndex & " " & Indexes);
+   end Tag_Add;
+
 end Tcl.Tk.Ada.Widgets.Text;
