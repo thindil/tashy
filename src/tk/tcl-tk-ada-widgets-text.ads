@@ -90,6 +90,37 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => TagName /= "" and StartIndex /= "";
       -- ****
 
+      -- ****f* Text/Tag_Configure
+      -- FUNCTION
+      -- Configure the selected tag in the selected Tk_Text widget
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which tag will be configured
+      -- TagName    - Name of the tag to configure
+      -- Options    - Tag options with values to set
+      -- SOURCE
+   procedure Tag_Configure
+     (TextWidget: in Tk_Text; TagName, Options: in String) with
+      Pre => TagName /= "" and Options /= "";
+      -- ****
+
+      -- ****f* Text/Tag_Configure2
+      -- FUNCTION
+      -- Get configuration of the selected tag in the selected Tk_Text widget
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which the tag will be queried for options
+      -- TagName    - Name of the tag which configuration will be queried
+      -- Option     - Configuration option which value to get. Default value
+      --              is empty
+      -- RESULT
+      -- The selected configuration option value. If Option is empty, return
+      -- string with all options and their values.
+      -- SOURCE
+   function Tag_Configure
+     (TextWidget: in Tk_Text; TagName: in String; Option: in String := "")
+      return String with
+      Pre => TagName /= "";
+      -- ****
+
 private
 
    type Tk_Text is new Tk_Widget with null record;
