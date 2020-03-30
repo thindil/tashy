@@ -559,6 +559,17 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "" and Index /= "";
       -- ****
 
+      -- ****f* Canvas/Select_Item
+      -- FUNCTION
+      -- Get Id of the selected item in the selected canvas
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas in which selection will be queried
+      -- RESULT
+      -- Id of the selected item or {} if no item selected in the CanvasWidget
+      -- SOURCE
+   function Select_Item(CanvasWidget: in Tk_Canvas) return String;
+   -- ****
+
 private
 
    type Tk_Canvas is new Tk_Widget with null record;
