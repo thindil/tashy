@@ -276,4 +276,10 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
         (CanvasWidget, "select from", TagOrId & " " & Index);
    end Select_From;
 
+   function Select_Item(CanvasWidget: in Tk_Canvas) return String is
+   begin
+      Execute_Widget_Command(CanvasWidget, "select item");
+      return Tcl.Ada.Tcl_GetResult(CanvasWidget.Interp);
+   end Select_Item;
+
 end Tcl.Tk.Ada.Widgets.Canvas;
