@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.2 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.3 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,13 +27,17 @@
 <ul>
 <li>1. <a href="#robo20">TkAda/TtkStyle</a></li>
 <ul>
-<li>1.1. <a href="#robo246">TtkStyle/Style_Configure</a></li>
-<li>1.2. <a href="#robo247">TtkStyle/Style_Layout</a></li>
-<li>1.3. <a href="#robo248">TtkStyle/Style_Layout2</a></li>
-<li>1.4. <a href="#robo249">TtkStyle/Style_Map</a></li>
-<li>1.5. <a href="#robo250">TtkStyle/Theme_Names</a></li>
-<li>1.6. <a href="#robo251">TtkStyle/Theme_Use</a></li>
-<li>1.7. <a href="#robo252">TtkStyle/Theme_Use2</a></li>
+<li>1.1. <a href="#robo302">TtkStyle/Element_Create</a></li>
+<li>1.2. <a href="#robo303">TtkStyle/Element_Names</a></li>
+<li>1.3. <a href="#robo304">TtkStyle/Element_Options</a></li>
+<li>1.4. <a href="#robo305">TtkStyle/Style_Configure</a></li>
+<li>1.5. <a href="#robo306">TtkStyle/Style_Layout</a></li>
+<li>1.6. <a href="#robo307">TtkStyle/Style_Layout2</a></li>
+<li>1.7. <a href="#robo308">TtkStyle/Style_Lookup</a></li>
+<li>1.8. <a href="#robo309">TtkStyle/Style_Map</a></li>
+<li>1.9. <a href="#robo310">TtkStyle/Theme_Names</a></li>
+<li>1.10. <a href="#robo311">TtkStyle/Theme_Use</a></li>
+<li>1.11. <a href="#robo312">TtkStyle/Theme_Use2</a></li>
 </ul>
 </ul>
 <hr />
@@ -49,32 +53,82 @@
 </pre>
 
 <hr />
-<a name="TtkStyle2fStyle5fConfigure"></a>
-<a name="robo246"></a><h2>TtkStyle/Style_Configure [ Subprograms ]</h2>
+<a name="TtkStyle2fElement5fCreate"></a>
+<a name="robo302"></a><h2>TtkStyle/Element_Create [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Configure selected or create new Ttk style
+<pre> Creates a new element in the current theme of the selected type
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Style_Configure</strong><span class="sign">(</span>Name<span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Element_Create</strong>
+     <span class="sign">(</span>Name<span class="sign">,</span> Element_Type <span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Options <span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> Name <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and Element_Type <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Name         - Name of the element to create
+ Element_Type - Type of the element to create
+ Options      - Additional options for the created element
+</pre>
+
+<hr />
+<a name="TtkStyle2fElement5fNames"></a>
+<a name="robo303"></a><h2>TtkStyle/Element_Names [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Return list of elements in the current theme
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Element_Names</strong> <span class="keyword">return</span> String<span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="TtkStyle2fElement5fOptions"></a>
+<a name="robo304"></a><h2>TtkStyle/Element_Options [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> options set for the selected element in current theme
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Element_Options</strong><span class="sign">(</span>Element<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> Element <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Element - Name of the element to query
+</pre>
+<p class="item_name">RESULT</p>
+<pre> List of element options
+</pre>
+
+<hr />
+<a name="TtkStyle2fStyle5fConfigure"></a>
+<a name="robo305"></a><h2>TtkStyle/Style_Configure [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-busy_ads.html#robo118">Configure</a> selected or create new Ttk style
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Style_Configure</strong> <span class="sign">(</span>Name<span class="sign">,</span> Options <span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Name <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Name    - Name of style to <a href="./tcl-tk-ada-widgets_ads.html#robo274">configure</a> or create
+<pre> Name    - Name of style to <a href="./tcl-tk-ada-widgets_ads.html#robo343">configure</a> or create
  Options - Options for the style
 </pre>
 
 <hr />
 <a name="TtkStyle2fStyle5fLayout"></a>
-<a name="robo247"></a><h2>TtkStyle/Style_Layout [ Subprograms ]</h2>
+<a name="robo306"></a><h2>TtkStyle/Style_Layout [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Define widget layout style for the selected style
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Style_Layout</strong><span class="sign">(</span>Name<span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Style_Layout</strong> <span class="sign">(</span>Name<span class="sign">,</span> Options <span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Name <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
@@ -84,14 +138,14 @@
 
 <hr />
 <a name="TtkStyle2fStyle5fLayout2"></a>
-<a name="robo248"></a><h2>TtkStyle/Style_Layout2 [ Subprograms ]</h2>
+<a name="robo307"></a><h2>TtkStyle/Style_Layout2 [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo225">Get</a> widget layout for the selected style
+<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> widget layout for the selected style
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <a href="#robo247">Style_Layout</a><span class="sign">(</span>Name<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+<pre class="source">   <span class="keyword">function</span> <a href="#robo306">Style_Layout</a> <span class="sign">(</span>Name <span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Name <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
@@ -102,15 +156,41 @@
 </pre>
 
 <hr />
+<a name="TtkStyle2fStyle5fLookup"></a>
+<a name="robo308"></a><h2>TtkStyle/Style_Lookup [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> value of the selected option in the selected style
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Style_Lookup</strong>
+     <span class="sign">(</span>Name<span class="sign">,</span> Option <span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> <a href="./tcl-tk-ada-widgets-ttkwidget_ads.html#robo338">State</a> <span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Default      <span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> Name <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and Option <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Name    - Name of the style to query
+ Option  - Name of the option to query
+ <a href="./tcl-tk-ada-widgets-ttkwidget_ads.html#robo338">State</a>   - List of the states names. If empty, mean "normal" state.
+           Default value is empty
+ Default - Default value to return when option was not found
+</pre>
+<p class="item_name">RESULT</p>
+<pre> Value of the selected option in the selected style. If option was not
+ found, return value of Default parameter.
+</pre>
+
+<hr />
 <a name="TtkStyle2fStyle5fMap"></a>
-<a name="robo249"></a><h2>TtkStyle/Style_Map [ Subprograms ]</h2>
+<a name="robo309"></a><h2>TtkStyle/Style_Map [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Define widget style dynamic map for the selected style
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Style_Map</strong><span class="sign">(</span>Name<span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Style_Map</strong> <span class="sign">(</span>Name<span class="sign">,</span> Options <span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Name <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
@@ -120,11 +200,11 @@
 
 <hr />
 <a name="TtkStyle2fTheme5fNames"></a>
-<a name="robo250"></a><h2>TtkStyle/Theme_Names [ Subprograms ]</h2>
+<a name="robo310"></a><h2>TtkStyle/Theme_Names [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo225">Get</a> list of all available Ttk themes
+<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> list of all available Ttk themes
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Theme_Names</strong> <span class="keyword">return</span> String<span class="sign">;</span>
@@ -135,14 +215,14 @@
 
 <hr />
 <a name="TtkStyle2fTheme5fUse"></a>
-<a name="robo251"></a><h2>TtkStyle/Theme_Use [ Subprograms ]</h2>
+<a name="robo311"></a><h2>TtkStyle/Theme_Use [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Set new Ttk theme and redraw all widgets
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Theme_Use</strong><span class="sign">(</span>ThemeName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Theme_Use</strong> <span class="sign">(</span>ThemeName <span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> ThemeName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
@@ -151,14 +231,14 @@
 
 <hr />
 <a name="TtkStyle2fTheme5fUse2"></a>
-<a name="robo252"></a><h2>TtkStyle/Theme_Use2 [ Subprograms ]</h2>
+<a name="robo312"></a><h2>TtkStyle/Theme_Use2 [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo225">Get</a> currenlty used Ttk theme
+<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> currenlty used Ttk theme
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <a href="#robo251">Theme_Use</a> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> <a href="#robo311">Theme_Use</a> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">RESULT</p>
 <pre> Name of currently used Ttk theme
@@ -166,7 +246,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-ttkstyle.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Sat Feb 29 2020 07:27:12
+<p>Generated from ./src/tk/tcl-tk-ada-ttkstyle.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Mar 31 2020 07:12:51
 </p>
 </div> <!-- footer -->
 </body>
