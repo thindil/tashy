@@ -46,6 +46,13 @@ package body Tcl.Tk.Ada.Widgets.Text is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   procedure Delete
+     (TextWidget: in Tk_Text; StartIndex: in String;
+      Indexes: in String := "") is
+   begin
+      Execute_Widget_Command(TextWidget, "delete", StartIndex & " " & Indexes);
+   end Delete;
+
    procedure Insert(TextWidget: in Tk_Text; Index, Text: in String) is
    begin
       Execute_Widget_Command(TextWidget, "insert", Index & " " & Text);

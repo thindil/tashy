@@ -60,6 +60,23 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => pathName /= "";
       -- ****
 
+      -- ****f* Text/Delete
+      -- FUNCTION
+      -- Delete text from the selected Tk_Text
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which text will be deleted
+      -- StartIndex - Start index of character which will be deleted
+      -- Indexes    - End index of character before which delete will be done.
+      --              It can be also values for another ranges of text to
+      --              delete. If empty, delete only one character. Default
+      --              value is empty.
+      -- SOURCE
+   procedure Delete
+     (TextWidget: in Tk_Text; StartIndex: in String;
+      Indexes: in String := "") with
+      Pre => StartIndex /= "";
+      -- ****
+
       -- ****f* Text/Insert
       -- FUNCTION
       -- Insert text into text widget at selected index
