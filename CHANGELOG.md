@@ -18,7 +18,8 @@ of the project.
   `canvasy`, `coords`, `dchars`, `delete`, `dtag`, `find`, `focus`, `gettags`,
   `icursor`, `imove`, `index`, `insert`, `itemcget`, `itemconfigure`, `lower`,
   `move`, `moveto`, `postscript`, `raise`, `rchars`, `scale`, `select adjust`,
-  `select clear`, `select from`, `select item`, `select to`, `type`, `xview`
+  `select clear`, `select from`, `select item`, `select to`, `type`, `xview`,
+  `xview moveto`
 - Binding for Tk `ttk::panedwindow` command: `insert`
 - Binding for Tk commands: `instate`, `state`, `focus`
 - Binding for Tk `ttk::treeview` commands: `detach`, `insert` as function,
