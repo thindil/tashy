@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.2 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.3 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,9 +27,48 @@
 <ul>
 <li>1. <a href="#robo30">Widgets/Canvas</a></li>
 <ul>
-<li>1.1. <a href="#robo62">Canvas/Tk_Canvas</a></li>
-<li>1.2. <a href="#robo119">Canvas/Canvas_Create</a></li>
-<li>1.3. <a href="#robo120">Canvas/Create</a></li>
+<li>1.1. <a href="#robo63">Canvas/Tk_Canvas</a></li>
+<li>1.2. <a href="#robo126">Canvas/Add_Tag</a></li>
+<li>1.3. <a href="#robo127">Canvas/BBox</a></li>
+<li>1.4. <a href="#robo128">Canvas/Bind</a></li>
+<li>1.5. <a href="#robo129">Canvas/Bind2</a></li>
+<li>1.6. <a href="#robo130">Canvas/Canvas_Create</a></li>
+<li>1.7. <a href="#robo131">Canvas/Canvas_Raise</a></li>
+<li>1.8. <a href="#robo132">Canvas/Canvas_Type</a></li>
+<li>1.9. <a href="#robo133">Canvas/CanvasX</a></li>
+<li>1.10. <a href="#robo134">Canvas/CanvasY</a></li>
+<li>1.11. <a href="#robo135">Canvas/Coords</a></li>
+<li>1.12. <a href="#robo136">Canvas/Coords2</a></li>
+<li>1.13. <a href="#robo137">Canvas/Create</a></li>
+<li>1.14. <a href="#robo138">Canvas/Dchars</a></li>
+<li>1.15. <a href="#robo139">Canvas/Delete</a></li>
+<li>1.16. <a href="#robo140">Canvas/DTag</a></li>
+<li>1.17. <a href="#robo141">Canvas/Find</a></li>
+<li>1.18. <a href="#robo142">Canvas/Focus</a></li>
+<li>1.19. <a href="#robo143">Canvas/Get_Tags</a></li>
+<li>1.20. <a href="#robo144">Canvas/ICursor</a></li>
+<li>1.21. <a href="#robo145">Canvas/IMove</a></li>
+<li>1.22. <a href="#robo146">Canvas/Index</a></li>
+<li>1.23. <a href="#robo147">Canvas/Insert</a></li>
+<li>1.24. <a href="#robo148">Canvas/Item_Cget</a></li>
+<li>1.25. <a href="#robo149">Canvas/Item_Configure</a></li>
+<li>1.26. <a href="#robo150">Canvas/Lower</a></li>
+<li>1.27. <a href="#robo151">Canvas/Move</a></li>
+<li>1.28. <a href="#robo152">Canvas/MoveTo</a></li>
+<li>1.29. <a href="#robo153">Canvas/Postscript</a></li>
+<li>1.30. <a href="#robo154">Canvas/Rchars</a></li>
+<li>1.31. <a href="#robo155">Canvas/Scale</a></li>
+<ul>
+<li>1.31.1. <a href="./tcl-tk-ada-widgets-scale_ads.html#robo85">Scale/Tk_Scale</a></li>
+<li>1.31.2. <a href="./tcl-tk-ada-widgets-scale_ads.html#robo244">Scale/Create</a></li>
+</ul>
+<li>1.32. <a href="#robo156">Canvas/Select_Adjust</a></li>
+<li>1.33. <a href="#robo157">Canvas/Select_Clear</a></li>
+<li>1.34. <a href="#robo158">Canvas/Select_From</a></li>
+<li>1.35. <a href="#robo159">Canvas/Select_Item</a></li>
+<li>1.36. <a href="#robo160">Canvas/Select_To</a></li>
+<li>1.37. <a href="#robo161">Canvas/XView</a></li>
+<li>1.38. <a href="#robo162">Canvas/Xview_Move_To</a></li>
 </ul>
 </ul>
 <hr />
@@ -46,58 +85,290 @@
 
 <hr />
 <a name="Canvas2fTk5fCanvas"></a>
-<a name="robo62"></a><h2>Canvas/Tk_Canvas [ Types ]</h2>
+<a name="robo63"></a><h2>Canvas/Tk_Canvas [ Types ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo107">Tk_Widget</a>.
- Each of the derived widgets redefines the <a href="./tcl-tk-ada-widgets-ttkbutton-ttkcheckbutton_ads.html#robo222">Create</a> subprogram
+<pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a>.
+ Each of the derived widgets redefines the <a href="./tcl-tk-ada-widgets-ttkcombobox_ads.html#robo276">Create</a> subprogram
  in order to create the correct type of widget.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">type</span> <strong>Tk_Canvas</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets_ads.html#robo107">Tk_Widget</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">type</span> <strong>Tk_Canvas</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Canvas2fAdd5fTag"></a>
+<a name="robo126"></a><h2>Canvas/Add_Tag [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-widgets-ttknotebook_ads.html#robo285">Add</a> tag to the selected items in the <a href="#robo63">Tk_Canvas</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Add_Tag</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> Tag<span class="sign">,</span> SearchSpec<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+      Arguments<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> Tag <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and
+      SearchSpec <span class="keyword">in</span> <span class="quote">"above"</span> <span class="sign">|</span> <span class="quote">"all"</span> <span class="sign">|</span> <span class="quote">"below"</span> <span class="sign">|</span> <span class="quote">"closest"</span> <span class="sign">|</span> <span class="quote">"enclosed"</span> <span class="sign">|</span>
+          <span class="quote">"overlapping"</span> <span class="sign">|</span> <span class="quote">"withtag"</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Tag        - Tag name to add
+ SearchSpec - Requirement which item must meet to be selected
+ Arguments  - Arguments for the SearchSpec. Default value is empty
+</pre>
+
+<hr />
+<a name="Canvas2fBBox"></a>
+<a name="robo127"></a><h2>Canvas/BBox [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> size of bounding box of items with the selected Tag in the
+ selected <a href="#robo63">Tk_Canvas</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>BBox</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> which will be queried
+ Tag          - Tag or Id of items from which bounding box will be
+                taken
+</pre>
+<p class="item_name">RESULT</p>
+<pre> Four values: x1, y1 - coordinates of starting point of bounding box
+ from top left, x2, y2 - coordinates of ending point from bottom right
+ of bounding box.
+</pre>
+
+<hr />
+<a name="Canvas2fBind"></a>
+<a name="robo128"></a><h2>Canvas/Bind [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <strong>Bind</strong> the selected command to the selected item in the selected canvas
+ with the selected sequence
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Bind</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">,</span> Sequence<span class="sign">,</span> Command<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and Sequence <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and Command <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> in which bind will be done
+ TagOrId      - Tag or Id of items to which bind will be done
+ Sequence     - Sequence to which command will be bound
+ Command      - <a href="../tcl_ads.html#robo9">Tcl</a> command which will be bound
+</pre>
+
+<hr />
+<a name="Canvas2fBind2"></a>
+<a name="robo129"></a><h2>Canvas/Bind2 [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> information about binding to selected items in the selected
+ canvas
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="#robo128">Bind</a>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+      Sequence<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> which will be queried for the info
+ TagOrId      - Tag or Id of items which will be queried for the bindings
+ Sequence     - Sequence to query. Default is empty
+</pre>
+<p class="item_name">RESULT</p>
+<pre> If sequence is empty, return all bindings associated with the selected
+ items. Otherwise, return command associated with the selected item and
+ its sequence
 </pre>
 
 <hr />
 <a name="Canvas2fCanvas5fCreate"></a>
-<a name="robo119"></a><h2>Canvas/Canvas_Create [ Subprograms ]</h2>
+<a name="robo130"></a><h2>Canvas/Canvas_Create [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo235">Add</a> the child to the canvas
+<pre> <a href="./tcl-tk-ada-widgets-ttknotebook_ads.html#robo285">Add</a> the child to the canvas
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Canvas_Create</strong>
-     <span class="sign">(</span>Parent<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo62">Tk_Canvas</a><span class="sign">;</span> Child_Type<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+     <span class="sign">(</span><a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo330">Parent</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> Child_Type<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
       Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Child_Type <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Parent     - <a href="#robo62">Tk_Canvas</a> to which child will be added
+<pre> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo330">Parent</a>     - <a href="#robo63">Tk_Canvas</a> to which child will be added
  Child_Type - <a href="./tcl-tk_ads.html#robo12">Tk</a> type of child to add
  Options    - <a href="./tcl-tk_ads.html#robo12">Tk</a> options to create command
 </pre>
 
 <hr />
-<a name="Canvas2fCreate"></a>
-<a name="robo120"></a><h2>Canvas/Create [ Subprograms ]</h2>
+<a name="Canvas2fCanvas5fRaise"></a>
+<a name="robo131"></a><h2>Canvas/Canvas_Raise [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Creates a new <a href="#robo62">Tk_Canvas</a> in the specified interpreter.
+<pre> <a href="#robo151">Move</a> selected item higher in the display
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Canvas_Raise</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+      AboveThis<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> in which items will be moved
+ TagOrId      - Tag or Id of the items to move. If refers to more than
+                one item, all items will be moved but they relative
+                order will be preserved
+ AfterThis    - Tag or Id of the item after which selected items will
+                be moved. Default value is empty
+</pre>
+
+<hr />
+<a name="Canvas2fCanvas5fType"></a>
+<a name="robo132"></a><h2>Canvas/Canvas_Type [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> type of the selected item in the selected <a href="#robo63">Tk_Canvas</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Canvas_Type</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> in which item's type will be queried
+ TagOrId      - Tag or Id of the item from which type will be <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo249">get</a>
+</pre>
+<p class="item_name">RESULT</p>
+<pre> Type of the selected item. If TagOrId refers to more than one item,
+ return type of the first item. If no item with the selected TagOrId,
+ return {}
+</pre>
+
+<hr />
+<a name="Canvas2fCanvasX"></a>
+<a name="robo133"></a><h2>Canvas/CanvasX [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> canvas X coordinate for the selected screen X coordinate
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>CanvasX</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> ScreenX<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+      GridSpacing<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> ScreenX <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> which will be queried for X coordinate
+ ScreenX      - Screen X coordinate which will be looking for in the
+                CanvasWidget
+ GridSpacing  - If specified, round result to nearest multiple of
+                GridSpacing units. Default is empty
+</pre>
+<p class="item_name">RESULT</p>
+<pre> <a href="#robo30">Canvas</a> X coordinate for the selected screen X coordinate
+</pre>
+
+<hr />
+<a name="Canvas2fCanvasY"></a>
+<a name="robo134"></a><h2>Canvas/CanvasY [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> canvas Y coordinate for the selected screen Y coordinate
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>CanvasY</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> ScreenY<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+      GridSpacing<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> ScreenY <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> which will be queried for Y coordinate
+ ScreenX      - Screen Y coordinate which will be looking for in the
+                CanvasWidget
+ GridSpacing  - If specified, round result to nearest multiple of
+                GridSpacing units. Default is empty
+</pre>
+<p class="item_name">RESULT</p>
+<pre> <a href="#robo30">Canvas</a> Y coordinate for the selected screen Y coordinate
+</pre>
+
+<hr />
+<a name="Canvas2fCoords"></a>
+<a name="robo135"></a><h2>Canvas/Coords [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Set new coordinates for the selected widget inside the selected
+ <a href="#robo63">Tk_Canvas</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Coords</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">,</span> Coordinates<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and Coordinates <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> in which the widget will be moved
+ TagOrId      - Tag or Id of the item which will be moved. If Tag
+                refers to multiple items, only first will be used.
+ Coordinates  - New coordinates for the item
+</pre>
+
+<hr />
+<a name="Canvas2fCoords2"></a>
+<a name="robo136"></a><h2>Canvas/Coords2 [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> coordinates for the selected widgets inside the selected <a href="#robo63">Tk_Canvas</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="#robo135">Coords</a>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> in which the widgets will be queried
+ TagOrId      - Tag or Id of the items which will be queried.
+</pre>
+<p class="item_name">RESULT</p>
+<pre> List with coordinates of the selected items
+</pre>
+
+<hr />
+<a name="Canvas2fCreate"></a>
+<a name="robo137"></a><h2>Canvas/Create [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Creates a new <a href="#robo63">Tk_Canvas</a> in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   overriding <span class="keyword">function</span> <strong>Create</strong>
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo62">Tk_Canvas</a> <span class="keyword">with</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo63">Tk_Canvas</a> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
    overriding <span class="keyword">procedure</span> <strong>Create</strong>
-     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo62">Tk_Canvas</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
       Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Widgt    - <a href="#robo62">Tk_Canvas</a> which will be created
+<pre> Widgt    - <a href="#robo63">Tk_Canvas</a> which will be created
  pathName - <a href="./tcl-tk_ads.html#robo12">Tk</a> path (starts with dot) for the widget
  options  - Options which will be passed to the widget. Default value is
             empty
@@ -106,12 +377,558 @@
             Default value is null.
 </pre>
 <p class="item_name">RESULT</p>
-<pre> Newly created <a href="#robo62">Tk_Canvas</a>
+<pre> Newly created <a href="#robo63">Tk_Canvas</a>
+</pre>
+
+<hr />
+<a name="Canvas2fDchars"></a>
+<a name="robo138"></a><h2>Canvas/Dchars [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo317">Delete</a> characters in the selected items in the selected range
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Dchars</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">,</span> First<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+      Last<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and First <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> in which characters will be deleted
+ TagOrId      - Tag or Id of the items in which characters will be
+                deleted
+ First        - <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a> or coordinates where to start deleting characters
+ Last         - <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a> or coordinates where to end deleting characters.
+                Default value is empty
+</pre>
+
+<hr />
+<a name="Canvas2fDelete"></a>
+<a name="robo139"></a><h2>Canvas/Delete [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <strong>Delete</strong> selected items from the selected canvas
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Delete</strong><span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> in which items will be deleted
+ TagOrId      - Tag or Id of the items to delete
+</pre>
+
+<hr />
+<a name="Canvas2fDTag"></a>
+<a name="robo140"></a><h2>Canvas/DTag [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo317">Delete</a> selected Tag from items in the selected canvas
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>DTag</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+      TagToDelete<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> in which tag will be deleted
+ TagOrId      - Tag or Id of items from which tag will be deleted
+ TagToDelete  - Tag to delete. If empty, delete value of parameter
+                TagOrId. Default value is empty
+</pre>
+
+<hr />
+<a name="Canvas2fFind"></a>
+<a name="robo141"></a><h2>Canvas/Find [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <strong>Find</strong> items in the selected canvas
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Find</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> SearchCommand<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+      Arguments<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> SearchCommand <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget  - <a href="#robo63">Tk_Canvas</a> which will be queried for items
+ SearchCommand - Search criteria for items. It is that same as
+                 SearchSpec for <a href="#robo126">Add_Tag</a> procedure.
+ Arguements    - Arguments for SearchCommand. Must be that same as
+                 arguments for <a href="#robo126">Add_Tag</a> procedure. Default value is
+                 empty
+</pre>
+<p class="item_name">RESULT</p>
+<pre> List of items in the stacking order, the lowest item first
+</pre>
+
+<hr />
+<a name="Canvas2fFocus"></a>
+<a name="robo142"></a><h2>Canvas/Focus [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Set focused item in the selected canvas
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Focus</strong><span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> in which focus will be set
+ TagOrId      - Tag or Id of item to set as focused item. If few items
+                are with this same tag, only first will be used. If no
+                item with that tag or TagOrId is empty, reset focus.
+                Default value is empty
+</pre>
+
+<hr />
+<a name="Canvas2fGet5fTags"></a>
+<a name="robo143"></a><h2>Canvas/Get_Tags [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> list of tags associated with the selected element in the selected
+ canvas
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Get_Tags</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> in which elements will be queried
+ TagOrId      - Tag or Id of element from which <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo249">get</a> tags
+</pre>
+<p class="item_name">RESULT</p>
+<pre> List of tags associated with the selected TagOrId. If there is more than
+ one element in the CanvasWidget, return tags for the first element in
+ the list. If there no element with that TagOrId or element don't have
+ any tag, return empty string
+</pre>
+
+<hr />
+<a name="Canvas2fICursor"></a>
+<a name="robo144"></a><h2>Canvas/ICursor [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Set insertion cursor in the selected element on selected position
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>ICursor</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">,</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> in which insertion cursor will be set
+ TagOrId      - Tag or Id of the element in which insertion cursor
+                will be set. If some or all elements specified by
+                Tag or Id don't support an insertion cursor, this
+                procedure do nothing
+ <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a>        - <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a> in characters before which an insertion cursor
+                will be insererted
+</pre>
+
+<hr />
+<a name="Canvas2fIMove"></a>
+<a name="robo145"></a><h2>Canvas/IMove [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="#robo151">Move</a> index'th coordinate of the selected items to a new location
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>IMove</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">,</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a><span class="sign">,</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> in which items will be queried
+ TagOrId      - Tag or Id of items which coordinates will be moved
+ <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a>        - <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a> of coordinate to move. Each item interprets this
+                value independently
+ X            - A new X coordinate
+ Y            - A new Y coordinate
+</pre>
+
+<hr />
+<a name="Canvas2fIndex"></a>
+<a name="robo146"></a><h2>Canvas/Index [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> numerical index of the selected <strong>Index</strong> in the selected items
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Index</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">,</span> <strong>Index</strong><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and <strong>Index</strong> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> in which index will be queried
+ TagOrId      - Tag or Id of items to query for index
+ <strong>Index</strong>        - Depends on the item, it can be coordinate or index of
+                character in textual description
+</pre>
+<p class="item_name">RESULT</p>
+<pre> Numerical index of the selected <strong>Index</strong> in the selected items
+</pre>
+
+<hr />
+<a name="Canvas2fInsert"></a>
+<a name="robo147"></a><h2>Canvas/Insert [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <strong>Insert</strong> item in the elements in the selected canvas
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Insert</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">,</span> BeforeThis<span class="sign">,</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo326">Item</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and BeforeThis <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo326">Item</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> in which items will be modified
+ TagOrId      - Tag or Id of the elements in which <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo326">Item</a> will be
+                inserted
+ BeforeThis   - <strong>Insert</strong> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo326">Item</a> before this value. For text elements, it
+                will be character number, for lines, polygons
+                coordinates
+ <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo326">Item</a>         - <a href="./tcl-tk-ada-widgets-text_ads.html#robo43">Text</a> to insert to the selected elements
+</pre>
+
+<hr />
+<a name="Canvas2fItem5fCget"></a>
+<a name="robo148"></a><h2>Canvas/Item_Cget [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> configuration option for the selected item in the selected canvas
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Item_Cget</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">,</span> Option<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span>
+      <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and Option <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> which will be queried for option
+ TagOrId      - Tag or Id of the item which will be queried for option
+ Option       - <a href="./tcl-tk_ads.html#robo12">Tk</a> option to query
+</pre>
+<p class="item_name">RESULT</p>
+<pre> <a href="./tcl-tk-ada-busy_ads.html#robo120">Current</a> value of the selected option of the selected item. If TagOrId
+ refers to more than one item, only first item is checked.
+</pre>
+
+<hr />
+<a name="Canvas2fItem5fConfigure"></a>
+<a name="robo149"></a><h2>Canvas/Item_Configure [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Queries or modifies the configuration options of the selected item
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Item_Configure</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+   <span class="keyword">function</span> <strong>Item_Configure</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span>
+      <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> which will be queried or modified for options
+ TagOrId      - Tag or Id of the item which will be queried or modified
+                for options
+ Options      - Options to modify or <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo249">get</a>.
+</pre>
+<p class="item_name">RESULT</p>
+<pre> If Options is empty, return all available options and their values for
+ the selected item. Otherwise, return selected option's value for the
+ selected item
+</pre>
+
+<hr />
+<a name="Canvas2fLower"></a>
+<a name="robo150"></a><h2>Canvas/Lower [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="#robo151">Move</a> selected item lower in the display
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Lower</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+      BelowThis<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> in which items will be moved
+ TagOrId      - Tag or Id of the items to move. If refers to more than
+                one item, all items will be moved but they relative
+                order will be preserved
+ BelowThis    - Tag or Id of the item below which selected items will
+                be moved. Default value is empty
+</pre>
+
+<hr />
+<a name="Canvas2fMove"></a>
+<a name="robo151"></a><h2>Canvas/Move [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <strong>Move</strong> selected items in the canvas coodinate space
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Move</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">,</span> XAmount<span class="sign">,</span> YAmount<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and XAmount <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and YAmount <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> in which items will be moved
+ TagOrId      - Tag or Id of the items to move
+ XAmount      - Amount to add to X coordinate of the items
+ YAmount      - Amount to add to Y coordinate of the items
+</pre>
+
+<hr />
+<a name="Canvas2fMoveTo"></a>
+<a name="robo152"></a><h2>Canvas/MoveTo [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="#robo151">Move</a> selected items to the selected position in the selected canvas
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>MoveTo</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">,</span> XPos<span class="sign">,</span> YPos<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> XPos <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and YPos <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> in which items will be moved
+ TagOrId      - Tag or Id of the item to move
+ XPos         - A new X coordinate of the items
+ YPos         - A new Y coordinate of the items
+</pre>
+
+<hr />
+<a name="Canvas2fPostscript"></a>
+<a name="robo153"></a><h2>Canvas/Postscript [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Generate a <strong>Postscript</strong> representation of part or all of the canvas
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Postscript</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> which Postscrip representation will be
+                created
+ Options      - Additional options passed to the command
+</pre>
+<p class="item_name">RESULT</p>
+<pre> A <strong>Postscript</strong> representation of the CanvasWidget or empty string if
+ representation was selected to write to file
+</pre>
+
+<hr />
+<a name="Canvas2fRchars"></a>
+<a name="robo154"></a><h2>Canvas/Rchars [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Replace text at selected position in the selected items. How text is
+ replaced depends on the item type
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Rchars</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">,</span> First<span class="sign">,</span> Last<span class="sign">,</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo43">Text</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and First <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and Last <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and <a href="./tcl-tk-ada-widgets-text_ads.html#robo43">Text</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> in which items text will be replaced
+ TagOrId      - Tag or Id of the items in which text will be replaced
+ First        - Character position or coordinate at which replace text
+                starts
+ Last         - Character position or coordinate at which replace text
+                ends
+ <a href="./tcl-tk-ada-widgets-text_ads.html#robo43">Text</a>         - <a href="./tcl-tk-ada-widgets-text_ads.html#robo43">Text</a> to replace
+</pre>
+
+<hr />
+<a name="Canvas2fScale"></a>
+<a name="robo155"></a><h2>Canvas/Scale [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Rescale coordinates of the selected items in canvas coordinate space.
+ Each point is scaled by distance between XOrgin and XScale and YOrgin
+ and YScale respectively.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Scale</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span>
+      TagOrId<span class="sign">,</span> XOrgin<span class="sign">,</span> YOrgin<span class="sign">,</span> XScale<span class="sign">,</span> YScale<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and XOrgin <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and YOrgin <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and
+      XScale <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and YScale <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> in which items will be scaled
+ TagOrId      - Tag or Id of the items to scale
+ XOrgin       - X coordinate of the scale starting point
+ YOrgin       - Y coordinate of the scale starting point
+ XScale       - X factor to scale points. 1.0 mean no scaling
+ YScale       - Y factor to scale points. 1.0 mean no scaling
+</pre>
+
+<hr />
+<a name="Canvas2fSelect5fAdjust"></a>
+<a name="robo156"></a><h2>Canvas/Select_Adjust [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Resize current selection in the item in canvas to the selected index
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Select_Adjust</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">,</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> in which selection will be resized
+ TagOrId      - Tag or Id of the item in which selection will be
+                resized
+ <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a>        - New index to which selection will be done in the item
+</pre>
+
+<hr />
+<a name="Canvas2fSelect5fClear"></a>
+<a name="robo157"></a><h2>Canvas/Select_Clear [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Clear the selection in the selected <a href="#robo63">Tk_Canvas</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Select_Clear</strong><span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> in which selection will be cleared
+</pre>
+
+<hr />
+<a name="Canvas2fSelect5fFrom"></a>
+<a name="robo158"></a><h2>Canvas/Select_From [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Set the selection anchor point for the canvas in the selected item at
+ selected character. This procedure does not change selection it just
+ set fixed end selection for future <a href="#robo160">Select_To</a> procedure
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Select_From</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">,</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> in which the selection will be set
+ TagOrId      - Tag or Id of the item in which the selection will be set
+ <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a>        - <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a> of character before which the selection will be set
+</pre>
+
+<hr />
+<a name="Canvas2fSelect5fItem"></a>
+<a name="robo159"></a><h2>Canvas/Select_Item [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> Id of the selected item in the selected canvas
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Select_Item</strong><span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> in which selection will be queried
+</pre>
+<p class="item_name">RESULT</p>
+<pre> Id of the selected item or {} if no item selected in the CanvasWidget
+</pre>
+
+<hr />
+<a name="Canvas2fSelect5fTo"></a>
+<a name="robo160"></a><h2>Canvas/Select_To [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Set selection end for the canvas in the selected item at the selected
+ character. Starting point is set by the most recent <a href="#robo156">Select_Adjust</a> or
+ <a href="#robo158">Select_From</a> procedures
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Select_To</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">,</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> in which selection will be set
+ TagOrId      - Tag or Id of the item in which selection will be set
+ <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a>        - <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a> of character which will be added to the selection
+</pre>
+
+<hr />
+<a name="Canvas2fXView"></a>
+<a name="robo161"></a><h2>Canvas/XView [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> which horizontal fraction of the canvas is visible
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>XView</strong><span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> which will be queried for visibility
+</pre>
+<p class="item_name">RESULT</p>
+<pre> Pair of elements: first element is the start of horizontal fraction of
+ the CanvasWidget which is visible, second is the end of horizontal
+ fraction of the CanvasWidget which is visible.
+</pre>
+
+<hr />
+<a name="Canvas2fXview5fMove5fTo"></a>
+<a name="robo162"></a><h2>Canvas/Xview_Move_To [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo30">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Adjusts the view in the window so that fraction of the total width of
+ the <a href="#robo63">Tk_Canvas</a> is off-screen to the left.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Xview_Move_To</strong>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo63">Tk_Canvas</a><span class="sign">;</span> Fraction<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> Fraction <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CanvasWidget - <a href="#robo63">Tk_Canvas</a> which view will be adjusted
+ Fraction     - Fraction of the CanvasWidget to move. Must be between 0
+                and 1
 </pre>
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-canvas.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Sat Feb 29 2020 07:27:12
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-canvas.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Mar 31 2020 07:12:51
 </p>
 </div> <!-- footer -->
 </body>

@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.2 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.3 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,9 +27,11 @@
 <ul>
 <li>1. <a href="#robo47">Widgets/TtkEntry</a></li>
 <ul>
-<li>1.1. <a href="#robo93">TtkEntry/Ttk_Entry</a></li>
-<li>1.2. <a href="#robo224">TtkEntry/Create</a></li>
-<li>1.3. <a href="#robo225">TtkEntry/Get</a></li>
+<li>1.1. <a href="#robo94">TtkEntry/Ttk_Entry</a></li>
+<li>1.2. <a href="#robo277">TtkEntry/Create</a></li>
+<li>1.3. <a href="#robo278">TtkEntry/Delete</a></li>
+<li>1.4. <a href="#robo279">TtkEntry/Get</a></li>
+<li>1.5. <a href="#robo280">TtkEntry/Insert</a></li>
 </ul>
 </ul>
 <hr />
@@ -46,38 +48,38 @@
 
 <hr />
 <a name="TtkEntry2fTtk5fEntry"></a>
-<a name="robo93"></a><h2>TtkEntry/Ttk_Entry [ Types ]</h2>
+<a name="robo94"></a><h2>TtkEntry/Ttk_Entry [ Types ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo47">TtkEntry</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo107">Tk_Widget</a>.
- Each of the derived widgets redefines the <a href="./tcl-tk-ada-widgets-ttkbutton-ttkcheckbutton_ads.html#robo222">Create</a> subprogram
+<pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a>.
+ Each of the derived widgets redefines the <a href="./tcl-tk-ada-widgets-ttkcombobox_ads.html#robo276">Create</a> subprogram
  in order to create the correct type of widget.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">type</span> <strong>Ttk_Entry</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets_ads.html#robo107">Tk_Widget</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">type</span> <strong>Ttk_Entry</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
 </pre>
 
 <hr />
 <a name="TtkEntry2fCreate"></a>
-<a name="robo224"></a><h2>TtkEntry/Create [ Subprograms ]</h2>
+<a name="robo277"></a><h2>TtkEntry/Create [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo47">TtkEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Creates a new <a href="#robo93">Ttk_Entry</a> in the specified interpreter.
+<pre> Creates a new <a href="#robo94">Ttk_Entry</a> in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   overriding <span class="keyword">function</span> <strong>Create</strong>
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo93">Ttk_Entry</a> <span class="keyword">with</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo94">Ttk_Entry</a> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
    overriding <span class="keyword">procedure</span> <strong>Create</strong>
-     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo93">Ttk_Entry</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo94">Ttk_Entry</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
       Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Widgt    - <a href="#robo93">Ttk_Entry</a> which will be created
+<pre> Widgt    - <a href="#robo94">Ttk_Entry</a> which will be created
  pathName - <a href="./tcl-tk_ads.html#robo12">Tk</a> path (starts with dot) for the widget
  options  - Options which will be passed to the widget. Default value is
             empty
@@ -86,30 +88,70 @@
             Default value is null.
 </pre>
 <p class="item_name">RESULT</p>
-<pre> Newly created <a href="#robo93">Ttk_Entry</a>
+<pre> Newly created <a href="#robo94">Ttk_Entry</a>
+</pre>
+
+<hr />
+<a name="TtkEntry2fDelete"></a>
+<a name="robo278"></a><h2>TtkEntry/Delete [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo47">TtkEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <strong>Delete</strong> part of text from the selected entry
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Delete</strong>
+     <span class="sign">(</span>TextEntry<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo94">Ttk_Entry</a><span class="sign">;</span> FirstIndex<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+      LastIndex<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> FirstIndex <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> TextEntry  - <a href="#robo94">Ttk_Entry</a> in which text will be deleted
+ FirstIndex - <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a> of text from which delete will start. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a> starts from 0
+ LastIndex  - End index to which text will be deleted. If empty, delete only one
+              character. Default is empty.
 </pre>
 
 <hr />
 <a name="TtkEntry2fGet"></a>
-<a name="robo225"></a><h2>TtkEntry/Get [ Subprograms ]</h2>
+<a name="robo279"></a><h2>TtkEntry/Get [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo47">TtkEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <strong>Get</strong> selected <a href="#robo93">Ttk_Entry</a> text
+<pre> <strong>Get</strong> entry's text.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Get</strong><span class="sign">(</span>TextEntry<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo93">Ttk_Entry</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> <strong>Get</strong><span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo94">Ttk_Entry</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> TextEntry - <a href="#robo93">Ttk_Entry</a> to query
+<pre> Widgt - <a href="#robo94">Ttk_Entry</a> from which text will be taken
 </pre>
 <p class="item_name">RESULT</p>
-<pre> String with value of the selected entry
+<pre> Returns the entry's string.
+</pre>
+
+<hr />
+<a name="TtkEntry2fInsert"></a>
+<a name="robo280"></a><h2>TtkEntry/Insert [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo47">TtkEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <strong>Insert</strong> text at selected index to the selected <a href="#robo94">Ttk_Entry</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Insert</strong>
+     <span class="sign">(</span>TextEntry<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo94">Ttk_Entry</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo43">Text</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and <a href="./tcl-tk-ada-widgets-text_ads.html#robo43">Text</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> TextEntry - <a href="#robo94">Ttk_Entry</a> to which text will be inserted
+ <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a>     - <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a> in which position text will be inserted
+ <a href="./tcl-tk-ada-widgets-text_ads.html#robo43">Text</a>      - <a href="./tcl-tk-ada-widgets-text_ads.html#robo43">Text</a> to insert
 </pre>
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-ttkentry.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Sat Feb 29 2020 07:27:12
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-ttkentry.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Mar 31 2020 07:12:51
 </p>
 </div> <!-- footer -->
 </body>

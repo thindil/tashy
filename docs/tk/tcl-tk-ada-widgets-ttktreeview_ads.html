@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.2 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.3 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,25 +27,31 @@
 <ul>
 <li>1. <a href="#robo59">Widgets/TtkTreeView</a></li>
 <ul>
-<li>1.1. <a href="#robo106">TtkTreeView/Ttk_Tree_View</a></li>
-<li>1.2. <a href="#robo253">TtkTreeView/Children</a></li>
-<li>1.3. <a href="#robo254">TtkTreeView/Column</a></li>
-<li>1.4. <a href="#robo255">TtkTreeView/Column2</a></li>
-<li>1.5. <a href="#robo256">TtkTreeView/Create</a></li>
-<li>1.6. <a href="#robo257">TtkTreeView/Delete</a></li>
-<li>1.7. <a href="#robo258">TtkTreeView/Exists</a></li>
-<li>1.8. <a href="#robo259">TtkTreeView/Heading</a></li>
-<li>1.9. <a href="#robo260">TtkTreeView/Heading2</a></li>
-<li>1.10. <a href="#robo261">TtkTreeView/Index</a></li>
-<li>1.11. <a href="#robo262">TtkTreeView/Insert</a></li>
-<li>1.12. <a href="#robo263">TtkTreeView/Item</a></li>
-<li>1.13. <a href="#robo264">TtkTreeView/Item2</a></li>
-<li>1.14. <a href="#robo265">TtkTreeView/Move</a></li>
-<li>1.15. <a href="#robo266">TtkTreeView/Selection</a></li>
-<li>1.16. <a href="#robo267">TtkTreeView/Selection_Add</a></li>
-<li>1.17. <a href="#robo268">TtkTreeView/Selection_Remove</a></li>
-<li>1.18. <a href="#robo269">TtkTreeView/Selection_Set</a></li>
-<li>1.19. <a href="#robo270">TtkTreeView/Selection_Toggle</a></li>
+<li>1.1. <a href="#robo107">TtkTreeView/Ttk_Tree_View</a></li>
+<li>1.2. <a href="#robo313">TtkTreeView/Children</a></li>
+<li>1.3. <a href="#robo314">TtkTreeView/Column</a></li>
+<li>1.4. <a href="#robo315">TtkTreeView/Column2</a></li>
+<li>1.5. <a href="#robo316">TtkTreeView/Create</a></li>
+<li>1.6. <a href="#robo317">TtkTreeView/Delete</a></li>
+<li>1.7. <a href="#robo318">TtkTreeView/Detach</a></li>
+<li>1.8. <a href="#robo319">TtkTreeView/Exists</a></li>
+<li>1.9. <a href="#robo320">TtkTreeView/Focus</a></li>
+<li>1.10. <a href="#robo321">TtkTreeView/Focus2</a></li>
+<li>1.11. <a href="#robo322">TtkTreeView/Heading</a></li>
+<li>1.12. <a href="#robo323">TtkTreeView/Heading2</a></li>
+<li>1.13. <a href="#robo324">TtkTreeView/Index</a></li>
+<li>1.14. <a href="#robo325">TtkTreeView/Insert</a></li>
+<li>1.15. <a href="#robo326">TtkTreeView/Item</a></li>
+<li>1.16. <a href="#robo327">TtkTreeView/Item2</a></li>
+<li>1.17. <a href="#robo328">TtkTreeView/Move</a></li>
+<li>1.18. <a href="#robo329">TtkTreeView/Next</a></li>
+<li>1.19. <a href="#robo330">TtkTreeView/Parent</a></li>
+<li>1.20. <a href="#robo331">TtkTreeView/Prev</a></li>
+<li>1.21. <a href="#robo332">TtkTreeView/Selection</a></li>
+<li>1.22. <a href="#robo333">TtkTreeView/Selection_Add</a></li>
+<li>1.23. <a href="#robo334">TtkTreeView/Selection_Remove</a></li>
+<li>1.24. <a href="#robo335">TtkTreeView/Selection_Set</a></li>
+<li>1.25. <a href="#robo336">TtkTreeView/Selection_Toggle</a></li>
 </ul>
 </ul>
 <hr />
@@ -62,34 +68,34 @@
 
 <hr />
 <a name="TtkTreeView2fTtk5fTree5fView"></a>
-<a name="robo106"></a><h2>TtkTreeView/Ttk_Tree_View [ Types ]</h2>
+<a name="robo107"></a><h2>TtkTreeView/Ttk_Tree_View [ Types ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkTreeView</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo107">Tk_Widget</a>.
- Each of the derived widgets redefines the <a href="./tcl-tk-ada-widgets-ttkbutton-ttkcheckbutton_ads.html#robo222">Create</a> subprogram
+<pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a>.
+ Each of the derived widgets redefines the <a href="./tcl-tk-ada-widgets-ttkcombobox_ads.html#robo276">Create</a> subprogram
  in order to create the correct type of widget.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">type</span> <strong>Ttk_Tree_View</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets_ads.html#robo107">Tk_Widget</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">type</span> <strong>Ttk_Tree_View</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
 </pre>
 
 <hr />
 <a name="TtkTreeView2fChildren"></a>
-<a name="robo253"></a><h2>TtkTreeView/Children [ Subprograms ]</h2>
+<a name="robo313"></a><h2>TtkTreeView/Children [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkTreeView</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo225">Get</a> children of the selected item in the selected <a href="#robo106">Ttk_Tree_View</a>
+<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> children of the selected item in the selected <a href="#robo107">Ttk_Tree_View</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Children</strong>
-     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo106">Ttk_Tree_View</a><span class="sign">;</span> <a href="#robo263">Item</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo263">Item</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo107">Ttk_Tree_View</a><span class="sign">;</span> <a href="#robo326">Item</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo326">Item</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> TreeViewWidget - <a href="#robo106">Ttk_Tree_View</a> in which items will be queried
- <a href="#robo263">Item</a>           - <a href="#robo263">Item</a> ID from TreeViewWidget or {} for root item
+<pre> TreeViewWidget - <a href="#robo107">Ttk_Tree_View</a> in which items will be queried
+ <a href="#robo326">Item</a>           - <a href="#robo326">Item</a> ID from TreeViewWidget or {} for root item
 </pre>
 <p class="item_name">RESULT</p>
 <pre> String with list of items which belong to the selected item
@@ -97,41 +103,41 @@
 
 <hr />
 <a name="TtkTreeView2fColumn"></a>
-<a name="robo254"></a><h2>TtkTreeView/Column [ Subprograms ]</h2>
+<a name="robo314"></a><h2>TtkTreeView/Column [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkTreeView</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Modify options of the selected column in the selected <a href="#robo106">Ttk_Tree_View</a>
+<pre> Modify options of the selected column in the selected <a href="#robo107">Ttk_Tree_View</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Column</strong>
-     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo106">Ttk_Tree_View</a><span class="sign">;</span> Col<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo107">Ttk_Tree_View</a><span class="sign">;</span> Col<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
       Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Col <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> TreeViewWidget - <a href="#robo106">Ttk_Tree_View</a> in which column will be modified
+<pre> TreeViewWidget - <a href="#robo107">Ttk_Tree_View</a> in which column will be modified
  Col            - Identificator of the column to modify
  Options        - <a href="./tcl-tk_ads.html#robo12">Tk</a> options to pass to the column
 </pre>
 
 <hr />
 <a name="TtkTreeView2fColumn2"></a>
-<a name="robo255"></a><h2>TtkTreeView/Column2 [ Subprograms ]</h2>
+<a name="robo315"></a><h2>TtkTreeView/Column2 [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkTreeView</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo225">Get</a> value or values of options of the selected column in the selected
- <a href="#robo106">Ttk_Tree_View</a>
+<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> value or values of options of the selected column in the selected
+ <a href="#robo107">Ttk_Tree_View</a>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <a href="#robo254">Column</a>
-     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo106">Ttk_Tree_View</a><span class="sign">;</span> Col<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> <a href="#robo314">Column</a>
+     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo107">Ttk_Tree_View</a><span class="sign">;</span> Col<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
       Option<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Col <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> TreeViewWidget - <a href="#robo106">Ttk_Tree_View</a> which will be queried for options
+<pre> TreeViewWidget - <a href="#robo107">Ttk_Tree_View</a> which will be queried for options
  Col            - Identifier of the column from which options will be
                   taken
  Option         - Option value to take. If empty, return all options
@@ -145,24 +151,24 @@
 
 <hr />
 <a name="TtkTreeView2fCreate"></a>
-<a name="robo256"></a><h2>TtkTreeView/Create [ Subprograms ]</h2>
+<a name="robo316"></a><h2>TtkTreeView/Create [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkTreeView</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Creates a new <a href="#robo106">Ttk_Tree_View</a> in the specified interpreter.
+<pre> Creates a new <a href="#robo107">Ttk_Tree_View</a> in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   overriding <span class="keyword">function</span> <strong>Create</strong>
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo106">Ttk_Tree_View</a> <span class="keyword">with</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo107">Ttk_Tree_View</a> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
    overriding <span class="keyword">procedure</span> <strong>Create</strong>
-     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo106">Ttk_Tree_View</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo107">Ttk_Tree_View</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
       Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Widgt    - <a href="#robo106">Ttk_Tree_View</a> which will be created
+<pre> Widgt    - <a href="#robo107">Ttk_Tree_View</a> which will be created
  pathName - <a href="./tcl-tk_ads.html#robo12">Tk</a> path (starts with dot) for the widget
  options  - Options which will be passed to the widget. Default value is
             empty
@@ -171,12 +177,12 @@
             Default value is null.
 </pre>
 <p class="item_name">RESULT</p>
-<pre> Newly created <a href="#robo106">Ttk_Tree_View</a>
+<pre> Newly created <a href="#robo107">Ttk_Tree_View</a>
 </pre>
 
 <hr />
 <a name="TtkTreeView2fDelete"></a>
-<a name="robo257"></a><h2>TtkTreeView/Delete [ Subprograms ]</h2>
+<a name="robo317"></a><h2>TtkTreeView/Delete [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkTreeView</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -184,71 +190,126 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Delete</strong>
-     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo106">Ttk_Tree_View</a><span class="sign">;</span> ItemsList<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo107">Ttk_Tree_View</a><span class="sign">;</span> ItemsList<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> ItemsList <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> TreeViewWidget - <a href="#robo106">Ttk_Tree_View</a> in which items will be deleted
+<pre> TreeViewWidget - <a href="#robo107">Ttk_Tree_View</a> in which items will be deleted
  ItemsList      - List of items to delete
 </pre>
 
 <hr />
-<a name="TtkTreeView2fExists"></a>
-<a name="robo258"></a><h2>TtkTreeView/Exists [ Subprograms ]</h2>
+<a name="TtkTreeView2fDetach"></a>
+<a name="robo318"></a><h2>TtkTreeView/Detach [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkTreeView</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Check if selected item is presented in the selected <a href="#robo106">Ttk_Tree_View</a>
+<pre> Unlink the selected items from the tree view. They are still present
+ and can be reinserted with procedure <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo151">Move</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Detach</strong>
+     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo107">Ttk_Tree_View</a><span class="sign">;</span> ItemsList<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> ItemsList <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> TreeViewWidget - <a href="#robo107">Ttk_Tree_View</a> in which items will be unlinked
+ ItemsList      - List of items to unlink
+</pre>
+
+<hr />
+<a name="TtkTreeView2fExists"></a>
+<a name="robo319"></a><h2>TtkTreeView/Exists [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkTreeView</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Check if selected item is presented in the selected <a href="#robo107">Ttk_Tree_View</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Exists</strong>
-     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo106">Ttk_Tree_View</a><span class="sign">;</span> <a href="#robo263">Item</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo263">Item</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo107">Ttk_Tree_View</a><span class="sign">;</span> <a href="#robo326">Item</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo326">Item</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> TreeViewWidget - <a href="#robo106">Ttk_Tree_View</a> which will be checked
- <a href="#robo263">Item</a>           - <a href="#robo263">Item</a> identifier which will be looking for
+<pre> TreeViewWidget - <a href="#robo107">Ttk_Tree_View</a> which will be checked
+ <a href="#robo326">Item</a>           - <a href="#robo326">Item</a> identifier which will be looking for
 </pre>
 <p class="item_name">RESULT</p>
 <pre> 0 if item don't exists in the selected TreeViewWidget, otherwise 1.
 </pre>
 
 <hr />
-<a name="TtkTreeView2fHeading"></a>
-<a name="robo259"></a><h2>TtkTreeView/Heading [ Subprograms ]</h2>
+<a name="TtkTreeView2fFocus"></a>
+<a name="robo320"></a><h2>TtkTreeView/Focus [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkTreeView</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Configure selected column header
+<pre> Set focus item in the selected <a href="#robo107">Ttk_Tree_View</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Focus</strong><span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo107">Ttk_Tree_View</a><span class="sign">;</span> <a href="#robo326">Item</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo326">Item</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> TreeViewWidget - <a href="#robo107">Ttk_Tree_View</a> in which item will be set
+ <a href="#robo326">Item</a>           - Identifier of the item which will be set as focused
+</pre>
+
+<hr />
+<a name="TtkTreeView2fFocus2"></a>
+<a name="robo321"></a><h2>TtkTreeView/Focus2 [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkTreeView</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> currently focused item in the selected <a href="#robo107">Ttk_Tree_View</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="./tcl-tk-ada-widgets_ads.html#robo347">Focus</a><span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo107">Ttk_Tree_View</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> TreeViewWidget - TreeViewWidget which will be queried for focused
+                  item
+</pre>
+<p class="item_name">RESULT</p>
+<pre> Identifier ot the currently focused item or empty string if none
+</pre>
+
+<hr />
+<a name="TtkTreeView2fHeading"></a>
+<a name="robo322"></a><h2>TtkTreeView/Heading [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkTreeView</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-busy_ads.html#robo118">Configure</a> selected column header
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Heading</strong>
-     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo106">Ttk_Tree_View</a><span class="sign">;</span> <a href="#robo254">Column</a><span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo254">Column</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo107">Ttk_Tree_View</a><span class="sign">;</span> <a href="#robo314">Column</a><span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo314">Column</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> TreeViewWidget - <a href="#robo106">Ttk_Tree_View</a> in which header will be configured
- <a href="#robo254">Column</a>         - Id of column which header will be configured
+<pre> TreeViewWidget - <a href="#robo107">Ttk_Tree_View</a> in which header will be configured
+ <a href="#robo314">Column</a>         - Id of column which header will be configured
  Options        - <a href="./tcl-tk_ads.html#robo12">Tk</a> options for selected header
 </pre>
 
 <hr />
 <a name="TtkTreeView2fHeading2"></a>
-<a name="robo260"></a><h2>TtkTreeView/Heading2 [ Subprograms ]</h2>
+<a name="robo323"></a><h2>TtkTreeView/Heading2 [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkTreeView</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo225">Get</a> configuration of selected column header
+<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> configuration of selected column header
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <a href="#robo259">Heading</a>
-     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo106">Ttk_Tree_View</a><span class="sign">;</span> <a href="#robo254">Column</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> <a href="#robo322">Heading</a>
+     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo107">Ttk_Tree_View</a><span class="sign">;</span> <a href="#robo314">Column</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
       Option<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo254">Column</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo314">Column</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> TreeViewWidget - <a href="#robo106">Ttk_Tree_View</a> in which header will be queried
- <a href="#robo254">Column</a>         - Id of column which header will be queried
+<pre> TreeViewWidget - <a href="#robo107">Ttk_Tree_View</a> in which header will be queried
+ <a href="#robo314">Column</a>         - Id of column which header will be queried
  Option         - <a href="./tcl-tk_ads.html#robo12">Tk</a> option to query. Default value is empty
 </pre>
 <p class="item_name">RESULT</p>
@@ -258,46 +319,52 @@
 
 <hr />
 <a name="TtkTreeView2fIndex"></a>
-<a name="robo261"></a><h2>TtkTreeView/Index [ Subprograms ]</h2>
+<a name="robo324"></a><h2>TtkTreeView/Index [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkTreeView</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo225">Get</a> index of selected item in the selected <a href="#robo106">Ttk_Tree_View</a>
+<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> index of selected item in the selected <a href="#robo107">Ttk_Tree_View</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Index</strong>
-     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo106">Ttk_Tree_View</a><span class="sign">;</span> <a href="#robo263">Item</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo263">Item</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo107">Ttk_Tree_View</a><span class="sign">;</span> <a href="#robo326">Item</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo326">Item</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> TreeViewWidget - <a href="#robo106">Ttk_Tree_View</a> which will be queried for item
- <a href="#robo263">Item</a>           - Identifier of the selected item which will be
+<pre> TreeViewWidget - <a href="#robo107">Ttk_Tree_View</a> which will be queried for item
+ <a href="#robo326">Item</a>           - Identifier of the selected item which will be
                   looking for
 </pre>
 <p class="item_name">RESULT</p>
-<pre> Numeric index of the selected item in the selected <a href="#robo106">Ttk_Tree_View</a>
+<pre> Numeric index of the selected item in the selected <a href="#robo107">Ttk_Tree_View</a>
 </pre>
 
 <hr />
 <a name="TtkTreeView2fInsert"></a>
-<a name="robo262"></a><h2>TtkTreeView/Insert [ Subprograms ]</h2>
+<a name="robo325"></a><h2>TtkTreeView/Insert [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkTreeView</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> <strong>Insert</strong> new item to tree view
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Insert</strong><span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo106">Ttk_Tree_View</a><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Insert</strong><span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo107">Ttk_Tree_View</a><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+   <span class="keyword">function</span> <strong>Insert</strong>
+     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo107">Ttk_Tree_View</a><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> TreeViewWidget - <a href="#robo106">Ttk_Tree_View</a> in which item will be inserted
+<pre> TreeViewWidget - <a href="#robo107">Ttk_Tree_View</a> in which item will be inserted
  Options        - <a href="./tcl-tk_ads.html#robo12">Tk</a> options for the item which will be inserted
+</pre>
+<p class="item_name">RESULT</p>
+<pre> <a href="#robo324">Index</a> of newly inserted item
 </pre>
 
 <hr />
 <a name="TtkTreeView2fItem"></a>
-<a name="robo263"></a><h2>TtkTreeView/Item [ Subprograms ]</h2>
+<a name="robo326"></a><h2>TtkTreeView/Item [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkTreeView</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -305,71 +372,142 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Item</strong>
-     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo106">Ttk_Tree_View</a><span class="sign">;</span> <strong>Item</strong><span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo107">Ttk_Tree_View</a><span class="sign">;</span> <strong>Item</strong><span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> <strong>Item</strong> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> TreeViewWidget - <a href="#robo106">Ttk_Tree_View</a> in which item options will be modified
+<pre> TreeViewWidget - <a href="#robo107">Ttk_Tree_View</a> in which item options will be modified
  <strong>Item</strong>           - Id of the item to modify
  Options        - <a href="./tcl-tk_ads.html#robo12">Tk</a> options to set for the selected item
 </pre>
 
 <hr />
 <a name="TtkTreeView2fItem2"></a>
-<a name="robo264"></a><h2>TtkTreeView/Item2 [ Subprograms ]</h2>
+<a name="robo327"></a><h2>TtkTreeView/Item2 [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkTreeView</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo225">Get</a> options of the selected item in tree view
+<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> options of the selected item in tree view
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <a href="#robo263">Item</a>
-     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo106">Ttk_Tree_View</a><span class="sign">;</span> <a href="#robo263">Item</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> <a href="#robo326">Item</a>
+     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo107">Ttk_Tree_View</a><span class="sign">;</span> <a href="#robo326">Item</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
       Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo263">Item</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo326">Item</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> TreeViewWidget - <a href="#robo106">Ttk_Tree_View</a> in which item options will be queried
- <a href="#robo263">Item</a>           - Id of the item to query
- Options        - <a href="./tcl-tk_ads.html#robo12">Tk</a> options to <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo200">get</a> from the selected item. If empty, <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo200">get</a>
+<pre> TreeViewWidget - <a href="#robo107">Ttk_Tree_View</a> in which item options will be queried
+ <a href="#robo326">Item</a>           - Id of the item to query
+ Options        - <a href="./tcl-tk_ads.html#robo12">Tk</a> options to <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo249">get</a> from the selected item. If empty, <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo249">get</a>
                   all options. Default is empty.
 </pre>
 
 <hr />
 <a name="TtkTreeView2fMove"></a>
-<a name="robo265"></a><h2>TtkTreeView/Move [ Subprograms ]</h2>
+<a name="robo328"></a><h2>TtkTreeView/Move [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkTreeView</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> <strong>Move</strong> selected item to selected parent and on selected index in the
- selected <a href="#robo106">Ttk_Tree_View</a>
+ selected <a href="#robo107">Ttk_Tree_View</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Move</strong>
-     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo106">Ttk_Tree_View</a><span class="sign">;</span> <a href="#robo263">Item</a><span class="sign">,</span> Parent<span class="sign">,</span> <a href="#robo261">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo263">Item</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and Parent <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and <a href="#robo261">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo107">Ttk_Tree_View</a><span class="sign">;</span> <a href="#robo326">Item</a><span class="sign">,</span> <a href="#robo330">Parent</a><span class="sign">,</span> <a href="#robo324">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo326">Item</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and <a href="#robo330">Parent</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and <a href="#robo324">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> TreeViewWidget - <a href="#robo106">Ttk_Tree_View</a> in which item will be moved
- <a href="#robo263">Item</a>           - Identifier of the item which will be moved
- Parent         - Parent to which item will be moved. Use {} for
+<pre> TreeViewWidget - <a href="#robo107">Ttk_Tree_View</a> in which item will be moved
+ <a href="#robo326">Item</a>           - Identifier of the item which will be moved
+ <a href="#robo330">Parent</a>         - <a href="#robo330">Parent</a> to which item will be moved. Use {} for
                   root item
- <a href="#robo261">Index</a>          - <a href="#robo261">Index</a> to which the item will be moved
+ <a href="#robo324">Index</a>          - <a href="#robo324">Index</a> to which the item will be moved
+</pre>
+
+<hr />
+<a name="TtkTreeView2fNext"></a>
+<a name="robo329"></a><h2>TtkTreeView/Next [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkTreeView</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> identifier of next sibling of the item in the selected
+ <a href="#robo107">Ttk_Tree_View</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Next</strong>
+     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo107">Ttk_Tree_View</a><span class="sign">;</span> <a href="#robo326">Item</a><span class="sign">:</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo326">Item</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> TreeViewWidget - <a href="#robo107">Ttk_Tree_View</a> which will be queried for item
+ <a href="#robo326">Item</a>           - Identifier of the item which sibling will be looking
+                  for
+</pre>
+<p class="item_name">RESULT</p>
+<pre> Identifier of the next sibling of the selected item or empty string if
+ <a href="#robo326">Item</a> is the last element of its parent
+</pre>
+
+<hr />
+<a name="TtkTreeView2fParent"></a>
+<a name="robo330"></a><h2>TtkTreeView/Parent [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkTreeView</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> ID of the parent of item
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Parent</strong>
+     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo107">Ttk_Tree_View</a><span class="sign">;</span> <a href="#robo326">Item</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo326">Item</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> TreeViewWidget - <a href="#robo107">Ttk_Tree_View</a> in which item will be queried
+ <a href="#robo326">Item</a>           - Identifier of the item which will be queried for
+                  parent
+</pre>
+<p class="item_name">RESULT</p>
+<pre> ID of the parent of the selected <a href="#robo326">Item</a> or empty string if item is at
+ the top of the hiearchy
+</pre>
+
+<hr />
+<a name="TtkTreeView2fPrev"></a>
+<a name="robo331"></a><h2>TtkTreeView/Prev [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkTreeView</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> identifier of previous sibling of the item in the selected
+ <a href="#robo107">Ttk_Tree_View</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Prev</strong>
+     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo107">Ttk_Tree_View</a><span class="sign">;</span> <a href="#robo326">Item</a><span class="sign">:</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo326">Item</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> TreeViewWidget - <a href="#robo107">Ttk_Tree_View</a> which will be queried for item
+ <a href="#robo326">Item</a>           - Identifier of the item which sibling will be looking
+                  for
+</pre>
+<p class="item_name">RESULT</p>
+<pre> Identifier of the previous sibling of the selected item or empty
+ string if <a href="#robo326">Item</a> is the first element of its parent
 </pre>
 
 <hr />
 <a name="TtkTreeView2fSelection"></a>
-<a name="robo266"></a><h2>TtkTreeView/Selection [ Subprograms ]</h2>
+<a name="robo332"></a><h2>TtkTreeView/Selection [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkTreeView</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo225">Get</a> selected items from the selected <a href="#robo106">Ttk_Tree_View</a>
+<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> selected items from the selected <a href="#robo107">Ttk_Tree_View</a>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Selection</strong><span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo106">Ttk_Tree_View</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> <strong>Selection</strong><span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo107">Ttk_Tree_View</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> TreeViewWidget - <a href="#robo106">Ttk_Tree_View</a> from which selection will be taken
+<pre> TreeViewWidget - <a href="#robo107">Ttk_Tree_View</a> from which selection will be taken
 </pre>
 <p class="item_name">RESULT</p>
 <pre> List of items currently selected in TreeViewWidget
@@ -377,80 +515,80 @@
 
 <hr />
 <a name="TtkTreeView2fSelection5fAdd"></a>
-<a name="robo267"></a><h2>TtkTreeView/Selection_Add [ Subprograms ]</h2>
+<a name="robo333"></a><h2>TtkTreeView/Selection_Add [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkTreeView</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo235">Add</a> new items to the selection in the selected <a href="#robo106">Ttk_Tree_View</a>
+<pre> <a href="./tcl-tk-ada-widgets-ttknotebook_ads.html#robo285">Add</a> new items to the selection in the selected <a href="#robo107">Ttk_Tree_View</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Selection_Add</strong>
-     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo106">Ttk_Tree_View</a><span class="sign">;</span> Items<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo107">Ttk_Tree_View</a><span class="sign">;</span> Items<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Items <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> TreeViewWidget - <a href="#robo106">Ttk_Tree_View</a> in which items will be added to selection
+<pre> TreeViewWidget - <a href="#robo107">Ttk_Tree_View</a> in which items will be added to selection
  Items          - <a href="../tcl_ads.html#robo9">Tcl</a> list of items to add to the selection
 </pre>
 
 <hr />
 <a name="TtkTreeView2fSelection5fRemove"></a>
-<a name="robo268"></a><h2>TtkTreeView/Selection_Remove [ Subprograms ]</h2>
+<a name="robo334"></a><h2>TtkTreeView/Selection_Remove [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkTreeView</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Remove selected items from the selection of the selected <a href="#robo106">Ttk_Tree_View</a>
+<pre> Remove selected items from the selection of the selected <a href="#robo107">Ttk_Tree_View</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Selection_Remove</strong>
-     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo106">Ttk_Tree_View</a><span class="sign">;</span> Items<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo107">Ttk_Tree_View</a><span class="sign">;</span> Items<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Items <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> TreeViewWidget - <a href="#robo106">Ttk_Tree_View</a> from which items will be removed
+<pre> TreeViewWidget - <a href="#robo107">Ttk_Tree_View</a> from which items will be removed
  Items          - <a href="../tcl_ads.html#robo9">Tcl</a> list of items to remove from the selection
 </pre>
 
 <hr />
 <a name="TtkTreeView2fSelection5fSet"></a>
-<a name="robo269"></a><h2>TtkTreeView/Selection_Set [ Subprograms ]</h2>
+<a name="robo335"></a><h2>TtkTreeView/Selection_Set [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkTreeView</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Set new selection for the selected <a href="#robo106">Ttk_Tree_View</a>
+<pre> Set new selection for the selected <a href="#robo107">Ttk_Tree_View</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Selection_Set</strong>
-     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo106">Ttk_Tree_View</a><span class="sign">;</span> Items<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo107">Ttk_Tree_View</a><span class="sign">;</span> Items<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Items <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> TreeViewWidget - <a href="#robo106">Ttk_Tree_View</a> in which selection will be set
+<pre> TreeViewWidget - <a href="#robo107">Ttk_Tree_View</a> in which selection will be set
  Items          - <a href="../tcl_ads.html#robo9">Tcl</a> list of items to set as selected
 </pre>
 
 <hr />
 <a name="TtkTreeView2fSelection5fToggle"></a>
-<a name="robo270"></a><h2>TtkTreeView/Selection_Toggle [ Subprograms ]</h2>
+<a name="robo336"></a><h2>TtkTreeView/Selection_Toggle [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkTreeView</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-button-checkbutton_ads.html#robo131">Toggle</a> selection state for selected items in the selected <a href="#robo106">Ttk_Tree_View</a>
+<pre> <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo243">Toggle</a> selection state for selected items in the selected <a href="#robo107">Ttk_Tree_View</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Selection_Toggle</strong>
-     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo106">Ttk_Tree_View</a><span class="sign">;</span> Items<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+     <span class="sign">(</span>TreeViewWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo107">Ttk_Tree_View</a><span class="sign">;</span> Items<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Items <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> TreeViewWidget - <a href="#robo106">Ttk_Tree_View</a> in which items will have toggled selection
+<pre> TreeViewWidget - <a href="#robo107">Ttk_Tree_View</a> in which items will have toggled selection
                   state
  Items          - <a href="../tcl_ads.html#robo9">Tcl</a> list of items to toggle
 </pre>
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-ttktreeview.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Sat Feb 29 2020 07:27:12
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-ttktreeview.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Mar 31 2020 07:12:51
 </p>
 </div> <!-- footer -->
 </body>

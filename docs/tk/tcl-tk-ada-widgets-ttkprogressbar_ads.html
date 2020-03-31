@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.2 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.3 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,9 +27,9 @@
 <ul>
 <li>1. <a href="#robo54">Widgets/TtkProgressBar</a></li>
 <ul>
-<li>1.1. <a href="#robo100">TtkProgressBar/Ttk_ProgressBar</a></li>
-<li>1.2. <a href="#robo239">TtkProgressBar/Create</a></li>
-<li>1.3. <a href="#robo240">TtkProgressBar/Step</a></li>
+<li>1.1. <a href="#robo101">TtkProgressBar/Ttk_ProgressBar</a></li>
+<li>1.2. <a href="#robo295">TtkProgressBar/Create</a></li>
+<li>1.3. <a href="#robo296">TtkProgressBar/Step</a></li>
 </ul>
 </ul>
 <hr />
@@ -46,38 +46,38 @@
 
 <hr />
 <a name="TtkProgressBar2fTtk5fProgressBar"></a>
-<a name="robo100"></a><h2>TtkProgressBar/Ttk_ProgressBar [ Types ]</h2>
+<a name="robo101"></a><h2>TtkProgressBar/Ttk_ProgressBar [ Types ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo54">TtkProgressBar</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo107">Tk_Widget</a>.
- Each of the derived widgets redefines the <a href="./tcl-tk-ada-widgets-ttkbutton-ttkcheckbutton_ads.html#robo222">Create</a> subprogram
+<pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a>.
+ Each of the derived widgets redefines the <a href="./tcl-tk-ada-widgets-ttkcombobox_ads.html#robo276">Create</a> subprogram
  in order to create the correct type of widget.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">type</span> <strong>Ttk_ProgressBar</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets_ads.html#robo107">Tk_Widget</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">type</span> <strong>Ttk_ProgressBar</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
 </pre>
 
 <hr />
 <a name="TtkProgressBar2fCreate"></a>
-<a name="robo239"></a><h2>TtkProgressBar/Create [ Subprograms ]</h2>
+<a name="robo295"></a><h2>TtkProgressBar/Create [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo54">TtkProgressBar</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Creates a new <a href="#robo100">Ttk_ProgressBar</a> in the specified interpreter.
+<pre> Creates a new <a href="#robo101">Ttk_ProgressBar</a> in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   overriding <span class="keyword">function</span> <strong>Create</strong>
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo100">Ttk_ProgressBar</a> <span class="keyword">with</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo101">Ttk_ProgressBar</a> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
    overriding <span class="keyword">procedure</span> <strong>Create</strong>
-     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo100">Ttk_ProgressBar</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo101">Ttk_ProgressBar</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
       options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Widgt    - <a href="#robo100">Ttk_ProgressBar</a> which will be created
+<pre> Widgt    - <a href="#robo101">Ttk_ProgressBar</a> which will be created
  pathName - <a href="./tcl-tk_ads.html#robo12">Tk</a> path (starts with dot) for the widget
  options  - Options which will be passed to the widget. Default value is
             empty
@@ -86,29 +86,29 @@
             Default value is null.
 </pre>
 <p class="item_name">RESULT</p>
-<pre> Newly created <a href="#robo100">Ttk_ProgressBar</a>
+<pre> Newly created <a href="#robo101">Ttk_ProgressBar</a>
 </pre>
 
 <hr />
 <a name="TtkProgressBar2fStep"></a>
-<a name="robo240"></a><h2>TtkProgressBar/Step [ Subprograms ]</h2>
+<a name="robo296"></a><h2>TtkProgressBar/Step [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo54">TtkProgressBar</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Increment value of the <a href="#robo100">Ttk_ProgressBar</a> by amount
+<pre> Increment value of the <a href="#robo101">Ttk_ProgressBar</a> by amount
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Step</strong><span class="sign">(</span>Bar<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo100">Ttk_ProgressBar</a><span class="sign">;</span> Amount<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Step</strong><span class="sign">(</span>Bar<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo101">Ttk_ProgressBar</a><span class="sign">;</span> Amount<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Bar    - <a href="#robo100">Ttk_ProgressBar</a> which value will be modified
+<pre> Bar    - <a href="#robo101">Ttk_ProgressBar</a> which value will be modified
  Amount - Amount to incremement. If empty, then value is incremented
           by 1.0. Default value is empty
 </pre>
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-ttkprogressbar.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Sat Feb 29 2020 07:27:12
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-ttkprogressbar.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Mar 31 2020 07:12:51
 </p>
 </div> <!-- footer -->
 </body>
