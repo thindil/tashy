@@ -601,6 +601,19 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "";
       -- ****
 
+      -- ****f* Canvas/XView
+      -- FUNCTION
+      -- Get which horizontal faction of the canvas is visible
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas which will be queried for visibility
+      -- RESULT
+      -- Pair of elements: first element is the start of horizontal faction of
+      -- the CanvasWidget which is visible, second is the end of horizontal
+      -- faction of the CanvasWidget which is visible.
+      -- SOURCE
+   function XView(CanvasWidget: in Tk_Canvas) return String;
+   -- ****
+
 private
 
    type Tk_Canvas is new Tk_Widget with null record;
