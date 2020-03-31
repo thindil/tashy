@@ -301,4 +301,9 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
       return Tcl.Ada.Tcl_GetResult(CanvasWidget.Interp);
    end XView;
 
+   procedure Xview_Move_To(CanvasWidget: in Tk_Canvas; Fraction: in String) is
+   begin
+      Execute_Widget_Command(CanvasWidget, "xview moveto", Fraction);
+   end Xview_Move_To;
+
 end Tcl.Tk.Ada.Widgets.Canvas;
