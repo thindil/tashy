@@ -603,16 +603,30 @@ package Tcl.Tk.Ada.Widgets.Canvas is
 
       -- ****f* Canvas/XView
       -- FUNCTION
-      -- Get which horizontal faction of the canvas is visible
+      -- Get which horizontal fraction of the canvas is visible
       -- PARAMETERS
       -- CanvasWidget - Tk_Canvas which will be queried for visibility
       -- RESULT
-      -- Pair of elements: first element is the start of horizontal faction of
+      -- Pair of elements: first element is the start of horizontal fraction of
       -- the CanvasWidget which is visible, second is the end of horizontal
-      -- faction of the CanvasWidget which is visible.
+      -- fraction of the CanvasWidget which is visible.
       -- SOURCE
    function XView(CanvasWidget: in Tk_Canvas) return String;
    -- ****
+
+   -- ****f* Canvas/Xview_Move_To
+   -- FUNCTION
+   -- Adjusts the view in the window so that fraction of the total width of
+   -- the Tk_Canvas is off-screen to the left.
+   -- PARAMETERS
+   -- CanvasWidget - Tk_Canvas which view will be adjusted
+   -- Fraction     - Fraction of the CanvasWidget to move. Must be between 0
+   --                and 1
+   -- SOURCE
+   procedure Xview_Move_To
+     (CanvasWidget: in Tk_Canvas; Fraction: in String) with
+      Pre => Fraction /= "";
+      -- ****
 
 private
 
