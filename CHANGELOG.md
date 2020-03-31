@@ -23,7 +23,7 @@ of the project.
 - Binding for Tk commands: `instate`, `state`, `focus`
 - Binding for Tk `ttk::treeview` commands: `detach`, `insert` as function,
   `parent`, `next`, `prev`, `focus`
-- Binding for Tk `text` commands: `tag add`, `tag configure`
+- Binding for Tk `text` commands: `tag add`, `tag configure`, `delete`
 
 ### Changed
 - Updated README.md
