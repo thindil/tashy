@@ -295,4 +295,10 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
       return Tcl.Ada.Tcl_GetResult(CanvasWidget.Interp);
    end Canvas_Type;
 
+   function XView(CanvasWidget: in Tk_Canvas) return String is
+   begin
+      Execute_Widget_Command(CanvasWidget, "xview");
+      return Tcl.Ada.Tcl_GetResult(CanvasWidget.Interp);
+   end XView;
+
 end Tcl.Tk.Ada.Widgets.Canvas;
