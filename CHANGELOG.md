@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 Tag **BREAKING:** means that change breaks compatibility with earlier version
 of the project.
 
+## [Unreleased]
+
+### Added
+- Binding for Tk `canvas` command: `xview scroll`
+
 ## [8.6.3] - 2020-03-31
 
 ### Added
