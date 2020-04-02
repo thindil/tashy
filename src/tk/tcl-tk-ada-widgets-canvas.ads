@@ -646,6 +646,23 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => Number /= "" and (What = "units" or What = "pages");
       -- ****
 
+      -- ****f* Canvas/YView
+      -- FUNCTION
+      -- Get which vertical fraction of the canvas is visible
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas which will be queried for visibility
+      -- RESULT
+      -- Pair of elements: first element is the start of vertical fraction of
+      -- the CanvasWidget which is visible, second is the end of vertical
+      -- fraction of the CanvasWidget which is visible.
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function YView(CanvasWidget: in Tk_Canvas) return String;
+   -- ****
+
 private
 
    type Tk_Canvas is new Tk_Widget with null record;
