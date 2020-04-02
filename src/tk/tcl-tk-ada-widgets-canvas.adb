@@ -313,4 +313,10 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
         (CanvasWidget, "xview scroll", Number & " " & What);
    end Xview_Scroll;
 
+   function YView(CanvasWidget: in Tk_Canvas) return String is
+   begin
+      Execute_Widget_Command(CanvasWidget, "yview");
+      return Tcl.Ada.Tcl_GetResult(CanvasWidget.Interp);
+   end YView;
+
 end Tcl.Tk.Ada.Widgets.Canvas;
