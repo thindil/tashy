@@ -324,4 +324,11 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
       Execute_Widget_Command(CanvasWidget, "yview moveto", Fraction);
    end Yview_Move_To;
 
+   procedure Yview_Scroll
+     (CanvasWidget: in Tk_Canvas; Number, What: in String) is
+   begin
+      Execute_Widget_Command
+        (CanvasWidget, "yview scroll", Number & " " & What);
+   end Yview_Scroll;
+
 end Tcl.Tk.Ada.Widgets.Canvas;
