@@ -7,7 +7,8 @@ of the project.
 ## [Unreleased]
 
 ### Added
-- Binding for Tk `canvas` commands: `xview scroll`, `yview`, `yview moveto`
+- Binding for Tk `canvas` commands: `xview scroll`, `yview`, `yview moveto`,
+  `yview scroll`
 
 ## [8.6.3] - 2020-03-31
 
