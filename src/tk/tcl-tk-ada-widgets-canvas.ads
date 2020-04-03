@@ -663,6 +663,20 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    function YView(CanvasWidget: in Tk_Canvas) return String;
    -- ****
 
+   -- ****f* Canvas/Yview_Move_To
+   -- FUNCTION
+   -- Adjusts the view in the window so that fraction of the total height of
+   -- the Tk_Canvas is off-screen to the top.
+   -- PARAMETERS
+   -- CanvasWidget - Tk_Canvas which view will be adjusted
+   -- Fraction     - Fraction of the CanvasWidget to move. Must be between 0
+   --                and 1
+   -- SOURCE
+   procedure Yview_Move_To
+     (CanvasWidget: in Tk_Canvas; Fraction: in String) with
+      Pre => Fraction /= "";
+      -- ****
+
 private
 
    type Tk_Canvas is new Tk_Widget with null record;
