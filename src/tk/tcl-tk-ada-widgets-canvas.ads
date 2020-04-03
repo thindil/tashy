@@ -671,10 +671,32 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    -- CanvasWidget - Tk_Canvas which view will be adjusted
    -- Fraction     - Fraction of the CanvasWidget to move. Must be between 0
    --                and 1
+   -- HISTORY
+   -- 8.6.4 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Yview_Move_To
      (CanvasWidget: in Tk_Canvas; Fraction: in String) with
       Pre => Fraction /= "";
+      -- ****
+
+      -- ****f* Canvas/Yview_Scroll
+      -- FUNCTION
+      -- Shift the view in the window on top or bottom according to Number and
+      -- What.
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas which view will be shifted
+      -- Number       - The amount of What to shift the CanvasWidget
+      -- What         - Type of amount to move. Can be "units" or "pages"
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Yview_Scroll
+     (CanvasWidget: in Tk_Canvas; Number, What: in String) with
+      Pre => Number /= "" and (What = "units" or What = "pages");
       -- ****
 
 private
