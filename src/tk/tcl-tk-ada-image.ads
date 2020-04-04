@@ -62,4 +62,19 @@ package Tcl.Tk.Ada.Image is
    function Types return String;
    -- ****
 
+   -- ****f* Image/Width
+   -- FUNCTION
+   -- Get the selected image width
+   -- PARAMETERS
+   -- Img - Image to query
+   -- RESULT
+   -- The selected image width in pixels
+   -- HISTORY
+   -- 8.6.4 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function Width(Img: in Tk_Widget'Class) return String;
+   -- ****
+
 end Tcl.Tk.Ada.Image;
