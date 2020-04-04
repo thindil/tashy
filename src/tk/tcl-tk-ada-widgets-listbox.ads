@@ -60,18 +60,40 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => pathName /= "";
       -- ****
 
-     -- ****f* ListBox/Activate
-     -- FUNCTION
-     -- Set the active element of Tk_ListBox to the selected index.
-     -- PARAMETERS
-     -- ListboxWidget - Tk_ListBox in which element will be set as active
-     -- Index         - Index of element to set as active
-     -- HISTORY
-     -- 8.6.4 - Added
-     -- TODO
-     -- Replace it with higher level of binding
-     -- SOURCE
+      -- ****f* ListBox/Activate
+      -- FUNCTION
+      -- Set the active element of Tk_ListBox to the selected index.
+      -- PARAMETERS
+      -- ListboxWidget - Tk_ListBox in which element will be set as active
+      -- Index         - Index of element to set as active
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
    procedure Activate(ListboxWidget: in Tk_ListBox; Index: in String) with
+      Pre => Index /= "";
+      -- ****
+
+      -- ****f* ListBox/BBox
+      -- FUNCTION
+      -- Get size of bounding box of the selected item text in the selected
+      -- Tk_ListBox
+      -- PARAMETERS
+      -- ListboxWidget - Tk_ListBox which will be queried
+      -- Index         - Index of item from which bounding box will be
+      --                 taken
+      -- RESULT
+      -- Four values: x1, y1 - coordinates of starting point of bounding box
+      -- from top left, x2, y2 - coordinates of ending point from bottom right
+      -- of bounding box.
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function BBox
+     (ListboxWidget: in Tk_ListBox; Index: in String) return String with
       Pre => Index /= "";
       -- ****
 
