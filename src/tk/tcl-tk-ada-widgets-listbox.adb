@@ -44,4 +44,9 @@ package body Tcl.Tk.Ada.Widgets.ListBox is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   procedure Activate(ListboxWidget: in Tk_ListBox; Index: in String) is
+   begin
+      Execute_Widget_Command(ListboxWidget, "activate", Index);
+   end Activate;
+
 end Tcl.Tk.Ada.Widgets.ListBox;

@@ -60,6 +60,21 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => pathName /= "";
       -- ****
 
+     -- ****f* ListBox/Activate
+     -- FUNCTION
+     -- Set the active element of Tk_ListBox to the selected index.
+     -- PARAMETERS
+     -- ListboxWidget - Tk_ListBox in which element will be set as active
+     -- Index         - Index of element to set as active
+     -- HISTORY
+     -- 8.6.4 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- SOURCE
+   procedure Activate(ListboxWidget: in Tk_ListBox; Index: in String) with
+      Pre => Index /= "";
+      -- ****
+
 private
 
    type Tk_ListBox is new Tk_Widget with null record;
