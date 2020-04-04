@@ -20,6 +20,8 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
+with Tcl.Ada;
+
 package body Tcl.Tk.Ada.Widgets.ListBox is
 
    function Create
@@ -48,5 +50,12 @@ package body Tcl.Tk.Ada.Widgets.ListBox is
    begin
       Execute_Widget_Command(ListboxWidget, "activate", Index);
    end Activate;
+
+   function BBox
+     (ListboxWidget: in Tk_ListBox; Index: in String) return String is
+   begin
+      Execute_Widget_Command(ListboxWidget, "bbox", Index);
+      return Tcl.Ada.Tcl_GetResult(ListboxWidget.Interp);
+   end BBox;
 
 end Tcl.Tk.Ada.Widgets.ListBox;
