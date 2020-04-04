@@ -58,4 +58,10 @@ package body Tcl.Tk.Ada.Widgets.ListBox is
       return Tcl.Ada.Tcl_GetResult(ListboxWidget.Interp);
    end BBox;
 
+   function CurSelection(ListboxWidget: in Tk_ListBox) return String is
+   begin
+      Execute_Widget_Command(ListboxWidget, "curselection");
+      return Tcl.Ada.Tcl_GetResult(ListboxWidget.Interp);
+   end CurSelection;
+
 end Tcl.Tk.Ada.Widgets.ListBox;
