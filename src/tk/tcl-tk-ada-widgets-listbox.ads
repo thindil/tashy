@@ -97,6 +97,22 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => Index /= "";
       -- ****
 
+      -- ****f* ListBox/CurSelection
+      -- FUNCTION
+      -- Get the current selected items in the selected Tk_ListBox
+      -- PARAMETERS
+      -- ListboxWidget - Tk_ListBox which will be queried for selection
+      -- RESULT
+      -- List of numerical indices of all of the elements in ListboxWidget
+      -- that are currently selected or {} if no elements selected.
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function CurSelection(ListboxWidget: in Tk_ListBox) return String;
+   -- ****
+
 private
 
    type Tk_ListBox is new Tk_Widget with null record;
