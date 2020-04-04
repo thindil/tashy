@@ -24,16 +24,22 @@ with Tcl.Ada; use Tcl.Ada;
 
 package body Tcl.Tk.Ada.Image is
 
-   function Types return String is
-   begin
-      Tcl_Eval(Get_Context, "image types");
-      return Tcl_GetResult(Get_Context);
-   end Types;
-
    procedure Delete(Img: in out Tk_Widget'Class) is
    begin
       Tcl_Eval(Img.Interp, "image delete " & Widget_Image(Img));
       C.Strings.Free(Img.Name);
    end Delete;
+
+   function Height(Img: in Tk_Widget'Class) return String is
+   begin
+      Tcl_Eval(Img.Interp, "image height " & Widget_Image(Img));
+      return Tcl_GetResult(Img.Interp);
+   end Height;
+
+   function Types return String is
+   begin
+      Tcl_Eval(Get_Context, "image types");
+      return Tcl_GetResult(Get_Context);
+   end Types;
 
 end Tcl.Tk.Ada.Image;
