@@ -42,4 +42,10 @@ package body Tcl.Tk.Ada.Image is
       return Tcl_GetResult(Get_Context);
    end Types;
 
+   function Width(Img: in Tk_Widget'Class) return String is
+   begin
+      Tcl_Eval(Img.Interp, "image width " & Widget_Image(Img));
+      return Tcl_GetResult(Img.Interp);
+   end Width;
+
 end Tcl.Tk.Ada.Image;
