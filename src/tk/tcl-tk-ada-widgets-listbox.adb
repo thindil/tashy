@@ -64,4 +64,10 @@ package body Tcl.Tk.Ada.Widgets.ListBox is
       return Tcl.Ada.Tcl_GetResult(ListboxWidget.Interp);
    end CurSelection;
 
+   procedure Delete
+     (ListboxWidget: in Tk_ListBox; First: in String; Last: in String := "") is
+   begin
+      Execute_Widget_Command(ListboxWidget, "delete", First & " " & Last);
+   end Delete;
+
 end Tcl.Tk.Ada.Widgets.ListBox;

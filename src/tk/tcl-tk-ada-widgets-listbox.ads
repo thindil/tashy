@@ -113,6 +113,25 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    function CurSelection(ListboxWidget: in Tk_ListBox) return String;
    -- ****
 
+   -- ****f* ListBox/Delete
+   -- FUNCTION
+   -- Delete the selected elements from the selected Tk_ListBox
+   -- PARAMETERS
+   -- ListboxWidget - Tk_ListBox in which elements will be deleted
+   -- First         - Index of first element to delete
+   -- Last          - Index of last element to delete. If empty, only one
+   --                 element will be deleted. Default value is empty
+   -- HISTORY
+   -- 8.6.4 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Delete
+     (ListboxWidget: in Tk_ListBox; First: in String;
+      Last: in String := "") with
+      Pre => First /= "";
+      -- ****
+
 private
 
    type Tk_ListBox is new Tk_Widget with null record;
