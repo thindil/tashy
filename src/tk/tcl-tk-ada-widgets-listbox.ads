@@ -132,6 +132,28 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => First /= "";
       -- ****
 
+      -- ****f* Tcl.Tk.Ada.Widgets.ListBox/Get
+      -- FUNCTION
+      -- Get the content of the selected elements in the selected Tk_ListBox
+      -- PARAMETERS
+      -- ListboxWidget - Tk_ListBox which will be queried for elements
+      -- First         - Index of first element to get
+      -- Last          - Index of last element to get. Default value is empty
+      -- RESULT
+      -- If Last is empty, return only one element, marked by First argument.
+      -- If both are present, return list of elements from First to Last. If
+      -- no elements are in range, return {}
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Get
+     (ListboxWidget: in Tk_ListBox; First: in String; Last: in String := "")
+      return String with
+      Pre => First /= "";
+      -- ****
+
 private
 
    type Tk_ListBox is new Tk_Widget with null record;

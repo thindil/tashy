@@ -70,4 +70,12 @@ package body Tcl.Tk.Ada.Widgets.ListBox is
       Execute_Widget_Command(ListboxWidget, "delete", First & " " & Last);
    end Delete;
 
+   function Get
+     (ListboxWidget: in Tk_ListBox; First: in String; Last: in String := "")
+      return String is
+   begin
+      Execute_Widget_Command(ListboxWidget, "get", First & " " & Last);
+      return Tcl.Ada.Tcl_GetResult(ListboxWidget.Interp);
+   end Get;
+
 end Tcl.Tk.Ada.Widgets.ListBox;
