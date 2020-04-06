@@ -10,7 +10,7 @@ of the project.
 - Binding for Tk `canvas` commands: `xview scroll`, `yview`, `yview moveto`,
   `yview scroll`
 - Bindind for Tk `listbox` commands: `activate`, `bbox`, `curselection`,
-  `delete`
+  `delete`, `get`
 - Binding for Tk `image` commands: `height`, `width`
 
 ## [8.6.3] - 2020-03-31
