@@ -154,6 +154,25 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => First /= "";
       -- ****
 
+      -- ****f* ListBox/Index
+      -- FUNCTION
+      -- Get the index for the selected element in the selected Tk_ListBox
+      -- PARAMETERS
+      -- ListboxWidget - Tk_ListBox which will be queried for index
+      -- Index         - Index of the element to get
+      -- RESULT
+      -- Numerical index of the selected element. If Index is set to "end",
+      -- return count of numbers of the elements in the ListboxWidget
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Index
+     (ListboxWidget: in Tk_ListBox; Index: in String) return String with
+      Pre => Index /= "";
+      -- ****
+
 private
 
    type Tk_ListBox is new Tk_Widget with null record;

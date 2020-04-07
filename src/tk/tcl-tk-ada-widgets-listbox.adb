@@ -78,4 +78,11 @@ package body Tcl.Tk.Ada.Widgets.ListBox is
       return Tcl.Ada.Tcl_GetResult(ListboxWidget.Interp);
    end Get;
 
+   function Index
+     (ListboxWidget: in Tk_ListBox; Index: in String) return String is
+   begin
+      Execute_Widget_Command(ListboxWidget, "index", Index);
+      return Tcl.Ada.Tcl_GetResult(ListboxWidget.Interp);
+   end Index;
+
 end Tcl.Tk.Ada.Widgets.ListBox;
