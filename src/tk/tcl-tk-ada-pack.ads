@@ -22,14 +22,14 @@
 
 with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
 
--- ****h* TkAda/Pack
+-- ****h* TkAda/TkPack
 -- FUNCTION
 -- Provides code for manipulate Tk command Pack
 -- SOURCE
 package Tcl.Tk.Ada.Pack is
 -- ****
 
-   -- ****f* Pack/Pack
+   -- ****f* TkPack/Pack
    -- FUNCTION
    -- Pack selected widget with selected options
    -- PARAMETERS
@@ -39,7 +39,7 @@ package Tcl.Tk.Ada.Pack is
    procedure Pack(Slave: in Tk_Widget'Class; Options: in String := "");
    -- ****
 
-   -- ****f* Pack/Pack_Configure
+   -- ****f* TkPack/Pack_Configure
    -- FUNCTION
    -- Tells the packer how to configure the specified Slave window.
    -- PARAMETERS
@@ -50,7 +50,7 @@ package Tcl.Tk.Ada.Pack is
      (Slave: in Tk_Widget'Class; Options: in String := "");
    -- ****
 
-   -- ****f* Pack/Pack_Forget
+   -- ****f* TkPack/Pack_Forget
    -- FUNCTION
    -- Removes the Slave window from the packing list for its master
    -- and unmaps their windows.
@@ -60,7 +60,7 @@ package Tcl.Tk.Ada.Pack is
    procedure Pack_Forget(Slave: in Tk_Widget'Class);
    -- ****
 
-   -- ****f* Pack/Pack_Info
+   -- ****f* TkPack/Pack_Info
    -- FUNCTION
    -- Get pack options of the selected widget
    -- PARAMETERS
@@ -72,7 +72,7 @@ package Tcl.Tk.Ada.Pack is
    function Pack_Info(Slave: in Tk_Widget'Class) return String;
    -- ****
 
-   -- ****f* Pack/Pack_Propagate
+   -- ****f* TkPack/Pack_Propagate (procedure)
    -- FUNCTION
    -- Enables or disables propagation for the specified Master window.
    -- PARAMETERS
@@ -82,7 +82,7 @@ package Tcl.Tk.Ada.Pack is
    procedure Pack_Propagate(Master: in Tk_Widget'Class; State: in Boolean);
    -- ****
 
-   -- ****f* Pack/Pack_Propagate2
+   -- ****f* TkPack/Pack_Propagate (function)
    -- FUNCTION
    -- Get propagation state of selected widget
    -- PARAMETERS
@@ -93,7 +93,7 @@ package Tcl.Tk.Ada.Pack is
    function Pack_Propagate(Master: in Tk_Widget'Class) return Boolean;
    -- ****
 
-   -- ****f* Pack/Pack_Slaves
+   -- ****f* TkPack/Pack_Slaves
    -- FUNCTION
    -- Get list of slaves widget of selected widget
    -- PARAMETERS
