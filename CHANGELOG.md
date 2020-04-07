@@ -13,6 +13,9 @@ of the project.
   `delete`, `get`, `index`
 - Binding for Tk `image` commands: `height`, `width`
 
+### Fixed
+- Code documentation for Tcl.Tk.Ada.Widgets.Scale
+
 ## [8.6.3] - 2020-03-31
 
 ### Added
