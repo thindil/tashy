@@ -191,6 +191,21 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => Index /= "";
       -- ****
 
+      -- ****f* ListBox/Item_Cget
+      -- FUNCTION
+      -- Get the selected option of the selected item in the selected Tk_ListBox
+      -- PARAMETERS
+      -- ListboxWidget - Tk_ListBox which will be queried for the option
+      -- Index         - Index of the item in ListboxWidget which will be
+      --                 queried for the option
+      -- Option        - Tk option to get
+      -- SOURCE
+   function Item_Cget
+     (ListboxWidget: in Tk_ListBox; Index, Option: in String)
+      return String with
+      Pre => Index /= "" and Option /= "";
+      -- ****
+
 private
 
    type Tk_ListBox is new Tk_Widget with null record;
