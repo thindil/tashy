@@ -173,6 +173,24 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => Index /= "";
       -- ****
 
+      -- ****f* ListBox/Insert
+      -- FUNCTION
+      -- Insert zero or more elements to the selected Tk_ListBox
+      -- PARAMETERS
+      -- ListboxWidget - Tk_ListBox to which elements will be added
+      -- Index         - Index in ListboxWidget where add the elements
+      -- Elements      - Elements to add. Default value is empty
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Insert
+     (ListboxWidget: in Tk_ListBox; Index: in String;
+      Elements: in String := "") with
+      Pre => Index /= "";
+      -- ****
+
 private
 
    type Tk_ListBox is new Tk_Widget with null record;
