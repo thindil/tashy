@@ -85,4 +85,11 @@ package body Tcl.Tk.Ada.Widgets.ListBox is
       return Tcl.Ada.Tcl_GetResult(ListboxWidget.Interp);
    end Index;
 
+   procedure Insert
+     (ListboxWidget: in Tk_ListBox; Index: in String;
+      Elements: in String := "") is
+   begin
+      Execute_Widget_Command(ListboxWidget, "insert", Index & " " & Elements);
+   end Insert;
+
 end Tcl.Tk.Ada.Widgets.ListBox;
