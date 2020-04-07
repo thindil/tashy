@@ -27,14 +27,14 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
--- ****h* Widgets/Scale
+-- ****h* Widgets/TkScale
 -- FUNCTION
 -- Provides code for manipulate Tk widget Scale
 -- SOURCE
 package Tcl.Tk.Ada.Widgets.Scale is
 -- ****
 
-   -- ****t* Scale/Tk_Scale
+   -- ****t* TkScale/Tk_Scale
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -43,7 +43,7 @@ package Tcl.Tk.Ada.Widgets.Scale is
    type Tk_Scale is new Tk_Widget with private;
    -- ****
 
-   -- ****f* Scale/Create
+   -- ****f* TkScale/Create
    -- FUNCTION
    -- Creates a new Tk_Scale in the specified interpreter.
    -- PARAMETERS
