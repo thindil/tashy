@@ -14,7 +14,7 @@ of the project.
 - Binding for Tk `image` commands: `height`, `width`
 
 ### Fixed
-- Code documentation for Tcl.Tk.Ada.Widgets.Scale
+- Code documentation for Tcl.Tk.Ada.Widgets.Scale and Tcl.Tk.Ada.Pack
 
 ## [8.6.3] - 2020-03-31
 
