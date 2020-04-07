@@ -92,4 +92,11 @@ package body Tcl.Tk.Ada.Widgets.ListBox is
       Execute_Widget_Command(ListboxWidget, "insert", Index & " " & Elements);
    end Insert;
 
+   function Item_Cget
+     (ListboxWidget: in Tk_ListBox; Index, Option: in String) return String is
+   begin
+      Execute_Widget_Command(ListboxWidget, "itemcget", Index & " " & Option);
+      return Tcl.Ada.Tcl_GetResult(ListboxWidget.Interp);
+   end Item_Cget;
+
 end Tcl.Tk.Ada.Widgets.ListBox;
