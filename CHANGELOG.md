@@ -13,6 +13,9 @@ of the project.
   `delete`, `get`, `index`, `insert`, `itemcget`, `itemconfigure`
 - Binding for Tk `image` commands: `height`, `width`
 
+### Changed
+- Updated code documentation
+
 ### Fixed
 - Code documentation for Tcl.Tk.Ada.Widgets.Scale and Tcl.Tk.Ada.Pack
 
