@@ -10,7 +10,6 @@ options:
   --html
   --multidoc
   --index
-  --internal
   --documenttitle "TASHY v8.6.4 code documentation"
   --syntaxcolors
   --css scripts/robodoc.css
