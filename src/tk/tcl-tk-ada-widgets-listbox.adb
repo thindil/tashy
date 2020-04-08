@@ -115,4 +115,11 @@ package body Tcl.Tk.Ada.Widgets.ListBox is
       return Tcl.Ada.Tcl_GetResult(ListBoxWidget.Interp);
    end Item_Configure;
 
+   function Nearest
+     (ListboxWidget: in Tk_ListBox; Y: in String) return String is
+   begin
+      Execute_Widget_Command(ListboxWidget, "nearest", Y);
+      return Tcl.Ada.Tcl_GetResult(ListboxWidget.Interp);
+   end Nearest;
+
 end Tcl.Tk.Ada.Widgets.ListBox;
