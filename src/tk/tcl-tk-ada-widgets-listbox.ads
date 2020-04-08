@@ -236,6 +236,24 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => Index /= "";
       -- ****
 
+      -- ****f* ListBox/Nearest
+      -- FUNCTION
+      -- Get nearest element to the selected point in the selected Tk_ListBox
+      -- PARAMETERS
+      -- ListboxWidget - Tk_ListBox which will be queried for the item
+      -- Y             - Y coordinate to find the element
+      -- RESULT
+      -- Index of the nearest to Y visible element
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Nearest
+     (ListboxWidget: in Tk_ListBox; Y: in String) return String with
+      Pre => Y /= "";
+      -- ****
+
 private
 
    type Tk_ListBox is new Tk_Widget with null record;
