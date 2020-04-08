@@ -254,6 +254,22 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => Y /= "";
       -- ****
 
+      -- ****f* ListBox/Scan_Mark
+      -- FUNCTION
+      -- Sets starting position for scan in the selected Tk_ListBox
+      -- PARAMETERS
+      -- ListboxWidget - Tk_ListBox in which mark will be set
+      -- X             - X coordinate of the mark to set
+      -- Y             - Y coordinate of the mark to set
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Scan_Mark(ListboxWidget: in Tk_ListBox; X, Y: in String) with
+      Pre => X /= "" and Y /= "";
+      -- ****
+
 private
 
    type Tk_ListBox is new Tk_Widget with null record;

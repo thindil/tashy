@@ -122,4 +122,9 @@ package body Tcl.Tk.Ada.Widgets.ListBox is
       return Tcl.Ada.Tcl_GetResult(ListboxWidget.Interp);
    end Nearest;
 
+   procedure Scan_Mark(ListboxWidget: in Tk_ListBox; X, Y: in String) is
+   begin
+      Execute_Widget_Command(ListboxWidget, "scan mark", X & " " & Y);
+   end Scan_Mark;
+
 end Tcl.Tk.Ada.Widgets.ListBox;
