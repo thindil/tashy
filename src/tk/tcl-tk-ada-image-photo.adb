@@ -49,26 +49,24 @@ package body Tcl.Tk.Ada.Image.Photo is
 
    procedure Blank(Image: in Tk_Photo) is
    begin
-      Tcl_Eval(Image.Interp, Widget_Image(Image) & " blank");
+      Execute_Widget_Command(Image, "blank");
    end Blank;
 
    procedure Copy(Source, Target: in Tk_Photo; Options: in String := "") is
    begin
-      Tcl_Eval
-        (Target.Interp,
-         Widget_Image(Target) & " copy " & Widget_Image(Source) & " " &
-         Options);
+      Execute_Widget_Command
+        (Target, "copy", Widget_Image(Source) & " " & Options);
    end Copy;
 
    function Data(Image: in Tk_Photo; Options: in String := "") return String is
    begin
-      Tcl_Eval(Image.Interp, Widget_Image(Image) & " data " & Options);
+      Execute_Widget_Command(Image, "data", Options);
       return Tcl.Ada.Tcl_GetResult(Image.Interp);
    end Data;
 
    function Get(Image: in Tk_Photo; X, Y: in String) return String is
    begin
-      Tcl_Eval(Image.Interp, Widget_Image(Image) & " get " & X & " " & Y);
+      Execute_Widget_Command(Image, "get", X & " " & Y);
       return Tcl.Ada.Tcl_GetResult(Image.Interp);
    end Get;
 
