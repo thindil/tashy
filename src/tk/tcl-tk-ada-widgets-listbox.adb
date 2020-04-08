@@ -99,4 +99,20 @@ package body Tcl.Tk.Ada.Widgets.ListBox is
       return Tcl.Ada.Tcl_GetResult(ListboxWidget.Interp);
    end Item_Cget;
 
+   procedure Item_Configure
+     (ListBoxWidget: in Tk_ListBox; Index, Options: in String) is
+   begin
+      Execute_Widget_Command
+        (ListBoxWidget, "itemconfigure", Index & " " & Options);
+   end Item_Configure;
+
+   function Item_Configure
+     (ListBoxWidget: in Tk_ListBox; Index: in String; Options: in String := "")
+      return String is
+   begin
+      Execute_Widget_Command
+        (ListBoxWidget, "itemconfigure", Index & " " & Options);
+      return Tcl.Ada.Tcl_GetResult(ListBoxWidget.Interp);
+   end Item_Configure;
+
 end Tcl.Tk.Ada.Widgets.ListBox;
