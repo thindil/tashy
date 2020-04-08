@@ -55,7 +55,7 @@ package Tcl.Tk.Ada.Busy is
       Pre => Option /= "";
       -- ****
 
-      -- ****f* Busy/Configure
+      -- ****f* Busy/Configure (procedure)
       -- FUNCTION
       -- Change configuration of the selected busy Tk_Widget
       -- PARAMETERS
@@ -66,7 +66,7 @@ package Tcl.Tk.Ada.Busy is
       Pre => Options /= "";
       -- ****
 
-      -- ****f* Busy/Configure2
+      -- ****f* Busy/Configure (function)
       -- FUNCTION
       -- Get busy configuration values for the selected busy Tk_Widget
       -- PARAMETERS
