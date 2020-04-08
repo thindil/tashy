@@ -193,17 +193,47 @@ package Tcl.Tk.Ada.Widgets.ListBox is
 
       -- ****f* ListBox/Item_Cget
       -- FUNCTION
-      -- Get the selected option of the selected item in the selected Tk_ListBox
-      -- PARAMETERS
-      -- ListboxWidget - Tk_ListBox which will be queried for the option
-      -- Index         - Index of the item in ListboxWidget which will be
+   -- Get the selected option of the selected item in the selected Tk_ListBox
+   -- PARAMETERS
+   -- ListboxWidget - Tk_ListBox which will be queried for the option
+   -- Index         - Index of the item in ListboxWidget which will be
       --                 queried for the option
       -- Option        - Tk option to get
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Item_Cget
      (ListboxWidget: in Tk_ListBox; Index, Option: in String)
       return String with
       Pre => Index /= "" and Option /= "";
+      -- ****
+
+   -- ****f* ListBox/Item_Configure
+   -- FUNCTION
+   -- Queries or modifies the configuration options of the selected item
+   -- PARAMETERS
+   -- ListBoxWidget - Tk_ListBox which will be queried or modified for options
+   -- Index         - Index of the item which will be queried or modified
+      --                 for options
+      -- Options       - Options to modify or get.
+      -- RESULT
+      -- If Options is empty, return all available options and their values for
+      -- the selected item. Otherwise, return selected option's value for the
+      -- selected item
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Item_Configure
+     (ListBoxWidget: in Tk_ListBox; Index, Options: in String) with
+      Pre => Index /= "" and Options /= "";
+   function Item_Configure
+     (ListBoxWidget: in Tk_ListBox; Index: in String; Options: in String := "")
+      return String with
+      Pre => Index /= "";
       -- ****
 
 private
