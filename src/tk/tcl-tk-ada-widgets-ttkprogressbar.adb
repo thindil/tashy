@@ -47,7 +47,7 @@ package body Tcl.Tk.Ada.Widgets.TtkProgressBar is
 
    procedure Step(Bar: in Ttk_ProgressBar; Amount: in String := "") is
    begin
-      Tcl_Eval(Bar.Interp, Widget_Image(Bar) & " step " & Amount);
+      Execute_Widget_Command(Bar, "step", Amount);
    end Step;
 
 end Tcl.Tk.Ada.Widgets.TtkProgressBar;
