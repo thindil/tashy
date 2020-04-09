@@ -288,6 +288,23 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => X /= "" and Y /= "";
       -- ****
 
+      -- ****f* ListBox/See
+      -- FUNCTION
+      -- Make the selected element of the selected Tk_ListBox visible. If the
+      -- element is visible, this procedure do nothing.
+      -- PARAMETERS
+      -- ListboxWidget - Tk_ListBox in which the selected element will be
+      --                 visible
+      -- Index         - Index of the element to make visible
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure See(ListboxWidget: in Tk_ListBox; Index: in String) with
+      Pre => Index /= "";
+      -- ****
+
 private
 
    type Tk_ListBox is new Tk_Widget with null record;

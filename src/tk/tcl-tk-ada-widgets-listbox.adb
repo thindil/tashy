@@ -132,4 +132,9 @@ package body Tcl.Tk.Ada.Widgets.ListBox is
       Execute_Widget_Command(ListboxWidget, "scan dragto", X & " " & Y);
    end Scan_DragTo;
 
+   procedure See(ListboxWidget: in Tk_ListBox; Index: in String) is
+   begin
+      Execute_Widget_Command(ListboxWidget, "see", Index);
+   end See;
+
 end Tcl.Tk.Ada.Widgets.ListBox;
