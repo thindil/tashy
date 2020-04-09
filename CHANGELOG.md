@@ -11,7 +11,7 @@ of the project.
   `yview scroll`
 - Bindind for Tk `listbox` commands: `activate`, `bbox`, `curselection`,
   `delete`, `get`, `index`, `insert`, `itemcget`, `itemconfigure`, `nearest`,
-  `scan mark`
+  `scan mark`, `scan dragto`
 - Binding for Tk `image` commands: `height`, `width`
 
 ### Changed
