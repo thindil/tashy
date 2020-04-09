@@ -270,6 +270,24 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => X /= "" and Y /= "";
       -- ****
 
+      -- ****f* ListBox/Scan_DragTo
+      -- FUNCTION
+      -- Computes the difference between its X and Y arguments and the X and Y
+      -- arguments to the last Scan_Mark procedure for the Tk_ListBox. It then
+      -- adjusts the view by 10 times the difference in coordinates.
+      -- PARAMETERS
+      -- ListboxWidget - Tk_ListBox in which difference will be computed
+      -- X             - X coordinate which difference will be computed
+      -- Y             - Y coordinate which difference will be computed
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Scan_DragTo(ListboxWidget: in Tk_ListBox; X, Y: in String) with
+      Pre => X /= "" and Y /= "";
+      -- ****
+
 private
 
    type Tk_ListBox is new Tk_Widget with null record;
