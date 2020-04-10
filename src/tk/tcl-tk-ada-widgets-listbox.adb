@@ -143,4 +143,11 @@ package body Tcl.Tk.Ada.Widgets.ListBox is
       Execute_Widget_Command(ListboxWidget, "selection anchor", Index);
    end Selection_Anchor;
 
+   procedure Selection_Clear
+     (ListboxWidget: in Tk_ListBox; First: in String; Last: in String := "") is
+   begin
+      Execute_Widget_Command
+        (ListboxWidget, "selection clear", First & " " & Last);
+   end Selection_Clear;
+
 end Tcl.Tk.Ada.Widgets.ListBox;
