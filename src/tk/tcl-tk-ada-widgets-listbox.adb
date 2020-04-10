@@ -137,4 +137,10 @@ package body Tcl.Tk.Ada.Widgets.ListBox is
       Execute_Widget_Command(ListboxWidget, "see", Index);
    end See;
 
+   procedure Selection_Anchor
+     (ListboxWidget: in Tk_ListBox; Index: in String) is
+   begin
+      Execute_Widget_Command(ListboxWidget, "selection anchor", Index);
+   end Selection_Anchor;
+
 end Tcl.Tk.Ada.Widgets.ListBox;

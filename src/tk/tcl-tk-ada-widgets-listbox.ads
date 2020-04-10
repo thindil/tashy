@@ -305,6 +305,25 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => Index /= "";
       -- ****
 
+      -- ****f* ListBox/Selection_Anchor
+      -- FUNCTION
+      -- Set the selection anchor to the selected element in the selected
+      -- Tk_ListBox
+      -- PARAMETERS
+      -- ListboxWidget - Tk_ListBox in which anchor will be set
+      -- Index         - Index of the element on which anchor will be set. If
+      --                 item doesn't exists, the anchor will be set to the
+      --                 closest item
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Selection_Anchor
+     (ListboxWidget: in Tk_ListBox; Index: in String) with
+      Pre => Index /= "";
+      -- ****
+
 private
 
    type Tk_ListBox is new Tk_Widget with null record;
