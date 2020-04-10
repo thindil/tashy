@@ -324,6 +324,25 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => Index /= "";
       -- ****
 
+      -- ****f* ListBox/Selection_Clear
+      -- FUNCTION
+      -- Deselect elements in the Tk_ListBox between First and Last indexes
+      -- PARAMETERS
+      -- ListboxWidget - Tk_ListBox in which selection will be removed
+      -- First         - Index of the first element to deselect
+      -- Last          - Index of the last element to deselect. If empty,
+      --                 deselect only one element. Default value is empty
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Selection_Clear
+     (ListboxWidget: in Tk_ListBox; First: in String;
+      Last: in String := "") with
+      Pre => First /= "";
+      -- ****
+
 private
 
    type Tk_ListBox is new Tk_Widget with null record;
