@@ -70,7 +70,7 @@ package Tcl.Tk.Ada.TtkStyle is
       Pre => Name /= "" and Options /= "";
       -- ****
 
-      -- ****f* TtkStyle/Style_Layout
+      -- ****f* TtkStyle/Style_Layout (procedure)
       -- FUNCTION
       -- Define widget layout style for the selected style
       -- PARAMETERS
@@ -81,7 +81,7 @@ package Tcl.Tk.Ada.TtkStyle is
       Pre => Name /= "" and Options /= "";
       -- ****
 
-      -- ****f* TtkStyle/Style_Layout2
+      -- ****f* TtkStyle/Style_Layout (function)
       -- FUNCTION
       -- Get widget layout for the selected style
       -- PARAMETERS
@@ -132,7 +132,7 @@ package Tcl.Tk.Ada.TtkStyle is
    function Theme_Names return String;
    -- ****
 
-   -- ****f* TtkStyle/Theme_Use
+   -- ****f* TtkStyle/Theme_Use (procedure)
    -- FUNCTION
    -- Set new Ttk theme and redraw all widgets
    -- PARAMETERS
@@ -142,7 +142,7 @@ package Tcl.Tk.Ada.TtkStyle is
       Pre => ThemeName /= "";
       -- ****
 
-      -- ****f* TtkStyle/Theme_Use2
+      -- ****f* TtkStyle/Theme_Use (function)
       -- FUNCTION
       -- Get currenlty used Ttk theme
       -- RESULT
