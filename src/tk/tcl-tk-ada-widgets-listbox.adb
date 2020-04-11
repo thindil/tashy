@@ -150,4 +150,11 @@ package body Tcl.Tk.Ada.Widgets.ListBox is
         (ListboxWidget, "selection clear", First & " " & Last);
    end Selection_Clear;
 
+   function Selection_Includes
+     (ListboxWidget: in Tk_ListBox; Index: in String) return String is
+   begin
+      Execute_Widget_Command(ListboxWidget, "selection includes", Index);
+      return Tcl.Ada.Tcl_GetResult(ListboxWidget.Interp);
+   end Selection_Includes;
+
 end Tcl.Tk.Ada.Widgets.ListBox;
