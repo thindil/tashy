@@ -203,7 +203,7 @@ package Tcl.Tk.Ada.Widgets is
      (Widgt: in Tk_Widget'Class; Sequence: in String) return String;
    -- ****
 
-   -- ****f* Widgets/Focus
+   -- ****f* Widgets/Focus (procedure)
    -- FUNCTION
    -- Set input focus on the selected Tk_Widget with the selected option
    -- PARAMETERS
@@ -215,7 +215,7 @@ package Tcl.Tk.Ada.Widgets is
       Pre => Option in "" | "-force";
       -- ****
 
-      -- ****f* Widgets/Focus2
+      -- ****f* Widgets/Focus (function)
       -- FUNCTION
       -- Get input focus Tk widget name in the selected Tcl interpreter
       -- PARAMETERS
