@@ -343,6 +343,25 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => First /= "";
       -- ****
 
+      -- ****f* ListBox/Selection_Includes
+      -- FUNCTION
+      -- Check if the selected element is in the selection in the selected
+      -- Tk_ListBox
+      -- PARAMETERS
+      -- ListboxWidget - Tk_ListBox in which the selection will be queried
+      -- Index         - Index of the element to check if is in the selection
+      -- RESULT
+      -- 1 if the selected element is in the selection, otherwise 0
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Selection_Includes
+     (ListboxWidget: in Tk_ListBox; Index: in String) return String with
+      Pre => Index /= "";
+      -- ****
+
 private
 
    type Tk_ListBox is new Tk_Widget with null record;
