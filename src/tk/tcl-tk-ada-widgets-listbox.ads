@@ -362,6 +362,26 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => Index /= "";
       -- ****
 
+      -- ****f* ListBox/Selection_Set
+      -- FUNCTION
+      -- Add the selected elements to the Tk_ListBox selection
+      -- PARAMETERS
+      -- ListboxWidget - Tk_ListBox in which the elements will be added to
+      --                 the selection
+      -- First         - Index of the first element to add
+      -- Last          - Index of the last element to add. If empty, add only
+      --                 one element. Default value is empty
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Selection_Set
+     (ListboxWidget: in Tk_ListBox; First: in String;
+      Last: in String := "") with
+      Pre => First /= "";
+      -- ****
+
 private
 
    type Tk_ListBox is new Tk_Widget with null record;
