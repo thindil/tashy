@@ -157,4 +157,11 @@ package body Tcl.Tk.Ada.Widgets.ListBox is
       return Tcl.Ada.Tcl_GetResult(ListboxWidget.Interp);
    end Selection_Includes;
 
+   procedure Selection_Set
+     (ListboxWidget: in Tk_ListBox; First: in String; Last: in String := "") is
+   begin
+      Execute_Widget_Command
+        (ListboxWidget, "selection set", First & " " & Last);
+   end Selection_Set;
+
 end Tcl.Tk.Ada.Widgets.ListBox;
