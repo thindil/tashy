@@ -164,4 +164,10 @@ package body Tcl.Tk.Ada.Widgets.ListBox is
         (ListboxWidget, "selection set", First & " " & Last);
    end Selection_Set;
 
+   function Size(ListboxWidget: in Tk_ListBox) return String is
+   begin
+      Execute_Widget_Command(ListboxWidget, "size");
+      return Tcl.Ada.Tcl_GetResult(ListboxWidget.Interp);
+   end Size;
+
 end Tcl.Tk.Ada.Widgets.ListBox;
