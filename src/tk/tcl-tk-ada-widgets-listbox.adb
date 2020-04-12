@@ -170,4 +170,15 @@ package body Tcl.Tk.Ada.Widgets.ListBox is
       return Tcl.Ada.Tcl_GetResult(ListboxWidget.Interp);
    end Size;
 
+   function XView(ListboxWidget: in Tk_ListBox) return String is
+   begin
+      Execute_Widget_Command(ListboxWidget, "xview");
+      return Tcl.Ada.Tcl_GetResult(ListboxWidget.Interp);
+   end XView;
+
+   procedure XView(ListboxWidget: in Tk_ListBox; Index: in String) is
+   begin
+      Execute_Widget_Command(ListboxWidget, "xview", Index);
+   end XView;
+
 end Tcl.Tk.Ada.Widgets.ListBox;
