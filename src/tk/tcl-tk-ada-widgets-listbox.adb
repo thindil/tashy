@@ -181,4 +181,10 @@ package body Tcl.Tk.Ada.Widgets.ListBox is
       Execute_Widget_Command(ListboxWidget, "xview", Index);
    end XView;
 
+   procedure Xview_Move_To
+     (ListboxWidget: in Tk_ListBox; Fraction: in String) is
+   begin
+      Execute_Widget_Command(ListboxWidget, "xview moveto", Fraction);
+   end Xview_Move_To;
+
 end Tcl.Tk.Ada.Widgets.ListBox;
