@@ -12,7 +12,7 @@ of the project.
 - Bindind for Tk `listbox` commands: `activate`, `bbox`, `curselection`,
   `delete`, `get`, `index`, `insert`, `itemcget`, `itemconfigure`, `nearest`,
   `scan mark`, `scan dragto`, `see`, `selection anchor`, `selection clear`,
-  `selection include`, `selection set`, `size`, `xview`
+  `selection include`, `selection set`, `size`, `xview`, `xview moveto`
 - Binding for Tk `image` commands: `height`, `width`
 
 ### Changed
