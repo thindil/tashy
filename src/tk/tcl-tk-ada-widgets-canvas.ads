@@ -94,7 +94,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "";
       -- ****
 
-      -- ****f* Canvas/Bind
+      -- ****f* Canvas/Bind (procedure)
       -- FUNCTION
       -- Bind the selected command to the selected item in the selected canvas
       -- with the selected sequence
@@ -109,7 +109,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "" and Sequence /= "" and Command /= "";
       -- ****
 
-      -- ****f* Canvas/Bind2
+      -- ****f* Canvas/Bind (function)
       -- FUNCTION
    -- Get information about binding to selected items in the selected
    -- canvas
@@ -164,7 +164,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => ScreenY /= "";
       -- ****
 
-      -- ****f* Canvas/Coords
+      -- ****f* Canvas/Coords (procedure)
       -- FUNCTION
       -- Set new coordinates for the selected widget inside the selected
       -- Tk_Canvas
@@ -179,7 +179,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "" and Coordinates /= "";
       -- ****
 
-      -- ****f* Canvas/Coords2
+      -- ****f* Canvas/Coords (function)
       -- FUNCTION
       -- Get coordinates for the selected widgets inside the selected Tk_Canvas
       -- PARAMETERS
