@@ -389,6 +389,9 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- ListboxWidget - Tk_ListBox which will be queried for the elements
       -- RESULT
       -- Amount of the elements in the ListboxWidget
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Size(ListboxWidget: in Tk_ListBox) return String;
    -- ****
@@ -402,6 +405,9 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    -- Pair of elements: first element is the start of horizontal fraction of
    -- the ListboxWidget which is visible, second is the end of horizontal
    -- fraction of the ListboxWidget which is visible.
+   -- 8.6.4 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function XView(ListboxWidget: in Tk_ListBox) return String;
    -- ****
@@ -414,9 +420,29 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    -- ListboxWidget - Tk_ListBox which will be adjusted
    -- Index         - Character index to which ListboxWidget will be adjusted.
    --                 Character position starts from 0
+   -- 8.6.4 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure XView(ListboxWidget: in Tk_ListBox; Index: in String) with
       Pre => Index /= "";
+      -- ****
+
+   -- ****f* ListBox/Xview_Move_To
+   -- FUNCTION
+   -- Adjusts the view in the window so that fraction of the total width of
+   -- the Tk_ListBox is off-screen to the left.
+   -- PARAMETERS
+   -- ListboxWidget - Tk_ListBox which view will be adjusted
+   -- Fraction      - Fraction of the CanvasWidget to move. Must be between 0
+      --                 and 1
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Xview_Move_To
+     (ListboxWidget: in Tk_ListBox; Fraction: in String) with
+      Pre => Fraction /= "";
       -- ****
 
 private
