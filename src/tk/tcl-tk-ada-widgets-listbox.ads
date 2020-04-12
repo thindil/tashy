@@ -382,6 +382,17 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => First /= "";
       -- ****
 
+      -- ****f* ListBox/Size
+      -- FUNCTION
+      -- Get amount of the elements in the selected Tk_ListBox
+      -- PARAMETERS
+      -- ListboxWidget - Tk_ListBox which will be queried for the elements
+      -- RESULT
+      -- Amount of the elements in the ListboxWidget
+      -- SOURCE
+   function Size(ListboxWidget: in Tk_ListBox) return String;
+   -- ****
+
 private
 
    type Tk_ListBox is new Tk_Widget with null record;
