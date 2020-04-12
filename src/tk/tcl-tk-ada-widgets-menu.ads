@@ -89,7 +89,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       Pre => StartIndex /= "";
       -- ****
 
-      -- ****f* Menu/Entry_Configure
+      -- ****f* Menu/Entry_Configure (procedure)
       -- FUNCTION
       -- Configure selected menu entry
       -- PARAMETERS
@@ -102,7 +102,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       Pre => Index /= "" and Options /= "";
       -- ****
 
-      -- ****f* Menu/Entry_Configure2
+      -- ****f* Menu/Entry_Configure (function)
       -- FUNCTION
       -- Get configuration of the selected menu entry
       -- PARAMETERS
