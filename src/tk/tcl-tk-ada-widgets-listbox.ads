@@ -393,6 +393,32 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    function Size(ListboxWidget: in Tk_ListBox) return String;
    -- ****
 
+   -- ****f* ListBox/XView (function)
+   -- FUNCTION
+   -- Get which horizontal fraction of the Tk_ListBox is visible
+   -- PARAMETERS
+   -- ListboxWidget - Tk_ListBox which will be queried for visibility
+   -- RESULT
+   -- Pair of elements: first element is the start of horizontal fraction of
+   -- the ListboxWidget which is visible, second is the end of horizontal
+   -- fraction of the ListboxWidget which is visible.
+   -- SOURCE
+   function XView(ListboxWidget: in Tk_ListBox) return String;
+   -- ****
+
+   -- ****f* ListBox/XView (procedure)
+   -- FUNCTION
+   -- Adjusts the view in the window so that the character position given by
+   -- index is displayed at the left edge of the window
+   -- PARAMETERS
+   -- ListboxWidget - Tk_ListBox which will be adjusted
+   -- Index         - Character index to which ListboxWidget will be adjusted.
+   --                 Character position starts from 0
+   -- SOURCE
+   procedure XView(ListboxWidget: in Tk_ListBox; Index: in String) with
+      Pre => Index /= "";
+      -- ****
+
 private
 
    type Tk_ListBox is new Tk_Widget with null record;
