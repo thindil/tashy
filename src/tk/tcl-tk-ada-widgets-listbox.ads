@@ -437,7 +437,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    -- the Tk_ListBox is off-screen to the left.
    -- PARAMETERS
    -- ListboxWidget - Tk_ListBox which view will be adjusted
-   -- Fraction      - Fraction of the CanvasWidget to move. Must be between 0
+   -- Fraction      - Fraction of the ListboxWidget to move. Must be between 0
       --                 and 1
       -- HISTORY
       -- 8.6.4 - Added
@@ -455,7 +455,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- What.
       -- PARAMETERS
       -- ListboxWidget - Tk_ListBox which view will be shifted
-      -- Number        - The amount of What to shift the CanvasWidget
+      -- Number        - The amount of What to shift the ListboxWidget
       -- What          - Type of amount to move. Can be "units" or "pages"
       -- HISTORY
       -- 8.6.4 - Added
@@ -467,20 +467,20 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => Number /= "" and (What = "units" or What = "pages");
       -- ****
 
-   -- ****f* ListBox/YView (function)
-   -- FUNCTION
-   -- Get which vertical fraction of the Tk_ListBox is visible
-   -- PARAMETERS
-   -- ListboxWidget - Tk_ListBox which will be queried for visibility
-   -- RESULT
-   -- Pair of elements: first element is the start of vertical fraction of
-   -- the ListboxWidget which is visible, second is the end of vertical
-   -- fraction of the ListboxWidget which is visible.
-   -- HISTORY
-   -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
-   -- SOURCE
+      -- ****f* ListBox/YView (function)
+      -- FUNCTION
+      -- Get which vertical fraction of the Tk_ListBox is visible
+      -- PARAMETERS
+      -- ListboxWidget - Tk_ListBox which will be queried for visibility
+      -- RESULT
+      -- Pair of elements: first element is the start of vertical fraction of
+      -- the ListboxWidget which is visible, second is the end of vertical
+      -- fraction of the ListboxWidget which is visible.
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
    function YView(ListboxWidget: in Tk_ListBox) return String;
    -- ****
 
@@ -499,6 +499,24 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    -- SOURCE
    procedure YView(ListboxWidget: in Tk_ListBox; Index: in String) with
       Pre => Index /= "";
+      -- ****
+
+   -- ****f* ListBox/Yview_Move_To
+   -- FUNCTION
+   -- Adjusts the view in the window so that fraction of the total height of
+   -- the Tk_ListBox is off-screen to the top.
+   -- PARAMETERS
+   -- ListboxWidget - Tk_ListBox which view will be adjusted
+   -- Fraction      - Fraction of the ListboxWidget to move. Must be between 0
+      --                 and 1
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Yview_Move_To
+     (ListboxWidget: in Tk_ListBox; Fraction: in String) with
+      Pre => Fraction /= "";
       -- ****
 
 private
