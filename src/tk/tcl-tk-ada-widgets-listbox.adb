@@ -205,4 +205,10 @@ package body Tcl.Tk.Ada.Widgets.ListBox is
       Execute_Widget_Command(ListboxWidget, "yview", Index);
    end YView;
 
+   procedure Yview_Move_To
+     (ListboxWidget: in Tk_ListBox; Fraction: in String) is
+   begin
+      Execute_Widget_Command(ListboxWidget, "yview moveto", Fraction);
+   end Yview_Move_To;
+
 end Tcl.Tk.Ada.Widgets.ListBox;
