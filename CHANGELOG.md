@@ -15,6 +15,7 @@ of the project.
   `selection include`, `selection set`, `size`, `xview`, `xview moveto`,
   `xview scroll`, `yview`
 - Binding for Tk `image` commands: `height`, `width`
+- Binding for Tk `place` command
 
 ### Changed
 - Updated code documentation
