@@ -389,6 +389,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- ListboxWidget - Tk_ListBox which will be queried for the elements
       -- RESULT
       -- Amount of the elements in the ListboxWidget
+      -- HISTORY
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
@@ -405,6 +406,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    -- Pair of elements: first element is the start of horizontal fraction of
    -- the ListboxWidget which is visible, second is the end of horizontal
    -- fraction of the ListboxWidget which is visible.
+   -- HISTORY
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
@@ -420,6 +422,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    -- ListboxWidget - Tk_ListBox which will be adjusted
    -- Index         - Character index to which ListboxWidget will be adjusted.
    --                 Character position starts from 0
+   -- HISTORY
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
@@ -436,6 +439,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    -- ListboxWidget - Tk_ListBox which view will be adjusted
    -- Fraction      - Fraction of the CanvasWidget to move. Must be between 0
       --                 and 1
+      -- HISTORY
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
@@ -443,6 +447,24 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    procedure Xview_Move_To
      (ListboxWidget: in Tk_ListBox; Fraction: in String) with
       Pre => Fraction /= "";
+      -- ****
+
+      -- ****f* ListBox/Xview_Scroll
+      -- FUNCTION
+      -- Shift the view in the window on left or right according to Number and
+      -- What.
+      -- PARAMETERS
+      -- ListboxWidget - Tk_ListBox which view will be shifted
+      -- Number        - The amount of What to shift the CanvasWidget
+      -- What          - Type of amount to move. Can be "units" or "pages"
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Xview_Scroll
+     (ListboxWidget: in Tk_ListBox; Number, What: in String) with
+      Pre => Number /= "" and (What = "units" or What = "pages");
       -- ****
 
 private
