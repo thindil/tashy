@@ -467,6 +467,40 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => Number /= "" and (What = "units" or What = "pages");
       -- ****
 
+   -- ****f* ListBox/YView (function)
+   -- FUNCTION
+   -- Get which vertical fraction of the Tk_ListBox is visible
+   -- PARAMETERS
+   -- ListboxWidget - Tk_ListBox which will be queried for visibility
+   -- RESULT
+   -- Pair of elements: first element is the start of vertical fraction of
+   -- the ListboxWidget which is visible, second is the end of vertical
+   -- fraction of the ListboxWidget which is visible.
+   -- HISTORY
+   -- 8.6.4 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function YView(ListboxWidget: in Tk_ListBox) return String;
+   -- ****
+
+   -- ****f* ListBox/YView (procedure)
+   -- FUNCTION
+   -- Adjusts the view in the window so that the character position given by
+   -- index is displayed at the top edge of the window
+   -- PARAMETERS
+   -- ListboxWidget - Tk_ListBox which will be adjusted
+   -- Index         - Character index to which ListboxWidget will be adjusted.
+   --                 Character position starts from 0
+   -- HISTORY
+   -- 8.6.4 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure YView(ListboxWidget: in Tk_ListBox; Index: in String) with
+      Pre => Index /= "";
+      -- ****
+
 private
 
    type Tk_ListBox is new Tk_Widget with null record;
