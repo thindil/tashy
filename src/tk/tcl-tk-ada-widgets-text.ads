@@ -107,7 +107,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => TagName /= "" and StartIndex /= "";
       -- ****
 
-      -- ****f* Text/Tag_Configure
+      -- ****f* Text/Tag_Configure (procedure)
       -- FUNCTION
       -- Configure the selected tag in the selected Tk_Text widget
       -- PARAMETERS
@@ -120,7 +120,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => TagName /= "" and Options /= "";
       -- ****
 
-      -- ****f* Text/Tag_Configure2
+      -- ****f* Text/Tag_Configure (function)
       -- FUNCTION
       -- Get configuration of the selected tag in the selected Tk_Text widget
       -- PARAMETERS
