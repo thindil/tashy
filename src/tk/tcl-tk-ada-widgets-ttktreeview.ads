@@ -74,7 +74,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Item /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Column
+      -- ****f* TtkTreeView/Column (procedure)
       -- FUNCTION
       -- Modify options of the selected column in the selected Ttk_Tree_View
       -- PARAMETERS
@@ -88,7 +88,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Col /= "" and Options /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Column2
+      -- ****f* TtkTreeView/Column (function)
       -- FUNCTION
       -- Get value or values of options of the selected column in the selected
       -- Ttk_Tree_View
@@ -148,7 +148,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Item /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Focus
+      -- ****f* TtkTreeView/Focus (procedure)
       -- FUNCTION
       -- Set focus item in the selected Ttk_Tree_View
       -- PARAMETERS
@@ -159,7 +159,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Item /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Focus2
+      -- ****f* TtkTreeView/Focus (function)
       -- FUNCTION
       -- Get currently focused item in the selected Ttk_Tree_View
       -- PARAMETERS
@@ -171,7 +171,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    function Focus(TreeViewWidget: in Ttk_Tree_View) return String;
    -- ****
 
-   -- ****f* TtkTreeView/Heading
+   -- ****f* TtkTreeView/Heading (procedure)
    -- FUNCTION
    -- Configure selected column header
    -- PARAMETERS
@@ -184,7 +184,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Column /= "" and Options /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Heading2
+      -- ****f* TtkTreeView/Heading (function)
       -- FUNCTION
       -- Get configuration of selected column header
       -- PARAMETERS
@@ -232,7 +232,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Options /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Item
+      -- ****f* TtkTreeView/Item (procedure)
       -- FUNCTION
       -- Modify options of selected item in tree view
       -- PARAMETERS
@@ -245,7 +245,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Item /= "" and Options /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Item2
+      -- ****f* TtkTreeView/Item (function)
       -- FUNCTION
    -- Get options of the selected item in tree view
    -- PARAMETERS
