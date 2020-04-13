@@ -13,7 +13,7 @@ of the project.
   `delete`, `get`, `index`, `insert`, `itemcget`, `itemconfigure`, `nearest`,
   `scan mark`, `scan dragto`, `see`, `selection anchor`, `selection clear`,
   `selection include`, `selection set`, `size`, `xview`, `xview moveto`,
-  `xview scroll`, `yview`
+  `xview scroll`, `yview`, `yview moveto`
 - Binding for Tk `image` commands: `height`, `width`
 - Binding for Tk `place` command
 
