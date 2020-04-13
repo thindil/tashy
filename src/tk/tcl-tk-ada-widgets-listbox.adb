@@ -194,4 +194,15 @@ package body Tcl.Tk.Ada.Widgets.ListBox is
         (ListboxWidget, "xview scroll", Number & " " & What);
    end Xview_Scroll;
 
+   function YView(ListboxWidget: in Tk_ListBox) return String is
+   begin
+      Execute_Widget_Command(ListboxWidget, "yview");
+      return Tcl.Ada.Tcl_GetResult(ListboxWidget.Interp);
+   end YView;
+
+   procedure YView(ListboxWidget: in Tk_ListBox; Index: in String) is
+   begin
+      Execute_Widget_Command(ListboxWidget, "yview", Index);
+   end YView;
+
 end Tcl.Tk.Ada.Widgets.ListBox;
