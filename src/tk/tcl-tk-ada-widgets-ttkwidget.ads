@@ -43,7 +43,7 @@ package Tcl.Tk.Ada.Widgets.TtkWidget is
       Pre => StateSpec /= "";
       -- ****
 
-      -- ****f* TtkWidget/State
+      -- ****f* TtkWidget/State (procedure)
       -- FUNCTION
       -- Set the selected widget to the new state
       -- PARAMETERS
@@ -54,7 +54,7 @@ package Tcl.Tk.Ada.Widgets.TtkWidget is
       Pre => StateSpec /= "";
       -- ****
 
-      -- ****f* TtkWidget/State2
+      -- ****f* TtkWidget/State (function)
       -- FUNCTION
       -- Get the current state of the selected widget
       -- PARAMETERS
