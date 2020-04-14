@@ -36,6 +36,12 @@ package body Tcl.Tk.Ada.Image is
       return Tcl_GetResult(Img.Interp);
    end Height;
 
+   function Inuse(Img: in Tk_Widget'Class) return String is
+   begin
+      Tcl_Eval(Img.Interp, "image inuse " & Widget_Image(Img));
+      return Tcl_GetResult(Img.Interp);
+   end Inuse;
+
    function Types return String is
    begin
       Tcl_Eval(Get_Context, "image types");
