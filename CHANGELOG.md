@@ -16,6 +16,7 @@ of the project.
   `xview scroll`, `yview`, `yview moveto`, `yview scroll`
 - Binding for Tk `image` commands: `height`, `width`
 - Binding for Tk `place` command
+- Binding for Tk `image` commands: `inuse`
 
 ### Changed
 - Updated code documentation
