@@ -519,6 +519,24 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => Fraction /= "";
       -- ****
 
+      -- ****f* ListBox/Yview_Scroll
+      -- FUNCTION
+      -- Shift the view in the window on up or down according to Number and
+      -- What.
+      -- PARAMETERS
+      -- ListboxWidget - Tk_ListBox which view will be shifted
+      -- Number        - The amount of What to shift the ListboxWidget
+      -- What          - Type of amount to move. Can be "units" or "pages"
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Yview_Scroll
+     (ListboxWidget: in Tk_ListBox; Number, What: in String) with
+      Pre => Number /= "" and (What = "units" or What = "pages");
+      -- ****
+
 private
 
    type Tk_ListBox is new Tk_Widget with null record;

@@ -211,4 +211,11 @@ package body Tcl.Tk.Ada.Widgets.ListBox is
       Execute_Widget_Command(ListboxWidget, "yview moveto", Fraction);
    end Yview_Move_To;
 
+   procedure Yview_Scroll
+     (ListboxWidget: in Tk_ListBox; Number, What: in String) is
+   begin
+      Execute_Widget_Command
+        (ListboxWidget, "yview scroll", Number & " " & What);
+   end Yview_Scroll;
+
 end Tcl.Tk.Ada.Widgets.ListBox;
