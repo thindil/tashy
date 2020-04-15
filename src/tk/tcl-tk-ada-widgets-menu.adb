@@ -46,6 +46,11 @@ package body Tcl.Tk.Ada.Widgets.Menu is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   procedure Activate(MenuWidget: in Tk_Menu'Class; Index: in String) is
+   begin
+      Execute_Widget_Command(MenuWidget, "activate", Index);
+   end Activate;
+
    procedure Add
      (MenuWidget: in Tk_Menu'Class; EntryType: in String;
       Options: in String := "") is
