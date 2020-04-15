@@ -60,6 +60,18 @@ package Tcl.Tk.Ada.Widgets.Menu is
       Pre => pathName /= "";
       -- ****
 
+     -- ****f* Menu/Activate
+     -- FUNCTION
+     -- Activate the selected item in the selected menu. Previously active
+     -- is deactivated.
+     -- PARAMETERS
+     -- MenuWidget - Tk_Menu in which item will be activated
+     -- Index      - Index of the item to activate
+     -- SOURCE
+   procedure Activate(MenuWidget: in Tk_Menu'Class; Index: in String) with
+      Pre => Index /= "";
+      -- ****
+
       -- ****f* Menu/AddMenu
       -- FUNCTION
       -- Add element to the menu.
