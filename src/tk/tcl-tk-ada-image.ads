@@ -53,6 +53,21 @@ package Tcl.Tk.Ada.Image is
    function Height(Img: in Tk_Widget'Class) return String;
    -- ****
 
+   -- ****f* Image/Image_Type
+   -- FUNCTION
+   -- Get type of the selected image
+   -- PARAMETERS
+   -- Img - Image which type will be queried
+   -- RESULT
+   -- The selected image type
+   -- HISTORY
+   -- 8.6.4 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function Image_Type(Img: in Tk_Widget'Class) return String;
+   -- ****
+
    -- ****f* Image/Inuse
    -- FUNCTION
    -- Check if the selected image is used by any widget
