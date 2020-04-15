@@ -42,6 +42,13 @@ package body Tcl.Tk.Ada.Image is
       return Tcl_GetResult(Img.Interp);
    end Inuse;
 
+   function Names return String is
+      Interp: constant Tcl_Interp := Get_Context;
+   begin
+      Tcl_Eval(Interp, "image names");
+      return Tcl_GetResult(Interp);
+   end Names;
+
    function Types return String is
    begin
       Tcl_Eval(Get_Context, "image types");
