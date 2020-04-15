@@ -94,7 +94,7 @@ package Tcl.Tk.Ada is
    procedure After(Interp: in Tcl_Interp; Ms: in Natural);
    -- ****
 
-   -- ****f* TkAda/After (default interpreter, execute script)
+   -- ****f* TkAda/After (default interpreter, execute script, function)
    -- FUNCTION
    -- Arranges for the Tcl Script to be executed after Ms milliseconds
    -- in the "contextual" interpreter.
@@ -105,10 +105,20 @@ package Tcl.Tk.Ada is
    -- The function returns an identifier suitable for canceling the command.
    -- SOURCE
    function After(Ms: in Natural; Script: in String) return String;
+   -- ****
+
+   -- ****f* TkAda/After (default interpreter, execute script, procedure)
+   -- FUNCTION
+   -- Arranges for the Tcl Script to be executed after Ms milliseconds
+   -- in the "contextual" interpreter.
+   -- PARAMETERS
+   -- Ms     - Amount of miliseconds after which script will be executed
+   -- Script - Tcl script to execute
+   -- SOURCE
    procedure After(Ms: in Natural; Script: in String);
    -- ****
 
-   -- ****f* TkAda/After (selected interpreter, execute script)
+   -- ****f* TkAda/After (selected interpreter, execute script, function)
    -- FUNCTION
    -- Arranges for the Tcl Script to be executed after Ms milliseconds
    -- in the specified interpreter.
@@ -121,6 +131,17 @@ package Tcl.Tk.Ada is
    -- SOURCE
    function After
      (Interp: in Tcl_Interp; Ms: in Natural; Script: in String) return String;
+   -- ****
+
+   -- ****f* TkAda/After (selected interpreter, execute script, procedure)
+   -- FUNCTION
+   -- Arranges for the Tcl Script to be executed after Ms milliseconds
+   -- in the specified interpreter.
+   -- PARAMETERS
+   -- Interp - Tcl interpreter in which script will be executed
+   -- Ms     - Amount of miliseconds after which script will be executed
+   -- Script - Tcl script to execute
+   -- SOURCE
    procedure After(Interp: in Tcl_Interp; Ms: in Natural; Script: in String);
    -- ****
 
@@ -145,7 +166,7 @@ package Tcl.Tk.Ada is
    procedure Cancel(Interp: in Tcl_Interp; id_or_script: in String);
    -- ****
 
-   -- ****f* TkAda/Idle (default interpreter)
+   -- ****f* TkAda/Idle (default interpreter, function)
    -- FUNCTION
    -- Arranges for the Tcl Script to be executed later as an idle
    -- handler in the "contextual" interpreter.
@@ -155,10 +176,19 @@ package Tcl.Tk.Ada is
    -- The function returns an identifier suitable for canceling the command.
    -- SOURCE
    function Idle(Script: in String) return String;
+   -- ****
+
+   -- ****f* TkAda/Idle (default interpreter, procedure)
+   -- FUNCTION
+   -- Arranges for the Tcl Script to be executed later as an idle
+   -- handler in the "contextual" interpreter.
+   -- PARAMETERS
+   -- Script - Tcl script to execute
+   -- SOURCE
    procedure Idle(Script: in String);
    -- ****
 
-   -- ****f* TkAda/Idle (selected interpreter)
+   -- ****f* TkAda/Idle (selected interpreter, function)
    -- FUNCTION
    -- Arranges for the Tcl Script to be executed later as an idle
    -- handler in the specified interpreter.
@@ -169,6 +199,16 @@ package Tcl.Tk.Ada is
    -- The function returns an identifier suitable for canceling the command.
    -- SOURCE
    function Idle(Interp: in Tcl_Interp; Script: in String) return String;
+   -- ****
+
+   -- ****f* TkAda/Idle (selected interpreter, procedure)
+   -- FUNCTION
+   -- Arranges for the Tcl Script to be executed later as an idle
+   -- handler in the specified interpreter.
+   -- PARAMETERS
+   -- Interp - Tcl interpreter in which script will be executed
+   -- Script - Tcl script to execute
+   -- SOURCE
    procedure Idle(Interp: in Tcl_Interp; Script: in String);
    -- ****
 
