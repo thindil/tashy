@@ -68,6 +68,19 @@ package Tcl.Tk.Ada.Image is
    function Inuse(Img: in Tk_Widget'Class) return String;
    -- ****
 
+   -- ****f* Image/Names
+   -- FUNCTION
+   -- Get names of all existing images
+   -- RESULT
+   -- List of names of all existing images or {} if no images exists
+   -- HISTORY
+   -- 8.6.4 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function Names return String;
+   -- ****
+
    -- ****f* Image/Types
    -- FUNCTION
    -- Get types of images available
