@@ -93,6 +93,10 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- MenuWidget  - Tk_Menu which will be cloned
       -- NewPathName - Name of a newly created clone menu
       -- CloneType   - Type of newly created clone menu
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Clone
      (MenuWidget: in Tk_Menu'Class; NewPathName, CloneType: in String) with
@@ -113,6 +117,26 @@ package Tcl.Tk.Ada.Widgets.Menu is
      (MenuWidget: in Tk_Menu; StartIndex: in String;
       EndIndex: in String := "") with
       Pre => StartIndex /= "";
+      -- ****
+
+      -- ****f* Menu/Entry_Cget
+      -- FUNCTION
+      -- Get current value of the selected option of the selected entry in the
+      -- selected Tk_Menu
+      -- PARAMETERS
+      -- MenuWidget - Tk_Menu widget in which option will be queried
+      -- Index      - Index of the menu entry for which option will be queried
+      -- Option     - Name of the option to query
+      -- RESULT
+      -- Current value of the selected Option in the selected menu entry
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Entry_Cget
+     (MenuWidget: in Tk_Menu; Index, Option: in String) return String with
+      Pre => Index /= "" and Option /= "";
       -- ****
 
       -- ****f* Menu/Entry_Configure (procedure)

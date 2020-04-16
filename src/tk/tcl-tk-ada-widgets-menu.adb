@@ -73,6 +73,13 @@ package body Tcl.Tk.Ada.Widgets.Menu is
         (MenuWidget, "delete", StartIndex & " " & EndIndex);
    end Delete;
 
+   function Entry_Cget
+     (MenuWidget: in Tk_Menu; Index, Option: in String) return String is
+   begin
+      Execute_Widget_Command(MenuWidget, "entrycget", Index & " " & Option);
+      return Tcl.Ada.Tcl_GetResult(MenuWidget.Interp);
+   end Entry_Cget;
+
    procedure Entry_Configure
      (MenuWidget: in Tk_Menu; Index, Options: in String) is
    begin
