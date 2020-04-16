@@ -94,6 +94,12 @@ package body Tcl.Tk.Ada.Widgets.Menu is
       return Tcl.Ada.Tcl_GetResult(MenuWidget.Interp);
    end Entry_Configure;
 
+   function Index(MenuWidget: in Tk_Menu; Index: in String) return String is
+   begin
+      Execute_Widget_Command(MenuWidget, "index", Index);
+      return Tcl.Ada.Tcl_GetResult(MenuWidget.Interp);
+   end Index;
+
    function Invoke(MenuWidget: in Tk_Menu; Index: in String) return String is
    begin
       Execute_Widget_Command(MenuWidget, "invoke", Index);

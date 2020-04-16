@@ -67,6 +67,10 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- PARAMETERS
       -- MenuWidget - Tk_Menu in which item will be activated
       -- Index      - Index of the item to activate
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Activate(MenuWidget: in Tk_Menu'Class; Index: in String) with
       Pre => Index /= "";
@@ -165,6 +169,21 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- SOURCE
    function Entry_Configure
      (MenuWidget: in Tk_Menu; Index: in String) return String with
+      Pre => Index /= "";
+      -- ****
+
+      -- ****f* Menu/Index
+      -- FUNCTION
+      -- Get the numerical index of the selected menu entry in the selected
+      -- menu
+      -- PARAMETERS
+      -- MenuWidget - Tk_Menu widget in which entry will be queried
+      -- Index      - Index of the entry to query
+      -- RESULT
+      -- Numerical index of the selected menu entry or none if Index was set
+      -- to none
+      -- SOURCE
+   function Index(MenuWidget: in Tk_Menu; Index: in String) return String with
       Pre => Index /= "";
       -- ****
 
