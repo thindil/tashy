@@ -36,11 +36,10 @@ package Tcl.Tk.Ada.Image.Bitmap is
    type Tk_Bitmap is new Tk_Widget with private;
    -- ****
 
-   -- ****f* Bitmap/Create
+   -- ****f* Bitmap/Create (function)
    -- FUNCTION
    -- Creates a new Tk_Bitmap in the specified interpreter.
    -- PARAMETERS
-   -- Widgt    - Tk_Bitmap which will be created
    -- pathName - Tk name of the image
    -- options  - Options which will be passed to the image. Default value is
    --            empty
@@ -54,6 +53,20 @@ package Tcl.Tk.Ada.Image.Bitmap is
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Tk_Bitmap with
       Pre => (pathName /= "");
+      -- ****
+
+      -- ****f* Bitmap/Create (procedure)
+      -- FUNCTION
+      -- Creates a new Tk_Bitmap in the specified interpreter.
+      -- PARAMETERS
+      -- Widgt    - Tk_Bitmap which will be created
+      -- pathName - Tk name of the image
+      -- options  - Options which will be passed to the image. Default value is
+      --            empty
+   -- Interp   - Tcl interpreter to which the image will be created. If null,
+      --            the image will be created in the "contextual" interpreter.
+      --            Default value is null.
+      -- SOURCE
    procedure Create
      (Widgt: out Tk_Bitmap; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
