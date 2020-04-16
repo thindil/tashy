@@ -58,6 +58,13 @@ package body Tcl.Tk.Ada.Widgets.Menu is
       Execute_Widget_Command(MenuWidget, "add", EntryType & " " & Options);
    end Add;
 
+   procedure Clone
+     (MenuWidget: in Tk_Menu'Class; NewPathName, CloneType: in String) is
+   begin
+      Execute_Widget_Command
+        (MenuWidget, "clone", NewPathName & " " & CloneType);
+   end Clone;
+
    procedure Delete
      (MenuWidget: in Tk_Menu; StartIndex: in String;
       EndIndex: in String := "") is

@@ -60,14 +60,14 @@ package Tcl.Tk.Ada.Widgets.Menu is
       Pre => pathName /= "";
       -- ****
 
-     -- ****f* Menu/Activate
-     -- FUNCTION
-     -- Activate the selected item in the selected menu. Previously active
-     -- is deactivated.
-     -- PARAMETERS
-     -- MenuWidget - Tk_Menu in which item will be activated
-     -- Index      - Index of the item to activate
-     -- SOURCE
+      -- ****f* Menu/Activate
+      -- FUNCTION
+      -- Activate the selected item in the selected menu. Previously active
+      -- is deactivated.
+      -- PARAMETERS
+      -- MenuWidget - Tk_Menu in which item will be activated
+      -- Index      - Index of the item to activate
+      -- SOURCE
    procedure Activate(MenuWidget: in Tk_Menu'Class; Index: in String) with
       Pre => Index /= "";
       -- ****
@@ -84,6 +84,20 @@ package Tcl.Tk.Ada.Widgets.Menu is
      (MenuWidget: in Tk_Menu'Class; EntryType: in String;
       Options: in String := "") with
       Pre => EntryType /= "";
+      -- ****
+
+      -- ****f* Menu/Clone
+      -- FUNCTION
+      -- Make a clone of the selected menu
+      -- PARAMETERS
+      -- MenuWidget  - Tk_Menu which will be cloned
+      -- NewPathName - Name of a newly created clone menu
+      -- CloneType   - Type of newly created clone menu
+      -- SOURCE
+   procedure Clone
+     (MenuWidget: in Tk_Menu'Class; NewPathName, CloneType: in String) with
+      Pre => NewPathName /= "" and
+      CloneType in "normal" | "menubar" | "tearoff" | "";
       -- ****
 
       -- ****f* Menu/Delete
