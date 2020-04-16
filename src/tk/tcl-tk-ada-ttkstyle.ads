@@ -144,7 +144,7 @@ package Tcl.Tk.Ada.TtkStyle is
 
       -- ****f* TtkStyle/Theme_Use (function)
       -- FUNCTION
-      -- Get currenlty used Ttk theme
+      -- Get currently used Ttk theme
       -- RESULT
       -- Name of currently used Ttk theme
       -- SOURCE
