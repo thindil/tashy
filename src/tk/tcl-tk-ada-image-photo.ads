@@ -36,11 +36,10 @@ package Tcl.Tk.Ada.Image.Photo is
    type Tk_Photo is new Tk_Widget with private;
    -- ****
 
-   -- ****f* Photo/Create
+   -- ****f* Photo/Create (function)
    -- FUNCTION
    -- Creates a new Tk_Photo in the specified interpreter.
    -- PARAMETERS
-   -- Widgt    - Tk_Photo which will be created
    -- pathName - Tk name of the image
    -- options  - Options which will be passed to the image. Default value is
    --            empty
@@ -54,6 +53,20 @@ package Tcl.Tk.Ada.Image.Photo is
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Tk_Photo with
       Pre => (pathName /= "");
+      -- ****
+
+      -- ****f* Photo/Create (procedure)
+      -- FUNCTION
+      -- Creates a new Tk_Photo in the specified interpreter.
+      -- PARAMETERS
+      -- Widgt    - Tk_Photo which will be created
+      -- pathName - Tk name of the image
+      -- options  - Options which will be passed to the image. Default value is
+      --            empty
+   -- Interp   - Tcl interpreter to which the image will be created. If null,
+      --            the image will be created in the "contextual" interpreter.
+      --            Default value is null.
+      -- SOURCE
    procedure Create
      (Widgt: out Tk_Photo; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
