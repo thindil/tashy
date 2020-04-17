@@ -191,20 +191,6 @@ package Tcl.Tk.Ada.Widgets.Menu is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* Menu/Invoke
-      -- FUNCTION
-      -- Invoke command associated with the selected menu entry in the selected
-      -- menu
-      -- PARAMETERS
-      -- MenuWidget - Tk_Menu widget from which entry will be activated
-      -- Index      - Index of the menu entry to activate
-      -- RESULT
-      -- Value returned by the invoked command
-      -- SOURCE
-   function Invoke(MenuWidget: in Tk_Menu; Index: in String) return String with
-      Pre => Index /= "";
-      -- ****
-
       -- ****f* Menu/Insert
       -- FUNCTION
       -- Add the selected menu entry before other selected entry.
@@ -223,6 +209,60 @@ package Tcl.Tk.Ada.Widgets.Menu is
      (MenuWidget: in Tk_Menu'Class; Index, EntryType: in String;
       Options: in String := "") with
       Pre => Index /= "" and EntryType /= "";
+      -- ****
+
+      -- ****f* Menu/Invoke
+      -- FUNCTION
+      -- Invoke command associated with the selected menu entry in the selected
+      -- menu
+      -- PARAMETERS
+      -- MenuWidget - Tk_Menu widget from which entry will be activated
+      -- Index      - Index of the menu entry to activate
+      -- RESULT
+      -- Value returned by the invoked command
+      -- SOURCE
+   function Invoke(MenuWidget: in Tk_Menu; Index: in String) return String with
+      Pre => Index /= "";
+      -- ****
+
+      -- ****f* Menu/Post (procedure)
+      -- FUNCTION
+      -- Display the selected menu at the selected coordinates
+      -- PARAMETERS
+      -- MenuWidget - Tk_Menu widget which will be shown
+      -- X          - X coordinate in the root window where Tk_Menu will be
+      --              shown
+      -- Y          - Y coordinate in the root window where Tk_Menu will be
+      --              shown
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Post(MenuWidget: in Tk_Menu; X, Y: in String) with
+      Pre => X /= "" and Y /= "";
+      -- ****
+
+      -- ****f* Menu/Post (function)
+      -- FUNCTION
+      -- Display the selected menu at the selected coordinates
+      -- PARAMETERS
+      -- MenuWidget - Tk_Menu widget which will be shown
+      -- X          - X coordinate in the root window where Tk_Menu will be
+      --              shown
+      -- Y          - Y coordinate in the root window where Tk_Menu will be
+      --              shown
+      -- RESULT
+      -- If Postcommand was set for the selecte MenuWidget, return result of
+      -- this command. If error occured during posting the menu, return error.
+      -- Otherwise return {}
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Post(MenuWidget: in Tk_Menu; X, Y: in String) return String with
+      Pre => X /= "" and Y /= "";
       -- ****
 
 private

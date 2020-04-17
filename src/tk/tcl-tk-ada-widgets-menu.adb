@@ -100,12 +100,6 @@ package body Tcl.Tk.Ada.Widgets.Menu is
       return Tcl.Ada.Tcl_GetResult(MenuWidget.Interp);
    end Index;
 
-   function Invoke(MenuWidget: in Tk_Menu; Index: in String) return String is
-   begin
-      Execute_Widget_Command(MenuWidget, "invoke", Index);
-      return Tcl.Ada.Tcl_GetResult(MenuWidget.Interp);
-   end Invoke;
-
    procedure Insert
      (MenuWidget: in Tk_Menu'Class; Index, EntryType: in String;
       Options: in String := "") is
@@ -113,5 +107,22 @@ package body Tcl.Tk.Ada.Widgets.Menu is
       Execute_Widget_Command
         (MenuWidget, "insert", Index & " " & EntryType & " " & Options);
    end Insert;
+
+   function Invoke(MenuWidget: in Tk_Menu; Index: in String) return String is
+   begin
+      Execute_Widget_Command(MenuWidget, "invoke", Index);
+      return Tcl.Ada.Tcl_GetResult(MenuWidget.Interp);
+   end Invoke;
+
+   procedure Post(MenuWidget: in Tk_Menu; X, Y: in String) is
+   begin
+      Execute_Widget_Command(MenuWidget, "post", X & " " & Y);
+   end Post;
+
+   function Post(MenuWidget: in Tk_Menu; X, Y: in String) return String is
+   begin
+      Execute_Widget_Command(MenuWidget, "post", X & " " & Y);
+      return Tcl.Ada.Tcl_GetResult(MenuWidget.Interp);
+   end Post;
 
 end Tcl.Tk.Ada.Widgets.Menu;
