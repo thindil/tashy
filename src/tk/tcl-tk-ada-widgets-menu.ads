@@ -182,6 +182,10 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- RESULT
       -- Numerical index of the selected menu entry or none if Index was set
       -- to none
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Index(MenuWidget: in Tk_Menu; Index: in String) return String with
       Pre => Index /= "";
@@ -199,6 +203,26 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- SOURCE
    function Invoke(MenuWidget: in Tk_Menu; Index: in String) return String with
       Pre => Index /= "";
+      -- ****
+
+      -- ****f* Menu/Insert
+      -- FUNCTION
+      -- Add the selected menu entry before other selected entry.
+      -- PARAMETERS
+      -- MenuWidget - Tk_Menu widget to which the element will be added
+      -- Index      - Index of the other menu entry before which this entry
+      --              will be added
+      -- EntryType  - Tk type of entry to add
+      -- Options    - Tk options for menu entry to add. Default value is empty
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Insert
+     (MenuWidget: in Tk_Menu'Class; Index, EntryType: in String;
+      Options: in String := "") with
+      Pre => Index /= "" and EntryType /= "";
       -- ****
 
 private

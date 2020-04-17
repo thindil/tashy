@@ -106,4 +106,12 @@ package body Tcl.Tk.Ada.Widgets.Menu is
       return Tcl.Ada.Tcl_GetResult(MenuWidget.Interp);
    end Invoke;
 
+   procedure Insert
+     (MenuWidget: in Tk_Menu'Class; Index, EntryType: in String;
+      Options: in String := "") is
+   begin
+      Execute_Widget_Command
+        (MenuWidget, "insert", Index & " " & EntryType & " " & Options);
+   end Insert;
+
 end Tcl.Tk.Ada.Widgets.Menu;
