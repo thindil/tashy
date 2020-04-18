@@ -265,6 +265,22 @@ package Tcl.Tk.Ada.Widgets.Menu is
       Pre => X /= "" and Y /= "";
       -- ****
 
+      -- ****f* Menu/PostCascade
+      -- FUNCTION
+      -- Show submenu associated with the cascade entry with the selected
+      -- index. Unpost previously posted submenu
+      -- PARAMETERS
+      -- MenuWidget - Tk_Menu from which submenu will be taken
+      -- Index      - Index of cascade menu entry to show
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure PostCascade(MenuWidget: in Tk_Menu; Index: in String) with
+      Pre => Index /= "";
+      -- ****
+
 private
 
    type Tk_Menu is new Tk_Widget with null record;
