@@ -26,6 +26,7 @@ of the project.
 ### Fixed
 - Code documentation for Tcl.Tk.Ada.Widgets.Scale and Tcl.Tk.Ada.Pack
 - Typos in code documentation
+- Argument `options` for procedure Tcl.Tk.Ada.Widgets.configure
 
 ## [8.6.3] - 2020-03-31
 
