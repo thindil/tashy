@@ -18,7 +18,7 @@ of the project.
 - Binding for Tk `place` command
 - Binding for Tk `image` commands: `inuse`, `names`, `type`
 - Binding for Tk `menu` commands: `activate`, `clone`, `entrycget`, `index`,
-  `insert`, `post`
+  `insert`, `post`, `postcascade`
 
 ### Changed
 - Updated code documentation
