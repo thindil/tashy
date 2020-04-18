@@ -125,4 +125,9 @@ package body Tcl.Tk.Ada.Widgets.Menu is
       return Tcl.Ada.Tcl_GetResult(MenuWidget.Interp);
    end Post;
 
+   procedure PostCascade(MenuWidget: in Tk_Menu; Index: in String) is
+   begin
+      Execute_Widget_Command(MenuWidget, "postcascade", Index);
+   end PostCascade;
+
 end Tcl.Tk.Ada.Widgets.Menu;
