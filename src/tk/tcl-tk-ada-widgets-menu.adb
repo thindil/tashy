@@ -130,10 +130,16 @@ package body Tcl.Tk.Ada.Widgets.Menu is
       Execute_Widget_Command(MenuWidget, "postcascade", Index);
    end PostCascade;
 
-   function Menu_Type(MenuWidget: in Tk_Menu; Index: in String) return String is
+   function Menu_Type
+     (MenuWidget: in Tk_Menu; Index: in String) return String is
    begin
       Execute_Widget_Command(MenuWidget, "type", Index);
       return Tcl.Ada.Tcl_GetResult(MenuWidget.Interp);
    end Menu_Type;
+
+   procedure Unpost(MenuWidget: in Tk_Menu) is
+   begin
+      Execute_Widget_Command(MenuWidget, "unpost");
+   end Unpost;
 
 end Tcl.Tk.Ada.Widgets.Menu;
