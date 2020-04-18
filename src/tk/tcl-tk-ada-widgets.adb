@@ -76,7 +76,7 @@ package body Tcl.Tk.Ada.Widgets is
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end configure;
 
-   procedure configure(Widgt: in Tk_Widget'Class; options: in String := "") is
+   procedure configure(Widgt: in Tk_Widget'Class; options: in String) is
    begin --  configure
       Execute_Widget_Command(Widgt, "configure", options);
    end configure;
