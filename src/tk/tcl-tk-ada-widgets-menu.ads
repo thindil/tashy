@@ -294,9 +294,21 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- TODO
       -- Replace it with higher level of binding
       -- SOURCE
-   function Menu_Type(MenuWidget: in Tk_Menu; Index: in String) return String with
+   function Menu_Type
+     (MenuWidget: in Tk_Menu; Index: in String) return String with
       Pre => Index /= "";
       -- ****
+
+      -- ****f* Menu/Unpost
+      -- FUNCTION
+      -- Unmap the selected menu so it is no longer displayed. This procedure
+      -- don't work on Windows and MacOS as those platforms have their own way
+      -- of unposting menus.
+      -- PARAMETERS
+      -- MenuWidget - Tk_Menu which will be unposted
+      -- SOURCE
+   procedure Unpost(MenuWidget: in Tk_Menu);
+   -- ****
 
 private
 
