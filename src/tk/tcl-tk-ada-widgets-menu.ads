@@ -281,6 +281,23 @@ package Tcl.Tk.Ada.Widgets.Menu is
       Pre => Index /= "";
       -- ****
 
+      -- ****f* Menu/Menu_Type
+      -- FUNCTION
+      -- Get type of the selected entry in the selected Tk_Menu
+      -- PARAMETERS
+      -- MenuWidget - Tk_Menu in which the selected entry will be queried
+      -- Index      - Index of the menu entry which will be queried
+      -- RESULT
+      -- Type of the selected entry - command, separator or tearoff
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Menu_Type(MenuWidget: in Tk_Menu; Index: in String) return String with
+      Pre => Index /= "";
+      -- ****
+
 private
 
    type Tk_Menu is new Tk_Widget with null record;
