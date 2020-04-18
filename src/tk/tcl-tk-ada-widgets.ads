@@ -97,12 +97,11 @@ package Tcl.Tk.Ada.Widgets is
    --
    ---------------------------------------------
 
-   -- ****f* Widgets/Create
+   -- ****f* Widgets/Create (function)
    -- FUNCTION
    -- Creates a new Tk_Widget in the specified interpreter. This is abstract
    -- function. Its content depends on each child widget code.
    -- PARAMETERS
-   -- Widgt    - Tk_Widget which will be created
    -- pathName - Tk path (starts with dot) for the widget
    -- options  - Options which will be passed to the widget. Default value is
    --            empty
@@ -115,6 +114,21 @@ package Tcl.Tk.Ada.Widgets is
    function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Tk_Widget is abstract;
+   -- ****
+
+   -- ****f* Widgets/Create (function)
+   -- FUNCTION
+   -- Creates a new Tk_Widget in the specified interpreter. This is abstract
+   -- function. Its content depends on each child widget code.
+   -- PARAMETERS
+   -- Widgt    - Tk_Widget which will be created
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Default value is
+   --            empty
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+   --            the widget will be created in the "contextual" interpreter.
+   --            Default value is null.
+   -- SOURCE
    procedure Create
      (Widgt: out Tk_Widget; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) is abstract;
@@ -153,12 +167,12 @@ package Tcl.Tk.Ada.Widgets is
    function cget(Widgt: in Tk_Widget'Class; option: in String) return String;
    -- ****
 
-   -- ****f* Widgets/configure
+   -- ****f* Widgets/configure (function)
    -- FUNCTION
-   -- Queries or modifies the configuration options.
+   -- Queries the configuration options.
    -- PARAMETERS
    -- Widgt   - Tk_Widget from which options will be queried or modified
-   -- options - Options to configure. If empty, return list of available
+   -- options - Options to query. If empty, return list of available
    --           options. Default is empty.
    -- RESULT
    -- String with Tcl information about finished action (for example, list
@@ -166,30 +180,50 @@ package Tcl.Tk.Ada.Widgets is
    -- SOURCE
    function configure
      (Widgt: in Tk_Widget'Class; options: in String := "") return String;
-   procedure configure(Widgt: in Tk_Widget'Class; options: in String := "");
    -- ****
 
-   ---------------------------------------------
-   --
-   --   Bind associates a Tcl script with an
-   --   event.  The script is executed when
-   --   the event occurs.
-   --
-   ---------------------------------------------
-
-   -- ****f* Widgets/Bind
+   -- ****f* Widgets/configure (procedure)
    -- FUNCTION
-   -- Associates Tcl script Script with the event Sequence.
+   -- Queries or modifies the configuration options.
    -- PARAMETERS
-   -- Widgt    - Tk_Widget to which script will be binded
-   -- Sequence - Name of Tk event which will be binded with the script
-   -- Script   - Tcl code which will be binded to the Tk_Widget
+   -- Widgt   - Tk_Widget from which options will be queried or modified
+   -- options - Options to configure.
    -- SOURCE
+   procedure configure(Widgt: in Tk_Widget'Class; options: in String) with
+      Pre => options /= "";
+      -- ****
+
+      ---------------------------------------------
+      --
+      --   Bind associates a Tcl script with an
+      --   event.  The script is executed when
+      --   the event occurs.
+      --
+      ---------------------------------------------
+
+      -- ****f* Widgets/Bind
+      -- FUNCTION
+      -- Associates Tcl script Script with the event Sequence.
+      -- PARAMETERS
+      -- Widgt    - Tk_Widget to which script will be binded
+      -- Sequence - Name of Tk event which will be binded with the script
+      -- Script   - Tcl code which will be binded to the Tk_Widget
+      -- SOURCE
    procedure Bind
      (Widgt: in Tk_Widget'Class; Sequence: in String; Script: in String);
    -- ****
 
-   -- ****f* Widgets/Unbind
+   -- ****f* Widgets/Unbind (procedure)
+   -- FUNCTION
+   -- Disassociates the binding from the event Sequence.
+   -- PARAMETERS
+   -- Widgt    - Tk_Widget from which selected event will be removed
+   -- Sequence - Name of Tk event which will be removed from the widget
+   -- SOURCE
+   procedure Unbind(Widgt: in Tk_Widget'Class; Sequence: in String);
+   -- ****
+
+   -- ****f* Widgets/Unbind (procedure)
    -- FUNCTION
    -- Disassociates the binding from the event Sequence.
    -- PARAMETERS
@@ -198,7 +232,6 @@ package Tcl.Tk.Ada.Widgets is
    -- RESULT
    -- String with Tcl information about finished action
    -- SOURCE
-   procedure Unbind(Widgt: in Tk_Widget'Class; Sequence: in String);
    function Unbind
      (Widgt: in Tk_Widget'Class; Sequence: in String) return String;
    -- ****
