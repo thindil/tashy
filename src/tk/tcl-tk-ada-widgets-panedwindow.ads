@@ -67,6 +67,20 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       Pre => pathName /= "";
       -- ****
 
+      -- ****f* PanedWindow/Add
+      -- FUNCTION
+      -- Adds the Tk_Widget to the Tk_PanedWindow.
+      -- PARAMETERS
+      -- Paned     - Tk_PanedWindow to which SubWindow will be added
+      -- SubWindow - Tk_Widget which will be added to the Tk_PanedWindow
+      -- Options   - Tk options which will be passed to the command. Default
+      --             value is empty.
+      -- SOURCE
+   procedure Add
+     (Paned: in Tk_PanedWindow; SubWindow: in Tk_Widget'Class;
+      Options: in String := "");
+   -- ****
+
 private
 
    type Tk_PanedWindow is new Tk_Widget with null record;
