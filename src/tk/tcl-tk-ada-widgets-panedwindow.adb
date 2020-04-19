@@ -52,4 +52,9 @@ package body Tcl.Tk.Ada.Widgets.PanedWindow is
         (Paned, "add", Widget_Image(SubWindow) & " " & Options);
    end Add;
 
+   procedure Forget(Paned: in Tk_PanedWindow; SubWindow: in Tk_Widget'Class) is
+   begin
+      Execute_Widget_Command(Paned, "forget", Widget_Image(SubWindow));
+   end Forget;
+
 end Tcl.Tk.Ada.Widgets.PanedWindow;

@@ -81,6 +81,16 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       Options: in String := "");
    -- ****
 
+   -- ****f* PanedWindow/Forget
+   -- FUNCTION
+   -- Remove the Tk_Widget from the Tk_PanedWindow
+   -- PARAMETERS
+   -- Paned     - Tk_PanedWindow from which SubWindow will be removed
+   -- SubWindow - Tk_Widget which will be removed from the Tk_PanedWindow
+   -- SOURCE
+   procedure Forget(Paned: in Tk_PanedWindow; SubWindow: in Tk_Widget'Class);
+   -- ****
+
 private
 
    type Tk_PanedWindow is new Tk_Widget with null record;
