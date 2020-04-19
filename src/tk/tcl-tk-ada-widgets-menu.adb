@@ -142,4 +142,11 @@ package body Tcl.Tk.Ada.Widgets.Menu is
       Execute_Widget_Command(MenuWidget, "unpost");
    end Unpost;
 
+   function XPosition
+     (MenuWidget: in Tk_Menu; Index: in String) return String is
+   begin
+      Execute_Widget_Command(MenuWidget, "xposition", Index);
+      return Tcl.Ada.Tcl_GetResult(MenuWidget.Interp);
+   end XPosition;
+
 end Tcl.Tk.Ada.Widgets.Menu;
