@@ -36,11 +36,10 @@ package Tcl.Tk.Ada.Widgets.Button is
    type Tk_Button is new Tk_Widget with private;
    -- ****
 
-   -- ****f* Button/Create
+   -- ****f* Button/Create (function)
    -- FUNCTION
    -- Creates a new Tk_Button in the specified interpreter.
    -- PARAMETERS
-   -- Widgt    - Tk_Button which will be created
    -- pathName - Tk path (starts with dot) for the widget
    -- options  - Options which will be passed to the widget. Default value is
    --            empty
@@ -54,6 +53,20 @@ package Tcl.Tk.Ada.Widgets.Button is
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Tk_Button with
       Pre => pathName /= "";
+      -- ****
+
+   -- ****f* Button/Create (procedure)
+   -- FUNCTION
+   -- Creates a new Tk_Button in the specified interpreter.
+   -- PARAMETERS
+   -- Widgt    - Tk_Button which will be created
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Default value is
+      --            empty
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+      --            the widget will be created in the "contextual" interpreter.
+      --            Default value is null.
+      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Button; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
