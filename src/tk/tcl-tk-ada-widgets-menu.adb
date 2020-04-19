@@ -149,4 +149,11 @@ package body Tcl.Tk.Ada.Widgets.Menu is
       return Tcl.Ada.Tcl_GetResult(MenuWidget.Interp);
    end XPosition;
 
+   function YPosition
+     (MenuWidget: in Tk_Menu; Index: in String) return String is
+   begin
+      Execute_Widget_Command(MenuWidget, "yposition", Index);
+      return Tcl.Ada.Tcl_GetResult(MenuWidget.Interp);
+   end YPosition;
+
 end Tcl.Tk.Ada.Widgets.Menu;

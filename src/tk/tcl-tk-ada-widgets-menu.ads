@@ -334,6 +334,26 @@ package Tcl.Tk.Ada.Widgets.Menu is
       Pre => Index /= "";
       -- ****
 
+      -- ****f* Menu/YPosition
+      -- FUNCTION
+      -- Get Y coordinate of the topmost pixel of the selected menu entry in
+      -- the selected Tk_Menu
+      -- PARAMETERS
+      -- MenuWidget - Tk_Menu in which the selected entry will be queried
+      -- Index      - Index of the selected entry to query
+      -- RESULT
+      -- Y coordinate of the topmost pixel of the selected menu entry in
+      -- MenuWidget
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function YPosition
+     (MenuWidget: in Tk_Menu; Index: in String) return String with
+      Pre => Index /= "";
+      -- ****
+
 private
 
    type Tk_Menu is new Tk_Widget with null record;
