@@ -75,6 +75,10 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- SubWindow - Tk_Widget which will be added to the Tk_PanedWindow
       -- Options   - Tk options which will be passed to the command. Default
       --             value is empty.
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Add
      (Paned: in Tk_PanedWindow; SubWindow: in Tk_Widget'Class;
@@ -87,9 +91,36 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    -- PARAMETERS
    -- Paned     - Tk_PanedWindow from which SubWindow will be removed
    -- SubWindow - Tk_Widget which will be removed from the Tk_PanedWindow
+   -- HISTORY
+   -- 8.6.4 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Forget(Paned: in Tk_PanedWindow; SubWindow: in Tk_Widget'Class);
    -- ****
+
+   -- ****f* PanedWindow/Identify
+   -- FUNCTION
+   -- Identify Tk_PanedWindow component at the selected point in window
+   -- coordinates
+   -- PARAMETERS
+   -- Paned - Tk_PanedWindow which will be queried
+   -- X     - X coordinate to check
+   -- Y     - Y coordinate to check
+   -- RESULT
+   -- If point is over sash or sash handle return two values: index of the
+   -- sash or handle and a word indicating whether it is over a sash or a
+   -- handle, such as {0 sash} or {2 handle}. If the point is over any other
+   -- part of the window, return {}
+   -- HISTORY
+   -- 8.6.4 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function Identify
+     (Paned: in Tk_PanedWindow; X, Y: in String) return String with
+      Pre => X /= "" and Y /= "";
+      -- ****
 
 private
 

@@ -20,6 +20,8 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
+with Tcl.Ada;
+
 package body Tcl.Tk.Ada.Widgets.PanedWindow is
 
    function Create
@@ -56,5 +58,12 @@ package body Tcl.Tk.Ada.Widgets.PanedWindow is
    begin
       Execute_Widget_Command(Paned, "forget", Widget_Image(SubWindow));
    end Forget;
+
+   function Identify
+     (Paned: in Tk_PanedWindow; X, Y: in String) return String is
+   begin
+      Execute_Widget_Command(Paned, "identify", X & " " & Y);
+      return Tcl.Ada.Tcl_GetResult(Paned.Interp);
+   end Identify;
 
 end Tcl.Tk.Ada.Widgets.PanedWindow;
