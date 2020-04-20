@@ -122,6 +122,21 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       Pre => X /= "" and Y /= "";
       -- ****
 
+      -- ****f* PanedWindow/Proxy_Coord
+      -- FUNCTION
+      -- Get coordinates of current positon of sash proxy
+      -- PARAMETERS
+      -- Paned - Tk_PanedWindow which will be queried for coordinates
+      -- RESULT
+      -- List of coordinates (X and Y) of the most recent proxy location
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Proxy_Coord(Paned: in Tk_PanedWindow) return String;
+   -- ****
+
 private
 
    type Tk_PanedWindow is new Tk_Widget with null record;

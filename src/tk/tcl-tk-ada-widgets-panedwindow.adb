@@ -66,4 +66,10 @@ package body Tcl.Tk.Ada.Widgets.PanedWindow is
       return Tcl.Ada.Tcl_GetResult(Paned.Interp);
    end Identify;
 
+   function Proxy_Coord(Paned: in Tk_PanedWindow) return String is
+   begin
+      Execute_Widget_Command(Paned, "proxy coord");
+      return Tcl.Ada.Tcl_GetResult(Paned.Interp);
+   end Proxy_Coord;
+
 end Tcl.Tk.Ada.Widgets.PanedWindow;
