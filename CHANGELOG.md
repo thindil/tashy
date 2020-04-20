@@ -19,7 +19,8 @@ of the project.
 - Binding for Tk `image` commands: `inuse`, `names`, `type`
 - Binding for Tk `menu` commands: `activate`, `clone`, `entrycget`, `index`,
   `insert`, `post`, `postcascade`, `type`, `unpost`, `xposition`, `yposition`
-- Binding for Tk `panedwindow` commands: `add`, `forget`, `identify`
+- Binding for Tk `panedwindow` commands: `add`, `forget`, `identify`,
+  `proxy coord`
 
 ### Changed
 - Updated code documentation
