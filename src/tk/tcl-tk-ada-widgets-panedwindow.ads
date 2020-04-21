@@ -137,6 +137,19 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    function Proxy_Coord(Paned: in Tk_PanedWindow) return String;
    -- ****
 
+   -- ****f* PanedWindow/Proxy_Forget
+   -- FUNCTION
+   -- Remove the proxy from the display
+   -- PARAMETERS
+   -- Paned - Tk_PanedWindow which the proxy will be removed
+   -- HISTORY
+   -- 8.6.4 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Proxy_Forget(Paned: in Tk_PanedWindow);
+   -- ****
+
 private
 
    type Tk_PanedWindow is new Tk_Widget with null record;

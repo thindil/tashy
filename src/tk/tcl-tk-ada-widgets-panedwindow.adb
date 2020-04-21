@@ -72,4 +72,9 @@ package body Tcl.Tk.Ada.Widgets.PanedWindow is
       return Tcl.Ada.Tcl_GetResult(Paned.Interp);
    end Proxy_Coord;
 
+   procedure Proxy_Forget(Paned: in Tk_PanedWindow) is
+   begin
+      Execute_Widget_Command(Paned, "proxy forget");
+   end Proxy_Forget;
+
 end Tcl.Tk.Ada.Widgets.PanedWindow;
