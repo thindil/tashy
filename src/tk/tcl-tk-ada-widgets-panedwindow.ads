@@ -166,6 +166,24 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       Pre => X /= "" and Y /= "";
       -- ****
 
+      -- ****f* PanedWindow/Sash_Coord
+      -- FUNCTION
+      -- Get coordinates of the selected stash in the selected Tk_PanedWindow
+      -- PARAMETERS
+      -- Paned - Tk_PanedWindow which will be queried for stash coordinates
+      -- Index - Index of the stash which coordinates will be queried
+      -- RESULT
+      -- Coordinates X and Y of top left corner of the selected stash
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Sash_Coord
+     (Paned: in Tk_PanedWindow; Index: in String) return String with
+      Pre => Index /= "";
+      -- ****
+
 private
 
    type Tk_PanedWindow is new Tk_Widget with null record;
