@@ -77,4 +77,9 @@ package body Tcl.Tk.Ada.Widgets.PanedWindow is
       Execute_Widget_Command(Paned, "proxy forget");
    end Proxy_Forget;
 
+   procedure Proxy_Place(Paned: in Tk_PanedWindow; X, Y: in String) is
+   begin
+      Execute_Widget_Command(Paned, "proxy place", X & " " & Y);
+   end Proxy_Place;
+
 end Tcl.Tk.Ada.Widgets.PanedWindow;
