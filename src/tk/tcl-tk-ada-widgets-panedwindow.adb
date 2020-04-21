@@ -82,4 +82,11 @@ package body Tcl.Tk.Ada.Widgets.PanedWindow is
       Execute_Widget_Command(Paned, "proxy place", X & " " & Y);
    end Proxy_Place;
 
+   function Sash_Coord
+     (Paned: in Tk_PanedWindow; Index: in String) return String is
+   begin
+      Execute_Widget_Command(Paned, "sash coord", Index);
+      return Tcl.Ada.Tcl_GetResult(Paned.Interp);
+   end Sash_Coord;
+
 end Tcl.Tk.Ada.Widgets.PanedWindow;
