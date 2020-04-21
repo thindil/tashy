@@ -21,6 +21,7 @@ of the project.
   `insert`, `post`, `postcascade`, `type`, `unpost`, `xposition`, `yposition`
 - Binding for Tk `panedwindow` commands: `add`, `forget`, `identify`,
   `proxy coord`, `proxy forget`, `proxy place`
+- Binding for Tk command: `lower`
 
 ### Changed
 - Updated code documentation
