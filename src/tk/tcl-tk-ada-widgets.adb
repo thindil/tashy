@@ -116,6 +116,16 @@ package body Tcl.Tk.Ada.Widgets is
       return Tcl.Ada.Tcl_GetResult(Interp);
    end Focus;
 
+   procedure Lower(Widgt: in Tk_Widget'Class) is
+   begin
+      Tcl_Eval(Widgt.Interp, "lower");
+   end Lower;
+
+   procedure Lower(Widgt, BelowThis: in Tk_Widget'Class) is
+   begin
+      Tcl_Eval(Widgt.Interp, "lower " & Widget_Image(BelowThis));
+   end Lower;
+
    procedure Execute_Widget_Command
      (Widgt: in Tk_Widget'Class; command: in String;
       options: in String := "") is
