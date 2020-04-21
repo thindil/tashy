@@ -150,6 +150,22 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    procedure Proxy_Forget(Paned: in Tk_PanedWindow);
    -- ****
 
+   -- ****f* PanedWindow/Proxy_Place
+   -- FUNCTION
+   -- Place the proxy at the given x and y coordinates
+   -- PARAMETERS
+   -- Paned - Tk_PanedWindow in which the proxy will be placed
+   -- X     - X coordinate of new point for the proxy
+   -- Y     - Y coordinate of new point for the proxy
+   -- HISTORY
+   -- 8.6.4 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Proxy_Place(Paned: in Tk_PanedWindow; X, Y: in String) with
+      Pre => X /= "" and Y /= "";
+      -- ****
+
 private
 
    type Tk_PanedWindow is new Tk_Widget with null record;
