@@ -36,11 +36,10 @@ package Tcl.Tk.Ada.Widgets.Label is
    type Tk_Label is new Tk_Widget with private;
    -- ****
 
-   -- ****f* Label/Create
+   -- ****f* Label/Create (function)
    -- FUNCTION
    -- Creates a new Tk_Label in the specified interpreter.
    -- PARAMETERS
-   -- Widgt    - Tk_Label which will be created
    -- pathName - Tk path (starts with dot) for the widget
    -- options  - Options which will be passed to the widget. Default value is
    --            empty
@@ -54,6 +53,20 @@ package Tcl.Tk.Ada.Widgets.Label is
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Tk_Label with
       Pre => pathName /= "";
+      -- ****
+
+   -- ****f* Label/Create (procedure)
+   -- FUNCTION
+   -- Creates a new Tk_Label in the specified interpreter.
+   -- PARAMETERS
+   -- Widgt    - Tk_Label which will be created
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Default value is
+      --            empty
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+      --            the widget will be created in the "contextual" interpreter.
+      --            Default value is null.
+      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Label; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
