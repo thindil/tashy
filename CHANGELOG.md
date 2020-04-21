@@ -20,7 +20,7 @@ of the project.
 - Binding for Tk `menu` commands: `activate`, `clone`, `entrycget`, `index`,
   `insert`, `post`, `postcascade`, `type`, `unpost`, `xposition`, `yposition`
 - Binding for Tk `panedwindow` commands: `add`, `forget`, `identify`,
-  `proxy coord`
+  `proxy coord`, `proxy forget`
 
 ### Changed
 - Updated code documentation
