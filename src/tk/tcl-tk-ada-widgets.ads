@@ -260,8 +260,36 @@ package Tcl.Tk.Ada.Widgets is
       -- no window in this application has focus (depending on the option)
       -- SOURCE
    function Focus
-     (Interp: Tcl_Interp := Get_Context; Option: in String := "")
+     (Interp: in Tcl_Interp := Get_Context; Option: in String := "")
       return String;
+   -- ****
+
+      -- ****f* Widgets/Lower
+      -- FUNCTION
+      -- Lowers the selected Tk_Widget below of all its siblings in the stacking
+      -- order
+      -- PARAMETERS
+      -- Widgt - Tk_Widget to lower
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Lower(Widgt: in Tk_Widget'Class);
+   -- ****
+
+   -- ****f* Widgets/Lower (below selected widget)
+   -- FUNCTION
+   -- Insert the Tk_Widget below the selected widget in the stacking order
+   -- PARAMETERS
+   -- Widgt     - Tk_Widget to lower
+   -- BelowThis - Tk_Widget before which Widgt will be inserted
+   -- HISTORY
+   -- 8.6.4 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Lower(Widgt, BelowThis: in Tk_Widget'Class);
    -- ****
 
    -- ****f* Widgets/Execute_Widget_Command
