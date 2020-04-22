@@ -202,6 +202,25 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       Pre => Index /= "" and X /= "" and Y /= "";
       -- ****
 
+      -- ****f* PanedWindow/Sash_Mark
+      -- FUNCTION
+      -- Set position which will be later used to move sash with procedure
+      -- Sash_DragTo
+      -- PARAMETERS
+      -- Paned - Tk_PanedWindow in which the selected sash coordinates will be
+      --         marked
+      -- Index - Index fo the sash to mark
+      -- X     - X coordinate a new position to mark
+      -- Y     - Y coordinate a new position to mark
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Sash_Mark(Paned: in Tk_PanedWindow; Index, X, Y: in String) with
+      Pre => Index /= "" and X /= "" and Y /= "";
+      -- ****
+
 private
 
    type Tk_PanedWindow is new Tk_Widget with null record;
