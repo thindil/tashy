@@ -94,4 +94,9 @@ package body Tcl.Tk.Ada.Widgets.PanedWindow is
       Execute_Widget_Command(Paned, "sash dragto", Index & " " & X & " " & Y);
    end Sash_DragTo;
 
+   procedure Sash_Mark(Paned: in Tk_PanedWindow; Index, X, Y: in String) is
+   begin
+      Execute_Widget_Command(Paned, "sash mark", Index & " " & X & " " & Y);
+   end Sash_Mark;
+
 end Tcl.Tk.Ada.Widgets.PanedWindow;
