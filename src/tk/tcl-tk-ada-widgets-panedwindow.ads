@@ -168,12 +168,12 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
 
       -- ****f* PanedWindow/Sash_Coord
       -- FUNCTION
-      -- Get coordinates of the selected stash in the selected Tk_PanedWindow
+      -- Get coordinates of the selected sash in the selected Tk_PanedWindow
       -- PARAMETERS
-      -- Paned - Tk_PanedWindow which will be queried for stash coordinates
-      -- Index - Index of the stash which coordinates will be queried
+      -- Paned - Tk_PanedWindow which will be queried for sash coordinates
+      -- Index - Index of the sash which coordinates will be queried
       -- RESULT
-      -- Coordinates X and Y of top left corner of the selected stash
+      -- Coordinates X and Y of top left corner of the selected sash
       -- HISTORY
       -- 8.6.4 - Added
       -- TODO
@@ -182,6 +182,24 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    function Sash_Coord
      (Paned: in Tk_PanedWindow; Index: in String) return String with
       Pre => Index /= "";
+      -- ****
+
+      -- ****f* PanedWindow/Sash_DragTo
+      -- FUNCTION
+      -- Move the selected sash by difference between given coordinates and
+      -- last Sash_Mark procedure call
+      -- PARAMETERS
+      -- Paned - Tk_PanedWindow in which the selected sash will be moved
+      -- Index - Index fo the sash to move
+      -- X     - X coordinate for compute a new position for the sash
+      -- Y     - Y coordinate for compute a new position for the sash
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Sash_DragTo(Paned: in Tk_PanedWindow; Index, X, Y: in String) with
+      Pre => Index /= "" and X /= "" and Y /= "";
       -- ****
 
 private
