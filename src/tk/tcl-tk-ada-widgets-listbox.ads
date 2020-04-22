@@ -36,11 +36,10 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    type Tk_ListBox is new Tk_Widget with private;
    -- ****
 
-   -- ****f* ListBox/Create
+   -- ****f* ListBox/Create (function)
    -- FUNCTION
    -- Creates a new Tk_ListBox in the specified interpreter.
    -- PARAMETERS
-   -- Widgt    - Tk_ListBox which will be created
    -- pathName - Tk path (starts with dot) for the widget
    -- options  - Options which will be passed to the widget. Default value is
    --            empty
@@ -54,6 +53,20 @@ package Tcl.Tk.Ada.Widgets.ListBox is
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Tk_ListBox with
       Pre => pathName /= "";
+      -- ****
+
+   -- ****f* ListBox/Create (procedure)
+   -- FUNCTION
+   -- Creates a new Tk_ListBox in the specified interpreter.
+   -- PARAMETERS
+   -- Widgt    - Tk_ListBox which will be created
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Default value is
+      --            empty
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+      --            the widget will be created in the "contextual" interpreter.
+      --            Default value is null.
+      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_ListBox; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
@@ -210,14 +223,32 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => Index /= "" and Option /= "";
       -- ****
 
-   -- ****f* ListBox/Item_Configure
+      -- ****f* ListBox/Item_Configure (procedure)
+      -- FUNCTION
+      -- Modifies the configuration options of the selected item
+      -- PARAMETERS
+      -- ListBoxWidget - Tk_ListBox which will be modified for options
+      -- Index         - Index of the item which options will be modified
+      -- Options       - Options to modify.
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Item_Configure
+     (ListBoxWidget: in Tk_ListBox; Index, Options: in String) with
+      Pre => Index /= "" and Options /= "";
+      -- ****
+
+   -- ****f* ListBox/Item_Configure (function)
    -- FUNCTION
    -- Queries or modifies the configuration options of the selected item
    -- PARAMETERS
    -- ListBoxWidget - Tk_ListBox which will be queried or modified for options
    -- Index         - Index of the item which will be queried or modified
       --                 for options
-      -- Options       - Options to modify or get.
+      -- Options       - Options to modify or get. Can be empty. Default value
+      --                 is empty
       -- RESULT
       -- If Options is empty, return all available options and their values for
       -- the selected item. Otherwise, return selected option's value for the
@@ -227,9 +258,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- TODO
       -- Replace it with higher level of binding
       -- SOURCE
-   procedure Item_Configure
-     (ListBoxWidget: in Tk_ListBox; Index, Options: in String) with
-      Pre => Index /= "" and Options /= "";
    function Item_Configure
      (ListBoxWidget: in Tk_ListBox; Index: in String; Options: in String := "")
       return String with
