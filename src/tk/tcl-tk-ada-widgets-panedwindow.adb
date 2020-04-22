@@ -99,4 +99,9 @@ package body Tcl.Tk.Ada.Widgets.PanedWindow is
       Execute_Widget_Command(Paned, "sash mark", Index & " " & X & " " & Y);
    end Sash_Mark;
 
+   procedure Sash_Place(Paned: in Tk_PanedWindow; Index, X, Y: in String) is
+   begin
+      Execute_Widget_Command(Paned, "sash place", Index & " " & X & " " & Y);
+   end Sash_Place;
+
 end Tcl.Tk.Ada.Widgets.PanedWindow;
