@@ -190,7 +190,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- last Sash_Mark procedure call
       -- PARAMETERS
       -- Paned - Tk_PanedWindow in which the selected sash will be moved
-      -- Index - Index fo the sash to move
+      -- Index - Index of the sash to move
       -- X     - X coordinate for compute a new position for the sash
       -- Y     - Y coordinate for compute a new position for the sash
       -- HISTORY
@@ -209,7 +209,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- PARAMETERS
       -- Paned - Tk_PanedWindow in which the selected sash coordinates will be
       --         marked
-      -- Index - Index fo the sash to mark
+      -- Index - Index of the sash to mark
       -- X     - X coordinate a new position to mark
       -- Y     - Y coordinate a new position to mark
       -- HISTORY
@@ -218,6 +218,23 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- Replace it with higher level of binding
       -- SOURCE
    procedure Sash_Mark(Paned: in Tk_PanedWindow; Index, X, Y: in String) with
+      Pre => Index /= "" and X /= "" and Y /= "";
+      -- ****
+
+      -- ****f* PanedWindow/Sash_Place
+      -- FUNCTION
+      -- Place the selected sash at the selected coordinates
+      -- PARAMETERS
+      -- Paned - Tk_PanedWindow in which sash will be moved
+      -- Index - Index of the sash to move
+      -- X     - X coordinate where the sash will be placed
+      -- Y     - Y coordinate where the sash will be placed
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Sash_Place(Paned: in Tk_PanedWindow; Index, X, Y: in String) with
       Pre => Index /= "" and X /= "" and Y /= "";
       -- ****
 
