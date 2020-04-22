@@ -89,4 +89,9 @@ package body Tcl.Tk.Ada.Widgets.PanedWindow is
       return Tcl.Ada.Tcl_GetResult(Paned.Interp);
    end Sash_Coord;
 
+   procedure Sash_DragTo(Paned: in Tk_PanedWindow; Index, X, Y: in String) is
+   begin
+      Execute_Widget_Command(Paned, "sash dragto", Index & " " & X & " " & Y);
+   end Sash_DragTo;
+
 end Tcl.Tk.Ada.Widgets.PanedWindow;
