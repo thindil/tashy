@@ -22,7 +22,7 @@ of the project.
 - Binding for Tk `panedwindow` commands: `add`, `forget`, `identify`,
   `proxy coord`, `proxy forget`, `proxy place`, `sash coord`, `sash dragto`,
   `sash_mark`
-- Binding for Tk command: `lower`
+- Binding for Tk commands: `lower`, `raise`
 
 ### Changed
 - Updated code documentation
