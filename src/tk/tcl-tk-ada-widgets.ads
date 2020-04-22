@@ -264,17 +264,17 @@ package Tcl.Tk.Ada.Widgets is
       return String;
    -- ****
 
-      -- ****f* Widgets/Lower
-      -- FUNCTION
-      -- Lowers the selected Tk_Widget below of all its siblings in the stacking
-      -- order
-      -- PARAMETERS
-      -- Widgt - Tk_Widget to lower
-      -- HISTORY
-      -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
-      -- SOURCE
+   -- ****f* Widgets/Lower
+   -- FUNCTION
+   -- Lowers the selected Tk_Widget below of all its siblings in the stacking
+   -- order
+   -- PARAMETERS
+   -- Widgt - Tk_Widget to lower
+   -- HISTORY
+   -- 8.6.4 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
    procedure Lower(Widgt: in Tk_Widget'Class);
    -- ****
 
@@ -290,6 +290,34 @@ package Tcl.Tk.Ada.Widgets is
    -- Replace it with higher level of binding
    -- SOURCE
    procedure Lower(Widgt, BelowThis: in Tk_Widget'Class);
+   -- ****
+
+   -- ****f* Widgets/Raise
+   -- FUNCTION
+   -- Raisess the selected Tk_Widget below of all its siblings in the stacking
+   -- order
+   -- PARAMETERS
+   -- Widgt - Tk_Widget to raise
+   -- HISTORY
+   -- 8.6.4 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Widget_Raise(Widgt: in Tk_Widget'Class);
+   -- ****
+
+   -- ****f* Widgets/Raise (above selected widget)
+   -- FUNCTION
+   -- Insert the Tk_Widget above the selected widget in the stacking order
+   -- PARAMETERS
+   -- Widgt     - Tk_Widget to insert
+   -- AboveThis - Tk_Widget above which Widgt will be inserted
+   -- HISTORY
+   -- 8.6.4 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Widget_Raise(Widgt, AboveThis: in Tk_Widget'Class);
    -- ****
 
    -- ****f* Widgets/Execute_Widget_Command
