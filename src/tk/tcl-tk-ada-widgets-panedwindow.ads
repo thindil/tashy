@@ -185,18 +185,33 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       Pre => Window /= "";
       -- ****
 
-      -- ****f* PanedWindow/Proxy_Coord
+      -- ****f* PanedWindow/Panes
       -- FUNCTION
-      -- Get coordinates of current positon of sash proxy
+      -- Get list of names of all widgets managed by the Tk_PanedWindow
       -- PARAMETERS
-      -- Paned - Tk_PanedWindow which will be queried for coordinates
+      -- Paned - Tk_PanedWindow which will be queried for widgets
       -- RESULT
-      -- List of coordinates (X and Y) of the most recent proxy location
+      -- List of widgets inside of Tk_PanedWindow
       -- HISTORY
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
       -- SOURCE
+   function Panes(Paned: in Tk_PanedWindow) return String;
+   -- ****
+
+   -- ****f* PanedWindow/Proxy_Coord
+   -- FUNCTION
+   -- Get coordinates of current positon of sash proxy
+   -- PARAMETERS
+   -- Paned - Tk_PanedWindow which will be queried for coordinates
+   -- RESULT
+   -- List of coordinates (X and Y) of the most recent proxy location
+   -- HISTORY
+   -- 8.6.4 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
    function Proxy_Coord(Paned: in Tk_PanedWindow) return String;
    -- ****
 
