@@ -73,6 +73,20 @@ package body Tcl.Tk.Ada.Widgets.PanedWindow is
       return Tcl.Ada.Tcl_GetResult(Paned.Interp);
    end Pane_Cget;
 
+   procedure Pane_Configure
+     (Paned: in Tk_PanedWindow; Window, Options: in String) is
+   begin
+      Execute_Widget_Command(Paned, "paneconfigure", Window & " " & Options);
+   end Pane_Configure;
+
+   function Pane_Configure
+     (Paned: in Tk_PanedWindow; Window: in String; Options: in String := "")
+      return String is
+   begin
+      Execute_Widget_Command(Paned, "paneconfigure", Window & " " & Options);
+      return Tcl.Ada.Tcl_GetResult(Paned.Interp);
+   end Pane_Configure;
+
    function Proxy_Coord(Paned: in Tk_PanedWindow) return String is
    begin
       Execute_Widget_Command(Paned, "proxy coord");

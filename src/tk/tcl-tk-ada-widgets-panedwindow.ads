@@ -141,6 +141,50 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
      (Paned: in Tk_PanedWindow; Window, Option: in String) return String with
       Pre => Window /= "" and Option /= "";
 
+      -- ****f* PanedWindow/Pane_Configure (procedure)
+      -- FUNCTION
+      -- Modify the selected options of the selected window in the selected
+      -- Tk_PanedWindow
+      -- PARAMETERS
+      -- Paned   - Tk_PanedWindow in which options will be modified
+      -- Window  - Name of the window inside Paned which options will be
+      --           modified
+      -- Options - Options names with new values for them
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Pane_Configure
+     (Paned: in Tk_PanedWindow; Window, Options: in String) with
+      Pre => Window /= "" and Options /= "";
+      -- ****
+
+      -- ****f* PanedWindow/Pane_Configure (function)
+      -- FUNCTION
+      -- Modify or query the selected options of the selected window in the
+      -- selected Tk_PanedWindow
+      -- PARAMETERS
+      -- Paned   - Tk_PanedWindow in which options will be modified or
+      --           queried
+      -- Window  - Name of the window inside Paned which options will be
+      --           modified or queried
+      -- Options - Options names with new values for them. Can be empty.
+      --           Default value is empty
+      -- RESULT
+      -- List of options with current values for them. If used to modify the
+      -- selected Options returns {}
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Pane_Configure
+     (Paned: in Tk_PanedWindow; Window: in String; Options: in String := "")
+      return String with
+      Pre => Window /= "";
+      -- ****
+
       -- ****f* PanedWindow/Proxy_Coord
       -- FUNCTION
       -- Get coordinates of current positon of sash proxy
