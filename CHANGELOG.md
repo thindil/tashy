@@ -28,7 +28,8 @@ of the project.
 - Updated code documentation
 
 ### Fixed
-- Code documentation for Tcl.Tk.Ada.Widgets.Scale and Tcl.Tk.Ada.Pack
+- Code documentation for Tcl.Tk.Ada.Widgets.Scale, Tcl.Tk.Ada.Pack and
+  Tcl.Tk.Ada.Widgets.Canvas.Item\_Configure (procedure)
 - Typos in code documentation
 - Argument `options` for procedure Tcl.Tk.Ada.Widgets.configure
 
