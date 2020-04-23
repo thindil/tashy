@@ -122,6 +122,25 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       Pre => X /= "" and Y /= "";
       -- ****
 
+      -- ****f*  PanedWindow/Pane_Cget
+      -- FUNCTION
+      -- Get value of the selected option of the selected window in the
+      -- selected Tk_PanedWindow
+      -- PARAMETERS
+      -- Paned  - Tk_PanedWindow in which option will be queried
+      -- Window - Name of the window inside Paned which option will be queried
+      -- Option - Option to query
+      -- RESULT
+      -- Current value of the selected Option for the selected Window
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Pane_Cget
+     (Paned: in Tk_PanedWindow; Window, Option: in String) return String with
+      Pre => Window /= "" and Option /= "";
+
       -- ****f* PanedWindow/Proxy_Coord
       -- FUNCTION
       -- Get coordinates of current positon of sash proxy
