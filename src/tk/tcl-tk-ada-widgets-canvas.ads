@@ -398,11 +398,11 @@ package Tcl.Tk.Ada.Widgets.Canvas is
 
       -- ****f* Canvas/Item_Configure (procedure)
       -- FUNCTION
-      -- Queries the configuration options of the selected item
+      -- Modify the configuration options of the selected item
       -- PARAMETERS
-      -- CanvasWidget - Tk_Canvas which will be queried for options
-      -- TagOrId      - Tag or Id of the item which will be queried for options
-      -- Options      - Options to get.
+      -- CanvasWidget - Tk_Canvas in which options will be modified
+      -- TagOrId      - Tag or Id of the item which options will be modified
+      -- Options      - Options to modify with values for them.
       -- SOURCE
    procedure Item_Configure
      (CanvasWidget: in Tk_Canvas; TagOrId, Options: in String) with
