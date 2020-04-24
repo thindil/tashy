@@ -43,11 +43,10 @@ package Tcl.Tk.Ada.Widgets.MenuButton is
    type Tk_MenuButton is new Tk_Widget with private;
    -- ****
 
-   -- ****f* MenuButton/Create
+   -- ****f* MenuButton/Create (function)
    -- FUNCTION
    -- Creates a new Tk_MenuButton in the specified interpreter.
    -- PARAMETERS
-   -- Widgt    - Tk_MenuButton which will be created
    -- pathName - Tk path (starts with dot) for the widget
    -- options  - Options which will be passed to the widget. Default value is
    --            empty
@@ -61,6 +60,20 @@ package Tcl.Tk.Ada.Widgets.MenuButton is
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Tk_MenuButton with
       Pre => pathName /= "";
+      -- ****
+
+   -- ****f* MenuButton/Create (procedure)
+   -- FUNCTION
+   -- Creates a new Tk_MenuButton in the specified interpreter.
+   -- PARAMETERS
+   -- Widgt    - Tk_MenuButton which will be created
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Default value is
+      --            empty
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+      --            the widget will be created in the "contextual" interpreter.
+      --            Default value is null.
+      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_MenuButton; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
