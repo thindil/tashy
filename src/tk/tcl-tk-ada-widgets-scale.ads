@@ -67,6 +67,26 @@ package Tcl.Tk.Ada.Widgets.Scale is
       Pre => pathName /= "";
       -- ****
 
+      -- ****f* Scale/Coords
+      -- FUNCTION
+      -- Get the elements which the x and y coordinates of the point
+      -- along the centerline of the trough that corresponds to Value
+      -- PARAMETERS
+      -- ScaleWidget - Tk_Scale which will be queried for coordinates
+      -- Value       - Value for query. Can be empty. Default value is empty
+      -- RESULT
+      -- A list whose elements are the x and y coordinates of the point along
+      -- the centerline of the trough that corresponds to Value. If Value is
+      -- omitted then the ScaleWidget's current value is used.
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Coords
+     (ScaleWidget: in Tk_Scale; Value: in String := "") return String;
+   -- ****
+
 private
 
    type Tk_Scale is new Tk_Widget with null record;
