@@ -20,6 +20,8 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
+with Tcl.Ada;
+
 package body Tcl.Tk.Ada.Widgets.Scale is
 
    function Create
@@ -43,5 +45,12 @@ package body Tcl.Tk.Ada.Widgets.Scale is
    begin
       Widgt := Create(pathName, options, Interp);
    end Create;
+
+   function Coords
+     (ScaleWidget: in Tk_Scale; Value: in String := "") return String is
+   begin
+      Execute_Widget_Command(ScaleWidget, "coords", Value);
+      return Tcl.Ada.Tcl_GetResult(ScaleWidget.Interp);
+   end Coords;
 
 end Tcl.Tk.Ada.Widgets.Scale;
