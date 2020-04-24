@@ -53,4 +53,16 @@ package body Tcl.Tk.Ada.Widgets.Scale is
       return Tcl.Ada.Tcl_GetResult(ScaleWidget.Interp);
    end Coords;
 
+   function Get(ScaleWidget: in Tk_Scale) return String is
+   begin
+      Execute_Widget_Command(ScaleWidget, "get");
+      return Tcl.Ada.Tcl_GetResult(ScaleWidget.Interp);
+   end Get;
+
+   function Get(ScaleWidget: in Tk_Scale; X, Y: in String) return String is
+   begin
+      Execute_Widget_Command(ScaleWidget, "get", X & " " & Y);
+      return Tcl.Ada.Tcl_GetResult(ScaleWidget.Interp);
+   end Get;
+
 end Tcl.Tk.Ada.Widgets.Scale;

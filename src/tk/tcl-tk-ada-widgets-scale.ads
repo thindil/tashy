@@ -87,6 +87,39 @@ package Tcl.Tk.Ada.Widgets.Scale is
      (ScaleWidget: in Tk_Scale; Value: in String := "") return String;
    -- ****
 
+   -- ****f* Tcl.Tk.Ada.Widgets.Scale/Get (current value)
+   -- FUNCTION
+   -- Get current value of the Tk_Scale
+   -- PARAMETERS
+   -- ScaleWidget - Tk_Scale which will be queried for value
+   -- RESULT
+   -- Current value of the ScaleWidget
+   -- HISTORY
+   -- 8.6.4 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function Get(ScaleWidget: in Tk_Scale) return String;
+   -- ****
+
+   -- ****f* Tcl.Tk.Ada.Widgets.Scale/Get (at selected pixel)
+   -- FUNCTION
+   -- Get value of the Tk_Scale at selected widget
+   -- PARAMETERS
+   -- ScaleWidget - Tk_Scale which will be queried for value
+   -- X           - X coordinate from which value will be taken
+   -- Y           - Y coordinate from which value will be taken
+   -- RESULT
+   -- Value of the ScaleWidget at the selected pixel
+   -- HISTORY
+   -- 8.6.4 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function Get(ScaleWidget: in Tk_Scale; X, Y: in String) return String with
+      Pre => X /= "" and Y /= "";
+      -- ****
+
 private
 
    type Tk_Scale is new Tk_Widget with null record;
