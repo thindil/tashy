@@ -65,4 +65,11 @@ package body Tcl.Tk.Ada.Widgets.Scale is
       return Tcl.Ada.Tcl_GetResult(ScaleWidget.Interp);
    end Get;
 
+   function Identify
+     (ScaleWidget: in Tk_Scale; X, Y: in String) return String is
+   begin
+      Execute_Widget_Command(ScaleWidget, "identify", X & " " & Y);
+      return Tcl.Ada.Tcl_GetResult(ScaleWidget.Interp);
+   end Identify;
+
 end Tcl.Tk.Ada.Widgets.Scale;
