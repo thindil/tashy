@@ -120,6 +120,27 @@ package Tcl.Tk.Ada.Widgets.Scale is
       Pre => X /= "" and Y /= "";
       -- ****
 
+      -- ****f* Scale/Identify
+      -- FUNCTION
+      -- Get which part of the Tk_Scale lies under the specified coordinates
+      -- PARAMETERS
+      -- ScaleWidget - Tk_Scale which will be queried
+      -- X           - X coordinate of the pixel which will be queried
+      -- Y           - Y coordinate of the pixel which will be queried
+      -- RESULT
+      -- "slider" if pixel is at slider, "through1" if pixel is above or to
+      -- the left from slider, "through2" if pixel is below or th the right
+      -- from slider or "{}" if pixel is not in ScaleWidget
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Identify
+     (ScaleWidget: in Tk_Scale; X, Y: in String) return String with
+      Pre => X /= "" and Y /= "";
+      -- ****
+
 private
 
    type Tk_Scale is new Tk_Widget with null record;
