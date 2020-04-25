@@ -36,11 +36,10 @@ package Tcl.Tk.Ada.Widgets.OptionMenu is
    type Tk_OptionMenu is new Tk_Widget with private;
    -- ****
 
-   -- ****f* OptionMenu/Create
+   -- ****f* OptionMenu/Create (function)
    -- FUNCTION
    -- Creates a new Tk_OptionMenu in the specified interpreter.
    -- PARAMETERS
-   -- Widgt    - Tk_OptionMenu which will be created
    -- pathName - Tk path (starts with dot) for the widget
    -- options  - Options which will be passed to the widget. Must be at least
    --            Global variable name in which selected menu will be stored
@@ -55,6 +54,21 @@ package Tcl.Tk.Ada.Widgets.OptionMenu is
      (pathName, options: in String; Interp: in Tcl_Interp := null)
       return Tk_OptionMenu with
       Pre => pathName /= "" and options /= "";
+     -- ****
+
+   -- ****f* OptionMenu/Create (procedure)
+   -- FUNCTION
+   -- Creates a new Tk_OptionMenu in the specified interpreter.
+   -- PARAMETERS
+   -- Widgt    - Tk_OptionMenu which will be created
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Must be at least
+   --            Global variable name in which selected menu will be stored
+   --            and at least one menu value
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+   --            the widget will be created in the "contextual" interpreter.
+   --            Default value is null.
+   -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_OptionMenu; pathName, options: in String;
       Interp: in Tcl_Interp := null) with
