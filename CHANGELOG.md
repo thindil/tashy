@@ -23,7 +23,8 @@ of the project.
   `proxy coord`, `proxy forget`, `proxy place`, `sash coord`, `sash dragto`,
   `sash mark`, `sash place`, `panecget`, `paneconfigure`, `panes`
 - Binding for Tk commands: `lower`, `raise`
-- Binding for Tk `scale` command: `coords`, `get`, `identify`, `set`
+- Binding for Tk `scale` commands: `coords`, `get`, `identify`, `set`
+- Binding for Tk `scrollbar` command: `activate`
 
 ### Changed
 - Updated code documentation
