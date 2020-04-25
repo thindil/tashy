@@ -20,6 +20,8 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
+with Tcl.Ada;
+
 package body Tcl.Tk.Ada.Widgets.Scrollbar is
 
    function Create
@@ -43,5 +45,16 @@ package body Tcl.Tk.Ada.Widgets.Scrollbar is
    begin
       Widgt := Create(pathName, options, Interp);
    end Create;
+
+   procedure Activate(ScrollbarWidget: in Tk_Scrollbar; Element: in String) is
+   begin
+      Execute_Widget_Command(ScrollbarWidget, "activate", Element);
+   end Activate;
+
+   function Activate(ScrollbarWidget: in Tk_Scrollbar) return String is
+   begin
+      Execute_Widget_Command(ScrollbarWidget, "activate");
+      return Tcl.Ada.Tcl_GetResult(ScrollbarWidget.Interp);
+   end Activate;
 
 end Tcl.Tk.Ada.Widgets.Scrollbar;
