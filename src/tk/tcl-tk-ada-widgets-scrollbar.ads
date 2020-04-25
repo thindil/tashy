@@ -43,11 +43,10 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
    type Tk_Scrollbar is new Tk_Widget with private;
    -- ****
 
-   -- ****f* Scrollbar/Create
+   -- ****f* Scrollbar/Create (function)
    -- FUNCTION
    -- Creates a new Tk_Scrollbar in the specified interpreter.
    -- PARAMETERS
-   -- Widgt    - Tk_Scrollbar which will be created
    -- pathName - Tk path (starts with dot) for the widget
    -- options  - Options which will be passed to the widget. Default value is
    --            empty
@@ -61,11 +60,58 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Tk_Scrollbar with
       Pre => pathName /= "";
+      -- ****
+
+   -- ****f* Scrollbar/Create (procedure)
+   -- FUNCTION
+   -- Creates a new Tk_Scrollbar in the specified interpreter.
+   -- PARAMETERS
+   -- Widgt    - Tk_Scrollbar which will be created
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Default value is
+      --            empty
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+      --            the widget will be created in the "contextual" interpreter.
+      --            Default value is null.
+      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Scrollbar; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
       -- ****
+
+      -- ****f* Scrollbar/Activate (procedure)
+      -- FUNCTION
+      -- Set the selected element as an active in the selected Tk_Scrollbar
+      -- PARAMETERS
+      -- ScrollbarWidget - Tk_Scrollbar in which an element will be activated
+      -- Element         - The element to activate. Can be "arrow1", "slider"
+      --                   or "arrow2"
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Activate
+     (ScrollbarWidget: in Tk_Scrollbar; Element: in String) with
+      Pre => Element in "arrow1" | "slider" | "arrow2";
+      -- ****
+
+      -- ****f* Scrollbar/Activate (function)
+      -- FUNCTION
+      -- Get an active element of the selected Tk_Scrollbar
+      -- PARAMETERS
+      -- ScrollbarWidget - Tk_Scrollbar in which an element will be activated
+      -- RESULT
+      -- Name of currently active element: "arrow1", "slider" or "arrow2" or
+      -- {} if no element is currently active
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Activate(ScrollbarWidget: in Tk_Scrollbar) return String;
+   -- ****
 
 private
 
