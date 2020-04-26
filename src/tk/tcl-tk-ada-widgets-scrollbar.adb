@@ -72,4 +72,10 @@ package body Tcl.Tk.Ada.Widgets.Scrollbar is
       return Tcl.Ada.Tcl_GetResult(ScrollbarWidget.Interp);
    end Fraction;
 
+   function Get(ScrollbarWidget: in Tk_Scrollbar) return String is
+   begin
+      Execute_Widget_Command(ScrollbarWidget, "get");
+      return Tcl.Ada.Tcl_GetResult(ScrollbarWidget.Interp);
+   end Get;
+
 end Tcl.Tk.Ada.Widgets.Scrollbar;

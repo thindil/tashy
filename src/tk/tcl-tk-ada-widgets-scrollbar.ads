@@ -157,6 +157,23 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
       Pre => X /= "" and Y /= "";
       -- ****
 
+      -- ****f* Scrollbar/Get
+      -- FUNCTION
+      -- Get the Tk_Scrollbar setting for which part of associated widget is
+      -- currently visible
+      -- PARAMETERS
+      -- ScrollbarWidget - Tk_Scrollbar which will be queried for setting
+      -- RESULT
+      -- Two values of real fraction between 0 and 1 for visible part of the
+      -- associated widget.
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Get(ScrollbarWidget: in Tk_Scrollbar) return String;
+   -- ****
+
 private
 
    type Tk_Scrollbar is new Tk_Widget with null record;
