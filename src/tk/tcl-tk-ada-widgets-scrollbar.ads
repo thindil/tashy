@@ -113,6 +113,26 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
    function Activate(ScrollbarWidget: in Tk_Scrollbar) return String;
    -- ****
 
+   -- ****f* Scrollbar/Scrollbar_Delta
+   -- FUNCTION
+   -- Get the faction change between current Tk_Scrollbar setting and the
+   -- selected value
+   -- PARAMETERS
+   -- ScrollbarWidget - Tk_Scrollbar which will be queried
+   -- DeltaX          - An value to check for horizontal scrollbar. Ignored
+   --                   when ScrollbarWidget is a vertical scrollbar.
+   -- DeltaY          - An value to check for vertical scrollbar. Ignored when
+   --                   ScrollbarWidget is a horizontal widget.
+   -- RESULT
+   -- A string with a real number indicating the fractional change in the
+   -- scrollbar setting that corresponds to a given change in slider position.
+   -- SOURCE
+   function Scrollbar_Delta
+     (ScrollbarWidget: in Tk_Scrollbar; DeltaX, DeltaY: in String)
+      return String with
+      Pre => DeltaX /= "" and DeltaY /= "";
+      -- ****
+
 private
 
    type Tk_Scrollbar is new Tk_Widget with null record;
