@@ -94,7 +94,7 @@ package Tcl.Tk.Ada is
    procedure After(Interp: in Tcl_Interp; Ms: in Natural);
    -- ****
 
-   -- ****f* TkAda/After (default interpreter, execute script, function)
+   -- ****f* TkAda/After (default interpreter and execute script and function)
    -- FUNCTION
    -- Arranges for the Tcl Script to be executed after Ms milliseconds
    -- in the "contextual" interpreter.
@@ -107,7 +107,7 @@ package Tcl.Tk.Ada is
    function After(Ms: in Natural; Script: in String) return String;
    -- ****
 
-   -- ****f* TkAda/After (default interpreter, execute script, procedure)
+   -- ****f* TkAda/After (default interpreter and execute script and procedure)
    -- FUNCTION
    -- Arranges for the Tcl Script to be executed after Ms milliseconds
    -- in the "contextual" interpreter.
@@ -118,7 +118,7 @@ package Tcl.Tk.Ada is
    procedure After(Ms: in Natural; Script: in String);
    -- ****
 
-   -- ****f* TkAda/After (selected interpreter, execute script, function)
+   -- ****f* TkAda/After (selected interpreter and execute script and function)
    -- FUNCTION
    -- Arranges for the Tcl Script to be executed after Ms milliseconds
    -- in the specified interpreter.
@@ -133,7 +133,7 @@ package Tcl.Tk.Ada is
      (Interp: in Tcl_Interp; Ms: in Natural; Script: in String) return String;
    -- ****
 
-   -- ****f* TkAda/After (selected interpreter, execute script, procedure)
+   -- ****f* TkAda/After (selected interpreter and execute script and procedure)
    -- FUNCTION
    -- Arranges for the Tcl Script to be executed after Ms milliseconds
    -- in the specified interpreter.
@@ -166,7 +166,7 @@ package Tcl.Tk.Ada is
    procedure Cancel(Interp: in Tcl_Interp; id_or_script: in String);
    -- ****
 
-   -- ****f* TkAda/Idle (default interpreter, function)
+   -- ****f* TkAda/Idle (default interpreter and function)
    -- FUNCTION
    -- Arranges for the Tcl Script to be executed later as an idle
    -- handler in the "contextual" interpreter.
@@ -178,7 +178,7 @@ package Tcl.Tk.Ada is
    function Idle(Script: in String) return String;
    -- ****
 
-   -- ****f* TkAda/Idle (default interpreter, procedure)
+   -- ****f* TkAda/Idle (default interpreter and procedure)
    -- FUNCTION
    -- Arranges for the Tcl Script to be executed later as an idle
    -- handler in the "contextual" interpreter.
@@ -188,7 +188,7 @@ package Tcl.Tk.Ada is
    procedure Idle(Script: in String);
    -- ****
 
-   -- ****f* TkAda/Idle (selected interpreter, function)
+   -- ****f* TkAda/Idle (selected interpreter and function)
    -- FUNCTION
    -- Arranges for the Tcl Script to be executed later as an idle
    -- handler in the specified interpreter.
@@ -201,7 +201,7 @@ package Tcl.Tk.Ada is
    function Idle(Interp: in Tcl_Interp; Script: in String) return String;
    -- ****
 
-   -- ****f* TkAda/Idle (selected interpreter, procedure)
+   -- ****f* TkAda/Idle (selected interpreter and procedure)
    -- FUNCTION
    -- Arranges for the Tcl Script to be executed later as an idle
    -- handler in the specified interpreter.

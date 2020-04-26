@@ -154,6 +154,7 @@ package Tcl.Tk.Ada.Widgets.Scale is
       -- SOURCE
    procedure Set(ScaleWidget: in Tk_Scale; Value: in String) with
       Pre => Value /= "";
+      -- ****
 
 private
 

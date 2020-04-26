@@ -116,7 +116,7 @@ package Tcl.Tk.Ada.Widgets is
       Interp: in Tcl_Interp := null) return Tk_Widget is abstract;
    -- ****
 
-   -- ****f* Widgets/Create (function)
+   -- ****f* Widgets/Create (procedure)
    -- FUNCTION
    -- Creates a new Tk_Widget in the specified interpreter. This is abstract
    -- function. Its content depends on each child widget code.
@@ -223,7 +223,7 @@ package Tcl.Tk.Ada.Widgets is
    procedure Unbind(Widgt: in Tk_Widget'Class; Sequence: in String);
    -- ****
 
-   -- ****f* Widgets/Unbind (procedure)
+   -- ****f* Widgets/Unbind (function)
    -- FUNCTION
    -- Disassociates the binding from the event Sequence.
    -- PARAMETERS

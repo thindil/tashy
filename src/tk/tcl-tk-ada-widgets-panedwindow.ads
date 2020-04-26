@@ -153,6 +153,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    function Pane_Cget
      (Paned: in Tk_PanedWindow; Window, Option: in String) return String with
       Pre => Window /= "" and Option /= "";
+      -- ****
 
       -- ****f* PanedWindow/Pane_Configure (procedure)
       -- FUNCTION
