@@ -126,11 +126,35 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
    -- RESULT
    -- A string with a real number indicating the fractional change in the
    -- scrollbar setting that corresponds to a given change in slider position.
+   -- HISTORY
+   -- 8.6.4 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function Scrollbar_Delta
      (ScrollbarWidget: in Tk_Scrollbar; DeltaX, DeltaY: in String)
       return String with
       Pre => DeltaX /= "" and DeltaY /= "";
+      -- ****
+
+      -- ****f* Scrollbar/Fraction
+      -- FUNCTION
+      -- Get the fraction of the selected Tk_Scrollbar at the selected pixel
+      -- PARAMETERS
+      -- ScrollbarWidget - Tk_Scrollbar which will be queried for the fraction
+      -- X               - X coordinate of the pixel inside ScrollbarWidget
+      -- Y               - Y coordinate of the pixel inside ScrollbarWidget
+      -- RESULT
+      -- Value between 0 and 1 where 0 is top or left of the trough and 1 is
+      -- bottom or right, middle is 0.5.
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Fraction
+     (ScrollbarWidget: in Tk_Scrollbar; X, Y: in String) return String with
+      Pre => X /= "" and Y /= "";
       -- ****
 
 private
