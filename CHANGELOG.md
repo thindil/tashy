@@ -24,7 +24,7 @@ of the project.
   `sash mark`, `sash place`, `panecget`, `paneconfigure`, `panes`
 - Binding for Tk commands: `lower`, `raise`
 - Binding for Tk `scale` commands: `coords`, `get`, `identify`, `set`
-- Binding for Tk `scrollbar` command: `activate`
+- Binding for Tk `scrollbar` commands: `activate`, `delta`
 
 ### Changed
 - Updated code documentation
