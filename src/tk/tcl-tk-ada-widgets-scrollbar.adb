@@ -57,4 +57,12 @@ package body Tcl.Tk.Ada.Widgets.Scrollbar is
       return Tcl.Ada.Tcl_GetResult(ScrollbarWidget.Interp);
    end Activate;
 
+   function Scrollbar_Delta
+     (ScrollbarWidget: in Tk_Scrollbar; DeltaX, DeltaY: in String)
+      return String is
+   begin
+      Execute_Widget_Command(ScrollbarWidget, "delta", DeltaX & " " & DeltaY);
+      return Tcl.Ada.Tcl_GetResult(ScrollbarWidget.Interp);
+   end Scrollbar_Delta;
+
 end Tcl.Tk.Ada.Widgets.Scrollbar;
