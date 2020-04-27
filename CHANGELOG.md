@@ -25,7 +25,7 @@ of the project.
 - Binding for Tk commands: `lower`, `raise`
 - Binding for Tk `scale` commands: `coords`, `get`, `identify`, `set`
 - Binding for Tk `scrollbar` commands: `activate`, `delta`, `fraction`, `get`,
-  `identify`
+  `identify`, `set`
 
 ### Changed
 - Updated code documentation
