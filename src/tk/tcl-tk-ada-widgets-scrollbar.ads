@@ -174,6 +174,27 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
    function Get(ScrollbarWidget: in Tk_Scrollbar) return String;
    -- ****
 
+   -- ****f* Scrollbar/Identify
+   -- FUNCTION
+   -- Get the name of the Tk_Scrollbar element at the selected pixel
+   -- PARAMETERS
+   -- ScrollbarWidget - Tk_Scrollbar which will be queried for the element
+   --                   name
+   -- X               - X coordinate of the pixel to check
+   -- Y               - Y coordinate of the pixel to check
+   -- RESULT
+   -- Name of the ScrollbarWidget's element in which the selected pixel is.
+   -- If the selected pixel is outside of the ScrollbarWidget, return {}
+   -- HISTORY
+   -- 8.6.4 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function Identify
+     (ScrollbarWidget: in Tk_Scrollbar; X, Y: in String) return String with
+      Pre => X /= "" and Y /= "";
+      -- ****
+
 private
 
    type Tk_Scrollbar is new Tk_Widget with null record;
