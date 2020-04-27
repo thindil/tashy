@@ -85,4 +85,9 @@ package body Tcl.Tk.Ada.Widgets.Scrollbar is
       return Tcl.Ada.Tcl_GetResult(ScrollbarWidget.Interp);
    end Identify;
 
+   procedure Set(ScrollbarWidget: in Tk_Scrollbar; First, Last: in String) is
+   begin
+      Execute_Widget_Command(ScrollbarWidget, "set", First & " " & Last);
+   end Set;
+
 end Tcl.Tk.Ada.Widgets.Scrollbar;
