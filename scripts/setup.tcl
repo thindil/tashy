@@ -25,9 +25,10 @@ exec wish "$0" ${1+"$@"}
 
 set buildoption all
 set installtklib 0
+set tashy_version 8.6.4
 
-# Used for mostly for Docker, normally, Tk should set this variable
-# by self
+# Used for mostly for Docker, normally Tk should set this variable
+# by itself
 if {[info exists tk_version] == 0} {
    set tk_version 8.6
 }
@@ -291,11 +292,11 @@ if {[lindex $argv 0] == "--nogui"} {
 
 # Create window for installer to review and edit macro values
 #------------------------------------------------------------
-wm title    . "TASHY 8.6.4 Setup"
+wm title    . "TASHY $tashy_version Setup"
 wm iconname . "TASHY Setup"
 
 message .instructions -justify left -aspect 500 -pady 10 -padx 20 -text \
-   "This program, setup.tcl, customizes the TASHY installation by\
+   "This program, setup.tcl, customizes the TASHY $tashy_version installation by\
    creating the file $gpr. Setup.tcl guesses \"reasonable\"\
    values for the macros, but you may have to edit them.  After you're\
    happy with the macro values, press \"Save\" to save the files."
