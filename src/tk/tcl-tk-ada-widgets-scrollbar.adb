@@ -78,4 +78,11 @@ package body Tcl.Tk.Ada.Widgets.Scrollbar is
       return Tcl.Ada.Tcl_GetResult(ScrollbarWidget.Interp);
    end Get;
 
+   function Identify
+     (ScrollbarWidget: in Tk_Scrollbar; X, Y: in String) return String is
+   begin
+      Execute_Widget_Command(ScrollbarWidget, "identify", X & " " & Y);
+      return Tcl.Ada.Tcl_GetResult(ScrollbarWidget.Interp);
+   end Identify;
+
 end Tcl.Tk.Ada.Widgets.Scrollbar;
