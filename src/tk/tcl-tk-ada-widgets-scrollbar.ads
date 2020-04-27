@@ -195,6 +195,25 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
       Pre => X /= "" and Y /= "";
       -- ****
 
+      -- ****f* Scrollbar/Set
+      -- FUNCTION
+      -- Set the Tk_Scrollbar setting for which part of associated widget is
+      -- currently visible
+      -- PARAMETERS
+      -- ScrollbarWidget - Tk_Scrollbar which setting will be changed
+      -- First           - Start fraction of visible part of the associated
+      --                   widget
+      -- Last            - End fraction of visible part of the associated
+      --                   widget
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Set(ScrollbarWidget: in Tk_Scrollbar; First, Last: in String) with
+      Pre => First /= "" and Last /= "";
+      -- ****
+
 private
 
    type Tk_Scrollbar is new Tk_Widget with null record;
