@@ -22,14 +22,14 @@
 
 with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
 
--- ****h* TkAda/Busy
+-- ****h* TkAda/TkBusy
 -- FUNCTION
 -- Provides code for manipulate Tk command Busy
 -- SOURCE
 package Tcl.Tk.Ada.Busy is
 -- ****
 
-   -- ****f* Busy/Busy
+   -- ****f* TkBusy/Busy
    -- FUNCTION
    -- Set selected window busy
    -- PARAMETERS
@@ -41,7 +41,7 @@ package Tcl.Tk.Ada.Busy is
      Busy;
    -- ****
 
-   -- ****f* Busy/cget
+   -- ****f* TkBusy/cget
    -- FUNCTION
    -- Get value of the selected option for the selected busy window
    -- PARAMETERS
@@ -55,7 +55,7 @@ package Tcl.Tk.Ada.Busy is
       Pre => Option /= "";
       -- ****
 
-      -- ****f* Busy/Configure (procedure)
+      -- ****f* TkBusy/Configure (procedure)
       -- FUNCTION
       -- Change configuration of the selected busy Tk_Widget
       -- PARAMETERS
@@ -66,7 +66,7 @@ package Tcl.Tk.Ada.Busy is
       Pre => Options /= "";
       -- ****
 
-      -- ****f* Busy/Configure (function)
+      -- ****f* TkBusy/Configure (function)
       -- FUNCTION
       -- Get busy configuration values for the selected busy Tk_Widget
       -- PARAMETERS
@@ -81,7 +81,7 @@ package Tcl.Tk.Ada.Busy is
      (Window: in Tk_Widget'Class; Option: in String := "") return String;
    -- ****
 
-   -- ****f* Busy/Current
+   -- ****f* TkBusy/Current
    -- FUNCTION
    -- Get list of Tk_Widgets names currently set as busy
    -- PARAMETERS
@@ -94,7 +94,7 @@ package Tcl.Tk.Ada.Busy is
    function Current(Pattern: in String := "") return String;
    -- ****
 
-   -- ****f* Busy/Forget
+   -- ****f* TkBusy/Forget
    -- FUNCTION
    -- Make window enabled again
    -- PARAMETERS
@@ -103,7 +103,7 @@ package Tcl.Tk.Ada.Busy is
    procedure Forget(Window: in Tk_Widget'Class);
    -- ****
 
-   -- ****f* Busy/Status
+   -- ****f* TkBusy/Status
    -- FUNCTION
    -- Get information if the selected Tk_Widget is busy or not
    -- PARAMETERS

@@ -80,7 +80,7 @@ package Tcl.Tk.Ada.Widgets.Scale is
       Pre => pathName /= "";
       -- ****
 
-      -- ****f* Scale/Coords
+      -- ****f* TkScale/Coords
       -- FUNCTION
       -- Get the elements which the x and y coordinates of the point
       -- along the centerline of the trough that corresponds to Value
@@ -100,7 +100,7 @@ package Tcl.Tk.Ada.Widgets.Scale is
      (ScaleWidget: in Tk_Scale; Value: in String := "") return String;
    -- ****
 
-   -- ****f* Tcl.Tk.Ada.Widgets.Scale/Get (current value)
+   -- ****f* TkScale/Get (current value)
    -- FUNCTION
    -- Get current value of the Tk_Scale
    -- PARAMETERS
@@ -115,7 +115,7 @@ package Tcl.Tk.Ada.Widgets.Scale is
    function Get(ScaleWidget: in Tk_Scale) return String;
    -- ****
 
-   -- ****f* Tcl.Tk.Ada.Widgets.Scale/Get (at selected pixel)
+   -- ****f* TkScale/Get (at selected pixel)
    -- FUNCTION
    -- Get value of the Tk_Scale at selected widget
    -- PARAMETERS
@@ -133,7 +133,7 @@ package Tcl.Tk.Ada.Widgets.Scale is
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* Scale/Identify
+      -- ****f* TkScale/Identify
       -- FUNCTION
       -- Get which part of the Tk_Scale lies under the specified coordinates
       -- PARAMETERS
@@ -154,7 +154,7 @@ package Tcl.Tk.Ada.Widgets.Scale is
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* Scale/Set
+      -- ****f* TkScale/Set
       -- FUNCTION
       -- Set the selected Tk_Scale to a new value
       -- PARAMETERS
