@@ -36,10 +36,9 @@ package Tcl.Tk.Ada.Widgets.TEntry is
    type Tk_Entry is new Tk_Widget with private;
    -- ****
 
-   -- ****f* TEntry/Create
+   -- ****f* TEntry/Create (function)
    -- Creates a new Tk_Entry in the specified interpreter.
    -- PARAMETERS
-   -- Widgt    - Tk_Entry which will be created
    -- pathName - Tk path (starts with dot) for the widget
    -- options  - Options which will be passed to the widget. Default value is
    --            empty
@@ -53,6 +52,19 @@ package Tcl.Tk.Ada.Widgets.TEntry is
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Tk_Entry with
       Pre => pathName /= "";
+      -- ****
+
+   -- ****f* TEntry/Create (procedure)
+   -- Creates a new Tk_Entry in the specified interpreter.
+   -- PARAMETERS
+   -- Widgt    - Tk_Entry which will be created
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Default value is
+      --            empty
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+      --            the widget will be created in the "contextual" interpreter.
+      --            Default value is null.
+      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Entry; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
