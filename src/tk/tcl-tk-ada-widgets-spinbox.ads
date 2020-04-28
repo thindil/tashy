@@ -102,6 +102,23 @@ package Tcl.Tk.Ada.Widgets.SpinBox is
       Pre => Index /= "";
       -- ****
 
+      -- ****f* SpinBox/Delete
+      -- FUNCTION
+      -- Delete the selected elements of the selected Tk_SpinBox
+      -- PARAMETERS
+      -- SpinBoxWidget - Tk_SpinBox in which the selected elements will be
+      --                 deleted
+      -- First         - Index of the first element to delete
+      -- Last          - Index of the last element to delete. If empty, delete
+      --                 only one element from the SpinBoxWidget. Default
+      --                 value is empty
+      -- SOURCE
+   procedure Delete
+     (SpinBoxWidget: in Tk_SpinBox; First: in String;
+      Last: in String := "") with
+      Pre => First /= "";
+      -- ****
+
 private
 
    type Tk_SpinBox is new Tk_Widget with null record;
