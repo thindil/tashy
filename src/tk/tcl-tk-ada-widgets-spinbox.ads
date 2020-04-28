@@ -138,6 +138,23 @@ package Tcl.Tk.Ada.Widgets.SpinBox is
    function Get(SpinBoxWidget: in Tk_SpinBox) return String;
    -- ****
 
+   -- ****f* SpinBox/ICursor
+   -- FUNCTION
+   -- Place insertion cursor in the selected Tk_SpinBox just before the
+   -- selected character
+   -- PARAMETERS
+   -- SpinBoxWidget - Tk_SpinBox in which insertion cursor will be placed
+   -- Index         - Index of the character before which insertion cursor
+   --                 will be placed
+   -- HISTORY
+   -- 8.6.4 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure ICursor(SpinBoxWidget: in Tk_SpinBox; Index: in String) with
+      Pre => Index /= "";
+      -- ****
+
 private
 
    type Tk_SpinBox is new Tk_Widget with null record;

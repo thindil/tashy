@@ -65,4 +65,9 @@ package body Tcl.Tk.Ada.Widgets.SpinBox is
       return Tcl.Ada.Tcl_GetResult(SpinBoxWidget.Interp);
    end Get;
 
+   procedure ICursor(SpinBoxWidget: in Tk_SpinBox; Index: in String) is
+   begin
+      Execute_Widget_Command(SpinBoxWidget, "icursor", Index);
+   end ICursor;
+
 end Tcl.Tk.Ada.Widgets.SpinBox;
