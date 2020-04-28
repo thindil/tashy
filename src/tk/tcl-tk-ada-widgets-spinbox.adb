@@ -53,4 +53,10 @@ package body Tcl.Tk.Ada.Widgets.SpinBox is
       return Tcl.Ada.Tcl_GetResult(SpinBoxWidget.Interp);
    end BBox;
 
+   procedure Delete
+     (SpinBoxWidget: in Tk_SpinBox; First: in String; Last: in String := "") is
+   begin
+      Execute_Widget_Command(SpinBoxWidget, "delete", First & " " & Last);
+   end Delete;
+
 end Tcl.Tk.Ada.Widgets.SpinBox;
