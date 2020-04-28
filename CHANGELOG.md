@@ -27,7 +27,7 @@ of the project.
 - Binding for Tk `scale` commands: `coords`, `get`, `identify`, `set`
 - Binding for Tk `scrollbar` commands: `activate`, `delta`, `fraction`, `get`,
   `identify`, `set`
-- Binding for Tk `spinbox` command: `bbox`, `delete`
+- Binding for Tk `spinbox` command: `bbox`, `delete`, `get`
 
 ### Changed
 - Updated code documentation
