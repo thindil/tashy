@@ -22,14 +22,14 @@
 
 with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
 
--- ****h* TkAda/Grid
+-- ****h* TkAda/TkGrid
 -- FUNCTION
 -- Provides code for manipulate Tk command Grid
 -- SOURCE
 package Tcl.Tk.Ada.Grid is
 -- ****
 
-   -- ****f* Grid/Grid
+   -- ****f* TkGrid/Grid
    -- FUNCTION
    -- Add to the selected widget with selected options to grid
    -- PARAMETERS
@@ -39,7 +39,7 @@ package Tcl.Tk.Ada.Grid is
    procedure Grid(Slave: in Tk_Widget'Class; Options: in String := "");
    -- ****
 
-   -- ****f* Grid/Grid_Anchor (procedure)
+   -- ****f* TkGrid/Grid_Anchor (procedure)
    -- FUNCTION
    -- Set the anchor's direction for the selected grid
    -- PARAMETERS
@@ -50,7 +50,7 @@ package Tcl.Tk.Ada.Grid is
       Pre => Direction /= "";
       -- ****
 
-      -- ****f* Grid/Grid_Anchor (function)
+      -- ****f* TkGrid/Grid_Anchor (function)
       -- FUNCTION
       -- Get the anchor's direction of the selected grid
       -- PARAMETERS
@@ -61,7 +61,7 @@ package Tcl.Tk.Ada.Grid is
    function Grid_Anchor(Master: in Tk_Widget'Class) return String;
    -- ****
 
-   -- ****f* Grid/Grid_BBox
+   -- ****f* TkGrid/Grid_BBox
    -- FUNCTION
    -- Get size of bounding box of the selected grid
    -- PARAMETERS
@@ -84,7 +84,7 @@ package Tcl.Tk.Ada.Grid is
       return String;
    -- ****
 
-   -- ****f* Grid/Column_Configure (procedure)
+   -- ****f* TkGrid/Column_Configure (procedure)
    -- FUNCTION
    -- Set column configuration options for Slave widget in Master grid.
    -- PARAMETERS
@@ -97,7 +97,7 @@ package Tcl.Tk.Ada.Grid is
       Pre => Options /= "";
       -- ****
 
-      -- ****f* Grid/Column_Configure (function)
+      -- ****f* TkGrid/Column_Configure (function)
       -- FUNCTION
       -- Get column configuration options for Slave widget in Master grid.
       -- PARAMETERS
@@ -109,7 +109,7 @@ package Tcl.Tk.Ada.Grid is
    function Column_Configure(Master, Slave: in Tk_Widget'Class) return String;
    -- ****
 
-   -- ****f* Grid/Grid_Configure
+   -- ****f* TkGrid/Grid_Configure
    -- FUNCTION
    -- Tells the grid how to configure the specified Slave window.
    -- PARAMETERS
@@ -120,7 +120,7 @@ package Tcl.Tk.Ada.Grid is
      (Slave: in Tk_Widget'Class; Options: in String := "");
    -- ****
 
-   -- ****f* Grid/Grid_Forget
+   -- ****f* TkGrid/Grid_Forget
    -- FUNCTION
    -- Removes the Slave window from the grid list for its master
    -- and unmaps their windows.
@@ -130,7 +130,7 @@ package Tcl.Tk.Ada.Grid is
    procedure Grid_Forget(Slave: in Tk_Widget'Class);
    -- ****
 
-   -- ****f* Grid/Grid_Info
+   -- ****f* TkGrid/Grid_Info
    -- FUNCTION
    -- Get grid options of the selected widget
    -- PARAMETERS
@@ -142,7 +142,7 @@ package Tcl.Tk.Ada.Grid is
    function Grid_Info(Slave: in Tk_Widget'Class) return String;
    -- ****
 
-   -- ****f* Grid/Grid_Location
+   -- ****f* TkGrid/Grid_Location
    -- FUNCTION
    -- Get column and row number on selected screen point in the selected grid
    -- PARAMETERS
@@ -158,7 +158,7 @@ package Tcl.Tk.Ada.Grid is
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* Grid/Grid_Propagate (procedure)
+      -- ****f* TkGrid/Grid_Propagate (procedure)
       -- FUNCTION
       -- Enable or disable propagation for the selected grid
       -- PARAMETERS
@@ -170,7 +170,7 @@ package Tcl.Tk.Ada.Grid is
       Pre => Value /= "";
       -- ****
 
-      -- ****f* Grid/Grid_Propagate (function)
+      -- ****f* TkGrid/Grid_Propagate (function)
       -- FUNCTION
       -- Get current state of propagatio for the selected grid
       -- PARAMETERS
@@ -181,7 +181,7 @@ package Tcl.Tk.Ada.Grid is
    function Grid_Propagate(Master: in Tk_Widget'Class) return String;
    -- ****
 
-   -- ****f* Grid/Grid_Remove
+   -- ****f* TkGrid/Grid_Remove
    -- FUNCTION
    -- Removes the Slave window from the grid list for its master
    -- and unmaps their windows but remember their positions in the grid
@@ -191,7 +191,7 @@ package Tcl.Tk.Ada.Grid is
    procedure Grid_Remove(Slave: in Tk_Widget'Class);
    -- ****
 
-   -- ****f* Grid/Row_Configure (procedure)
+   -- ****f* TkGrid/Row_Configure (procedure)
    -- FUNCTION
    -- Set row configuration options for Slave widget in Master grid.
    -- PARAMETERS
@@ -204,7 +204,7 @@ package Tcl.Tk.Ada.Grid is
       Pre => Options /= "";
       -- ****
 
-      -- ****f* Grid/Row_Configure (function)
+      -- ****f* TkGrid/Row_Configure (function)
       -- FUNCTION
       -- Get row configuration options for Slave widget in Master grid.
       -- PARAMETERS
@@ -216,7 +216,7 @@ package Tcl.Tk.Ada.Grid is
    function Row_Configure(Master, Slave: in Tk_Widget'Class) return String;
    -- ****
 
-   -- ****f* Grid/Grid_Size
+   -- ****f* TkGrid/Grid_Size
    -- FUNCTION
    -- Get size of grid
    -- PARAMETERS
@@ -228,7 +228,7 @@ package Tcl.Tk.Ada.Grid is
    function Grid_Size(Master: in Tk_Widget'Class) return String;
    -- ****
 
-   -- ****f* Grid/Grid_Slaves
+   -- ****f* TkGrid/Grid_Slaves
    -- FUNCTION
    -- Get list of slaves in the selected grid
    -- PARAMETERS
