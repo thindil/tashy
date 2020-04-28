@@ -112,12 +112,31 @@ package Tcl.Tk.Ada.Widgets.SpinBox is
       -- Last          - Index of the last element to delete. If empty, delete
       --                 only one element from the SpinBoxWidget. Default
       --                 value is empty
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Delete
      (SpinBoxWidget: in Tk_SpinBox; First: in String;
       Last: in String := "") with
       Pre => First /= "";
       -- ****
+
+      -- ****f* SpinBox/Get
+      -- FUNCTION
+      -- Get the content of the selected Tk_SpinBox
+      -- PARAMETERS
+      -- SpinBoxWidget - Tk_SpinBox which content will be get
+      -- RESULT
+      -- String with content of the SpinBoxWidget
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Get(SpinBoxWidget: in Tk_SpinBox) return String;
+   -- ****
 
 private
 

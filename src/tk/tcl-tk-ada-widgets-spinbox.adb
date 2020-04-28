@@ -59,4 +59,10 @@ package body Tcl.Tk.Ada.Widgets.SpinBox is
       Execute_Widget_Command(SpinBoxWidget, "delete", First & " " & Last);
    end Delete;
 
+   function Get(SpinBoxWidget: in Tk_SpinBox) return String is
+   begin
+      Execute_Widget_Command(SpinBoxWidget, "get");
+      return Tcl.Ada.Tcl_GetResult(SpinBoxWidget.Interp);
+   end Get;
+
 end Tcl.Tk.Ada.Widgets.SpinBox;
