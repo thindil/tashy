@@ -155,6 +155,27 @@ package Tcl.Tk.Ada.Widgets.SpinBox is
       Pre => Index /= "";
       -- ****
 
+      -- ****f* SpinBox/Identify
+      -- FUNCTION
+      -- Get the name of the Tk_SpinBox element at the selected coordinates
+      -- PARAMETERS
+      -- SpinBoxWidget - Tk_SpinBox which will be queried for the name of the
+      --                 element
+      -- X             - X coordinate of the pixel which will be check
+      -- Y             - Y coordinate of the pixel which will be check
+      -- RESULT
+      -- Name of the element: "buttondown", "buttonup", "entry" or "none" if
+      -- pixel is outside SpinBoxWidget
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Identify
+     (SpinBoxWidget: in Tk_SpinBox; X, Y: in String) return String with
+      Pre => X /= "" and Y /= "";
+      -- ****
+
 private
 
    type Tk_SpinBox is new Tk_Widget with null record;
