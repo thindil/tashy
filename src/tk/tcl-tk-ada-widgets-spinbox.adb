@@ -77,4 +77,11 @@ package body Tcl.Tk.Ada.Widgets.SpinBox is
       return Tcl.Ada.Tcl_GetResult(SpinBoxWidget.Interp);
    end Identify;
 
+   function SpinBox_Index
+     (SpinBoxWidget: in Tk_SpinBox; Index: in String) return String is
+   begin
+      Execute_Widget_Command(SpinBoxWidget, "index", Index);
+      return Tcl.Ada.Tcl_GetResult(SpinBoxWidget.Interp);
+   end SpinBox_Index;
+
 end Tcl.Tk.Ada.Widgets.SpinBox;
