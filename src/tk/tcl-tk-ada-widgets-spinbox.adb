@@ -70,4 +70,11 @@ package body Tcl.Tk.Ada.Widgets.SpinBox is
       Execute_Widget_Command(SpinBoxWidget, "icursor", Index);
    end ICursor;
 
+   function Identify
+     (SpinBoxWidget: in Tk_SpinBox; X, Y: in String) return String is
+   begin
+      Execute_Widget_Command(SpinBoxWidget, "identify", X & " " & Y);
+      return Tcl.Ada.Tcl_GetResult(SpinBoxWidget.Interp);
+   end Identify;
+
 end Tcl.Tk.Ada.Widgets.SpinBox;
