@@ -176,6 +176,24 @@ package Tcl.Tk.Ada.Widgets.SpinBox is
       Pre => X /= "" and Y /= "";
       -- ****
 
+      -- ****f* SpinBox/SpinBox_Index
+      -- FUNCTION
+      -- Get numerical index of character from the selected Index
+      -- PARAMETERS
+      -- SpinBoxWidget - Tk_SpinBox which will be queried for index
+      -- Index         - Index of character which numeric index will be taken
+      -- RESULT
+      -- Numerical index of the selected character
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function SpinBox_Index
+     (SpinBoxWidget: in Tk_SpinBox; Index: in String) return String with
+      Pre => Index /= "";
+      -- ****
+
 private
 
    type Tk_SpinBox is new Tk_Widget with null record;
