@@ -194,6 +194,22 @@ package Tcl.Tk.Ada.Widgets.SpinBox is
       Pre => Index /= "";
       -- ****
 
+      -- ****f* SpinBox/Insert
+      -- FUNCTION
+      -- Insert the selected text into the selected Tk_SpinBox
+      -- PARAMETERS
+      -- SpinBoxWidget - Tk_SpinBox in which the text will be inserted
+      -- Index         - Index of character before which Text will be inserted
+      -- Text          - Text to insert
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Insert(SpinBoxWidget: in Tk_SpinBox; Index, Text: in String) with
+      Pre => Index /= "" and Text /= "";
+      -- ****
+
 private
 
    type Tk_SpinBox is new Tk_Widget with null record;
