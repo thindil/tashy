@@ -89,4 +89,9 @@ package body Tcl.Tk.Ada.Widgets.SpinBox is
       Execute_Widget_Command(SpinBoxWidget, "insert", Index & " " & Text);
    end Insert;
 
+   procedure Invoke(SpinBoxWidget: in Tk_SpinBox; Element: in String) is
+   begin
+      Execute_Widget_Command(SpinBoxWidget, "invoke", Element);
+   end Invoke;
+
 end Tcl.Tk.Ada.Widgets.SpinBox;
