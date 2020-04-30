@@ -210,6 +210,23 @@ package Tcl.Tk.Ada.Widgets.SpinBox is
       Pre => Index /= "" and Text /= "";
       -- ****
 
+      -- ****f* SpinBox/Invoke
+      -- FUNCTION
+      -- Invoke the selected button of the selected Tk_SpinBox
+      -- PARAMETERS
+      -- SpinBoxWidget - Tk_SpinBox in which the selected button will be
+      --                 invoked
+      -- Element       - Name of the selected button. Can be "buttondown" or
+      --                 "buttonup"
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Invoke(SpinBoxWidget: in Tk_SpinBox; Element: in String) with
+      Pre => Element = "buttondown" or Element = "buttonup";
+      -- ****
+
 private
 
    type Tk_SpinBox is new Tk_Widget with null record;
