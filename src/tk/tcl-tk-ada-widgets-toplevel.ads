@@ -29,11 +29,10 @@ package Tcl.Tk.Ada.Widgets.Toplevel is
    type Tk_Toplevel is new Tk_Widget with private;
    -- ****
 
-   -- ****f* Toplevel/Create
+   -- ****f* Toplevel/Create (function)
    -- FUNCTION
    -- Creates a new Tk_Toplevel in the specified interpreter.
    -- PARAMETERS
-   -- Widgt    - Tk_Toplevel which will be created
    -- pathName - Tk path (starts with dot) for the widget
    -- options  - Options which will be passed to the widget. Default value is
    --            empty
@@ -47,6 +46,20 @@ package Tcl.Tk.Ada.Widgets.Toplevel is
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Tk_Toplevel with
       Pre => pathName /= "";
+      -- ****
+
+   -- ****f* Toplevel/Create (procedure)
+   -- FUNCTION
+   -- Creates a new Tk_Toplevel in the specified interpreter.
+   -- PARAMETERS
+   -- Widgt    - Tk_Toplevel which will be created
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Default value is
+      --            empty
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+      --            the widget will be created in the "contextual" interpreter.
+      --            Default value is null.
+      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Toplevel; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
