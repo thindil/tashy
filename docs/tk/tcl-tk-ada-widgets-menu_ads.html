@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.3 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.4 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -25,84 +25,142 @@
 <div id="content">
 <h3>TABLE OF CONTENTS</h3>
 <ul>
-<li>1. <a href="#robo34">Widgets/Menu</a></li>
+<li>1. <a href="#robo35">Widgets/Menu</a></li>
 <ul>
-<li>1.1. <a href="#robo78">Menu/Tk_Menu</a></li>
-<li>1.2. <a href="#robo212">Menu/AddMenu</a></li>
-<li>1.3. <a href="#robo213">Menu/Create</a></li>
-<li>1.4. <a href="#robo214">Menu/Delete</a></li>
-<li>1.5. <a href="#robo215">Menu/Entry_Configure</a></li>
-<li>1.6. <a href="#robo216">Menu/Entry_Configure2</a></li>
-<li>1.7. <a href="#robo217">Menu/Invoke</a></li>
+<li>1.1. <a href="#robo79">Menu/Tk_Menu</a></li>
+<li>1.2. <a href="#robo232">Menu/Activate</a></li>
+<li>1.3. <a href="#robo233">Menu/AddMenu</a></li>
+<li>1.4. <a href="#robo234">Menu/Clone</a></li>
+<li>1.5. <a href="#robo235">Menu/Create (function)</a></li>
+<li>1.6. <a href="#robo236">Menu/Create (procedure)</a></li>
+<li>1.7. <a href="#robo237">Menu/Delete</a></li>
+<li>1.8. <a href="#robo238">Menu/Entry_Cget</a></li>
+<li>1.9. <a href="#robo239">Menu/Entry_Configure (function)</a></li>
+<li>1.10. <a href="#robo240">Menu/Entry_Configure (procedure)</a></li>
+<li>1.11. <a href="#robo241">Menu/Index</a></li>
+<li>1.12. <a href="#robo242">Menu/Insert</a></li>
+<li>1.13. <a href="#robo243">Menu/Invoke</a></li>
+<li>1.14. <a href="#robo244">Menu/Menu_Type</a></li>
+<li>1.15. <a href="#robo245">Menu/Post (function)</a></li>
+<li>1.16. <a href="#robo246">Menu/Post (procedure)</a></li>
+<li>1.17. <a href="#robo247">Menu/PostCascade</a></li>
+<li>1.18. <a href="#robo248">Menu/Unpost</a></li>
+<li>1.19. <a href="#robo249">Menu/XPosition</a></li>
+<li>1.20. <a href="#robo250">Menu/YPosition</a></li>
 </ul>
 </ul>
 <hr />
 <a name="Widgets2fMenu"></a>
-<a name="robo34"></a><h2>Widgets/Menu [ Packages ]</h2>
+<a name="robo35"></a><h2>Widgets/Menu [ Packages ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada-widgets_ads.html#robo21">Widgets</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada-widgets_ads.html#robo22">Widgets</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo12">Tk</a> widget <strong>Menu</strong>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo9">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo12">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo10">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo21">Widgets</a><span class="sign">.</span><strong>Menu</strong> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo9">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo12">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo10">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo22">Widgets</a><span class="sign">.</span><strong>Menu</strong> <span class="keyword">is</span>
 </pre>
 
 <hr />
 <a name="Menu2fTk5fMenu"></a>
-<a name="robo78"></a><h2>Menu/Tk_Menu [ Types ]</h2>
+<a name="robo79"></a><h2>Menu/Tk_Menu [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Menu</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo35">Menu</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a>.
- Each of the derived widgets redefines the <a href="./tcl-tk-ada-widgets-ttkcombobox_ads.html#robo276">Create</a> subprogram
+<pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a>.
+ Each of the derived widgets redefines the <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo403">Create</a> subprogram
  in order to create the correct type of widget.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">type</span> <strong>Tk_Menu</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">type</span> <strong>Tk_Menu</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Menu2fActivate"></a>
+<a name="robo232"></a><h2>Menu/Activate [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo35">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <strong>Activate</strong> the selected item in the selected menu. Previously active
+ is deactivated.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Activate</strong><span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo79">Tk_Menu</a><span class="keyword">'Class</span><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre =<span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a> /= ""<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> MenuWidget - <a href="#robo79">Tk_Menu</a> in which item will be activated
+ <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a>      - <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a> of the item to activate
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.4 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> Replace it with higher level of binding
 </pre>
 
 <hr />
 <a name="Menu2fAddMenu"></a>
-<a name="robo212"></a><h2>Menu/AddMenu [ Subprograms ]</h2>
+<a name="robo233"></a><h2>Menu/AddMenu [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo35">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttknotebook_ads.html#robo285">Add</a> element to the menu.
+<pre> <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo257">Add</a> element to the menu.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <a href="./tcl-tk-ada-widgets-ttknotebook_ads.html#robo285">Add</a>
-     <span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_Menu</a><span class="keyword">'Class</span><span class="sign">;</span> EntryType<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo257">Add</a>
+     <span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo79">Tk_Menu</a><span class="keyword">'Class</span><span class="sign">;</span> EntryType<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
       Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">)</span> <span class="keyword">with</span>
       Pre =<span class="sign">&gt;</span> EntryType /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> MenuWidget - <a href="#robo78">Tk_Menu</a> widget to which the element will be added
+<pre> MenuWidget - <a href="#robo79">Tk_Menu</a> widget to which the element will be added
  EntryType  - <a href="./tcl-tk_ads.html#robo12">Tk</a> type of entry to add
  Options    - <a href="./tcl-tk_ads.html#robo12">Tk</a> options for menu entry to add. Default value is empty
 </pre>
 
 <hr />
-<a name="Menu2fCreate"></a>
-<a name="robo213"></a><h2>Menu/Create [ Subprograms ]</h2>
+<a name="Menu2fClone"></a>
+<a name="robo234"></a><h2>Menu/Clone [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo35">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Creates a new <a href="#robo78">Tk_Menu</a> in the specified interpreter.
+<pre> Make a clone of the selected menu
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   overriding <span class="keyword">function</span> <strong>Create</strong>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Clone</strong>
+     <span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo79">Tk_Menu</a><span class="keyword">'Class</span><span class="sign">;</span> NewPathName<span class="sign">,</span> CloneType<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre =<span class="sign">&gt;</span> NewPathName /= "" and
+      CloneType <span class="keyword">in</span> "normal" | "menubar" | "tearoff" | ""<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> MenuWidget  - <a href="#robo79">Tk_Menu</a> which will be cloned
+ NewPathName - Name of a newly created clone menu
+ CloneType   - Type of newly created clone menu
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.4 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> Replace it with higher level of binding
+</pre>
+
+<hr />
+<a name="Menu2fCreate2028function29"></a>
+<a name="robo235"></a><h2>Menu/Create (function) [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo35">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Creates a new <a href="#robo79">Tk_Menu</a> in the specified interpreter.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo403">Create</a>
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo78">Tk_Menu</a> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-   overriding <span class="keyword">procedure</span> <strong>Create</strong>
-     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo78">Tk_Menu</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo79">Tk_Menu</a> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Widgt    - <a href="#robo78">Tk_Menu</a> which will be created
- pathName - <a href="./tcl-tk_ads.html#robo12">Tk</a> path (starts with dot) for the widget
+<pre> pathName - <a href="./tcl-tk_ads.html#robo12">Tk</a> path (starts with dot) for the widget
  options  - Options which will be passed to the widget. Default value is
             empty
  Interp   - <a href="../tcl_ads.html#robo9">Tcl</a> interpreter to which the widget will be created. If null,
@@ -110,66 +168,100 @@
             Default value is null.
 </pre>
 <p class="item_name">RESULT</p>
-<pre> Newly created <a href="#robo78">Tk_Menu</a>
+<pre> Newly created <a href="#robo79">Tk_Menu</a>
+</pre>
+
+<hr />
+<a name="Menu2fCreate2028procedure29"></a>
+<a name="robo236"></a><h2>Menu/Create (procedure) [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo35">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Creates a new <a href="#robo79">Tk_Menu</a> in the specified interpreter.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo403">Create</a>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo79">Tk_Menu</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Widgt    - <a href="#robo79">Tk_Menu</a> which will be created
+ pathName - <a href="./tcl-tk_ads.html#robo12">Tk</a> path (starts with dot) for the widget
+ options  - Options which will be passed to the widget. Default value is
+            empty
+ Interp   - <a href="../tcl_ads.html#robo9">Tcl</a> interpreter to which the widget will be created. If null,
+            the widget will be created in the "contextual" interpreter.
+            Default value is null.
 </pre>
 
 <hr />
 <a name="Menu2fDelete"></a>
-<a name="robo214"></a><h2>Menu/Delete [ Subprograms ]</h2>
+<a name="robo237"></a><h2>Menu/Delete [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo35">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> <strong>Delete</strong> elements from the menu.
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Delete</strong>
-     <span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_Menu</a><span class="sign">;</span> StartIndex<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+     <span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo79">Tk_Menu</a><span class="sign">;</span> StartIndex<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
       EndIndex<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> StartIndex <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> MenuWidget - <a href="#robo78">Tk_Menu</a> widget from which elementrs will be deleted
- StartIndex - <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a> of first element which will be deleted
- EndIndex   - <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a> of last element which will be deleted. If empty,
+<pre> MenuWidget - <a href="#robo79">Tk_Menu</a> widget from which elementrs will be deleted
+ StartIndex - <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a> of first element which will be deleted
+ EndIndex   - <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a> of last element which will be deleted. If empty,
               it will be that same like StartIndex. Default is empty.
 </pre>
 
 <hr />
-<a name="Menu2fEntry5fConfigure"></a>
-<a name="robo215"></a><h2>Menu/Entry_Configure [ Subprograms ]</h2>
+<a name="Menu2fEntry5fCget"></a>
+<a name="robo238"></a><h2>Menu/Entry_Cget [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo35">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-busy_ads.html#robo118">Configure</a> selected menu entry
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo308">Get</a> current value of the selected option of the selected entry in the
+ selected <a href="#robo79">Tk_Menu</a>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Entry_Configure</strong>
-     <span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_Menu</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a><span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> <strong>Entry_Cget</strong>
+     <span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo79">Tk_Menu</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a><span class="sign">,</span> Option<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Option <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> MenuWidget - <a href="#robo78">Tk_Menu</a> widget from which entry will be configured
- <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a>      - <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a> of the menu entry to <a href="./tcl-tk-ada-widgets_ads.html#robo343">configure</a>
- Options    - <a href="./tcl-tk_ads.html#robo12">Tk</a> options for the menu entry
+<pre> MenuWidget - <a href="#robo79">Tk_Menu</a> widget in which option will be queried
+ <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a>      - <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a> of the menu entry for which option will be queried
+ Option     - Name of the option to query
+</pre>
+<p class="item_name">RESULT</p>
+<pre> <a href="./tcl-tk-ada-busy_ads.html#robo342">Current</a> value of the selected Option in the selected menu entry
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.4 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> Replace it with higher level of binding
 </pre>
 
 <hr />
-<a name="Menu2fEntry5fConfigure2"></a>
-<a name="robo216"></a><h2>Menu/Entry_Configure2 [ Subprograms ]</h2>
+<a name="Menu2fEntry5fConfigure2028function29"></a>
+<a name="robo239"></a><h2>Menu/Entry_Configure (function) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo35">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> configuration of the selected menu entry
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo308">Get</a> configuration of the selected menu entry
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <a href="#robo215">Entry_Configure</a>
-     <span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_Menu</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> Entry_Configure
+     <span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo79">Tk_Menu</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> MenuWidget - <a href="#robo78">Tk_Menu</a> widget from which entry configuration will be
+<pre> MenuWidget - <a href="#robo79">Tk_Menu</a> widget from which entry configuration will be
               taken
- <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a>      - <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a> of the menu entry to <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo249">get</a> configuration
+ <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a>      - <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a> of the menu entry to <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo312">get</a> configuration
 </pre>
 <p class="item_name">RESULT</p>
 <pre> String with list of options and their values for the selected menu
@@ -177,29 +269,293 @@
 </pre>
 
 <hr />
-<a name="Menu2fInvoke"></a>
-<a name="robo217"></a><h2>Menu/Invoke [ Subprograms ]</h2>
+<a name="Menu2fEntry5fConfigure2028procedure29"></a>
+<a name="robo240"></a><h2>Menu/Entry_Configure (procedure) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo35">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Configure selected menu entry
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> Entry_Configure
+     <span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo79">Tk_Menu</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a><span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> MenuWidget - <a href="#robo79">Tk_Menu</a> widget from which entry will be configured
+ <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a>      - <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a> of the menu entry to configure
+ Options    - <a href="./tcl-tk_ads.html#robo12">Tk</a> options for the menu entry
+</pre>
+
+<hr />
+<a name="Menu2fIndex"></a>
+<a name="robo241"></a><h2>Menu/Index [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo35">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo308">Get</a> the numerical index of the selected menu entry in the selected
+ menu
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Index</strong><span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo79">Tk_Menu</a><span class="sign">;</span> <strong>Index</strong><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <strong>Index</strong> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> MenuWidget - <a href="#robo79">Tk_Menu</a> widget in which entry will be queried
+ <strong>Index</strong>      - <strong>Index</strong> of the entry to query
+</pre>
+<p class="item_name">RESULT</p>
+<pre> Numerical index of the selected menu entry or none if <strong>Index</strong> was set
+ to none
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.4 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> Replace it with higher level of binding
+</pre>
+
+<hr />
+<a name="Menu2fInsert"></a>
+<a name="robo242"></a><h2>Menu/Insert [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo35">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo257">Add</a> the selected menu entry before other selected entry.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Insert</strong>
+     <span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo79">Tk_Menu</a><span class="keyword">'Class</span><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a><span class="sign">,</span> EntryType<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+      Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">)</span> <span class="keyword">with</span>
+      Pre =<span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a> /= "" and EntryType /= ""<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> MenuWidget - <a href="#robo79">Tk_Menu</a> widget to which the element will be added
+ <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a>      - <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a> of the other menu entry before which this entry
+              will be added
+ EntryType  - <a href="./tcl-tk_ads.html#robo12">Tk</a> type of entry to add
+ Options    - <a href="./tcl-tk_ads.html#robo12">Tk</a> options for menu entry to add. Default value is empty
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.4 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> Replace it with higher level of binding
+</pre>
+
+<hr />
+<a name="Menu2fInvoke"></a>
+<a name="robo243"></a><h2>Menu/Invoke [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo35">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> <strong>Invoke</strong> command associated with the selected menu entry in the selected
  menu
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Invoke</strong><span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_Menu</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> <strong>Invoke</strong><span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo79">Tk_Menu</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> MenuWidget - <a href="#robo78">Tk_Menu</a> widget from which entry will be activated
- <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a>      - <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a> of the menu entry to activate
+<pre> MenuWidget - <a href="#robo79">Tk_Menu</a> widget from which entry will be activated
+ <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a>      - <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a> of the menu entry to activate
 </pre>
 <p class="item_name">RESULT</p>
 <pre> Value returned by the invoked command
 </pre>
 
+<hr />
+<a name="Menu2fMenu5fType"></a>
+<a name="robo244"></a><h2>Menu/Menu_Type [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo35">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo308">Get</a> type of the selected entry in the selected <a href="#robo79">Tk_Menu</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Menu_Type</strong>
+     <span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo79">Tk_Menu</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> MenuWidget - <a href="#robo79">Tk_Menu</a> in which the selected entry will be queried
+ <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a>      - <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a> of the menu entry which will be queried
+</pre>
+<p class="item_name">RESULT</p>
+<pre> Type of the selected entry - command, separator or tearoff
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.4 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> Replace it with higher level of binding
+</pre>
+
+<hr />
+<a name="Menu2fPost2028function29"></a>
+<a name="robo245"></a><h2>Menu/Post (function) [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo35">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Display the selected menu at the selected coordinates
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> Post<span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo79">Tk_Menu</a><span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> MenuWidget - <a href="#robo79">Tk_Menu</a> widget which will be shown
+ X          - X coordinate in the root window where <a href="#robo79">Tk_Menu</a> will be
+              shown
+ Y          - Y coordinate in the root window where <a href="#robo79">Tk_Menu</a> will be
+              shown
+</pre>
+<p class="item_name">RESULT</p>
+<pre> If Postcommand was set for the selecte MenuWidget, return result of
+ this command. If error occured during posting the menu, return error.
+ Otherwise return {}
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.4 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> Replace it with higher level of binding
+</pre>
+
+<hr />
+<a name="Menu2fPost2028procedure29"></a>
+<a name="robo246"></a><h2>Menu/Post (procedure) [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo35">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Display the selected menu at the selected coordinates
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> Post<span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo79">Tk_Menu</a><span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> MenuWidget - <a href="#robo79">Tk_Menu</a> widget which will be shown
+ X          - X coordinate in the root window where <a href="#robo79">Tk_Menu</a> will be
+              shown
+ Y          - Y coordinate in the root window where <a href="#robo79">Tk_Menu</a> will be
+              shown
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.4 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> Replace it with higher level of binding
+</pre>
+
+<hr />
+<a name="Menu2fPostCascade"></a>
+<a name="robo247"></a><h2>Menu/PostCascade [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo35">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="../cargv_ads.html#robo171">Show</a> submenu associated with the cascade entry with the selected
+ index. <a href="#robo248">Unpost</a> previously posted submenu
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>PostCascade</strong><span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo79">Tk_Menu</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> MenuWidget - <a href="#robo79">Tk_Menu</a> from which submenu will be taken
+ <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a>      - <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a> of cascade menu entry to show
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.4 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> Replace it with higher level of binding
+</pre>
+
+<hr />
+<a name="Menu2fUnpost"></a>
+<a name="robo248"></a><h2>Menu/Unpost [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo35">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Unmap the selected menu so it is no longer displayed. This procedure
+ don't work on Windows and MacOS as those platforms have their own way
+ of unposting menus.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Unpost</strong><span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo79">Tk_Menu</a><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> MenuWidget - <a href="#robo79">Tk_Menu</a> which will be unposted
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.4 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> Replace it with higher level of binding
+</pre>
+
+<hr />
+<a name="Menu2fXPosition"></a>
+<a name="robo249"></a><h2>Menu/XPosition [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo35">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo308">Get</a> X coordinate of the leftmost pixel of the selected menu entry in
+ the selected <a href="#robo79">Tk_Menu</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>XPosition</strong>
+     <span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo79">Tk_Menu</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> MenuWidget - <a href="#robo79">Tk_Menu</a> in which the selected entry will be queried
+ <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a>      - <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a> of the selected entry to query
+</pre>
+<p class="item_name">RESULT</p>
+<pre> X coordinate of the leftmost pixel of the selected menu entry in
+ MenuWidget
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.4 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> Replace it with higher level of binding
+</pre>
+
+<hr />
+<a name="Menu2fYPosition"></a>
+<a name="robo250"></a><h2>Menu/YPosition [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo35">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo308">Get</a> Y coordinate of the topmost pixel of the selected menu entry in
+ the selected <a href="#robo79">Tk_Menu</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>YPosition</strong>
+     <span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo79">Tk_Menu</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> MenuWidget - <a href="#robo79">Tk_Menu</a> in which the selected entry will be queried
+ <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a>      - <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a> of the selected entry to query
+</pre>
+<p class="item_name">RESULT</p>
+<pre> Y coordinate of the topmost pixel of the selected menu entry in
+ MenuWidget
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.4 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> Replace it with higher level of binding
+</pre>
+
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-menu.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Mar 31 2020 07:12:51
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-menu.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Thu Apr 30 2020 07:22:01
 </p>
 </div> <!-- footer -->
 </body>

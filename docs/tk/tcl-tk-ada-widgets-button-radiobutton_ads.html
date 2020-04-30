@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.3 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.4 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,57 +27,57 @@
 <ul>
 <li>1. <a href="#robo4">Button/RadioButton</a></li>
 <ul>
-<li>1.1. <a href="#robo84">RadioButton/Tk_RadioButton</a></li>
-<li>1.2. <a href="#robo240">RadioButton/Create</a></li>
-<li>1.3. <a href="#robo241">RadioButton/Deselect</a></li>
-<li>1.4. <a href="#robo242">RadioButton/Tk_Select</a></li>
-<li>1.5. <a href="#robo243">RadioButton/Toggle</a></li>
+<li>1.1. <a href="#robo85">RadioButton/Tk_RadioButton</a></li>
+<li>1.2. <a href="#robo285">RadioButton/Create</a></li>
+<li>1.3. <a href="#robo286">RadioButton/Deselect</a></li>
+<li>1.4. <a href="#robo287">RadioButton/Tk_Select</a></li>
+<li>1.5. <a href="#robo288">RadioButton/Toggle</a></li>
 </ul>
 </ul>
 <hr />
 <a name="Button2fRadioButton"></a>
 <a name="robo4"></a><h2>Button/RadioButton [ Packages ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada-widgets-button_ads.html#robo29">Button</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada-widgets-button_ads.html#robo30">Button</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo12">Tk</a> widget <strong>RadioButton</strong>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo9">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo12">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo10">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo21">Widgets</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets-button_ads.html#robo29">Button</a><span class="sign">.</span><strong>RadioButton</strong> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo9">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo12">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo10">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo22">Widgets</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets-button_ads.html#robo30">Button</a><span class="sign">.</span><strong>RadioButton</strong> <span class="keyword">is</span>
 </pre>
 
 <hr />
 <a name="RadioButton2fTk5fRadioButton"></a>
-<a name="robo84"></a><h2>RadioButton/Tk_RadioButton [ Types ]</h2>
+<a name="robo85"></a><h2>RadioButton/Tk_RadioButton [ Types ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">RadioButton</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> This is a type derived from <a href="./tcl-tk-ada-widgets-button_ads.html#robo62">Tk_Button</a>.
+<pre> This is a type derived from <a href="./tcl-tk-ada-widgets-button_ads.html#robo63">Tk_Button</a>.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">type</span> <strong>Tk_RadioButton</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets-button_ads.html#robo62">Tk_Button</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">type</span> <strong>Tk_RadioButton</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets-button_ads.html#robo63">Tk_Button</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
 </pre>
 
 <hr />
 <a name="RadioButton2fCreate"></a>
-<a name="robo240"></a><h2>RadioButton/Create [ Subprograms ]</h2>
+<a name="robo285"></a><h2>RadioButton/Create [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">RadioButton</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Creates a new <a href="#robo84">Tk_RadioButton</a> in the specified interpreter.
+<pre> Creates a new <a href="#robo85">Tk_RadioButton</a> in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   overriding <span class="keyword">function</span> <strong>Create</strong>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <strong>Create</strong>
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo84">Tk_RadioButton</a> <span class="keyword">with</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo85">Tk_RadioButton</a> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-   overriding <span class="keyword">procedure</span> <strong>Create</strong>
-     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo84">Tk_RadioButton</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+   <span class="keyword">overriding</span> <span class="keyword">procedure</span> <strong>Create</strong>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo85">Tk_RadioButton</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
       Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Widgt    - <a href="#robo84">Tk_RadioButton</a> which will be created
+<pre> Widgt    - <a href="#robo85">Tk_RadioButton</a> which will be created
  pathName - <a href="./tcl-tk_ads.html#robo12">Tk</a> path (starts with dot) for the widget
  options  - Options which will be passed to the widget. Default value is
             empty
@@ -86,57 +86,57 @@
             Default value is null.
 </pre>
 <p class="item_name">RESULT</p>
-<pre> Newly created <a href="#robo84">Tk_RadioButton</a>
+<pre> Newly created <a href="#robo85">Tk_RadioButton</a>
 </pre>
 
 <hr />
 <a name="RadioButton2fDeselect"></a>
-<a name="robo241"></a><h2>RadioButton/Deselect [ Subprograms ]</h2>
+<a name="robo286"></a><h2>RadioButton/Deselect [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">RadioButton</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> <strong>Deselect</strong> the button.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Deselect</strong><span class="sign">(</span>Buttn<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo84">Tk_RadioButton</a><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Deselect</strong><span class="sign">(</span>Buttn<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo85">Tk_RadioButton</a><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Buttn - <a href="#robo84">Tk_RadioButton</a> to deselect
+<pre> Buttn - <a href="#robo85">Tk_RadioButton</a> to deselect
 </pre>
 
 <hr />
 <a name="RadioButton2fTk5fSelect"></a>
-<a name="robo242"></a><h2>RadioButton/Tk_Select [ Subprograms ]</h2>
+<a name="robo287"></a><h2>RadioButton/Tk_Select [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">RadioButton</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Select the button.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Tk_Select</strong><span class="sign">(</span>Buttn<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo84">Tk_RadioButton</a><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Tk_Select</strong><span class="sign">(</span>Buttn<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo85">Tk_RadioButton</a><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Buttn - <a href="#robo84">Tk_RadioButton</a> to select
+<pre> Buttn - <a href="#robo85">Tk_RadioButton</a> to select
 </pre>
 
 <hr />
 <a name="RadioButton2fToggle"></a>
-<a name="robo243"></a><h2>RadioButton/Toggle [ Subprograms ]</h2>
+<a name="robo288"></a><h2>RadioButton/Toggle [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">RadioButton</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> <strong>Toggle</strong> the button.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Toggle</strong><span class="sign">(</span>Buttn<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo84">Tk_RadioButton</a><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Toggle</strong><span class="sign">(</span>Buttn<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo85">Tk_RadioButton</a><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Buttn - <a href="#robo84">Tk_RadioButton</a> to toggle
+<pre> Buttn - <a href="#robo85">Tk_RadioButton</a> to toggle
 </pre>
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-button-radiobutton.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Mar 31 2020 07:12:51
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-button-radiobutton.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Thu Apr 30 2020 07:22:01
 </p>
 </div> <!-- footer -->
 </body>
