@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.3 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.4 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -25,206 +25,204 @@
 <div id="content">
 <h3>TABLE OF CONTENTS</h3>
 <ul>
-<li>1. <a href="#robo17">TkAda/Grid</a></li>
+<li>1. <a href="#robo18">TkAda/TkGrid</a></li>
 <ul>
-<li>1.1. <a href="#robo190">Grid/Grid</a></li>
-<ul>
-<li>1.1.1. <a href="#robo188">Grid/Column_Configure</a></li>
-<li>1.1.2. <a href="#robo189">Grid/Column_Configure2</a></li>
-<li>1.1.3. <a href="#robo191">Grid/Grid_Anchor</a></li>
-<li>1.1.4. <a href="#robo192">Grid/Grid_Anchor2</a></li>
-<li>1.1.5. <a href="#robo193">Grid/Grid_BBox</a></li>
-<li>1.1.6. <a href="#robo194">Grid/Grid_Configure</a></li>
-<li>1.1.7. <a href="#robo195">Grid/Grid_Forget</a></li>
-<li>1.1.8. <a href="#robo196">Grid/Grid_Info</a></li>
-<li>1.1.9. <a href="#robo197">Grid/Grid_Location</a></li>
-<li>1.1.10. <a href="#robo198">Grid/Grid_Propagate</a></li>
-<li>1.1.11. <a href="#robo199">Grid/Grid_Propagate2</a></li>
-<li>1.1.12. <a href="#robo200">Grid/Grid_Remove</a></li>
-<li>1.1.13. <a href="#robo201">Grid/Grid_Size</a></li>
-<li>1.1.14. <a href="#robo202">Grid/Grid_Slaves</a></li>
-<li>1.1.15. <a href="#robo203">Grid/Row_Configure</a></li>
-<li>1.1.16. <a href="#robo204">Grid/Row_Configure2</a></li>
-</ul>
+<li>1.1. <a href="#robo345">TkGrid/Column_Configure (function)</a></li>
+<li>1.2. <a href="#robo346">TkGrid/Column_Configure (procedure)</a></li>
+<li>1.3. <a href="#robo347">TkGrid/Grid</a></li>
+<li>1.4. <a href="#robo348">TkGrid/Grid_Anchor (function)</a></li>
+<li>1.5. <a href="#robo349">TkGrid/Grid_Anchor (procedure)</a></li>
+<li>1.6. <a href="#robo350">TkGrid/Grid_BBox</a></li>
+<li>1.7. <a href="#robo351">TkGrid/Grid_Configure</a></li>
+<li>1.8. <a href="#robo352">TkGrid/Grid_Forget</a></li>
+<li>1.9. <a href="#robo353">TkGrid/Grid_Info</a></li>
+<li>1.10. <a href="#robo354">TkGrid/Grid_Location</a></li>
+<li>1.11. <a href="#robo355">TkGrid/Grid_Propagate (function)</a></li>
+<li>1.12. <a href="#robo356">TkGrid/Grid_Propagate (procedure)</a></li>
+<li>1.13. <a href="#robo357">TkGrid/Grid_Remove</a></li>
+<li>1.14. <a href="#robo358">TkGrid/Grid_Size</a></li>
+<li>1.15. <a href="#robo359">TkGrid/Grid_Slaves</a></li>
+<li>1.16. <a href="#robo360">TkGrid/Row_Configure (function)</a></li>
+<li>1.17. <a href="#robo361">TkGrid/Row_Configure (procedure)</a></li>
 </ul>
 </ul>
 <hr />
-<a name="TkAda2fGrid"></a>
-<a name="robo17"></a><h2>TkAda/Grid [ Packages ]</h2>
+<a name="TkAda2fTkGrid"></a>
+<a name="robo18"></a><h2>TkAda/TkGrid [ Packages ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada_ads.html#robo14">TkAda</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo12">Tk</a> command <strong>Grid</strong>
+<pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo12">Tk</a> command <a href="#robo347">Grid</a>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo9">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo12">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo10">Ada</a><span class="sign">.</span><strong>Grid</strong> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo9">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo12">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo10">Ada</a><span class="sign">.</span><a href="#robo347">Grid</a> <span class="keyword">is</span>
 </pre>
 
 <hr />
-<a name="Grid2fColumn5fConfigure"></a>
-<a name="robo188"></a><h2>Grid/Column_Configure [ Subprograms ]</h2>
+<a name="TkGrid2fColumn5fConfigure2028function29"></a>
+<a name="robo345"></a><h2>TkGrid/Column_Configure (function) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo190">Grid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">TkGrid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Set column configuration options for Slave widget in Master grid.
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo308">Get</a> column configuration options for Slave widget in Master grid.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Column_Configure</strong>
-     <span class="sign">(</span>Master<span class="sign">,</span> Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre =<span class="sign">&gt;</span> Options /= ""<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> Column_Configure<span class="sign">(</span>Master<span class="sign">,</span> Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Master  - <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a> which is set as grid
- Slave   - <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a> inside Master
- Options - <a href="./tcl-tk_ads.html#robo12">Tk</a> options for selected Slave
-</pre>
-
-<hr />
-<a name="Grid2fColumn5fConfigure2"></a>
-<a name="robo189"></a><h2>Grid/Column_Configure2 [ Subprograms ]</h2>
-
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo190">Grid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
-<p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> column configuration options for Slave widget in Master grid.
-</pre>
-<p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <a href="#robo188">Column_Configure</a><span class="sign">(</span>Master<span class="sign">,</span> Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
-</pre>
-<p class="item_name">PARAMETERS</p>
-<pre> Master  - <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a> which is set as grid
- Slave   - <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a> inside Master
+<pre> Master  - <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a> which is set as grid
+ Slave   - <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a> inside Master
 </pre>
 <p class="item_name">RESULT</p>
 <pre> String with column configuration options for selected Slave widget
 </pre>
 
 <hr />
-<a name="Grid2fGrid"></a>
-<a name="robo190"></a><h2>Grid/Grid [ Subprograms ]</h2>
+<a name="TkGrid2fColumn5fConfigure2028procedure29"></a>
+<a name="robo346"></a><h2>TkGrid/Column_Configure (procedure) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo17">Grid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">TkGrid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttknotebook_ads.html#robo285">Add</a> to the selected widget with selected options to grid
+<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo380">Set</a> column configuration options for Slave widget in Master grid.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Grid</strong><span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">);</span>
+<pre class="source">   <span class="keyword">procedure</span> Column_Configure
+     <span class="sign">(</span>Master<span class="sign">,</span> Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre =<span class="sign">&gt;</span> Options /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Slave   - <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a> to add
+<pre> Master  - <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a> which is set as grid
+ Slave   - <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a> inside Master
+ Options - <a href="./tcl-tk_ads.html#robo12">Tk</a> options for selected Slave
+</pre>
+
+<hr />
+<a name="TkGrid2fGrid"></a>
+<a name="robo347"></a><h2>TkGrid/Grid [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">TkGrid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo257">Add</a> to the selected widget with selected options to grid
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Grid</strong><span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">);</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Slave   - <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a> to add
  Options - Option to grid action. Default value is empty
 </pre>
 
 <hr />
-<a name="Grid2fGrid5fAnchor"></a>
-<a name="robo191"></a><h2>Grid/Grid_Anchor [ Subprograms ]</h2>
+<a name="TkGrid2fGrid5fAnchor2028function29"></a>
+<a name="robo348"></a><h2>TkGrid/Grid_Anchor (function) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo190">Grid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">TkGrid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Set the anchor's direction for the selected grid
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo308">Get</a> the anchor's direction of the selected grid
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Grid_Anchor</strong><span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Direction<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre =<span class="sign">&gt;</span> Direction /= ""<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> Grid_Anchor<span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Master    - <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a> which is set as grid
- Direction - Direction in which anchor of the grid should be set.
-</pre>
-
-<hr />
-<a name="Grid2fGrid5fAnchor2"></a>
-<a name="robo192"></a><h2>Grid/Grid_Anchor2 [ Subprograms ]</h2>
-
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo190">Grid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
-<p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> the anchor's direction of the selected grid
-</pre>
-<p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <a href="#robo191">Grid_Anchor</a><span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
-</pre>
-<p class="item_name">PARAMETERS</p>
-<pre> Master - <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a> which is set as grid
+<pre> Master - <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a> which is set as grid
 </pre>
 <p class="item_name">RESULT</p>
 <pre> A direction in which the grid anchor is set
 </pre>
 
 <hr />
-<a name="Grid2fGrid5fBBox"></a>
-<a name="robo193"></a><h2>Grid/Grid_BBox [ Subprograms ]</h2>
+<a name="TkGrid2fGrid5fAnchor2028procedure29"></a>
+<a name="robo349"></a><h2>TkGrid/Grid_Anchor (procedure) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo190">Grid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">TkGrid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> size of bounding box of the selected grid
+<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo380">Set</a> the anchor's direction for the selected grid
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> Grid_Anchor<span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Direction<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre =<span class="sign">&gt;</span> Direction /= ""<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Master    - <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a> which is set as grid
+ Direction - Direction in which anchor of the grid should be set.
+</pre>
+
+<hr />
+<a name="TkGrid2fGrid5fBBox"></a>
+<a name="robo350"></a><h2>TkGrid/Grid_BBox [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">TkGrid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo308">Get</a> size of bounding box of the selected grid
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Grid_BBox</strong>
-     <span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo314">Column</a><span class="sign">,</span> Row<span class="sign">,</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo315">Column2</a><span class="sign">,</span> Row2<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">)</span>
+     <span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Column<span class="sign">,</span> Row<span class="sign">,</span> Column2<span class="sign">,</span> Row2<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">)</span>
       <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Master  - <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a> which is set as grid
- <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo314">Column</a>  - Starting column from which bounding box will be count. Default
+<pre> Master  - <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a> which is set as grid
+ Column  - Starting column from which bounding box will be count. Default
            is empty
  Row     - Starting row from which bounding box will be count. Default is
            empty
- <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo315">Column2</a> - Ending column from which bounding box will be count. Default
+ Column2 - Ending column from which bounding box will be count. Default
            is empty
  Row2    - Ending column from which bounding box will be count. Default
            is empty
 </pre>
 <p class="item_name">RESULT</p>
 <pre> If all parameters are empty, return bounding box for whole grid. If
- only <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo314">Column</a> and Row specified, return box for the selected cell. If all
+ only Column and Row specified, return box for the selected cell. If all
  parameters are specified, return box for selected cells.
 </pre>
 
 <hr />
-<a name="Grid2fGrid5fConfigure"></a>
-<a name="robo194"></a><h2>Grid/Grid_Configure [ Subprograms ]</h2>
+<a name="TkGrid2fGrid5fConfigure"></a>
+<a name="robo351"></a><h2>TkGrid/Grid_Configure [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo190">Grid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">TkGrid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Tells the grid how to <a href="./tcl-tk-ada-widgets_ads.html#robo343">configure</a> the specified Slave window.
+<pre> Tells the grid how to configure the specified Slave window.
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Grid_Configure</strong>
-     <span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">);</span>
+     <span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">);</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Slave   - <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a> to <a href="./tcl-tk-ada-widgets_ads.html#robo343">configure</a>
- Options - <a href="#robo190">Grid</a> options for the slave
+<pre> Slave   - <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a> to configure
+ Options - <a href="#robo347">Grid</a> options for the slave
 </pre>
 
 <hr />
-<a name="Grid2fGrid5fForget"></a>
-<a name="robo195"></a><h2>Grid/Grid_Forget [ Subprograms ]</h2>
+<a name="TkGrid2fGrid5fForget"></a>
+<a name="robo352"></a><h2>TkGrid/Grid_Forget [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo190">Grid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">TkGrid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Removes the Slave window from the grid list for its master
  and unmaps their windows.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Grid_Forget</strong><span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">);</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Grid_Forget</strong><span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">);</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Slave - <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a> to remove
+<pre> Slave - <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a> to remove
 </pre>
 
 <hr />
-<a name="Grid2fGrid5fInfo"></a>
-<a name="robo196"></a><h2>Grid/Grid_Info [ Subprograms ]</h2>
+<a name="TkGrid2fGrid5fInfo"></a>
+<a name="robo353"></a><h2>TkGrid/Grid_Info [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo190">Grid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">TkGrid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> grid options of the selected widget
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo308">Get</a> grid options of the selected widget
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Grid_Info</strong><span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> <strong>Grid_Info</strong><span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Slave - <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a> to query
+<pre> Slave - <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a> to query
 </pre>
 <p class="item_name">RESULT</p>
 <pre> String with list whose elements are the current configuration
@@ -232,20 +230,20 @@
 </pre>
 
 <hr />
-<a name="Grid2fGrid5fLocation"></a>
-<a name="robo197"></a><h2>Grid/Grid_Location [ Subprograms ]</h2>
+<a name="TkGrid2fGrid5fLocation"></a>
+<a name="robo354"></a><h2>TkGrid/Grid_Location [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo190">Grid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">TkGrid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> column and row number on selected screen point in the selected grid
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo308">Get</a> column and row number on selected screen point in the selected grid
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Grid_Location</strong>
-     <span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+     <span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
       Pre =<span class="sign">&gt;</span> X /= "" and Y /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Master - <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a> which is set as grid
+<pre> Master - <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a> which is set as grid
  X      - X coordinate of screen point to check
  Y      - Y coordinate of screen point to check
 </pre>
@@ -255,70 +253,70 @@
 </pre>
 
 <hr />
-<a name="Grid2fGrid5fPropagate"></a>
-<a name="robo198"></a><h2>Grid/Grid_Propagate [ Subprograms ]</h2>
+<a name="TkGrid2fGrid5fPropagate2028function29"></a>
+<a name="robo355"></a><h2>TkGrid/Grid_Propagate (function) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo190">Grid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">TkGrid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Enable or disable propagation for the selected grid
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo308">Get</a> current state of propagatio for the selected grid
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Grid_Propagate</strong><span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Value<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre =<span class="sign">&gt;</span> Value /= ""<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> Grid_Propagate<span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Master - <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a> which is set as grid to modify
- Value  - New value for propagation. 1, on, true enables, 0, off,
-          false disable propagation.
-</pre>
-
-<hr />
-<a name="Grid2fGrid5fPropagate2"></a>
-<a name="robo199"></a><h2>Grid/Grid_Propagate2 [ Subprograms ]</h2>
-
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo190">Grid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
-<p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> current state of propagatio for the selected grid
-</pre>
-<p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <a href="#robo198">Grid_Propagate</a><span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
-</pre>
-<p class="item_name">PARAMETERS</p>
-<pre> Master - <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a> which is set as grid to query
+<pre> Master - <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a> which is set as grid to query
 </pre>
 <p class="item_name">RESULT</p>
 <pre> 0 if propagation is disabled, otherwise 1
 </pre>
 
 <hr />
-<a name="Grid2fGrid5fRemove"></a>
-<a name="robo200"></a><h2>Grid/Grid_Remove [ Subprograms ]</h2>
+<a name="TkGrid2fGrid5fPropagate2028procedure29"></a>
+<a name="robo356"></a><h2>TkGrid/Grid_Propagate (procedure) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo190">Grid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">TkGrid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Enable or disable propagation for the selected grid
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> Grid_Propagate<span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Value<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre =<span class="sign">&gt;</span> Value /= ""<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Master - <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a> which is set as grid to modify
+ Value  - New value for propagation. 1, on, true enables, 0, off,
+          false disable propagation.
+</pre>
+
+<hr />
+<a name="TkGrid2fGrid5fRemove"></a>
+<a name="robo357"></a><h2>TkGrid/Grid_Remove [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">TkGrid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Removes the Slave window from the grid list for its master
  and unmaps their windows but remember their positions in the grid
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Grid_Remove</strong><span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">);</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Grid_Remove</strong><span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">);</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Slave - <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a> to remove
+<pre> Slave - <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a> to remove
 </pre>
 
 <hr />
-<a name="Grid2fGrid5fSize"></a>
-<a name="robo201"></a><h2>Grid/Grid_Size [ Subprograms ]</h2>
+<a name="TkGrid2fGrid5fSize"></a>
+<a name="robo358"></a><h2>TkGrid/Grid_Size [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo190">Grid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">TkGrid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> size of grid
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo308">Get</a> size of grid
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Grid_Size</strong><span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> <strong>Grid_Size</strong><span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Master - <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a> which is set as grid
+<pre> Master - <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a> which is set as grid
 </pre>
 <p class="item_name">RESULT</p>
 <pre> First value is columns amount, second value is rows amount of the
@@ -326,19 +324,19 @@
 </pre>
 
 <hr />
-<a name="Grid2fGrid5fSlaves"></a>
-<a name="robo202"></a><h2>Grid/Grid_Slaves [ Subprograms ]</h2>
+<a name="TkGrid2fGrid5fSlaves"></a>
+<a name="robo359"></a><h2>TkGrid/Grid_Slaves [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo190">Grid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">TkGrid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> list of slaves in the selected grid
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo308">Get</a> list of slaves in the selected grid
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Grid_Slaves</strong>
-     <span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Option<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+     <span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Option<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Master  - <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a> which is set as grid
+<pre> Master  - <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a> which is set as grid
  Option  - Can be -row [number], -column [number] or empty. Default value
            is empty
 </pre>
@@ -349,46 +347,46 @@
 </pre>
 
 <hr />
-<a name="Grid2fRow5fConfigure"></a>
-<a name="robo203"></a><h2>Grid/Row_Configure [ Subprograms ]</h2>
+<a name="TkGrid2fRow5fConfigure2028function29"></a>
+<a name="robo360"></a><h2>TkGrid/Row_Configure (function) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo190">Grid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">TkGrid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Set row configuration options for Slave widget in Master grid.
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo308">Get</a> row configuration options for Slave widget in Master grid.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Row_Configure</strong>
-     <span class="sign">(</span>Master<span class="sign">,</span> Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre =<span class="sign">&gt;</span> Options /= ""<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> Row_Configure<span class="sign">(</span>Master<span class="sign">,</span> Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Master  - <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a> which is set as grid
- Slave   - <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a> inside Master
- Options - <a href="./tcl-tk_ads.html#robo12">Tk</a> options for selected Slave
-</pre>
-
-<hr />
-<a name="Grid2fRow5fConfigure2"></a>
-<a name="robo204"></a><h2>Grid/Row_Configure2 [ Subprograms ]</h2>
-
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo190">Grid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
-<p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> row configuration options for Slave widget in Master grid.
-</pre>
-<p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <a href="#robo203">Row_Configure</a><span class="sign">(</span>Master<span class="sign">,</span> Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
-</pre>
-<p class="item_name">PARAMETERS</p>
-<pre> Master  - <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a> which is set as grid
- Slave   - <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a> inside Master
+<pre> Master  - <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a> which is set as grid
+ Slave   - <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a> inside Master
 </pre>
 <p class="item_name">RESULT</p>
 <pre> String with row configuration options for selected Slave widget
 </pre>
 
+<hr />
+<a name="TkGrid2fRow5fConfigure2028procedure29"></a>
+<a name="robo361"></a><h2>TkGrid/Row_Configure (procedure) [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">TkGrid</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo380">Set</a> row configuration options for Slave widget in Master grid.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> Row_Configure
+     <span class="sign">(</span>Master<span class="sign">,</span> Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre =<span class="sign">&gt;</span> Options /= ""<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Master  - <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a> which is set as grid
+ Slave   - <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a> inside Master
+ Options - <a href="./tcl-tk_ads.html#robo12">Tk</a> options for selected Slave
+</pre>
+
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-grid.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Mar 31 2020 07:12:51
+<p>Generated from ./src/tk/tcl-tk-ada-grid.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Thu Apr 30 2020 07:22:01
 </p>
 </div> <!-- footer -->
 </body>

@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.3 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.4 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -28,24 +28,25 @@
 <li>1. <a href="#robo43">Widgets/Text</a></li>
 <ul>
 <li>1.1. <a href="#robo89">Text/Tk_Text</a></li>
-<li>1.2. <a href="#robo251">Text/Create</a></li>
-<li>1.3. <a href="#robo252">Text/Delete</a></li>
-<li>1.4. <a href="#robo253">Text/Insert</a></li>
-<li>1.5. <a href="#robo254">Text/Tag_Add</a></li>
-<li>1.6. <a href="#robo255">Text/Tag_Configure</a></li>
-<li>1.7. <a href="#robo256">Text/Tag_Configure2</a></li>
+<li>1.2. <a href="#robo314">Text/Create (function)</a></li>
+<li>1.3. <a href="#robo315">Text/Create (procedure)</a></li>
+<li>1.4. <a href="#robo316">Text/Delete</a></li>
+<li>1.5. <a href="#robo317">Text/Insert</a></li>
+<li>1.6. <a href="#robo318">Text/Tag_Add</a></li>
+<li>1.7. <a href="#robo319">Text/Tag_Configure (function)</a></li>
+<li>1.8. <a href="#robo320">Text/Tag_Configure (procedure)</a></li>
 </ul>
 </ul>
 <hr />
 <a name="Widgets2fText"></a>
 <a name="robo43"></a><h2>Widgets/Text [ Packages ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada-widgets_ads.html#robo21">Widgets</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada-widgets_ads.html#robo22">Widgets</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo12">Tk</a> widget <strong>Text</strong>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo9">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo12">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo10">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo21">Widgets</a><span class="sign">.</span><strong>Text</strong> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo9">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo12">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo10">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo22">Widgets</a><span class="sign">.</span><strong>Text</strong> <span class="keyword">is</span>
 </pre>
 
 <hr />
@@ -54,28 +55,50 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Text</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a>.
- Each of the derived widgets redefines the <a href="./tcl-tk-ada-widgets-ttkcombobox_ads.html#robo276">Create</a> subprogram
+<pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a>.
+ Each of the derived widgets redefines the <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo403">Create</a> subprogram
  in order to create the correct type of widget.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">type</span> <strong>Tk_Text</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets_ads.html#robo108">Tk_Widget</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">type</span> <strong>Tk_Text</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
 </pre>
 
 <hr />
-<a name="Text2fCreate"></a>
-<a name="robo251"></a><h2>Text/Create [ Subprograms ]</h2>
+<a name="Text2fCreate2028function29"></a>
+<a name="robo314"></a><h2>Text/Create (function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Text</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Creates a new <a href="#robo89">Tk_Text</a> in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   overriding <span class="keyword">function</span> <strong>Create</strong>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo403">Create</a>
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
       Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo89">Tk_Text</a> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-   overriding <span class="keyword">procedure</span> <strong>Create</strong>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> pathName - <a href="./tcl-tk_ads.html#robo12">Tk</a> path (starts with dot) for the widget
+ options  - Options which will be passed to the widget. Default value is
+            empty
+ Interp   - <a href="../tcl_ads.html#robo9">Tcl</a> interpreter to which the widget will be created. If null,
+            the widget will be created in the "contextual" interpreter.
+            Default value is null.
+</pre>
+<p class="item_name">RESULT</p>
+<pre> Newly created <a href="#robo89">Tk_Text</a>
+</pre>
+
+<hr />
+<a name="Text2fCreate2028procedure29"></a>
+<a name="robo315"></a><h2>Text/Create (procedure) [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Text</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Creates a new <a href="#robo89">Tk_Text</a> in the specified interpreter.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo403">Create</a>
      <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo89">Tk_Text</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
       Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
@@ -89,13 +112,10 @@
             the widget will be created in the "contextual" interpreter.
             Default value is null.
 </pre>
-<p class="item_name">RESULT</p>
-<pre> Newly created <a href="#robo89">Tk_Text</a>
-</pre>
 
 <hr />
 <a name="Text2fDelete"></a>
-<a name="robo252"></a><h2>Text/Delete [ Subprograms ]</h2>
+<a name="robo316"></a><h2>Text/Delete [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Text</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -118,36 +138,36 @@
 
 <hr />
 <a name="Text2fInsert"></a>
-<a name="robo253"></a><h2>Text/Insert [ Subprograms ]</h2>
+<a name="robo317"></a><h2>Text/Insert [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Text</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> <strong>Insert</strong> text into text widget at selected index
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Insert</strong><span class="sign">(</span>TextWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo89">Tk_Text</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a><span class="sign">,</span> <a href="#robo43">Text</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and <a href="#robo43">Text</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Insert</strong><span class="sign">(</span>TextWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo89">Tk_Text</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a><span class="sign">,</span> <a href="#robo43">Text</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> <a href="#robo43">Text</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> TextWidget - <a href="#robo89">Tk_Text</a> to which text will be inserted
- <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo324">Index</a>      - <a href="#robo89">Tk_Text</a> position on which text will be inserted. Lines
+ <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a>      - <a href="#robo89">Tk_Text</a> position on which text will be inserted. Lines
               starts from 1, characters starts from 0
  <a href="#robo43">Text</a>       - <a href="#robo43">Text</a> to insert to <a href="#robo89">Tk_Text</a> widget
 </pre>
 
 <hr />
 <a name="Text2fTag5fAdd"></a>
-<a name="robo254"></a><h2>Text/Tag_Add [ Subprograms ]</h2>
+<a name="robo318"></a><h2>Text/Tag_Add [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Text</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttknotebook_ads.html#robo285">Add</a> the selected tag to the text in <a href="#robo89">Tk_Text</a>
+<pre> <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo257">Add</a> the selected tag to the text in <a href="#robo89">Tk_Text</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Tag_Add</strong>
      <span class="sign">(</span>TextWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo89">Tk_Text</a><span class="sign">;</span> TagName<span class="sign">,</span> StartIndex<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
       Indexes<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and StartIndex <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> StartIndex <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> TextWidget - <a href="#robo89">Tk_Text</a> in which the new tag will be added
@@ -159,34 +179,15 @@
 </pre>
 
 <hr />
-<a name="Text2fTag5fConfigure"></a>
-<a name="robo255"></a><h2>Text/Tag_Configure [ Subprograms ]</h2>
+<a name="Text2fTag5fConfigure2028function29"></a>
+<a name="robo319"></a><h2>Text/Tag_Configure (function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Text</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-busy_ads.html#robo118">Configure</a> the selected tag in the selected <a href="#robo89">Tk_Text</a> widget
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo308">Get</a> configuration of the selected tag in the selected <a href="#robo89">Tk_Text</a> widget
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Tag_Configure</strong>
-     <span class="sign">(</span>TextWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo89">Tk_Text</a><span class="sign">;</span> TagName<span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> and Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-</pre>
-<p class="item_name">PARAMETERS</p>
-<pre> TextWidget - <a href="#robo89">Tk_Text</a> in which tag will be configured
- TagName    - Name of the tag to <a href="./tcl-tk-ada-widgets_ads.html#robo343">configure</a>
- Options    - Tag options with values to set
-</pre>
-
-<hr />
-<a name="Text2fTag5fConfigure2"></a>
-<a name="robo256"></a><h2>Text/Tag_Configure2 [ Subprograms ]</h2>
-
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Text</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
-<p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo233">Get</a> configuration of the selected tag in the selected <a href="#robo89">Tk_Text</a> widget
-</pre>
-<p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <a href="#robo255">Tag_Configure</a>
+<pre class="source">   <span class="keyword">function</span> Tag_Configure
      <span class="sign">(</span>TextWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo89">Tk_Text</a><span class="sign">;</span> TagName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Option<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span>
       <span class="keyword">return</span> String <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> TagName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
@@ -194,7 +195,7 @@
 <p class="item_name">PARAMETERS</p>
 <pre> TextWidget - <a href="#robo89">Tk_Text</a> in which the tag will be queried for options
  TagName    - Name of the tag which configuration will be queried
- Option     - Configuration option which value to <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo249">get</a>. Default value
+ Option     - Configuration option which value to <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo312">get</a>. Default value
               is empty
 </pre>
 <p class="item_name">RESULT</p>
@@ -202,9 +203,28 @@
  string with all options and their values.
 </pre>
 
+<hr />
+<a name="Text2fTag5fConfigure2028procedure29"></a>
+<a name="robo320"></a><h2>Text/Tag_Configure (procedure) [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Text</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Configure the selected tag in the selected <a href="#robo89">Tk_Text</a> widget
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> Tag_Configure
+     <span class="sign">(</span>TextWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo89">Tk_Text</a><span class="sign">;</span> TagName<span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> TextWidget - <a href="#robo89">Tk_Text</a> in which tag will be configured
+ TagName    - Name of the tag to configure
+ Options    - Tag options with values to set
+</pre>
+
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-text.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Mar 31 2020 07:12:51
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-text.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Thu Apr 30 2020 07:22:01
 </p>
 </div> <!-- footer -->
 </body>
