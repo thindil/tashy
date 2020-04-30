@@ -28,7 +28,7 @@ of the project.
 - Binding for Tk `scrollbar` commands: `activate`, `delta`, `fraction`, `get`,
   `identify`, `set`
 - Binding for Tk `spinbox` command: `bbox`, `delete`, `get`, `icursor`,
-  `identify`, `index`
+  `identify`, `index`, `insert`
 
 ### Changed
 - Updated code documentation
