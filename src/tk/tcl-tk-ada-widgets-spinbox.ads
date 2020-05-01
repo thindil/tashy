@@ -224,7 +224,23 @@ package Tcl.Tk.Ada.Widgets.SpinBox is
       -- Replace it with higher level of binding
       -- SOURCE
    procedure Invoke(SpinBoxWidget: in Tk_SpinBox; Element: in String) with
-      Pre => Element = "buttondown" or Element = "buttonup";
+      Pre => Element in "buttondown" | "buttonup";
+      -- ****
+
+      -- ****f* SpinBox/Scan_Mark
+      -- FUNCTION
+      -- Sets starting position for scan in the selected Tk_SpinBox
+      -- PARAMETERS
+      -- SpinboxWidget - Tk_SpinBox in which mark will be set
+      -- X             - X coordinate of the mark to set
+      -- Y             - Y coordinate of the mark to set
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Scan_Mark(SpinboxWidget: in Tk_SpinBox; X, Y: in String) with
+      Pre => X /= "" and Y /= "";
       -- ****
 
 private
