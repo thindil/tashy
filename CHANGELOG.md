@@ -7,7 +7,8 @@ of the project.
 ## [Unreleased]
 
 ### Added
-- Binding for Tk `spinbox` commands: `scan mark`, `scan dragto`
+- Binding for Tk `spinbox` commands: `scan mark`, `scan dragto`,
+  `seletion adjust`
 
 ### Changed
 - Updated code documentation
