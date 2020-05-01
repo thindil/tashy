@@ -104,4 +104,10 @@ package body Tcl.Tk.Ada.Widgets.SpinBox is
       Execute_Widget_Command(SpinboxWidget, "scan dragto", X);
    end Scan_DragTo;
 
+   procedure Selection_Adjust
+     (SpinBoxWidget: in Tk_SpinBox; Index: in String) is
+   begin
+      Execute_Widget_Command(SpinBoxWidget, "selection adjust", Index);
+   end Selection_Adjust;
+
 end Tcl.Tk.Ada.Widgets.SpinBox;
