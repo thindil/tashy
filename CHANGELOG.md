@@ -9,6 +9,9 @@ of the project.
 ### Added
 - Binding for Tk `spinbox` command: `scan mark`
 
+### Changed
+- Updated code documentation
+
 ## [8.6.4] - 2020-04-30
 
 ### Added
