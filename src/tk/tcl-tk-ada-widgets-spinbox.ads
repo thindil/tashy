@@ -259,6 +259,25 @@ package Tcl.Tk.Ada.Widgets.SpinBox is
       Pre => X /= "";
       -- ****
 
+      -- ****f* SpinBox/Selection_Adjust
+      -- FUNCTION
+      -- Add characters to the Tk_SpinBox selection. If nothing is selected,
+      -- create a new selection from the beginning to the selected by Index
+      -- character
+      -- PARAMETERS
+      -- SpinBoxWidget - Tk_SpinBox in which selection will be adjusted
+      -- Index         - Index of character to set as the last in the
+      --                 selection
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Selection_Adjust
+     (SpinBoxWidget: in Tk_SpinBox; Index: in String) with
+      Pre => Index /= "";
+      -- ****
+
 private
 
    type Tk_SpinBox is new Tk_Widget with null record;
