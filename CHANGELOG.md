@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 Tag **BREAKING:** means that change breaks compatibility with earlier version
 of the project.
 
+## [Unreleased]
+
+### Added
+- Binding for Tk `spinbox` command: `scan mark`
+
 ## [8.6.4] - 2020-04-30
 
 ### Added
