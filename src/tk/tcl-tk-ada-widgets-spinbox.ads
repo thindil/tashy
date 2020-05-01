@@ -233,14 +233,30 @@ package Tcl.Tk.Ada.Widgets.SpinBox is
       -- PARAMETERS
       -- SpinboxWidget - Tk_SpinBox in which mark will be set
       -- X             - X coordinate of the mark to set
-      -- Y             - Y coordinate of the mark to set
       -- HISTORY
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
       -- SOURCE
-   procedure Scan_Mark(SpinboxWidget: in Tk_SpinBox; X, Y: in String) with
-      Pre => X /= "" and Y /= "";
+   procedure Scan_Mark(SpinboxWidget: in Tk_SpinBox; X: in String) with
+      Pre => X /= "";
+      -- ****
+
+      -- ****f* SpinBox/Scan_DragTo
+      -- FUNCTION
+      -- Computes the difference between its X argument and the X argument to
+      -- the last Scan_Mark procedure for the Tk_SpinBox. It then adjusts the
+      -- view by 10 times the difference in coordinates.
+      -- PARAMETERS
+      -- SpinboxWidget - Tk_SpinBox in which difference will be computed
+      -- X             - X coordinate which difference will be computed
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Scan_DragTo(SpinboxWidget: in Tk_SpinBox; X: in String) with
+      Pre => X /= "";
       -- ****
 
 private

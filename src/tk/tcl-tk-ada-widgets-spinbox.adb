@@ -94,9 +94,14 @@ package body Tcl.Tk.Ada.Widgets.SpinBox is
       Execute_Widget_Command(SpinBoxWidget, "invoke", Element);
    end Invoke;
 
-   procedure Scan_Mark(SpinboxWidget: in Tk_SpinBox; X, Y: in String) is
+   procedure Scan_Mark(SpinboxWidget: in Tk_SpinBox; X: in String) is
    begin
-      Execute_Widget_Command(SpinboxWidget, "scan mark", X & " " & Y);
+      Execute_Widget_Command(SpinboxWidget, "scan mark", X);
    end Scan_Mark;
+
+   procedure Scan_DragTo(SpinboxWidget: in Tk_SpinBox; X: in String) is
+   begin
+      Execute_Widget_Command(SpinboxWidget, "scan dragto", X);
+   end Scan_DragTo;
 
 end Tcl.Tk.Ada.Widgets.SpinBox;
