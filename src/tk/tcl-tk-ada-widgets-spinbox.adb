@@ -115,4 +115,16 @@ package body Tcl.Tk.Ada.Widgets.SpinBox is
       Execute_Widget_Command(SpinBoxWidget, "selection clear");
    end Selection_Clear;
 
+   procedure Selection_Element
+     (SpinBoxWidget: in Tk_SpinBox; Element: in String) is
+   begin
+      Execute_Widget_Command(SpinBoxWidget, "selection element", Element);
+   end Selection_Element;
+
+   function Selection_Element(SpinBoxWidget: in Tk_SpinBox) return String is
+   begin
+      Execute_Widget_Command(SpinBoxWidget, "selection element");
+      return Tcl.Ada.Tcl_GetResult(SpinBoxWidget.Interp);
+   end Selection_Element;
+
 end Tcl.Tk.Ada.Widgets.SpinBox;
