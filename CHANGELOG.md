@@ -8,7 +8,7 @@ of the project.
 
 ### Added
 - Binding for Tk `spinbox` commands: `scan mark`, `scan dragto`,
-  `seletion adjust`, `selection clear`, `selection element`
+  `seletion adjust`, `selection clear`, `selection element`, `selection from`
 
 ### Changed
 - Updated code documentation
