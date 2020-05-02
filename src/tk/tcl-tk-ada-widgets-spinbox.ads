@@ -278,6 +278,19 @@ package Tcl.Tk.Ada.Widgets.SpinBox is
       Pre => Index /= "";
       -- ****
 
+      -- ****f* SpinBox/Selection_Clear
+      -- FUNCTION
+      -- Remove the selection from the selected Tk_SpinBox
+      -- PARAMETERS
+      -- SpinBoxWidget - Tk_SpinBox in which the selection will be cleared
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Selection_Clear(SpinBoxWidget: in Tk_SpinBox);
+   -- ****
+
 private
 
    type Tk_SpinBox is new Tk_Widget with null record;

@@ -110,4 +110,9 @@ package body Tcl.Tk.Ada.Widgets.SpinBox is
       Execute_Widget_Command(SpinBoxWidget, "selection adjust", Index);
    end Selection_Adjust;
 
+   procedure Selection_Clear(SpinBoxWidget: in Tk_SpinBox) is
+   begin
+      Execute_Widget_Command(SpinBoxWidget, "selection clear");
+   end Selection_Clear;
+
 end Tcl.Tk.Ada.Widgets.SpinBox;
