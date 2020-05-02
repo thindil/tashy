@@ -12,6 +12,7 @@ of the project.
 
 ### Changed
 - Updated code documentation
+- Updated README.md
 
 ## [8.6.4] - 2020-04-30
 
