@@ -291,6 +291,39 @@ package Tcl.Tk.Ada.Widgets.SpinBox is
    procedure Selection_Clear(SpinBoxWidget: in Tk_SpinBox);
    -- ****
 
+   -- ****f* SpinBox/Selection_Element (procedure)
+   -- FUNCTION
+   -- Set the element of Tk_SpinBox as the selected element
+   -- PARAMETERS
+   -- SpinBoxWidget - Tk_SpinBox in which element will be selected
+   -- Element       - Name of the element to select. Possible values are
+   --                 "buttonup", "buttondown", "entry" or "none"
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Selection_Element
+     (SpinBoxWidget: in Tk_SpinBox; Element: in String) with
+      Pre => Element in "buttondown" | "buttonup" | "entry" | "none";
+      -- ****
+
+      -- ****f* SpinBox/Selection_Element
+      -- FUNCTION
+      -- Get the currently selected element of the selected Tk_SpinBox
+      -- PARAMETERS
+      -- SpinBoxWidget - Tk_SpinBox which will be queried for the selected
+      --                 element
+      -- RESULT
+      -- Name of the currently selected element in SpinBoxWidget
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Selection_Element(SpinBoxWidget: in Tk_SpinBox) return String;
+   -- ****
+
 private
 
    type Tk_SpinBox is new Tk_Widget with null record;
