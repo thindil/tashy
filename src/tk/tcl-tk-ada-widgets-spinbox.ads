@@ -324,6 +324,23 @@ package Tcl.Tk.Ada.Widgets.SpinBox is
    function Selection_Element(SpinBoxWidget: in Tk_SpinBox) return String;
    -- ****
 
+   -- ****f* SpinBox/Selection_From
+   -- FUNCTION
+   -- Set the selection anchor at the selected character in the selected
+   -- Tk_SpinBox. Does not change the selection
+   -- PARAMETERS
+   -- SpinBoxWidget - Tk_SpinBox in which the selection anchor will be set
+   -- Index         - Index of the character before which the selection anchor
+   --                 will be set
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Selection_From(SpinBoxWidget: in Tk_SpinBox; Index: in String) with
+      Pre => Index /= "";
+      -- ****
+
 private
 
    type Tk_SpinBox is new Tk_Widget with null record;

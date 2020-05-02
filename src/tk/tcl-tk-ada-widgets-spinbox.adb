@@ -127,4 +127,9 @@ package body Tcl.Tk.Ada.Widgets.SpinBox is
       return Tcl.Ada.Tcl_GetResult(SpinBoxWidget.Interp);
    end Selection_Element;
 
+   procedure Selection_From(SpinBoxWidget: in Tk_SpinBox; Index: in String) is
+   begin
+      Execute_Widget_Command(SpinBoxWidget, "selection from", Index);
+   end Selection_From;
+
 end Tcl.Tk.Ada.Widgets.SpinBox;
