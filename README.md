@@ -85,6 +85,12 @@ download:
 
 `docker pull thindil/gnat-tashy-devel`
 
+* For the stable version of the library, you can use this command to download:
+
+`docker pull thindil/gnat-tashy`
+
+Full list of all available versions is [here](https://hub.docker.com/repository/registry-1.docker.io/thindil/gnat-tashy/tags?page=1)
+
 ## Using the library in your project
 
 If you use a GNAT project file in your project, simply add `with "tashy"` at
