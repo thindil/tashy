@@ -1,3 +1,17 @@
+## Table of Contents
+* [General information](#General-information)
+* [Build the library from sources](#Build-the-library-from-sources)
+* [Docker images](#Docker-images)
+* [Using the library in your project](#Using-the-library-in-your-project)
+* [Versioning](#Versioning)
+* [Documentation](#Documentation)
+* [Generating the code documentation](#Generating-the-code-documentation)
+* [Contributing to the project](#Contributing-to-the-project)
+* [Licenses](#Licenses)
+* [TODO](#TODO)
+
+## General information
+
 TASHY is short from Tcl Ada SHell Younger. It is derivate of [TASH](https://github.com/simonjwright/tcladashell)
 
 **IMPORTANT:** TASHY is not compatible with TASH. Here are many breaking
@@ -76,7 +90,7 @@ To remove all generated/compiled files type in the console:
 If you have installed [Bob](https://github.com/thindil/bob) you can type:
 `bob clean`
 
-## Docker
+## Docker images
 The library (in the static version) is available also as a Docker container with
 GNAT GPL version.
 
@@ -115,7 +129,7 @@ https://thindil.github.io/tashy/
 Also, in directory [demos](demos/) you will find some examples of usage of the
 library.
 
-## Generating code documentation
+## Generating the code documentation
 
 To generate (or regenerate) code documentation, you need [ROBODoc](https://rfsber.home.xs4all.nl/Robo/)
 If you have it, in main program directory (where this file is) enter terminal
