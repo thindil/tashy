@@ -145,4 +145,9 @@ package body Tcl.Tk.Ada.Widgets.SpinBox is
         (SpinBoxWidget, "selection range", StartIndex & " " & EndIndex);
    end Selection_Range;
 
+   procedure Selection_To(SpinBoxWidget: in Tk_SpinBox; Index: in String) is
+   begin
+      Execute_Widget_Command(SpinBoxWidget, "selection to", Index);
+   end Selection_To;
+
 end Tcl.Tk.Ada.Widgets.SpinBox;

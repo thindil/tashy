@@ -374,6 +374,24 @@ package Tcl.Tk.Ada.Widgets.SpinBox is
       Pre => StartIndex /= "" and EndIndex /= "";
       -- ****
 
+      -- ****f* SpinBox/Selection_To
+      -- FUNCTION
+      -- Set selection in the selected Tk_SpinBox
+      -- PARAMETERS
+      -- SpinBoxWidget - Tk_SpinBox in which the selection will be set
+      -- Index         - Index of character from which the selection will be
+      --                 set. If is before the selection anchor point, the
+      --                 selection will be to the anchor point. If after, the
+      --                 selection will be from the anchor point to the Index
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Selection_To(SpinBoxWidget: in Tk_SpinBox; Index: in String) with
+      Pre => Index /= "";
+      -- ****
+
 private
 
    type Tk_SpinBox is new Tk_Widget with null record;
