@@ -337,9 +337,21 @@ package Tcl.Tk.Ada.Widgets.SpinBox is
    -- TODO
    -- Replace it with higher level of binding
    -- SOURCE
-   procedure Selection_From(SpinBoxWidget: in Tk_SpinBox; Index: in String) with
+   procedure Selection_From
+     (SpinBoxWidget: in Tk_SpinBox; Index: in String) with
       Pre => Index /= "";
       -- ****
+
+      -- ****f* SpinBox/Selection_Present
+      -- FUNCTION
+      -- Check if any character is selected in the selected Tk_SpinBox
+      -- PARAMETERS
+      -- SpinBoxWidget - Tk_SpinBox which will be queried for the selection
+      -- RESULT
+      -- "1" if any character in SpinBoxWidget is selected, otherwise "0"
+      -- SOURCE
+   function Selection_Present(SpinBoxWidget: in Tk_SpinBox) return String;
+   -- ****
 
 private
 
