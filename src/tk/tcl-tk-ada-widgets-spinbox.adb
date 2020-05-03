@@ -132,4 +132,10 @@ package body Tcl.Tk.Ada.Widgets.SpinBox is
       Execute_Widget_Command(SpinBoxWidget, "selection from", Index);
    end Selection_From;
 
+   function Selection_Present(SpinBoxWidget: in Tk_SpinBox) return String is
+   begin
+      Execute_Widget_Command(SpinBoxWidget, "selection present");
+      return Tcl.Ada.Tcl_GetResult(SpinBoxWidget.Interp);
+   end Selection_Present;
+
 end Tcl.Tk.Ada.Widgets.SpinBox;
