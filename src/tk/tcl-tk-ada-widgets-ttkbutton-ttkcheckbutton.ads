@@ -36,11 +36,10 @@ package Tcl.Tk.Ada.Widgets.TtkButton.TtkCheckButton is
    type Ttk_CheckButton is new Ttk_Button with private;
    -- ****
 
-   -- ****f* TtkCheckButton/Create
+   -- ****f* TtkCheckButton/Create (function)
    -- FUNCTION
    -- Creates a new Ttk_CheckButton in the specified interpreter.
    -- PARAMETERS
-   -- Widgt    - Ttk_CheckButton which will be created
    -- pathName - Tk path (starts with dot) for the widget
    -- options  - Options which will be passed to the widget. Default value is
    --            empty
@@ -54,6 +53,20 @@ package Tcl.Tk.Ada.Widgets.TtkButton.TtkCheckButton is
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Ttk_CheckButton with
       Pre => pathName /= "";
+      -- ****
+
+   -- ****f* TtkCheckButton/Create (procedure)
+   -- FUNCTION
+   -- Creates a new Ttk_CheckButton in the specified interpreter.
+   -- PARAMETERS
+   -- Widgt    - Ttk_CheckButton which will be created
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Default value is
+      --            empty
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+      --            the widget will be created in the "contextual" interpreter.
+      --            Default value is null.
+      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_CheckButton; pathName: in String;
       options: in String := ""; Interp: in Tcl_Interp := null) with
