@@ -150,4 +150,15 @@ package body Tcl.Tk.Ada.Widgets.SpinBox is
       Execute_Widget_Command(SpinBoxWidget, "selection to", Index);
    end Selection_To;
 
+   procedure Set(SpinBoxWidget: in Tk_SpinBox; Value: in String) is
+   begin
+      Execute_Widget_Command(SpinBoxWidget, "set", Value);
+   end Set;
+
+   function Set(SpinBoxWidget: in Tk_SpinBox) return String is
+   begin
+      Execute_Widget_Command(SpinBoxWidget, "set");
+      return Tcl.Ada.Tcl_GetResult(SpinBoxWidget.Interp);
+   end Set;
+
 end Tcl.Tk.Ada.Widgets.SpinBox;

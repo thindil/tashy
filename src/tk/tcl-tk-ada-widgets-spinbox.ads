@@ -392,6 +392,36 @@ package Tcl.Tk.Ada.Widgets.SpinBox is
       Pre => Index /= "";
       -- ****
 
+      -- ****f* SpinBox/Set (procedure)
+      -- FUNCTION
+      -- Set the selected String as a new value for the selected Tk_SpinBox
+      -- PARAMETERS
+      -- SpinBoxWidget - Tk_SpinBox which value will be set
+      -- Value         - Value to set
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Set(SpinBoxWidget: in Tk_SpinBox; Value: in String) with
+      Pre => Value /= "";
+      -- ****
+
+      -- ****f* SpinBox/Set (function)
+      -- FUNCTION
+      -- Get the value for the selected Tk_SpinBox
+      -- PARAMETERS
+      -- SpinBoxWidget - Tk_SpinBox which value will be set
+      -- RESULT
+      -- The current value of the SpinBoxWidget
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Set(SpinBoxWidget: in Tk_SpinBox) return String;
+   -- ****
+
 private
 
    type Tk_SpinBox is new Tk_Widget with null record;
