@@ -349,9 +349,30 @@ package Tcl.Tk.Ada.Widgets.SpinBox is
       -- SpinBoxWidget - Tk_SpinBox which will be queried for the selection
       -- RESULT
       -- "1" if any character in SpinBoxWidget is selected, otherwise "0"
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Selection_Present(SpinBoxWidget: in Tk_SpinBox) return String;
    -- ****
+
+   -- ****f* SpinBox/Selection_Range
+   -- FUNCTION
+   -- Set the characters selection in the selected Tk_SpinBox
+   -- PARAMETERS
+   -- SpinBoxWidget - Tk_SpinBox in which the selection will be set
+   -- StartIndex    - Start index of character of the selection
+   -- EndIndex      - End index of character of the selection
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Selection_Range
+     (SpinBoxWidget: in Tk_SpinBox; StartIndex, EndIndex: in String) with
+      Pre => StartIndex /= "" and EndIndex /= "";
+      -- ****
 
 private
 

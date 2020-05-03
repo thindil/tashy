@@ -138,4 +138,11 @@ package body Tcl.Tk.Ada.Widgets.SpinBox is
       return Tcl.Ada.Tcl_GetResult(SpinBoxWidget.Interp);
    end Selection_Present;
 
+   procedure Selection_Range
+     (SpinBoxWidget: in Tk_SpinBox; StartIndex, EndIndex: in String) is
+   begin
+      Execute_Widget_Command
+        (SpinBoxWidget, "selection range", StartIndex & " " & EndIndex);
+   end Selection_Range;
+
 end Tcl.Tk.Ada.Widgets.SpinBox;
