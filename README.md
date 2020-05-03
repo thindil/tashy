@@ -155,9 +155,7 @@ reasons why the executable file might be covered by the GNU Public License.
 
 ## TODO
 
-* More bindings for Tcl, Tk commands
-* More and better code documentation
-* Your proposition :)
+The whole TODO list you can find [here](https://github.com/thindil/tashy/projects/2)
 
 ----
 
