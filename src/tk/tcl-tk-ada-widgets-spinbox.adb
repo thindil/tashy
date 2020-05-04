@@ -161,4 +161,10 @@ package body Tcl.Tk.Ada.Widgets.SpinBox is
       return Tcl.Ada.Tcl_GetResult(SpinBoxWidget.Interp);
    end Set;
 
+   function Validate(SpinBoxWidget: in Tk_SpinBox) return String is
+   begin
+      Execute_Widget_Command(SpinBoxWidget, "validate");
+      return Tcl.Ada.Tcl_GetResult(SpinBoxWidget.Interp);
+   end Validate;
+
 end Tcl.Tk.Ada.Widgets.SpinBox;

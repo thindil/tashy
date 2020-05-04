@@ -422,6 +422,21 @@ package Tcl.Tk.Ada.Widgets.SpinBox is
    function Set(SpinBoxWidget: in Tk_SpinBox) return String;
    -- ****
 
+   -- ****f* SpinBox/Validate
+   -- FUNCTION
+   -- Force the Tk_SpinBox to revalidate its value
+   -- PARAMETERS
+   -- SpinBoxWidget - Tk_SpinBox which value will be validated
+   -- RESULT
+   -- "1" if value of SpinBoxWidget is valid, otherwise "0"
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function Validate(SpinBoxWidget: in Tk_SpinBox) return String;
+   -- ****
+
 private
 
    type Tk_SpinBox is new Tk_Widget with null record;
