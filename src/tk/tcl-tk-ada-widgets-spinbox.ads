@@ -437,6 +437,40 @@ package Tcl.Tk.Ada.Widgets.SpinBox is
    function Validate(SpinBoxWidget: in Tk_SpinBox) return String;
    -- ****
 
+   -- ****f* SpinBox/XView (function)
+   -- FUNCTION
+   -- Get which horizontal fraction of the Tk_SpinBox is visible
+   -- PARAMETERS
+   -- SpinBoxWidget - Tk_SpinBox which will be queried for visibility
+   -- RESULT
+   -- Pair of elements: first element is the start of horizontal fraction of
+   -- the SpinBoxWidget which is visible, second is the end of horizontal
+   -- fraction of the SpinBoxWidget which is visible.
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function XView(SpinBoxWidget: in Tk_SpinBox) return String;
+   -- ****
+
+   -- ****f* SpinBox/XView (procedure)
+   -- FUNCTION
+   -- Adjusts the view in the window so that the character position given by
+   -- index is displayed at the left edge of the window
+   -- PARAMETERS
+   -- SpinBoxWidget - Tk_SpinBox which will be adjusted
+   -- Index         - Character index to which SpinBoxWidget will be adjusted.
+   --                 Character position starts from 0
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure XView(SpinBoxWidget: in Tk_SpinBox; Index: in String) with
+      Pre => Index /= "";
+      -- ****
+
 private
 
    type Tk_SpinBox is new Tk_Widget with null record;

@@ -167,4 +167,15 @@ package body Tcl.Tk.Ada.Widgets.SpinBox is
       return Tcl.Ada.Tcl_GetResult(SpinBoxWidget.Interp);
    end Validate;
 
+   function XView(SpinBoxWidget: in Tk_SpinBox) return String is
+   begin
+      Execute_Widget_Command(SpinBoxWidget, "xview");
+      return Tcl.Ada.Tcl_GetResult(SpinBoxWidget.Interp);
+   end XView;
+
+   procedure XView(SpinBoxWidget: in Tk_SpinBox; Index: in String) is
+   begin
+      Execute_Widget_Command(SpinBoxWidget, "xview", Index);
+   end XView;
+
 end Tcl.Tk.Ada.Widgets.SpinBox;
