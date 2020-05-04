@@ -36,11 +36,10 @@ package Tcl.Tk.Ada.Widgets.TtkButton.TtkRadioButton is
    type Ttk_RadioButton is new Ttk_Button with private;
    -- ****
 
-   -- ****f* TtkRadioButton/Create
+   -- ****f* TtkRadioButton/Create (function)
    -- FUNCTION
    -- Creates a new Ttk_RadioButton in the specified interpreter.
    -- PARAMETERS
-   -- Widgt    - Ttk_RadioButton which will be created
    -- pathName - Tk path (starts with dot) for the widget
    -- options  - Options which will be passed to the widget. Default value is
    --            empty
@@ -54,6 +53,20 @@ package Tcl.Tk.Ada.Widgets.TtkButton.TtkRadioButton is
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Ttk_RadioButton with
       Pre => pathName /= "";
+      -- ****
+
+   -- ****f* TtkRadioButton/Create (procedure)
+   -- FUNCTION
+   -- Creates a new Ttk_RadioButton in the specified interpreter.
+   -- PARAMETERS
+   -- Widgt    - Ttk_RadioButton which will be created
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Default value is
+      --            empty
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+      --            the widget will be created in the "contextual" interpreter.
+      --            Default value is null.
+      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_RadioButton; pathName: in String;
       options: in String := ""; Interp: in Tcl_Interp := null) with
