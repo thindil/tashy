@@ -489,6 +489,24 @@ package Tcl.Tk.Ada.Widgets.SpinBox is
       Pre => Fraction /= "";
       -- ****
 
+      -- ****f* SpinBox/Xview_Scroll
+      -- FUNCTION
+      -- Shift the view in the window on left or right according to Number and
+      -- What.
+      -- PARAMETERS
+      -- SpinBoxWidget - Tk_SpinBox which view will be shifted
+      -- Number        - The amount of What to shift the SpinBoxWidget
+      -- What          - Type of amount to move. Can be "units" or "pages"
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Xview_Scroll
+     (SpinBoxWidget: in Tk_SpinBox; Number, What: in String) with
+      Pre => Number /= "" and (What = "units" or What = "pages");
+      -- ****
+
 private
 
    type Tk_SpinBox is new Tk_Widget with null record;
