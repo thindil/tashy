@@ -471,6 +471,24 @@ package Tcl.Tk.Ada.Widgets.SpinBox is
       Pre => Index /= "";
       -- ****
 
+   -- ****f* SpinBox/Xview_Move_To
+   -- FUNCTION
+   -- Adjusts the view in the window so that fraction of the total width of
+   -- the Tk_SpinBox is off-screen to the left.
+   -- PARAMETERS
+   -- SpinBoxWidget - Tk_SpinBox which view will be adjusted
+   -- Fraction      - Fraction of the SpinBoxWidget to move. Must be between 0
+      --                 and 1
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Xview_Move_To
+     (SpinBoxWidget: in Tk_SpinBox; Fraction: in String) with
+      Pre => Fraction /= "";
+      -- ****
+
 private
 
    type Tk_SpinBox is new Tk_Widget with null record;
