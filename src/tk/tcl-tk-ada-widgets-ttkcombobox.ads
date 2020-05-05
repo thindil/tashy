@@ -43,11 +43,10 @@ package Tcl.Tk.Ada.Widgets.TtkComboBox is
    type Ttk_ComboBox is new Tk_Widget with private;
    -- ****
 
-   -- ****f* TtkComboBox/Create
+   -- ****f* TtkComboBox/Create (function)
    -- FUNCTION
    -- Creates a new Ttk_ComboBox in the specified interpreter.
    -- PARAMETERS
-   -- Widgt    - Ttk_ComboBox which will be created
    -- pathName - Tk path (starts with dot) for the widget
    -- options  - Options which will be passed to the widget. Default value is
    --            empty
@@ -61,6 +60,20 @@ package Tcl.Tk.Ada.Widgets.TtkComboBox is
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Ttk_ComboBox with
       Pre => pathName /= "";
+      -- ****
+
+   -- ****f* TtkComboBox/Create (procedure)
+   -- FUNCTION
+   -- Creates a new Ttk_ComboBox in the specified interpreter.
+   -- PARAMETERS
+   -- Widgt    - Ttk_ComboBox which will be created
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Default value is
+      --            empty
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+      --            the widget will be created in the "contextual" interpreter.
+      --            Default value is null.
+      -- SOURCE
    procedure Create
      (Widgt: out Ttk_ComboBox; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
