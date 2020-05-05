@@ -178,4 +178,10 @@ package body Tcl.Tk.Ada.Widgets.SpinBox is
       Execute_Widget_Command(SpinBoxWidget, "xview", Index);
    end XView;
 
+   procedure Xview_Move_To
+     (SpinBoxWidget: in Tk_SpinBox; Fraction: in String) is
+   begin
+      Execute_Widget_Command(SpinBoxWidget, "xview moveto", Fraction);
+   end Xview_Move_To;
+
 end Tcl.Tk.Ada.Widgets.SpinBox;
