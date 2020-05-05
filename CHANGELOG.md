@@ -11,6 +11,7 @@ of the project.
   `seletion adjust`, `selection clear`, `selection element`, `selection from`,
   `selection present`, `selection range`, `selection to`, `set`, `validate`,
   `xview`, `xview moveto`, `xview scroll`
+- Binding for Tk `entry` command: `bbox`
 
 ### Changed
 - Updated code documentation
