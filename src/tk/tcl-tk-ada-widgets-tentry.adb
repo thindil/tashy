@@ -46,6 +46,12 @@ package body Tcl.Tk.Ada.Widgets.TEntry is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   function BBox(EntryWidget: in Tk_Entry; Index: in String) return String is
+   begin
+      Execute_Widget_Command(EntryWidget, "bbox", Index);
+      return Tcl.Ada.Tcl_GetResult(EntryWidget.Interp);
+   end BBox;
+
    procedure Delete
      (TextEntry: in Tk_Entry; FirstIndex: in String;
       LastIndex: in String := "") is
