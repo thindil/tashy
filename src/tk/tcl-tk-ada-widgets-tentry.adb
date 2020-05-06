@@ -71,11 +71,28 @@ package body Tcl.Tk.Ada.Widgets.TEntry is
       Execute_Widget_Command(TextEntry, "icursor", Index);
    end ICursor;
 
+   function Entry_Index
+     (TextEntry: in Tk_Entry; Index: in String) return String is
+   begin
+      Execute_Widget_Command(TextEntry, "index", Index);
+      return Tcl.Ada.Tcl_GetResult(TextEntry.Interp);
+   end Entry_Index;
+
    procedure Insert
      (TextEntry: in Tk_Entry; Index: in String; Text: in String) is
    begin
       Execute_Widget_Command
         (TextEntry, "insert", Index & " " & "{" & Text & "}");
    end Insert;
+
+   procedure Scan_Mark(TextEntry: in Tk_Entry; X: in String) is
+   begin
+      Execute_Widget_Command(TextEntry, "scan mark", X);
+   end Scan_Mark;
+
+   procedure Scan_DragTo(TextEntry: in Tk_Entry; X: in String) is
+   begin
+      Execute_Widget_Command(TextEntry, "scan dragto", X);
+   end Scan_DragTo;
 
 end Tcl.Tk.Ada.Widgets.TEntry;
