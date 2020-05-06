@@ -135,6 +135,24 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       Pre => Index /= "";
       -- ****
 
+      -- ****f* TEntry/Entry_Index
+      -- FUNCTION
+      -- Get numerical index of character from the selected Index
+      -- PARAMETERS
+      -- TextEntry - Tk_Entry which will be queried for index
+      -- Index         - Index of character which numeric index will be taken
+      -- RESULT
+      -- Numerical index of the selected character
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Entry_Index
+     (TextEntry: in Tk_Entry; Index: in String) return String with
+      Pre => Index /= "";
+      -- ****
+
       -- ****f* TEntry/Insert
       -- FUNCTION
       -- Insert text at selected index to the selected Tk_Entry
@@ -146,6 +164,38 @@ package Tcl.Tk.Ada.Widgets.TEntry is
    procedure Insert
      (TextEntry: in Tk_Entry; Index: in String; Text: in String) with
       Pre => Index /= "" and Text /= "";
+      -- ****
+
+      -- ****f* TEntry/Scan_Mark
+      -- FUNCTION
+      -- Sets starting position for scan in the selected Tk_Entry
+      -- PARAMETERS
+      -- TextEntry - Tk_Entry in which mark will be set
+      -- X         - X coordinate of the mark to set
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Scan_Mark(TextEntry: in Tk_Entry; X: in String) with
+      Pre => X /= "";
+      -- ****
+
+      -- ****f* TEntry/Scan_DragTo
+      -- FUNCTION
+      -- Computes the difference between its X argument and the X argument to
+      -- the last Scan_Mark procedure for the Tk_Entry. It then adjusts the
+      -- view by 10 times the difference in coordinates.
+      -- PARAMETERS
+      -- TextEntry - Tk_Entry in which difference will be computed
+      -- X         - X coordinate which difference will be computed
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Scan_DragTo(TextEntry: in Tk_Entry; X: in String) with
+      Pre => X /= "";
       -- ****
 
 private
