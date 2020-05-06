@@ -46,10 +46,10 @@ package body Tcl.Tk.Ada.Widgets.TEntry is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
-   function BBox(EntryWidget: in Tk_Entry; Index: in String) return String is
+   function BBox(TextEntry: in Tk_Entry; Index: in String) return String is
    begin
-      Execute_Widget_Command(EntryWidget, "bbox", Index);
-      return Tcl.Ada.Tcl_GetResult(EntryWidget.Interp);
+      Execute_Widget_Command(TextEntry, "bbox", Index);
+      return Tcl.Ada.Tcl_GetResult(TextEntry.Interp);
    end BBox;
 
    procedure Delete
@@ -65,6 +65,11 @@ package body Tcl.Tk.Ada.Widgets.TEntry is
       Execute_Widget_Command(Widgt, "get");
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end Get;
+
+   procedure ICursor(TextEntry: in Tk_Entry; Index: in String) is
+   begin
+      Execute_Widget_Command(TextEntry, "icursor", Index);
+   end ICursor;
 
    procedure Insert
      (TextEntry: in Tk_Entry; Index: in String; Text: in String) is
