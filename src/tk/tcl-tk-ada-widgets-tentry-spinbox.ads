@@ -27,11 +27,11 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
--- ****h* Widgets/SpinBox
+-- ****h* TEntry/SpinBox
 -- FUNCTION
 -- Provides code for manipulate Tk widget SpinBox
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.SpinBox is
+package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
 -- ****
 
    -- ****t* SpinBox/Tk_SpinBox
@@ -40,7 +40,7 @@ package Tcl.Tk.Ada.Widgets.SpinBox is
    -- Each of the derived widgets redefines the Create subprogram
    -- in order to create the correct type of widget.
    -- SOURCE
-   type Tk_SpinBox is new Tk_Widget with private;
+   type Tk_SpinBox is new Tk_Entry with private;
    -- ****
 
    -- ****f* SpinBox/Create (function)
@@ -509,6 +509,6 @@ package Tcl.Tk.Ada.Widgets.SpinBox is
 
 private
 
-   type Tk_SpinBox is new Tk_Widget with null record;
+   type Tk_SpinBox is new Tk_Entry with null record;
 
-end Tcl.Tk.Ada.Widgets.SpinBox;
+end Tcl.Tk.Ada.Widgets.TEntry.SpinBox;

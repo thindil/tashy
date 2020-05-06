@@ -22,7 +22,7 @@
 
 with Tcl.Ada;
 
-package body Tcl.Tk.Ada.Widgets.SpinBox is
+package body Tcl.Tk.Ada.Widgets.TEntry.SpinBox is
 
    function Create
      (pathName: in String; options: in String := "";
@@ -191,4 +191,4 @@ package body Tcl.Tk.Ada.Widgets.SpinBox is
         (SpinBoxWidget, "xview scroll", Number & " " & What);
    end Xview_Scroll;
 
-end Tcl.Tk.Ada.Widgets.SpinBox;
+end Tcl.Tk.Ada.Widgets.TEntry.SpinBox;
