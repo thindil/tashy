@@ -46,30 +46,6 @@ package body Tcl.Tk.Ada.Widgets.TEntry.SpinBox is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
-   function BBox
-     (SpinBoxWidget: in Tk_SpinBox; Index: in String) return String is
-   begin
-      Execute_Widget_Command(SpinBoxWidget, "bbox", Index);
-      return Tcl.Ada.Tcl_GetResult(SpinBoxWidget.Interp);
-   end BBox;
-
-   procedure Delete
-     (SpinBoxWidget: in Tk_SpinBox; First: in String; Last: in String := "") is
-   begin
-      Execute_Widget_Command(SpinBoxWidget, "delete", First & " " & Last);
-   end Delete;
-
-   function Get(SpinBoxWidget: in Tk_SpinBox) return String is
-   begin
-      Execute_Widget_Command(SpinBoxWidget, "get");
-      return Tcl.Ada.Tcl_GetResult(SpinBoxWidget.Interp);
-   end Get;
-
-   procedure ICursor(SpinBoxWidget: in Tk_SpinBox; Index: in String) is
-   begin
-      Execute_Widget_Command(SpinBoxWidget, "icursor", Index);
-   end ICursor;
-
    function Identify
      (SpinBoxWidget: in Tk_SpinBox; X, Y: in String) return String is
    begin
@@ -77,32 +53,10 @@ package body Tcl.Tk.Ada.Widgets.TEntry.SpinBox is
       return Tcl.Ada.Tcl_GetResult(SpinBoxWidget.Interp);
    end Identify;
 
-   function SpinBox_Index
-     (SpinBoxWidget: in Tk_SpinBox; Index: in String) return String is
-   begin
-      Execute_Widget_Command(SpinBoxWidget, "index", Index);
-      return Tcl.Ada.Tcl_GetResult(SpinBoxWidget.Interp);
-   end SpinBox_Index;
-
-   procedure Insert(SpinBoxWidget: in Tk_SpinBox; Index, Text: in String) is
-   begin
-      Execute_Widget_Command(SpinBoxWidget, "insert", Index & " " & Text);
-   end Insert;
-
    procedure Invoke(SpinBoxWidget: in Tk_SpinBox; Element: in String) is
    begin
       Execute_Widget_Command(SpinBoxWidget, "invoke", Element);
    end Invoke;
-
-   procedure Scan_Mark(SpinboxWidget: in Tk_SpinBox; X: in String) is
-   begin
-      Execute_Widget_Command(SpinboxWidget, "scan mark", X);
-   end Scan_Mark;
-
-   procedure Scan_DragTo(SpinboxWidget: in Tk_SpinBox; X: in String) is
-   begin
-      Execute_Widget_Command(SpinboxWidget, "scan dragto", X);
-   end Scan_DragTo;
 
    procedure Selection_Adjust
      (SpinBoxWidget: in Tk_SpinBox; Index: in String) is
