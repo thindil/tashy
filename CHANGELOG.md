@@ -16,6 +16,7 @@ of the project.
 ### Changed
 - Updated code documentation
 - Updated README.md
+- **BREAKING:** Moved Tcl.Tk.Widgets.SpinBox to Tcl.Tk.Widgets.TEntry.SpinBox
 
 ## [8.6.4] - 2020-04-30
 
