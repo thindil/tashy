@@ -95,4 +95,14 @@ package body Tcl.Tk.Ada.Widgets.TEntry is
       Execute_Widget_Command(TextEntry, "scan dragto", X);
    end Scan_DragTo;
 
+   procedure Selection_Adjust(TextEntry: in Tk_Entry; Index: in String) is
+   begin
+      Execute_Widget_Command(TextEntry, "selection adjust", Index);
+   end Selection_Adjust;
+
+   procedure Selection_Clear(TextEntry: in Tk_Entry) is
+   begin
+      Execute_Widget_Command(TextEntry, "selection clear");
+   end Selection_Clear;
+
 end Tcl.Tk.Ada.Widgets.TEntry;

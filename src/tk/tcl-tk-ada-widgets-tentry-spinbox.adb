@@ -58,17 +58,6 @@ package body Tcl.Tk.Ada.Widgets.TEntry.SpinBox is
       Execute_Widget_Command(SpinBoxWidget, "invoke", Element);
    end Invoke;
 
-   procedure Selection_Adjust
-     (SpinBoxWidget: in Tk_SpinBox; Index: in String) is
-   begin
-      Execute_Widget_Command(SpinBoxWidget, "selection adjust", Index);
-   end Selection_Adjust;
-
-   procedure Selection_Clear(SpinBoxWidget: in Tk_SpinBox) is
-   begin
-      Execute_Widget_Command(SpinBoxWidget, "selection clear");
-   end Selection_Clear;
-
    procedure Selection_Element
      (SpinBoxWidget: in Tk_SpinBox; Element: in String) is
    begin
