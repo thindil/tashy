@@ -107,7 +107,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       Pre => FirstIndex /= "";
       -- ****
 
-      -- ****f* TEntry/get
+      -- ****f* TEntry/Get
       -- FUNCTION
       -- Get entry's text.
       -- PARAMETERS
@@ -197,6 +197,37 @@ package Tcl.Tk.Ada.Widgets.TEntry is
    procedure Scan_DragTo(TextEntry: in Tk_Entry; X: in String) with
       Pre => X /= "";
       -- ****
+
+      -- ****f* TEntry/Selection_Adjust
+      -- FUNCTION
+      -- Add characters to the Tk_Entry selection. If nothing is selected,
+      -- create a new selection from the beginning to the selected by Index
+      -- character
+      -- PARAMETERS
+      -- TextEntry - Tk_Entry in which selection will be adjusted
+      -- Index         - Index of character to set as the last in the
+      --                 selection
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Selection_Adjust(TextEntry: in Tk_Entry; Index: in String) with
+      Pre => Index /= "";
+      -- ****
+
+      -- ****f* TEntry/Selection_Clear
+      -- FUNCTION
+      -- Remove the selection from the selected Tk_Entry
+      -- PARAMETERS
+      -- TextEntry - Tk_Entry in which the selection will be cleared
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Selection_Clear(TextEntry: in Tk_Entry);
+   -- ****
 
 private
 
