@@ -229,6 +229,74 @@ package Tcl.Tk.Ada.Widgets.TEntry is
    procedure Selection_Clear(TextEntry: in Tk_Entry);
    -- ****
 
+   -- ****f* TEntry/Selection_From
+   -- FUNCTION
+   -- Set the selection anchor at the selected character in the selected
+   -- Tk_Entry. Does not change the selection
+   -- PARAMETERS
+   -- TextEntry - Tk_Entry in which the selection anchor will be set
+   -- Index     - Index of the character before which the selection anchor
+   --             will be set
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Selection_From
+     (TextEntry: in Tk_Entry; Index: in String) with
+      Pre => Index /= "";
+      -- ****
+
+      -- ****f* TEntry/Selection_Present
+      -- FUNCTION
+      -- Check if any character is selected in the selected Tk_Entry
+      -- PARAMETERS
+      -- TextEntry - Tk_Entry which will be queried for the selection
+      -- RESULT
+      -- "1" if any character in TextEntry is selected, otherwise "0"
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Selection_Present(TextEntry: in Tk_Entry) return String;
+   -- ****
+
+   -- ****f* TEntry/Selection_Range
+   -- FUNCTION
+   -- Set the characters selection in the selected Tk_Entry
+   -- PARAMETERS
+   -- TextEntry  - Tk_Entry in which the selection will be set
+   -- StartIndex - Start index of character of the selection
+   -- EndIndex   - End index of character of the selection
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Selection_Range
+     (TextEntry: in Tk_Entry; StartIndex, EndIndex: in String) with
+      Pre => StartIndex /= "" and EndIndex /= "";
+      -- ****
+
+      -- ****f* TEntry/Selection_To
+      -- FUNCTION
+      -- Set selection in the selected Tk_Entry
+      -- PARAMETERS
+      -- TextEntry - Tk_Entry in which the selection will be set
+      -- Index     - Index of character from which the selection will be set.
+      --             If is before the selection anchor point, the selection
+      --             will be to the anchor point. If after, the selection will
+      --             be from the anchor point to the Index
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Selection_To(TextEntry: in Tk_Entry; Index: in String) with
+      Pre => Index /= "";
+      -- ****
+
 private
 
    type Tk_Entry is new Tk_Widget with null record;
