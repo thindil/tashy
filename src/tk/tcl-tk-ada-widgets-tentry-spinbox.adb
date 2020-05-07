@@ -70,29 +70,6 @@ package body Tcl.Tk.Ada.Widgets.TEntry.SpinBox is
       return Tcl.Ada.Tcl_GetResult(SpinBoxWidget.Interp);
    end Selection_Element;
 
-   procedure Selection_From(SpinBoxWidget: in Tk_SpinBox; Index: in String) is
-   begin
-      Execute_Widget_Command(SpinBoxWidget, "selection from", Index);
-   end Selection_From;
-
-   function Selection_Present(SpinBoxWidget: in Tk_SpinBox) return String is
-   begin
-      Execute_Widget_Command(SpinBoxWidget, "selection present");
-      return Tcl.Ada.Tcl_GetResult(SpinBoxWidget.Interp);
-   end Selection_Present;
-
-   procedure Selection_Range
-     (SpinBoxWidget: in Tk_SpinBox; StartIndex, EndIndex: in String) is
-   begin
-      Execute_Widget_Command
-        (SpinBoxWidget, "selection range", StartIndex & " " & EndIndex);
-   end Selection_Range;
-
-   procedure Selection_To(SpinBoxWidget: in Tk_SpinBox; Index: in String) is
-   begin
-      Execute_Widget_Command(SpinBoxWidget, "selection to", Index);
-   end Selection_To;
-
    procedure Set(SpinBoxWidget: in Tk_SpinBox; Value: in String) is
    begin
       Execute_Widget_Command(SpinBoxWidget, "set", Value);

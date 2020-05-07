@@ -105,4 +105,27 @@ package body Tcl.Tk.Ada.Widgets.TEntry is
       Execute_Widget_Command(TextEntry, "selection clear");
    end Selection_Clear;
 
+   procedure Selection_From(TextEntry: in Tk_Entry; Index: in String) is
+   begin
+      Execute_Widget_Command(TextEntry, "selection from", Index);
+   end Selection_From;
+
+   function Selection_Present(TextEntry: in Tk_Entry) return String is
+   begin
+      Execute_Widget_Command(TextEntry, "selection present");
+      return Tcl.Ada.Tcl_GetResult(TextEntry.Interp);
+   end Selection_Present;
+
+   procedure Selection_Range
+     (TextEntry: in Tk_Entry; StartIndex, EndIndex: in String) is
+   begin
+      Execute_Widget_Command
+        (TextEntry, "selection range", StartIndex & " " & EndIndex);
+   end Selection_Range;
+
+   procedure Selection_To(TextEntry: in Tk_Entry; Index: in String) is
+   begin
+      Execute_Widget_Command(TextEntry, "selection to", Index);
+   end Selection_To;
+
 end Tcl.Tk.Ada.Widgets.TEntry;
