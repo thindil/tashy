@@ -88,7 +88,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- TODO
       -- Replace it with higher level of binding
       -- SOURCE
-   function BBox(TextEntry: in Tk_Entry; Index: in String) return String with
+   function BBox(TextEntry: in Tk_Entry'Class; Index: in String) return String with
       Pre => Index /= "";
       -- ****
 
@@ -102,7 +102,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       --              character. Default is empty.
       -- SOURCE
    procedure Delete
-     (TextEntry: in Tk_Entry; FirstIndex: in String;
+     (TextEntry: in Tk_Entry'Class; FirstIndex: in String;
       LastIndex: in String := "") with
       Pre => FirstIndex /= "";
       -- ****
@@ -115,7 +115,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- RESULT
       -- Returns the entry's string.
       -- SOURCE
-   function Get(Widgt: in Tk_Entry) return String;
+   function Get(Widgt: in Tk_Entry'Class) return String;
    -- ****
 
    -- ****f* TEntry/ICursor
@@ -131,7 +131,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
    -- TODO
    -- Replace it with higher level of binding
    -- SOURCE
-   procedure ICursor(TextEntry: in Tk_Entry; Index: in String) with
+   procedure ICursor(TextEntry: in Tk_Entry'Class; Index: in String) with
       Pre => Index /= "";
       -- ****
 
@@ -149,7 +149,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- Replace it with higher level of binding
       -- SOURCE
    function Entry_Index
-     (TextEntry: in Tk_Entry; Index: in String) return String with
+     (TextEntry: in Tk_Entry'Class; Index: in String) return String with
       Pre => Index /= "";
       -- ****
 
@@ -162,7 +162,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- Text      - Text to insert
       -- SOURCE
    procedure Insert
-     (TextEntry: in Tk_Entry; Index: in String; Text: in String) with
+     (TextEntry: in Tk_Entry'Class; Index: in String; Text: in String) with
       Pre => Index /= "" and Text /= "";
       -- ****
 
@@ -177,7 +177,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- TODO
       -- Replace it with higher level of binding
       -- SOURCE
-   procedure Scan_Mark(TextEntry: in Tk_Entry; X: in String) with
+   procedure Scan_Mark(TextEntry: in Tk_Entry'Class; X: in String) with
       Pre => X /= "";
       -- ****
 
@@ -194,7 +194,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- TODO
       -- Replace it with higher level of binding
       -- SOURCE
-   procedure Scan_DragTo(TextEntry: in Tk_Entry; X: in String) with
+   procedure Scan_DragTo(TextEntry: in Tk_Entry'Class; X: in String) with
       Pre => X /= "";
       -- ****
 
@@ -212,7 +212,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- TODO
       -- Replace it with higher level of binding
       -- SOURCE
-   procedure Selection_Adjust(TextEntry: in Tk_Entry; Index: in String) with
+   procedure Selection_Adjust(TextEntry: in Tk_Entry'Class; Index: in String) with
       Pre => Index /= "";
       -- ****
 
@@ -226,7 +226,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- TODO
       -- Replace it with higher level of binding
       -- SOURCE
-   procedure Selection_Clear(TextEntry: in Tk_Entry);
+   procedure Selection_Clear(TextEntry: in Tk_Entry'Class);
    -- ****
 
    -- ****f* TEntry/Selection_From
@@ -243,7 +243,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
    -- Replace it with higher level of binding
    -- SOURCE
    procedure Selection_From
-     (TextEntry: in Tk_Entry; Index: in String) with
+     (TextEntry: in Tk_Entry'Class; Index: in String) with
       Pre => Index /= "";
       -- ****
 
@@ -259,7 +259,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- TODO
       -- Replace it with higher level of binding
       -- SOURCE
-   function Selection_Present(TextEntry: in Tk_Entry) return String;
+   function Selection_Present(TextEntry: in Tk_Entry'Class) return String;
    -- ****
 
    -- ****f* TEntry/Selection_Range
@@ -275,7 +275,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
    -- Replace it with higher level of binding
    -- SOURCE
    procedure Selection_Range
-     (TextEntry: in Tk_Entry; StartIndex, EndIndex: in String) with
+     (TextEntry: in Tk_Entry'Class; StartIndex, EndIndex: in String) with
       Pre => StartIndex /= "" and EndIndex /= "";
       -- ****
 
@@ -293,7 +293,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- TODO
       -- Replace it with higher level of binding
       -- SOURCE
-   procedure Selection_To(TextEntry: in Tk_Entry; Index: in String) with
+   procedure Selection_To(TextEntry: in Tk_Entry'Class; Index: in String) with
       Pre => Index /= "";
       -- ****
 
