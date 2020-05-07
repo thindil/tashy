@@ -7,12 +7,11 @@ of the project.
 ## [Unreleased]
 
 ### Added
-- Binding for Tk `spinbox` commands: `scan mark`, `scan dragto`,
-  `seletion adjust`, `selection clear`, `selection element`, `selection from`,
+- Binding for Tk `spinbox` commands: `selection element`, `selection from`,
   `selection present`, `selection range`, `selection to`, `set`, `validate`,
   `xview`, `xview moveto`, `xview scroll`
 - Binding for Tk `entry` commands: `bbox`, `icursor`, `index`, `scan mark`,
-  `scan dragto`
+  `scan dragto`, `seletion adjust`, `selection clear`
 
 ### Changed
 - Updated code documentation
