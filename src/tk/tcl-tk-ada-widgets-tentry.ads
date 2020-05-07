@@ -88,7 +88,8 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- TODO
       -- Replace it with higher level of binding
       -- SOURCE
-   function BBox(TextEntry: in Tk_Entry'Class; Index: in String) return String with
+   function BBox
+     (TextEntry: in Tk_Entry'Class; Index: in String) return String with
       Pre => Index /= "";
       -- ****
 
@@ -212,7 +213,8 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- TODO
       -- Replace it with higher level of binding
       -- SOURCE
-   procedure Selection_Adjust(TextEntry: in Tk_Entry'Class; Index: in String) with
+   procedure Selection_Adjust
+     (TextEntry: in Tk_Entry'Class; Index: in String) with
       Pre => Index /= "";
       -- ****
 
@@ -295,6 +297,91 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- SOURCE
    procedure Selection_To(TextEntry: in Tk_Entry'Class; Index: in String) with
       Pre => Index /= "";
+      -- ****
+
+      -- ****f* TEntry/Validate
+      -- FUNCTION
+      -- Force the Tk_Entry to revalidate its value
+      -- PARAMETERS
+      -- TextEntry - Tk_Entry which value will be validated
+      -- RESULT
+      -- "1" if value of TextEntry is valid, otherwise "0"
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Validate(TextEntry: in Tk_Entry'Class) return String;
+   -- ****
+
+   -- ****f* TEntry/XView (function)
+   -- FUNCTION
+   -- Get which horizontal fraction of the Tk_Entry is visible
+   -- PARAMETERS
+   -- TextEntry - Tk_Entry which will be queried for visibility
+   -- RESULT
+   -- Pair of elements: first element is the start of horizontal fraction of
+   -- the TextEntry which is visible, second is the end of horizontal
+   -- fraction of the TextEntry which is visible.
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function XView(TextEntry: in Tk_Entry'Class) return String;
+   -- ****
+
+   -- ****f* TEntry/XView (procedure)
+   -- FUNCTION
+   -- Adjusts the view in the window so that the character position given by
+   -- index is displayed at the left edge of the window
+   -- PARAMETERS
+   -- TextEntry - Tk_Entry which will be adjusted
+   -- Index         - Character index to which TextEntry will be adjusted.
+   --                 Character position starts from 0
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure XView(TextEntry: in Tk_Entry'Class; Index: in String) with
+      Pre => Index /= "";
+      -- ****
+
+      -- ****f* TEntry/Xview_Move_To
+      -- FUNCTION
+      -- Adjusts the view in the window so that fraction of the total width of
+      -- the Tk_Entry is off-screen to the left.
+      -- PARAMETERS
+      -- TextEntry - Tk_Entry which view will be adjusted
+      -- Fraction      - Fraction of the TextEntry to move. Must be between 0
+      --                 and 1
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Xview_Move_To
+     (TextEntry: in Tk_Entry'Class; Fraction: in String) with
+      Pre => Fraction /= "";
+      -- ****
+
+      -- ****f* TEntry/Xview_Scroll
+      -- FUNCTION
+      -- Shift the view in the window on left or right according to Number and
+      -- What.
+      -- PARAMETERS
+      -- TextEntry - Tk_Entry which view will be shifted
+      -- Number        - The amount of What to shift the TextEntry
+      -- What          - Type of amount to move. Can be "units" or "pages"
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Xview_Scroll
+     (TextEntry: in Tk_Entry'Class; Number, What: in String) with
+      Pre => Number /= "" and (What = "units" or What = "pages");
       -- ****
 
 private

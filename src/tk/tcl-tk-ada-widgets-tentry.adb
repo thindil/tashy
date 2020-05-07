@@ -46,7 +46,8 @@ package body Tcl.Tk.Ada.Widgets.TEntry is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
-   function BBox(TextEntry: in Tk_Entry'Class; Index: in String) return String is
+   function BBox
+     (TextEntry: in Tk_Entry'Class; Index: in String) return String is
    begin
       Execute_Widget_Command(TextEntry, "bbox", Index);
       return Tcl.Ada.Tcl_GetResult(TextEntry.Interp);
@@ -95,7 +96,8 @@ package body Tcl.Tk.Ada.Widgets.TEntry is
       Execute_Widget_Command(TextEntry, "scan dragto", X);
    end Scan_DragTo;
 
-   procedure Selection_Adjust(TextEntry: in Tk_Entry'Class; Index: in String) is
+   procedure Selection_Adjust
+     (TextEntry: in Tk_Entry'Class; Index: in String) is
    begin
       Execute_Widget_Command(TextEntry, "selection adjust", Index);
    end Selection_Adjust;
@@ -127,5 +129,34 @@ package body Tcl.Tk.Ada.Widgets.TEntry is
    begin
       Execute_Widget_Command(TextEntry, "selection to", Index);
    end Selection_To;
+
+   function Validate(TextEntry: in Tk_Entry'Class) return String is
+   begin
+      Execute_Widget_Command(TextEntry, "validate");
+      return Tcl.Ada.Tcl_GetResult(TextEntry.Interp);
+   end Validate;
+
+   function XView(TextEntry: in Tk_Entry'Class) return String is
+   begin
+      Execute_Widget_Command(TextEntry, "xview");
+      return Tcl.Ada.Tcl_GetResult(TextEntry.Interp);
+   end XView;
+
+   procedure XView(TextEntry: in Tk_Entry'Class; Index: in String) is
+   begin
+      Execute_Widget_Command(TextEntry, "xview", Index);
+   end XView;
+
+   procedure Xview_Move_To
+     (TextEntry: in Tk_Entry'Class; Fraction: in String) is
+   begin
+      Execute_Widget_Command(TextEntry, "xview moveto", Fraction);
+   end Xview_Move_To;
+
+   procedure Xview_Scroll
+     (TextEntry: in Tk_Entry'Class; Number, What: in String) is
+   begin
+      Execute_Widget_Command(TextEntry, "xview scroll", Number & " " & What);
+   end Xview_Scroll;
 
 end Tcl.Tk.Ada.Widgets.TEntry;

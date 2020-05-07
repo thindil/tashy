@@ -81,34 +81,4 @@ package body Tcl.Tk.Ada.Widgets.TEntry.SpinBox is
       return Tcl.Ada.Tcl_GetResult(SpinBoxWidget.Interp);
    end Set;
 
-   function Validate(SpinBoxWidget: in Tk_SpinBox) return String is
-   begin
-      Execute_Widget_Command(SpinBoxWidget, "validate");
-      return Tcl.Ada.Tcl_GetResult(SpinBoxWidget.Interp);
-   end Validate;
-
-   function XView(SpinBoxWidget: in Tk_SpinBox) return String is
-   begin
-      Execute_Widget_Command(SpinBoxWidget, "xview");
-      return Tcl.Ada.Tcl_GetResult(SpinBoxWidget.Interp);
-   end XView;
-
-   procedure XView(SpinBoxWidget: in Tk_SpinBox; Index: in String) is
-   begin
-      Execute_Widget_Command(SpinBoxWidget, "xview", Index);
-   end XView;
-
-   procedure Xview_Move_To
-     (SpinBoxWidget: in Tk_SpinBox; Fraction: in String) is
-   begin
-      Execute_Widget_Command(SpinBoxWidget, "xview moveto", Fraction);
-   end Xview_Move_To;
-
-   procedure Xview_Scroll
-     (SpinBoxWidget: in Tk_SpinBox; Number, What: in String) is
-   begin
-      Execute_Widget_Command
-        (SpinBoxWidget, "xview scroll", Number & " " & What);
-   end Xview_Scroll;
-
 end Tcl.Tk.Ada.Widgets.TEntry.SpinBox;
