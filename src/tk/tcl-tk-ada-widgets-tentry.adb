@@ -46,84 +46,84 @@ package body Tcl.Tk.Ada.Widgets.TEntry is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
-   function BBox(TextEntry: in Tk_Entry; Index: in String) return String is
+   function BBox(TextEntry: in Tk_Entry'Class; Index: in String) return String is
    begin
       Execute_Widget_Command(TextEntry, "bbox", Index);
       return Tcl.Ada.Tcl_GetResult(TextEntry.Interp);
    end BBox;
 
    procedure Delete
-     (TextEntry: in Tk_Entry; FirstIndex: in String;
+     (TextEntry: in Tk_Entry'Class; FirstIndex: in String;
       LastIndex: in String := "") is
    begin
       Execute_Widget_Command
         (TextEntry, "delete", FirstIndex & " " & LastIndex);
    end Delete;
 
-   function Get(Widgt: in Tk_Entry) return String is
+   function Get(Widgt: in Tk_Entry'Class) return String is
    begin
       Execute_Widget_Command(Widgt, "get");
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end Get;
 
-   procedure ICursor(TextEntry: in Tk_Entry; Index: in String) is
+   procedure ICursor(TextEntry: in Tk_Entry'Class; Index: in String) is
    begin
       Execute_Widget_Command(TextEntry, "icursor", Index);
    end ICursor;
 
    function Entry_Index
-     (TextEntry: in Tk_Entry; Index: in String) return String is
+     (TextEntry: in Tk_Entry'Class; Index: in String) return String is
    begin
       Execute_Widget_Command(TextEntry, "index", Index);
       return Tcl.Ada.Tcl_GetResult(TextEntry.Interp);
    end Entry_Index;
 
    procedure Insert
-     (TextEntry: in Tk_Entry; Index: in String; Text: in String) is
+     (TextEntry: in Tk_Entry'Class; Index: in String; Text: in String) is
    begin
       Execute_Widget_Command
         (TextEntry, "insert", Index & " " & "{" & Text & "}");
    end Insert;
 
-   procedure Scan_Mark(TextEntry: in Tk_Entry; X: in String) is
+   procedure Scan_Mark(TextEntry: in Tk_Entry'Class; X: in String) is
    begin
       Execute_Widget_Command(TextEntry, "scan mark", X);
    end Scan_Mark;
 
-   procedure Scan_DragTo(TextEntry: in Tk_Entry; X: in String) is
+   procedure Scan_DragTo(TextEntry: in Tk_Entry'Class; X: in String) is
    begin
       Execute_Widget_Command(TextEntry, "scan dragto", X);
    end Scan_DragTo;
 
-   procedure Selection_Adjust(TextEntry: in Tk_Entry; Index: in String) is
+   procedure Selection_Adjust(TextEntry: in Tk_Entry'Class; Index: in String) is
    begin
       Execute_Widget_Command(TextEntry, "selection adjust", Index);
    end Selection_Adjust;
 
-   procedure Selection_Clear(TextEntry: in Tk_Entry) is
+   procedure Selection_Clear(TextEntry: in Tk_Entry'Class) is
    begin
       Execute_Widget_Command(TextEntry, "selection clear");
    end Selection_Clear;
 
-   procedure Selection_From(TextEntry: in Tk_Entry; Index: in String) is
+   procedure Selection_From(TextEntry: in Tk_Entry'Class; Index: in String) is
    begin
       Execute_Widget_Command(TextEntry, "selection from", Index);
    end Selection_From;
 
-   function Selection_Present(TextEntry: in Tk_Entry) return String is
+   function Selection_Present(TextEntry: in Tk_Entry'Class) return String is
    begin
       Execute_Widget_Command(TextEntry, "selection present");
       return Tcl.Ada.Tcl_GetResult(TextEntry.Interp);
    end Selection_Present;
 
    procedure Selection_Range
-     (TextEntry: in Tk_Entry; StartIndex, EndIndex: in String) is
+     (TextEntry: in Tk_Entry'Class; StartIndex, EndIndex: in String) is
    begin
       Execute_Widget_Command
         (TextEntry, "selection range", StartIndex & " " & EndIndex);
    end Selection_Range;
 
-   procedure Selection_To(TextEntry: in Tk_Entry; Index: in String) is
+   procedure Selection_To(TextEntry: in Tk_Entry'Class; Index: in String) is
    begin
       Execute_Widget_Command(TextEntry, "selection to", Index);
    end Selection_To;
