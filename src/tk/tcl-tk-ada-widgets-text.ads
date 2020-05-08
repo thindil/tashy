@@ -53,7 +53,7 @@ package Tcl.Tk.Ada.Widgets.Text is
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Tk_Text with
       Pre => pathName /= "";
-     -- ****
+      -- ****
 
    -- ****f* Text/Create (procedure)
    -- FUNCTION
@@ -62,15 +62,36 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- Widgt    - Tk_Text which will be created
    -- pathName - Tk path (starts with dot) for the widget
    -- options  - Options which will be passed to the widget. Default value is
-   --            empty
+      --            empty
    -- Interp   - Tcl interpreter to which the widget will be created. If null,
-   --            the widget will be created in the "contextual" interpreter.
-   --            Default value is null.
-   -- SOURCE
+      --            the widget will be created in the "contextual" interpreter.
+      --            Default value is null.
+      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Text; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
+      -- ****
+
+      -- ****f* Text/BBox
+      -- FUNCTION
+      -- Get size of bounding box of the selected character in the selected
+      -- Tk_Text
+      -- PARAMETERS
+      -- EntryWidget - Tk_Text which will be queried
+      -- Index       - Index of the character which bounding box will be
+      -- taken
+      -- RESULT
+      -- Four values: x1, y1 - coordinates of starting point of bounding box
+      -- from top left, x2, y2 - coordinates of ending point from bottom right
+      -- of bounding box.
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function BBox(TextWidget: in Tk_Text; Index: in String) return String with
+      Pre => Index /= "";
       -- ****
 
       -- ****f* Text/Delete
