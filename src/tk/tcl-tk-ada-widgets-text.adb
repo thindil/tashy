@@ -46,6 +46,12 @@ package body Tcl.Tk.Ada.Widgets.Text is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   function BBox(TextWidget: in Tk_Text; Index: in String) return String is
+   begin
+      Execute_Widget_Command(TextWidget, "bbox", Index);
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end BBox;
+
    procedure Delete
      (TextWidget: in Tk_Text; StartIndex: in String;
       Indexes: in String := "") is
