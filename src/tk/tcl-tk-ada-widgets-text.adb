@@ -52,6 +52,14 @@ package body Tcl.Tk.Ada.Widgets.Text is
       return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
    end BBox;
 
+   function Compare
+     (TextWidget: in Tk_Text; Index1, Op, Index2: in String) return String is
+   begin
+      Execute_Widget_Command
+        (TextWidget, "bbox", Index1 & " " & Op & " " & Index2);
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end Compare;
+
    procedure Delete
      (TextWidget: in Tk_Text; StartIndex: in String;
       Indexes: in String := "") is

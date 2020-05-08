@@ -78,9 +78,8 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- Get size of bounding box of the selected character in the selected
       -- Tk_Text
       -- PARAMETERS
-      -- EntryWidget - Tk_Text which will be queried
-      -- Index       - Index of the character which bounding box will be
-      -- taken
+      -- TextWidget - Tk_Text which will be queried
+      -- Index      - Index of the character which bounding box will be taken
       -- RESULT
       -- Four values: x1, y1 - coordinates of starting point of bounding box
       -- from top left, x2, y2 - coordinates of ending point from bottom right
@@ -92,6 +91,25 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- SOURCE
    function BBox(TextWidget: in Tk_Text; Index: in String) return String with
       Pre => Index /= "";
+      -- ****
+
+      -- ****f* Text/Compare
+      -- FUNCTION
+      -- Compare two indexes of a characters in the selected Tk_Text
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which indexes will be compared
+      -- Index1     - First index of the character to compare
+      -- Op         - Relationship operator for comparison
+      -- Index2     - Second index of the character to compare
+      -- RESULT
+      -- if Op is "<" return "1" if Index1 refers to earlier character in text,
+      -- if Op is "==" return "1" if both Index1 and Index2 are refer to the
+      -- same character, and so on.
+      -- SOURCE
+   function Compare
+     (TextWidget: in Tk_Text; Index1, Op, Index2: in String) return String with
+      Pre => Index1 /= "" and Op in "<" | "<=" | "==" | ">=" | ">" | "!=" and
+      Index2 /= "";
       -- ****
 
       -- ****f* Text/Delete
