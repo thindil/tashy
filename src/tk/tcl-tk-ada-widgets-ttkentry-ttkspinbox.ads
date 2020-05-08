@@ -31,7 +31,7 @@
 -- FUNCTION
 -- Provides code for manipulate Tk widget Ttk::SpinBox
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.TtkSpinBox is
+package Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox is
 -- ****
 
    -- ****t* TtkSpinBox/Ttk_SpinBox
@@ -40,7 +40,7 @@ package Tcl.Tk.Ada.Widgets.TtkSpinBox is
    -- Each of the derived widgets redefines the Create subprogram
    -- in order to create the correct type of widget.
    -- SOURCE
-   type Ttk_SpinBox is new Tk_Widget with private;
+   type Ttk_SpinBox is new Ttk_Entry with private;
    -- ****
 
    -- ****f* TtkSpinBox/Create
@@ -69,6 +69,6 @@ package Tcl.Tk.Ada.Widgets.TtkSpinBox is
 
 private
 
-   type Ttk_SpinBox is new Tk_Widget with null record;
+   type Ttk_SpinBox is new Ttk_Entry with null record;
 
-end Tcl.Tk.Ada.Widgets.TtkSpinBox;
+end Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox;
