@@ -105,11 +105,45 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- if Op is "<" return "1" if Index1 refers to earlier character in text,
       -- if Op is "==" return "1" if both Index1 and Index2 are refer to the
       -- same character, and so on.
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Compare
      (TextWidget: in Tk_Text; Index1, Op, Index2: in String) return String with
       Pre => Index1 /= "" and Op in "<" | "<=" | "==" | ">=" | ">" | "!=" and
       Index2 /= "";
+      -- ****
+
+      -- ****f* Text/Count
+      -- FUNCTION
+      -- Count the selected items in the selected Tk_Text between selected
+      -- indexes
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which items will be counted
+      -- Options    - Type of items to count. Can be one or more types.
+      --              Possible values are "-chars" (elided and not characters),
+      --              "-displaychars" (non-elided characters),
+      --              "-displayindices" (non-elided characters, widgets,
+      --              images), "-displaylines" (displayed lines), "-indices"
+      --              (elided and not characters, widgets, images), "-lines"
+      --              (logical lines), "-xpixels" (horizontal pixels),
+      --              "-ypixels" (vertical pixels)
+      -- Index1     - Index where count starts
+      -- Index2     - Index where count ends
+      -- RESULT
+      -- Values of counting the selected options. Amount of returned values
+      -- depends on the amount of the selected options.
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Count
+     (TextWidget: in Tk_Text; Options, Index1, Index2: in String)
+      return String with
+      Pre => Options /= "" and Index1 /= "" and Index2 /= "";
       -- ****
 
       -- ****f* Text/Delete
