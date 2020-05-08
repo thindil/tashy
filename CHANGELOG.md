@@ -12,7 +12,7 @@ of the project.
   `scan dragto`, `seletion adjust`, `selection clear`, `selection from`,
   `selection present`, `selection range`, `selection to`, `validate`, `xview`
   `xview moveto`, `xview scroll`
-- Binding for Tk `text` command: `bbox`
+- Binding for Tk `text` command: `bbox`, `compare`
 
 ### Changed
 - Updated code documentation
