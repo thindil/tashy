@@ -43,11 +43,10 @@ package Tcl.Tk.Ada.Widgets.TtkLabelFrame is
    type Ttk_LabelFrame is new Tk_Widget with private;
    -- ****
 
-   -- ****f* TtkLabelFrame/Create
+   -- ****f* TtkLabelFrame/Create (function)
    -- FUNCTION
    -- Creates a new Ttk_LabelFrame in the specified interpreter.
    -- PARAMETERS
-   -- Widgt    - Ttk_LabelFrame which will be created
    -- pathName - Tk path (starts with dot) for the widget
    -- options  - Options which will be passed to the widget. Default value is
    --            empty
@@ -61,6 +60,20 @@ package Tcl.Tk.Ada.Widgets.TtkLabelFrame is
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Ttk_LabelFrame with
       Pre => pathName /= "";
+      -- ****
+
+   -- ****f* TtkLabelFrame/Create (procedure)
+   -- FUNCTION
+   -- Creates a new Ttk_LabelFrame in the specified interpreter.
+   -- PARAMETERS
+   -- Widgt    - Ttk_LabelFrame which will be created
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Default value is
+      --            empty
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+      --            the widget will be created in the "contextual" interpreter.
+      --            Default value is null.
+      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_LabelFrame; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
