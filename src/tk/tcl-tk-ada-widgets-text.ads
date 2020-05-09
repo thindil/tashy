@@ -195,6 +195,36 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => StartIndex /= "";
       -- ****
 
+      -- ****f* Text/DLineInfo
+      -- FUNCTION
+      -- Get information about the selected displayed line in the selected
+      -- Tk_Text
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which information will be queried
+      -- Index      - Index of the character in the line which information
+      --              will be get
+      -- RESULT
+      -- The first two elements of the list give the x and y coordinates of
+      -- the upper-left corner of the area occupied by the line, the third and
+      -- fourth elements give the width and height of the area, and the fifth
+      -- element gives the position of the baseline for the line, measured down
+      -- from the top of the area. All of this information is measured in
+      -- pixels. If the current wrap mode is none and the line extends beyond
+      -- the boundaries of the window, the area returned reflects the entire
+      -- area of the line, including the portions that are out of the window.
+      -- If the line is shorter than the full width of the window then the area
+      -- returned reflects just the portion of the line that is occupied by
+      -- characters and embedded windows. If the display line containing Index
+      -- is not visible on the screen then the return value is {}.
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function DLineInfo
+     (TextWidget: in Tk_Text; Index: in String) return String with
+      Pre => Index /= "";
+
       -- ****f* Text/Insert
       -- FUNCTION
       -- Insert text into text widget at selected index
