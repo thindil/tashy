@@ -87,6 +87,13 @@ package body Tcl.Tk.Ada.Widgets.Text is
       Execute_Widget_Command(TextWidget, "delete", StartIndex & " " & Indexes);
    end Delete;
 
+   function DLineInfo
+     (TextWidget: in Tk_Text; Index: in String) return String is
+   begin
+      Execute_Widget_Command(TextWidget, "dlineinfo", Index);
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end DLineInfo;
+
    procedure Insert(TextWidget: in Tk_Text; Index, Text: in String) is
    begin
       Execute_Widget_Command(TextWidget, "insert", Index & " " & Text);
