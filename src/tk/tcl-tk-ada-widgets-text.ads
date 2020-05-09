@@ -146,17 +146,49 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => Options /= "" and Index1 /= "" and Index2 /= "";
       -- ****
 
-      -- ****f* Text/Delete
+      -- ****f* Text/Debug (procedure)
       -- FUNCTION
-      -- Delete text from the selected Tk_Text
+      -- Enable or disable internal consistency checks on B-tree code
+      -- associated with the selected Tk_Text
       -- PARAMETERS
-      -- TextWidget - Tk_Text in which text will be deleted
-      -- StartIndex - Start index of character which will be deleted
-      -- Indexes    - End index of character before which delete will be done.
-      --              It can be also values for another ranges of text to
-      --              delete. If empty, delete only one character. Default
-      --              value is empty.
+      -- TextWidget - Tk_Text which debug will be enabled or disabled
+      -- Enable     - If "true" enable debug, when "false" disable
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
+   procedure Debug(TextWidget: in Tk_Text; Enable: in String) with
+      Pre => Enable in "true" | "false";
+      -- ****
+
+      -- ****f* Text/Debug (function)
+      -- FUNCTION
+      -- Get the current state of internal consistency checks on B-tree code
+      -- associated with the selected Tk_Text
+      -- PARAMETERS
+      -- TextWidget - Tk_Text which debug state will be queried
+      -- RESULT
+      -- "on" if checks are enabled, otherwise "off"
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Debug(TextWidget: in Tk_Text) return String;
+   -- ****
+
+   -- ****f* Text/Delete
+   -- FUNCTION
+   -- Delete text from the selected Tk_Text
+   -- PARAMETERS
+   -- TextWidget - Tk_Text in which text will be deleted
+   -- StartIndex - Start index of character which will be deleted
+   -- Indexes    - End index of character before which delete will be done.
+   --              It can be also values for another ranges of text to
+   --              delete. If empty, delete only one character. Default
+   --              value is empty.
+   -- SOURCE
    procedure Delete
      (TextWidget: in Tk_Text; StartIndex: in String;
       Indexes: in String := "") with

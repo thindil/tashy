@@ -69,6 +69,17 @@ package body Tcl.Tk.Ada.Widgets.Text is
       return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
    end Count;
 
+   procedure Debug(TextWidget: in Tk_Text; Enable: in String) is
+   begin
+      Execute_Widget_Command(TextWidget, "debug", Enable);
+   end Debug;
+
+   function Debug(TextWidget: in Tk_Text) return String is
+   begin
+      Execute_Widget_Command(TextWidget, "debug");
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end Debug;
+
    procedure Delete
      (TextWidget: in Tk_Text; StartIndex: in String;
       Indexes: in String := "") is
