@@ -254,6 +254,22 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => Index1 /= "";
       -- ****
 
+
+      -- ****f* Text/Edit_CanRedo
+      -- FUNCTION
+      -- Check if redo action is possible or not
+      -- PARAMETERS
+      -- TextWidget - Tk_Text which will be queried for redo state
+      -- RESULT
+      -- "true" if redo action is possible, otherwise "false"
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Edit_CanRedo(TextWidget: in Tk_Text) return String;
+   -- ****
+
       -- ****f* Text/Insert
       -- FUNCTION
       -- Insert text into text widget at selected index
