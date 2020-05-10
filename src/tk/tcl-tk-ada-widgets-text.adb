@@ -103,6 +103,12 @@ package body Tcl.Tk.Ada.Widgets.Text is
       return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
    end Dump;
 
+   function Edit_CanRedo(TextWidget: in Tk_Text) return String is
+   begin
+      Execute_Widget_Command(TextWidget, "edit canredo");
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end Edit_CanRedo;
+
    procedure Insert(TextWidget: in Tk_Text; Index, Text: in String) is
    begin
       Execute_Widget_Command(TextWidget, "insert", Index & " " & Text);
