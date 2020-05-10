@@ -224,6 +224,35 @@ package Tcl.Tk.Ada.Widgets.Text is
    function DLineInfo
      (TextWidget: in Tk_Text; Index: in String) return String with
       Pre => Index /= "";
+      -- ****
+
+      -- ****f* Text/Dump
+      -- FUNCTION
+      -- Get the content (text but also information about marks, images,
+      -- widgets, etc) of the selected Tk_Text
+      -- PARAMETERS
+      -- TextWidget - Tk_Text which will be queried for the content
+      -- Switches   - What the content type get from the TextWidget. Possible
+      --              options are (also combination of them): "-all",
+      --              "-command", "-image", "-mark", "-tag", "-text",
+      --              "-window"
+      -- Index1     - Index of the character from which starts to get the
+      --              content
+      -- Index2     - Index of the character before which stops to get the
+      --              content
+      -- RESULT
+      -- String with information in following format: "key1 value1 index1 key2
+      -- value2 index2 ..."
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Dump
+     (TextWidget: in Tk_Text; Switches: in String := "-all"; Index1: in String;
+      Index2: in String := "") return String with
+      Pre => Index1 /= "";
+      -- ****
 
       -- ****f* Text/Insert
       -- FUNCTION
