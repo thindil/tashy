@@ -94,6 +94,15 @@ package body Tcl.Tk.Ada.Widgets.Text is
       return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
    end DLineInfo;
 
+   function Dump
+     (TextWidget: in Tk_Text; Switches: in String := "-all"; Index1: in String;
+      Index2: in String := "") return String is
+   begin
+      Execute_Widget_Command
+        (TextWidget, "dump", Switches & " " & Index1 & " " & Index2);
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end Dump;
+
    procedure Insert(TextWidget: in Tk_Text; Index, Text: in String) is
    begin
       Execute_Widget_Command(TextWidget, "insert", Index & " " & Text);
