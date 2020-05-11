@@ -13,7 +13,7 @@ of the project.
   `selection present`, `selection range`, `selection to`, `validate`, `xview`
   `xview moveto`, `xview scroll`
 - Binding for Tk `text` commands: `bbox`, `compare`, `count`, `debug`,
-  `dlineinfo`, `dump`, `edit canredo`
+  `dlineinfo`, `dump`, `edit canredo`, `edit canundo`
 
 ### Changed
 - Updated code documentation
