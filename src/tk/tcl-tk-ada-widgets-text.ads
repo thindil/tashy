@@ -254,7 +254,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => Index1 /= "";
       -- ****
 
-
       -- ****f* Text/Edit_CanRedo
       -- FUNCTION
       -- Check if redo action is possible or not
@@ -270,30 +269,61 @@ package Tcl.Tk.Ada.Widgets.Text is
    function Edit_CanRedo(TextWidget: in Tk_Text) return String;
    -- ****
 
-      -- ****f* Text/Edit_CanRedo
+   -- ****f* Text/Edit_CanRedo
+   -- FUNCTION
+   -- Check if undo action is possible or not
+   -- PARAMETERS
+   -- TextWidget - Tk_Text which will be queried for undo state
+   -- RESULT
+   -- "true" if undo action is possible, otherwise "false"
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function Edit_CanUndo(TextWidget: in Tk_Text) return String;
+   -- ****
+
+   -- ****f* Text/Edit_Modified (procedure)
+   -- FUNCTION
+   -- Set flag Modified for the selected Tk_Text on the selected value
+   -- PARAMETERS
+   -- TextWidget - Tk_Text which flag Modified will be set
+   -- Value      - A new value for the flag Modified. Possible values are
+   --              "0", "1", "true", "false"
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Edit_Modified(TextWidget: in Tk_Text; Value: in String) with
+      Pre => Value in "0" | "1" | "true" | "false";
+      -- ****
+
+      -- ****f* Text/Edit_Modified (function)
       -- FUNCTION
-      -- Check if undo action is possible or not
+      -- Get the flag Modified for the selected Tk_Text
       -- PARAMETERS
-      -- TextWidget - Tk_Text which will be queried for undo state
-      -- RESULT
-      -- "true" if undo action is possible, otherwise "false"
+      -- TextWidget - Tk_Text which flag Modified will be set
       -- HISTORY
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- RESULT
+      -- Value of the flag Modified of TextWidget
       -- SOURCE
-   function Edit_CanUndo(TextWidget: in Tk_Text) return String;
+   function Edit_Modified(TextWidget: in Tk_Text) return String;
    -- ****
 
-      -- ****f* Text/Insert
-      -- FUNCTION
-      -- Insert text into text widget at selected index
-      -- PARAMETERS
-      -- TextWidget - Tk_Text to which text will be inserted
-      -- Index      - Tk_Text position on which text will be inserted. Lines
-      --              starts from 1, characters starts from 0
-      -- Text       - Text to insert to Tk_Text widget
-      -- SOURCE
+   -- ****f* Text/Insert
+   -- FUNCTION
+   -- Insert text into text widget at selected index
+   -- PARAMETERS
+   -- TextWidget - Tk_Text to which text will be inserted
+   -- Index      - Tk_Text position on which text will be inserted. Lines
+   --              starts from 1, characters starts from 0
+   -- Text       - Text to insert to Tk_Text widget
+   -- SOURCE
    procedure Insert(TextWidget: in Tk_Text; Index, Text: in String) with
       Pre => Index /= "" and Text /= "";
       -- ****
