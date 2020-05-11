@@ -43,11 +43,10 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
    type Ttk_Notebook is new Tk_Widget with private;
    -- ****
 
-   -- ****f* TtkNotebook/Create
+   -- ****f* TtkNotebook/Create (function)
    -- FUNCTION
    -- Creates a new Ttk_Notebook in the specified interpreter.
    -- PARAMETERS
-   -- Widgt    - Ttk_Notebook which will be created
    -- pathName - Tk path (starts with dot) for the widget
    -- options  - Options which will be passed to the widget. Default value is
    --            empty
@@ -61,6 +60,20 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Ttk_Notebook with
       Pre => pathName /= "";
+      -- ****
+
+   -- ****f* TtkNotebook/Create (procedure)
+   -- FUNCTION
+   -- Creates a new Ttk_Notebook in the specified interpreter.
+   -- PARAMETERS
+   -- Widgt    - Ttk_Notebook which will be created
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Default value is
+      --            empty
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+      --            the widget will be created in the "contextual" interpreter.
+      --            Default value is null.
+      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_Notebook; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
