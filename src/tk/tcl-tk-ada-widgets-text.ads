@@ -270,6 +270,21 @@ package Tcl.Tk.Ada.Widgets.Text is
    function Edit_CanRedo(TextWidget: in Tk_Text) return String;
    -- ****
 
+      -- ****f* Text/Edit_CanRedo
+      -- FUNCTION
+      -- Check if undo action is possible or not
+      -- PARAMETERS
+      -- TextWidget - Tk_Text which will be queried for undo state
+      -- RESULT
+      -- "true" if undo action is possible, otherwise "false"
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Edit_CanUndo(TextWidget: in Tk_Text) return String;
+   -- ****
+
       -- ****f* Text/Insert
       -- FUNCTION
       -- Insert text into text widget at selected index
