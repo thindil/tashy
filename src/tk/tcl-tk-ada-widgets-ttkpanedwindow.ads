@@ -43,11 +43,10 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    type Ttk_PanedWindow is new Tk_Widget with private;
    -- ****
 
-   -- ****f* TtkPanedWindow/Create
+   -- ****f* TtkPanedWindow/Create (function)
    -- FUNCTION
    -- Creates a new Ttk_PanedWindow in the specified interpreter.
    -- PARAMETERS
-   -- Widgt    - Ttk_PanedWindow which will be created
    -- pathName - Tk path (starts with dot) for the widget
    -- options  - Options which will be passed to the widget. Default value is
    --            empty
@@ -61,6 +60,20 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Ttk_PanedWindow with
       Pre => pathName /= "";
+      -- ****
+
+   -- ****f* TtkPanedWindow/Create (procedure)
+   -- FUNCTION
+   -- Creates a new Ttk_PanedWindow in the specified interpreter.
+   -- PARAMETERS
+   -- Widgt    - Ttk_PanedWindow which will be created
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Default value is
+      --            empty
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+      --            the widget will be created in the "contextual" interpreter.
+      --            Default value is null.
+      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_PanedWindow; pathName: in String;
       options: in String := ""; Interp: in Tcl_Interp := null) with
