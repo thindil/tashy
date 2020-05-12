@@ -315,6 +315,22 @@ package Tcl.Tk.Ada.Widgets.Text is
    function Edit_Modified(TextWidget: in Tk_Text) return String;
    -- ****
 
+   -- ****f* Text/Edit_Redo
+   -- FUNCTION
+   -- When the -undo option of Tk_Text is true, reapplies the last undone edits
+   -- provided no other edits were done since then. Generates an error when
+   -- the redo stack is empty. Does nothing when the -undo option of Tk_Text
+   -- is false.
+   -- PARAMETERS
+   -- TextWidget - Tk_Text in which the last undone edit will be reapplied
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Edit_Redo(TextWidget: in Tk_Text);
+   -- ****
+
    -- ****f* Text/Insert
    -- FUNCTION
    -- Insert text into text widget at selected index
