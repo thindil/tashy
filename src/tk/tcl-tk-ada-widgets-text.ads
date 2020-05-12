@@ -331,6 +331,19 @@ package Tcl.Tk.Ada.Widgets.Text is
    procedure Edit_Redo(TextWidget: in Tk_Text);
    -- ****
 
+   -- ****f* Text/Edit_Reset
+   -- FUNCTION
+   -- Clears the selected Tk_Text undo and redo stacks
+   -- PARAMETERS
+   -- TextWidget - Tk_Text which undo and redo stacks will be cleared
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Edit_Reset(TextWidget: in Tk_Text);
+   -- ****
+
    -- ****f* Text/Insert
    -- FUNCTION
    -- Insert text into text widget at selected index

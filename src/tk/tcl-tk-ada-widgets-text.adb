@@ -131,6 +131,11 @@ package body Tcl.Tk.Ada.Widgets.Text is
       Execute_Widget_Command(TextWidget, "edit redo");
    end Edit_Redo;
 
+   procedure Edit_Reset(TextWidget: in Tk_Text) is
+   begin
+      Execute_Widget_Command(TextWidget, "edit reset");
+   end Edit_Reset;
+
    procedure Insert(TextWidget: in Tk_Text; Index, Text: in String) is
    begin
       Execute_Widget_Command(TextWidget, "insert", Index & " " & Text);
