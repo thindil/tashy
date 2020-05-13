@@ -43,11 +43,10 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
    type Ttk_ProgressBar is new Tk_Widget with private;
    -- ****
 
-   -- ****f* TtkProgressBar/Create
+   -- ****f* TtkProgressBar/Create (function)
    -- FUNCTION
    -- Creates a new Ttk_ProgressBar in the specified interpreter.
    -- PARAMETERS
-   -- Widgt    - Ttk_ProgressBar which will be created
    -- pathName - Tk path (starts with dot) for the widget
    -- options  - Options which will be passed to the widget. Default value is
    --            empty
@@ -61,20 +60,34 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Ttk_ProgressBar with
       Pre => pathName /= "";
+      -- ****
+
+   -- ****f* TtkProgressBar/Create (procedure)
+   -- FUNCTION
+   -- Creates a new Ttk_ProgressBar in the specified interpreter.
+   -- PARAMETERS
+   -- Widgt    - Ttk_ProgressBar which will be created
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Default value is
+      --            empty
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+      --            the widget will be created in the "contextual" interpreter.
+      --            Default value is null.
+      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_ProgressBar; pathName: in String;
       options: in String := ""; Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
-   -- ****
+      -- ****
 
-     -- ****f* TtkProgressBar/Step
-     -- FUNCTION
-     -- Increment value of the Ttk_ProgressBar by amount
-     -- PARAMETERS
-     -- Bar    - Ttk_ProgressBar which value will be modified
-     -- Amount - Amount to incremement. If empty, then value is incremented
-     --          by 1.0. Default value is empty
-     -- SOURCE
+      -- ****f* TtkProgressBar/Step
+      -- FUNCTION
+      -- Increment value of the Ttk_ProgressBar by amount
+      -- PARAMETERS
+      -- Bar    - Ttk_ProgressBar which value will be modified
+      -- Amount - Amount to incremement. If empty, then value is incremented
+      --          by 1.0. Default value is empty
+      -- SOURCE
    procedure Step(Bar: in Ttk_ProgressBar; Amount: in String := "");
    -- ****
 
