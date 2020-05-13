@@ -344,6 +344,20 @@ package Tcl.Tk.Ada.Widgets.Text is
    procedure Edit_Reset(TextWidget: in Tk_Text);
    -- ****
 
+   -- ****f* Text/Edit_Separator
+   -- FUNCTION
+   -- Inserts a separator (boundary) on the undo stack. Does nothing when the
+   -- -undo option is false
+   -- PARAMETERS
+   -- TextWidget - Tk_Text in which the separator will be inserted
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Edit_Separator(TextWidget: in Tk_Text);
+   -- ****
+
    -- ****f* Text/Insert
    -- FUNCTION
    -- Insert text into text widget at selected index
