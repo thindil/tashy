@@ -14,7 +14,7 @@ of the project.
   `xview moveto`, `xview scroll`
 - Binding for Tk `text` commands: `bbox`, `compare`, `count`, `debug`,
   `dlineinfo`, `dump`, `edit canredo`, `edit canundo`, `edit modified`,
-  `edit redo`, `edit reset`, `edit separator`
+  `edit redo`, `edit reset`, `edit separator`, `edit undo`
 
 ### Changed
 - Updated code documentation
