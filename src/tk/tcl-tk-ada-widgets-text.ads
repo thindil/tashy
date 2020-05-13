@@ -358,6 +358,23 @@ package Tcl.Tk.Ada.Widgets.Text is
    procedure Edit_Separator(TextWidget: in Tk_Text);
    -- ****
 
+   -- ****f* Text/Edit_Undo
+   -- FUNCTION
+   -- Undoes the last edit action when the -undo option is true. An edit
+   -- action is defined as all the insert and delete commands that are
+   -- recorded on the undo stack in between two separators. Generates an error
+   -- when the undo stack is empty. Does nothing when the -undo option is
+   -- false.
+   -- PARAMETERS
+   -- TextWidget - Tk_Text in which the last edit action will be undoed
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Edit_Undo(TextWidget: in Tk_Text);
+   -- ****
+
    -- ****f* Text/Insert
    -- FUNCTION
    -- Insert text into text widget at selected index

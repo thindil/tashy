@@ -141,6 +141,11 @@ package body Tcl.Tk.Ada.Widgets.Text is
       Execute_Widget_Command(TextWidget, "edit separator");
    end Edit_Separator;
 
+   procedure Edit_Undo(TextWidget: in Tk_Text) is
+   begin
+      Execute_Widget_Command(TextWidget, "edit undo");
+   end Edit_Undo;
+
    procedure Insert(TextWidget: in Tk_Text; Index, Text: in String) is
    begin
       Execute_Widget_Command(TextWidget, "insert", Index & " " & Text);
