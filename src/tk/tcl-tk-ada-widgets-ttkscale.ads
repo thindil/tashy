@@ -80,6 +80,39 @@ package Tcl.Tk.Ada.Widgets.TtkScale is
       Pre => pathName /= "";
       -- ****
 
+      -- ****f* TtkScale/Get (current)
+      -- FUNCTION
+      -- Get current value of the selected Ttk_Scale
+      -- PARAMETERS
+      -- ScaleWidget - Ttk_Scale which value will be get
+      -- RESULT
+      -- Current value of the ScaleWidget
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Get(ScaleWidget: in Ttk_Scale) return String;
+   -- ****
+
+   -- ****f* TtkScale/Get (at pixel)
+   -- FUNCTION
+   -- Get the value of the selected Ttk_Scale at the selected pixel
+   -- PARAMETERS
+   -- ScaleWidget - Ttk_Scale which value will be get
+   -- X           - X coordinate of the pixel which value will be get
+   -- Y           - Y coordinate of the pixel which value will be get
+   -- RESULT
+   -- Value of the ScaleWidget at the selected pixel
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function Get(ScaleWidget: in Ttk_Scale; X, Y: in String) return String with
+      Pre => X /= "" and Y /= "";
+      -- ****
+
 private
 
    type Ttk_Scale is new Tk_Widget with null record;
