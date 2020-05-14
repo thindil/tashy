@@ -395,6 +395,25 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => Options /= "";
       -- ****
 
+      -- ****f* Text/Image_Cget
+      -- FUNCTION
+      -- Get the selected option for the selected image in the selected Tk_Text
+      -- PARAMETERS
+      -- TextWidget - Tk_Text which will be queried for the option's value
+      -- Index      - Index of the image which option's value will be get
+      -- Option     - Name of the image's option to get
+      -- RESULT
+      -- Value of the selected Option of the selected image
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Image_Cget
+     (TextWidget: in Tk_Text; Index, Option: in String) return String with
+      Pre => Index /= "" and Option /= "";
+      -- ****
+
       -- ****f* Text/Insert
       -- FUNCTION
       -- Insert text into text widget at selected index
