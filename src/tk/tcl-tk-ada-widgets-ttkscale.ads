@@ -43,11 +43,10 @@ package Tcl.Tk.Ada.Widgets.TtkScale is
    type Ttk_Scale is new Tk_Widget with private;
    -- ****
 
-   -- ****f* TtkScale/Create
+   -- ****f* TtkScale/Create (function)
    -- FUNCTION
    -- Creates a new Ttk_Scale in the specified interpreter.
    -- PARAMETERS
-   -- Widgt    - Ttk_Scale which will be created
    -- pathName - Tk path (starts with dot) for the widget
    -- options  - Options which will be passed to the widget. Default value is
    --            empty
@@ -61,11 +60,25 @@ package Tcl.Tk.Ada.Widgets.TtkScale is
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Ttk_Scale with
       Pre => pathName /= "";
+      -- ****
+
+   -- ****f* TtkScale/Create (procedure)
+   -- FUNCTION
+   -- Creates a new Ttk_Scale in the specified interpreter.
+   -- PARAMETERS
+   -- Widgt    - Ttk_Scale which will be created
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Default value is
+      --            empty
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+      --            the widget will be created in the "contextual" interpreter.
+      --            Default value is null.
+      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_Scale; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
-   -- ****
+      -- ****
 
 private
 
