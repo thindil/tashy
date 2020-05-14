@@ -146,6 +146,12 @@ package body Tcl.Tk.Ada.Widgets.Text is
       Execute_Widget_Command(TextWidget, "edit undo");
    end Edit_Undo;
 
+   function Get(TextWidget: in Tk_Text; Options: in String) return String is
+   begin
+      Execute_Widget_Command(TextWidget, "get", Options);
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end Get;
+
    procedure Insert(TextWidget: in Tk_Text; Index, Text: in String) is
    begin
       Execute_Widget_Command(TextWidget, "insert", Index & " " & Text);

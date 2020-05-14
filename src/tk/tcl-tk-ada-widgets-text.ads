@@ -375,15 +375,35 @@ package Tcl.Tk.Ada.Widgets.Text is
    procedure Edit_Undo(TextWidget: in Tk_Text);
    -- ****
 
-   -- ****f* Text/Insert
+   -- ****f* Text/Get
    -- FUNCTION
-   -- Insert text into text widget at selected index
+   -- Get the selected characters from the selected Tk_Text
    -- PARAMETERS
-   -- TextWidget - Tk_Text to which text will be inserted
-   -- Index      - Tk_Text position on which text will be inserted. Lines
-   --              starts from 1, characters starts from 0
-   -- Text       - Text to insert to Tk_Text widget
+   -- TextWidget - Tk_Text which will be queried for characters
+   -- Options    - Indexes of the characters to get.
+   -- RESULT
+   -- If Options starts with "-displaycharacters" then only non elided
+   -- characters are returned. If Options is only one index, return only one
+   -- character. If Options contains more than one range of indexes, return
+   -- characters for each range.
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
+   function Get(TextWidget: in Tk_Text; Options: in String) return String with
+      Pre => Options /= "";
+      -- ****
+
+      -- ****f* Text/Insert
+      -- FUNCTION
+      -- Insert text into text widget at selected index
+      -- PARAMETERS
+      -- TextWidget - Tk_Text to which text will be inserted
+      -- Index      - Tk_Text position on which text will be inserted. Lines
+      --              starts from 1, characters starts from 0
+      -- Text       - Text to insert to Tk_Text widget
+      -- SOURCE
    procedure Insert(TextWidget: in Tk_Text; Index, Text: in String) with
       Pre => Index /= "" and Text /= "";
       -- ****
