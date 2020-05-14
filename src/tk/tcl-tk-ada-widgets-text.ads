@@ -414,6 +414,46 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => Index /= "" and Option /= "";
       -- ****
 
+      -- ****f* Text/Image_Configure (procedure)
+      -- FUNCTION
+      -- Configure the selected options of the selected image in the selected
+      -- Tk_Text
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which the image's options will be set
+      -- Index      - Index of the image which options will be set
+      -- Options    - Options in "name value" pairs to set
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Image_Configure
+     (TextWidget: in Tk_Text; Index, Options: in String) with
+      Pre => Index /= "" and Options /= "";
+      -- ****
+
+      -- ****f* Text/Image_Configure (function)
+      -- FUNCTION
+      -- Get the selected options of the selected image in the selected Tk_Text
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which the image's options will be get
+      -- Index      - Index of the image which options will be get
+      -- Options    - Option name to get or empty string to get all available
+      --              options. Default value is empty
+      -- RESULT
+      -- Value of selected option or values of all options if Option is empty
+      -- string
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Image_Configure
+     (TextWidget: in Tk_Text; Index: in String; Option: in String := "")
+      return String with
+      Pre => Index /= "";
+      -- ****
+
       -- ****f* Text/Insert
       -- FUNCTION
       -- Insert text into text widget at selected index

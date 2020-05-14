@@ -159,6 +159,22 @@ package body Tcl.Tk.Ada.Widgets.Text is
       return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
    end Image_Cget;
 
+   procedure Image_Configure
+     (TextWidget: in Tk_Text; Index, Options: in String) is
+   begin
+      Execute_Widget_Command
+        (TextWidget, "image configure", Index & " " & Options);
+   end Image_Configure;
+
+   function Image_Configure
+     (TextWidget: in Tk_Text; Index: in String; Option: in String := "")
+      return String is
+   begin
+      Execute_Widget_Command
+        (TextWidget, "image configure", Index & " " & Option);
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end Image_Configure;
+
    procedure Insert(TextWidget: in Tk_Text; Index, Text: in String) is
    begin
       Execute_Widget_Command(TextWidget, "insert", Index & " " & Text);
