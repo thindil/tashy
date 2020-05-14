@@ -16,6 +16,7 @@ of the project.
   `dlineinfo`, `dump`, `edit canredo`, `edit canundo`, `edit modified`,
   `edit redo`, `edit reset`, `edit separator`, `edit undo`, `get`,
   `image cget`
+- Binding for Tk `ttk::scale` command: `get`
 
 ### Changed
 - Updated code documentation
