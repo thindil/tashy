@@ -113,6 +113,21 @@ package Tcl.Tk.Ada.Widgets.TtkScale is
       Pre => X /= "" and Y /= "";
       -- ****
 
+      -- ****f* TtkScale/Set
+      -- FUNCTION
+      -- Set a new value for the selected Ttk_Scale
+      -- PARAMETERS
+      -- ScaleWidget - Ttk_Scale which will be set
+      -- Value       - A new value for the ScaleWidget
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Set(ScaleWidget: in Ttk_Scale; Value: in String) with
+      Pre => Value /= "";
+      -- ****
+
 private
 
    type Ttk_Scale is new Tk_Widget with null record;

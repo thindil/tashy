@@ -58,4 +58,9 @@ package body Tcl.Tk.Ada.Widgets.TtkScale is
       return Tcl.Ada.Tcl_GetResult(ScaleWidget.Interp);
    end Get;
 
+   procedure Set(ScaleWidget: in Ttk_Scale; Value: in String) is
+   begin
+      Execute_Widget_Command(ScaleWidget, "set", Value);
+   end Set;
+
 end Tcl.Tk.Ada.Widgets.TtkScale;
