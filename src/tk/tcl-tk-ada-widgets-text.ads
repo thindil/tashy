@@ -454,6 +454,26 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => Index /= "";
       -- ****
 
+      -- ****f* Text/Image_Create
+      -- FUNCTION
+      -- Create a new image inside Tk_Text at the selected index
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which an image will be created
+      -- Index      - Index in the TextWidget at which an image will be created
+      -- Options    - Options for the newly created image
+      -- RESULT
+      -- Unique identifier for the newly created image
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Image_Create
+     (TextWidget: in Tk_Text; Index: in String; Options: in String := "")
+      return String with
+      Pre => Index /= "";
+      -- ****
+
       -- ****f* Text/Insert
       -- FUNCTION
       -- Insert text into text widget at selected index
