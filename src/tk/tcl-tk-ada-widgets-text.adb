@@ -190,6 +190,13 @@ package body Tcl.Tk.Ada.Widgets.Text is
       return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
    end Image_Names;
 
+   function Index
+     (TextWidget: in Tk_Text; TextIndex: in String) return String is
+   begin
+      Execute_Widget_Command(TextWidget, "index", TextIndex);
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end Index;
+
    procedure Insert(TextWidget: in Tk_Text; Index, Text: in String) is
    begin
       Execute_Widget_Command(TextWidget, "insert", Index & " " & Text);
