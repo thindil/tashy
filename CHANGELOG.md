@@ -15,7 +15,7 @@ of the project.
 - Binding for Tk `text` commands: `bbox`, `compare`, `count`, `debug`,
   `dlineinfo`, `dump`, `edit canredo`, `edit canundo`, `edit modified`,
   `edit redo`, `edit reset`, `edit separator`, `edit undo`, `get`,
-  `image cget`, `image configure`, `image create`
+  `image cget`, `image configure`, `image create`, `image names`
 - Binding for Tk `ttk::scale` command: `get`
 
 ### Changed
