@@ -481,19 +481,42 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- TextWidget - Tk_Text which will be queried for images names
       -- RESULT
       -- The list of all images names currently embedded into TextWidget
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Image_Names(TextWidget: in Tk_Text) return String;
    -- ****
 
-   -- ****f* Text/Insert
+   -- ****f* Text/Index
    -- FUNCTION
-   -- Insert text into text widget at selected index
+   -- Get index of the selected item
    -- PARAMETERS
-   -- TextWidget - Tk_Text to which text will be inserted
-   -- Index      - Tk_Text position on which text will be inserted. Lines
-   --              starts from 1, characters starts from 0
-   -- Text       - Text to insert to Tk_Text widget
+   -- TextWidget - Tk_Text which will be queried for the index
+   -- TextIndex  - Can be in line.char, mark name, item name, pixel
+   --              coordinates, tag.first, tag.last
+   -- RESULT
+   -- Index of the selected item in form "line.character"
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
+   function Index
+     (TextWidget: in Tk_Text; TextIndex: in String) return String with
+      Pre => TextIndex /= "";
+      -- ****
+
+      -- ****f* Text/Insert
+      -- FUNCTION
+      -- Insert text into text widget at selected index
+      -- PARAMETERS
+      -- TextWidget - Tk_Text to which text will be inserted
+      -- Index      - Tk_Text position on which text will be inserted. Lines
+      --              starts from 1, characters starts from 0
+      -- Text       - Text to insert to Tk_Text widget
+      -- SOURCE
    procedure Insert(TextWidget: in Tk_Text; Index, Text: in String) with
       Pre => Index /= "" and Text /= "";
       -- ****
