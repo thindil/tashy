@@ -43,11 +43,10 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
    type Ttk_Scrollbar is new Tk_Widget with private;
    -- ****
 
-   -- ****f* TtkScrollbar/Create
+   -- ****f* TtkScrollbar/Create (function)
    -- FUNCTION
    -- Creates a new Ttk_Scrollbar in the specified interpreter.
    -- PARAMETERS
-   -- Widgt    - Ttk_Scrollbar which will be created
    -- pathName - Tk path (starts with dot) for the widget
    -- options  - Options which will be passed to the widget. Default value is
    --            empty
@@ -61,11 +60,25 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Ttk_Scrollbar with
       Pre => pathName /= "";
+      -- ****
+
+   -- ****f* TtkScrollbar/Create (procedure)
+   -- FUNCTION
+   -- Creates a new Ttk_Scrollbar in the specified interpreter.
+   -- PARAMETERS
+   -- Widgt    - Ttk_Scrollbar which will be created
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Default value is
+      --            empty
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+      --            the widget will be created in the "contextual" interpreter.
+      --            Default value is null.
+      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_Scrollbar; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
-   -- ****
+      -- ****
 
 private
 
