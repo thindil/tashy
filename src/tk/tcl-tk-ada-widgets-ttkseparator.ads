@@ -43,11 +43,10 @@ package Tcl.Tk.Ada.Widgets.TtkSeparator is
    type Ttk_Separator is new Tk_Widget with private;
    -- ****
 
-   -- ****f* TtkSeparator/Create
+   -- ****f* TtkSeparator/Create (function)
    -- FUNCTION
    -- Creates a new Ttk_Separator in the specified interpreter.
    -- PARAMETERS
-   -- Widgt    - Ttk_Separator which will be created
    -- pathName - Tk path (starts with dot) for the widget
    -- options  - Options which will be passed to the widget. Default value is
    --            empty
@@ -61,11 +60,25 @@ package Tcl.Tk.Ada.Widgets.TtkSeparator is
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Ttk_Separator with
       Pre => pathName /= "";
+      -- ****
+
+      -- ****f* TtkSeparator/Create (procedure)
+      -- FUNCTION
+   -- Creates a new Ttk_Separator in the specified interpreter.
+   -- PARAMETERS
+   -- Widgt    - Ttk_Separator which will be created
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Default value is
+      --            empty
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+      --            the widget will be created in the "contextual" interpreter.
+      --            Default value is null.
+      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_Separator; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
-   -- ****
+      -- ****
 
 private
 
