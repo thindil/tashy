@@ -573,6 +573,25 @@ package Tcl.Tk.Ada.Widgets.Text is
    function Mark_Names(TextWidget: in Tk_Text) return String;
    -- ****
 
+   -- ****f* Text/Mark_Next
+   -- FUNCTION
+   -- Get next mark at or after the selected index in the selected Tk_Text
+   -- PARAMETERS
+   -- TextWidget - Tk_Text in which mark will be looking for
+   -- Index      - Numerical index of character at which search begins or name
+   --              of mark after which search begins
+   -- RESULT
+   -- Name of the next mark or {} if no mark was found
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function Mark_Next
+     (TextWidget: in Tk_Text; Index: in String) return String with
+      Pre => Index /= "";
+      -- ****
+
       -- ****f* Text/Tag_Add
       -- FUNCTION
       -- Add the selected tag to the text in Tk_Text
