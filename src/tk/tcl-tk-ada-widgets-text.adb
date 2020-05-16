@@ -216,6 +216,12 @@ package body Tcl.Tk.Ada.Widgets.Text is
       return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
    end Mark_Gravity;
 
+   function Mark_Names(TextWidget: in Tk_Text) return String is
+   begin
+      Execute_Widget_Command(TextWidget, "mark names");
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end Mark_Names;
+
    procedure Tag_Add
      (TextWidget: in Tk_Text; TagName, StartIndex: in String;
       Indexes: in String := "") is
