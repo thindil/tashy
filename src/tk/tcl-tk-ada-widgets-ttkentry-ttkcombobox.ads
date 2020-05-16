@@ -31,7 +31,7 @@
 -- FUNCTION
 -- Provides code for manipulate Tk widget ComboBox
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.TtkComboBox is
+package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
 -- ****
 
    -- ****t* TtkComboBox/Ttk_ComboBox
@@ -40,7 +40,7 @@ package Tcl.Tk.Ada.Widgets.TtkComboBox is
    -- Each of the derived widgets redefines the Create subprogram
    -- in order to create the correct type of widget.
    -- SOURCE
-   type Ttk_ComboBox is new Tk_Widget with private;
+   type Ttk_ComboBox is new Ttk_Entry with private;
    -- ****
 
    -- ****f* TtkComboBox/Create (function)
@@ -82,6 +82,6 @@ package Tcl.Tk.Ada.Widgets.TtkComboBox is
 
 private
 
-   type Ttk_ComboBox is new Tk_Widget with null record;
+   type Ttk_ComboBox is new Ttk_Entry with null record;
 
-end Tcl.Tk.Ada.Widgets.TtkComboBox;
+end Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox;

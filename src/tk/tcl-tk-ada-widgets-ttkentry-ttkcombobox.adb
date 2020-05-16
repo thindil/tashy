@@ -20,7 +20,7 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
-package body Tcl.Tk.Ada.Widgets.TtkComboBox is
+package body Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
 
    function Create
      (pathName: in String; options: in String := "";
@@ -44,4 +44,4 @@ package body Tcl.Tk.Ada.Widgets.TtkComboBox is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
-end Tcl.Tk.Ada.Widgets.TtkComboBox;
+end Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox;
