@@ -558,6 +558,21 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => MarkName /= "";
       -- ****
 
+      -- ****f* Text/Mark_Names
+      -- FUNCTION
+      -- Get names of all marks that are currently set
+      -- PARAMETERS
+      -- TextWidget - Tk_Text which will be queried for names
+      -- RESULT
+      -- List of names of all existing marks in the TextWidget
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Mark_Names(TextWidget: in Tk_Text) return String;
+   -- ****
+
       -- ****f* Text/Tag_Add
       -- FUNCTION
       -- Add the selected tag to the text in Tk_Text
