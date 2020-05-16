@@ -202,6 +202,20 @@ package body Tcl.Tk.Ada.Widgets.Text is
       Execute_Widget_Command(TextWidget, "insert", Index & " " & Text);
    end Insert;
 
+   procedure Mark_Gravity
+     (TextWidget: in Tk_Text; MarkName, Direction: in String) is
+   begin
+      Execute_Widget_Command
+        (TextWidget, "mark gravity", MarkName & " " & Direction);
+   end Mark_Gravity;
+
+   function Mark_Gravity
+     (TextWidget: in Tk_Text; MarkName: in String) return String is
+   begin
+      Execute_Widget_Command(TextWidget, "mark gravity", MarkName);
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end Mark_Gravity;
+
    procedure Tag_Add
      (TextWidget: in Tk_Text; TagName, StartIndex: in String;
       Indexes: in String := "") is

@@ -521,6 +521,43 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => Index /= "" and Text /= "";
       -- ****
 
+      -- ****f* Text/Mark_Gravity (procedure)
+      -- FUNCTION
+      -- Set to which adjacent character the selected mark is attached
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which mark gravity will be set
+      -- MarkName   - Name of mark which gravity will be set
+      -- Direction  - A new value for the gravity of the mark. Can be "left" or
+      --              "right"
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Mark_Gravity
+     (TextWidget: in Tk_Text; MarkName, Direction: in String) with
+      Pre => MarkName /= "" and Direction in "left" | "right";
+      -- ****
+
+      -- ****f* Text/Mark_Gravity (function)
+      -- FUNCTION
+      -- Get the gravity of the selected mark in the selected Tk_Text
+      -- PARAMETERS
+      -- TextWidget - Tk_Text which will be queried for mark gravity
+      -- MarkName   - Name of the mark which gravity will be get
+      -- RESULT
+      -- Direction to the adjacent character to which mark is attached.
+      -- Possible values are "left" and "right"
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Mark_Gravity
+     (TextWidget: in Tk_Text; MarkName: in String) return String with
+      Pre => MarkName /= "";
+      -- ****
+
       -- ****f* Text/Tag_Add
       -- FUNCTION
       -- Add the selected tag to the text in Tk_Text
