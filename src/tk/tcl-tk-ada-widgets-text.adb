@@ -241,6 +241,11 @@ package body Tcl.Tk.Ada.Widgets.Text is
       Execute_Widget_Command(TextWidget, "mark set", MarkName & " " & Index);
    end Mark_Set;
 
+   procedure Mark_Unset(TextWidget: in Tk_Text; MarkName: in String) is
+   begin
+      Execute_Widget_Command(TextWidget, "mark unset", MarkName);
+   end Mark_Unset;
+
    procedure Tag_Add
      (TextWidget: in Tk_Text; TagName, StartIndex: in String;
       Indexes: in String := "") is
