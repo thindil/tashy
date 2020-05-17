@@ -632,6 +632,22 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => MarkName /= "" and Index /= "";
       -- ****
 
+      -- ****f* Text/Mark_Unset
+      -- FUNCTION
+      -- Remove the selected mark(s) from the selected Tk_Text
+      -- PARAMETERS
+      -- TextWidget - Tk_Text from which the selected mark(s) will be removed
+      -- MarkName   - Name(s) of the marks to remove. If more than one mark
+      --              should be removed, separate they name by space
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Mark_Unset(TextWidget: in Tk_Text; MarkName: in String) with
+      Pre => MarkName /= "";
+      -- ****
+
       -- ****f* Text/Tag_Add
       -- FUNCTION
       -- Add the selected tag to the text in Tk_Text
