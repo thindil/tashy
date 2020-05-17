@@ -112,6 +112,20 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
       Pre => NewIndex /= "";
       -- ****
 
+      -- ****f* TtkComboBox/Set
+      -- FUNCTION
+      -- Set the value of the selected Ttk_ComboBox
+      -- PARAMETERS
+      -- ComboBox - Ttk_ComboBox which value will be set
+      -- Value    - A new value for the ComboBox
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Set(ComboBox: in Ttk_ComboBox; Value: in String);
+   -- ****
+
 private
 
    type Ttk_ComboBox is new Ttk_Entry with null record;

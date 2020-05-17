@@ -57,4 +57,9 @@ package body Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
       Execute_Widget_Command(ComboBox, "current", NewIndex);
    end Current;
 
+   procedure Set(ComboBox: in Ttk_ComboBox; Value: in String) is
+   begin
+      Execute_Widget_Command(ComboBox, "set", Value);
+   end Set;
+
 end Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox;
