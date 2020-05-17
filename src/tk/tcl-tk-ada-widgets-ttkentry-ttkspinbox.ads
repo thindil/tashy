@@ -27,7 +27,7 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
--- ****h* Widgets/TtkSpinBox
+-- ****h* TtkEntry/TtkSpinBox
 -- FUNCTION
 -- Provides code for manipulate Tk widget Ttk::SpinBox
 -- SOURCE
@@ -43,11 +43,10 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox is
    type Ttk_SpinBox is new Ttk_Entry with private;
    -- ****
 
-   -- ****f* TtkSpinBox/Create
+   -- ****f* TtkSpinBox/Create (function)
    -- FUNCTION
    -- Creates a new Ttk_SpinBox in the specified interpreter.
    -- PARAMETERS
-   -- Widgt    - Ttk_SpinBox which will be created
    -- pathName - Tk path (starts with dot) for the widget
    -- options  - Options which will be passed to the widget. Default value is
    --            empty
@@ -61,6 +60,20 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox is
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Ttk_SpinBox with
       Pre => pathName /= "";
+      -- ****
+
+   -- ****f* TtkSpinBox/Create (procedure)
+   -- FUNCTION
+   -- Creates a new Ttk_SpinBox in the specified interpreter.
+   -- PARAMETERS
+   -- Widgt    - Ttk_SpinBox which will be created
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Default value is
+      --            empty
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+      --            the widget will be created in the "contextual" interpreter.
+      --            Default value is null.
+      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_SpinBox; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
