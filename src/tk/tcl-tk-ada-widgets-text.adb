@@ -222,6 +222,13 @@ package body Tcl.Tk.Ada.Widgets.Text is
       return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
    end Mark_Names;
 
+   function Mark_Next
+     (TextWidget: in Tk_Text; Index: in String) return String is
+   begin
+      Execute_Widget_Command(TextWidget, "mark next", Index);
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end Mark_Next;
+
    function Mark_Previous
      (TextWidget: in Tk_Text; Index: in String) return String is
    begin
@@ -229,12 +236,10 @@ package body Tcl.Tk.Ada.Widgets.Text is
       return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
    end Mark_Previous;
 
-   function Mark_Next
-     (TextWidget: in Tk_Text; Index: in String) return String is
+   procedure Mark_Set(TextWidget: in Tk_Text; MarkName, Index: in String) is
    begin
-      Execute_Widget_Command(TextWidget, "mark next", Index);
-      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
-   end Mark_Next;
+      Execute_Widget_Command(TextWidget, "mark set", MarkName & " " & Index);
+   end Mark_Set;
 
    procedure Tag_Add
      (TextWidget: in Tk_Text; TagName, StartIndex: in String;

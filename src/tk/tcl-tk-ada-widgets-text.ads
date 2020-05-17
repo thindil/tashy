@@ -612,6 +612,26 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => Index /= "";
       -- ****
 
+      -- ****f* Text/Mark_Set
+      -- FUNCTION
+      -- Set the selected mark before the character at the selected index in
+      -- the selected Tk_Text.
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which the mark will be set
+      -- MarkName   - Name of the mark to set. If mark with that name exists,
+      --              it will be moved to the new position. Otherwise, create
+      --              a new mark with the selected name
+      -- Index      - Index of the character before which the selected mark
+      --              will be added
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Mark_Set(TextWidget: in Tk_Text; MarkName, Index: in String) with
+      Pre => MarkName /= "" and Index /= "";
+      -- ****
+
       -- ****f* Text/Tag_Add
       -- FUNCTION
       -- Add the selected tag to the text in Tk_Text
