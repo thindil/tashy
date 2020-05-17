@@ -222,6 +222,13 @@ package body Tcl.Tk.Ada.Widgets.Text is
       return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
    end Mark_Names;
 
+   function Mark_Previous
+     (TextWidget: in Tk_Text; Index: in String) return String is
+   begin
+      Execute_Widget_Command(TextWidget, "mark previous", Index);
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end Mark_Previous;
+
    function Mark_Next
      (TextWidget: in Tk_Text; Index: in String) return String is
    begin
