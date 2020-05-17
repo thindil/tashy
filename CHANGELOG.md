@@ -19,7 +19,7 @@ of the project.
   `mark gravity`, `mark names`, `mark next`, `mark previous`, `mark set`,
   `mark unset`
 - Binding for Tk `ttk::scale` commands: `get`, `set`
-- Binding for Tk `ttk::combobox` command: `current`
+- Binding for Tk `ttk::combobox` commands: `current`, `set`
 
 ### Changed
 - Updated code documentation
