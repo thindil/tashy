@@ -269,7 +269,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    function Edit_CanRedo(TextWidget: in Tk_Text) return String;
    -- ****
 
-   -- ****f* Text/Edit_CanRedo
+   -- ****f* Text/Edit_CanUndo
    -- FUNCTION
    -- Check if undo action is possible or not
    -- PARAMETERS
@@ -588,6 +588,26 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- Replace it with higher level of binding
    -- SOURCE
    function Mark_Next
+     (TextWidget: in Tk_Text; Index: in String) return String with
+      Pre => Index /= "";
+      -- ****
+
+      -- ****f* Text/Mark_Previous
+      -- FUNCTION
+      -- Get previous mark at or before the selected index in the selected
+      -- Tk_Text
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which mark will be looking for
+      -- Index      - Numerical index of character at which search begins or
+      --              name of mark before which search begins
+      -- RESULT
+      -- Name of the previous mark or {} if no mark was found
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Mark_Previous
      (TextWidget: in Tk_Text; Index: in String) return String with
       Pre => Index /= "";
       -- ****
