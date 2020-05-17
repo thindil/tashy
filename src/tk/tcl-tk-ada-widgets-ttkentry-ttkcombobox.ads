@@ -80,6 +80,38 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
       Pre => pathName /= "";
       -- ****
 
+      -- ****f* TtkComboBox/Current (function)
+      -- FUNCTION
+      -- Get the current value of the selected Ttk_ComboBox
+      -- PARAMETERS
+      -- ComboBox - Ttk_ComboBox which the current value will be queried
+      -- RESULT
+      -- The current value of the ComboBox or "-1" if the value is not in the
+      -- list of values for the ComboBox
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Current(ComboBox: in Ttk_ComboBox) return String;
+   -- ****
+
+   -- ****f* TtkComboBox/Current
+   -- FUNCTION
+   -- Set the current value for the selected Ttk_ComboBox
+   -- PARAMETERS
+   -- ComboBox - Ttk_ComboBox which the current value will be set
+   -- NewIndex - A new index of the item from the list of values for the
+   --            ComboBox which will be set as the current value
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Current(ComboBox: in Ttk_ComboBox; NewIndex: in String) with
+      Pre => NewIndex /= "";
+      -- ****
+
 private
 
    type Ttk_ComboBox is new Ttk_Entry with null record;

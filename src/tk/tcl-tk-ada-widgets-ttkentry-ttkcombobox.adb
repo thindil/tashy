@@ -20,6 +20,8 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
+with Tcl.Ada;
+
 package body Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
 
    function Create
@@ -43,5 +45,16 @@ package body Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
    begin
       Widgt := Create(pathName, options, Interp);
    end Create;
+
+   function Current(ComboBox: in Ttk_ComboBox) return String is
+   begin
+      Execute_Widget_Command(ComboBox, "current");
+      return Tcl.Ada.Tcl_GetResult(ComboBox.Interp);
+   end Current;
+
+   procedure Current(ComboBox: in Ttk_ComboBox; NewIndex: in String) is
+   begin
+      Execute_Widget_Command(ComboBox, "current", NewIndex);
+   end Current;
 
 end Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox;
