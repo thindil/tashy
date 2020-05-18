@@ -36,11 +36,10 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    type Ttk_Tree_View is new Tk_Widget with private;
    -- ****
 
-   -- ****f* TtkTreeView/Create
+   -- ****f* TtkTreeView/Create (function)
    -- FUNCTION
    -- Creates a new Ttk_Tree_View in the specified interpreter.
    -- PARAMETERS
-   -- Widgt    - Ttk_Tree_View which will be created
    -- pathName - Tk path (starts with dot) for the widget
    -- options  - Options which will be passed to the widget. Default value is
    --            empty
@@ -54,6 +53,20 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Ttk_Tree_View with
       Pre => pathName /= "";
+     -- ****
+
+   -- ****f* TtkTreeView/Create (procedure)
+   -- FUNCTION
+   -- Creates a new Ttk_Tree_View in the specified interpreter.
+   -- PARAMETERS
+   -- Widgt    - Ttk_Tree_View which will be created
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Default value is
+   --            empty
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+   --            the widget will be created in the "contextual" interpreter.
+   --            Default value is null.
+   -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_Tree_View; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
@@ -216,7 +229,18 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Item /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Insert
+      -- ****f* TtkTreeView/Insert (procedure)
+      -- FUNCTION
+      -- Insert new item to tree view
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View in which item will be inserted
+      -- Options        - Tk options for the item which will be inserted
+      -- SOURCE
+   procedure Insert(TreeViewWidget: in Ttk_Tree_View; Options: in String) with
+      Pre => Options /= "";
+      -- ****
+
+      -- ****f* TtkTreeView/Insert (function)
       -- FUNCTION
       -- Insert new item to tree view
       -- PARAMETERS
@@ -225,8 +249,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- RESULT
       -- Index of newly inserted item
       -- SOURCE
-   procedure Insert(TreeViewWidget: in Ttk_Tree_View; Options: in String) with
-      Pre => Options /= "";
    function Insert
      (TreeViewWidget: in Ttk_Tree_View; Options: in String) return String with
       Pre => Options /= "";
