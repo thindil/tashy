@@ -254,6 +254,12 @@ package body Tcl.Tk.Ada.Widgets.Text is
         (TextWidget, "peer create", NewPathName & " " & Options);
    end Peer_Create;
 
+   function Peer_Names(TextWidget: in Tk_Text) return String is
+   begin
+      Execute_Widget_Command(TextWidget, "peer names");
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end Peer_Names;
+
    procedure Tag_Add
      (TextWidget: in Tk_Text; TagName, StartIndex: in String;
       Indexes: in String := "") is
