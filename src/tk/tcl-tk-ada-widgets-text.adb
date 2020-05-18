@@ -246,6 +246,14 @@ package body Tcl.Tk.Ada.Widgets.Text is
       Execute_Widget_Command(TextWidget, "mark unset", MarkName);
    end Mark_Unset;
 
+   procedure Peer_Create
+     (TextWidget: in Tk_Text; NewPathName: in String;
+      Options: in String := "") is
+   begin
+      Execute_Widget_Command
+        (TextWidget, "peer create", NewPathName & " " & Options);
+   end Peer_Create;
+
    procedure Tag_Add
      (TextWidget: in Tk_Text; TagName, StartIndex: in String;
       Indexes: in String := "") is
