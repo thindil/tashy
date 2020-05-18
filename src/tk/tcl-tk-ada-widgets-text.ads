@@ -667,17 +667,33 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => NewPathName /= "";
       -- ****
 
-      -- ****f* Text/Tag_Add
+      -- ****f* Text/Peer_Names
       -- FUNCTION
-      -- Add the selected tag to the text in Tk_Text
+      -- Get the list of names of all peers widgets for the selected Tk_Text
       -- PARAMETERS
-      -- TextWidget - Tk_Text in which the new tag will be added
-      -- TagName    - Name of the tag to add
-      -- StartIndex - Starting position on which add the tag
-      -- Indexes    - End position for adding the tag or more ranges for add
-      --              the tag. If empty, tag will be added only for one
-      --              character. Default value is empty
+      -- TextWidget - Tk_Text which peers will be queried
+      -- RESULT
+      -- List of names of all peers of the selected TextWidget or {} if no
+      -- peers are available. Order of the list is undefined
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
+   function Peer_Names(TextWidget: in Tk_Text) return String;
+   -- ****
+
+   -- ****f* Text/Tag_Add
+   -- FUNCTION
+   -- Add the selected tag to the text in Tk_Text
+   -- PARAMETERS
+   -- TextWidget - Tk_Text in which the new tag will be added
+   -- TagName    - Name of the tag to add
+   -- StartIndex - Starting position on which add the tag
+   -- Indexes    - End position for adding the tag or more ranges for add
+   --              the tag. If empty, tag will be added only for one
+   --              character. Default value is empty
+   -- SOURCE
    procedure Tag_Add
      (TextWidget: in Tk_Text; TagName, StartIndex: in String;
       Indexes: in String := "") with
