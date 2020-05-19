@@ -260,6 +260,12 @@ package body Tcl.Tk.Ada.Widgets.Text is
       return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
    end Peer_Names;
 
+   function PendingSync(TextWidget: in Tk_Text) return String is
+   begin
+      Execute_Widget_Command(TextWidget, "pendingsync");
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end PendingSync;
+
    procedure Tag_Add
      (TextWidget: in Tk_Text; TagName, StartIndex: in String;
       Indexes: in String := "") is
