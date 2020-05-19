@@ -699,17 +699,35 @@ package Tcl.Tk.Ada.Widgets.Text is
    function PendingSync(TextWidget: in Tk_Text) return String;
    -- ****
 
-   -- ****f* Text/Tag_Add
+   -- ****f* Text/Replace
    -- FUNCTION
-   -- Add the selected tag to the text in Tk_Text
+   -- Replace range of characters with new characters and tags
    -- PARAMETERS
-   -- TextWidget - Tk_Text in which the new tag will be added
-   -- TagName    - Name of the tag to add
-   -- StartIndex - Starting position on which add the tag
-   -- Indexes    - End position for adding the tag or more ranges for add
-   --              the tag. If empty, tag will be added only for one
-   --              character. Default value is empty
+   -- TextWidget - Tk_Text in which characters will be replaced
+   -- Index1     - Index of the first character to replace
+   -- Index2     - Index of the last character to replace
+   -- Chars      - Characters and tags which will replace current characters
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
+   procedure Replace
+     (TextWidget: in Tk_Text; Index1, Index2, Chars: in String) with
+      Pre => Index1 /= "" and Index2 /= "" and Chars /= "";
+      -- ****
+
+      -- ****f* Text/Tag_Add
+      -- FUNCTION
+      -- Add the selected tag to the text in Tk_Text
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which the new tag will be added
+      -- TagName    - Name of the tag to add
+      -- StartIndex - Starting position on which add the tag
+      -- Indexes    - End position for adding the tag or more ranges for add
+      --              the tag. If empty, tag will be added only for one
+      --              character. Default value is empty
+      -- SOURCE
    procedure Tag_Add
      (TextWidget: in Tk_Text; TagName, StartIndex: in String;
       Indexes: in String := "") with
