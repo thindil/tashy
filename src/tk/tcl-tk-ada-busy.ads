@@ -35,6 +35,10 @@ package Tcl.Tk.Ada.Busy is
    -- PARAMETERS
    -- Window  - Tk_Widget which will be set busy
    -- Options - Tk options for busy command
+   -- HISTORY
+   -- 8.6.2 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Busy(Window: in Tk_Widget'Class; Options: in String := "");
    procedure Hold(Window: in Tk_Widget'Class; Options: in String := "") renames
@@ -49,6 +53,10 @@ package Tcl.Tk.Ada.Busy is
    -- Option - Busy option to query
    -- RESULT
    -- Value of the selected option of the selected busy window
+   -- HISTORY
+   -- 8.6.3 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function cget
      (Window: in Tk_Widget'Class; Option: in String) return String with
@@ -61,6 +69,10 @@ package Tcl.Tk.Ada.Busy is
       -- PARAMETERS
       -- Window  - Busy Tk_Widget to configure
       -- Options - Tk options to set to the selected Tk_Widget
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Configure(Window: in Tk_Widget'Class; Options: in String) with
       Pre => Options /= "";
@@ -76,6 +88,10 @@ package Tcl.Tk.Ada.Busy is
       -- RESULT
       -- If Option is empty, return all configuration options with their
       -- values, otherwise return value of the selected option
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Configure
      (Window: in Tk_Widget'Class; Option: in String := "") return String;
@@ -90,6 +106,10 @@ package Tcl.Tk.Ada.Busy is
    -- RESULT
    -- If Pattern is empty, return all busy Tk_Widgets names. If Pattern is
    -- specified, return only this which match the Pattern.
+   -- HISTORY
+   -- 8.6.3 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function Current(Pattern: in String := "") return String;
    -- ****
@@ -99,6 +119,10 @@ package Tcl.Tk.Ada.Busy is
    -- Make window enabled again
    -- PARAMETERS
    -- Window - Tk_Widget which will be enabled
+   -- HISTORY
+   -- 8.6.2 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Forget(Window: in Tk_Widget'Class);
    -- ****
@@ -110,6 +134,10 @@ package Tcl.Tk.Ada.Busy is
    -- Window - Tk_Widget which will be queried for status
    -- RESULT
    -- 1 if Tk_Widget is busy, otherwise 0
+   -- HISTORY
+   -- 8.6.3 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function Status(Window: in Tk_Widget'Class) return String;
    -- ****
