@@ -266,6 +266,13 @@ package body Tcl.Tk.Ada.Widgets.Text is
       return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
    end PendingSync;
 
+   procedure Replace
+     (TextWidget: in Tk_Text; Index1, Index2, Chars: in String) is
+   begin
+      Execute_Widget_Command
+        (TextWidget, "replace", Index1 & " " & Index2 & " " & Chars);
+   end Replace;
+
    procedure Tag_Add
      (TextWidget: in Tk_Text; TagName, StartIndex: in String;
       Indexes: in String := "") is
