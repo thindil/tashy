@@ -683,6 +683,22 @@ package Tcl.Tk.Ada.Widgets.Text is
    function Peer_Names(TextWidget: in Tk_Text) return String;
    -- ****
 
+   -- ****f* Text/PendingSync
+   -- FUNCTION
+   -- Check if line heights calculation is up to date or not
+   -- PARAMETERS
+   -- TextWidget - Tk_Text which state of synchronization will be check
+   -- RESULT
+   -- "1" if line heights calculations is not up to date or "0" if is
+   -- synchronized
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function PendingSync(TextWidget: in Tk_Text) return String;
+   -- ****
+
    -- ****f* Text/Tag_Add
    -- FUNCTION
    -- Add the selected tag to the text in Tk_Text
