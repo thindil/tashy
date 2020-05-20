@@ -751,6 +751,29 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => X /= "" and Y /= "";
       -- ****
 
+      -- ****f* Text/Search
+      -- FUNCTION
+      -- Search for the selected pattern in the selected Tk_Text
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which the selected Pattern will be looking for
+      -- Switches   - Switches for command search. Can be empty. Default value
+      --              is empty
+      -- Pattern    - Pattern to search
+      -- Index      - Index of character from which start search
+      -- StopIndex  - Index of character at which stop searching
+      -- RESULT
+      -- Index of first character matching Pattern or {} if nothing was found
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Search
+     (TextWidget: in Tk_Text; Switches: in String := "";
+      Pattern, Index: in String; StopIndex: in String := "") return String with
+      Pre => Pattern /= "" and Index /= "";
+      -- ****
+
       -- ****f* Text/Tag_Add
       -- FUNCTION
       -- Add the selected tag to the text in Tk_Text
