@@ -1038,15 +1038,39 @@ package Tcl.Ada is
 
    function Tcl_ErrnoMsg(err: in C.int) return String;
 
+   -- ****f* Ada/Tcl_Eval
+   -- FUNCTION
+   -- Execute (evaluate) Tcl statement in the selected Tcl interpreter
+   -- PARAMETERS
+   -- interp - Tcl interpreter on which the selected statement will be
+   --          evaluated
+   -- strng  - Tcl statement to evaluate
+   -- RESULT
+   -- Tcl code (TCL_OK, TCL_ERROR, etc) returned after evaluate the
+   -- selected statement
+   -- SOURCE
    function Tcl_Eval
      (interp: not null Tcl_Interp; strng: in String) return C.int;
 
    procedure Tcl_Eval(interp: not null Tcl_Interp; strng: in String);
+   -- ****
 
+   -- ****f* Ada/Tcl_EvalFile
+   -- FUNCTION
+   -- Execute (evaluate) Tcl script from the selected file
+   -- PARAMETERS
+   -- interp   - Tcl interpreter on which the selected script will be
+   --            executed
+   -- fileName - Name of file which contains Tcl script to evaluate
+   -- RESULT
+   -- Tcl code (TCL_OK, TCL_ERROR, etc) returned after evaluate the
+   -- selected script
+   -- SOURCE
    function Tcl_EvalFile
      (interp: not null Tcl_Interp; fileName: in String) return C.int;
 
    procedure Tcl_EvalFile(interp: not null Tcl_Interp; fileName: in String);
+   -- ****
 
    function Tcl_ExposeCommand
      (interp: not null Tcl_Interp; hiddenCmdToken: in String;
