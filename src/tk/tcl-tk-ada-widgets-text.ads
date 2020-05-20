@@ -733,6 +733,24 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => X /= "" and Y /= "";
       -- ****
 
+      -- ****f* Text/Scan_DragTo
+      -- FUNCTION
+      -- Computes the difference between its X argument and the X argument to
+      -- the last Scan_Mark procedure for the Tk_Entry. It then adjusts the
+      -- view by 10 times the difference in coordinates.
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which difference will be computed
+      -- X          - X coordinate which difference will be computed
+      -- Y          - Y coordinate which difference will be computed
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Scan_DragTo(TextWidget: in Tk_Text; X, Y: in String) with
+      Pre => X /= "" and Y /= "";
+      -- ****
+
       -- ****f* Text/Tag_Add
       -- FUNCTION
       -- Add the selected tag to the text in Tk_Text

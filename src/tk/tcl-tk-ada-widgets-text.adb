@@ -278,6 +278,11 @@ package body Tcl.Tk.Ada.Widgets.Text is
       Execute_Widget_Command(TextWidget, "scan mark", X & " " & Y);
    end Scan_Mark;
 
+   procedure Scan_DragTo(TextWidget: in Tk_Text; X, Y: in String) is
+   begin
+      Execute_Widget_Command(TextWidget, "scan dragto", X & " " & Y);
+   end Scan_DragTo;
+
    procedure Tag_Add
      (TextWidget: in Tk_Text; TagName, StartIndex: in String;
       Indexes: in String := "") is
