@@ -717,6 +717,22 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => Index1 /= "" and Index2 /= "" and Chars /= "";
       -- ****
 
+      -- ****f* Text/Scan_Mark
+      -- FUNCTION
+      -- Sets starting position for scan in the selected Tk_Text
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which mark will be set
+      -- X          - X coordinate of the mark to set
+      -- Y          - Y coordinate of the mark to set
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Scan_Mark(TextWidget: in Tk_Text; X, Y: in String) with
+      Pre => X /= "" and Y /= "";
+      -- ****
+
       -- ****f* Text/Tag_Add
       -- FUNCTION
       -- Add the selected tag to the text in Tk_Text
