@@ -40,6 +40,10 @@ package Tcl.Tk.Ada.Dialogs is
    --           is empty string
    -- RESULT
    -- Name of selected directory or empty string if directory was not selected
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function Choose_Directory(Options: in String := "") return String;
    -- ****
@@ -57,6 +61,10 @@ package Tcl.Tk.Ada.Dialogs is
    -- Buttons - Array with text to show on buttons. One element is one button
    -- RESULT
    -- Index of button which was clicked or -1 if no button was clicked.
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function Dialog
      (Widget: in out Tk_Toplevel; Title, Text, Bitmap: in String;
@@ -74,6 +82,10 @@ package Tcl.Tk.Ada.Dialogs is
       --           is empty string
       -- RESULT
       -- Name of selected file or empty string if no file was selected
+      -- HISTORY
+      -- 8.6.1 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Get_Open_File(Options: in String := "") return String;
    -- ****
@@ -86,6 +98,10 @@ package Tcl.Tk.Ada.Dialogs is
    --           is empty string
    -- RESULT
    -- Name of selected file or empty string if no file was selected
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function Get_Save_File(Options: in String := "") return String;
    -- ****
@@ -98,6 +114,10 @@ package Tcl.Tk.Ada.Dialogs is
    --           is empty string
    -- RESULT
    -- Symbolic name of the clicked button
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function MessageBox(Options: in String := "") return String;
    -- ****
