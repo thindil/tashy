@@ -273,6 +273,11 @@ package body Tcl.Tk.Ada.Widgets.Text is
         (TextWidget, "replace", Index1 & " " & Index2 & " " & Chars);
    end Replace;
 
+   procedure Scan_Mark(TextWidget: in Tk_Text; X, Y: in String) is
+   begin
+      Execute_Widget_Command(TextWidget, "scan mark", X & " " & Y);
+   end Scan_Mark;
+
    procedure Tag_Add
      (TextWidget: in Tk_Text; TagName, StartIndex: in String;
       Indexes: in String := "") is
