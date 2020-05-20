@@ -283,6 +283,16 @@ package body Tcl.Tk.Ada.Widgets.Text is
       Execute_Widget_Command(TextWidget, "scan dragto", X & " " & Y);
    end Scan_DragTo;
 
+   function Search
+     (TextWidget: in Tk_Text; Switches: in String := "";
+      Pattern, Index: in String; StopIndex: in String := "") return String is
+   begin
+      Execute_Widget_Command
+        (TextWidget, "search",
+         Switches & " " & Pattern & " " & Index & " " & StopIndex);
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end Search;
+
    procedure Tag_Add
      (TextWidget: in Tk_Text; TagName, StartIndex: in String;
       Indexes: in String := "") is
