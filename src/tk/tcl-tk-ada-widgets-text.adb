@@ -293,6 +293,11 @@ package body Tcl.Tk.Ada.Widgets.Text is
       return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
    end Search;
 
+   procedure See(TextWidget: in Tk_Text; Index: in String) is
+   begin
+      Execute_Widget_Command(TextWidget, "see", Index);
+   end See;
+
    procedure Tag_Add
      (TextWidget: in Tk_Text; TagName, StartIndex: in String;
       Indexes: in String := "") is
