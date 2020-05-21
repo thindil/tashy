@@ -35,6 +35,10 @@ package Tcl.Tk.Ada.Grid is
    -- PARAMETERS
    -- Slave   - Tk_Widget to add
    -- Options - Option to grid action. Default value is empty
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Grid(Slave: in Tk_Widget'Class; Options: in String := "");
    -- ****
@@ -45,6 +49,10 @@ package Tcl.Tk.Ada.Grid is
    -- PARAMETERS
    -- Master    - Tk_Widget which is set as grid
    -- Direction - Direction in which anchor of the grid should be set.
+   -- HISTORY
+   -- 8.6.2 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Grid_Anchor(Master: in Tk_Widget'Class; Direction: in String) with
       Pre => Direction /= "";
@@ -57,6 +65,10 @@ package Tcl.Tk.Ada.Grid is
       -- Master - Tk_Widget which is set as grid
       -- RESULT
       -- A direction in which the grid anchor is set
+      -- HISTORY
+      -- 8.6.2 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Grid_Anchor(Master: in Tk_Widget'Class) return String;
    -- ****
@@ -78,6 +90,10 @@ package Tcl.Tk.Ada.Grid is
    -- If all parameters are empty, return bounding box for whole grid. If
    -- only Column and Row specified, return box for the selected cell. If all
    -- parameters are specified, return box for selected cells.
+   -- HISTORY
+   -- 8.6.2 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function Grid_BBox
      (Master: in Tk_Widget'Class; Column, Row, Column2, Row2: in String := "")
@@ -91,6 +107,10 @@ package Tcl.Tk.Ada.Grid is
    -- Master  - Tk_Widget which is set as grid
    -- Slave   - Tk_Widget inside Master
    -- Options - Tk options for selected Slave
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Column_Configure
      (Master, Slave: in Tk_Widget'Class; Options: in String) with
@@ -105,6 +125,10 @@ package Tcl.Tk.Ada.Grid is
       -- Slave   - Tk_Widget inside Master
       -- RESULT
       -- String with column configuration options for selected Slave widget
+      -- HISTORY
+      -- 8.6.1 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Column_Configure(Master, Slave: in Tk_Widget'Class) return String;
    -- ****
@@ -115,6 +139,10 @@ package Tcl.Tk.Ada.Grid is
    -- PARAMETERS
    -- Slave   - Tk_Widget to configure
    -- Options - Grid options for the slave
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Grid_Configure
      (Slave: in Tk_Widget'Class; Options: in String := "");
@@ -126,6 +154,10 @@ package Tcl.Tk.Ada.Grid is
    -- and unmaps their windows.
    -- PARAMETERS
    -- Slave - Tk_Widget to remove
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Grid_Forget(Slave: in Tk_Widget'Class);
    -- ****
@@ -138,6 +170,10 @@ package Tcl.Tk.Ada.Grid is
    -- RESULT
    -- String with list whose elements are the current configuration
    -- state of the specified Slave window.
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function Grid_Info(Slave: in Tk_Widget'Class) return String;
    -- ****
@@ -152,6 +188,10 @@ package Tcl.Tk.Ada.Grid is
    -- RESULT
    -- Number of column and row at selected screen point. If point is on the
    -- or above the selected grid, return -1
+   -- HISTORY
+   -- 8.6.2 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function Grid_Location
      (Master: in Tk_Widget'Class; X, Y: in String) return String with
@@ -165,6 +205,10 @@ package Tcl.Tk.Ada.Grid is
       -- Master - Tk_Widget which is set as grid to modify
       -- Value  - New value for propagation. 1, on, true enables, 0, off,
       --          false disable propagation.
+      -- HISTORY
+      -- 8.6.2 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Grid_Propagate(Master: in Tk_Widget'Class; Value: in String) with
       Pre => Value /= "";
@@ -177,6 +221,10 @@ package Tcl.Tk.Ada.Grid is
       -- Master - Tk_Widget which is set as grid to query
       -- RESULT
       -- 0 if propagation is disabled, otherwise 1
+      -- HISTORY
+      -- 8.6.2 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Grid_Propagate(Master: in Tk_Widget'Class) return String;
    -- ****
@@ -187,6 +235,10 @@ package Tcl.Tk.Ada.Grid is
    -- and unmaps their windows but remember their positions in the grid
    -- PARAMETERS
    -- Slave - Tk_Widget to remove
+   -- HISTORY
+   -- 8.6.2 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Grid_Remove(Slave: in Tk_Widget'Class);
    -- ****
@@ -198,6 +250,10 @@ package Tcl.Tk.Ada.Grid is
    -- Master  - Tk_Widget which is set as grid
    -- Slave   - Tk_Widget inside Master
    -- Options - Tk options for selected Slave
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Row_Configure
      (Master, Slave: in Tk_Widget'Class; Options: in String) with
@@ -212,6 +268,10 @@ package Tcl.Tk.Ada.Grid is
       -- Slave   - Tk_Widget inside Master
       -- RESULT
       -- String with row configuration options for selected Slave widget
+      -- HISTORY
+      -- 8.6.1 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Row_Configure(Master, Slave: in Tk_Widget'Class) return String;
    -- ****
@@ -224,6 +284,10 @@ package Tcl.Tk.Ada.Grid is
    -- RESULT
    -- First value is columns amount, second value is rows amount of the
    -- selected grid
+   -- HISTORY
+   -- 8.6.2 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function Grid_Size(Master: in Tk_Widget'Class) return String;
    -- ****
@@ -239,6 +303,10 @@ package Tcl.Tk.Ada.Grid is
    -- If Option is empty, return all slaves of the selected grid. If option
    -- is -row then return slaves in the selected row. If option is -column
    -- then return slaves in the selected column
+   -- HISTORY
+   -- 8.6.2 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function Grid_Slaves
      (Master: in Tk_Widget'Class; Option: in String := "") return String;
