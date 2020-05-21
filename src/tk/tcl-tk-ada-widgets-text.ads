@@ -774,6 +774,21 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => Pattern /= "" and Index /= "";
       -- ****
 
+      -- ****f* Text/See
+      -- FUNCTION
+      -- Made the selected character visible (scroll Tk_Text to it if needed)
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which the selected character will be visible
+      -- Index      - Index of character show show
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure See(TextWidget: in Tk_Text; Index: in String) with
+      Pre => Index /= "";
+      -- ****
+
       -- ****f* Text/Tag_Add
       -- FUNCTION
       -- Add the selected tag to the text in Tk_Text
