@@ -789,17 +789,30 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* Text/Tag_Add
+      -- ****f* Text/Sync
       -- FUNCTION
-      -- Add the selected tag to the text in Tk_Text
+      -- Update line metrics by computing lines heights
       -- PARAMETERS
-      -- TextWidget - Tk_Text in which the new tag will be added
-      -- TagName    - Name of the tag to add
-      -- StartIndex - Starting position on which add the tag
-      -- Indexes    - End position for adding the tag or more ranges for add
-      --              the tag. If empty, tag will be added only for one
-      --              character. Default value is empty
+      -- TextWidget - Tk_Text which line metrics will be updated
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
+   procedure Sync(TextWidget: in Tk_Text);
+   -- ****
+
+   -- ****f* Text/Tag_Add
+   -- FUNCTION
+   -- Add the selected tag to the text in Tk_Text
+   -- PARAMETERS
+   -- TextWidget - Tk_Text in which the new tag will be added
+   -- TagName    - Name of the tag to add
+   -- StartIndex - Starting position on which add the tag
+   -- Indexes    - End position for adding the tag or more ranges for add
+   --              the tag. If empty, tag will be added only for one
+   --              character. Default value is empty
+   -- SOURCE
    procedure Tag_Add
      (TextWidget: in Tk_Text; TagName, StartIndex: in String;
       Indexes: in String := "") with
