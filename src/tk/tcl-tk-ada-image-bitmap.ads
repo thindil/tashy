@@ -48,6 +48,10 @@ package Tcl.Tk.Ada.Image.Bitmap is
    --            Default value is null.
    -- RESULT
    -- Newly created Tk_Bitmap
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
@@ -63,9 +67,13 @@ package Tcl.Tk.Ada.Image.Bitmap is
       -- pathName - Tk name of the image
       -- options  - Options which will be passed to the image. Default value is
       --            empty
-   -- Interp   - Tcl interpreter to which the image will be created. If null,
+      -- Interp   - Tcl interpreter to which the image will be created. If null,
       --            the image will be created in the "contextual" interpreter.
       --            Default value is null.
+      -- HISTORY
+      -- 8.6.1 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Create
      (Widgt: out Tk_Bitmap; pathName: in String; options: in String := "";
