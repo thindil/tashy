@@ -315,6 +315,21 @@ package body Tcl.Tk.Ada.Widgets.Text is
         (TextWidget, "tag add", TagName & " " & StartIndex & " " & Indexes);
    end Tag_Add;
 
+   procedure Tag_Bind
+     (TextWidget: in Tk_Text; TagName, Sequence, Script: in String) is
+   begin
+      Execute_Widget_Command
+        (TextWidget, "tag bind", TagName & " " & Sequence & " " & Script);
+   end Tag_Bind;
+
+   function Tag_Bind
+     (TextWidget: in Tk_Text; TagName: in String; Sequence: in String := "")
+      return String is
+   begin
+      Execute_Widget_Command(TextWidget, "tag bind", TagName & " " & Sequence);
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end Tag_Bind;
+
    procedure Tag_Configure
      (TextWidget: in Tk_Text; TagName, Options: in String) is
    begin

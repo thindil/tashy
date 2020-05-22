@@ -834,6 +834,46 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => TagName /= "" and StartIndex /= "";
       -- ****
 
+      -- ****f* Text/Tag_Bind (procedure)
+      -- FUNCTION
+      -- Bind the selected script to the selected sequence on the selected tag
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which script will be bound
+      -- TagName    - Name of the tag to which script will be bound
+      -- Sequence   - Name of the sequence to which script will be bound
+      -- Script     - Tcl commands which will be bound
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Tag_Bind
+     (TextWidget: in Tk_Text; TagName, Sequence, Script: in String) with
+      Pre => TagName /= "" and Sequence /= "" and Script /= "";
+      -- ****
+
+      -- ****f* Text/Tag_Bind
+      -- FUNCTION
+      -- Get scrips bounded to the selected tag in the selected Tk_Text
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which information will be queried
+      -- TagName    - Name of the tag which bindings will be queried
+      -- Sequence   - Name of the sequence. Can be empty. Default value is
+      --              empty
+      -- RESULT
+      -- If Sequence is empty, return all binded sequences. Otherwise, return
+      -- script associated with the selected Sequence.
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Tag_Bind
+     (TextWidget: in Tk_Text; TagName: in String; Sequence: in String := "")
+      return String with
+      Pre => TagName /= "";
+      -- ****
+
       -- ****f* Text/Tag_Configure (procedure)
       -- FUNCTION
       -- Configure the selected tag in the selected Tk_Text widget
