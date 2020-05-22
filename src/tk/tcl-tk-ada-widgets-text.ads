@@ -874,6 +874,26 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => TagName /= "";
       -- ****
 
+      -- ****f* Text/Tag_Cget
+      -- FUNCTION
+      -- Get the current value of the selected option of the selected tag in
+      -- the selected Tk_Text
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which tag's options will be queried
+      -- TagName    - Name of the tag which options will be queried
+      -- Option     - Name of the option which value will be taken
+      -- RESULT
+      -- The current value of the selected option
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Tag_Cget
+     (TextWidget: in Tk_Text; TagName, Option: in String) return String with
+      Pre => TagName /= "" and Option /= "";
+      -- ****
+
       -- ****f* Text/Tag_Configure (procedure)
       -- FUNCTION
       -- Configure the selected tag in the selected Tk_Text widget

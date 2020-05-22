@@ -330,6 +330,13 @@ package body Tcl.Tk.Ada.Widgets.Text is
       return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
    end Tag_Bind;
 
+   function Tag_Cget
+     (TextWidget: in Tk_Text; TagName, Option: in String) return String is
+   begin
+      Execute_Widget_Command(TextWidget, "tag cget", TagName & " " & Option);
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end Tag_Cget;
+
    procedure Tag_Configure
      (TextWidget: in Tk_Text; TagName, Options: in String) is
    begin
