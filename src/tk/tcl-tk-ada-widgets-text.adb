@@ -302,6 +302,11 @@ package body Tcl.Tk.Ada.Widgets.Text is
       Execute_Widget_Command(TextWidget, "sync");
    end Sync;
 
+   procedure Sync_Command(TextWidget: in Tk_Text; Command: in String) is
+   begin
+      Execute_Widget_Command(TextWidget, "sync", "-command " & Command);
+   end Sync_Command;
+
    procedure Tag_Add
      (TextWidget: in Tk_Text; TagName, StartIndex: in String;
       Indexes: in String := "") is
