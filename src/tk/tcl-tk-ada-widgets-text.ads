@@ -941,6 +941,27 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => TagName /= "";
       -- ****
 
+      -- ****f* Text/Tag_Lower
+      -- FUNCTION
+      -- Lower the priority of the selected tag
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which the selected tag's priority will be
+      --              lowered
+      -- TagName    - Name of the tag which priority will be lowered
+      -- BelowThis  - Name of the tag which priority will be above the
+      --              selected tag name. If it is empty, made the selected tag
+      --              lowest priority. Default value is empty.
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Tag_Lower
+     (TextWidget: in Tk_Text; TagName: in String;
+      BelowThis: in String := "") with
+      Pre => TagName /= "";
+      -- ****
+
 private
 
    type Tk_Text is new Tk_Widget with null record;
