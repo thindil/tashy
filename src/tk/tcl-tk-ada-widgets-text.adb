@@ -358,4 +358,12 @@ package body Tcl.Tk.Ada.Widgets.Text is
       Execute_Widget_Command(TextWidget, "tag delete", TagName);
    end Tag_Delete;
 
+   procedure Tag_Lower
+     (TextWidget: in Tk_Text; TagName: in String;
+      BelowThis: in String := "") is
+   begin
+      Execute_Widget_Command
+        (TextWidget, "tag lower", TagName & " " & BelowThis);
+   end Tag_Lower;
+
 end Tcl.Tk.Ada.Widgets.Text;
