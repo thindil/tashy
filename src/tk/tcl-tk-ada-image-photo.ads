@@ -48,6 +48,10 @@ package Tcl.Tk.Ada.Image.Photo is
    --            Default value is null.
    -- RESULT
    -- Newly created Tk_Photo
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
@@ -63,9 +67,13 @@ package Tcl.Tk.Ada.Image.Photo is
       -- pathName - Tk name of the image
       -- options  - Options which will be passed to the image. Default value is
       --            empty
-   -- Interp   - Tcl interpreter to which the image will be created. If null,
+      -- Interp   - Tcl interpreter to which the image will be created. If null,
       --            the image will be created in the "contextual" interpreter.
       --            Default value is null.
+      -- HISTORY
+      -- 8.6.1 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Create
      (Widgt: out Tk_Photo; pathName: in String; options: in String := "";
@@ -78,6 +86,10 @@ package Tcl.Tk.Ada.Image.Photo is
       -- Blank the image, make it transparent
       -- PARAMETERS
       -- Image - Tk_Photo to blank
+      -- HISTORY
+      -- 8.6.2 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Blank(Image: in Tk_Photo);
    -- ****
@@ -90,6 +102,10 @@ package Tcl.Tk.Ada.Image.Photo is
    -- Target  - Tk_Photo which will be used as destination
    -- Options - Aditional Tk options for copy command. Default value is
    --           empty
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Copy(Source, Target: in Tk_Photo; Options: in String := "");
    -- ****
@@ -102,6 +118,10 @@ package Tcl.Tk.Ada.Image.Photo is
    -- Options - Tk options for data to query. Default value is empty
    -- RESULT
    -- Image data, all if options are empty or specified option data
+   -- HISTORY
+   -- 8.6.2 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function Data(Image: in Tk_Photo; Options: in String := "") return String;
    -- ****
@@ -115,6 +135,10 @@ package Tcl.Tk.Ada.Image.Photo is
    -- Y     - Y coordinate of pixel to get color
    -- RESULT
    -- Three values of colors red, green, blue from 0 to 255
+   -- HISTORY
+   -- 8.6.2 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function Get(Image: in Tk_Photo; X, Y: in String) return String with
       Pre => X /= "" and Y /= "";
@@ -128,6 +152,10 @@ package Tcl.Tk.Ada.Image.Photo is
       -- Data    - Proper data for selected image format which will be changed
       -- Options - Additional options: -format or -to with proper values.
       --           Default value is empty
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Put
      (Image: in Tk_Photo; Data: in String; Options: in String := "") with
@@ -141,6 +169,10 @@ package Tcl.Tk.Ada.Image.Photo is
       -- Image    - Tk_Photo in which data will be loaded
       -- FileName - Name of file which will be read
       -- Options  - Additional options for read data. Default value is empty
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Read
      (Image: in Tk_Photo; FileName: in String; Options: in String := "") with
@@ -152,6 +184,10 @@ package Tcl.Tk.Ada.Image.Photo is
       -- Recalculate dithered image
       -- PARAMETERS
       -- Image - Tk_Photo to recalculate
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Redither(Image: in Tk_Photo);
    -- ****
@@ -165,6 +201,10 @@ package Tcl.Tk.Ada.Image.Photo is
    -- Y     - Y coordinate of pixel to check
    -- RESULT
    -- If pixel is transparent return true, otherwise false
+   -- HISTORY
+   -- 8.6.3 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function Transparency_Get
      (Image: in Tk_Photo; X, Y: in String) return String with
@@ -178,6 +218,10 @@ package Tcl.Tk.Ada.Image.Photo is
       -- Image - Tk_Photo in which pixel transparency will be set
       -- X     - X coordinate of the pixel which transparency will be set
       -- Y     - Y coordinate of the pixel which transparency will be set
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Transparency_Set(Image: in Tk_Photo; X, Y: in String) with
       Pre => X /= "" and Y /= "";
@@ -191,6 +235,10 @@ package Tcl.Tk.Ada.Image.Photo is
       -- FileName - Name of the file to which image will be written
       -- Options  - Additional options for writting image to file. Default
       --            value is empty
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Write
      (Image: in Tk_Photo; FileName: in String; Options: in String := "") with
