@@ -18,7 +18,8 @@ of the project.
   `image cget`, `image configure`, `image create`, `image names`, `index`,
   `mark gravity`, `mark names`, `mark next`, `mark previous`, `mark set`,
   `mark unset`, `peer create`, `peer names`, `pendingsync`, `replace`,
-  `scan mark`, `scan dragto`, `search`, `see`, `sync`, `tag bind`, `tag cget`
+  `scan mark`, `scan dragto`, `search`, `see`, `sync`, `tag bind`, `tag cget`,
+  `tag delete`
 - Binding for Tk `ttk::scale` commands: `get`, `set`
 - Binding for Tk `ttk::combobox` commands: `current`, `set`
 
