@@ -42,10 +42,9 @@ of the project.
   `scan mark`, `scan dragto`, `see`, `selection anchor`, `selection clear`,
   `selection include`, `selection set`, `size`, `xview`, `xview moveto`,
   `xview scroll`, `yview`, `yview moveto`, `yview scroll`
-- Binding for Tk `image` commands: `height`, `width`
 - Binding for Tk `place` commands: `place`, `configure`, `forget`, `info`,
   `slaves`
-- Binding for Tk `image` commands: `inuse`, `names`, `type`
+- Binding for Tk `image` commands: `height`, `width`,`inuse`, `names`, `type`
 - Binding for Tk `menu` commands: `activate`, `clone`, `entrycget`, `index`,
   `insert`, `post`, `postcascade`, `type`, `unpost`, `xposition`, `yposition`
 - Binding for Tk `panedwindow` commands: `add`, `forget`, `identify`,
