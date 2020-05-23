@@ -353,4 +353,9 @@ package body Tcl.Tk.Ada.Widgets.Text is
       return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
    end Tag_Configure;
 
+   procedure Tag_Delete(TextWidget: in Tk_Text; TagName: in String) is
+   begin
+      Execute_Widget_Command(TextWidget, "tag delete", TagName);
+   end Tag_Delete;
+
 end Tcl.Tk.Ada.Widgets.Text;

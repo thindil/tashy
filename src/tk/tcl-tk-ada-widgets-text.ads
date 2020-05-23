@@ -852,7 +852,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => TagName /= "" and Sequence /= "" and Script /= "";
       -- ****
 
-      -- ****f* Text/Tag_Bind
+      -- ****f* Text/Tag_Bind (function)
       -- FUNCTION
       -- Get scrips bounded to the selected tag in the selected Tk_Text
       -- PARAMETERS
@@ -922,6 +922,22 @@ package Tcl.Tk.Ada.Widgets.Text is
    function Tag_Configure
      (TextWidget: in Tk_Text; TagName: in String; Option: in String := "")
       return String with
+      Pre => TagName /= "";
+      -- ****
+
+      -- ****f* Text/Tag_Delete
+      -- FUNCTION
+      -- Delete the selected tag(s) from the selected Tk_Text
+      -- PARAMETERS
+      -- TextWidget - Tk_Text from which the selected tag(s) will be removed
+      -- TagName    - Name of the tag to remove. It can be list of names
+      --              separated by spaces
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Tag_Delete(TextWidget: in Tk_Text; TagName: in String) with
       Pre => TagName /= "";
       -- ****
 
