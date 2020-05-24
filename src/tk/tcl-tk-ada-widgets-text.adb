@@ -366,4 +366,11 @@ package body Tcl.Tk.Ada.Widgets.Text is
         (TextWidget, "tag lower", TagName & " " & BelowThis);
    end Tag_Lower;
 
+   function Tag_Names
+     (TextWidget: in Tk_Text; Index: in String := "") return String is
+   begin
+      Execute_Widget_Command(TextWidget, "tag names", Index);
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end Tag_Names;
+
 end Tcl.Tk.Ada.Widgets.Text;
