@@ -962,6 +962,25 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => TagName /= "";
       -- ****
 
+      -- ****f* Text/Tag_Names
+      -- FUNCTION
+      -- Get the names of tags in the selected Tk_Text
+      -- PARAMETERS
+      -- TextWidget - Tk_Text which will be queried for the tags
+      -- Index      - Index of the character at which tags will be taken.
+      --              Can be empty. Default value is empty.
+      -- RESULT
+      -- If Index is empty, return list of names of all tags in the TextWidget.
+      -- Otherwise return list of names of tags at the selected position
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Tag_Names
+     (TextWidget: in Tk_Text; Index: in String := "") return String;
+     -- ****
+
 private
 
    type Tk_Text is new Tk_Widget with null record;
