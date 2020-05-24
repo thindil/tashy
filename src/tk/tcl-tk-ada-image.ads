@@ -34,6 +34,10 @@ package Tcl.Tk.Ada.Image is
    -- Delete the selected image widget
    -- PARAMETERS
    -- Img - Image to delete
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Delete(Img: in out Tk_Widget'Class);
    -- ****
@@ -101,6 +105,10 @@ package Tcl.Tk.Ada.Image is
    -- Get types of images available
    -- RESULT
    -- List of types of images available
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function Types return String;
    -- ****
