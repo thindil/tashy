@@ -995,8 +995,38 @@ package Tcl.Tk.Ada.Widgets.Text is
      -- List with two values: the first index of the character in range and
      -- the last index of character in range with the selected tag. If no
      -- characters are in range, return {}
+     -- HISTORY
+     -- 8.6.5 - Added
+     -- TODO
+     -- Replace it with higher level of binding
      -- SOURCE
    function Tag_NextRange
+     (TextWidget: in Tk_Text; TagName, Index1: in String;
+      Index2: in String := "") return String with
+      Pre => TagName /= "" and Index1 /= "";
+      -- ****
+
+      -- ****f* Text/Tag_PrevRange
+      -- FUNCTION
+      -- Get the characters with the selected tag name found in the selected
+      -- range in the selected Tk_Text. Search is done in the reverse direction.
+      -- PARAMETERS
+      -- TextWidget - Tk_Text which will be queried for text
+      -- TagName    - Name of the tag which is looking for
+      -- Index1     - Index of the character from which search for starts
+      -- Index2     - Index of the character at which search for ends. If empty
+      --              search to the beginning of the text. Default value is
+      --             empty
+      -- RESULT
+      -- List with two values: the first index of the character in range and
+      -- the last index of character in range with the selected tag. If no
+      -- characters are in range, return {}
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Tag_PrevRange
      (TextWidget: in Tk_Text; TagName, Index1: in String;
       Index2: in String := "") return String with
       Pre => TagName /= "" and Index1 /= "";
