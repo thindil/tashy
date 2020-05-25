@@ -391,4 +391,12 @@ package body Tcl.Tk.Ada.Widgets.Text is
       return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
    end Tag_PrevRange;
 
+   procedure Tag_Raise
+     (TextWidget: in Tk_Text; TagName: in String;
+      AboveThis: in String := "") is
+   begin
+      Execute_Widget_Command
+        (TextWidget, "tag raise", TagName & " " & AboveThis);
+   end Tag_Raise;
+
 end Tcl.Tk.Ada.Widgets.Text;

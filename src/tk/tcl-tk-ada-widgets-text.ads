@@ -1016,7 +1016,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- Index1     - Index of the character from which search for starts
       -- Index2     - Index of the character at which search for ends. If empty
       --              search to the beginning of the text. Default value is
-      --             empty
+      --              empty
       -- RESULT
       -- List with two values: the first index of the character in range and
       -- the last index of character in range with the selected tag. If no
@@ -1030,6 +1030,27 @@ package Tcl.Tk.Ada.Widgets.Text is
      (TextWidget: in Tk_Text; TagName, Index1: in String;
       Index2: in String := "") return String with
       Pre => TagName /= "" and Index1 /= "";
+      -- ****
+
+      -- ****f* Text/Tag_Raise
+      -- FUNCTION
+      -- Raise the priority of the selected tag
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which the selected tag's priority will be
+      --              raised
+      -- TagName    - The name of the tag which priority will be raised
+      -- AboveThis  - The name of the tag which priority will be below the
+      --              selected tag. If empty, the selected tag will be the
+      --              first in the priority. Default value is empty
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Tag_Raise
+     (TextWidget: in Tk_Text; TagName: in String;
+      AboveThis: in String := "") with
+      Pre => TagName /= "";
       -- ****
 
 private
