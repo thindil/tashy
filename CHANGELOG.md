@@ -19,7 +19,7 @@ of the project.
   `mark gravity`, `mark names`, `mark next`, `mark previous`, `mark set`,
   `mark unset`, `peer create`, `peer names`, `pendingsync`, `replace`,
   `scan mark`, `scan dragto`, `search`, `see`, `sync`, `tag bind`, `tag cget`,
-  `tag delete`, `tag names`, `tag nextrange`, `tag prevrange`
+  `tag delete`, `tag names`, `tag nextrange`, `tag prevrange`, `tag raise`
 - Binding for Tk `ttk::scale` commands: `get`, `set`
 - Binding for Tk `ttk::combobox` commands: `current`, `set`
 
