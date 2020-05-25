@@ -35,6 +35,10 @@ package Tcl.Tk.Ada.Pack is
    -- PARAMETERS
    -- Slave   - Tk_Widget to pack
    -- Options - Option to pack action
+   -- HISTORY
+   -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Pack(Slave: in Tk_Widget'Class; Options: in String := "");
    -- ****
@@ -45,6 +49,10 @@ package Tcl.Tk.Ada.Pack is
    -- PARAMETERS
    -- Slave   - Tk_Widget to configure
    -- Options - Pack options for the slave
+   -- HISTORY
+   -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Pack_Configure
      (Slave: in Tk_Widget'Class; Options: in String := "");
@@ -56,6 +64,10 @@ package Tcl.Tk.Ada.Pack is
    -- and unmaps their windows.
    -- PARAMETERS
    -- Slave - Tk_Widget to remove
+   -- HISTORY
+   -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Pack_Forget(Slave: in Tk_Widget'Class);
    -- ****
@@ -68,6 +80,10 @@ package Tcl.Tk.Ada.Pack is
    -- RESULT
    -- String with list whose elements are the current configuration
    -- state of the specified Slave window.
+   -- HISTORY
+   -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function Pack_Info(Slave: in Tk_Widget'Class) return String;
    -- ****
@@ -78,6 +94,10 @@ package Tcl.Tk.Ada.Pack is
    -- PARAMETERS
    -- Master - Tk_Widget which propagation will be set
    -- State  - If true, enable propagation, false disable it
+   -- HISTORY
+   -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Pack_Propagate(Master: in Tk_Widget'Class; State: in Boolean);
    -- ****
@@ -89,6 +109,10 @@ package Tcl.Tk.Ada.Pack is
    -- Master - Tk_Widget which propagation state will be check
    -- RESULT
    -- Returns state of propagation in the specified Master window.
+   -- HISTORY
+   -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function Pack_Propagate(Master: in Tk_Widget'Class) return Boolean;
    -- ****
@@ -101,6 +125,10 @@ package Tcl.Tk.Ada.Pack is
    -- RESULT
    -- Returns a list of slaves in the packing order of the specified
    -- Master window.
+   -- HISTORY
+   -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function Pack_Slaves(Master: in Tk_Widget'Class) return String;
    -- ****
