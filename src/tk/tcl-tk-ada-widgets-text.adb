@@ -382,4 +382,13 @@ package body Tcl.Tk.Ada.Widgets.Text is
       return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
    end Tag_NextRange;
 
+   function Tag_PrevRange
+     (TextWidget: in Tk_Text; TagName, Index1: in String;
+      Index2: in String := "") return String is
+   begin
+      Execute_Widget_Command
+        (TextWidget, "tag prevrange", TagName & " " & Index1 & " " & Index2);
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end Tag_PrevRange;
+
 end Tcl.Tk.Ada.Widgets.Text;
