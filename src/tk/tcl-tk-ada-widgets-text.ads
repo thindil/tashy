@@ -1074,6 +1074,30 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => TagName /= "";
       -- ****
 
+      -- ****f* Text/Tag_Remove
+      -- FUNCTION
+      -- Remove the selected tag from the selected characters in the selected
+      -- Tk_Text
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which the selected tag will be removed from
+      --              characters
+      -- TagName    - Name of the tag to remove
+      -- Index1     - Index of the starting character from which tag will be
+      --              removed
+      -- Index2     - Index of the last character from which tag will be
+      --              removed. If empty, then tag is removed from the first
+      --              character only. Default value is empty
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Tag_Remove
+     (TextWidget: in Tk_Text; TagName, Index1: in String;
+      Index2: in String := "") with
+      Pre => TagName /= "" and Index1 /= "";
+      -- ****
+
 private
 
    type Tk_Text is new Tk_Widget with null record;
