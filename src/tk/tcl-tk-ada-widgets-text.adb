@@ -406,4 +406,12 @@ package body Tcl.Tk.Ada.Widgets.Text is
       return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
    end Tag_Ranges;
 
+   procedure Tag_Remove
+     (TextWidget: in Tk_Text; TagName, Index1: in String;
+      Index2: in String := "") is
+   begin
+      Execute_Widget_Command
+        (TextWidget, "tag remove", TagName & " " & Index1 & " " & Index2);
+   end Tag_Remove;
+
 end Tcl.Tk.Ada.Widgets.Text;
