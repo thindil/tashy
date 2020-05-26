@@ -34,6 +34,10 @@ package Tcl.Tk.Ada.TtkStyle is
    -- Name         - Name of the element to create
    -- Element_Type - Type of the element to create
    -- Options      - Additional options for the created element
+   -- HISTORY
+   -- 8.6.3 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Element_Create
      (Name, Element_Type : in String; Options : in String := "") with
@@ -43,6 +47,10 @@ package Tcl.Tk.Ada.TtkStyle is
       -- ****f* TtkStyle/Element_Names
       -- FUNCTION
       -- Return list of elements in the current theme
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Element_Names return String;
    -- ****
@@ -54,6 +62,10 @@ package Tcl.Tk.Ada.TtkStyle is
    -- Element - Name of the element to query
    -- RESULT
    -- List of element options
+   -- HISTORY
+   -- 8.6.3 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function Element_Options(Element: in String) return String with
       Pre => Element /= "";
@@ -65,6 +77,10 @@ package Tcl.Tk.Ada.TtkStyle is
    -- PARAMETERS
    -- Name    - Name of style to configure or create
    -- Options - Options for the style
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Style_Configure (Name, Options : in String) with
       Pre => Name /= "" and Options /= "";
@@ -76,6 +92,10 @@ package Tcl.Tk.Ada.TtkStyle is
       -- PARAMETERS
       -- Name    - Name of the style to modify
       -- Options - Options for the layout
+      -- HISTORY
+      -- 8.6.2 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Style_Layout (Name, Options : in String) with
       Pre => Name /= "" and Options /= "";
@@ -88,6 +108,10 @@ package Tcl.Tk.Ada.TtkStyle is
       -- Name - Name of the style to query
       -- RESULT
       -- String with layout setting for the selected style
+      -- HISTORY
+      -- 8.6.2 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Style_Layout (Name : in String) return String with
       Pre => Name /= "";
@@ -105,6 +129,10 @@ package Tcl.Tk.Ada.TtkStyle is
       -- RESULT
       -- Value of the selected option in the selected style. If option was not
       -- found, return value of Default parameter.
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Style_Lookup
      (Name, Option : in String; State : in String := "";
@@ -118,6 +146,10 @@ package Tcl.Tk.Ada.TtkStyle is
       -- PARAMETERS
       -- Name    - Name of the style to modify
       -- Options - Options for the widget
+      -- HISTORY
+      -- 8.6.2 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Style_Map (Name, Options : in String) with
       Pre => Name /= "" and Options /= "";
@@ -128,6 +160,10 @@ package Tcl.Tk.Ada.TtkStyle is
       -- Get list of all available Ttk themes
       -- RESULT
       -- String with list of all available Ttk themes
+      -- HISTORY
+      -- 8.6.1 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Theme_Names return String;
    -- ****
@@ -137,6 +173,10 @@ package Tcl.Tk.Ada.TtkStyle is
    -- Set new Ttk theme and redraw all widgets
    -- PARAMETERS
    -- Name of Ttk theme to set
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Theme_Use (ThemeName : in String) with
       Pre => ThemeName /= "";
@@ -147,6 +187,10 @@ package Tcl.Tk.Ada.TtkStyle is
       -- Get currently used Ttk theme
       -- RESULT
       -- Name of currently used Ttk theme
+      -- HISTORY
+      -- 8.6.1 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Theme_Use return String;
    -- ****
