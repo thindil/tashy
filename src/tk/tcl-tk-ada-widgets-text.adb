@@ -399,4 +399,11 @@ package body Tcl.Tk.Ada.Widgets.Text is
         (TextWidget, "tag raise", TagName & " " & AboveThis);
    end Tag_Raise;
 
+   function Tag_Ranges
+     (TextWidget: in Tk_Text; TagName: in String) return String is
+   begin
+      Execute_Widget_Command(TextWidget, "tag ranges", TagName);
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end Tag_Ranges;
+
 end Tcl.Tk.Ada.Widgets.Text;
