@@ -1053,6 +1053,27 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => TagName /= "";
       -- ****
 
+      -- ****f* Text/Tag_Ranges
+      -- FUNCTION
+      -- Get the ranges of text that have been tagged with the selected tag
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which ranges will be queried
+      -- TagName    - Name of the tag which will be queried
+      -- RESULT
+      -- List of values, first value is the index of the first character in
+      -- the first found range, second value is the index of the last character
+      -- in the first found range and so on. If no text is tagged with the
+      -- selected TagName, returns {}
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Tag_Ranges
+     (TextWidget: in Tk_Text; TagName: in String) return String with
+      Pre => TagName /= "";
+      -- ****
+
 private
 
    type Tk_Text is new Tk_Widget with null record;
