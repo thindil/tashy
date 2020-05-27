@@ -1098,6 +1098,100 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => TagName /= "" and Index1 /= "";
       -- ****
 
+      -- ****f* Text/Window_Cget
+      -- FUNCTION
+      -- Get the selected option for the selected window in the selected Tk_Text
+      -- PARAMETERS
+      -- TextWidget - Tk_Text which will be queried for the option's value
+      -- Index      - Index of the window which option's value will be get
+      -- Option     - Name of the window's option to get
+      -- RESULT
+      -- Value of the selected Option of the selected window
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Window_Cget
+     (TextWidget: in Tk_Text; Index, Option: in String) return String with
+      Pre => Index /= "" and Option /= "";
+      -- ****
+
+      -- ****f* Text/Window_Configure (procedure)
+      -- FUNCTION
+      -- Configure the selected options of the selected window in the selected
+      -- Tk_Text
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which the window's options will be set
+      -- Index      - Index of the window which options will be set
+      -- Options    - Options in "name value" pairs to set
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Window_Configure
+     (TextWidget: in Tk_Text; Index, Options: in String) with
+      Pre => Index /= "" and Options /= "";
+      -- ****
+
+      -- ****f* Text/Window_Configure (function)
+      -- FUNCTION
+      -- Get the selected options of the selected window in the selected Tk_Text
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which the window's options will be get
+      -- Index      - Index of the window which options will be get
+      -- Options    - Option name to get or empty string to get all available
+      --              options. Default value is empty
+      -- RESULT
+      -- Value of selected option or values of all options if Option is empty
+      -- string
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Window_Configure
+     (TextWidget: in Tk_Text; Index: in String; Option: in String := "")
+      return String with
+      Pre => Index /= "";
+      -- ****
+
+      -- ****f* Text/Window_Create
+      -- FUNCTION
+      -- Create a new window inside Tk_Text at the selected index
+      -- PARAMETERS
+      -- TextWidget - Tk_Text in which a window will be created
+      -- Index      - Index in the TextWidget at which a window will be created
+      -- Options    - Options for the newly created window
+      -- RESULT
+      -- Unique identifier for the newly created window
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Window_Create
+     (TextWidget: in Tk_Text; Index: in String; Options: in String := "")
+      return String with
+      Pre => Index /= "";
+      -- ****
+
+      -- ****f* Text/Window_Names
+      -- FUNCTION
+      -- Get the names of the all windows which are embedded in the Tk_Text
+      -- PARAMETERS
+      -- TextWidget - Tk_Text which will be queried for windows names
+      -- RESULT
+      -- The list of all windows names currently embedded into TextWidget
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Window_Names(TextWidget: in Tk_Text) return String;
+   -- ****
+
 private
 
    type Tk_Text is new Tk_Widget with null record;

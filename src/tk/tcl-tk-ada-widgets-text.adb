@@ -414,4 +414,42 @@ package body Tcl.Tk.Ada.Widgets.Text is
         (TextWidget, "tag remove", TagName & " " & Index1 & " " & Index2);
    end Tag_Remove;
 
+   function Window_Cget
+     (TextWidget: in Tk_Text; Index, Option: in String) return String is
+   begin
+      Execute_Widget_Command(TextWidget, "window cget", Index & " " & Option);
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end Window_Cget;
+
+   procedure Window_Configure
+     (TextWidget: in Tk_Text; Index, Options: in String) is
+   begin
+      Execute_Widget_Command
+        (TextWidget, "window configure", Index & " " & Options);
+   end Window_Configure;
+
+   function Window_Configure
+     (TextWidget: in Tk_Text; Index: in String; Option: in String := "")
+      return String is
+   begin
+      Execute_Widget_Command
+        (TextWidget, "window configure", Index & " " & Option);
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end Window_Configure;
+
+   function Window_Create
+     (TextWidget: in Tk_Text; Index: in String; Options: in String := "")
+      return String is
+   begin
+      Execute_Widget_Command
+        (TextWidget, "window create", Index & " " & Options);
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end Window_Create;
+
+   function Window_Names(TextWidget: in Tk_Text) return String is
+   begin
+      Execute_Widget_Command(TextWidget, "window names");
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end Window_Names;
+
 end Tcl.Tk.Ada.Widgets.Text;
