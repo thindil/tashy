@@ -46,6 +46,10 @@ package Tcl.Tk.Ada.Widgets.Button.CheckButton is
    --            Default value is null.
    -- RESULT
    -- Newly created Tk_CheckButton
+   -- HISTORY
+   -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -53,18 +57,22 @@ package Tcl.Tk.Ada.Widgets.Button.CheckButton is
       Pre => pathName /= "";
       -- ****
 
-   -- ****f* CheckButton/Create (procedure)
-   -- FUNCTION
-   -- Creates a new Tk_CheckButton in the specified interpreter.
-   -- PARAMETERS
-   -- Widgt    - Tk_CheckButton which will be created
-   -- pathName - Tk path (starts with dot) for the widget
-   -- options  - Options which will be passed to the widget. Default value is
-      --            empty
-   -- Interp   - Tcl interpreter to which the widget will be created. If null,
-      --            the widget will be created in the "contextual" interpreter.
-      --            Default value is null.
-      -- SOURCE
+     -- ****f* CheckButton/Create (procedure)
+     -- FUNCTION
+     -- Creates a new Tk_CheckButton in the specified interpreter.
+     -- PARAMETERS
+     -- Widgt    - Tk_CheckButton which will be created
+     -- pathName - Tk path (starts with dot) for the widget
+     -- options  - Options which will be passed to the widget. Default value is
+     --            empty
+     -- Interp   - Tcl interpreter to which the widget will be created. If null,
+     --            the widget will be created in the "contextual" interpreter.
+     --            Default value is null.
+     -- HISTORY
+     -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
+     -- TODO
+     -- Replace it with higher level of binding
+     -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_CheckButton; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
@@ -76,6 +84,10 @@ package Tcl.Tk.Ada.Widgets.Button.CheckButton is
       -- Deselect the button.
       -- PARAMETERS
       -- Buttn - Tk_CheckButton to deselect
+     -- HISTORY
+     -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
+     -- TODO
+     -- Replace it with higher level of binding
       -- SOURCE
    procedure Deselect(Buttn: in Tk_CheckButton);
    -- ****
@@ -85,6 +97,10 @@ package Tcl.Tk.Ada.Widgets.Button.CheckButton is
    -- Select the button.
    -- PARAMETERS
    -- Buttn - Tk_CheckButton to select
+   -- HISTORY
+   -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Tk_Select(Buttn: in Tk_CheckButton);
    -- ****
@@ -94,6 +110,10 @@ package Tcl.Tk.Ada.Widgets.Button.CheckButton is
    -- Toggle the button.
    -- PARAMETERS
    -- Buttn - Tk_CheckButton to toggle
+   -- HISTORY
+   -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Toggle(Buttn: in Tk_CheckButton);
    -- ****
