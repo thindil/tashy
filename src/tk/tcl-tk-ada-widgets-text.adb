@@ -452,4 +452,36 @@ package body Tcl.Tk.Ada.Widgets.Text is
       return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
    end Window_Names;
 
+   function XView(TextWidget: in Tk_Text) return String is
+   begin
+      Execute_Widget_Command(TextWidget, "xview");
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end XView;
+
+   procedure Xview_Move_To(TextWidget: in Tk_Text; Fraction: in String) is
+   begin
+      Execute_Widget_Command(TextWidget, "xview moveto", Fraction);
+   end Xview_Move_To;
+
+   procedure Xview_Scroll(TextWidget: in Tk_Text; Number, What: in String) is
+   begin
+      Execute_Widget_Command(TextWidget, "xview scroll", Number & " " & What);
+   end Xview_Scroll;
+
+   function YView(TextWidget: in Tk_Text) return String is
+   begin
+      Execute_Widget_Command(TextWidget, "yview");
+      return Tcl.Ada.Tcl_GetResult(TextWidget.Interp);
+   end YView;
+
+   procedure Yview_Move_To(TextWidget: in Tk_Text; Fraction: in String) is
+   begin
+      Execute_Widget_Command(TextWidget, "yview moveto", Fraction);
+   end Yview_Move_To;
+
+   procedure Yview_Scroll(TextWidget: in Tk_Text; Number, What: in String) is
+   begin
+      Execute_Widget_Command(TextWidget, "yview scroll", Number & " " & What);
+   end Yview_Scroll;
+
 end Tcl.Tk.Ada.Widgets.Text;

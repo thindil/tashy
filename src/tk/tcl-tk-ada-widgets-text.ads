@@ -1192,6 +1192,108 @@ package Tcl.Tk.Ada.Widgets.Text is
    function Window_Names(TextWidget: in Tk_Text) return String;
    -- ****
 
+   -- ****f* Text/XView
+   -- FUNCTION
+   -- Get which horizontal fraction of the Tk_Text is visible
+   -- PARAMETERS
+   -- TextWidget - Tk_Text which will be queried for visibility
+   -- RESULT
+   -- Pair of elements: first element is the start of horizontal fraction of
+   -- the TextWidget which is visible, second is the end of horizontal
+   -- fraction of the TextWidget which is visible.
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function XView(TextWidget: in Tk_Text) return String;
+   -- ****
+
+   -- ****f* Text/Xview_Move_To
+   -- FUNCTION
+   -- Adjusts the view in the window so that fraction of the total width of
+   -- the Tk_Text is off-screen to the left.
+   -- PARAMETERS
+   -- TextWidget - Tk_Text which view will be adjusted
+   -- Fraction   - Fraction of the TextWidget to move. Must be between 0
+   --              and 1
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Xview_Move_To(TextWidget: in Tk_Text; Fraction: in String) with
+      Pre => Fraction /= "";
+      -- ****
+
+      -- ****f* Text/Xview_Scroll
+      -- FUNCTION
+      -- Shift the view in the window on left or right according to Number and
+      -- What.
+      -- PARAMETERS
+      -- TextWidget - Tk_Text which view will be shifted
+      -- Number     - The amount of What to shift the TextWidget
+      -- What       - Type of amount to move. Can be "units" or "pages"
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Xview_Scroll(TextWidget: in Tk_Text; Number, What: in String) with
+      Pre => Number /= "" and (What = "units" or What = "pages");
+      -- ****
+
+      -- ****f* Text/YView
+      -- FUNCTION
+      -- Get which vertical fraction of the Tk_Text is visible
+      -- PARAMETERS
+      -- TextWidget - Tk_Text which will be queried for visibility
+      -- RESULT
+      -- Pair of elements: first element is the start of vertical fraction of
+      -- the TextWidget which is visible, second is the end of vertical
+      -- fraction of the TextWidget which is visible.
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function YView(TextWidget: in Tk_Text) return String;
+   -- ****
+
+   -- ****f* Text/Yview_Move_To
+   -- FUNCTION
+   -- Adjusts the view in the window so that fraction of the total height of
+   -- the Tk_Text is off-screen to the top.
+   -- PARAMETERS
+   -- TextWidget - Tk_Text which view will be adjusted
+   -- Fraction   - Fraction of the TextWidget to move. Must be between 0
+   --              and 1
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Yview_Move_To(TextWidget: in Tk_Text; Fraction: in String) with
+      Pre => Fraction /= "";
+      -- ****
+
+      -- ****f* Text/Yview_Scroll
+      -- FUNCTION
+      -- Shift the view in the window on top or bottom according to Number and
+      -- What.
+      -- PARAMETERS
+      -- TextWidget - Tk_Text which view will be shifted
+      -- Number     - The amount of What to shift the TextWidget
+      -- What       - Type of amount to move. Can be "units" or "pages"
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Yview_Scroll(TextWidget: in Tk_Text; Number, What: in String) with
+      Pre => Number /= "" and (What = "units" or What = "pages");
+      -- ****
+
 private
 
    type Tk_Text is new Tk_Widget with null record;
