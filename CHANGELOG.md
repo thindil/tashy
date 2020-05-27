@@ -20,7 +20,8 @@ of the project.
   `mark unset`, `peer create`, `peer names`, `pendingsync`, `replace`,
   `scan mark`, `scan dragto`, `search`, `see`, `sync`, `tag bind`, `tag cget`,
   `tag delete`, `tag names`, `tag nextrange`, `tag prevrange`, `tag raise`,
-  `tag range`, `tag remove`
+  `tag range`, `tag remove`, `window cget`, `window configure`,
+  `window create`, `window names`
 - Binding for Tk `ttk::scale` commands: `get`, `set`
 - Binding for Tk `ttk::combobox` commands: `current`, `set`
 
