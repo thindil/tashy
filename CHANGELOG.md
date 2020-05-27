@@ -21,7 +21,8 @@ of the project.
   `scan mark`, `scan dragto`, `search`, `see`, `sync`, `tag bind`, `tag cget`,
   `tag delete`, `tag names`, `tag nextrange`, `tag prevrange`, `tag raise`,
   `tag range`, `tag remove`, `window cget`, `window configure`,
-  `window create`, `window names`
+  `window create`, `window names`, `xview`, `xview moveto`, `xview scroll`,
+  `yview`, `yview moveto`, `yview scroll`
 - Binding for Tk `ttk::scale` commands: `get`, `set`
 - Binding for Tk `ttk::combobox` commands: `current`, `set`
 
