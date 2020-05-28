@@ -25,6 +25,7 @@ of the project.
   `yview`, `yview moveto`, `yview scroll`
 - Binding for Tk `ttk::scale` commands: `get`, `set`
 - Binding for Tk `ttk::combobox` commands: `current`, `set`
+- Binding for Tk `ttk::entry` command: `bbox`
 
 ### Changed
 - Updated code documentation
