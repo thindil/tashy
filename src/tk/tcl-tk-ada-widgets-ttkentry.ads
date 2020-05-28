@@ -80,6 +80,28 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       Pre => pathName /= "";
       -- ****
 
+      -- ****f* TtkEntry/BBox
+      -- FUNCTION
+      -- Get size of bounding box of the selected character in the selected
+      -- Ttk_Entry
+      -- PARAMETERS
+      -- EntryWidget - Ttk_Entry which will be queried
+      -- Index       - Index of the character which bounding box will be
+      -- taken
+      -- RESULT
+      -- Four values: x1, y1 - coordinates of starting point of bounding box
+      -- from top left, x2, y2 - coordinates of ending point from bottom right
+      -- of bounding box.
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function BBox
+     (TextEntry: in Ttk_Entry'Class; Index: in String) return String with
+      Pre => Index /= "";
+      -- ****
+
       -- ****f* TtkEntry/Delete
       -- FUNCTION
       -- Delete part of text from the selected entry
