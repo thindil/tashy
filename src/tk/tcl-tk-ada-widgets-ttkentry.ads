@@ -128,6 +128,23 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
    function Get(Widgt: in Ttk_Entry) return String;
    -- ****
 
+   -- ****f* TtkEntry/ICursor
+   -- FUNCTION
+   -- Place insertion cursor in the selected Ttk_Entry just before the
+   -- selected character
+   -- PARAMETERS
+   -- TextEntry - Ttk_Entry in which insertion cursor will be placed
+   -- Index     - Index of the character before which insertion cursor will be
+   --             placed
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure ICursor(TextEntry: in Ttk_Entry'Class; Index: in String) with
+      Pre => Index /= "";
+      -- ****
+
    -- ****f* TtkEntry/Insert
    -- FUNCTION
    -- Insert text at selected index to the selected Ttk_Entry
