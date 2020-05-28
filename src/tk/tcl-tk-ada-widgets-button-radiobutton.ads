@@ -47,6 +47,10 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
    --            Default value is null.
    -- RESULT
    -- Newly created Tk_RadioButton
+   -- HISTORY
+   -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -63,6 +67,10 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
       -- Deselect the button.
       -- PARAMETERS
       -- Buttn - Tk_RadioButton to deselect
+     -- HISTORY
+     -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
+     -- TODO
+     -- Replace it with higher level of binding
       -- SOURCE
    procedure Deselect(Buttn: in Tk_RadioButton);
    -- ****
@@ -72,6 +80,10 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
    -- Select the button.
    -- PARAMETERS
    -- Buttn - Tk_RadioButton to select
+   -- HISTORY
+   -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Tk_Select(Buttn: in Tk_RadioButton);
    -- ****
@@ -81,6 +93,10 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
    -- Toggle the button.
    -- PARAMETERS
    -- Buttn - Tk_RadioButton to toggle
+   -- HISTORY
+   -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Toggle(Buttn: in Tk_RadioButton);
    -- ****
