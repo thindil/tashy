@@ -145,7 +145,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* TtEntry/Index
+      -- ****f* TtkEntry/Index
       -- FUNCTION
       -- Get numerical index of character from the selected Index
       -- PARAMETERS
@@ -174,6 +174,136 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
    procedure Insert
      (TextEntry: in Ttk_Entry; Index: in String; Text: in String) with
       Pre => Index /= "" and Text /= "";
+      -- ****
+
+      -- ****f* TtkEntry/Selection_Clear
+      -- FUNCTION
+      -- Remove the selection from the selected Ttk_Entry
+      -- PARAMETERS
+      -- TextEntry - Ttk_Entry in which the selection will be cleared
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Selection_Clear(TextEntry: in Ttk_Entry'Class);
+   -- ****
+
+      -- ****f* TtkEntry/Selection_Present
+      -- FUNCTION
+      -- Check if any character is selected in the selected Ttk_Entry
+      -- PARAMETERS
+      -- TextEntry - Ttk_Entry which will be queried for the selection
+      -- RESULT
+      -- "1" if any character in TextEntry is selected, otherwise "0"
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Selection_Present(TextEntry: in Ttk_Entry'Class) return String;
+   -- ****
+
+   -- ****f* TtkEntry/Selection_Range
+   -- FUNCTION
+   -- Set the characters selection in the selected Ttk_Entry
+   -- PARAMETERS
+   -- TextEntry  - Ttk_Entry in which the selection will be set
+   -- StartIndex - Start index of character of the selection
+   -- EndIndex   - End index of character of the selection
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Selection_Range
+     (TextEntry: in Ttk_Entry'Class; StartIndex, EndIndex: in String) with
+      Pre => StartIndex /= "" and EndIndex /= "";
+      -- ****
+
+      -- ****f* TtkEntry/Validate
+      -- FUNCTION
+      -- Force the Ttk_Entry to revalidate its value
+      -- PARAMETERS
+      -- TextEntry - Ttk_Entry which value will be validated
+      -- RESULT
+      -- "1" if value of TextEntry is valid, otherwise "0"
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Validate(TextEntry: in Ttk_Entry'Class) return String;
+   -- ****
+
+   -- ****f* TtkEntry/XView (function)
+   -- FUNCTION
+   -- Get which horizontal fraction of the Ttk_Entry is visible
+   -- PARAMETERS
+   -- TextEntry - Ttk_Entry which will be queried for visibility
+   -- RESULT
+   -- Pair of elements: first element is the start of horizontal fraction of
+   -- the TextEntry which is visible, second is the end of horizontal
+   -- fraction of the TextEntry which is visible.
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function XView(TextEntry: in Ttk_Entry'Class) return String;
+   -- ****
+
+   -- ****f* TtkEntry/XView (procedure)
+   -- FUNCTION
+   -- Adjusts the view in the window so that the character position given by
+   -- index is displayed at the left edge of the window
+   -- PARAMETERS
+   -- TextEntry - Ttk_Entry which will be adjusted
+   -- Index     - Character index to which TextEntry will be adjusted.
+   --             Character position starts from 0
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure XView(TextEntry: in Ttk_Entry'Class; Index: in String) with
+      Pre => Index /= "";
+      -- ****
+
+      -- ****f* TtkEntry/Xview_Move_To
+      -- FUNCTION
+      -- Adjusts the view in the window so that fraction of the total width of
+      -- the Ttk_Entry is off-screen to the left.
+      -- PARAMETERS
+      -- TextEntry - Ttk_Entry which view will be adjusted
+      -- Fraction  - Fraction of the TextEntry to move. Must be between 0
+      --             and 1
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Xview_Move_To
+     (TextEntry: in Ttk_Entry'Class; Fraction: in String) with
+      Pre => Fraction /= "";
+      -- ****
+
+      -- ****f* TtkEntry/Xview_Scroll
+      -- FUNCTION
+      -- Shift the view in the window on left or right according to Number and
+      -- What.
+      -- PARAMETERS
+      -- TextEntry - Ttk_Entry which view will be shifted
+      -- Number    - The amount of What to shift the TextEntry
+      -- What      - Type of amount to move. Can be "units" or "pages"
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Xview_Scroll
+     (TextEntry: in Ttk_Entry'Class; Number, What: in String) with
+      Pre => Number /= "" and (What = "units" or What = "pages");
       -- ****
 
 private
