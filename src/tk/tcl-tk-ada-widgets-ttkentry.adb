@@ -86,4 +86,51 @@ package body Tcl.Tk.Ada.Widgets.TtkEntry is
         (TextEntry, "insert", Index & " " & "{" & Text & "}");
    end Insert;
 
+   procedure Selection_Clear(TextEntry: in Ttk_Entry'Class) is
+   begin
+      Execute_Widget_Command(TextEntry, "selection clear");
+   end Selection_Clear;
+
+   function Selection_Present(TextEntry: in Ttk_Entry'Class) return String is
+   begin
+      Execute_Widget_Command(TextEntry, "selection present");
+      return Tcl.Ada.Tcl_GetResult(TextEntry.Interp);
+   end Selection_Present;
+
+   procedure Selection_Range
+     (TextEntry: in Ttk_Entry'Class; StartIndex, EndIndex: in String) is
+   begin
+      Execute_Widget_Command
+        (TextEntry, "selection range", StartIndex & " " & EndIndex);
+   end Selection_Range;
+
+   function Validate(TextEntry: in Ttk_Entry'Class) return String is
+   begin
+      Execute_Widget_Command(TextEntry, "validate");
+      return Tcl.Ada.Tcl_GetResult(TextEntry.Interp);
+   end Validate;
+
+   function XView(TextEntry: in Ttk_Entry'Class) return String is
+   begin
+      Execute_Widget_Command(TextEntry, "xview");
+      return Tcl.Ada.Tcl_GetResult(TextEntry.Interp);
+   end XView;
+
+   procedure XView(TextEntry: in Ttk_Entry'Class; Index: in String) is
+   begin
+      Execute_Widget_Command(TextEntry, "xview", Index);
+   end XView;
+
+   procedure Xview_Move_To
+     (TextEntry: in Ttk_Entry'Class; Fraction: in String) is
+   begin
+      Execute_Widget_Command(TextEntry, "xview moveto", Fraction);
+   end Xview_Move_To;
+
+   procedure Xview_Scroll
+     (TextEntry: in Ttk_Entry'Class; Number, What: in String) is
+   begin
+      Execute_Widget_Command(TextEntry, "xview scroll", Number & " " & What);
+   end Xview_Scroll;
+
 end Tcl.Tk.Ada.Widgets.TtkEntry;
