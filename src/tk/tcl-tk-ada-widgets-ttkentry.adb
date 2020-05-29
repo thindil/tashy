@@ -72,6 +72,13 @@ package body Tcl.Tk.Ada.Widgets.TtkEntry is
       Execute_Widget_Command(TextEntry, "icursor", Index);
    end ICursor;
 
+   function Index
+     (TextEntry: in Ttk_Entry'Class; Index: in String) return String is
+   begin
+      Execute_Widget_Command(TextEntry, "index", Index);
+      return Tcl.Ada.Tcl_GetResult(TextEntry.Interp);
+   end Index;
+
    procedure Insert
      (TextEntry: in Ttk_Entry; Index: in String; Text: in String) is
    begin

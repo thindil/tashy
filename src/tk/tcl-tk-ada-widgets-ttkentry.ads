@@ -145,6 +145,24 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       Pre => Index /= "";
       -- ****
 
+      -- ****f* TtEntry/Index
+      -- FUNCTION
+      -- Get numerical index of character from the selected Index
+      -- PARAMETERS
+      -- TextEntry - Ttk_Entry which will be queried for index
+      -- Index     - Index of character which numeric index will be taken
+      -- RESULT
+      -- Numerical index of the selected character
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Index
+     (TextEntry: in Ttk_Entry'Class; Index: in String) return String with
+      Pre => Index /= "";
+      -- ****
+
    -- ****f* TtkEntry/Insert
    -- FUNCTION
    -- Insert text at selected index to the selected Ttk_Entry
