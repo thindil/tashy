@@ -28,7 +28,7 @@ of the project.
 - Binding for Tk `ttk::entry` commands: `bbox`, `icursor`, `index`,
   `selection clear`, `selection present`, `selection range`, `validate`,
   `xview`, `xview moveto`, `xview scroll`
-- Binding for Tk `ttk::notebook` command: `forget`
+- Binding for Tk `ttk::notebook` commands: `forget`, `identify element`
 
 ### Changed
 - Updated code documentation
