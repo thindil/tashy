@@ -94,6 +94,21 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       Pre => WindowName /= "";
       -- ****
 
+      -- ****f* TtkNotebook/Forget
+      -- FUNCTION
+      -- Remove the selected tab and unmap the associated window
+      -- PARAMETERS
+      -- Notebook - Ttk_Notebook in which the tab will be removed
+      -- TabId    - Id of the tab to remove
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Forget(Notebook: in Ttk_Notebook; TabId: in String) with
+      Pre => TabId /= "";
+      -- ****
+
       -- ****f* TtkNotebook/Hide
       -- FUNCTION
       -- Hide selected tab. Hidden tab can be restored with Add procedure
