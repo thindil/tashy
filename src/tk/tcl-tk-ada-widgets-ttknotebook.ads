@@ -120,6 +120,26 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       Pre => TabId /= "";
       -- ****
 
+      -- ****f* TtkNotebook/Identify_Element
+      -- FUNCTION
+      -- Get the name of the element at the specific location
+      -- PARAMETERS
+      -- Notebook - Ttk_Notebook in which element will be queried
+      -- X        - X coordinate of the location to query
+      -- Y        - Y coordinate of the location to query
+      -- RESULT
+      -- Name of the element at the specific location or {} if no component
+      -- is present there
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Identify_Element
+     (Notebook: in Ttk_Notebook; X, Y: in String) return String with
+      Pre => X /= "" and Y /= "";
+      -- ****
+
       -- ****f* TtkNotebook/Notebook_Select
       -- FUNCTION
       -- Set selected tab as a currently selected in the Ttk_Notebook
