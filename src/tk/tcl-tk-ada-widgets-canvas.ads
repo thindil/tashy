@@ -48,6 +48,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    --            Default value is null.
    -- RESULT
    -- Newly created Tk_Canvas
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -55,32 +59,40 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => pathName /= "";
       -- ****
 
-   -- ****f* Canvas/Create (procedure)
-   -- FUNCTION
-   -- Creates a new Tk_Canvas in the specified interpreter.
-   -- PARAMETERS
-   -- Widgt    - Tk_Canvas which will be created
-   -- pathName - Tk path (starts with dot) for the widget
-   -- options  - Options which will be passed to the widget. Default value is
-      --            empty
-   -- Interp   - Tcl interpreter to which the widget will be created. If null,
-      --            the widget will be created in the "contextual" interpreter.
-      --            Default value is null.
-      -- SOURCE
+     -- ****f* Canvas/Create (procedure)
+     -- FUNCTION
+     -- Creates a new Tk_Canvas in the specified interpreter.
+     -- PARAMETERS
+     -- Widgt    - Tk_Canvas which will be created
+     -- pathName - Tk path (starts with dot) for the widget
+     -- options  - Options which will be passed to the widget. Default value is
+     --            empty
+     -- Interp   - Tcl interpreter to which the widget will be created. If null,
+     --            the widget will be created in the "contextual" interpreter.
+     --            Default value is null.
+     -- HISTORY
+     -- 8.6.1 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Canvas; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
-      -- ****
+     -- ****
 
-      -- ****f* Canvas/Add_Tag
-      -- FUNCTION
-      -- Add tag to the selected items in the Tk_Canvas
-      -- PARAMETERS
-      -- Tag        - Tag name to add
-      -- SearchSpec - Requirement which item must meet to be selected
-      -- Arguments  - Arguments for the SearchSpec. Default value is empty
-      -- SOURCE
+     -- ****f* Canvas/Add_Tag
+     -- FUNCTION
+     -- Add tag to the selected items in the Tk_Canvas
+     -- PARAMETERS
+     -- Tag        - Tag name to add
+     -- SearchSpec - Requirement which item must meet to be selected
+     -- Arguments  - Arguments for the SearchSpec. Default value is empty
+     -- HISTORY
+     -- 8.6.3 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- SOURCE
    procedure Add_Tag
      (CanvasWidget: in Tk_Canvas; Tag, SearchSpec: in String;
       Arguments: in String := "") with
@@ -101,6 +113,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- Four values: x1, y1 - coordinates of starting point of bounding box
       -- from top left, x2, y2 - coordinates of ending point from bottom right
       -- of bounding box.
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function BBox
      (CanvasWidget: in Tk_Canvas; TagOrId: in String) return String with
@@ -116,6 +132,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- TagOrId      - Tag or Id of items to which bind will be done
       -- Sequence     - Sequence to which command will be bound
       -- Command      - Tcl command which will be bound
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Bind
      (CanvasWidget: in Tk_Canvas; TagOrId, Sequence, Command: in String) with
@@ -124,17 +144,21 @@ package Tcl.Tk.Ada.Widgets.Canvas is
 
       -- ****f* Canvas/Bind (function)
       -- FUNCTION
-   -- Get information about binding to selected items in the selected
-   -- canvas
-   -- PARAMETERS
-   -- CanvasWidget - Tk_Canvas which will be queried for the info
-   -- TagOrId      - Tag or Id of items which will be queried for the bindings
-   -- Sequence     - Sequence to query. Default is empty
-   -- RESULT
-   -- If sequence is empty, return all bindings associated with the selected
-   -- items. Otherwise, return command associated with the selected item and
-   -- its sequence
-   -- SOURCE
+      -- Get information about binding to selected items in the selected
+      -- canvas
+      -- PARAMETERS
+      -- CanvasWidget - Tk_Canvas which will be queried for the info
+      -- TagOrId      - Tag or Id of items which will be queried for the bindings
+      -- Sequence     - Sequence to query. Default is empty
+      -- RESULT
+      -- If sequence is empty, return all bindings associated with the selected
+      -- items. Otherwise, return command associated with the selected item and
+      -- its sequence
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
    function Bind
      (CanvasWidget: in Tk_Canvas; TagOrId: in String;
       Sequence: in String := "") return String with
@@ -152,6 +176,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       --                GridSpacing units. Default is empty
       -- RESULT
       -- Canvas X coordinate for the selected screen X coordinate
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function CanvasX
      (CanvasWidget: in Tk_Canvas; ScreenX: in String;
@@ -170,6 +198,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       --                GridSpacing units. Default is empty
       -- RESULT
       -- Canvas Y coordinate for the selected screen Y coordinate
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function CanvasY
      (CanvasWidget: in Tk_Canvas; ScreenY: in String;
@@ -186,6 +218,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- TagOrId      - Tag or Id of the item which will be moved. If Tag
       --                refers to multiple items, only first will be used.
       -- Coordinates  - New coordinates for the item
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Coords
      (CanvasWidget: in Tk_Canvas; TagOrId, Coordinates: in String) with
@@ -200,6 +236,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- TagOrId      - Tag or Id of the items which will be queried.
       -- RESULT
       -- List with coordinates of the selected items
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Coords
      (CanvasWidget: in Tk_Canvas; TagOrId: in String) return String with
@@ -213,6 +253,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- Parent     - Tk_Canvas to which child will be added
       -- Child_Type - Tk type of child to add
       -- Options    - Tk options to create command
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Canvas_Create
      (Parent: in Tk_Canvas; Child_Type: in String;
@@ -230,6 +274,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- First        - Index or coordinates where to start deleting characters
       -- Last         - Index or coordinates where to end deleting characters.
       --                Default value is empty
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Dchars
      (CanvasWidget: in Tk_Canvas; TagOrId, First: in String;
@@ -243,6 +291,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- PARAMETERS
       -- CanvasWidget - Tk_Canvas in which items will be deleted
       -- TagOrId      - Tag or Id of the items to delete
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Delete(CanvasWidget: in Tk_Canvas; TagOrId: in String) with
       Pre => TagOrId /= "";
@@ -256,6 +308,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- TagOrId      - Tag or Id of items from which tag will be deleted
       -- TagToDelete  - Tag to delete. If empty, delete value of parameter
       --                TagOrId. Default value is empty
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure DTag
      (CanvasWidget: in Tk_Canvas; TagOrId: in String;
@@ -275,6 +331,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       --                 empty
       -- RESULT
       -- List of items in the stacking order, the lowest item first
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Find
      (CanvasWidget: in Tk_Canvas; SearchCommand: in String;
@@ -291,6 +351,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       --                are with this same tag, only first will be used. If no
       --                item with that tag or TagOrId is empty, reset focus.
       --                Default value is empty
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Focus(CanvasWidget: in Tk_Canvas; TagOrId: in String := "");
    -- ****
@@ -307,6 +371,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    -- one element in the CanvasWidget, return tags for the first element in
    -- the list. If there no element with that TagOrId or element don't have
    -- any tag, return empty string
+   -- HISTORY
+   -- 8.6.3 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function Get_Tags
      (CanvasWidget: in Tk_Canvas; TagOrId: in String) return String with
@@ -324,6 +392,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       --                procedure do nothing
       -- Index        - Index in characters before which an insertion cursor
       --                will be insererted
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure ICursor
      (CanvasWidget: in Tk_Canvas; TagOrId, Index: in String) with
@@ -340,6 +412,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       --                value independently
       -- X            - A new X coordinate
       -- Y            - A new Y coordinate
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure IMove
      (CanvasWidget: in Tk_Canvas; TagOrId, Index, X, Y: in String) with
@@ -356,6 +432,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       --                character in textual description
       -- RESULT
       -- Numerical index of the selected Index in the selected items
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Index
      (CanvasWidget: in Tk_Canvas; TagOrId, Index: in String) return String with
@@ -373,6 +453,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       --                will be character number, for lines, polygons
       --                coordinates
       -- Item         - Text to insert to the selected elements
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Insert
      (CanvasWidget: in Tk_Canvas; TagOrId, BeforeThis, Item: in String) with
@@ -389,6 +473,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- RESULT
       -- Current value of the selected option of the selected item. If TagOrId
       -- refers to more than one item, only first item is checked.
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Item_Cget
      (CanvasWidget: in Tk_Canvas; TagOrId, Option: in String)
@@ -403,6 +491,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- CanvasWidget - Tk_Canvas in which options will be modified
       -- TagOrId      - Tag or Id of the item which options will be modified
       -- Options      - Options to modify with values for them.
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Item_Configure
      (CanvasWidget: in Tk_Canvas; TagOrId, Options: in String) with
@@ -421,6 +513,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- If Options is empty, return all available options and their values for
       -- the selected item. Otherwise, return selected option's value for the
       -- selected item
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Item_Configure
      (CanvasWidget: in Tk_Canvas; TagOrId: in String; Options: in String := "")
@@ -438,6 +534,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       --                order will be preserved
       -- BelowThis    - Tag or Id of the item below which selected items will
       --                be moved. Default value is empty
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Lower
      (CanvasWidget: in Tk_Canvas; TagOrId: in String;
@@ -453,6 +553,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- TagOrId      - Tag or Id of the items to move
       -- XAmount      - Amount to add to X coordinate of the items
       -- YAmount      - Amount to add to Y coordinate of the items
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Move
      (CanvasWidget: in Tk_Canvas; TagOrId, XAmount, YAmount: in String) with
@@ -467,6 +571,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- TagOrId      - Tag or Id of the item to move
       -- XPos         - A new X coordinate of the items
       -- YPos         - A new Y coordinate of the items
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure MoveTo
      (CanvasWidget: in Tk_Canvas; TagOrId, XPos, YPos: in String) with
@@ -483,6 +591,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- RESULT
       -- A Postscript representation of the CanvasWidget or empty string if
       -- representation was selected to write to file
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Postscript
      (CanvasWidget: in Tk_Canvas; Options: in String) return String with
@@ -499,6 +611,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       --                order will be preserved
       -- AfterThis    - Tag or Id of the item after which selected items will
       --                be moved. Default value is empty
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Canvas_Raise
      (CanvasWidget: in Tk_Canvas; TagOrId: in String;
@@ -518,6 +634,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- Last         - Character position or coordinate at which replace text
       --                ends
       -- Text         - Text to replace
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Rchars
      (CanvasWidget: in Tk_Canvas; TagOrId, First, Last, Text: in String) with
@@ -536,6 +656,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- YOrgin       - Y coordinate of the scale starting point
       -- XScale       - X factor to scale points. 1.0 mean no scaling
       -- YScale       - Y factor to scale points. 1.0 mean no scaling
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Scale
      (CanvasWidget: in Tk_Canvas;
@@ -552,6 +676,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- TagOrId      - Tag or Id of the item in which selection will be
       --                resized
       -- Index        - New index to which selection will be done in the item
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Select_Adjust
      (CanvasWidget: in Tk_Canvas; TagOrId, Index: in String) with
@@ -563,6 +691,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- Clear the selection in the selected Tk_Canvas
       -- PARAMETERS
       -- CanvasWidget - Tk_Canvas in which selection will be cleared
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Select_Clear(CanvasWidget: in Tk_Canvas);
    -- ****
@@ -576,6 +708,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    -- CanvasWidget - Tk_Canvas in which the selection will be set
    -- TagOrId      - Tag or Id of the item in which the selection will be set
    -- Index        - Index of character before which the selection will be set
+   -- HISTORY
+   -- 8.6.3 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Select_From
      (CanvasWidget: in Tk_Canvas; TagOrId, Index: in String) with
@@ -589,6 +725,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- CanvasWidget - Tk_Canvas in which selection will be queried
       -- RESULT
       -- Id of the selected item or {} if no item selected in the CanvasWidget
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Select_Item(CanvasWidget: in Tk_Canvas) return String;
    -- ****
@@ -602,6 +742,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    -- CanvasWidget - Tk_Canvas in which selection will be set
    -- TagOrId      - Tag or Id of the item in which selection will be set
    -- Index        - Index of character which will be added to the selection
+   -- HISTORY
+   -- 8.6.3 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Select_To
      (CanvasWidget: in Tk_Canvas; TagOrId, Index: in String) with
@@ -618,6 +762,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- Type of the selected item. If TagOrId refers to more than one item,
       -- return type of the first item. If no item with the selected TagOrId,
       -- return {}
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Canvas_Type
      (CanvasWidget: in Tk_Canvas; TagOrId: in String) return String with
@@ -633,6 +781,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- Pair of elements: first element is the start of horizontal fraction of
       -- the CanvasWidget which is visible, second is the end of horizontal
       -- fraction of the CanvasWidget which is visible.
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function XView(CanvasWidget: in Tk_Canvas) return String;
    -- ****
@@ -645,6 +797,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    -- CanvasWidget - Tk_Canvas which view will be adjusted
    -- Fraction     - Fraction of the CanvasWidget to move. Must be between 0
    --                and 1
+   -- HISTORY
+   -- 8.6.3 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Xview_Move_To
      (CanvasWidget: in Tk_Canvas; Fraction: in String) with
