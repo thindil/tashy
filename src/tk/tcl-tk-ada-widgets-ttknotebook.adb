@@ -50,9 +50,13 @@ package body Tcl.Tk.Ada.Widgets.TtkNotebook is
      (Notebook: in Ttk_Notebook; WindowName: in String;
       Options: String := "") is
    begin
-      Execute_Widget_Command
-        (Notebook, "add", WindowName & " " & Options);
+      Execute_Widget_Command(Notebook, "add", WindowName & " " & Options);
    end Add;
+
+   procedure Forget(Notebook: in Ttk_Notebook; TabId: in String) is
+   begin
+      Execute_Widget_Command(Notebook, "forget", TabId);
+   end Forget;
 
    procedure Hide(Notebook: in Ttk_Notebook; TabId: in String) is
    begin
