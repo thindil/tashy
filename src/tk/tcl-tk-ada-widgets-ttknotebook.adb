@@ -63,6 +63,13 @@ package body Tcl.Tk.Ada.Widgets.TtkNotebook is
       Execute_Widget_Command(Notebook, "hide", TabId);
    end Hide;
 
+   function Identify_Element
+     (Notebook: in Ttk_Notebook; X, Y: in String) return String is
+   begin
+      Execute_Widget_Command(Notebook, "identify element", X & " " & Y);
+      return Tcl.Ada.Tcl_GetResult(Notebook.Interp);
+   end Identify_Element;
+
    procedure Notebook_Select(Notebook: in Ttk_Notebook; TabId: in String) is
    begin
       Execute_Widget_Command(Notebook, "select", TabId);
