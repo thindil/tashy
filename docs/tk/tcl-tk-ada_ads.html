@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.4 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.5 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -25,537 +25,652 @@
 <div id="content">
 <h3>TABLE OF CONTENTS</h3>
 <ul>
-<li>1. <a href="#robo14">Tk/TkAda</a></li>
+<li>1. <a href="#robo15">Tk/TkAda</a></li>
 <ul>
-<li>1.1. <a href="./tcl-tk-ada-dialogs_ads.html#robo15">TkAda/Dialogs</a></li>
+<li>1.1. <a href="./tcl-tk-ada-dialogs_ads.html#robo16">TkAda/Dialogs</a></li>
 <ul>
-<li>1.1.1. <a href="./tcl-tk-ada-dialogs_ads.html#robo177">Dialogs/Choose_Directory</a></li>
-<li>1.1.2. <a href="./tcl-tk-ada-dialogs_ads.html#robo178">Dialogs/Dialog</a></li>
-<li>1.1.3. <a href="./tcl-tk-ada-dialogs_ads.html#robo179">Dialogs/Get_Open_File</a></li>
-<li>1.1.4. <a href="./tcl-tk-ada-dialogs_ads.html#robo180">Dialogs/Get_Save_File</a></li>
-<li>1.1.5. <a href="./tcl-tk-ada-dialogs_ads.html#robo181">Dialogs/MessageBox</a></li>
+<li>1.1.1. <a href="./tcl-tk-ada-dialogs_ads.html#robo179">Dialogs/Choose_Directory</a></li>
+<li>1.1.2. <a href="./tcl-tk-ada-dialogs_ads.html#robo180">Dialogs/Dialog</a></li>
+<li>1.1.3. <a href="./tcl-tk-ada-dialogs_ads.html#robo181">Dialogs/Get_Open_File</a></li>
+<li>1.1.4. <a href="./tcl-tk-ada-dialogs_ads.html#robo182">Dialogs/Get_Save_File</a></li>
+<li>1.1.5. <a href="./tcl-tk-ada-dialogs_ads.html#robo183">Dialogs/MessageBox</a></li>
 </ul>
-<li>1.2. <a href="./tcl-tk-ada-image_ads.html#robo16">TkAda/Image</a></li>
+<li>1.2. <a href="./tcl-tk-ada-image_ads.html#robo17">TkAda/Image</a></li>
 <ul>
 <li>1.2.1. <a href="./tcl-tk-ada-image-bitmap_ads.html#robo5">Image/Bitmap</a></li>
 <ul>
 <li>1.2.1.1. <a href="./tcl-tk-ada-image-bitmap_ads.html#robo62">Bitmap/Tk_Bitmap</a></li>
-<li>1.2.1.2. <a href="./tcl-tk-ada-image-bitmap_ads.html#robo116">Bitmap/Create (function)</a></li>
-<li>1.2.1.3. <a href="./tcl-tk-ada-image-bitmap_ads.html#robo117">Bitmap/Create (procedure)</a></li>
+<li>1.2.1.2. <a href="./tcl-tk-ada-image-bitmap_ads.html#robo118">Bitmap/Create (function)</a></li>
+<li>1.2.1.3. <a href="./tcl-tk-ada-image-bitmap_ads.html#robo119">Bitmap/Create (procedure)</a></li>
 </ul>
 <li>1.2.2. <a href="./tcl-tk-ada-image-photo_ads.html#robo6">Image/Photo</a></li>
 <ul>
 <li>1.2.2.1. <a href="./tcl-tk-ada-image-photo_ads.html#robo84">Photo/Tk_Photo</a></li>
-<li>1.2.2.2. <a href="./tcl-tk-ada-image-photo_ads.html#robo273">Photo/Blank</a></li>
-<li>1.2.2.3. <a href="./tcl-tk-ada-image-photo_ads.html#robo274">Photo/Copy</a></li>
-<li>1.2.2.4. <a href="./tcl-tk-ada-image-photo_ads.html#robo275">Photo/Create (function)</a></li>
-<li>1.2.2.5. <a href="./tcl-tk-ada-image-photo_ads.html#robo276">Photo/Create (procedure)</a></li>
-<li>1.2.2.6. <a href="./tcl-tk-ada-image-photo_ads.html#robo277">Photo/Data</a></li>
-<li>1.2.2.7. <a href="./tcl-tk-ada-image-photo_ads.html#robo278">Photo/Get</a></li>
-<li>1.2.2.8. <a href="./tcl-tk-ada-image-photo_ads.html#robo279">Photo/Put</a></li>
-<li>1.2.2.9. <a href="./tcl-tk-ada-image-photo_ads.html#robo280">Photo/Read</a></li>
-<li>1.2.2.10. <a href="./tcl-tk-ada-image-photo_ads.html#robo281">Photo/Redither</a></li>
-<li>1.2.2.11. <a href="./tcl-tk-ada-image-photo_ads.html#robo282">Photo/Transparency_Get</a></li>
-<li>1.2.2.12. <a href="./tcl-tk-ada-image-photo_ads.html#robo283">Photo/Transparency_Set</a></li>
-<li>1.2.2.13. <a href="./tcl-tk-ada-image-photo_ads.html#robo284">Photo/Write</a></li>
+<li>1.2.2.2. <a href="./tcl-tk-ada-image-photo_ads.html#robo276">Photo/Blank</a></li>
+<li>1.2.2.3. <a href="./tcl-tk-ada-image-photo_ads.html#robo277">Photo/Copy</a></li>
+<li>1.2.2.4. <a href="./tcl-tk-ada-image-photo_ads.html#robo278">Photo/Create (function)</a></li>
+<li>1.2.2.5. <a href="./tcl-tk-ada-image-photo_ads.html#robo279">Photo/Create (procedure)</a></li>
+<li>1.2.2.6. <a href="./tcl-tk-ada-image-photo_ads.html#robo280">Photo/Data</a></li>
+<li>1.2.2.7. <a href="./tcl-tk-ada-image-photo_ads.html#robo281">Photo/Get</a></li>
+<li>1.2.2.8. <a href="./tcl-tk-ada-image-photo_ads.html#robo282">Photo/Put</a></li>
+<li>1.2.2.9. <a href="./tcl-tk-ada-image-photo_ads.html#robo283">Photo/Read</a></li>
+<li>1.2.2.10. <a href="./tcl-tk-ada-image-photo_ads.html#robo284">Photo/Redither</a></li>
+<li>1.2.2.11. <a href="./tcl-tk-ada-image-photo_ads.html#robo285">Photo/Transparency_Get</a></li>
+<li>1.2.2.12. <a href="./tcl-tk-ada-image-photo_ads.html#robo286">Photo/Transparency_Set</a></li>
+<li>1.2.2.13. <a href="./tcl-tk-ada-image-photo_ads.html#robo287">Photo/Write</a></li>
 </ul>
-<li>1.2.3. <a href="./tcl-tk-ada-image_ads.html#robo192">Image/Delete</a></li>
-<li>1.2.4. <a href="./tcl-tk-ada-image_ads.html#robo193">Image/Height</a></li>
-<li>1.2.5. <a href="./tcl-tk-ada-image_ads.html#robo194">Image/Image_Type</a></li>
-<li>1.2.6. <a href="./tcl-tk-ada-image_ads.html#robo195">Image/Inuse</a></li>
-<li>1.2.7. <a href="./tcl-tk-ada-image_ads.html#robo196">Image/Names</a></li>
-<li>1.2.8. <a href="./tcl-tk-ada-image_ads.html#robo197">Image/Types</a></li>
-<li>1.2.9. <a href="./tcl-tk-ada-image_ads.html#robo198">Image/Width</a></li>
+<li>1.2.3. <a href="./tcl-tk-ada-image_ads.html#robo194">Image/Delete</a></li>
+<li>1.2.4. <a href="./tcl-tk-ada-image_ads.html#robo195">Image/Height</a></li>
+<li>1.2.5. <a href="./tcl-tk-ada-image_ads.html#robo196">Image/Image_Type</a></li>
+<li>1.2.6. <a href="./tcl-tk-ada-image_ads.html#robo197">Image/Inuse</a></li>
+<li>1.2.7. <a href="./tcl-tk-ada-image_ads.html#robo198">Image/Names</a></li>
+<li>1.2.8. <a href="./tcl-tk-ada-image_ads.html#robo199">Image/Types</a></li>
+<li>1.2.9. <a href="./tcl-tk-ada-image_ads.html#robo200">Image/Width</a></li>
 </ul>
-<li>1.3. <a href="./tcl-tk-ada-busy_ads.html#robo17">TkAda/TkBusy</a></li>
+<li>1.3. <a href="./tcl-tk-ada-busy_ads.html#robo18">TkAda/TkBusy</a></li>
 <ul>
-<li>1.3.1. <a href="./tcl-tk-ada-busy_ads.html#robo338">TkBusy/Busy</a></li>
-<li>1.3.2. <a href="./tcl-tk-ada-busy_ads.html#robo339">TkBusy/cget</a></li>
-<li>1.3.3. <a href="./tcl-tk-ada-busy_ads.html#robo340">TkBusy/Configure (function)</a></li>
-<li>1.3.4. <a href="./tcl-tk-ada-busy_ads.html#robo341">TkBusy/Configure (procedure)</a></li>
-<li>1.3.5. <a href="./tcl-tk-ada-busy_ads.html#robo342">TkBusy/Current</a></li>
-<li>1.3.6. <a href="./tcl-tk-ada-busy_ads.html#robo343">TkBusy/Forget</a></li>
-<li>1.3.7. <a href="./tcl-tk-ada-busy_ads.html#robo344">TkBusy/Status</a></li>
+<li>1.3.1. <a href="./tcl-tk-ada-busy_ads.html#robo416">TkBusy/Busy</a></li>
+<li>1.3.2. <a href="./tcl-tk-ada-busy_ads.html#robo417">TkBusy/cget</a></li>
+<li>1.3.3. <a href="./tcl-tk-ada-busy_ads.html#robo418">TkBusy/Configure (function)</a></li>
+<li>1.3.4. <a href="./tcl-tk-ada-busy_ads.html#robo419">TkBusy/Configure (procedure)</a></li>
+<li>1.3.5. <a href="./tcl-tk-ada-busy_ads.html#robo420">TkBusy/Current</a></li>
+<li>1.3.6. <a href="./tcl-tk-ada-busy_ads.html#robo421">TkBusy/Forget</a></li>
+<li>1.3.7. <a href="./tcl-tk-ada-busy_ads.html#robo422">TkBusy/Status</a></li>
 </ul>
-<li>1.4. <a href="./tcl-tk-ada-grid_ads.html#robo18">TkAda/TkGrid</a></li>
+<li>1.4. <a href="./tcl-tk-ada-grid_ads.html#robo19">TkAda/TkGrid</a></li>
 <ul>
-<li>1.4.1. <a href="./tcl-tk-ada-grid_ads.html#robo345">TkGrid/Column_Configure (function)</a></li>
-<li>1.4.2. <a href="./tcl-tk-ada-grid_ads.html#robo346">TkGrid/Column_Configure (procedure)</a></li>
-<li>1.4.3. <a href="./tcl-tk-ada-grid_ads.html#robo347">TkGrid/Grid</a></li>
-<li>1.4.4. <a href="./tcl-tk-ada-grid_ads.html#robo348">TkGrid/Grid_Anchor (function)</a></li>
-<li>1.4.5. <a href="./tcl-tk-ada-grid_ads.html#robo349">TkGrid/Grid_Anchor (procedure)</a></li>
-<li>1.4.6. <a href="./tcl-tk-ada-grid_ads.html#robo350">TkGrid/Grid_BBox</a></li>
-<li>1.4.7. <a href="./tcl-tk-ada-grid_ads.html#robo351">TkGrid/Grid_Configure</a></li>
-<li>1.4.8. <a href="./tcl-tk-ada-grid_ads.html#robo352">TkGrid/Grid_Forget</a></li>
-<li>1.4.9. <a href="./tcl-tk-ada-grid_ads.html#robo353">TkGrid/Grid_Info</a></li>
-<li>1.4.10. <a href="./tcl-tk-ada-grid_ads.html#robo354">TkGrid/Grid_Location</a></li>
-<li>1.4.11. <a href="./tcl-tk-ada-grid_ads.html#robo355">TkGrid/Grid_Propagate (function)</a></li>
-<li>1.4.12. <a href="./tcl-tk-ada-grid_ads.html#robo356">TkGrid/Grid_Propagate (procedure)</a></li>
-<li>1.4.13. <a href="./tcl-tk-ada-grid_ads.html#robo357">TkGrid/Grid_Remove</a></li>
-<li>1.4.14. <a href="./tcl-tk-ada-grid_ads.html#robo358">TkGrid/Grid_Size</a></li>
-<li>1.4.15. <a href="./tcl-tk-ada-grid_ads.html#robo359">TkGrid/Grid_Slaves</a></li>
-<li>1.4.16. <a href="./tcl-tk-ada-grid_ads.html#robo360">TkGrid/Row_Configure (function)</a></li>
-<li>1.4.17. <a href="./tcl-tk-ada-grid_ads.html#robo361">TkGrid/Row_Configure (procedure)</a></li>
+<li>1.4.1. <a href="./tcl-tk-ada-grid_ads.html#robo423">TkGrid/Column_Configure (function)</a></li>
+<li>1.4.2. <a href="./tcl-tk-ada-grid_ads.html#robo424">TkGrid/Column_Configure (procedure)</a></li>
+<li>1.4.3. <a href="./tcl-tk-ada-grid_ads.html#robo425">TkGrid/Grid</a></li>
+<li>1.4.4. <a href="./tcl-tk-ada-grid_ads.html#robo426">TkGrid/Grid_Anchor (function)</a></li>
+<li>1.4.5. <a href="./tcl-tk-ada-grid_ads.html#robo427">TkGrid/Grid_Anchor (procedure)</a></li>
+<li>1.4.6. <a href="./tcl-tk-ada-grid_ads.html#robo428">TkGrid/Grid_BBox</a></li>
+<li>1.4.7. <a href="./tcl-tk-ada-grid_ads.html#robo429">TkGrid/Grid_Configure</a></li>
+<li>1.4.8. <a href="./tcl-tk-ada-grid_ads.html#robo430">TkGrid/Grid_Forget</a></li>
+<li>1.4.9. <a href="./tcl-tk-ada-grid_ads.html#robo431">TkGrid/Grid_Info</a></li>
+<li>1.4.10. <a href="./tcl-tk-ada-grid_ads.html#robo432">TkGrid/Grid_Location</a></li>
+<li>1.4.11. <a href="./tcl-tk-ada-grid_ads.html#robo433">TkGrid/Grid_Propagate (function)</a></li>
+<li>1.4.12. <a href="./tcl-tk-ada-grid_ads.html#robo434">TkGrid/Grid_Propagate (procedure)</a></li>
+<li>1.4.13. <a href="./tcl-tk-ada-grid_ads.html#robo435">TkGrid/Grid_Remove</a></li>
+<li>1.4.14. <a href="./tcl-tk-ada-grid_ads.html#robo436">TkGrid/Grid_Size</a></li>
+<li>1.4.15. <a href="./tcl-tk-ada-grid_ads.html#robo437">TkGrid/Grid_Slaves</a></li>
+<li>1.4.16. <a href="./tcl-tk-ada-grid_ads.html#robo438">TkGrid/Row_Configure (function)</a></li>
+<li>1.4.17. <a href="./tcl-tk-ada-grid_ads.html#robo439">TkGrid/Row_Configure (procedure)</a></li>
 </ul>
-<li>1.5. <a href="./tcl-tk-ada-pack_ads.html#robo19">TkAda/TkPack</a></li>
+<li>1.5. <a href="./tcl-tk-ada-pack_ads.html#robo20">TkAda/TkPack</a></li>
 <ul>
-<li>1.5.1. <a href="./tcl-tk-ada-pack_ads.html#robo362">TkPack/Pack</a></li>
-<li>1.5.2. <a href="./tcl-tk-ada-pack_ads.html#robo363">TkPack/Pack_Configure</a></li>
-<li>1.5.3. <a href="./tcl-tk-ada-pack_ads.html#robo364">TkPack/Pack_Forget</a></li>
-<li>1.5.4. <a href="./tcl-tk-ada-pack_ads.html#robo365">TkPack/Pack_Info</a></li>
-<li>1.5.5. <a href="./tcl-tk-ada-pack_ads.html#robo366">TkPack/Pack_Propagate (function)</a></li>
-<li>1.5.6. <a href="./tcl-tk-ada-pack_ads.html#robo367">TkPack/Pack_Propagate (procedure)</a></li>
-<li>1.5.7. <a href="./tcl-tk-ada-pack_ads.html#robo368">TkPack/Pack_Slaves</a></li>
+<li>1.5.1. <a href="./tcl-tk-ada-pack_ads.html#robo440">TkPack/Pack</a></li>
+<li>1.5.2. <a href="./tcl-tk-ada-pack_ads.html#robo441">TkPack/Pack_Configure</a></li>
+<li>1.5.3. <a href="./tcl-tk-ada-pack_ads.html#robo442">TkPack/Pack_Forget</a></li>
+<li>1.5.4. <a href="./tcl-tk-ada-pack_ads.html#robo443">TkPack/Pack_Info</a></li>
+<li>1.5.5. <a href="./tcl-tk-ada-pack_ads.html#robo444">TkPack/Pack_Propagate (function)</a></li>
+<li>1.5.6. <a href="./tcl-tk-ada-pack_ads.html#robo445">TkPack/Pack_Propagate (procedure)</a></li>
+<li>1.5.7. <a href="./tcl-tk-ada-pack_ads.html#robo446">TkPack/Pack_Slaves</a></li>
 </ul>
-<li>1.6. <a href="./tcl-tk-ada-place_ads.html#robo20">TkAda/TkPlace</a></li>
+<li>1.6. <a href="./tcl-tk-ada-place_ads.html#robo21">TkAda/TkPlace</a></li>
 <ul>
-<li>1.6.1. <a href="./tcl-tk-ada-place_ads.html#robo369">TkPlace/Place</a></li>
-<li>1.6.2. <a href="./tcl-tk-ada-place_ads.html#robo370">TkPlace/Place_Configure</a></li>
-<li>1.6.3. <a href="./tcl-tk-ada-place_ads.html#robo371">TkPlace/Place_Forget</a></li>
-<li>1.6.4. <a href="./tcl-tk-ada-place_ads.html#robo372">TkPlace/Place_Info</a></li>
-<li>1.6.5. <a href="./tcl-tk-ada-place_ads.html#robo373">TkPlace/Place_Slaves</a></li>
+<li>1.6.1. <a href="./tcl-tk-ada-place_ads.html#robo447">TkPlace/Place</a></li>
+<li>1.6.2. <a href="./tcl-tk-ada-place_ads.html#robo448">TkPlace/Place_Configure</a></li>
+<li>1.6.3. <a href="./tcl-tk-ada-place_ads.html#robo449">TkPlace/Place_Forget</a></li>
+<li>1.6.4. <a href="./tcl-tk-ada-place_ads.html#robo450">TkPlace/Place_Info</a></li>
+<li>1.6.5. <a href="./tcl-tk-ada-place_ads.html#robo451">TkPlace/Place_Slaves</a></li>
 </ul>
-<li>1.7. <a href="./tcl-tk-ada-ttkstyle_ads.html#robo21">TkAda/TtkStyle</a></li>
+<li>1.7. <a href="./tcl-tk-ada-ttkstyle_ads.html#robo22">TkAda/TtkStyle</a></li>
 <ul>
-<li>1.7.1. <a href="./tcl-tk-ada-ttkstyle_ads.html#robo414">TtkStyle/Element_Create</a></li>
-<li>1.7.2. <a href="./tcl-tk-ada-ttkstyle_ads.html#robo415">TtkStyle/Element_Names</a></li>
-<li>1.7.3. <a href="./tcl-tk-ada-ttkstyle_ads.html#robo416">TtkStyle/Element_Options</a></li>
-<li>1.7.4. <a href="./tcl-tk-ada-ttkstyle_ads.html#robo417">TtkStyle/Style_Configure</a></li>
-<li>1.7.5. <a href="./tcl-tk-ada-ttkstyle_ads.html#robo418">TtkStyle/Style_Layout (function)</a></li>
-<li>1.7.6. <a href="./tcl-tk-ada-ttkstyle_ads.html#robo419">TtkStyle/Style_Layout (procedure)</a></li>
-<li>1.7.7. <a href="./tcl-tk-ada-ttkstyle_ads.html#robo420">TtkStyle/Style_Lookup</a></li>
-<li>1.7.8. <a href="./tcl-tk-ada-ttkstyle_ads.html#robo421">TtkStyle/Style_Map</a></li>
-<li>1.7.9. <a href="./tcl-tk-ada-ttkstyle_ads.html#robo422">TtkStyle/Theme_Names</a></li>
-<li>1.7.10. <a href="./tcl-tk-ada-ttkstyle_ads.html#robo423">TtkStyle/Theme_Use (function)</a></li>
-<li>1.7.11. <a href="./tcl-tk-ada-ttkstyle_ads.html#robo424">TtkStyle/Theme_Use (procedure)</a></li>
+<li>1.7.1. <a href="./tcl-tk-ada-ttkstyle_ads.html#robo529">TtkStyle/Element_Create</a></li>
+<li>1.7.2. <a href="./tcl-tk-ada-ttkstyle_ads.html#robo530">TtkStyle/Element_Names</a></li>
+<li>1.7.3. <a href="./tcl-tk-ada-ttkstyle_ads.html#robo531">TtkStyle/Element_Options</a></li>
+<li>1.7.4. <a href="./tcl-tk-ada-ttkstyle_ads.html#robo532">TtkStyle/Style_Configure</a></li>
+<li>1.7.5. <a href="./tcl-tk-ada-ttkstyle_ads.html#robo533">TtkStyle/Style_Layout (function)</a></li>
+<li>1.7.6. <a href="./tcl-tk-ada-ttkstyle_ads.html#robo534">TtkStyle/Style_Layout (procedure)</a></li>
+<li>1.7.7. <a href="./tcl-tk-ada-ttkstyle_ads.html#robo535">TtkStyle/Style_Lookup</a></li>
+<li>1.7.8. <a href="./tcl-tk-ada-ttkstyle_ads.html#robo536">TtkStyle/Style_Map</a></li>
+<li>1.7.9. <a href="./tcl-tk-ada-ttkstyle_ads.html#robo537">TtkStyle/Theme_Names</a></li>
+<li>1.7.10. <a href="./tcl-tk-ada-ttkstyle_ads.html#robo538">TtkStyle/Theme_Use (function)</a></li>
+<li>1.7.11. <a href="./tcl-tk-ada-ttkstyle_ads.html#robo539">TtkStyle/Theme_Use (procedure)</a></li>
 </ul>
-<li>1.8. <a href="./tcl-tk-ada-widgets_ads.html#robo22">TkAda/Widgets</a></li>
+<li>1.8. <a href="./tcl-tk-ada-widgets_ads.html#robo23">TkAda/Widgets</a></li>
 <ul>
-<li>1.8.1. <a href="./tcl-tk-ada-widgets-button_ads.html#robo30">Widgets/Button</a></li>
+<li>1.8.1. <a href="./tcl-tk-ada-widgets-button_ads.html#robo32">Widgets/Button</a></li>
 <ul>
 <li>1.8.1.1. <a href="./tcl-tk-ada-widgets-button-checkbutton_ads.html#robo3">Button/CheckButton</a></li>
 <ul>
 <li>1.8.1.1.1. <a href="./tcl-tk-ada-widgets-button-checkbutton_ads.html#robo68">CheckButton/Tk_CheckButton</a></li>
-<li>1.8.1.1.2. <a href="./tcl-tk-ada-widgets-button-checkbutton_ads.html#robo172">CheckButton/Create (function)</a></li>
-<li>1.8.1.1.3. <a href="./tcl-tk-ada-widgets-button-checkbutton_ads.html#robo173">CheckButton/Create (procedure)</a></li>
-<li>1.8.1.1.4. <a href="./tcl-tk-ada-widgets-button-checkbutton_ads.html#robo174">CheckButton/Deselect</a></li>
-<li>1.8.1.1.5. <a href="./tcl-tk-ada-widgets-button-checkbutton_ads.html#robo175">CheckButton/Tk_Select</a></li>
-<li>1.8.1.1.6. <a href="./tcl-tk-ada-widgets-button-checkbutton_ads.html#robo176">CheckButton/Toggle</a></li>
+<li>1.8.1.1.2. <a href="./tcl-tk-ada-widgets-button-checkbutton_ads.html#robo174">CheckButton/Create (function)</a></li>
+<li>1.8.1.1.3. <a href="./tcl-tk-ada-widgets-button-checkbutton_ads.html#robo175">CheckButton/Create (procedure)</a></li>
+<li>1.8.1.1.4. <a href="./tcl-tk-ada-widgets-button-checkbutton_ads.html#robo176">CheckButton/Deselect</a></li>
+<li>1.8.1.1.5. <a href="./tcl-tk-ada-widgets-button-checkbutton_ads.html#robo177">CheckButton/Tk_Select</a></li>
+<li>1.8.1.1.6. <a href="./tcl-tk-ada-widgets-button-checkbutton_ads.html#robo178">CheckButton/Toggle</a></li>
 </ul>
 <li>1.8.1.2. <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo4">Button/RadioButton</a></li>
 <ul>
 <li>1.8.1.2.1. <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo85">RadioButton/Tk_RadioButton</a></li>
-<li>1.8.1.2.2. <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo285">RadioButton/Create</a></li>
-<li>1.8.1.2.3. <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo286">RadioButton/Deselect</a></li>
-<li>1.8.1.2.4. <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo287">RadioButton/Tk_Select</a></li>
-<li>1.8.1.2.5. <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo288">RadioButton/Toggle</a></li>
+<li>1.8.1.2.2. <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo288">RadioButton/Create</a></li>
+<li>1.8.1.2.3. <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo289">RadioButton/Deselect</a></li>
+<li>1.8.1.2.4. <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo290">RadioButton/Tk_Select</a></li>
+<li>1.8.1.2.5. <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo291">RadioButton/Toggle</a></li>
 </ul>
 <li>1.8.1.3. <a href="./tcl-tk-ada-widgets-button_ads.html#robo63">Button/Tk_Button</a></li>
-<li>1.8.1.4. <a href="./tcl-tk-ada-widgets-button_ads.html#robo118">Button/Create (function)</a></li>
-<li>1.8.1.5. <a href="./tcl-tk-ada-widgets-button_ads.html#robo119">Button/Create (procedure)</a></li>
-<li>1.8.1.6. <a href="./tcl-tk-ada-widgets-button_ads.html#robo120">Button/Flash</a></li>
-<li>1.8.1.7. <a href="./tcl-tk-ada-widgets-button_ads.html#robo121">Button/Invoke</a></li>
+<li>1.8.1.4. <a href="./tcl-tk-ada-widgets-button_ads.html#robo120">Button/Create (function)</a></li>
+<li>1.8.1.5. <a href="./tcl-tk-ada-widgets-button_ads.html#robo121">Button/Create (procedure)</a></li>
+<li>1.8.1.6. <a href="./tcl-tk-ada-widgets-button_ads.html#robo122">Button/Flash</a></li>
+<li>1.8.1.7. <a href="./tcl-tk-ada-widgets-button_ads.html#robo123">Button/Invoke</a></li>
 </ul>
-<li>1.8.2. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo31">Widgets/Canvas</a></li>
+<li>1.8.2. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo33">Widgets/Canvas</a></li>
 <ul>
 <li>1.8.2.1. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo64">Canvas/Tk_Canvas</a></li>
-<li>1.8.2.2. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo122">Canvas/Add_Tag</a></li>
-<li>1.8.2.3. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo123">Canvas/BBox</a></li>
-<li>1.8.2.4. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo124">Canvas/Bind (function)</a></li>
-<li>1.8.2.5. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo125">Canvas/Bind (procedure)</a></li>
-<li>1.8.2.6. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo126">Canvas/Canvas_Create</a></li>
-<li>1.8.2.7. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo127">Canvas/Canvas_Raise</a></li>
-<li>1.8.2.8. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo128">Canvas/Canvas_Type</a></li>
-<li>1.8.2.9. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo129">Canvas/CanvasX</a></li>
-<li>1.8.2.10. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo130">Canvas/CanvasY</a></li>
-<li>1.8.2.11. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo131">Canvas/Coords (function)</a></li>
-<li>1.8.2.12. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo132">Canvas/Coords (procedure)</a></li>
-<li>1.8.2.13. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo133">Canvas/Create (function)</a></li>
-<li>1.8.2.14. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo134">Canvas/Create (procedure)</a></li>
-<li>1.8.2.15. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo135">Canvas/Dchars</a></li>
-<li>1.8.2.16. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo136">Canvas/Delete</a></li>
-<li>1.8.2.17. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo137">Canvas/DTag</a></li>
-<li>1.8.2.18. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo138">Canvas/Find</a></li>
-<li>1.8.2.19. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo139">Canvas/Focus</a></li>
-<li>1.8.2.20. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo140">Canvas/Get_Tags</a></li>
-<li>1.8.2.21. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo141">Canvas/ICursor</a></li>
-<li>1.8.2.22. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo142">Canvas/IMove</a></li>
-<li>1.8.2.23. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo143">Canvas/Index</a></li>
-<li>1.8.2.24. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo144">Canvas/Insert</a></li>
-<li>1.8.2.25. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo145">Canvas/Item_Cget</a></li>
-<li>1.8.2.26. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo146">Canvas/Item_Configure (function)</a></li>
-<li>1.8.2.27. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo147">Canvas/Item_Configure (procedure)</a></li>
-<li>1.8.2.28. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo148">Canvas/Lower</a></li>
-<li>1.8.2.29. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo149">Canvas/Move</a></li>
-<li>1.8.2.30. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo150">Canvas/MoveTo</a></li>
-<li>1.8.2.31. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo151">Canvas/Postscript</a></li>
-<li>1.8.2.32. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo152">Canvas/Rchars</a></li>
-<li>1.8.2.33. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo153">Canvas/Scale</a></li>
-<li>1.8.2.34. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo154">Canvas/Select_Adjust</a></li>
-<li>1.8.2.35. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo155">Canvas/Select_Clear</a></li>
-<li>1.8.2.36. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo156">Canvas/Select_From</a></li>
-<li>1.8.2.37. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo157">Canvas/Select_Item</a></li>
-<li>1.8.2.38. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo158">Canvas/Select_To</a></li>
-<li>1.8.2.39. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo159">Canvas/XView</a></li>
-<li>1.8.2.40. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo160">Canvas/Xview_Move_To</a></li>
-<li>1.8.2.41. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo161">Canvas/Xview_Scroll</a></li>
-<li>1.8.2.42. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo162">Canvas/YView</a></li>
-<li>1.8.2.43. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo163">Canvas/Yview_Move_To</a></li>
-<li>1.8.2.44. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo164">Canvas/Yview_Scroll</a></li>
+<li>1.8.2.2. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo124">Canvas/Add_Tag</a></li>
+<li>1.8.2.3. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo125">Canvas/BBox</a></li>
+<li>1.8.2.4. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo126">Canvas/Bind (function)</a></li>
+<li>1.8.2.5. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo127">Canvas/Bind (procedure)</a></li>
+<li>1.8.2.6. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo128">Canvas/Canvas_Create</a></li>
+<li>1.8.2.7. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo129">Canvas/Canvas_Raise</a></li>
+<li>1.8.2.8. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo130">Canvas/Canvas_Type</a></li>
+<li>1.8.2.9. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo131">Canvas/CanvasX</a></li>
+<li>1.8.2.10. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo132">Canvas/CanvasY</a></li>
+<li>1.8.2.11. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo133">Canvas/Coords (function)</a></li>
+<li>1.8.2.12. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo134">Canvas/Coords (procedure)</a></li>
+<li>1.8.2.13. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo135">Canvas/Create (function)</a></li>
+<li>1.8.2.14. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo136">Canvas/Create (procedure)</a></li>
+<li>1.8.2.15. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo137">Canvas/Dchars</a></li>
+<li>1.8.2.16. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo138">Canvas/Delete</a></li>
+<li>1.8.2.17. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo139">Canvas/DTag</a></li>
+<li>1.8.2.18. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo140">Canvas/Find</a></li>
+<li>1.8.2.19. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo141">Canvas/Focus</a></li>
+<li>1.8.2.20. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo142">Canvas/Get_Tags</a></li>
+<li>1.8.2.21. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo143">Canvas/ICursor</a></li>
+<li>1.8.2.22. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo144">Canvas/IMove</a></li>
+<li>1.8.2.23. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo145">Canvas/Index</a></li>
+<li>1.8.2.24. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo146">Canvas/Insert</a></li>
+<li>1.8.2.25. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo147">Canvas/Item_Cget</a></li>
+<li>1.8.2.26. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo148">Canvas/Item_Configure (function)</a></li>
+<li>1.8.2.27. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo149">Canvas/Item_Configure (procedure)</a></li>
+<li>1.8.2.28. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo150">Canvas/Lower</a></li>
+<li>1.8.2.29. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo151">Canvas/Move</a></li>
+<li>1.8.2.30. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo152">Canvas/MoveTo</a></li>
+<li>1.8.2.31. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo153">Canvas/Postscript</a></li>
+<li>1.8.2.32. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo154">Canvas/Rchars</a></li>
+<li>1.8.2.33. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo155">Canvas/Scale</a></li>
+<li>1.8.2.34. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo156">Canvas/Select_Adjust</a></li>
+<li>1.8.2.35. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo157">Canvas/Select_Clear</a></li>
+<li>1.8.2.36. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo158">Canvas/Select_From</a></li>
+<li>1.8.2.37. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo159">Canvas/Select_Item</a></li>
+<li>1.8.2.38. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo160">Canvas/Select_To</a></li>
+<li>1.8.2.39. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo161">Canvas/XView</a></li>
+<li>1.8.2.40. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo162">Canvas/Xview_Move_To</a></li>
+<li>1.8.2.41. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo163">Canvas/Xview_Scroll</a></li>
+<li>1.8.2.42. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo164">Canvas/YView</a></li>
+<li>1.8.2.43. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo165">Canvas/Yview_Move_To</a></li>
+<li>1.8.2.44. <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo166">Canvas/Yview_Scroll</a></li>
 </ul>
-<li>1.8.3. <a href="./tcl-tk-ada-widgets-frame_ads.html#robo32">Widgets/Frame</a></li>
+<li>1.8.3. <a href="./tcl-tk-ada-widgets-frame_ads.html#robo34">Widgets/Frame</a></li>
 <ul>
 <li>1.8.3.1. <a href="./tcl-tk-ada-widgets-frame_ads.html#robo73">Frame/Tk_Frame</a></li>
-<li>1.8.3.2. <a href="./tcl-tk-ada-widgets-frame_ads.html#robo182">Frame/Create (function)</a></li>
-<li>1.8.3.3. <a href="./tcl-tk-ada-widgets-frame_ads.html#robo183">Frame/Create (procedure)</a></li>
+<li>1.8.3.2. <a href="./tcl-tk-ada-widgets-frame_ads.html#robo184">Frame/Create (function)</a></li>
+<li>1.8.3.3. <a href="./tcl-tk-ada-widgets-frame_ads.html#robo185">Frame/Create (procedure)</a></li>
 </ul>
-<li>1.8.4. <a href="./tcl-tk-ada-widgets-label_ads.html#robo33">Widgets/Label</a></li>
+<li>1.8.4. <a href="./tcl-tk-ada-widgets-label_ads.html#robo35">Widgets/Label</a></li>
 <ul>
 <li>1.8.4.1. <a href="./tcl-tk-ada-widgets-label_ads.html#robo77">Label/Tk_Label</a></li>
-<li>1.8.4.2. <a href="./tcl-tk-ada-widgets-label_ads.html#robo199">Label/Create (function)</a></li>
-<li>1.8.4.3. <a href="./tcl-tk-ada-widgets-label_ads.html#robo200">Label/Create (procedure)</a></li>
+<li>1.8.4.2. <a href="./tcl-tk-ada-widgets-label_ads.html#robo201">Label/Create (function)</a></li>
+<li>1.8.4.3. <a href="./tcl-tk-ada-widgets-label_ads.html#robo202">Label/Create (procedure)</a></li>
 </ul>
-<li>1.8.5. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo34">Widgets/ListBox</a></li>
+<li>1.8.5. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo36">Widgets/ListBox</a></li>
 <ul>
 <li>1.8.5.1. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo78">ListBox/Tk_ListBox</a></li>
-<li>1.8.5.2. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo201">ListBox/Activate</a></li>
-<li>1.8.5.3. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo202">ListBox/BBox</a></li>
-<li>1.8.5.4. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo203">ListBox/Create (function)</a></li>
-<li>1.8.5.5. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo204">ListBox/Create (procedure)</a></li>
-<li>1.8.5.6. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo205">ListBox/CurSelection</a></li>
-<li>1.8.5.7. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo206">ListBox/Delete</a></li>
-<li>1.8.5.8. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">ListBox/Index</a></li>
-<li>1.8.5.9. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo208">ListBox/Insert</a></li>
-<li>1.8.5.10. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo209">ListBox/Item_Cget</a></li>
-<li>1.8.5.11. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo210">ListBox/Item_Configure (function)</a></li>
-<li>1.8.5.12. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo211">ListBox/Item_Configure (procedure)</a></li>
-<li>1.8.5.13. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo212">ListBox/Nearest</a></li>
-<li>1.8.5.14. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo213">ListBox/Scan_DragTo</a></li>
-<li>1.8.5.15. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo214">ListBox/Scan_Mark</a></li>
-<li>1.8.5.16. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo215">ListBox/See</a></li>
-<li>1.8.5.17. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo216">ListBox/Selection_Anchor</a></li>
-<li>1.8.5.18. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo217">ListBox/Selection_Clear</a></li>
-<li>1.8.5.19. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo218">ListBox/Selection_Includes</a></li>
-<li>1.8.5.20. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo219">ListBox/Selection_Set</a></li>
-<li>1.8.5.21. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo220">ListBox/Size</a></li>
-<li>1.8.5.22. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo221">ListBox/XView (function)</a></li>
-<li>1.8.5.23. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo222">ListBox/XView (procedure)</a></li>
-<li>1.8.5.24. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo223">ListBox/Xview_Move_To</a></li>
-<li>1.8.5.25. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo224">ListBox/Xview_Scroll</a></li>
-<li>1.8.5.26. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo225">ListBox/YView (function)</a></li>
-<li>1.8.5.27. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo226">ListBox/YView (procedure)</a></li>
-<li>1.8.5.28. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo227">ListBox/Yview_Move_To</a></li>
-<li>1.8.5.29. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo228">ListBox/Yview_Scroll</a></li>
+<li>1.8.5.2. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo203">ListBox/Activate</a></li>
+<li>1.8.5.3. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo204">ListBox/BBox</a></li>
+<li>1.8.5.4. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo205">ListBox/Create (function)</a></li>
+<li>1.8.5.5. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo206">ListBox/Create (procedure)</a></li>
+<li>1.8.5.6. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">ListBox/CurSelection</a></li>
+<li>1.8.5.7. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo208">ListBox/Delete</a></li>
+<li>1.8.5.8. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo209">ListBox/Index</a></li>
+<li>1.8.5.9. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo210">ListBox/Insert</a></li>
+<li>1.8.5.10. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo211">ListBox/Item_Cget</a></li>
+<li>1.8.5.11. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo212">ListBox/Item_Configure (function)</a></li>
+<li>1.8.5.12. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo213">ListBox/Item_Configure (procedure)</a></li>
+<li>1.8.5.13. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo214">ListBox/Nearest</a></li>
+<li>1.8.5.14. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo215">ListBox/Scan_DragTo</a></li>
+<li>1.8.5.15. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo216">ListBox/Scan_Mark</a></li>
+<li>1.8.5.16. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo217">ListBox/See</a></li>
+<li>1.8.5.17. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo218">ListBox/Selection_Anchor</a></li>
+<li>1.8.5.18. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo219">ListBox/Selection_Clear</a></li>
+<li>1.8.5.19. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo220">ListBox/Selection_Includes</a></li>
+<li>1.8.5.20. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo221">ListBox/Selection_Set</a></li>
+<li>1.8.5.21. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo222">ListBox/Size</a></li>
+<li>1.8.5.22. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo223">ListBox/XView (function)</a></li>
+<li>1.8.5.23. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo224">ListBox/XView (procedure)</a></li>
+<li>1.8.5.24. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo225">ListBox/Xview_Move_To</a></li>
+<li>1.8.5.25. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo226">ListBox/Xview_Scroll</a></li>
+<li>1.8.5.26. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo227">ListBox/YView (function)</a></li>
+<li>1.8.5.27. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo228">ListBox/YView (procedure)</a></li>
+<li>1.8.5.28. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo229">ListBox/Yview_Move_To</a></li>
+<li>1.8.5.29. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo230">ListBox/Yview_Scroll</a></li>
 </ul>
-<li>1.8.6. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo35">Widgets/Menu</a></li>
+<li>1.8.6. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo37">Widgets/Menu</a></li>
 <ul>
 <li>1.8.6.1. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo79">Menu/Tk_Menu</a></li>
-<li>1.8.6.2. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo232">Menu/Activate</a></li>
-<li>1.8.6.3. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo233">Menu/AddMenu</a></li>
-<li>1.8.6.4. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo234">Menu/Clone</a></li>
-<li>1.8.6.5. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo235">Menu/Create (function)</a></li>
-<li>1.8.6.6. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo236">Menu/Create (procedure)</a></li>
-<li>1.8.6.7. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo237">Menu/Delete</a></li>
-<li>1.8.6.8. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo238">Menu/Entry_Cget</a></li>
-<li>1.8.6.9. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo239">Menu/Entry_Configure (function)</a></li>
-<li>1.8.6.10. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo240">Menu/Entry_Configure (procedure)</a></li>
-<li>1.8.6.11. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo241">Menu/Index</a></li>
-<li>1.8.6.12. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo242">Menu/Insert</a></li>
-<li>1.8.6.13. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo243">Menu/Invoke</a></li>
-<li>1.8.6.14. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo244">Menu/Menu_Type</a></li>
-<li>1.8.6.15. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo245">Menu/Post (function)</a></li>
-<li>1.8.6.16. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo246">Menu/Post (procedure)</a></li>
-<li>1.8.6.17. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo247">Menu/PostCascade</a></li>
-<li>1.8.6.18. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo248">Menu/Unpost</a></li>
-<li>1.8.6.19. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo249">Menu/XPosition</a></li>
-<li>1.8.6.20. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo250">Menu/YPosition</a></li>
+<li>1.8.6.2. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo235">Menu/Activate</a></li>
+<li>1.8.6.3. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo236">Menu/AddMenu</a></li>
+<li>1.8.6.4. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo237">Menu/Clone</a></li>
+<li>1.8.6.5. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo238">Menu/Create (function)</a></li>
+<li>1.8.6.6. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo239">Menu/Create (procedure)</a></li>
+<li>1.8.6.7. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo240">Menu/Delete</a></li>
+<li>1.8.6.8. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo241">Menu/Entry_Cget</a></li>
+<li>1.8.6.9. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo242">Menu/Entry_Configure (function)</a></li>
+<li>1.8.6.10. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo243">Menu/Entry_Configure (procedure)</a></li>
+<li>1.8.6.11. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo244">Menu/Index</a></li>
+<li>1.8.6.12. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo245">Menu/Insert</a></li>
+<li>1.8.6.13. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo246">Menu/Invoke</a></li>
+<li>1.8.6.14. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo247">Menu/Menu_Type</a></li>
+<li>1.8.6.15. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo248">Menu/Post (function)</a></li>
+<li>1.8.6.16. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo249">Menu/Post (procedure)</a></li>
+<li>1.8.6.17. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo250">Menu/PostCascade</a></li>
+<li>1.8.6.18. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo251">Menu/Unpost</a></li>
+<li>1.8.6.19. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo252">Menu/XPosition</a></li>
+<li>1.8.6.20. <a href="./tcl-tk-ada-widgets-menu_ads.html#robo253">Menu/YPosition</a></li>
 </ul>
-<li>1.8.7. <a href="./tcl-tk-ada-widgets-menubutton_ads.html#robo36">Widgets/MenuButton</a></li>
+<li>1.8.7. <a href="./tcl-tk-ada-widgets-menubutton_ads.html#robo38">Widgets/MenuButton</a></li>
 <ul>
 <li>1.8.7.1. <a href="./tcl-tk-ada-widgets-menubutton_ads.html#robo80">MenuButton/Tk_MenuButton</a></li>
-<li>1.8.7.2. <a href="./tcl-tk-ada-widgets-menubutton_ads.html#robo251">MenuButton/Create (function)</a></li>
-<li>1.8.7.3. <a href="./tcl-tk-ada-widgets-menubutton_ads.html#robo252">MenuButton/Create (procedure)</a></li>
+<li>1.8.7.2. <a href="./tcl-tk-ada-widgets-menubutton_ads.html#robo254">MenuButton/Create (function)</a></li>
+<li>1.8.7.3. <a href="./tcl-tk-ada-widgets-menubutton_ads.html#robo255">MenuButton/Create (procedure)</a></li>
 </ul>
-<li>1.8.8. <a href="./tcl-tk-ada-widgets-message_ads.html#robo37">Widgets/Message</a></li>
+<li>1.8.8. <a href="./tcl-tk-ada-widgets-message_ads.html#robo39">Widgets/Message</a></li>
 <ul>
 <li>1.8.8.1. <a href="./tcl-tk-ada-widgets-message_ads.html#robo81">Message/Tk_Message</a></li>
-<li>1.8.8.2. <a href="./tcl-tk-ada-widgets-message_ads.html#robo253">Message/Create (function)</a></li>
-<li>1.8.8.3. <a href="./tcl-tk-ada-widgets-message_ads.html#robo254">Message/Create (procedure)</a></li>
+<li>1.8.8.2. <a href="./tcl-tk-ada-widgets-message_ads.html#robo256">Message/Create (function)</a></li>
+<li>1.8.8.3. <a href="./tcl-tk-ada-widgets-message_ads.html#robo257">Message/Create (procedure)</a></li>
 </ul>
-<li>1.8.9. <a href="./tcl-tk-ada-widgets-optionmenu_ads.html#robo38">Widgets/OptionMenu</a></li>
+<li>1.8.9. <a href="./tcl-tk-ada-widgets-optionmenu_ads.html#robo40">Widgets/OptionMenu</a></li>
 <ul>
 <li>1.8.9.1. <a href="./tcl-tk-ada-widgets-optionmenu_ads.html#robo82">OptionMenu/Tk_OptionMenu</a></li>
-<li>1.8.9.2. <a href="./tcl-tk-ada-widgets-optionmenu_ads.html#robo255">OptionMenu/Create (function)</a></li>
-<li>1.8.9.3. <a href="./tcl-tk-ada-widgets-optionmenu_ads.html#robo256">OptionMenu/Create (procedure)</a></li>
+<li>1.8.9.2. <a href="./tcl-tk-ada-widgets-optionmenu_ads.html#robo258">OptionMenu/Create (function)</a></li>
+<li>1.8.9.3. <a href="./tcl-tk-ada-widgets-optionmenu_ads.html#robo259">OptionMenu/Create (procedure)</a></li>
 </ul>
-<li>1.8.10. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo39">Widgets/PanedWindow</a></li>
+<li>1.8.10. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo41">Widgets/PanedWindow</a></li>
 <ul>
 <li>1.8.10.1. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo83">PanedWindow/Tk_Paned_Window</a></li>
-<li>1.8.10.2. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo257">PanedWindow/Add</a></li>
-<li>1.8.10.3. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo258">PanedWindow/Create (function)</a></li>
-<li>1.8.10.4. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo259">PanedWindow/Create (procedure)</a></li>
-<li>1.8.10.5. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo260">PanedWindow/Forget</a></li>
-<li>1.8.10.6. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo261">PanedWindow/Identify</a></li>
-<li>1.8.10.7. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo262">PanedWindow/Pane_Cget</a></li>
-<li>1.8.10.8. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo263">PanedWindow/Pane_Configure (function)</a></li>
-<li>1.8.10.9. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo264">PanedWindow/Pane_Configure (procedure)</a></li>
-<li>1.8.10.10. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo265">PanedWindow/Panes</a></li>
-<li>1.8.10.11. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo266">PanedWindow/Proxy_Coord</a></li>
-<li>1.8.10.12. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo267">PanedWindow/Proxy_Forget</a></li>
-<li>1.8.10.13. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo268">PanedWindow/Proxy_Place</a></li>
-<li>1.8.10.14. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo269">PanedWindow/Sash_Coord</a></li>
-<li>1.8.10.15. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo270">PanedWindow/Sash_DragTo</a></li>
-<li>1.8.10.16. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo271">PanedWindow/Sash_Mark</a></li>
-<li>1.8.10.17. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo272">PanedWindow/Sash_Place</a></li>
+<li>1.8.10.2. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo260">PanedWindow/Add</a></li>
+<li>1.8.10.3. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo261">PanedWindow/Create (function)</a></li>
+<li>1.8.10.4. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo262">PanedWindow/Create (procedure)</a></li>
+<li>1.8.10.5. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo263">PanedWindow/Forget</a></li>
+<li>1.8.10.6. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo264">PanedWindow/Identify</a></li>
+<li>1.8.10.7. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo265">PanedWindow/Pane_Cget</a></li>
+<li>1.8.10.8. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo266">PanedWindow/Pane_Configure (function)</a></li>
+<li>1.8.10.9. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo267">PanedWindow/Pane_Configure (procedure)</a></li>
+<li>1.8.10.10. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo268">PanedWindow/Panes</a></li>
+<li>1.8.10.11. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo269">PanedWindow/Proxy_Coord</a></li>
+<li>1.8.10.12. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo270">PanedWindow/Proxy_Forget</a></li>
+<li>1.8.10.13. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo271">PanedWindow/Proxy_Place</a></li>
+<li>1.8.10.14. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo272">PanedWindow/Sash_Coord</a></li>
+<li>1.8.10.15. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo273">PanedWindow/Sash_DragTo</a></li>
+<li>1.8.10.16. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo274">PanedWindow/Sash_Mark</a></li>
+<li>1.8.10.17. <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo275">PanedWindow/Sash_Place</a></li>
 </ul>
-<li>1.8.11. <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo40">Widgets/Scrollbar</a></li>
+<li>1.8.11. <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo42">Widgets/Scrollbar</a></li>
 <ul>
 <li>1.8.11.1. <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo86">Scrollbar/Tk_Scrollbar</a></li>
-<li>1.8.11.2. <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo289">Scrollbar/Activate (function)</a></li>
-<li>1.8.11.3. <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo290">Scrollbar/Activate (procedure)</a></li>
-<li>1.8.11.4. <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo291">Scrollbar/Create (function)</a></li>
-<li>1.8.11.5. <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo292">Scrollbar/Create (procedure)</a></li>
-<li>1.8.11.6. <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo293">Scrollbar/Fraction</a></li>
-<li>1.8.11.7. <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo294">Scrollbar/Get</a></li>
-<li>1.8.11.8. <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo295">Scrollbar/Identify</a></li>
-<li>1.8.11.9. <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo296">Scrollbar/Scrollbar_Delta</a></li>
-<li>1.8.11.10. <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo297">Scrollbar/Set</a></li>
+<li>1.8.11.2. <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo292">Scrollbar/Activate (function)</a></li>
+<li>1.8.11.3. <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo293">Scrollbar/Activate (procedure)</a></li>
+<li>1.8.11.4. <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo294">Scrollbar/Create (function)</a></li>
+<li>1.8.11.5. <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo295">Scrollbar/Create (procedure)</a></li>
+<li>1.8.11.6. <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo296">Scrollbar/Fraction</a></li>
+<li>1.8.11.7. <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo297">Scrollbar/Get</a></li>
+<li>1.8.11.8. <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo298">Scrollbar/Identify</a></li>
+<li>1.8.11.9. <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo299">Scrollbar/Scrollbar_Delta</a></li>
+<li>1.8.11.10. <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo300">Scrollbar/Set</a></li>
 </ul>
-<li>1.8.12. <a href="./tcl-tk-ada-widgets-spinbox_ads.html#robo41">Widgets/SpinBox</a></li>
+<li>1.8.12. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo43">Widgets/TEntry</a></li>
 <ul>
-<li>1.8.12.1. <a href="./tcl-tk-ada-widgets-spinbox_ads.html#robo87">SpinBox/Tk_SpinBox</a></li>
-<li>1.8.12.2. <a href="./tcl-tk-ada-widgets-spinbox_ads.html#robo298">SpinBox/BBox</a></li>
-<li>1.8.12.3. <a href="./tcl-tk-ada-widgets-spinbox_ads.html#robo299">SpinBox/Create (function)</a></li>
-<li>1.8.12.4. <a href="./tcl-tk-ada-widgets-spinbox_ads.html#robo300">SpinBox/Create (procedure)</a></li>
-<li>1.8.12.5. <a href="./tcl-tk-ada-widgets-spinbox_ads.html#robo301">SpinBox/Delete</a></li>
-<li>1.8.12.6. <a href="./tcl-tk-ada-widgets-spinbox_ads.html#robo302">SpinBox/Get</a></li>
-<li>1.8.12.7. <a href="./tcl-tk-ada-widgets-spinbox_ads.html#robo303">SpinBox/ICursor</a></li>
-<li>1.8.12.8. <a href="./tcl-tk-ada-widgets-spinbox_ads.html#robo304">SpinBox/Identify</a></li>
-<li>1.8.12.9. <a href="./tcl-tk-ada-widgets-spinbox_ads.html#robo305">SpinBox/Insert</a></li>
-<li>1.8.12.10. <a href="./tcl-tk-ada-widgets-spinbox_ads.html#robo306">SpinBox/Invoke</a></li>
-<li>1.8.12.11. <a href="./tcl-tk-ada-widgets-spinbox_ads.html#robo307">SpinBox/SpinBox_Index</a></li>
-</ul>
-<li>1.8.13. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo42">Widgets/TEntry</a></li>
+<li>1.8.12.1. <a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo14">TEntry/SpinBox</a></li>
 <ul>
-<li>1.8.13.1. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo88">TEntry/Tk_Entry</a></li>
-<li>1.8.13.2. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo309">TEntry/Create (function)</a></li>
-<li>1.8.13.3. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo310">TEntry/Create (procedure)</a></li>
-<li>1.8.13.4. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo311">TEntry/Delete</a></li>
-<li>1.8.13.5. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo312">TEntry/get</a></li>
-<li>1.8.13.6. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo313">TEntry/Insert</a></li>
+<li>1.8.12.1.1. <a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo87">SpinBox/Tk_SpinBox</a></li>
+<li>1.8.12.1.2. <a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo301">SpinBox/Create (function)</a></li>
+<li>1.8.12.1.3. <a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo302">SpinBox/Create (procedure)</a></li>
+<li>1.8.12.1.4. <a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo303">SpinBox/Identify</a></li>
+<li>1.8.12.1.5. <a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo304">SpinBox/Invoke</a></li>
+<li>1.8.12.1.6. <a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo305">SpinBox/Selection_Element</a></li>
+<li>1.8.12.1.7. <a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo306">SpinBox/Selection_Element (procedure)</a></li>
+<li>1.8.12.1.8. <a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo307">SpinBox/Set (function)</a></li>
+<li>1.8.12.1.9. <a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo308">SpinBox/Set (procedure)</a></li>
 </ul>
-<li>1.8.14. <a href="./tcl-tk-ada-widgets-text_ads.html#robo43">Widgets/Text</a></li>
+<li>1.8.12.2. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo88">TEntry/Tk_Entry</a></li>
+<li>1.8.12.3. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo310">TEntry/BBox</a></li>
+<li>1.8.12.4. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo311">TEntry/Create (function)</a></li>
+<li>1.8.12.5. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo312">TEntry/Create (procedure)</a></li>
+<li>1.8.12.6. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo313">TEntry/Delete</a></li>
+<li>1.8.12.7. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo314">TEntry/Entry_Index</a></li>
+<li>1.8.12.8. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo315">TEntry/Get</a></li>
+<li>1.8.12.9. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo316">TEntry/ICursor</a></li>
+<li>1.8.12.10. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo317">TEntry/Insert</a></li>
+<li>1.8.12.11. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo318">TEntry/Scan_DragTo</a></li>
+<li>1.8.12.12. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo319">TEntry/Scan_Mark</a></li>
+<li>1.8.12.13. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo320">TEntry/Selection_Adjust</a></li>
+<li>1.8.12.14. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo321">TEntry/Selection_Clear</a></li>
+<li>1.8.12.15. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo322">TEntry/Selection_From</a></li>
+<li>1.8.12.16. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo323">TEntry/Selection_Present</a></li>
+<li>1.8.12.17. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo324">TEntry/Selection_Range</a></li>
+<li>1.8.12.18. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo325">TEntry/Selection_To</a></li>
+<li>1.8.12.19. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo326">TEntry/Validate</a></li>
+<li>1.8.12.20. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo327">TEntry/XView (function)</a></li>
+<li>1.8.12.21. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo328">TEntry/XView (procedure)</a></li>
+<li>1.8.12.22. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo329">TEntry/Xview_Move_To</a></li>
+<li>1.8.12.23. <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo330">TEntry/Xview_Scroll</a></li>
+</ul>
+<li>1.8.13. <a href="./tcl-tk-ada-widgets-text_ads.html#robo44">Widgets/Text</a></li>
 <ul>
-<li>1.8.14.1. <a href="./tcl-tk-ada-widgets-text_ads.html#robo89">Text/Tk_Text</a></li>
-<li>1.8.14.2. <a href="./tcl-tk-ada-widgets-text_ads.html#robo314">Text/Create (function)</a></li>
-<li>1.8.14.3. <a href="./tcl-tk-ada-widgets-text_ads.html#robo315">Text/Create (procedure)</a></li>
-<li>1.8.14.4. <a href="./tcl-tk-ada-widgets-text_ads.html#robo316">Text/Delete</a></li>
-<li>1.8.14.5. <a href="./tcl-tk-ada-widgets-text_ads.html#robo317">Text/Insert</a></li>
-<li>1.8.14.6. <a href="./tcl-tk-ada-widgets-text_ads.html#robo318">Text/Tag_Add</a></li>
-<li>1.8.14.7. <a href="./tcl-tk-ada-widgets-text_ads.html#robo319">Text/Tag_Configure (function)</a></li>
-<li>1.8.14.8. <a href="./tcl-tk-ada-widgets-text_ads.html#robo320">Text/Tag_Configure (procedure)</a></li>
+<li>1.8.13.1. <a href="./tcl-tk-ada-widgets-text_ads.html#robo89">Text/Tk_Text</a></li>
+<li>1.8.13.2. <a href="./tcl-tk-ada-widgets-text_ads.html#robo331">Text/BBox</a></li>
+<li>1.8.13.3. <a href="./tcl-tk-ada-widgets-text_ads.html#robo332">Text/Compare</a></li>
+<li>1.8.13.4. <a href="./tcl-tk-ada-widgets-text_ads.html#robo333">Text/Count</a></li>
+<li>1.8.13.5. <a href="./tcl-tk-ada-widgets-text_ads.html#robo334">Text/Create (function)</a></li>
+<li>1.8.13.6. <a href="./tcl-tk-ada-widgets-text_ads.html#robo335">Text/Create (procedure)</a></li>
+<li>1.8.13.7. <a href="./tcl-tk-ada-widgets-text_ads.html#robo336">Text/Debug (function)</a></li>
+<li>1.8.13.8. <a href="./tcl-tk-ada-widgets-text_ads.html#robo337">Text/Debug (procedure)</a></li>
+<li>1.8.13.9. <a href="./tcl-tk-ada-widgets-text_ads.html#robo338">Text/Delete</a></li>
+<li>1.8.13.10. <a href="./tcl-tk-ada-widgets-text_ads.html#robo339">Text/DLineInfo</a></li>
+<li>1.8.13.11. <a href="./tcl-tk-ada-widgets-text_ads.html#robo340">Text/Dump</a></li>
+<li>1.8.13.12. <a href="./tcl-tk-ada-widgets-text_ads.html#robo341">Text/Edit_CanRedo</a></li>
+<li>1.8.13.13. <a href="./tcl-tk-ada-widgets-text_ads.html#robo342">Text/Edit_CanUndo</a></li>
+<li>1.8.13.14. <a href="./tcl-tk-ada-widgets-text_ads.html#robo343">Text/Edit_Modified (function)</a></li>
+<li>1.8.13.15. <a href="./tcl-tk-ada-widgets-text_ads.html#robo344">Text/Edit_Modified (procedure)</a></li>
+<li>1.8.13.16. <a href="./tcl-tk-ada-widgets-text_ads.html#robo345">Text/Edit_Redo</a></li>
+<li>1.8.13.17. <a href="./tcl-tk-ada-widgets-text_ads.html#robo346">Text/Edit_Reset</a></li>
+<li>1.8.13.18. <a href="./tcl-tk-ada-widgets-text_ads.html#robo347">Text/Edit_Separator</a></li>
+<li>1.8.13.19. <a href="./tcl-tk-ada-widgets-text_ads.html#robo348">Text/Edit_Undo</a></li>
+<li>1.8.13.20. <a href="./tcl-tk-ada-widgets-text_ads.html#robo349">Text/Get</a></li>
+<li>1.8.13.21. <a href="./tcl-tk-ada-widgets-text_ads.html#robo350">Text/Image_Cget</a></li>
+<li>1.8.13.22. <a href="./tcl-tk-ada-widgets-text_ads.html#robo351">Text/Image_Configure (function)</a></li>
+<li>1.8.13.23. <a href="./tcl-tk-ada-widgets-text_ads.html#robo352">Text/Image_Configure (procedure)</a></li>
+<li>1.8.13.24. <a href="./tcl-tk-ada-widgets-text_ads.html#robo353">Text/Image_Create</a></li>
+<li>1.8.13.25. <a href="./tcl-tk-ada-widgets-text_ads.html#robo354">Text/Image_Names</a></li>
+<li>1.8.13.26. <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Text/Index</a></li>
+<li>1.8.13.27. <a href="./tcl-tk-ada-widgets-text_ads.html#robo356">Text/Insert</a></li>
+<li>1.8.13.28. <a href="./tcl-tk-ada-widgets-text_ads.html#robo357">Text/Mark_Gravity (function)</a></li>
+<li>1.8.13.29. <a href="./tcl-tk-ada-widgets-text_ads.html#robo358">Text/Mark_Gravity (procedure)</a></li>
+<li>1.8.13.30. <a href="./tcl-tk-ada-widgets-text_ads.html#robo359">Text/Mark_Names</a></li>
+<li>1.8.13.31. <a href="./tcl-tk-ada-widgets-text_ads.html#robo360">Text/Mark_Next</a></li>
+<li>1.8.13.32. <a href="./tcl-tk-ada-widgets-text_ads.html#robo361">Text/Mark_Previous</a></li>
+<li>1.8.13.33. <a href="./tcl-tk-ada-widgets-text_ads.html#robo362">Text/Mark_Set</a></li>
+<li>1.8.13.34. <a href="./tcl-tk-ada-widgets-text_ads.html#robo363">Text/Mark_Unset</a></li>
+<li>1.8.13.35. <a href="./tcl-tk-ada-widgets-text_ads.html#robo364">Text/Peer_Create</a></li>
+<li>1.8.13.36. <a href="./tcl-tk-ada-widgets-text_ads.html#robo365">Text/Peer_Names</a></li>
+<li>1.8.13.37. <a href="./tcl-tk-ada-widgets-text_ads.html#robo366">Text/PendingSync</a></li>
+<li>1.8.13.38. <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Text/Replace</a></li>
+<li>1.8.13.39. <a href="./tcl-tk-ada-widgets-text_ads.html#robo368">Text/Scan_DragTo</a></li>
+<li>1.8.13.40. <a href="./tcl-tk-ada-widgets-text_ads.html#robo369">Text/Scan_Mark</a></li>
+<li>1.8.13.41. <a href="./tcl-tk-ada-widgets-text_ads.html#robo370">Text/Search</a></li>
+<li>1.8.13.42. <a href="./tcl-tk-ada-widgets-text_ads.html#robo371">Text/See</a></li>
+<li>1.8.13.43. <a href="./tcl-tk-ada-widgets-text_ads.html#robo372">Text/Sync</a></li>
+<li>1.8.13.44. <a href="./tcl-tk-ada-widgets-text_ads.html#robo373">Text/Sync_Command</a></li>
+<li>1.8.13.45. <a href="./tcl-tk-ada-widgets-text_ads.html#robo374">Text/Tag_Add</a></li>
+<li>1.8.13.46. <a href="./tcl-tk-ada-widgets-text_ads.html#robo375">Text/Tag_Bind (function)</a></li>
+<li>1.8.13.47. <a href="./tcl-tk-ada-widgets-text_ads.html#robo376">Text/Tag_Bind (procedure)</a></li>
+<li>1.8.13.48. <a href="./tcl-tk-ada-widgets-text_ads.html#robo377">Text/Tag_Cget</a></li>
+<li>1.8.13.49. <a href="./tcl-tk-ada-widgets-text_ads.html#robo378">Text/Tag_Configure (function)</a></li>
+<li>1.8.13.50. <a href="./tcl-tk-ada-widgets-text_ads.html#robo379">Text/Tag_Configure (procedure)</a></li>
+<li>1.8.13.51. <a href="./tcl-tk-ada-widgets-text_ads.html#robo380">Text/Tag_Delete</a></li>
+<li>1.8.13.52. <a href="./tcl-tk-ada-widgets-text_ads.html#robo381">Text/Tag_Lower</a></li>
+<li>1.8.13.53. <a href="./tcl-tk-ada-widgets-text_ads.html#robo382">Text/Tag_Names</a></li>
+<li>1.8.13.54. <a href="./tcl-tk-ada-widgets-text_ads.html#robo383">Text/Tag_NextRange</a></li>
+<li>1.8.13.55. <a href="./tcl-tk-ada-widgets-text_ads.html#robo384">Text/Tag_PrevRange</a></li>
+<li>1.8.13.56. <a href="./tcl-tk-ada-widgets-text_ads.html#robo385">Text/Tag_Raise</a></li>
+<li>1.8.13.57. <a href="./tcl-tk-ada-widgets-text_ads.html#robo386">Text/Tag_Ranges</a></li>
+<li>1.8.13.58. <a href="./tcl-tk-ada-widgets-text_ads.html#robo387">Text/Tag_Remove</a></li>
+<li>1.8.13.59. <a href="./tcl-tk-ada-widgets-text_ads.html#robo388">Text/Window_Cget</a></li>
+<li>1.8.13.60. <a href="./tcl-tk-ada-widgets-text_ads.html#robo389">Text/Window_Configure (function)</a></li>
+<li>1.8.13.61. <a href="./tcl-tk-ada-widgets-text_ads.html#robo390">Text/Window_Configure (procedure)</a></li>
+<li>1.8.13.62. <a href="./tcl-tk-ada-widgets-text_ads.html#robo391">Text/Window_Create</a></li>
+<li>1.8.13.63. <a href="./tcl-tk-ada-widgets-text_ads.html#robo392">Text/Window_Names</a></li>
+<li>1.8.13.64. <a href="./tcl-tk-ada-widgets-text_ads.html#robo393">Text/XView</a></li>
+<li>1.8.13.65. <a href="./tcl-tk-ada-widgets-text_ads.html#robo394">Text/Xview_Move_To</a></li>
+<li>1.8.13.66. <a href="./tcl-tk-ada-widgets-text_ads.html#robo395">Text/Xview_Scroll</a></li>
+<li>1.8.13.67. <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Text/YView</a></li>
+<li>1.8.13.68. <a href="./tcl-tk-ada-widgets-text_ads.html#robo397">Text/Yview_Move_To</a></li>
+<li>1.8.13.69. <a href="./tcl-tk-ada-widgets-text_ads.html#robo398">Text/Yview_Scroll</a></li>
 </ul>
-<li>1.8.15. <a href="./tcl-tk-ada-widgets-scale_ads.html#robo44">Widgets/TkScale</a></li>
+<li>1.8.14. <a href="./tcl-tk-ada-widgets-scale_ads.html#robo45">Widgets/TkScale</a></li>
 <ul>
-<li>1.8.15.1. <a href="./tcl-tk-ada-widgets-scale_ads.html#robo90">TkScale/Tk_Scale</a></li>
-<li>1.8.15.2. <a href="./tcl-tk-ada-widgets-scale_ads.html#robo374">TkScale/Coords</a></li>
-<li>1.8.15.3. <a href="./tcl-tk-ada-widgets-scale_ads.html#robo375">TkScale/Create (function)</a></li>
-<li>1.8.15.4. <a href="./tcl-tk-ada-widgets-scale_ads.html#robo376">TkScale/Create (procedure)</a></li>
-<li>1.8.15.5. <a href="./tcl-tk-ada-widgets-scale_ads.html#robo377">TkScale/Get (at selected pixel)</a></li>
-<li>1.8.15.6. <a href="./tcl-tk-ada-widgets-scale_ads.html#robo378">TkScale/Get (current value)</a></li>
-<li>1.8.15.7. <a href="./tcl-tk-ada-widgets-scale_ads.html#robo379">TkScale/Identify</a></li>
-<li>1.8.15.8. <a href="./tcl-tk-ada-widgets-scale_ads.html#robo380">TkScale/Set</a></li>
+<li>1.8.14.1. <a href="./tcl-tk-ada-widgets-scale_ads.html#robo90">TkScale/Tk_Scale</a></li>
+<li>1.8.14.2. <a href="./tcl-tk-ada-widgets-scale_ads.html#robo452">TkScale/Coords</a></li>
+<li>1.8.14.3. <a href="./tcl-tk-ada-widgets-scale_ads.html#robo453">TkScale/Create (function)</a></li>
+<li>1.8.14.4. <a href="./tcl-tk-ada-widgets-scale_ads.html#robo454">TkScale/Create (procedure)</a></li>
+<li>1.8.14.5. <a href="./tcl-tk-ada-widgets-scale_ads.html#robo455">TkScale/Get (at selected pixel)</a></li>
+<li>1.8.14.6. <a href="./tcl-tk-ada-widgets-scale_ads.html#robo456">TkScale/Get (current value)</a></li>
+<li>1.8.14.7. <a href="./tcl-tk-ada-widgets-scale_ads.html#robo457">TkScale/Identify</a></li>
+<li>1.8.14.8. <a href="./tcl-tk-ada-widgets-scale_ads.html#robo458">TkScale/Set</a></li>
 </ul>
-<li>1.8.16. <a href="./tcl-tk-ada-widgets-toplevel_ads.html#robo45">Widgets/Toplevel</a></li>
+<li>1.8.15. <a href="./tcl-tk-ada-widgets-toplevel_ads.html#robo46">Widgets/Toplevel</a></li>
 <ul>
-<li>1.8.16.1. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo27">Toplevel/MainWindow</a></li>
+<li>1.8.15.1. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo28">Toplevel/MainWindow</a></li>
 <ul>
-<li>1.8.16.1.1. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo229">MainWindow/Bind_To_Main_Window</a></li>
-<li>1.8.16.1.2. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo230">MainWindow/Get_Main_Window</a></li>
-<li>1.8.16.1.3. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo231">MainWindow/Unbind_From_Main_Window</a></li>
+<li>1.8.15.1.1. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo231">MainWindow/Bind_To_Main_Window</a></li>
+<li>1.8.15.1.2. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo232">MainWindow/Get_Main_Window</a></li>
+<li>1.8.15.1.3. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo233">MainWindow/Unbind_From_Main_Window (function)</a></li>
+<li>1.8.15.1.4. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo234">MainWindow/Unbind_From_Main_Window (procedure)</a></li>
 </ul>
-<li>1.8.16.2. <a href="./tcl-tk-ada-widgets-toplevel_ads.html#robo91">Toplevel/Tk_Toplevel</a></li>
-<li>1.8.16.3. <a href="./tcl-tk-ada-widgets-toplevel_ads.html#robo383">Toplevel/Create (function)</a></li>
-<li>1.8.16.4. <a href="./tcl-tk-ada-widgets-toplevel_ads.html#robo384">Toplevel/Create (procedure)</a></li>
+<li>1.8.15.2. <a href="./tcl-tk-ada-widgets-toplevel_ads.html#robo91">Toplevel/Tk_Toplevel</a></li>
+<li>1.8.15.3. <a href="./tcl-tk-ada-widgets-toplevel_ads.html#robo461">Toplevel/Create (function)</a></li>
+<li>1.8.15.4. <a href="./tcl-tk-ada-widgets-toplevel_ads.html#robo462">Toplevel/Create (procedure)</a></li>
 </ul>
-<li>1.8.17. <a href="./tcl-tk-ada-widgets-ttkbutton_ads.html#robo46">Widgets/TtkButton</a></li>
+<li>1.8.16. <a href="./tcl-tk-ada-widgets-ttkbutton_ads.html#robo47">Widgets/TtkButton</a></li>
 <ul>
-<li>1.8.17.1. <a href="./tcl-tk-ada-widgets-ttkbutton-ttkcheckbutton_ads.html#robo28">TtkButton/TtkCheckButton</a></li>
+<li>1.8.16.1. <a href="./tcl-tk-ada-widgets-ttkbutton-ttkcheckbutton_ads.html#robo29">TtkButton/TtkCheckButton</a></li>
 <ul>
-<li>1.8.17.1.1. <a href="./tcl-tk-ada-widgets-ttkbutton-ttkcheckbutton_ads.html#robo93">TtkCheckButton/Ttk_CheckButton</a></li>
-<li>1.8.17.1.2. <a href="./tcl-tk-ada-widgets-ttkbutton-ttkcheckbutton_ads.html#robo387">TtkCheckButton/Create</a></li>
+<li>1.8.16.1.1. <a href="./tcl-tk-ada-widgets-ttkbutton-ttkcheckbutton_ads.html#robo93">TtkCheckButton/Ttk_CheckButton</a></li>
+<li>1.8.16.1.2. <a href="./tcl-tk-ada-widgets-ttkbutton-ttkcheckbutton_ads.html#robo466">TtkCheckButton/Create (function)</a></li>
+<li>1.8.16.1.3. <a href="./tcl-tk-ada-widgets-ttkbutton-ttkcheckbutton_ads.html#robo467">TtkCheckButton/Create (procedure)</a></li>
 </ul>
-<li>1.8.17.2. <a href="./tcl-tk-ada-widgets-ttkbutton-ttkradiobutton_ads.html#robo29">TtkButton/TtkRadioButton</a></li>
+<li>1.8.16.2. <a href="./tcl-tk-ada-widgets-ttkbutton-ttkradiobutton_ads.html#robo30">TtkButton/TtkRadioButton</a></li>
 <ul>
-<li>1.8.17.2.1. <a href="./tcl-tk-ada-widgets-ttkbutton-ttkradiobutton_ads.html#robo103">TtkRadioButton/Ttk_RadioButton</a></li>
-<li>1.8.17.2.2. <a href="./tcl-tk-ada-widgets-ttkbutton-ttkradiobutton_ads.html#robo409">TtkRadioButton/Create</a></li>
+<li>1.8.16.2.1. <a href="./tcl-tk-ada-widgets-ttkbutton-ttkradiobutton_ads.html#robo103">TtkRadioButton/Ttk_RadioButton</a></li>
+<li>1.8.16.2.2. <a href="./tcl-tk-ada-widgets-ttkbutton-ttkradiobutton_ads.html#robo516">TtkRadioButton/Create (function)</a></li>
+<li>1.8.16.2.3. <a href="./tcl-tk-ada-widgets-ttkbutton-ttkradiobutton_ads.html#robo517">TtkRadioButton/Create (procedure)</a></li>
 </ul>
-<li>1.8.17.3. <a href="./tcl-tk-ada-widgets-ttkbutton_ads.html#robo92">TtkButton/Ttk_Button</a></li>
-<li>1.8.17.4. <a href="./tcl-tk-ada-widgets-ttkbutton_ads.html#robo385">TtkButton/Create</a></li>
-<li>1.8.17.5. <a href="./tcl-tk-ada-widgets-ttkbutton_ads.html#robo386">TtkButton/Invoke</a></li>
+<li>1.8.16.3. <a href="./tcl-tk-ada-widgets-ttkbutton_ads.html#robo92">TtkButton/Ttk_Button</a></li>
+<li>1.8.16.4. <a href="./tcl-tk-ada-widgets-ttkbutton_ads.html#robo463">TtkButton/Create (function)</a></li>
+<li>1.8.16.5. <a href="./tcl-tk-ada-widgets-ttkbutton_ads.html#robo464">TtkButton/Create (procedure)</a></li>
+<li>1.8.16.6. <a href="./tcl-tk-ada-widgets-ttkbutton_ads.html#robo465">TtkButton/Invoke</a></li>
 </ul>
-<li>1.8.18. <a href="./tcl-tk-ada-widgets-ttkcombobox_ads.html#robo47">Widgets/TtkComboBox</a></li>
+<li>1.8.17. <a href="./tcl-tk-ada-widgets-ttkentry-ttkcombobox_ads.html#robo48">Widgets/TtkComboBox</a></li>
 <ul>
-<li>1.8.18.1. <a href="./tcl-tk-ada-widgets-ttkcombobox_ads.html#robo94">TtkComboBox/Ttk_ComboBox</a></li>
-<li>1.8.18.2. <a href="./tcl-tk-ada-widgets-ttkcombobox_ads.html#robo388">TtkComboBox/Create</a></li>
+<li>1.8.17.1. <a href="./tcl-tk-ada-widgets-ttkentry-ttkcombobox_ads.html#robo94">TtkComboBox/Ttk_ComboBox</a></li>
+<li>1.8.17.2. <a href="./tcl-tk-ada-widgets-ttkentry-ttkcombobox_ads.html#robo468">TtkComboBox/Create (function)</a></li>
+<li>1.8.17.3. <a href="./tcl-tk-ada-widgets-ttkentry-ttkcombobox_ads.html#robo469">TtkComboBox/Create (procedure)</a></li>
+<li>1.8.17.4. <a href="./tcl-tk-ada-widgets-ttkentry-ttkcombobox_ads.html#robo470">TtkComboBox/Current</a></li>
+<li>1.8.17.5. <a href="./tcl-tk-ada-widgets-ttkentry-ttkcombobox_ads.html#robo471">TtkComboBox/Current (function)</a></li>
+<li>1.8.17.6. <a href="./tcl-tk-ada-widgets-ttkentry-ttkcombobox_ads.html#robo472">TtkComboBox/Set</a></li>
 </ul>
-<li>1.8.19. <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo48">Widgets/TtkEntry</a></li>
+<li>1.8.18. <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo49">Widgets/TtkEntry</a></li>
 <ul>
-<li>1.8.19.1. <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo95">TtkEntry/Ttk_Entry</a></li>
-<li>1.8.19.2. <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo389">TtkEntry/Create</a></li>
-<li>1.8.19.3. <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo390">TtkEntry/Delete</a></li>
-<li>1.8.19.4. <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo391">TtkEntry/Get</a></li>
-<li>1.8.19.5. <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo392">TtkEntry/Insert</a></li>
-</ul>
-<li>1.8.20. <a href="./tcl-tk-ada-widgets-ttkframe_ads.html#robo49">Widgets/TtkFrame</a></li>
+<li>1.8.18.1. <a href="./tcl-tk-ada-widgets-ttkentry-ttkspinbox_ads.html#robo31">TtkEntry/TtkSpinBox</a></li>
 <ul>
-<li>1.8.20.1. <a href="./tcl-tk-ada-widgets-ttkframe_ads.html#robo96">TtkFrame/Ttk_Frame</a></li>
-<li>1.8.20.2. <a href="./tcl-tk-ada-widgets-ttkframe_ads.html#robo393">TtkFrame/Create</a></li>
+<li>1.8.18.1.1. <a href="./tcl-tk-ada-widgets-ttkentry-ttkspinbox_ads.html#robo107">TtkSpinBox/Ttk_SpinBox</a></li>
+<li>1.8.18.1.2. <a href="./tcl-tk-ada-widgets-ttkentry-ttkspinbox_ads.html#robo527">TtkSpinBox/Create (function)</a></li>
+<li>1.8.18.1.3. <a href="./tcl-tk-ada-widgets-ttkentry-ttkspinbox_ads.html#robo528">TtkSpinBox/Create (procedure)</a></li>
 </ul>
-<li>1.8.21. <a href="./tcl-tk-ada-widgets-ttklabel_ads.html#robo50">Widgets/TtkLabel</a></li>
+<li>1.8.18.2. <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo95">TtkEntry/Ttk_Entry</a></li>
+<li>1.8.18.3. <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo473">TtkEntry/BBox</a></li>
+<li>1.8.18.4. <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo474">TtkEntry/Create (function)</a></li>
+<li>1.8.18.5. <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo475">TtkEntry/Create (procedure)</a></li>
+<li>1.8.18.6. <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo476">TtkEntry/Delete</a></li>
+<li>1.8.18.7. <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo477">TtkEntry/Get</a></li>
+<li>1.8.18.8. <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo478">TtkEntry/ICursor</a></li>
+<li>1.8.18.9. <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo479">TtkEntry/Index</a></li>
+<li>1.8.18.10. <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo480">TtkEntry/Insert</a></li>
+<li>1.8.18.11. <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo481">TtkEntry/Selection_Clear</a></li>
+<li>1.8.18.12. <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo482">TtkEntry/Selection_Present</a></li>
+<li>1.8.18.13. <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo483">TtkEntry/Selection_Range</a></li>
+<li>1.8.18.14. <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo484">TtkEntry/Validate</a></li>
+<li>1.8.18.15. <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo485">TtkEntry/XView (function)</a></li>
+<li>1.8.18.16. <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo486">TtkEntry/XView (procedure)</a></li>
+<li>1.8.18.17. <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo487">TtkEntry/Xview_Move_To</a></li>
+<li>1.8.18.18. <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo488">TtkEntry/Xview_Scroll</a></li>
+</ul>
+<li>1.8.19. <a href="./tcl-tk-ada-widgets-ttkframe_ads.html#robo50">Widgets/TtkFrame</a></li>
 <ul>
-<li>1.8.21.1. <a href="./tcl-tk-ada-widgets-ttklabel_ads.html#robo97">TtkLabel/Ttk_Label</a></li>
-<li>1.8.21.2. <a href="./tcl-tk-ada-widgets-ttklabel_ads.html#robo394">TtkLabel/Create</a></li>
+<li>1.8.19.1. <a href="./tcl-tk-ada-widgets-ttkframe_ads.html#robo96">TtkFrame/Ttk_Frame</a></li>
+<li>1.8.19.2. <a href="./tcl-tk-ada-widgets-ttkframe_ads.html#robo489">TtkFrame/Create (function)</a></li>
+<li>1.8.19.3. <a href="./tcl-tk-ada-widgets-ttkframe_ads.html#robo490">TtkFrame/Create (procedure)</a></li>
 </ul>
-<li>1.8.22. <a href="./tcl-tk-ada-widgets-ttklabelframe_ads.html#robo51">Widgets/TtkLabelFrame</a></li>
+<li>1.8.20. <a href="./tcl-tk-ada-widgets-ttklabel_ads.html#robo51">Widgets/TtkLabel</a></li>
 <ul>
-<li>1.8.22.1. <a href="./tcl-tk-ada-widgets-ttklabelframe_ads.html#robo98">TtkLabelFrame/Ttk_LabelFrame</a></li>
-<li>1.8.22.2. <a href="./tcl-tk-ada-widgets-ttklabelframe_ads.html#robo395">TtkLabelFrame/Create</a></li>
+<li>1.8.20.1. <a href="./tcl-tk-ada-widgets-ttklabel_ads.html#robo97">TtkLabel/Ttk_Label</a></li>
+<li>1.8.20.2. <a href="./tcl-tk-ada-widgets-ttklabel_ads.html#robo491">TtkLabel/Create (function)</a></li>
+<li>1.8.20.3. <a href="./tcl-tk-ada-widgets-ttklabel_ads.html#robo492">TtkLabel/Create (procedure)</a></li>
 </ul>
-<li>1.8.23. <a href="./tcl-tk-ada-widgets-ttkmenubutton_ads.html#robo52">Widgets/TtkMenuButton</a></li>
+<li>1.8.21. <a href="./tcl-tk-ada-widgets-ttklabelframe_ads.html#robo52">Widgets/TtkLabelFrame</a></li>
 <ul>
-<li>1.8.23.1. <a href="./tcl-tk-ada-widgets-ttkmenubutton_ads.html#robo99">TtkMenuButton/Ttk_MenuButton</a></li>
-<li>1.8.23.2. <a href="./tcl-tk-ada-widgets-ttkmenubutton_ads.html#robo396">TtkMenuButton/Create</a></li>
+<li>1.8.21.1. <a href="./tcl-tk-ada-widgets-ttklabelframe_ads.html#robo98">TtkLabelFrame/Ttk_LabelFrame</a></li>
+<li>1.8.21.2. <a href="./tcl-tk-ada-widgets-ttklabelframe_ads.html#robo493">TtkLabelFrame/Create (function)</a></li>
+<li>1.8.21.3. <a href="./tcl-tk-ada-widgets-ttklabelframe_ads.html#robo494">TtkLabelFrame/Create (procedure)</a></li>
 </ul>
-<li>1.8.24. <a href="./tcl-tk-ada-widgets-ttknotebook_ads.html#robo53">Widgets/TtkNotebook</a></li>
+<li>1.8.22. <a href="./tcl-tk-ada-widgets-ttkmenubutton_ads.html#robo53">Widgets/TtkMenuButton</a></li>
 <ul>
-<li>1.8.24.1. <a href="./tcl-tk-ada-widgets-ttknotebook_ads.html#robo100">TtkNotebook/Ttk_Notebook</a></li>
-<li>1.8.24.2. <a href="./tcl-tk-ada-widgets-ttknotebook_ads.html#robo397">TtkNotebook/Add</a></li>
-<li>1.8.24.3. <a href="./tcl-tk-ada-widgets-ttknotebook_ads.html#robo398">TtkNotebook/Create</a></li>
-<li>1.8.24.4. <a href="./tcl-tk-ada-widgets-ttknotebook_ads.html#robo399">TtkNotebook/Get_Selected</a></li>
-<li>1.8.24.5. <a href="./tcl-tk-ada-widgets-ttknotebook_ads.html#robo400">TtkNotebook/Hide</a></li>
-<li>1.8.24.6. <a href="./tcl-tk-ada-widgets-ttknotebook_ads.html#robo401">TtkNotebook/Notebook_Select</a></li>
+<li>1.8.22.1. <a href="./tcl-tk-ada-widgets-ttkmenubutton_ads.html#robo99">TtkMenuButton/Ttk_MenuButton</a></li>
+<li>1.8.22.2. <a href="./tcl-tk-ada-widgets-ttkmenubutton_ads.html#robo495">TtkMenuButton/Create (function)</a></li>
+<li>1.8.22.3. <a href="./tcl-tk-ada-widgets-ttkmenubutton_ads.html#robo496">TtkMenuButton/Create (procedure)</a></li>
 </ul>
-<li>1.8.25. <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo54">Widgets/TtkPanedWindow</a></li>
+<li>1.8.23. <a href="./tcl-tk-ada-widgets-ttknotebook_ads.html#robo54">Widgets/TtkNotebook</a></li>
 <ul>
-<li>1.8.25.1. <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo101">TtkPanedWindow/Ttk_PanedWindow</a></li>
-<li>1.8.25.2. <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo402">TtkPanedWindow/Add</a></li>
-<li>1.8.25.3. <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo403">TtkPanedWindow/Create</a></li>
-<li>1.8.25.4. <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo404">TtkPanedWindow/Forget</a></li>
-<li>1.8.25.5. <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo405">TtkPanedWindow/Insert</a></li>
-<li>1.8.25.6. <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo406">TtkPanedWindow/Panes</a></li>
+<li>1.8.23.1. <a href="./tcl-tk-ada-widgets-ttknotebook_ads.html#robo100">TtkNotebook/Ttk_Notebook</a></li>
+<li>1.8.23.2. <a href="./tcl-tk-ada-widgets-ttknotebook_ads.html#robo497">TtkNotebook/Add</a></li>
+<li>1.8.23.3. <a href="./tcl-tk-ada-widgets-ttknotebook_ads.html#robo498">TtkNotebook/Create (function)</a></li>
+<li>1.8.23.4. <a href="./tcl-tk-ada-widgets-ttknotebook_ads.html#robo499">TtkNotebook/Create (procedure)</a></li>
+<li>1.8.23.5. <a href="./tcl-tk-ada-widgets-ttknotebook_ads.html#robo500">TtkNotebook/Forget</a></li>
+<li>1.8.23.6. <a href="./tcl-tk-ada-widgets-ttknotebook_ads.html#robo501">TtkNotebook/Get_Selected</a></li>
+<li>1.8.23.7. <a href="./tcl-tk-ada-widgets-ttknotebook_ads.html#robo502">TtkNotebook/Hide</a></li>
+<li>1.8.23.8. <a href="./tcl-tk-ada-widgets-ttknotebook_ads.html#robo503">TtkNotebook/Identify_Element</a></li>
+<li>1.8.23.9. <a href="./tcl-tk-ada-widgets-ttknotebook_ads.html#robo504">TtkNotebook/Identify_Tab</a></li>
+<li>1.8.23.10. <a href="./tcl-tk-ada-widgets-ttknotebook_ads.html#robo505">TtkNotebook/Index</a></li>
+<li>1.8.23.11. <a href="./tcl-tk-ada-widgets-ttknotebook_ads.html#robo506">TtkNotebook/Notebook_Select</a></li>
 </ul>
-<li>1.8.26. <a href="./tcl-tk-ada-widgets-ttkprogressbar_ads.html#robo55">Widgets/TtkProgressBar</a></li>
+<li>1.8.24. <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo55">Widgets/TtkPanedWindow</a></li>
 <ul>
-<li>1.8.26.1. <a href="./tcl-tk-ada-widgets-ttkprogressbar_ads.html#robo102">TtkProgressBar/Ttk_ProgressBar</a></li>
-<li>1.8.26.2. <a href="./tcl-tk-ada-widgets-ttkprogressbar_ads.html#robo407">TtkProgressBar/Create</a></li>
-<li>1.8.26.3. <a href="./tcl-tk-ada-widgets-ttkprogressbar_ads.html#robo408">TtkProgressBar/Step</a></li>
+<li>1.8.24.1. <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo101">TtkPanedWindow/Ttk_PanedWindow</a></li>
+<li>1.8.24.2. <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo507">TtkPanedWindow/Add</a></li>
+<li>1.8.24.3. <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo508">TtkPanedWindow/Create (function)</a></li>
+<li>1.8.24.4. <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo509">TtkPanedWindow/Create (procedure)</a></li>
+<li>1.8.24.5. <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo510">TtkPanedWindow/Forget</a></li>
+<li>1.8.24.6. <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo511">TtkPanedWindow/Insert</a></li>
+<li>1.8.24.7. <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo512">TtkPanedWindow/Panes</a></li>
 </ul>
-<li>1.8.27. <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo56">Widgets/TtkScale</a></li>
+<li>1.8.25. <a href="./tcl-tk-ada-widgets-ttkprogressbar_ads.html#robo56">Widgets/TtkProgressBar</a></li>
 <ul>
-<li>1.8.27.1. <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo104">TtkScale/Ttk_Scale</a></li>
-<li>1.8.27.2. <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo410">TtkScale/Create</a></li>
+<li>1.8.25.1. <a href="./tcl-tk-ada-widgets-ttkprogressbar_ads.html#robo102">TtkProgressBar/Ttk_ProgressBar</a></li>
+<li>1.8.25.2. <a href="./tcl-tk-ada-widgets-ttkprogressbar_ads.html#robo513">TtkProgressBar/Create (function)</a></li>
+<li>1.8.25.3. <a href="./tcl-tk-ada-widgets-ttkprogressbar_ads.html#robo514">TtkProgressBar/Create (procedure)</a></li>
+<li>1.8.25.4. <a href="./tcl-tk-ada-widgets-ttkprogressbar_ads.html#robo515">TtkProgressBar/Step</a></li>
 </ul>
-<li>1.8.28. <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo57">Widgets/TtkScrollbar</a></li>
+<li>1.8.26. <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo57">Widgets/TtkScale</a></li>
 <ul>
-<li>1.8.28.1. <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo105">TtkScrollbar/Ttk_Scrollbar</a></li>
-<li>1.8.28.2. <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo411">TtkScrollbar/Create</a></li>
+<li>1.8.26.1. <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo104">TtkScale/Ttk_Scale</a></li>
+<li>1.8.26.2. <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo518">TtkScale/Create (function)</a></li>
+<li>1.8.26.3. <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo519">TtkScale/Create (procedure)</a></li>
+<li>1.8.26.4. <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo520">TtkScale/Get (at pixel)</a></li>
+<li>1.8.26.5. <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo521">TtkScale/Get (current)</a></li>
+<li>1.8.26.6. <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo522">TtkScale/Set</a></li>
 </ul>
-<li>1.8.29. <a href="./tcl-tk-ada-widgets-ttkseparator_ads.html#robo58">Widgets/TtkSeparator</a></li>
+<li>1.8.27. <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo58">Widgets/TtkScrollbar</a></li>
 <ul>
-<li>1.8.29.1. <a href="./tcl-tk-ada-widgets-ttkseparator_ads.html#robo106">TtkSeparator/Ttk_Separator</a></li>
-<li>1.8.29.2. <a href="./tcl-tk-ada-widgets-ttkseparator_ads.html#robo412">TtkSeparator/Create</a></li>
+<li>1.8.27.1. <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo105">TtkScrollbar/Ttk_Scrollbar</a></li>
+<li>1.8.27.2. <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo523">TtkScrollbar/Create (function)</a></li>
+<li>1.8.27.3. <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo524">TtkScrollbar/Create (procedure)</a></li>
 </ul>
-<li>1.8.30. <a href="./tcl-tk-ada-widgets-ttkspinbox_ads.html#robo59">Widgets/TtkSpinBox</a></li>
+<li>1.8.28. <a href="./tcl-tk-ada-widgets-ttkseparator_ads.html#robo59">Widgets/TtkSeparator</a></li>
 <ul>
-<li>1.8.30.1. <a href="./tcl-tk-ada-widgets-ttkspinbox_ads.html#robo107">TtkSpinBox/Ttk_SpinBox</a></li>
-<li>1.8.30.2. <a href="./tcl-tk-ada-widgets-ttkspinbox_ads.html#robo413">TtkSpinBox/Create</a></li>
+<li>1.8.28.1. <a href="./tcl-tk-ada-widgets-ttkseparator_ads.html#robo106">TtkSeparator/Ttk_Separator</a></li>
+<li>1.8.28.2. <a href="./tcl-tk-ada-widgets-ttkseparator_ads.html#robo525">TtkSeparator/Create (function)</a></li>
+<li>1.8.28.3. <a href="./tcl-tk-ada-widgets-ttkseparator_ads.html#robo526">TtkSeparator/Create (procedure)</a></li>
 </ul>
-<li>1.8.31. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo60">Widgets/TtkTreeView</a></li>
+<li>1.8.29. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo60">Widgets/TtkTreeView</a></li>
 <ul>
-<li>1.8.31.1. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo108">TtkTreeView/Ttk_Tree_View</a></li>
-<li>1.8.31.2. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo425">TtkTreeView/Children</a></li>
-<li>1.8.31.3. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo426">TtkTreeView/Column (function)</a></li>
-<li>1.8.31.4. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo427">TtkTreeView/Column (procedure)</a></li>
-<li>1.8.31.5. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo428">TtkTreeView/Create</a></li>
-<li>1.8.31.6. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo429">TtkTreeView/Delete</a></li>
-<li>1.8.31.7. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo430">TtkTreeView/Detach</a></li>
-<li>1.8.31.8. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo431">TtkTreeView/Exists</a></li>
-<li>1.8.31.9. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo432">TtkTreeView/Focus (function)</a></li>
-<li>1.8.31.10. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo433">TtkTreeView/Focus (procedure)</a></li>
-<li>1.8.31.11. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo434">TtkTreeView/Heading (function)</a></li>
-<li>1.8.31.12. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo435">TtkTreeView/Heading (procedure)</a></li>
-<li>1.8.31.13. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo436">TtkTreeView/Index</a></li>
-<li>1.8.31.14. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo437">TtkTreeView/Insert</a></li>
-<li>1.8.31.15. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo438">TtkTreeView/Item (function)</a></li>
-<li>1.8.31.16. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo439">TtkTreeView/Item (procedure)</a></li>
-<li>1.8.31.17. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo440">TtkTreeView/Move</a></li>
-<li>1.8.31.18. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo441">TtkTreeView/Next</a></li>
-<li>1.8.31.19. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo442">TtkTreeView/Parent</a></li>
-<li>1.8.31.20. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo443">TtkTreeView/Prev</a></li>
-<li>1.8.31.21. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo444">TtkTreeView/Selection</a></li>
-<li>1.8.31.22. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo445">TtkTreeView/Selection_Add</a></li>
-<li>1.8.31.23. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo446">TtkTreeView/Selection_Remove</a></li>
-<li>1.8.31.24. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo447">TtkTreeView/Selection_Set</a></li>
-<li>1.8.31.25. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo448">TtkTreeView/Selection_Toggle</a></li>
+<li>1.8.29.1. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo108">TtkTreeView/Ttk_Tree_View</a></li>
+<li>1.8.29.2. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo540">TtkTreeView/Children</a></li>
+<li>1.8.29.3. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo541">TtkTreeView/Column (function)</a></li>
+<li>1.8.29.4. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo542">TtkTreeView/Column (procedure)</a></li>
+<li>1.8.29.5. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo543">TtkTreeView/Create (function)</a></li>
+<li>1.8.29.6. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo544">TtkTreeView/Create (procedure)</a></li>
+<li>1.8.29.7. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo545">TtkTreeView/Delete</a></li>
+<li>1.8.29.8. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo546">TtkTreeView/Detach</a></li>
+<li>1.8.29.9. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo547">TtkTreeView/Exists</a></li>
+<li>1.8.29.10. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo548">TtkTreeView/Focus (function)</a></li>
+<li>1.8.29.11. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo549">TtkTreeView/Focus (procedure)</a></li>
+<li>1.8.29.12. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo550">TtkTreeView/Heading (function)</a></li>
+<li>1.8.29.13. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo551">TtkTreeView/Heading (procedure)</a></li>
+<li>1.8.29.14. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo552">TtkTreeView/Index</a></li>
+<li>1.8.29.15. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo553">TtkTreeView/Insert (function)</a></li>
+<li>1.8.29.16. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo554">TtkTreeView/Insert (procedure)</a></li>
+<li>1.8.29.17. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo555">TtkTreeView/Item (function)</a></li>
+<li>1.8.29.18. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo556">TtkTreeView/Item (procedure)</a></li>
+<li>1.8.29.19. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo557">TtkTreeView/Move</a></li>
+<li>1.8.29.20. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo558">TtkTreeView/Next</a></li>
+<li>1.8.29.21. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo559">TtkTreeView/Parent</a></li>
+<li>1.8.29.22. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo560">TtkTreeView/Prev</a></li>
+<li>1.8.29.23. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo561">TtkTreeView/Selection</a></li>
+<li>1.8.29.24. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo562">TtkTreeView/Selection_Add</a></li>
+<li>1.8.29.25. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo563">TtkTreeView/Selection_Remove</a></li>
+<li>1.8.29.26. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo564">TtkTreeView/Selection_Set</a></li>
+<li>1.8.29.27. <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo565">TtkTreeView/Selection_Toggle</a></li>
 </ul>
-<li>1.8.32. <a href="./tcl-tk-ada-widgets-ttkwidget_ads.html#robo61">Widgets/TtkWidget</a></li>
+<li>1.8.30. <a href="./tcl-tk-ada-widgets-ttkwidget_ads.html#robo61">Widgets/TtkWidget</a></li>
 <ul>
-<li>1.8.32.1. <a href="./tcl-tk-ada-widgets-ttkwidget_ads.html#robo449">TtkWidget/InState</a></li>
-<li>1.8.32.2. <a href="./tcl-tk-ada-widgets-ttkwidget_ads.html#robo450">TtkWidget/State (function)</a></li>
-<li>1.8.32.3. <a href="./tcl-tk-ada-widgets-ttkwidget_ads.html#robo451">TtkWidget/State (procedure)</a></li>
+<li>1.8.30.1. <a href="./tcl-tk-ada-widgets-ttkwidget_ads.html#robo566">TtkWidget/InState</a></li>
+<li>1.8.30.2. <a href="./tcl-tk-ada-widgets-ttkwidget_ads.html#robo567">TtkWidget/State (function)</a></li>
+<li>1.8.30.3. <a href="./tcl-tk-ada-widgets-ttkwidget_ads.html#robo568">TtkWidget/State (procedure)</a></li>
 </ul>
-<li>1.8.33. <a href="./tcl-tk-ada-widgets_ads.html#robo109">Widgets/Tk_Widget</a></li>
-<li>1.8.34. <a href="./tcl-tk-ada-widgets_ads.html#robo452">Widgets/"&amp;"</a></li>
-<li>1.8.35. <a href="./tcl-tk-ada-widgets_ads.html#robo453">Widgets/Bind</a></li>
-<li>1.8.36. <a href="./tcl-tk-ada-widgets_ads.html#robo454">Widgets/cget</a></li>
-<li>1.8.37. <a href="./tcl-tk-ada-widgets_ads.html#robo455">Widgets/configure (function)</a></li>
-<li>1.8.38. <a href="./tcl-tk-ada-widgets_ads.html#robo456">Widgets/configure (procedure)</a></li>
-<li>1.8.39. <a href="./tcl-tk-ada-widgets_ads.html#robo457">Widgets/Create (function)</a></li>
-<li>1.8.40. <a href="./tcl-tk-ada-widgets_ads.html#robo458">Widgets/Create (procedure)</a></li>
-<li>1.8.41. <a href="./tcl-tk-ada-widgets_ads.html#robo459">Widgets/Destroy</a></li>
-<li>1.8.42. <a href="./tcl-tk-ada-widgets_ads.html#robo460">Widgets/Execute_Widget_Command</a></li>
-<li>1.8.43. <a href="./tcl-tk-ada-widgets_ads.html#robo461">Widgets/Focus (function)</a></li>
-<li>1.8.44. <a href="./tcl-tk-ada-widgets_ads.html#robo462">Widgets/Focus (procedure)</a></li>
-<li>1.8.45. <a href="./tcl-tk-ada-widgets_ads.html#robo463">Widgets/Get_Interp</a></li>
-<li>1.8.46. <a href="./tcl-tk-ada-widgets_ads.html#robo464">Widgets/Lower</a></li>
-<li>1.8.47. <a href="./tcl-tk-ada-widgets_ads.html#robo465">Widgets/Lower (below selected widget)</a></li>
-<li>1.8.48. <a href="./tcl-tk-ada-widgets_ads.html#robo466">Widgets/Raise</a></li>
-<li>1.8.49. <a href="./tcl-tk-ada-widgets_ads.html#robo467">Widgets/Raise (above selected widget)</a></li>
-<li>1.8.50. <a href="./tcl-tk-ada-widgets_ads.html#robo468">Widgets/Unbind (function)</a></li>
-<li>1.8.51. <a href="./tcl-tk-ada-widgets_ads.html#robo469">Widgets/Unbind (procedure)</a></li>
-<li>1.8.52. <a href="./tcl-tk-ada-widgets_ads.html#robo470">Widgets/Widget_Image</a></li>
+<li>1.8.31. <a href="./tcl-tk-ada-widgets_ads.html#robo109">Widgets/Tk_Widget</a></li>
+<li>1.8.32. <a href="./tcl-tk-ada-widgets_ads.html#robo569">Widgets/"&amp;"</a></li>
+<li>1.8.33. <a href="./tcl-tk-ada-widgets_ads.html#robo570">Widgets/Bind</a></li>
+<li>1.8.34. <a href="./tcl-tk-ada-widgets_ads.html#robo571">Widgets/cget</a></li>
+<li>1.8.35. <a href="./tcl-tk-ada-widgets_ads.html#robo572">Widgets/configure (function)</a></li>
+<li>1.8.36. <a href="./tcl-tk-ada-widgets_ads.html#robo573">Widgets/configure (procedure)</a></li>
+<li>1.8.37. <a href="./tcl-tk-ada-widgets_ads.html#robo574">Widgets/Create (function)</a></li>
+<li>1.8.38. <a href="./tcl-tk-ada-widgets_ads.html#robo575">Widgets/Create (procedure)</a></li>
+<li>1.8.39. <a href="./tcl-tk-ada-widgets_ads.html#robo576">Widgets/Destroy</a></li>
+<li>1.8.40. <a href="./tcl-tk-ada-widgets_ads.html#robo577">Widgets/Execute_Widget_Command</a></li>
+<li>1.8.41. <a href="./tcl-tk-ada-widgets_ads.html#robo578">Widgets/Focus (function)</a></li>
+<li>1.8.42. <a href="./tcl-tk-ada-widgets_ads.html#robo579">Widgets/Focus (procedure)</a></li>
+<li>1.8.43. <a href="./tcl-tk-ada-widgets_ads.html#robo580">Widgets/Get_Interp</a></li>
+<li>1.8.44. <a href="./tcl-tk-ada-widgets_ads.html#robo581">Widgets/Lower</a></li>
+<li>1.8.45. <a href="./tcl-tk-ada-widgets_ads.html#robo582">Widgets/Lower (below selected widget)</a></li>
+<li>1.8.46. <a href="./tcl-tk-ada-widgets_ads.html#robo583">Widgets/Raise</a></li>
+<li>1.8.47. <a href="./tcl-tk-ada-widgets_ads.html#robo584">Widgets/Raise (above selected widget)</a></li>
+<li>1.8.48. <a href="./tcl-tk-ada-widgets_ads.html#robo585">Widgets/Unbind (function)</a></li>
+<li>1.8.49. <a href="./tcl-tk-ada-widgets_ads.html#robo586">Widgets/Unbind (procedure)</a></li>
+<li>1.8.50. <a href="./tcl-tk-ada-widgets_ads.html#robo587">Widgets/Widget_Image</a></li>
 </ul>
-<li>1.9. <a href="./tcl-tk-ada-winfo_ads.html#robo23">TkAda/Winfo</a></li>
+<li>1.9. <a href="./tcl-tk-ada-winfo_ads.html#robo24">TkAda/Winfo</a></li>
 <ul>
-<li>1.9.1. <a href="./tcl-tk-ada-winfo_ads.html#robo471">Winfo/Winfo_Get</a></li>
+<li>1.9.1. <a href="./tcl-tk-ada-winfo_ads.html#robo588">Winfo/Winfo_Get</a></li>
 </ul>
-<li>1.10. <a href="./tcl-tk-ada-wm_ads.html#robo24">TkAda/Wm</a></li>
+<li>1.10. <a href="./tcl-tk-ada-wm_ads.html#robo25">TkAda/Wm</a></li>
 <ul>
-<li>1.10.1. <a href="./tcl-tk-ada-wm_ads.html#robo472">Wm/Wm_Set</a></li>
+<li>1.10.1. <a href="./tcl-tk-ada-wm_ads.html#robo589">Wm/Wm_Set</a></li>
 </ul>
-<li>1.11. <a href="#robo321">TkAda/After (default interpreter and execute script and function)</a></li>
-<li>1.12. <a href="#robo322">TkAda/After (default interpreter and execute script and procedure)</a></li>
-<li>1.13. <a href="#robo323">TkAda/After (default interpreter)</a></li>
-<li>1.14. <a href="#robo324">TkAda/After (selected interpreter and execute script and function)</a></li>
-<li>1.15. <a href="#robo325">TkAda/After (selected interpreter and execute script and procedure)</a></li>
-<li>1.16. <a href="#robo326">TkAda/After (selected interpreter)</a></li>
-<li>1.17. <a href="#robo327">TkAda/Cancel (default interpreter)</a></li>
-<li>1.18. <a href="#robo328">TkAda/Cancel (selected interpreter)</a></li>
-<li>1.19. <a href="#robo329">TkAda/Get_Context</a></li>
-<li>1.20. <a href="#robo330">TkAda/Idle (default interpreter and function)</a></li>
-<li>1.21. <a href="#robo331">TkAda/Idle (default interpreter and procedure)</a></li>
-<li>1.22. <a href="#robo332">TkAda/Idle (selected interpreter and function)</a></li>
-<li>1.23. <a href="#robo333">TkAda/Idle (selected interpreter and procedure)</a></li>
-<li>1.24. <a href="#robo334">TkAda/Info (default interpreter)</a></li>
-<li>1.25. <a href="#robo335">TkAda/Info (selected interpreter)</a></li>
-<li>1.26. <a href="#robo336">TkAda/Set_Context</a></li>
-<li>1.27. <a href="#robo337">TkAda/Set_Trace</a></li>
+<li>1.11. <a href="#robo399">TkAda/After (default interpreter and execute script and function)</a></li>
+<li>1.12. <a href="#robo400">TkAda/After (default interpreter and execute script and procedure)</a></li>
+<li>1.13. <a href="#robo401">TkAda/After (default interpreter)</a></li>
+<li>1.14. <a href="#robo402">TkAda/After (selected interpreter and execute script and function)</a></li>
+<li>1.15. <a href="#robo403">TkAda/After (selected interpreter and execute script and procedure)</a></li>
+<li>1.16. <a href="#robo404">TkAda/After (selected interpreter)</a></li>
+<li>1.17. <a href="#robo405">TkAda/Cancel (default interpreter)</a></li>
+<li>1.18. <a href="#robo406">TkAda/Cancel (selected interpreter)</a></li>
+<li>1.19. <a href="#robo407">TkAda/Get_Context</a></li>
+<li>1.20. <a href="#robo408">TkAda/Idle (default interpreter and function)</a></li>
+<li>1.21. <a href="#robo409">TkAda/Idle (default interpreter and procedure)</a></li>
+<li>1.22. <a href="#robo410">TkAda/Idle (selected interpreter and function)</a></li>
+<li>1.23. <a href="#robo411">TkAda/Idle (selected interpreter and procedure)</a></li>
+<li>1.24. <a href="#robo412">TkAda/Info (default interpreter)</a></li>
+<li>1.25. <a href="#robo413">TkAda/Info (selected interpreter)</a></li>
+<li>1.26. <a href="#robo414">TkAda/Set_Context</a></li>
+<li>1.27. <a href="#robo415">TkAda/Set_Trace</a></li>
 </ul>
 </ul>
 <hr />
 <a name="Tk2fTkAda"></a>
-<a name="robo14"></a><h2>Tk/TkAda [ Packages ]</h2>
+<a name="robo15"></a><h2>Tk/TkAda [ Packages ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk_ads.html#robo12">Tk</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -567,9 +682,9 @@
 
 <hr />
 <a name="TkAda2fAfter2028default20interpreter20and20execute20script20and20function29"></a>
-<a name="robo321"></a><h2>TkAda/After (default interpreter and execute script and function) [ Subprograms ]</h2>
+<a name="robo399"></a><h2>TkAda/After (default interpreter and execute script and function) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo14">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo15">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Arranges for the <a href="../tcl_ads.html#robo9">Tcl</a> Script to be executed after Ms milliseconds
  in the "contextual" interpreter.
@@ -587,9 +702,9 @@
 
 <hr />
 <a name="TkAda2fAfter2028default20interpreter20and20execute20script20and20procedure29"></a>
-<a name="robo322"></a><h2>TkAda/After (default interpreter and execute script and procedure) [ Subprograms ]</h2>
+<a name="robo400"></a><h2>TkAda/After (default interpreter and execute script and procedure) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo14">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo15">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Arranges for the <a href="../tcl_ads.html#robo9">Tcl</a> Script to be executed after Ms milliseconds
  in the "contextual" interpreter.
@@ -604,9 +719,9 @@
 
 <hr />
 <a name="TkAda2fAfter2028default20interpreter29"></a>
-<a name="robo323"></a><h2>TkAda/After (default interpreter) [ Subprograms ]</h2>
+<a name="robo401"></a><h2>TkAda/After (default interpreter) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo14">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo15">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Sleeps for Ms milliseconds in the "contextual" interpreter.
 </pre>
@@ -619,9 +734,9 @@
 
 <hr />
 <a name="TkAda2fAfter2028selected20interpreter20and20execute20script20and20function29"></a>
-<a name="robo324"></a><h2>TkAda/After (selected interpreter and execute script and function) [ Subprograms ]</h2>
+<a name="robo402"></a><h2>TkAda/After (selected interpreter and execute script and function) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo14">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo15">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Arranges for the <a href="../tcl_ads.html#robo9">Tcl</a> Script to be executed after Ms milliseconds
  in the specified interpreter.
@@ -641,9 +756,9 @@
 
 <hr />
 <a name="TkAda2fAfter2028selected20interpreter20and20execute20script20and20procedure29"></a>
-<a name="robo325"></a><h2>TkAda/After (selected interpreter and execute script and procedure) [ Subprograms ]</h2>
+<a name="robo403"></a><h2>TkAda/After (selected interpreter and execute script and procedure) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo14">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo15">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Arranges for the <a href="../tcl_ads.html#robo9">Tcl</a> Script to be executed after Ms milliseconds
  in the specified interpreter.
@@ -659,9 +774,9 @@
 
 <hr />
 <a name="TkAda2fAfter2028selected20interpreter29"></a>
-<a name="robo326"></a><h2>TkAda/After (selected interpreter) [ Subprograms ]</h2>
+<a name="robo404"></a><h2>TkAda/After (selected interpreter) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo14">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo15">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Sleeps for Ms milliseconds in the specified interpreter.
 </pre>
@@ -675,9 +790,9 @@
 
 <hr />
 <a name="TkAda2fCancel2028default20interpreter29"></a>
-<a name="robo327"></a><h2>TkAda/Cancel (default interpreter) [ Subprograms ]</h2>
+<a name="robo405"></a><h2>TkAda/Cancel (default interpreter) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo14">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo15">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Cancels the execution of a delayed command in the "contextual"
  interpreter.
@@ -691,9 +806,9 @@
 
 <hr />
 <a name="TkAda2fCancel2028selected20interpreter29"></a>
-<a name="robo328"></a><h2>TkAda/Cancel (selected interpreter) [ Subprograms ]</h2>
+<a name="robo406"></a><h2>TkAda/Cancel (selected interpreter) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo14">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo15">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Cancels the execution of a delayed command in the specified
  interpreter.
@@ -708,9 +823,9 @@
 
 <hr />
 <a name="TkAda2fGet5fContext"></a>
-<a name="robo329"></a><h2>TkAda/Get_Context [ Subprograms ]</h2>
+<a name="robo407"></a><h2>TkAda/Get_Context [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo14">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo15">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Gets the current interpreter context.
 </pre>
@@ -718,14 +833,14 @@
 <pre class="source">   <span class="keyword">function</span> <strong>Get_Context</strong> <span class="keyword">return</span> Tcl_Interp<span class="sign">;</span>
 </pre>
 <p class="item_name">RESULT</p>
-<pre> <a href="./tcl-tk-ada-busy_ads.html#robo342">Current</a> <a href="../tcl_ads.html#robo9">Tcl</a> interpreter
+<pre> <a href="./tcl-tk-ada-busy_ads.html#robo420">Current</a> <a href="../tcl_ads.html#robo9">Tcl</a> interpreter
 </pre>
 
 <hr />
 <a name="TkAda2fIdle2028default20interpreter20and20function29"></a>
-<a name="robo330"></a><h2>TkAda/Idle (default interpreter and function) [ Subprograms ]</h2>
+<a name="robo408"></a><h2>TkAda/Idle (default interpreter and function) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo14">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo15">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Arranges for the <a href="../tcl_ads.html#robo9">Tcl</a> Script to be executed later as an idle
  handler in the "contextual" interpreter.
@@ -742,9 +857,9 @@
 
 <hr />
 <a name="TkAda2fIdle2028default20interpreter20and20procedure29"></a>
-<a name="robo331"></a><h2>TkAda/Idle (default interpreter and procedure) [ Subprograms ]</h2>
+<a name="robo409"></a><h2>TkAda/Idle (default interpreter and procedure) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo14">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo15">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Arranges for the <a href="../tcl_ads.html#robo9">Tcl</a> Script to be executed later as an idle
  handler in the "contextual" interpreter.
@@ -758,9 +873,9 @@
 
 <hr />
 <a name="TkAda2fIdle2028selected20interpreter20and20function29"></a>
-<a name="robo332"></a><h2>TkAda/Idle (selected interpreter and function) [ Subprograms ]</h2>
+<a name="robo410"></a><h2>TkAda/Idle (selected interpreter and function) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo14">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo15">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Arranges for the <a href="../tcl_ads.html#robo9">Tcl</a> Script to be executed later as an idle
  handler in the specified interpreter.
@@ -778,9 +893,9 @@
 
 <hr />
 <a name="TkAda2fIdle2028selected20interpreter20and20procedure29"></a>
-<a name="robo333"></a><h2>TkAda/Idle (selected interpreter and procedure) [ Subprograms ]</h2>
+<a name="robo411"></a><h2>TkAda/Idle (selected interpreter and procedure) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo14">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo15">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Arranges for the <a href="../tcl_ads.html#robo9">Tcl</a> Script to be executed later as an idle
  handler in the specified interpreter.
@@ -795,11 +910,11 @@
 
 <hr />
 <a name="TkAda2fInfo2028default20interpreter29"></a>
-<a name="robo334"></a><h2>TkAda/Info (default interpreter) [ Subprograms ]</h2>
+<a name="robo412"></a><h2>TkAda/Info (default interpreter) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo14">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo15">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo308">Get</a> information about existing event handlers in the
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo349">Get</a> information about existing event handlers in the
  "contextual" interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
@@ -815,11 +930,11 @@
 
 <hr />
 <a name="TkAda2fInfo2028selected20interpreter29"></a>
-<a name="robo335"></a><h2>TkAda/Info (selected interpreter) [ Subprograms ]</h2>
+<a name="robo413"></a><h2>TkAda/Info (selected interpreter) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo14">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo15">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo308">Get</a> information about existing event handlers in the
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo349">Get</a> information about existing event handlers in the
  specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
@@ -836,9 +951,9 @@
 
 <hr />
 <a name="TkAda2fSet5fContext"></a>
-<a name="robo336"></a><h2>TkAda/Set_Context [ Subprograms ]</h2>
+<a name="robo414"></a><h2>TkAda/Set_Context [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo14">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo15">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Sets the interpreter context for all <a href="./tcl-tk_ads.html#robo12">Tk</a> calls which do not include
  either an Interp or Widget parameter.
@@ -852,9 +967,9 @@
 
 <hr />
 <a name="TkAda2fSet5fTrace"></a>
-<a name="robo337"></a><h2>TkAda/Set_Trace [ Subprograms ]</h2>
+<a name="robo415"></a><h2>TkAda/Set_Trace [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo14">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo15">TkAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Turn on tracing of <a href="../tcl_ads.html#robo9">Tcl</a>/<a href="./tcl-tk_ads.html#robo12">Tk</a> command execution.
 </pre>
@@ -867,7 +982,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Thu Apr 30 2020 07:22:01
+<p>Generated from ./src/tk/tcl-tk-ada.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Sun May 31 2020 09:30:57
 </p>
 </div> <!-- footer -->
 </body>

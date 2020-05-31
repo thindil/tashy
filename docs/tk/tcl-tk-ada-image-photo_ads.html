@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.4 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.5 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -28,30 +28,30 @@
 <li>1. <a href="#robo6">Image/Photo</a></li>
 <ul>
 <li>1.1. <a href="#robo84">Photo/Tk_Photo</a></li>
-<li>1.2. <a href="#robo273">Photo/Blank</a></li>
-<li>1.3. <a href="#robo274">Photo/Copy</a></li>
-<li>1.4. <a href="#robo275">Photo/Create (function)</a></li>
-<li>1.5. <a href="#robo276">Photo/Create (procedure)</a></li>
-<li>1.6. <a href="#robo277">Photo/Data</a></li>
-<li>1.7. <a href="#robo278">Photo/Get</a></li>
-<li>1.8. <a href="#robo279">Photo/Put</a></li>
-<li>1.9. <a href="#robo280">Photo/Read</a></li>
-<li>1.10. <a href="#robo281">Photo/Redither</a></li>
-<li>1.11. <a href="#robo282">Photo/Transparency_Get</a></li>
-<li>1.12. <a href="#robo283">Photo/Transparency_Set</a></li>
-<li>1.13. <a href="#robo284">Photo/Write</a></li>
+<li>1.2. <a href="#robo276">Photo/Blank</a></li>
+<li>1.3. <a href="#robo277">Photo/Copy</a></li>
+<li>1.4. <a href="#robo278">Photo/Create (function)</a></li>
+<li>1.5. <a href="#robo279">Photo/Create (procedure)</a></li>
+<li>1.6. <a href="#robo280">Photo/Data</a></li>
+<li>1.7. <a href="#robo281">Photo/Get</a></li>
+<li>1.8. <a href="#robo282">Photo/Put</a></li>
+<li>1.9. <a href="#robo283">Photo/Read</a></li>
+<li>1.10. <a href="#robo284">Photo/Redither</a></li>
+<li>1.11. <a href="#robo285">Photo/Transparency_Get</a></li>
+<li>1.12. <a href="#robo286">Photo/Transparency_Set</a></li>
+<li>1.13. <a href="#robo287">Photo/Write</a></li>
 </ul>
 </ul>
 <hr />
 <a name="Image2fPhoto"></a>
 <a name="robo6"></a><h2>Image/Photo [ Packages ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada-image_ads.html#robo16">Image</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada-image_ads.html#robo17">Image</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo12">Tk</a> image of type photo
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo9">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo12">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo10">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-image_ads.html#robo16">Image</a><span class="sign">.</span><strong>Photo</strong> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo9">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo12">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo10">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-image_ads.html#robo17">Image</a><span class="sign">.</span><strong>Photo</strong> <span class="keyword">is</span>
 </pre>
 
 <hr />
@@ -61,7 +61,7 @@
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo6">Photo</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a>.
- Each of the derived widgets redefines the <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo403">Create</a> subprogram
+ Each of the derived widgets redefines the <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo288">Create</a> subprogram
  in order to create the correct type of widget.
 </pre>
 <p class="item_name">SOURCE</p>
@@ -70,22 +70,28 @@
 
 <hr />
 <a name="Photo2fBlank"></a>
-<a name="robo273"></a><h2>Photo/Blank [ Subprograms ]</h2>
+<a name="robo276"></a><h2>Photo/Blank [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo6">Photo</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> <strong>Blank</strong> the image, make it transparent
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Blank</strong><span class="sign">(</span><a href="./tcl-tk-ada-image_ads.html#robo16">Image</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo84">Tk_Photo</a><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Blank</strong><span class="sign">(</span><a href="./tcl-tk-ada-image_ads.html#robo17">Image</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo84">Tk_Photo</a><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> <a href="./tcl-tk-ada-image_ads.html#robo16">Image</a> - <a href="#robo84">Tk_Photo</a> to blank
+<pre> <a href="./tcl-tk-ada-image_ads.html#robo17">Image</a> - <a href="#robo84">Tk_Photo</a> to blank
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.2 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="Photo2fCopy"></a>
-<a name="robo274"></a><h2>Photo/Copy [ Subprograms ]</h2>
+<a name="robo277"></a><h2>Photo/Copy [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo6">Photo</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -100,17 +106,23 @@
  Options - Aditional <a href="./tcl-tk_ads.html#robo12">Tk</a> options for copy command. Default value is
            empty
 </pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.1 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+</pre>
 
 <hr />
 <a name="Photo2fCreate2028function29"></a>
-<a name="robo275"></a><h2>Photo/Create (function) [ Subprograms ]</h2>
+<a name="robo278"></a><h2>Photo/Create (function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo6">Photo</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Creates a new <a href="#robo84">Tk_Photo</a> in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo403">Create</a>
+<pre class="source">   <span class="keyword">function</span> <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo288">Create</a>
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
       Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo84">Tk_Photo</a> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> <span class="sign">(</span>pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
@@ -126,17 +138,23 @@
 <p class="item_name">RESULT</p>
 <pre> Newly created <a href="#robo84">Tk_Photo</a>
 </pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.1 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+</pre>
 
 <hr />
 <a name="Photo2fCreate2028procedure29"></a>
-<a name="robo276"></a><h2>Photo/Create (procedure) [ Subprograms ]</h2>
+<a name="robo279"></a><h2>Photo/Create (procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo6">Photo</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Creates a new <a href="#robo84">Tk_Photo</a> in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo403">Create</a>
+<pre class="source">   <span class="keyword">procedure</span> <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo288">Create</a>
      <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo84">Tk_Photo</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
       Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> <span class="sign">(</span>pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
@@ -150,70 +168,94 @@
             the image will be created in the "contextual" interpreter.
             Default value is null.
 </pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.1 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+</pre>
 
 <hr />
 <a name="Photo2fData"></a>
-<a name="robo277"></a><h2>Photo/Data [ Subprograms ]</h2>
+<a name="robo280"></a><h2>Photo/Data [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo6">Photo</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo308">Get</a> the selected image data
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo349">Get</a> the selected image data
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Data</strong><span class="sign">(</span><a href="./tcl-tk-ada-image_ads.html#robo16">Image</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo84">Tk_Photo</a><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> <strong>Data</strong><span class="sign">(</span><a href="./tcl-tk-ada-image_ads.html#robo17">Image</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo84">Tk_Photo</a><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> <a href="./tcl-tk-ada-image_ads.html#robo16">Image</a>   - <a href="#robo84">Tk_Photo</a> which will be queried for the data
+<pre> <a href="./tcl-tk-ada-image_ads.html#robo17">Image</a>   - <a href="#robo84">Tk_Photo</a> which will be queried for the data
  Options - <a href="./tcl-tk_ads.html#robo12">Tk</a> options for data to query. Default value is empty
 </pre>
 <p class="item_name">RESULT</p>
-<pre> <a href="./tcl-tk-ada-image_ads.html#robo16">Image</a> data, all if options are empty or specified option data
+<pre> <a href="./tcl-tk-ada-image_ads.html#robo17">Image</a> data, all if options are empty or specified option data
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.2 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="Photo2fGet"></a>
-<a name="robo278"></a><h2>Photo/Get [ Subprograms ]</h2>
+<a name="robo281"></a><h2>Photo/Get [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo6">Photo</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> <strong>Get</strong> color of the selected pixel in the image
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Get</strong><span class="sign">(</span><a href="./tcl-tk-ada-image_ads.html#robo16">Image</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo84">Tk_Photo</a><span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+<pre class="source">   <span class="keyword">function</span> <strong>Get</strong><span class="sign">(</span><a href="./tcl-tk-ada-image_ads.html#robo17">Image</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo84">Tk_Photo</a><span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> <a href="./tcl-tk-ada-image_ads.html#robo16">Image</a> - <a href="#robo84">Tk_Photo</a> which will be queried for data
- X     - X coordinate of pixel to <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo312">get</a> color
- Y     - Y coordinate of pixel to <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo312">get</a> color
+<pre> <a href="./tcl-tk-ada-image_ads.html#robo17">Image</a> - <a href="#robo84">Tk_Photo</a> which will be queried for data
+ X     - X coordinate of pixel to get color
+ Y     - Y coordinate of pixel to get color
 </pre>
 <p class="item_name">RESULT</p>
 <pre> Three values of colors red, green, blue from 0 to 255
 </pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.2 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+</pre>
 
 <hr />
 <a name="Photo2fPut"></a>
-<a name="robo279"></a><h2>Photo/Put [ Subprograms ]</h2>
+<a name="robo282"></a><h2>Photo/Put [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo6">Photo</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo380">Set</a> pixels in the selected <a href="#robo84">Tk_Photo</a> to specified data
+<pre> <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo522">Set</a> pixels in the selected <a href="#robo84">Tk_Photo</a> to specified data
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Put</strong>
-     <span class="sign">(</span><a href="./tcl-tk-ada-image_ads.html#robo16">Image</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo84">Tk_Photo</a><span class="sign">;</span> <a href="#robo277">Data</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo277">Data</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+     <span class="sign">(</span><a href="./tcl-tk-ada-image_ads.html#robo17">Image</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo84">Tk_Photo</a><span class="sign">;</span> <a href="#robo280">Data</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo280">Data</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> <a href="./tcl-tk-ada-image_ads.html#robo16">Image</a>   - <a href="#robo84">Tk_Photo</a> which will be modified
- <a href="#robo277">Data</a>    - Proper data for selected image format which will be changed
+<pre> <a href="./tcl-tk-ada-image_ads.html#robo17">Image</a>   - <a href="#robo84">Tk_Photo</a> which will be modified
+ <a href="#robo280">Data</a>    - Proper data for selected image format which will be changed
  Options - Additional options: -format or -to with proper values.
            Default value is empty
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.3 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="Photo2fRead"></a>
-<a name="robo280"></a><h2>Photo/Read [ Subprograms ]</h2>
+<a name="robo283"></a><h2>Photo/Read [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo6">Photo</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -221,73 +263,97 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Read</strong>
-     <span class="sign">(</span><a href="./tcl-tk-ada-image_ads.html#robo16">Image</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo84">Tk_Photo</a><span class="sign">;</span> FileName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">with</span>
+     <span class="sign">(</span><a href="./tcl-tk-ada-image_ads.html#robo17">Image</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo84">Tk_Photo</a><span class="sign">;</span> FileName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> FileName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> <a href="./tcl-tk-ada-image_ads.html#robo16">Image</a>    - <a href="#robo84">Tk_Photo</a> in which data will be loaded
+<pre> <a href="./tcl-tk-ada-image_ads.html#robo17">Image</a>    - <a href="#robo84">Tk_Photo</a> in which data will be loaded
  FileName - Name of file which will be read
  Options  - Additional options for read data. Default value is empty
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.3 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="Photo2fRedither"></a>
-<a name="robo281"></a><h2>Photo/Redither [ Subprograms ]</h2>
+<a name="robo284"></a><h2>Photo/Redither [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo6">Photo</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Recalculate dithered image
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Redither</strong><span class="sign">(</span><a href="./tcl-tk-ada-image_ads.html#robo16">Image</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo84">Tk_Photo</a><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Redither</strong><span class="sign">(</span><a href="./tcl-tk-ada-image_ads.html#robo17">Image</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo84">Tk_Photo</a><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> <a href="./tcl-tk-ada-image_ads.html#robo16">Image</a> - <a href="#robo84">Tk_Photo</a> to recalculate
+<pre> <a href="./tcl-tk-ada-image_ads.html#robo17">Image</a> - <a href="#robo84">Tk_Photo</a> to recalculate
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.3 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="Photo2fTransparency5fGet"></a>
-<a name="robo282"></a><h2>Photo/Transparency_Get [ Subprograms ]</h2>
+<a name="robo285"></a><h2>Photo/Transparency_Get [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo6">Photo</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo308">Get</a> the selected pixel transparency in the selected image
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo349">Get</a> the selected pixel transparency in the selected image
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Transparency_Get</strong>
-     <span class="sign">(</span><a href="./tcl-tk-ada-image_ads.html#robo16">Image</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo84">Tk_Photo</a><span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+     <span class="sign">(</span><a href="./tcl-tk-ada-image_ads.html#robo17">Image</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo84">Tk_Photo</a><span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> <a href="./tcl-tk-ada-image_ads.html#robo16">Image</a> - <a href="#robo84">Tk_Photo</a> to query for transparency
+<pre> <a href="./tcl-tk-ada-image_ads.html#robo17">Image</a> - <a href="#robo84">Tk_Photo</a> to query for transparency
  X     - X coordinate of pixel to check
  Y     - Y coordinate of pixel to check
 </pre>
 <p class="item_name">RESULT</p>
 <pre> If pixel is transparent return true, otherwise false
 </pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.3 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+</pre>
 
 <hr />
 <a name="Photo2fTransparency5fSet"></a>
-<a name="robo283"></a><h2>Photo/Transparency_Set [ Subprograms ]</h2>
+<a name="robo286"></a><h2>Photo/Transparency_Set [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo6">Photo</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo380">Set</a> transparency for the selected pixel in the selected image
+<pre> <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo522">Set</a> transparency for the selected pixel in the selected image
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Transparency_Set</strong><span class="sign">(</span><a href="./tcl-tk-ada-image_ads.html#robo16">Image</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo84">Tk_Photo</a><span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Transparency_Set</strong><span class="sign">(</span><a href="./tcl-tk-ada-image_ads.html#robo17">Image</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo84">Tk_Photo</a><span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> <a href="./tcl-tk-ada-image_ads.html#robo16">Image</a> - <a href="#robo84">Tk_Photo</a> in which pixel transparency will be set
+<pre> <a href="./tcl-tk-ada-image_ads.html#robo17">Image</a> - <a href="#robo84">Tk_Photo</a> in which pixel transparency will be set
  X     - X coordinate of the pixel which transparency will be set
  Y     - Y coordinate of the pixel which transparency will be set
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.3 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="Photo2fWrite"></a>
-<a name="robo284"></a><h2>Photo/Write [ Subprograms ]</h2>
+<a name="robo287"></a><h2>Photo/Write [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo6">Photo</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -295,19 +361,25 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Write</strong>
-     <span class="sign">(</span><a href="./tcl-tk-ada-image_ads.html#robo16">Image</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo84">Tk_Photo</a><span class="sign">;</span> FileName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">with</span>
+     <span class="sign">(</span><a href="./tcl-tk-ada-image_ads.html#robo17">Image</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo84">Tk_Photo</a><span class="sign">;</span> FileName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> FileName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> <a href="./tcl-tk-ada-image_ads.html#robo16">Image</a>    - <a href="#robo84">Tk_Photo</a> to write to the file
+<pre> <a href="./tcl-tk-ada-image_ads.html#robo17">Image</a>    - <a href="#robo84">Tk_Photo</a> to write to the file
  FileName - Name of the file to which image will be written
  Options  - Additional options for writting image to file. Default
             value is empty
 </pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.3 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+</pre>
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-image-photo.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Thu Apr 30 2020 07:22:01
+<p>Generated from ./src/tk/tcl-tk-ada-image-photo.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Sun May 31 2020 09:30:57
 </p>
 </div> <!-- footer -->
 </body>
