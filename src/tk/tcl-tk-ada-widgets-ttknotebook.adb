@@ -70,6 +70,13 @@ package body Tcl.Tk.Ada.Widgets.TtkNotebook is
       return Tcl.Ada.Tcl_GetResult(Notebook.Interp);
    end Identify_Element;
 
+   function Identify_Tab
+     (Notebook: in Ttk_Notebook; X, Y: in String) return String is
+   begin
+      Execute_Widget_Command(Notebook, "identify tab", X & " " & Y);
+      return Tcl.Ada.Tcl_GetResult(Notebook.Interp);
+   end Identify_Tab;
+
    procedure Notebook_Select(Notebook: in Ttk_Notebook; TabId: in String) is
    begin
       Execute_Widget_Command(Notebook, "select", TabId);

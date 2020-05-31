@@ -140,6 +140,26 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       Pre => X /= "" and Y /= "";
       -- ****
 
+      -- ****f* TtkNotebook/Identify_Tab
+      -- FUNCTION
+      -- Get the index of the tab at the specific location
+      -- PARAMETERS
+      -- Notebook - Ttk_Notebook in which tabs will be queried
+      -- X        - X coordinate of the location to query
+      -- Y        - Y coordinate of the location to query
+      -- RESULT
+      -- Index of the tab at the specific location or {} if no tab is present
+      -- there
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Identify_Tab
+     (Notebook: in Ttk_Notebook; X, Y: in String) return String with
+      Pre => X /= "" and Y /= "";
+      -- ****
+
       -- ****f* TtkNotebook/Notebook_Select
       -- FUNCTION
       -- Set selected tab as a currently selected in the Ttk_Notebook
