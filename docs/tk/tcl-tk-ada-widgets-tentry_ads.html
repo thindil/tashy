@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.4 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.5 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -25,36 +25,64 @@
 <div id="content">
 <h3>TABLE OF CONTENTS</h3>
 <ul>
-<li>1. <a href="#robo42">Widgets/TEntry</a></li>
+<li>1. <a href="#robo43">Widgets/TEntry</a></li>
 <ul>
-<li>1.1. <a href="#robo88">TEntry/Tk_Entry</a></li>
-<li>1.2. <a href="#robo309">TEntry/Create (function)</a></li>
-<li>1.3. <a href="#robo310">TEntry/Create (procedure)</a></li>
-<li>1.4. <a href="#robo311">TEntry/Delete</a></li>
-<li>1.5. <a href="#robo312">TEntry/get</a></li>
-<li>1.6. <a href="#robo313">TEntry/Insert</a></li>
+<li>1.1. <a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo14">TEntry/SpinBox</a></li>
+<ul>
+<li>1.1.1. <a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo87">SpinBox/Tk_SpinBox</a></li>
+<li>1.1.2. <a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo301">SpinBox/Create (function)</a></li>
+<li>1.1.3. <a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo302">SpinBox/Create (procedure)</a></li>
+<li>1.1.4. <a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo303">SpinBox/Identify</a></li>
+<li>1.1.5. <a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo304">SpinBox/Invoke</a></li>
+<li>1.1.6. <a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo305">SpinBox/Selection_Element</a></li>
+<li>1.1.7. <a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo306">SpinBox/Selection_Element (procedure)</a></li>
+<li>1.1.8. <a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo307">SpinBox/Set (function)</a></li>
+<li>1.1.9. <a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo308">SpinBox/Set (procedure)</a></li>
+</ul>
+<li>1.2. <a href="#robo88">TEntry/Tk_Entry</a></li>
+<li>1.3. <a href="#robo310">TEntry/BBox</a></li>
+<li>1.4. <a href="#robo311">TEntry/Create (function)</a></li>
+<li>1.5. <a href="#robo312">TEntry/Create (procedure)</a></li>
+<li>1.6. <a href="#robo313">TEntry/Delete</a></li>
+<li>1.7. <a href="#robo314">TEntry/Entry_Index</a></li>
+<li>1.8. <a href="#robo315">TEntry/Get</a></li>
+<li>1.9. <a href="#robo316">TEntry/ICursor</a></li>
+<li>1.10. <a href="#robo317">TEntry/Insert</a></li>
+<li>1.11. <a href="#robo318">TEntry/Scan_DragTo</a></li>
+<li>1.12. <a href="#robo319">TEntry/Scan_Mark</a></li>
+<li>1.13. <a href="#robo320">TEntry/Selection_Adjust</a></li>
+<li>1.14. <a href="#robo321">TEntry/Selection_Clear</a></li>
+<li>1.15. <a href="#robo322">TEntry/Selection_From</a></li>
+<li>1.16. <a href="#robo323">TEntry/Selection_Present</a></li>
+<li>1.17. <a href="#robo324">TEntry/Selection_Range</a></li>
+<li>1.18. <a href="#robo325">TEntry/Selection_To</a></li>
+<li>1.19. <a href="#robo326">TEntry/Validate</a></li>
+<li>1.20. <a href="#robo327">TEntry/XView (function)</a></li>
+<li>1.21. <a href="#robo328">TEntry/XView (procedure)</a></li>
+<li>1.22. <a href="#robo329">TEntry/Xview_Move_To</a></li>
+<li>1.23. <a href="#robo330">TEntry/Xview_Scroll</a></li>
 </ul>
 </ul>
 <hr />
 <a name="Widgets2fTEntry"></a>
-<a name="robo42"></a><h2>Widgets/TEntry [ Packages ]</h2>
+<a name="robo43"></a><h2>Widgets/TEntry [ Packages ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada-widgets_ads.html#robo22">Widgets</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada-widgets_ads.html#robo23">Widgets</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo12">Tk</a> widget Entry
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo9">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo12">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo10">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo22">Widgets</a><span class="sign">.</span><strong>TEntry</strong> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo9">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo12">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo10">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo23">Widgets</a><span class="sign">.</span><strong>TEntry</strong> <span class="keyword">is</span>
 </pre>
 
 <hr />
 <a name="TEntry2fTk5fEntry"></a>
 <a name="robo88"></a><h2>TEntry/Tk_Entry [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo42">TEntry</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">TEntry</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a>.
- Each of the derived widgets redefines the <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo403">Create</a> subprogram
+ Each of the derived widgets redefines the <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo288">Create</a> subprogram
  in order to create the correct type of widget.
 </pre>
 <p class="item_name">SOURCE</p>
@@ -62,12 +90,43 @@
 </pre>
 
 <hr />
-<a name="TEntry2fCreate2028function29"></a>
-<a name="robo309"></a><h2>TEntry/Create (function) [ Subprograms ]</h2>
+<a name="TEntry2fBBox"></a>
+<a name="robo310"></a><h2>TEntry/BBox [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo42">TEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">TEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo349">Get</a> size of bounding box of the selected character in the selected
+ <a href="#robo88">Tk_Entry</a>
+</pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo403">Create</a>
+<pre class="source">   <span class="keyword">function</span> <strong>BBox</strong>
+     <span class="sign">(</span>TextEntry<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo88">Tk_Entry</a><span class="keyword">'Class</span><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre =<span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> /= ""<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> EntryWidget - <a href="#robo88">Tk_Entry</a> which will be queried
+ <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a>       - <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> of the character which bounding box will be
+ taken
+</pre>
+<p class="item_name">RESULT</p>
+<pre> Four values: x1, y1 - coordinates of starting point of bounding box
+ from top left, x2, y2 - coordinates of ending point from bottom right
+ of bounding box.
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.5 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+</pre>
+
+<hr />
+<a name="TEntry2fCreate2028function29"></a>
+<a name="robo311"></a><h2>TEntry/Create (function) [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">TEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo288">Create</a>
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
       Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo88">Tk_Entry</a> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
@@ -86,11 +145,11 @@
 
 <hr />
 <a name="TEntry2fCreate2028procedure29"></a>
-<a name="robo310"></a><h2>TEntry/Create (procedure) [ Subprograms ]</h2>
+<a name="robo312"></a><h2>TEntry/Create (procedure) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo42">TEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">TEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo403">Create</a>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo288">Create</a>
      <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo88">Tk_Entry</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
       Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
@@ -107,35 +166,62 @@
 
 <hr />
 <a name="TEntry2fDelete"></a>
-<a name="robo311"></a><h2>TEntry/Delete [ Subprograms ]</h2>
+<a name="robo313"></a><h2>TEntry/Delete [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo42">TEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">TEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> <strong>Delete</strong> part of text from the selected entry
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Delete</strong>
-     <span class="sign">(</span>TextEntry<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo88">Tk_Entry</a><span class="sign">;</span> FirstIndex<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
-      LastIndex<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> FirstIndex <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+     <span class="sign">(</span>TextEntry<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo88">Tk_Entry</a><span class="keyword">'Class</span><span class="sign">;</span> FirstIndex<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+      LastIndex<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">)</span> <span class="keyword">with</span>
+      Pre =<span class="sign">&gt;</span> FirstIndex /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> TextEntry  - <a href="#robo88">Tk_Entry</a> in which text will be deleted
- FirstIndex - <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a> of text from which delete will start. <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a> starts from 0
+ FirstIndex - <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> of text from which delete will start. <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> starts from 0
  LastIndex  - End index to which text will be deleted. If empty, delete only one
               character. Default is empty.
 </pre>
 
 <hr />
-<a name="TEntry2fget"></a>
-<a name="robo312"></a><h2>TEntry/get [ Subprograms ]</h2>
+<a name="TEntry2fEntry5fIndex"></a>
+<a name="robo314"></a><h2>TEntry/Entry_Index [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo42">TEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">TEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo308">Get</a> entry's text.
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo349">Get</a> numerical index of character from the selected <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo308">Get</a><span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo88">Tk_Entry</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> <strong>Entry_Index</strong>
+     <span class="sign">(</span>TextEntry<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo88">Tk_Entry</a><span class="keyword">'Class</span><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre =<span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> /= ""<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> TextEntry - <a href="#robo88">Tk_Entry</a> which will be queried for index
+ <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a>         - <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> of character which numeric index will be taken
+</pre>
+<p class="item_name">RESULT</p>
+<pre> Numerical index of the selected character
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.5 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+</pre>
+
+<hr />
+<a name="TEntry2fGet"></a>
+<a name="robo315"></a><h2>TEntry/Get [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">TEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <strong>Get</strong> entry's text.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Get</strong><span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo88">Tk_Entry</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Widgt - <a href="#robo88">Tk_Entry</a> from which text will be taken
@@ -145,27 +231,376 @@
 </pre>
 
 <hr />
-<a name="TEntry2fInsert"></a>
-<a name="robo313"></a><h2>TEntry/Insert [ Subprograms ]</h2>
+<a name="TEntry2fICursor"></a>
+<a name="robo316"></a><h2>TEntry/ICursor [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo42">TEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">TEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-place_ads.html#robo447">Place</a> insertion cursor in the selected <a href="#robo88">Tk_Entry</a> just before the
+ selected character
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>ICursor</strong><span class="sign">(</span>TextEntry<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo88">Tk_Entry</a><span class="keyword">'Class</span><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre =<span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> /= ""<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> TextEntry - <a href="#robo88">Tk_Entry</a> in which insertion cursor will be placed
+ <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a>     - <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> of the character before which insertion cursor will be
+             placed
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.5 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+</pre>
+
+<hr />
+<a name="TEntry2fInsert"></a>
+<a name="robo317"></a><h2>TEntry/Insert [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">TEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> <strong>Insert</strong> text at selected index to the selected <a href="#robo88">Tk_Entry</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Insert</strong>
-     <span class="sign">(</span>TextEntry<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo88">Tk_Entry</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo43">Text</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo43">Text</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+     <span class="sign">(</span>TextEntry<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo88">Tk_Entry</a><span class="keyword">'Class</span><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo44">Text</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre =<span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> /= "" and <a href="./tcl-tk-ada-widgets-text_ads.html#robo44">Text</a> /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> TextEntry - <a href="#robo88">Tk_Entry</a> to which text will be inserted
- <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a>     - <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo207">Index</a> in which position text will be inserted
- <a href="./tcl-tk-ada-widgets-text_ads.html#robo43">Text</a>      - <a href="./tcl-tk-ada-widgets-text_ads.html#robo43">Text</a> to insert
+ <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a>     - <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> in which position text will be inserted
+ <a href="./tcl-tk-ada-widgets-text_ads.html#robo44">Text</a>      - <a href="./tcl-tk-ada-widgets-text_ads.html#robo44">Text</a> to insert
+</pre>
+
+<hr />
+<a name="TEntry2fScan5fDragTo"></a>
+<a name="robo318"></a><h2>TEntry/Scan_DragTo [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">TEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Computes the difference between its X argument and the X argument to
+ the last <a href="./tcl-tk-ada-widgets-text_ads.html#robo369">Scan_Mark</a> procedure for the <a href="#robo88">Tk_Entry</a>. It then adjusts the
+ view by 10 times the difference in coordinates.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Scan_DragTo</strong><span class="sign">(</span>TextEntry<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo88">Tk_Entry</a><span class="keyword">'Class</span><span class="sign">;</span> X<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre =<span class="sign">&gt;</span> X /= ""<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> TextEntry - <a href="#robo88">Tk_Entry</a> in which difference will be computed
+ X         - X coordinate which difference will be computed
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.5 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+</pre>
+
+<hr />
+<a name="TEntry2fScan5fMark"></a>
+<a name="robo319"></a><h2>TEntry/Scan_Mark [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">TEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Sets starting position for scan in the selected <a href="#robo88">Tk_Entry</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Scan_Mark</strong><span class="sign">(</span>TextEntry<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo88">Tk_Entry</a><span class="keyword">'Class</span><span class="sign">;</span> X<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre =<span class="sign">&gt;</span> X /= ""<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> TextEntry - <a href="#robo88">Tk_Entry</a> in which mark will be set
+ X         - X coordinate of the mark to set
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.5 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+</pre>
+
+<hr />
+<a name="TEntry2fSelection5fAdjust"></a>
+<a name="robo320"></a><h2>TEntry/Selection_Adjust [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">TEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="../tklib/tcl-tklib-ada-tooltip_ads.html#robo459">Add</a> characters to the <a href="#robo88">Tk_Entry</a> selection. If nothing is selected,
+ create a new selection from the beginning to the selected by <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a>
+ character
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Selection_Adjust</strong>
+     <span class="sign">(</span>TextEntry<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo88">Tk_Entry</a><span class="keyword">'Class</span><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre =<span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> /= ""<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> TextEntry - <a href="#robo88">Tk_Entry</a> in which selection will be adjusted
+ <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a>         - <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> of character to set as the last in the
+                 selection
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.5 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+</pre>
+
+<hr />
+<a name="TEntry2fSelection5fClear"></a>
+<a name="robo321"></a><h2>TEntry/Selection_Clear [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">TEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Remove the selection from the selected <a href="#robo88">Tk_Entry</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Selection_Clear</strong><span class="sign">(</span>TextEntry<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo88">Tk_Entry</a><span class="keyword">'Class</span><span class="sign">);</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> TextEntry - <a href="#robo88">Tk_Entry</a> in which the selection will be cleared
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.5 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+</pre>
+
+<hr />
+<a name="TEntry2fSelection5fFrom"></a>
+<a name="robo322"></a><h2>TEntry/Selection_From [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">TEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo522">Set</a> the selection anchor at the selected character in the selected
+ <a href="#robo88">Tk_Entry</a>. Does not change the selection
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Selection_From</strong>
+     <span class="sign">(</span>TextEntry<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo88">Tk_Entry</a><span class="keyword">'Class</span><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre =<span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> /= ""<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> TextEntry - <a href="#robo88">Tk_Entry</a> in which the selection anchor will be set
+ <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a>     - <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> of the character before which the selection anchor
+             will be set
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.5 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+</pre>
+
+<hr />
+<a name="TEntry2fSelection5fPresent"></a>
+<a name="robo323"></a><h2>TEntry/Selection_Present [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">TEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Check if any character is selected in the selected <a href="#robo88">Tk_Entry</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Selection_Present</strong><span class="sign">(</span>TextEntry<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo88">Tk_Entry</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> TextEntry - <a href="#robo88">Tk_Entry</a> which will be queried for the selection
+</pre>
+<p class="item_name">RESULT</p>
+<pre> "1" if any character in TextEntry is selected, otherwise "0"
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.5 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+</pre>
+
+<hr />
+<a name="TEntry2fSelection5fRange"></a>
+<a name="robo324"></a><h2>TEntry/Selection_Range [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">TEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo522">Set</a> the characters selection in the selected <a href="#robo88">Tk_Entry</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Selection_Range</strong>
+     <span class="sign">(</span>TextEntry<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo88">Tk_Entry</a><span class="keyword">'Class</span><span class="sign">;</span> StartIndex<span class="sign">,</span> EndIndex<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre =<span class="sign">&gt;</span> StartIndex /= "" and EndIndex /= ""<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> TextEntry  - <a href="#robo88">Tk_Entry</a> in which the selection will be set
+ StartIndex - Start index of character of the selection
+ EndIndex   - End index of character of the selection
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.5 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+</pre>
+
+<hr />
+<a name="TEntry2fSelection5fTo"></a>
+<a name="robo325"></a><h2>TEntry/Selection_To [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">TEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo522">Set</a> selection in the selected <a href="#robo88">Tk_Entry</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Selection_To</strong><span class="sign">(</span>TextEntry<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo88">Tk_Entry</a><span class="keyword">'Class</span><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre =<span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> /= ""<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> TextEntry - <a href="#robo88">Tk_Entry</a> in which the selection will be set
+ <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a>     - <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> of character from which the selection will be set.
+             If is before the selection anchor point, the selection
+             will be to the anchor point. If after, the selection will
+             be from the anchor point to the <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a>
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.5 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+</pre>
+
+<hr />
+<a name="TEntry2fValidate"></a>
+<a name="robo326"></a><h2>TEntry/Validate [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">TEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Force the <a href="#robo88">Tk_Entry</a> to revalidate its value
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Validate</strong><span class="sign">(</span>TextEntry<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo88">Tk_Entry</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> TextEntry - <a href="#robo88">Tk_Entry</a> which value will be validated
+</pre>
+<p class="item_name">RESULT</p>
+<pre> "1" if value of TextEntry is valid, otherwise "0"
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.5 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+</pre>
+
+<hr />
+<a name="TEntry2fXView2028function29"></a>
+<a name="robo327"></a><h2>TEntry/XView (function) [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">TEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo349">Get</a> which horizontal fraction of the <a href="#robo88">Tk_Entry</a> is visible
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo393">XView</a><span class="sign">(</span>TextEntry<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo88">Tk_Entry</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> TextEntry - <a href="#robo88">Tk_Entry</a> which will be queried for visibility
+</pre>
+<p class="item_name">RESULT</p>
+<pre> Pair of elements: first element is the start of horizontal fraction of
+ the TextEntry which is visible, second is the end of horizontal
+ fraction of the TextEntry which is visible.
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.5 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+</pre>
+
+<hr />
+<a name="TEntry2fXView2028procedure29"></a>
+<a name="robo328"></a><h2>TEntry/XView (procedure) [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">TEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Adjusts the view in the window so that the character position given by
+ index is displayed at the left edge of the window
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo393">XView</a><span class="sign">(</span>TextEntry<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo88">Tk_Entry</a><span class="keyword">'Class</span><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre =<span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> /= ""<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> TextEntry - <a href="#robo88">Tk_Entry</a> which will be adjusted
+ <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a>         - Character index to which TextEntry will be adjusted.
+                 Character position starts from 0
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.5 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+</pre>
+
+<hr />
+<a name="TEntry2fXview5fMove5fTo"></a>
+<a name="robo329"></a><h2>TEntry/Xview_Move_To [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">TEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Adjusts the view in the window so that fraction of the total width of
+ the <a href="#robo88">Tk_Entry</a> is off-screen to the left.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Xview_Move_To</strong>
+     <span class="sign">(</span>TextEntry<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo88">Tk_Entry</a><span class="keyword">'Class</span><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo296">Fraction</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre =<span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo296">Fraction</a> /= ""<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> TextEntry - <a href="#robo88">Tk_Entry</a> which view will be adjusted
+ <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo296">Fraction</a>      - <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo296">Fraction</a> of the TextEntry to move. Must be between 0
+                 and 1
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.5 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+</pre>
+
+<hr />
+<a name="TEntry2fXview5fScroll"></a>
+<a name="robo330"></a><h2>TEntry/Xview_Scroll [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">TEntry</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Shift the view in the window on left or right according to Number and
+ What.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Xview_Scroll</strong>
+     <span class="sign">(</span>TextEntry<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo88">Tk_Entry</a><span class="keyword">'Class</span><span class="sign">;</span> Number<span class="sign">,</span> What<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre =<span class="sign">&gt;</span> Number /= "" and <span class="sign">(</span>What = "units" or What = "pages"<span class="sign">);</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> TextEntry - <a href="#robo88">Tk_Entry</a> which view will be shifted
+ Number        - The amount of What to shift the TextEntry
+ What          - Type of amount to move. Can be "units" or "pages"
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.5 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-tentry.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Thu Apr 30 2020 07:22:01
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-tentry.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Sun May 31 2020 09:30:57
 </p>
 </div> <!-- footer -->
 </body>

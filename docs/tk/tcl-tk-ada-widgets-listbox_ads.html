@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.4 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.5 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -25,60 +25,60 @@
 <div id="content">
 <h3>TABLE OF CONTENTS</h3>
 <ul>
-<li>1. <a href="#robo34">Widgets/ListBox</a></li>
+<li>1. <a href="#robo36">Widgets/ListBox</a></li>
 <ul>
 <li>1.1. <a href="#robo78">ListBox/Tk_ListBox</a></li>
-<li>1.2. <a href="#robo201">ListBox/Activate</a></li>
-<li>1.3. <a href="#robo202">ListBox/BBox</a></li>
-<li>1.4. <a href="#robo203">ListBox/Create (function)</a></li>
-<li>1.5. <a href="#robo204">ListBox/Create (procedure)</a></li>
-<li>1.6. <a href="#robo205">ListBox/CurSelection</a></li>
-<li>1.7. <a href="#robo206">ListBox/Delete</a></li>
-<li>1.8. <a href="#robo207">ListBox/Index</a></li>
-<li>1.9. <a href="#robo208">ListBox/Insert</a></li>
-<li>1.10. <a href="#robo209">ListBox/Item_Cget</a></li>
-<li>1.11. <a href="#robo210">ListBox/Item_Configure (function)</a></li>
-<li>1.12. <a href="#robo211">ListBox/Item_Configure (procedure)</a></li>
-<li>1.13. <a href="#robo212">ListBox/Nearest</a></li>
-<li>1.14. <a href="#robo213">ListBox/Scan_DragTo</a></li>
-<li>1.15. <a href="#robo214">ListBox/Scan_Mark</a></li>
-<li>1.16. <a href="#robo215">ListBox/See</a></li>
-<li>1.17. <a href="#robo216">ListBox/Selection_Anchor</a></li>
-<li>1.18. <a href="#robo217">ListBox/Selection_Clear</a></li>
-<li>1.19. <a href="#robo218">ListBox/Selection_Includes</a></li>
-<li>1.20. <a href="#robo219">ListBox/Selection_Set</a></li>
-<li>1.21. <a href="#robo220">ListBox/Size</a></li>
-<li>1.22. <a href="#robo221">ListBox/XView (function)</a></li>
-<li>1.23. <a href="#robo222">ListBox/XView (procedure)</a></li>
-<li>1.24. <a href="#robo223">ListBox/Xview_Move_To</a></li>
-<li>1.25. <a href="#robo224">ListBox/Xview_Scroll</a></li>
-<li>1.26. <a href="#robo225">ListBox/YView (function)</a></li>
-<li>1.27. <a href="#robo226">ListBox/YView (procedure)</a></li>
-<li>1.28. <a href="#robo227">ListBox/Yview_Move_To</a></li>
-<li>1.29. <a href="#robo228">ListBox/Yview_Scroll</a></li>
+<li>1.2. <a href="#robo203">ListBox/Activate</a></li>
+<li>1.3. <a href="#robo204">ListBox/BBox</a></li>
+<li>1.4. <a href="#robo205">ListBox/Create (function)</a></li>
+<li>1.5. <a href="#robo206">ListBox/Create (procedure)</a></li>
+<li>1.6. <a href="#robo207">ListBox/CurSelection</a></li>
+<li>1.7. <a href="#robo208">ListBox/Delete</a></li>
+<li>1.8. <a href="#robo209">ListBox/Index</a></li>
+<li>1.9. <a href="#robo210">ListBox/Insert</a></li>
+<li>1.10. <a href="#robo211">ListBox/Item_Cget</a></li>
+<li>1.11. <a href="#robo212">ListBox/Item_Configure (function)</a></li>
+<li>1.12. <a href="#robo213">ListBox/Item_Configure (procedure)</a></li>
+<li>1.13. <a href="#robo214">ListBox/Nearest</a></li>
+<li>1.14. <a href="#robo215">ListBox/Scan_DragTo</a></li>
+<li>1.15. <a href="#robo216">ListBox/Scan_Mark</a></li>
+<li>1.16. <a href="#robo217">ListBox/See</a></li>
+<li>1.17. <a href="#robo218">ListBox/Selection_Anchor</a></li>
+<li>1.18. <a href="#robo219">ListBox/Selection_Clear</a></li>
+<li>1.19. <a href="#robo220">ListBox/Selection_Includes</a></li>
+<li>1.20. <a href="#robo221">ListBox/Selection_Set</a></li>
+<li>1.21. <a href="#robo222">ListBox/Size</a></li>
+<li>1.22. <a href="#robo223">ListBox/XView (function)</a></li>
+<li>1.23. <a href="#robo224">ListBox/XView (procedure)</a></li>
+<li>1.24. <a href="#robo225">ListBox/Xview_Move_To</a></li>
+<li>1.25. <a href="#robo226">ListBox/Xview_Scroll</a></li>
+<li>1.26. <a href="#robo227">ListBox/YView (function)</a></li>
+<li>1.27. <a href="#robo228">ListBox/YView (procedure)</a></li>
+<li>1.28. <a href="#robo229">ListBox/Yview_Move_To</a></li>
+<li>1.29. <a href="#robo230">ListBox/Yview_Scroll</a></li>
 </ul>
-<li>2. <a href="#robo308">Tcl.Tk.Ada.Widgets.ListBox/Get</a></li>
+<li>2. <a href="#robo309">Tcl.Tk.Ada.Widgets.ListBox/Get</a></li>
 </ul>
 <hr />
 <a name="Widgets2fListBox"></a>
-<a name="robo34"></a><h2>Widgets/ListBox [ Packages ]</h2>
+<a name="robo36"></a><h2>Widgets/ListBox [ Packages ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada-widgets_ads.html#robo22">Widgets</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada-widgets_ads.html#robo23">Widgets</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo12">Tk</a> widget <strong>ListBox</strong>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo9">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo12">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo10">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo22">Widgets</a><span class="sign">.</span><strong>ListBox</strong> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo9">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo12">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo10">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo23">Widgets</a><span class="sign">.</span><strong>ListBox</strong> <span class="keyword">is</span>
 </pre>
 
 <hr />
 <a name="ListBox2fTk5fListBox"></a>
 <a name="robo78"></a><h2>ListBox/Tk_ListBox [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo109">Tk_Widget</a>.
- Each of the derived widgets redefines the <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo403">Create</a> subprogram
+ Each of the derived widgets redefines the <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo288">Create</a> subprogram
  in order to create the correct type of widget.
 </pre>
 <p class="item_name">SOURCE</p>
@@ -87,44 +87,44 @@
 
 <hr />
 <a name="ListBox2fActivate"></a>
-<a name="robo201"></a><h2>ListBox/Activate [ Subprograms ]</h2>
+<a name="robo203"></a><h2>ListBox/Activate [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo380">Set</a> the active element of <a href="#robo78">Tk_ListBox</a> to the selected index.
+<pre> <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo522">Set</a> the active element of <a href="#robo78">Tk_ListBox</a> to the selected index.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Activate</strong><span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">;</span> <a href="#robo207">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo207">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Activate</strong><span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> ListboxWidget - <a href="#robo78">Tk_ListBox</a> in which element will be set as active
- <a href="#robo207">Index</a>         - <a href="#robo207">Index</a> of element to set as active
+ <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a>         - <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> of element to set as active
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> Replace it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="ListBox2fBBox"></a>
-<a name="robo202"></a><h2>ListBox/BBox [ Subprograms ]</h2>
+<a name="robo204"></a><h2>ListBox/BBox [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="#robo308">Get</a> size of bounding box of the selected item text in the selected
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo349">Get</a> size of bounding box of the selected item text in the selected
  <a href="#robo78">Tk_ListBox</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>BBox</strong>
-     <span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">;</span> <a href="#robo207">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo207">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+     <span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> ListboxWidget - <a href="#robo78">Tk_ListBox</a> which will be queried
- <a href="#robo207">Index</a>         - <a href="#robo207">Index</a> of item from which bounding box will be
+ <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a>         - <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> of item from which bounding box will be
                  taken
 </pre>
 <p class="item_name">RESULT</p>
@@ -136,19 +136,19 @@
 <pre> 8.6.4 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> Replace it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="ListBox2fCreate2028function29"></a>
-<a name="robo203"></a><h2>ListBox/Create (function) [ Subprograms ]</h2>
+<a name="robo205"></a><h2>ListBox/Create (function) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Creates a new <a href="#robo78">Tk_ListBox</a> in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo403">Create</a>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo288">Create</a>
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
       Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo78">Tk_ListBox</a> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
@@ -167,14 +167,14 @@
 
 <hr />
 <a name="ListBox2fCreate2028procedure29"></a>
-<a name="robo204"></a><h2>ListBox/Create (procedure) [ Subprograms ]</h2>
+<a name="robo206"></a><h2>ListBox/Create (procedure) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Creates a new <a href="#robo78">Tk_ListBox</a> in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo403">Create</a>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo288">Create</a>
      <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo78">Tk_ListBox</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
       Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
@@ -191,11 +191,11 @@
 
 <hr />
 <a name="ListBox2fCurSelection"></a>
-<a name="robo205"></a><h2>ListBox/CurSelection [ Subprograms ]</h2>
+<a name="robo207"></a><h2>ListBox/CurSelection [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="#robo308">Get</a> the current selected items in the selected <a href="#robo78">Tk_ListBox</a>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo349">Get</a> the current selected items in the selected <a href="#robo78">Tk_ListBox</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>CurSelection</strong><span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
@@ -211,14 +211,14 @@
 <pre> 8.6.4 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> Replace it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="ListBox2fDelete"></a>
-<a name="robo206"></a><h2>ListBox/Delete [ Subprograms ]</h2>
+<a name="robo208"></a><h2>ListBox/Delete [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> <strong>Delete</strong> the selected elements from the selected <a href="#robo78">Tk_ListBox</a>
 </pre>
@@ -230,24 +230,24 @@
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> ListboxWidget - <a href="#robo78">Tk_ListBox</a> in which elements will be deleted
- First         - <a href="#robo207">Index</a> of first element to delete
- Last          - <a href="#robo207">Index</a> of last element to delete. If empty, only one
+ First         - <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> of first element to delete
+ Last          - <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> of last element to delete. If empty, only one
                  element will be deleted. Default value is empty
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> Replace it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="ListBox2fIndex"></a>
-<a name="robo207"></a><h2>ListBox/Index [ Subprograms ]</h2>
+<a name="robo209"></a><h2>ListBox/Index [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="#robo308">Get</a> the index for the selected element in the selected <a href="#robo78">Tk_ListBox</a>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo349">Get</a> the index for the selected element in the selected <a href="#robo78">Tk_ListBox</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Index</strong>
@@ -256,7 +256,7 @@
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> ListboxWidget - <a href="#robo78">Tk_ListBox</a> which will be queried for index
- <strong>Index</strong>         - <strong>Index</strong> of the element to <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo312">get</a>
+ <strong>Index</strong>         - <strong>Index</strong> of the element to get
 </pre>
 <p class="item_name">RESULT</p>
 <pre> Numerical index of the selected element. If <strong>Index</strong> is set to "end",
@@ -266,81 +266,81 @@
 <pre> 8.6.4 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> Replace it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="ListBox2fInsert"></a>
-<a name="robo208"></a><h2>ListBox/Insert [ Subprograms ]</h2>
+<a name="robo210"></a><h2>ListBox/Insert [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> <strong>Insert</strong> zero or more elements to the selected <a href="#robo78">Tk_ListBox</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Insert</strong>
-     <span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">;</span> <a href="#robo207">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+     <span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
       Elements<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo207">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> ListboxWidget - <a href="#robo78">Tk_ListBox</a> to which elements will be added
- <a href="#robo207">Index</a>         - <a href="#robo207">Index</a> in ListboxWidget where add the elements
+ <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a>         - <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> in ListboxWidget where add the elements
  Elements      - Elements to add. Default value is empty
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> Replace it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="ListBox2fItem5fCget"></a>
-<a name="robo209"></a><h2>ListBox/Item_Cget [ Subprograms ]</h2>
+<a name="robo211"></a><h2>ListBox/Item_Cget [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="#robo308">Get</a> the selected option of the selected item in the selected <a href="#robo78">Tk_ListBox</a>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo349">Get</a> the selected option of the selected item in the selected <a href="#robo78">Tk_ListBox</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Item_Cget</strong>
-     <span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">;</span> <a href="#robo207">Index</a><span class="sign">,</span> Option<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span>
+     <span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a><span class="sign">,</span> Option<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span>
       <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo207">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Option <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Option <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> ListboxWidget - <a href="#robo78">Tk_ListBox</a> which will be queried for the option
- <a href="#robo207">Index</a>         - <a href="#robo207">Index</a> of the item in ListboxWidget which will be
+ <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a>         - <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> of the item in ListboxWidget which will be
                  queried for the option
- Option        - <a href="./tcl-tk_ads.html#robo12">Tk</a> option to <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo312">get</a>
+ Option        - <a href="./tcl-tk_ads.html#robo12">Tk</a> option to get
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> Replace it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="ListBox2fItem5fConfigure2028function29"></a>
-<a name="robo210"></a><h2>ListBox/Item_Configure (function) [ Subprograms ]</h2>
+<a name="robo212"></a><h2>ListBox/Item_Configure (function) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Queries or modifies the configuration options of the selected item
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Item_Configure
-     <span class="sign">(</span>ListBoxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">;</span> <a href="#robo207">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span>
+     <span class="sign">(</span>ListBoxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span>
       <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo207">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> ListBoxWidget - <a href="#robo78">Tk_ListBox</a> which will be queried or modified for options
- <a href="#robo207">Index</a>         - <a href="#robo207">Index</a> of the item which will be queried or modified
+ <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a>         - <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> of the item which will be queried or modified
                  for options
- Options       - Options to modify or <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo312">get</a>. Can be empty. Default value
+ Options       - Options to modify or get. Can be empty. Default value
                  is empty
 </pre>
 <p class="item_name">RESULT</p>
@@ -352,41 +352,41 @@
 <pre> 8.6.4 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> Replace it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="ListBox2fItem5fConfigure2028procedure29"></a>
-<a name="robo211"></a><h2>ListBox/Item_Configure (procedure) [ Subprograms ]</h2>
+<a name="robo213"></a><h2>ListBox/Item_Configure (procedure) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Modifies the configuration options of the selected item
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Item_Configure
-     <span class="sign">(</span>ListBoxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">;</span> <a href="#robo207">Index</a><span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo207">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+     <span class="sign">(</span>ListBoxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a><span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> ListBoxWidget - <a href="#robo78">Tk_ListBox</a> which will be modified for options
- <a href="#robo207">Index</a>         - <a href="#robo207">Index</a> of the item which options will be modified
+ <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a>         - <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> of the item which options will be modified
  Options       - Options to modify.
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> Replace it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="ListBox2fNearest"></a>
-<a name="robo212"></a><h2>ListBox/Nearest [ Subprograms ]</h2>
+<a name="robo214"></a><h2>ListBox/Nearest [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="#robo308">Get</a> nearest element to the selected point in the selected <a href="#robo78">Tk_ListBox</a>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo349">Get</a> nearest element to the selected point in the selected <a href="#robo78">Tk_ListBox</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Nearest</strong>
@@ -398,23 +398,23 @@
  Y             - Y coordinate to find the element
 </pre>
 <p class="item_name">RESULT</p>
-<pre> <a href="#robo207">Index</a> of the nearest to Y visible element
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> of the nearest to Y visible element
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> Replace it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="ListBox2fScan5fDragTo"></a>
-<a name="robo213"></a><h2>ListBox/Scan_DragTo [ Subprograms ]</h2>
+<a name="robo215"></a><h2>ListBox/Scan_DragTo [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Computes the difference between its X and Y arguments and the X and Y
- arguments to the last <a href="#robo214">Scan_Mark</a> procedure for the <a href="#robo78">Tk_ListBox</a>. It then
+ arguments to the last <a href="./tcl-tk-ada-widgets-text_ads.html#robo369">Scan_Mark</a> procedure for the <a href="#robo78">Tk_ListBox</a>. It then
  adjusts the view by 10 times the difference in coordinates.
 </pre>
 <p class="item_name">SOURCE</p>
@@ -430,14 +430,14 @@
 <pre> 8.6.4 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> Replace it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="ListBox2fScan5fMark"></a>
-<a name="robo214"></a><h2>ListBox/Scan_Mark [ Subprograms ]</h2>
+<a name="robo216"></a><h2>ListBox/Scan_Mark [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Sets starting position for scan in the selected <a href="#robo78">Tk_ListBox</a>
 </pre>
@@ -454,51 +454,51 @@
 <pre> 8.6.4 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> Replace it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="ListBox2fSee"></a>
-<a name="robo215"></a><h2>ListBox/See [ Subprograms ]</h2>
+<a name="robo217"></a><h2>ListBox/See [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Make the selected element of the selected <a href="#robo78">Tk_ListBox</a> visible. If the
  element is visible, this procedure do nothing.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>See</strong><span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">;</span> <a href="#robo207">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo207">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>See</strong><span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> ListboxWidget - <a href="#robo78">Tk_ListBox</a> in which the selected element will be
                  visible
- <a href="#robo207">Index</a>         - <a href="#robo207">Index</a> of the element to make visible
+ <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a>         - <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> of the element to make visible
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> Replace it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="ListBox2fSelection5fAnchor"></a>
-<a name="robo216"></a><h2>ListBox/Selection_Anchor [ Subprograms ]</h2>
+<a name="robo218"></a><h2>ListBox/Selection_Anchor [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo380">Set</a> the selection anchor to the selected element in the selected
+<pre> <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo522">Set</a> the selection anchor to the selected element in the selected
  <a href="#robo78">Tk_ListBox</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Selection_Anchor</strong>
-     <span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">;</span> <a href="#robo207">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo207">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+     <span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> ListboxWidget - <a href="#robo78">Tk_ListBox</a> in which anchor will be set
- <a href="#robo207">Index</a>         - <a href="#robo207">Index</a> of the element on which anchor will be set. If
+ <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a>         - <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> of the element on which anchor will be set. If
                  item doesn't exists, the anchor will be set to the
                  closest item
 </pre>
@@ -506,16 +506,16 @@
 <pre> 8.6.4 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> Replace it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="ListBox2fSelection5fClear"></a>
-<a name="robo217"></a><h2>ListBox/Selection_Clear [ Subprograms ]</h2>
+<a name="robo219"></a><h2>ListBox/Selection_Clear [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-button-checkbutton_ads.html#robo174">Deselect</a> elements in the <a href="#robo78">Tk_ListBox</a> between First and Last indexes
+<pre> <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo289">Deselect</a> elements in the <a href="#robo78">Tk_ListBox</a> between First and Last indexes
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Selection_Clear</strong>
@@ -525,34 +525,34 @@
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> ListboxWidget - <a href="#robo78">Tk_ListBox</a> in which selection will be removed
- First         - <a href="#robo207">Index</a> of the first element to deselect
- Last          - <a href="#robo207">Index</a> of the last element to deselect. If empty,
+ First         - <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> of the first element to deselect
+ Last          - <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> of the last element to deselect. If empty,
                  deselect only one element. Default value is empty
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> Replace it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="ListBox2fSelection5fIncludes"></a>
-<a name="robo218"></a><h2>ListBox/Selection_Includes [ Subprograms ]</h2>
+<a name="robo220"></a><h2>ListBox/Selection_Includes [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Check if the selected element is in the selection in the selected
  <a href="#robo78">Tk_ListBox</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Selection_Includes</strong>
-     <span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">;</span> <a href="#robo207">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo207">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+     <span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> ListboxWidget - <a href="#robo78">Tk_ListBox</a> in which the selection will be queried
- <a href="#robo207">Index</a>         - <a href="#robo207">Index</a> of the element to check if is in the selection
+ <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a>         - <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> of the element to check if is in the selection
 </pre>
 <p class="item_name">RESULT</p>
 <pre> 1 if the selected element is in the selection, otherwise 0
@@ -561,16 +561,16 @@
 <pre> 8.6.4 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> Replace it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="ListBox2fSelection5fSet"></a>
-<a name="robo219"></a><h2>ListBox/Selection_Set [ Subprograms ]</h2>
+<a name="robo221"></a><h2>ListBox/Selection_Set [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo257">Add</a> the selected elements to the <a href="#robo78">Tk_ListBox</a> selection
+<pre> <a href="../tklib/tcl-tklib-ada-tooltip_ads.html#robo459">Add</a> the selected elements to the <a href="#robo78">Tk_ListBox</a> selection
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Selection_Set</strong>
@@ -581,24 +581,24 @@
 <p class="item_name">PARAMETERS</p>
 <pre> ListboxWidget - <a href="#robo78">Tk_ListBox</a> in which the elements will be added to
                  the selection
- First         - <a href="#robo207">Index</a> of the first element to add
- Last          - <a href="#robo207">Index</a> of the last element to add. If empty, add only
+ First         - <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> of the first element to add
+ Last          - <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> of the last element to add. If empty, add only
                  one element. Default value is empty
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> Replace it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="ListBox2fSize"></a>
-<a name="robo220"></a><h2>ListBox/Size [ Subprograms ]</h2>
+<a name="robo222"></a><h2>ListBox/Size [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="#robo308">Get</a> amount of the elements in the selected <a href="#robo78">Tk_ListBox</a>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo349">Get</a> amount of the elements in the selected <a href="#robo78">Tk_ListBox</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Size</strong><span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
@@ -613,19 +613,19 @@
 <pre> 8.6.4 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> Replace it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="ListBox2fXView2028function29"></a>
-<a name="robo221"></a><h2>ListBox/XView (function) [ Subprograms ]</h2>
+<a name="robo223"></a><h2>ListBox/XView (function) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="#robo308">Get</a> which horizontal fraction of the <a href="#robo78">Tk_ListBox</a> is visible
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo349">Get</a> which horizontal fraction of the <a href="#robo78">Tk_ListBox</a> is visible
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo159">XView</a><span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo393">XView</a><span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> ListboxWidget - <a href="#robo78">Tk_ListBox</a> which will be queried for visibility
@@ -639,65 +639,65 @@
 <pre> 8.6.4 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> Replace it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="ListBox2fXView2028procedure29"></a>
-<a name="robo222"></a><h2>ListBox/XView (procedure) [ Subprograms ]</h2>
+<a name="robo224"></a><h2>ListBox/XView (procedure) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Adjusts the view in the window so that the character position given by
  index is displayed at the left edge of the window
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo159">XView</a><span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">;</span> <a href="#robo207">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo207">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo393">XView</a><span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> ListboxWidget - <a href="#robo78">Tk_ListBox</a> which will be adjusted
- <a href="#robo207">Index</a>         - Character index to which ListboxWidget will be adjusted.
+ <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a>         - Character index to which ListboxWidget will be adjusted.
                  Character position starts from 0
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> Replace it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="ListBox2fXview5fMove5fTo"></a>
-<a name="robo223"></a><h2>ListBox/Xview_Move_To [ Subprograms ]</h2>
+<a name="robo225"></a><h2>ListBox/Xview_Move_To [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Adjusts the view in the window so that fraction of the total width of
  the <a href="#robo78">Tk_ListBox</a> is off-screen to the left.
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Xview_Move_To</strong>
-     <span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo293">Fraction</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo293">Fraction</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+     <span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo296">Fraction</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo296">Fraction</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> ListboxWidget - <a href="#robo78">Tk_ListBox</a> which view will be adjusted
- <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo293">Fraction</a>      - <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo293">Fraction</a> of the ListboxWidget to move. Must be between 0
+ <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo296">Fraction</a>      - <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo296">Fraction</a> of the ListboxWidget to move. Must be between 0
                  and 1
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> Replace it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="ListBox2fXview5fScroll"></a>
-<a name="robo224"></a><h2>ListBox/Xview_Scroll [ Subprograms ]</h2>
+<a name="robo226"></a><h2>ListBox/Xview_Scroll [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Shift the view in the window on left or right according to Number and
  What.
@@ -716,19 +716,19 @@
 <pre> 8.6.4 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> Replace it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="ListBox2fYView2028function29"></a>
-<a name="robo225"></a><h2>ListBox/YView (function) [ Subprograms ]</h2>
+<a name="robo227"></a><h2>ListBox/YView (function) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="#robo308">Get</a> which vertical fraction of the <a href="#robo78">Tk_ListBox</a> is visible
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo349">Get</a> which vertical fraction of the <a href="#robo78">Tk_ListBox</a> is visible
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo162">YView</a><span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">YView</a><span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> ListboxWidget - <a href="#robo78">Tk_ListBox</a> which will be queried for visibility
@@ -742,65 +742,65 @@
 <pre> 8.6.4 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> Replace it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="ListBox2fYView2028procedure29"></a>
-<a name="robo226"></a><h2>ListBox/YView (procedure) [ Subprograms ]</h2>
+<a name="robo228"></a><h2>ListBox/YView (procedure) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Adjusts the view in the window so that the character position given by
  index is displayed at the top edge of the window
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <a href="./tcl-tk-ada-widgets-canvas_ads.html#robo162">YView</a><span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">;</span> <a href="#robo207">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo207">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">YView</a><span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> ListboxWidget - <a href="#robo78">Tk_ListBox</a> which will be adjusted
- <a href="#robo207">Index</a>         - Character index to which ListboxWidget will be adjusted.
+ <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a>         - Character index to which ListboxWidget will be adjusted.
                  Character position starts from 0
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> Replace it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="ListBox2fYview5fMove5fTo"></a>
-<a name="robo227"></a><h2>ListBox/Yview_Move_To [ Subprograms ]</h2>
+<a name="robo229"></a><h2>ListBox/Yview_Move_To [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Adjusts the view in the window so that fraction of the total height of
  the <a href="#robo78">Tk_ListBox</a> is off-screen to the top.
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Yview_Move_To</strong>
-     <span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo293">Fraction</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo293">Fraction</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+     <span class="sign">(</span>ListboxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo78">Tk_ListBox</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo296">Fraction</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo296">Fraction</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> ListboxWidget - <a href="#robo78">Tk_ListBox</a> which view will be adjusted
- <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo293">Fraction</a>      - <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo293">Fraction</a> of the ListboxWidget to move. Must be between 0
+ <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo296">Fraction</a>      - <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo296">Fraction</a> of the ListboxWidget to move. Must be between 0
                  and 1
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> Replace it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="ListBox2fYview5fScroll"></a>
-<a name="robo228"></a><h2>ListBox/Yview_Scroll [ Subprograms ]</h2>
+<a name="robo230"></a><h2>ListBox/Yview_Scroll [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">ListBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Shift the view in the window on up or down according to Number and
  What.
@@ -819,12 +819,12 @@
 <pre> 8.6.4 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> Replace it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="Tcl2eTk2eAda2eWidgets2eListBox2fGet"></a>
-<a name="robo308"></a><h2>Tcl.Tk.Ada.Widgets.ListBox/Get [ Subprograms ]</h2>
+<a name="robo309"></a><h2>Tcl.Tk.Ada.Widgets.ListBox/Get [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -838,8 +838,8 @@
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> ListboxWidget - <a href="#robo78">Tk_ListBox</a> which will be queried for elements
- First         - <a href="#robo207">Index</a> of first element to <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo312">get</a>
- Last          - <a href="#robo207">Index</a> of last element to <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo312">get</a>. Default value is empty
+ First         - <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> of first element to get
+ Last          - <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> of last element to get. Default value is empty
 </pre>
 <p class="item_name">RESULT</p>
 <pre> If Last is empty, return only one element, marked by First argument.
@@ -850,12 +850,12 @@
 <pre> 8.6.4 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> Replace it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
 </pre>
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-listbox.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Thu Apr 30 2020 07:22:01
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-listbox.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Sun May 31 2020 09:30:57
 </p>
 </div> <!-- footer -->
 </body>

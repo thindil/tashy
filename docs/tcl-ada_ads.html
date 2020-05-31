@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.4 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.5 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="./toc_index.html#top">Table of Contents</a>
@@ -31,25 +31,27 @@
 <ul>
 <li>1.1.1. <a href="#robo74">Generic_Command/Tcl_CmdDeleteProc</a></li>
 <li>1.1.2. <a href="#robo75">Generic_Command/Tcl_CmdProc</a></li>
-<li>1.1.3. <a href="#robo184">Generic_Command/Tcl_CreateCommand</a></li>
+<li>1.1.3. <a href="#robo186">Generic_Command/Tcl_CreateCommand</a></li>
 </ul>
 <li>1.2. <a href="#robo1">Ada/Generic_ExitHandler</a></li>
 <ul>
 <li>1.2.1. <a href="#robo76">Generic_ExitHandler/Tcl_ExitProc</a></li>
-<li>1.2.2. <a href="#robo185">Generic_ExitHandler/Tcl_CreateExitHandler</a></li>
-<li>1.2.3. <a href="#robo186">Generic_ExitHandler/Tcl_CreateThreadExitHandler</a></li>
-<li>1.2.4. <a href="#robo187">Generic_ExitHandler/Tcl_DeleteExitHandler</a></li>
-<li>1.2.5. <a href="#robo188">Generic_ExitHandler/Tcl_DeleteThreadExitHandler</a></li>
+<li>1.2.2. <a href="#robo187">Generic_ExitHandler/Tcl_CreateExitHandler</a></li>
+<li>1.2.3. <a href="#robo188">Generic_ExitHandler/Tcl_CreateThreadExitHandler</a></li>
+<li>1.2.4. <a href="#robo189">Generic_ExitHandler/Tcl_DeleteExitHandler</a></li>
+<li>1.2.5. <a href="#robo190">Generic_ExitHandler/Tcl_DeleteThreadExitHandler</a></li>
 </ul>
 <li>1.3. <a href="#robo2">Ada/Generic_PkgRequire</a></li>
 <ul>
-<li>1.3.1. <a href="#robo189">Generic_PkgRequire/Tcl_PkgPresentEx</a></li>
-<li>1.3.2. <a href="#robo190">Generic_PkgRequire/Tcl_PkgProvideEx</a></li>
-<li>1.3.3. <a href="#robo191">Generic_PkgRequire/Tcl_PkgRequireEx</a></li>
+<li>1.3.1. <a href="#robo191">Generic_PkgRequire/Tcl_PkgPresentEx</a></li>
+<li>1.3.2. <a href="#robo192">Generic_PkgRequire/Tcl_PkgProvideEx</a></li>
+<li>1.3.3. <a href="#robo193">Generic_PkgRequire/Tcl_PkgRequireEx</a></li>
 </ul>
-<li>1.4. <a href="#robo110">Ada/Tcl_GetVar</a></li>
-<li>1.5. <a href="#robo111">Ada/Tcl_SetVar</a></li>
-<li>1.6. <a href="#robo112">Ada/Tcl_UnsetVar</a></li>
+<li>1.4. <a href="#robo110">Ada/Tcl_Eval</a></li>
+<li>1.5. <a href="#robo111">Ada/Tcl_EvalFile</a></li>
+<li>1.6. <a href="#robo112">Ada/Tcl_GetVar</a></li>
+<li>1.7. <a href="#robo113">Ada/Tcl_SetVar</a></li>
+<li>1.8. <a href="#robo114">Ada/Tcl_UnsetVar</a></li>
 </ul>
 </ul>
 <hr />
@@ -164,12 +166,60 @@
 </pre>
 
 <hr />
-<a name="Ada2fTcl5fGetVar"></a>
-<a name="robo110"></a><h2>Ada/Tcl_GetVar [ Subprograms ]</h2>
+<a name="Ada2fTcl5fEval"></a>
+<a name="robo110"></a><h2>Ada/Tcl_Eval [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo10">Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tk/tcl-tk-ada-widgets-listbox_ads.html#robo308">Get</a> value of selected variable
+<pre> Execute (evaluate) <a href="./tcl_ads.html#robo9">Tcl</a> statement in the selected <a href="./tcl_ads.html#robo9">Tcl</a> interpreter
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Tcl_Eval</strong>
+     <span class="sign">(</span>interp<span class="sign">:</span> <span class="keyword">not</span> <span class="keyword">null</span> Tcl_Interp<span class="sign">;</span> strng<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> C<span class="sign">.</span>int<span class="sign">;</span>
+
+   <span class="keyword">procedure</span> <strong>Tcl_Eval</strong><span class="sign">(</span>interp<span class="sign">:</span> <span class="keyword">not</span> <span class="keyword">null</span> Tcl_Interp<span class="sign">;</span> strng<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> interp - <a href="./tcl_ads.html#robo9">Tcl</a> interpreter on which the selected statement will be
+          evaluated
+ strng  - <a href="./tcl_ads.html#robo9">Tcl</a> statement to evaluate
+</pre>
+<p class="item_name">RESULT</p>
+<pre> <a href="./tcl_ads.html#robo9">Tcl</a> code (TCL_OK, TCL_ERROR, etc) returned after evaluate the
+ selected statement
+</pre>
+
+<hr />
+<a name="Ada2fTcl5fEvalFile"></a>
+<a name="robo111"></a><h2>Ada/Tcl_EvalFile [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo10">Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Execute (evaluate) <a href="./tcl_ads.html#robo9">Tcl</a> script from the selected file
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Tcl_EvalFile</strong>
+     <span class="sign">(</span>interp<span class="sign">:</span> <span class="keyword">not</span> <span class="keyword">null</span> Tcl_Interp<span class="sign">;</span> fileName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> C<span class="sign">.</span>int<span class="sign">;</span>
+
+   <span class="keyword">procedure</span> <strong>Tcl_EvalFile</strong><span class="sign">(</span>interp<span class="sign">:</span> <span class="keyword">not</span> <span class="keyword">null</span> Tcl_Interp<span class="sign">;</span> fileName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> interp   - <a href="./tcl_ads.html#robo9">Tcl</a> interpreter on which the selected script will be
+            executed
+ fileName - Name of file which contains <a href="./tcl_ads.html#robo9">Tcl</a> script to evaluate
+</pre>
+<p class="item_name">RESULT</p>
+<pre> <a href="./tcl_ads.html#robo9">Tcl</a> code (TCL_OK, TCL_ERROR, etc) returned after evaluate the
+ selected script
+</pre>
+
+<hr />
+<a name="Ada2fTcl5fGetVar"></a>
+<a name="robo112"></a><h2>Ada/Tcl_GetVar [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo10">Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tk/tcl-tk-ada-widgets-text_ads.html#robo349">Get</a> value of selected variable
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Tcl_GetVar</strong>
@@ -178,7 +228,7 @@
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> interp  - <a href="./tcl_ads.html#robo9">Tcl</a> interpreter in which variable will be queried
- varName - <a href="./tcl_ads.html#robo9">Tcl</a> variable to <a href="./tk/tcl-tk-ada-widgets-tentry_ads.html#robo312">get</a>
+ varName - <a href="./tcl_ads.html#robo9">Tcl</a> variable to get
  flags   - <a href="./tcl_ads.html#robo9">Tcl</a> flags to variable
 </pre>
 <p class="item_name">RESULT</p>
@@ -187,11 +237,11 @@
 
 <hr />
 <a name="Ada2fTcl5fSetVar"></a>
-<a name="robo111"></a><h2>Ada/Tcl_SetVar [ Subprograms ]</h2>
+<a name="robo113"></a><h2>Ada/Tcl_SetVar [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo10">Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tk/tcl-tk-ada-widgets-scale_ads.html#robo380">Set</a> value for the selected variable
+<pre> <a href="./tk/tcl-tk-ada-widgets-ttkscale_ads.html#robo522">Set</a> value for the selected variable
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Tcl_SetVar</strong>
@@ -214,7 +264,7 @@
 
 <hr />
 <a name="Ada2fTcl5fUnsetVar"></a>
-<a name="robo112"></a><h2>Ada/Tcl_UnsetVar [ Subprograms ]</h2>
+<a name="robo114"></a><h2>Ada/Tcl_UnsetVar [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo10">Ada</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -240,11 +290,11 @@
 
 <hr />
 <a name="Generic5fCommand2fTcl5fCreateCommand"></a>
-<a name="robo184"></a><h2>Generic_Command/Tcl_CreateCommand [ Subprograms ]</h2>
+<a name="robo186"></a><h2>Generic_Command/Tcl_CreateCommand [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo0">Generic_Command</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tk/tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo403">Create</a> new <a href="./tcl_ads.html#robo9">Tcl</a> command
+<pre> <a href="./tk/tcl-tk-ada-widgets-button-radiobutton_ads.html#robo288">Create</a> new <a href="./tcl_ads.html#robo9">Tcl</a> command
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">      <span class="keyword">function</span> <strong>Tcl_CreateCommand</strong>
@@ -273,11 +323,11 @@
 
 <hr />
 <a name="Generic5fExitHandler2fTcl5fCreateExitHandler"></a>
-<a name="robo185"></a><h2>Generic_ExitHandler/Tcl_CreateExitHandler [ Subprograms ]</h2>
+<a name="robo187"></a><h2>Generic_ExitHandler/Tcl_CreateExitHandler [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo1">Generic_ExitHandler</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tk/tcl-tk-ada-widgets-scale_ads.html#robo380">Set</a> the selected procedure as a standard procedure called on <a href="./tcl_ads.html#robo9">Tcl</a> exit
+<pre> <a href="./tk/tcl-tk-ada-widgets-ttkscale_ads.html#robo522">Set</a> the selected procedure as a standard procedure called on <a href="./tcl_ads.html#robo9">Tcl</a> exit
  command
 </pre>
 <p class="item_name">SOURCE</p>
@@ -292,11 +342,11 @@
 
 <hr />
 <a name="Generic5fExitHandler2fTcl5fCreateThreadExitHandler"></a>
-<a name="robo186"></a><h2>Generic_ExitHandler/Tcl_CreateThreadExitHandler [ Subprograms ]</h2>
+<a name="robo188"></a><h2>Generic_ExitHandler/Tcl_CreateThreadExitHandler [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo1">Generic_ExitHandler</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tk/tcl-tk-ada-widgets-scale_ads.html#robo380">Set</a> the selected procedure as a standart procedure called on exit
+<pre> <a href="./tk/tcl-tk-ada-widgets-ttkscale_ads.html#robo522">Set</a> the selected procedure as a standart procedure called on exit
  from a <a href="./tcl_ads.html#robo9">Tcl</a> thread
 </pre>
 <p class="item_name">SOURCE</p>
@@ -312,11 +362,11 @@
 
 <hr />
 <a name="Generic5fExitHandler2fTcl5fDeleteExitHandler"></a>
-<a name="robo187"></a><h2>Generic_ExitHandler/Tcl_DeleteExitHandler [ Subprograms ]</h2>
+<a name="robo189"></a><h2>Generic_ExitHandler/Tcl_DeleteExitHandler [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo1">Generic_ExitHandler</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tk/tcl-tk-ada-widgets-menu_ads.html#robo237">Delete</a> previously set procedure as exit handler
+<pre> <a href="./tk/tcl-tk-ada-widgets-listbox_ads.html#robo208">Delete</a> previously set procedure as exit handler
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">      <span class="keyword">procedure</span> <strong>Tcl_DeleteExitHandler</strong>
@@ -330,11 +380,11 @@
 
 <hr />
 <a name="Generic5fExitHandler2fTcl5fDeleteThreadExitHandler"></a>
-<a name="robo188"></a><h2>Generic_ExitHandler/Tcl_DeleteThreadExitHandler [ Subprograms ]</h2>
+<a name="robo190"></a><h2>Generic_ExitHandler/Tcl_DeleteThreadExitHandler [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo1">Generic_ExitHandler</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tk/tcl-tk-ada-widgets-menu_ads.html#robo237">Delete</a> previously set procedure used on exit from <a href="./tcl_ads.html#robo9">Tcl</a> thread
+<pre> <a href="./tk/tcl-tk-ada-widgets-listbox_ads.html#robo208">Delete</a> previously set procedure used on exit from <a href="./tcl_ads.html#robo9">Tcl</a> thread
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">      <span class="keyword">procedure</span> <strong>Tcl_DeleteThreadExitHandler</strong>
@@ -349,7 +399,7 @@
 
 <hr />
 <a name="Generic5fPkgRequire2fTcl5fPkgPresentEx"></a>
-<a name="robo189"></a><h2>Generic_PkgRequire/Tcl_PkgPresentEx [ Subprograms ]</h2>
+<a name="robo191"></a><h2>Generic_PkgRequire/Tcl_PkgPresentEx [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo2">Generic_PkgRequire</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -391,7 +441,7 @@
 
 <hr />
 <a name="Generic5fPkgRequire2fTcl5fPkgProvideEx"></a>
-<a name="robo190"></a><h2>Generic_PkgRequire/Tcl_PkgProvideEx [ Subprograms ]</h2>
+<a name="robo192"></a><h2>Generic_PkgRequire/Tcl_PkgProvideEx [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo2">Generic_PkgRequire</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -421,7 +471,7 @@
 
 <hr />
 <a name="Generic5fPkgRequire2fTcl5fPkgRequireEx"></a>
-<a name="robo191"></a><h2>Generic_PkgRequire/Tcl_PkgRequireEx [ Subprograms ]</h2>
+<a name="robo193"></a><h2>Generic_PkgRequire/Tcl_PkgRequireEx [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo2">Generic_PkgRequire</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -463,7 +513,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tcl-ada.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Thu Apr 30 2020 07:22:01
+<p>Generated from ./src/tcl-ada.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Sun May 31 2020 09:30:57
 </p>
 </div> <!-- footer -->
 </body>
