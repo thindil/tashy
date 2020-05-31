@@ -160,6 +160,25 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       Pre => X /= "" and Y /= "";
       -- ****
 
+      -- ****f* TtkNotebook/Index
+      -- FUNCTION
+      -- Get numeric index of the selected tab
+      -- PARAMETERS
+      -- Notebook - Ttk_Notebook which will be queried
+      -- TabId    - Index of the tab or "end"
+      -- RESULT
+      -- Numeric index of the selected tab or amount of all tabs in Notebook,
+      -- if TabId was "end"
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Index
+     (Notebook: in Ttk_Notebook; TabId: in String) return String with
+      Pre => TabId /= "";
+      -- ****
+
       -- ****f* TtkNotebook/Notebook_Select
       -- FUNCTION
       -- Set selected tab as a currently selected in the Ttk_Notebook
