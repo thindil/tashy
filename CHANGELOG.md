@@ -29,7 +29,7 @@ of the project.
   `selection clear`, `selection present`, `selection range`, `validate`,
   `xview`, `xview moveto`, `xview scroll`
 - Binding for Tk `ttk::notebook` commands: `forget`, `identify element`,
-  `identify tab`
+  `identify tab`, `index`
 
 ### Changed
 - Updated code documentation
