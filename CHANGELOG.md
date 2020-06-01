@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 Tag **BREAKING:** means that change breaks compatibility with earlier version
 of the project.
 
+## [Unreleased]
+
+### Added
+- Binding for Tk `ttk::notebook` command: `insert`
+
 ## [8.6.5] - 2020-05-31
 
 ### Added
