@@ -103,4 +103,17 @@ package body Tcl.Tk.Ada.Widgets.TtkNotebook is
       return Tcl.Ada.Tcl_GetResult(Notebook.Interp);
    end Get_Selected;
 
+   procedure Tab(Notebook: in Ttk_Notebook; TabId, Options: in String) is
+   begin
+      Execute_Widget_Command(Notebook, "tab", TabId & " " & Options);
+   end Tab;
+
+   function Tab
+     (Notebook: in Ttk_Notebook; TabId: in String; Option: in String := "")
+      return String is
+   begin
+      Execute_Widget_Command(Notebook, "tab", TabId & " " & Option);
+      return Tcl.Ada.Tcl_GetResult(Notebook.Interp);
+   end Tab;
+
 end Tcl.Tk.Ada.Widgets.TtkNotebook;
