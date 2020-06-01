@@ -7,7 +7,7 @@ of the project.
 ## [Unreleased]
 
 ### Added
-- Binding for Tk `ttk::notebook` command: `insert`
+- Binding for Tk `ttk::notebook` commands: `insert`, `tab`
 
 ### Changed
 - Updated code documentation
