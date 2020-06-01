@@ -9,6 +9,9 @@ of the project.
 ### Added
 - Binding for Tk `ttk::notebook` command: `insert`
 
+### Changed
+- Updated code documentation
+
 ## [8.6.5] - 2020-05-31
 
 ### Added
