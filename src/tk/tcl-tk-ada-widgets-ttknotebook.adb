@@ -83,6 +83,15 @@ package body Tcl.Tk.Ada.Widgets.TtkNotebook is
       return Tcl.Ada.Tcl_GetResult(Notebook.Interp);
    end Index;
 
+   procedure Insert
+     (Notebook: in Ttk_Notebook; Pos: in String; SubWindow: in Tk_Widget'Class;
+      Options: in String) is
+   begin
+      Execute_Widget_Command
+        (Notebook, "insert",
+         Pos & " " & Widget_Image(SubWindow) & " " & Options);
+   end Insert;
+
    procedure Notebook_Select(Notebook: in Ttk_Notebook; TabId: in String) is
    begin
       Execute_Widget_Command(Notebook, "select", TabId);
