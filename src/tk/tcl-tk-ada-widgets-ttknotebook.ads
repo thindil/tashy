@@ -223,6 +223,46 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
    function Get_Selected(Notebook: in Ttk_Notebook) return String;
    -- ****
 
+   -- ****f* TtkNotebook/Tab (procedure)
+   -- FUNCTION
+   -- Set a new values for the selected options of the selected tab in the
+   -- selected Ttk_Notebook
+   -- PARAMETERS
+   -- Notebook - Ttk_Notebook in which the tab will be set
+   -- TabId    - Id of the tab which options will be set
+   -- Options  - List of options with their new values
+   -- HISTORY
+   -- 8.6.6 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Tab(Notebook: in Ttk_Notebook; TabId, Options: in String) with
+      Pre => TabId /= "" and Options /= "";
+      -- ****
+
+      -- ****f* TtkNotebook/Tab
+      -- FUNCTION
+      -- Get the value of the options of the selected tab in the selected
+      -- Ttk_Notebook
+      -- PARAMETERS
+      -- Notebook - Ttk_Notebook in which tab will be queried for the options
+      -- TabId    - Id of the tab which options will be queried
+      -- Option   - Name of the option to get. Can be empty. Default value is
+      --            empty
+      -- RESULT
+      -- If Option is specified, return value of this option, otherwise return
+      -- names and values of all options of the selected tab
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Tab
+     (Notebook: in Ttk_Notebook; TabId: in String; Option: in String := "")
+      return String with
+      Pre => TabId /= "";
+      -- ****
+
 private
 
    type Ttk_Notebook is new Tk_Widget with null record;
