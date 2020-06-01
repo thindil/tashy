@@ -179,6 +179,28 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       Pre => TabId /= "";
       -- ****
 
+      -- ****f* TtkNotebook/Insert
+      -- FUNCTION
+      -- Insert the selected window at the selected position in the selected
+      -- Ttk_Notebook. If window is in the selected Ttk_Notebook, move it to
+      -- the selected position
+      -- PARAMETERS
+      -- Notebook  - Ttk_Notebook in which the selected SubWindow will be
+      --             inserted or moved
+      -- Pos       - Position to which insert or move the selected SubWindow
+      -- SubWindow - Tk_Widget which will be inserted or moved
+      -- Options   - Additional options for inserted or moved SubWindow
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Insert
+     (Notebook: in Ttk_Notebook; Pos: in String; SubWindow: in Tk_Widget'Class;
+      Options: in String) with
+      Pre => Pos /= "" and Options /= "";
+      -- ****
+
       -- ****f* TtkNotebook/Notebook_Select
       -- FUNCTION
       -- Set selected tab as a currently selected in the Ttk_Notebook
