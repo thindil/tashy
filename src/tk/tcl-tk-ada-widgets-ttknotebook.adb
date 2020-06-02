@@ -116,4 +116,9 @@ package body Tcl.Tk.Ada.Widgets.TtkNotebook is
       return Tcl.Ada.Tcl_GetResult(Notebook.Interp);
    end Tab;
 
+   function Tabs(Notebook: in Ttk_Notebook) return String is
+   begin
+      return Tcl.Ada.Tcl_GetResult(Notebook.Interp);
+   end Tabs;
+
 end Tcl.Tk.Ada.Widgets.TtkNotebook;

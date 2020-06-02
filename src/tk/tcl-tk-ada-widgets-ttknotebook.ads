@@ -263,6 +263,21 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       Pre => TabId /= "";
       -- ****
 
+      -- ****f* TtkNotebook/Tabs
+      -- FUNCTION
+      -- Get the list of windows names managed by Ttk_Notebook
+      -- PARAMETERS
+      -- Notebook - Ttk_Notebook which will be queried for subwindows
+      -- RESULT
+      -- A list of names of the windows managed by Notebook
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Tabs(Notebook: in Ttk_Notebook) return String;
+   -- ****
+
 private
 
    type Ttk_Notebook is new Tk_Widget with null record;
