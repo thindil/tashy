@@ -104,6 +104,26 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    procedure Forget(Paned: in Ttk_PanedWindow; SubWindow: in Tk_Widget'Class);
    -- ****
 
+   -- ****f* TtkPanedWindow/Identify_Element
+   -- FUNCTION
+   -- Get the name of the paned element at the selected point
+   -- PARAMETERS
+   -- Paned - Ttk_PanedWindow which will be queried for elements
+   -- X     - X coordinate of the point to check
+   -- Y     - Y coordinate of the point to check
+   -- RESULT
+   -- Name of the element at the selected point of {} if no element or point
+   -- is outside Paned
+   -- HISTORY
+   -- 8.6.6 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function Identify_Element
+     (Paned: in Ttk_PanedWindow; X, Y: in String) return String with
+      Pre => X /= "" and Y /= "";
+      -- ****
+
    -- ****f* TtkPanedWindow/Insert
    -- FUNCTION
    -- Insert the selected Tk_Widget in the selected Ttk_PanedWindow on the
