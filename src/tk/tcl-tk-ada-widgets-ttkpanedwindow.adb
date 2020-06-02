@@ -70,6 +70,13 @@ package body Tcl.Tk.Ada.Widgets.TtkPanedWindow is
          Position & " " & Widget_Image(SubWindow) & " " & Options);
    end Insert;
 
+   function Identify_Element
+     (Paned: in Ttk_PanedWindow; X, Y: in String) return String is
+   begin
+      Execute_Widget_Command(Paned, "identify element", X & " " & Y);
+      return Tcl.Ada.Tcl_GetResult(Paned.Interp);
+   end Identify_Element;
+
    function Panes(Paned: in Ttk_PanedWindow) return String is
    begin
       Execute_Widget_Command(Paned, "panes");
