@@ -8,6 +8,7 @@ of the project.
 
 ### Added
 - Binding for Tk `ttk::notebook` commands: `insert`, `tab`, `tabs`
+- Binding for Tk `ttk::panedwindow` command: `identify element`
 
 ### Changed
 - Updated code documentation
