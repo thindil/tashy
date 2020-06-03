@@ -161,6 +161,46 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       Pre => Position /= "";
       -- ****
 
+      -- ****f* TtkPanedWindow/Pane (procedure)
+      -- FUNCTION
+      -- Set the selected options of the selected widget in the selected
+      -- Ttk_PanedWindow
+      -- PARAMETERS
+      -- Paned   - Ttk_PanedWindow in which widget's options will be set
+      -- Index   - Numeric index or name of widget which options will be set
+      -- Options - Options and new values for the selected widget
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Pane(Paned: in Ttk_PanedWindow; Index, Options: in String) with
+      Pre => Index /= "" and Options /= "";
+      -- ****
+
+      -- ****f* TtkPanedWindow/Pane (function)
+      -- FUNCTION
+      -- Get the selected options values of the selected widget in the
+      -- selected Ttk_PanedWindow
+      -- PARAMETERS
+      -- Paned  - Ttk_PanedWindow in which widget's options will be queried
+      -- Index  - Numeric index or name of widget which options will be get
+      -- Option - Name of the option to get. Can be empty. Default value is
+      --          empty
+      -- RESULT
+      -- If Option is specified, then return value of the selected option.
+      -- Otherwise, return list of all options with their values.
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Pane
+     (Paned: in Ttk_PanedWindow; Index: in String; Option: in String := "")
+      return String with
+      Pre => Index /= "";
+      -- ****
+
       -- ****f* TtkPanedWindow/Panes
       -- FUNCTION
       -- Get list of names of all widgets managed by the Ttk_PanedWindow
