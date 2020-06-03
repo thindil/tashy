@@ -124,6 +124,26 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       Pre => X /= "" and Y /= "";
       -- ****
 
+      -- ****f* TtkPanedWindow/Identify_Sash
+      -- FUNCTION
+      -- Get the index of the paned sash at the selected point
+      -- PARAMETERS
+      -- Paned - Ttk_PanedWindow which will be queried for sash
+      -- X     - X coordinate of the point to check
+      -- Y     - Y coordinate of the point to check
+      -- RESULT
+      -- Index of the sash at the selected point of {} if no sash or point
+      -- is outside Paned
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Identify_Sash
+     (Paned: in Ttk_PanedWindow; X, Y: in String) return String with
+      Pre => X /= "" and Y /= "";
+      -- ****
+
    -- ****f* TtkPanedWindow/Insert
    -- FUNCTION
    -- Insert the selected Tk_Widget in the selected Ttk_PanedWindow on the

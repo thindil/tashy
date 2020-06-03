@@ -77,6 +77,13 @@ package body Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       return Tcl.Ada.Tcl_GetResult(Paned.Interp);
    end Identify_Element;
 
+   function Identify_Sash
+     (Paned: in Ttk_PanedWindow; X, Y: in String) return String is
+   begin
+      Execute_Widget_Command(Paned, "identify sash", X & " " & Y);
+      return Tcl.Ada.Tcl_GetResult(Paned.Interp);
+   end Identify_Sash;
+
    function Panes(Paned: in Ttk_PanedWindow) return String is
    begin
       Execute_Widget_Command(Paned, "panes");
