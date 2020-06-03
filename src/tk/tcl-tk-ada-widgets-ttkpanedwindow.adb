@@ -84,6 +84,19 @@ package body Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       return Tcl.Ada.Tcl_GetResult(Paned.Interp);
    end Identify_Sash;
 
+   procedure Pane(Paned: in Ttk_PanedWindow; Index, Options: in String) is
+   begin
+      Execute_Widget_Command(Paned, "pane", Index & " " & Options);
+   end Pane;
+
+   function Pane
+     (Paned: in Ttk_PanedWindow; Index: in String; Option: in String := "")
+      return String is
+   begin
+      Execute_Widget_Command(Paned, "pane", Index & " " & Option);
+      return Tcl.Ada.Tcl_GetResult(Paned.Interp);
+   end Pane;
+
    function Panes(Paned: in Ttk_PanedWindow) return String is
    begin
       Execute_Widget_Command(Paned, "panes");
