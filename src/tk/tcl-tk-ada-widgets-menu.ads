@@ -48,6 +48,10 @@ package Tcl.Tk.Ada.Widgets.Menu is
    --            Default value is null.
    -- RESULT
    -- Newly created Tk_Menu
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -66,6 +70,10 @@ package Tcl.Tk.Ada.Widgets.Menu is
    -- Interp   - Tcl interpreter to which the widget will be created. If null,
    --            the widget will be created in the "contextual" interpreter.
    --            Default value is null.
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Menu; pathName: in String; options: in String := "";
@@ -96,6 +104,10 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- MenuWidget - Tk_Menu widget to which the element will be added
       -- EntryType  - Tk type of entry to add
       -- Options    - Tk options for menu entry to add. Default value is empty
+      -- HISTORY
+      -- 8.6.1 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Add
      (MenuWidget: in Tk_Menu'Class; EntryType: in String;
@@ -129,6 +141,10 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- StartIndex - Index of first element which will be deleted
       -- EndIndex   - Index of last element which will be deleted. If empty,
       --              it will be that same like StartIndex. Default is empty.
+      -- HISTORY
+      -- 8.6.1 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Delete
      (MenuWidget: in Tk_Menu; StartIndex: in String;
@@ -163,6 +179,10 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- MenuWidget - Tk_Menu widget from which entry will be configured
       -- Index      - Index of the menu entry to configure
       -- Options    - Tk options for the menu entry
+      -- HISTORY
+      -- 8.6.2 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Entry_Configure
      (MenuWidget: in Tk_Menu; Index, Options: in String) with
@@ -179,6 +199,10 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- RESULT
       -- String with list of options and their values for the selected menu
       -- entry
+      -- HISTORY
+      -- 8.6.2 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Entry_Configure
      (MenuWidget: in Tk_Menu; Index: in String) return String with
@@ -233,6 +257,10 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- Index      - Index of the menu entry to activate
       -- RESULT
       -- Value returned by the invoked command
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Invoke(MenuWidget: in Tk_Menu; Index: in String) return String with
       Pre => Index /= "";
