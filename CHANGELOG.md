@@ -9,7 +9,7 @@ of the project.
 ### Added
 - Binding for Tk `ttk::notebook` commands: `insert`, `tab`, `tabs`
 - Binding for Tk `ttk::panedwindow` commands: `identify element`,
-  `identify sash`, `pane`
+  `identify sash`, `pane`, `sashpos`
 
 ### Changed
 - Updated code documentation
