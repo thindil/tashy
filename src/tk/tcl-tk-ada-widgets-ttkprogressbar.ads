@@ -80,6 +80,21 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
       Pre => pathName /= "";
       -- ****
 
+     -- ****f* TtkProgressBar/Start
+     -- FUNCTION
+     -- Begin autoincrement mode, call Step every Interval miliseconds
+     -- PARAMETERS
+     -- Bar      - Ttk_ProgressBar in which autoincrement mode will be started
+     -- Interval - Amount of miliseconds in which Step should be called.
+     --            Default value is 50 (20 steps per second)
+     -- HISTORY
+     -- 8.6.6 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- SOURCE
+   procedure Start(Bar: in Ttk_ProgressBar; Interval: in String := "50");
+   -- ****
+
       -- ****f* TtkProgressBar/Step
       -- FUNCTION
       -- Increment value of the Ttk_ProgressBar by amount
