@@ -45,6 +45,11 @@ package body Tcl.Tk.Ada.Widgets.TtkProgressBar is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   procedure Start(Bar: in Ttk_ProgressBar; Interval: in String := "50") is
+   begin
+      Execute_Widget_Command(Bar, "start", Interval);
+   end Start;
+
    procedure Step(Bar: in Ttk_ProgressBar; Amount: in String := "") is
    begin
       Execute_Widget_Command(Bar, "step", Amount);
