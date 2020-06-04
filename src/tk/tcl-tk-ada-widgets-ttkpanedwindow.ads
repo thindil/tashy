@@ -212,6 +212,43 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    function Panes(Paned: in Ttk_PanedWindow) return String;
    -- ****
 
+   -- ****f* TtkPanedWindow/SashPos (procedure)
+   -- FUNCTION
+   -- Set position of the selected sash in the selected Ttk_PanedWindow to new
+   -- position
+   -- PARAMETERS
+   -- Paned  - Ttk_PanedWindow in which the selected sash will be moved
+   -- Index  - Index of the sash to move
+   -- NewPos - New position (in pixels) of the selected sash
+   -- HISTORY
+   -- 8.6.6 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure SashPos(Paned: in Ttk_PanedWindow; Index, NewPos: in String) with
+      Pre => Index /= "" and NewPos /= "";
+      -- ****
+
+      -- ****f* TtkPanedWindow/SashPos
+      -- FUNCTION
+      -- Get the current position of the selected sash in the selected
+      -- Ttk_PanedWindow
+      -- PARAMETERS
+      -- Paned  - Ttk_PanedWindow in which the position of the sash will be
+      --          taken
+      -- Index  - Index of the sash to query for position
+      -- RESULT
+      -- The current position of the selected sash.
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function SashPos
+     (Paned: in Ttk_PanedWindow; Index: in String) return String with
+      Pre => Index /= "";
+      -- ****
+
 private
 
    type Ttk_PanedWindow is new Tk_Widget with null record;
