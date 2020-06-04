@@ -103,4 +103,16 @@ package body Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       return Tcl.Ada.Tcl_GetResult(Paned.Interp);
    end Panes;
 
+   procedure SashPos(Paned: in Ttk_PanedWindow; Index, NewPos: in String) is
+   begin
+      Execute_Widget_Command(Paned, "sashpos", Index & " " & NewPos);
+   end SashPos;
+
+   function SashPos
+     (Paned: in Ttk_PanedWindow; Index: in String) return String is
+   begin
+      Execute_Widget_Command(Paned, "sashpos", Index);
+      return Tcl.Ada.Tcl_GetResult(Paned.Interp);
+   end SashPos;
+
 end Tcl.Tk.Ada.Widgets.TtkPanedWindow;
