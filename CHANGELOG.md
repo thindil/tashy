@@ -11,6 +11,7 @@ of the project.
 - Binding for Tk `ttk::panedwindow` commands: `identify element`,
   `identify sash`, `pane`, `sashpos`
 - Binding for Tk `ttk::progressbar` commands: `start`, `stop`
+- Binding for Tk `ttk::scrollbar` commands: `delta`, `fraction`, `get`, `set`
 
 ### Changed
 - Updated code documentation
