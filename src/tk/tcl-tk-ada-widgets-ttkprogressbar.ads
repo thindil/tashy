@@ -106,6 +106,20 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
    procedure Step(Bar: in Ttk_ProgressBar; Amount: in String := "");
    -- ****
 
+   -- ****f* TtkProgressBar/Stop
+   -- FUNCTION
+   -- Stop autoincrement mode: cancels any recurring timer events in the
+   -- selected Ttk_ProgressBar
+   -- PARAMETERS
+   -- Bar - Ttk_ProgressBar in which autoincrement mode will be stoped
+   -- HISTORY
+   -- 8.6.6 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Stop(Bar: in Ttk_ProgressBar);
+   -- ****
+
 private
 
    type Ttk_ProgressBar is new Tk_Widget with null record;
