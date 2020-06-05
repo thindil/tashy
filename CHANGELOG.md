@@ -10,7 +10,7 @@ of the project.
 - Binding for Tk `ttk::notebook` commands: `insert`, `tab`, `tabs`
 - Binding for Tk `ttk::panedwindow` commands: `identify element`,
   `identify sash`, `pane`, `sashpos`
-- Binding for Tk `ttk::progressbar` command: `start`
+- Binding for Tk `ttk::progressbar` commands: `start`, `stop`
 
 ### Changed
 - Updated code documentation
