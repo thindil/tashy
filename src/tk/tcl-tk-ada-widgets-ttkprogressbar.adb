@@ -55,4 +55,9 @@ package body Tcl.Tk.Ada.Widgets.TtkProgressBar is
       Execute_Widget_Command(Bar, "step", Amount);
    end Step;
 
+   procedure Stop(Bar: in Ttk_ProgressBar) is
+   begin
+      Execute_Widget_Command(Bar, "stop");
+   end Stop;
+
 end Tcl.Tk.Ada.Widgets.TtkProgressBar;
