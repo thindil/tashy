@@ -20,6 +20,8 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
+with Tcl.Ada;
+
 package body Tcl.Tk.Ada.Widgets.TtkScrollbar is
 
    function Create
@@ -44,5 +46,31 @@ package body Tcl.Tk.Ada.Widgets.TtkScrollbar is
    begin
       Widgt := Create(pathName, options, Interp);
    end Create;
+
+   function Scrollbar_Delta
+     (ScrollbarWidget: in Ttk_Scrollbar; DeltaX, DeltaY: in String)
+      return String is
+   begin
+      Execute_Widget_Command(ScrollbarWidget, "delta", DeltaX & " " & DeltaY);
+      return Tcl.Ada.Tcl_GetResult(ScrollbarWidget.Interp);
+   end Scrollbar_Delta;
+
+   function Fraction
+     (ScrollbarWidget: in Ttk_Scrollbar; X, Y: in String) return String is
+   begin
+      Execute_Widget_Command(ScrollbarWidget, "fraction", X & " " & Y);
+      return Tcl.Ada.Tcl_GetResult(ScrollbarWidget.Interp);
+   end Fraction;
+
+   function Get(ScrollbarWidget: in Ttk_Scrollbar) return String is
+   begin
+      Execute_Widget_Command(ScrollbarWidget, "get");
+      return Tcl.Ada.Tcl_GetResult(ScrollbarWidget.Interp);
+   end Get;
+
+   procedure Set(ScrollbarWidget: in Ttk_Scrollbar; First, Last: in String) is
+   begin
+      Execute_Widget_Command(ScrollbarWidget, "set", First & " " & Last);
+   end Set;
 
 end Tcl.Tk.Ada.Widgets.TtkScrollbar;
