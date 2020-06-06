@@ -12,6 +12,7 @@ of the project.
   `identify sash`, `pane`, `sashpos`
 - Binding for Tk `ttk::progressbar` commands: `start`, `stop`
 - Binding for Tk `ttk::scrollbar` commands: `delta`, `fraction`, `get`, `set`
+- Binding for Tk `ttk::sizegrip` widget
 
 ### Changed
 - Updated code documentation
