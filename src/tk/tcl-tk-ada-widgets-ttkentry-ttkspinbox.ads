@@ -80,6 +80,52 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox is
       Pre => pathName /= "";
       -- ****
 
+      -- ****f* TtkSpinBox/Current (function)
+      -- FUNCTION
+      -- Get the current value of the selected Ttk_SpinBox
+      -- PARAMETERS
+      -- SpinBox - Ttk_SpinBox which the current value will be queried
+      -- RESULT
+      -- The current value of the SpinBox or "-1" if the value is not in the
+      -- list of values for the SpinBox
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Current(SpinBox: in Ttk_SpinBox) return String;
+   -- ****
+
+   -- ****f* TtkSpinBox/Current
+   -- FUNCTION
+   -- Set the current value for the selected Ttk_SpinBox
+   -- PARAMETERS
+   -- SpinBox  - Ttk_SpinBox which the current value will be set
+   -- NewIndex - A new index of the item from the list of values for the
+   --            SpinBox which will be set as the current value
+   -- HISTORY
+   -- 8.6.6 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Current(SpinBox: in Ttk_SpinBox; NewIndex: in String) with
+      Pre => NewIndex /= "";
+      -- ****
+
+      -- ****f* TtkSpinBox/Set
+      -- FUNCTION
+      -- Set the value of the selected Ttk_SpinBox
+      -- PARAMETERS
+      -- SpinBox - Ttk_SpinBox which value will be set
+      -- Value   - A new value for the SpinBox
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Set(SpinBox: in Ttk_SpinBox; Value: in String);
+   -- ****
+
 private
 
    type Ttk_SpinBox is new Ttk_Entry with null record;
