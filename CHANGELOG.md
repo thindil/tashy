@@ -13,6 +13,7 @@ of the project.
 - Binding for Tk `ttk::progressbar` commands: `start`, `stop`
 - Binding for Tk `ttk::scrollbar` commands: `delta`, `fraction`, `get`, `set`
 - Binding for Tk `ttk::sizegrip` widget
+- Binding for Tk `ttk::spinbox` commands: `current`, `set`
 
 ### Changed
 - Updated code documentation
