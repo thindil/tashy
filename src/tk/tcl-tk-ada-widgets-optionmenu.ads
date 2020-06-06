@@ -49,6 +49,10 @@ package Tcl.Tk.Ada.Widgets.OptionMenu is
    --            Default value is null.
    -- RESULT
    -- Newly created Tk_OptionMenu
+   -- HISTORY
+   -- 8.6.2 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    overriding function Create
      (pathName, options: in String; Interp: in Tcl_Interp := null)
@@ -56,19 +60,23 @@ package Tcl.Tk.Ada.Widgets.OptionMenu is
       Pre => pathName /= "" and options /= "";
      -- ****
 
-   -- ****f* OptionMenu/Create (procedure)
-   -- FUNCTION
-   -- Creates a new Tk_OptionMenu in the specified interpreter.
-   -- PARAMETERS
-   -- Widgt    - Tk_OptionMenu which will be created
-   -- pathName - Tk path (starts with dot) for the widget
-   -- options  - Options which will be passed to the widget. Must be at least
-   --            Global variable name in which selected menu will be stored
-   --            and at least one menu value
-   -- Interp   - Tcl interpreter to which the widget will be created. If null,
-   --            the widget will be created in the "contextual" interpreter.
-   --            Default value is null.
-   -- SOURCE
+     -- ****f* OptionMenu/Create (procedure)
+     -- FUNCTION
+     -- Creates a new Tk_OptionMenu in the specified interpreter.
+     -- PARAMETERS
+     -- Widgt    - Tk_OptionMenu which will be created
+     -- pathName - Tk path (starts with dot) for the widget
+     -- options  - Options which will be passed to the widget. Must be at least
+     --            Global variable name in which selected menu will be stored
+     --            and at least one menu value
+     -- Interp   - Tcl interpreter to which the widget will be created. If null,
+     --            the widget will be created in the "contextual" interpreter.
+     --            Default value is null.
+     -- HISTORY
+     -- 8.6.2 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_OptionMenu; pathName, options: in String;
       Interp: in Tcl_Interp := null) with
