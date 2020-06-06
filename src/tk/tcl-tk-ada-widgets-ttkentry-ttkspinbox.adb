@@ -20,6 +20,8 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
+with Tcl.Ada;
+
 package body Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox is
 
    function Create
@@ -43,5 +45,21 @@ package body Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox is
    begin
       Widgt := Create(pathName, options, Interp);
    end Create;
+
+   function Current(SpinBox: in Ttk_SpinBox) return String is
+   begin
+      Execute_Widget_Command(SpinBox, "current");
+      return Tcl.Ada.Tcl_GetResult(SpinBox.Interp);
+   end Current;
+
+   procedure Current(SpinBox: in Ttk_SpinBox; NewIndex: in String) is
+   begin
+      Execute_Widget_Command(SpinBox, "current", NewIndex);
+   end Current;
+
+   procedure Set(SpinBox: in Ttk_SpinBox; Value: in String) is
+   begin
+      Execute_Widget_Command(SpinBox, "set", Value);
+   end Set;
 
 end Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox;
