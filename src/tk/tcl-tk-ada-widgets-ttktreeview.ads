@@ -214,6 +214,26 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Column /= "";
       -- ****
 
+      -- ****f* TtkTreeView/Identify_Column
+      -- FUNCTION
+      -- Get the identifier of the column of the selected Ttk_Tree_View at the
+      -- selected position
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View which will be queried for the columns
+      -- X              - X coordinate to check for the column
+      -- Y              - Y coordinate to check for the column
+      -- RESULT
+      -- Identifier of the column at the selected position
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Identify_Column
+     (TreeViewWidget: in Ttk_Tree_View; X, Y: in String) return String with
+      Pre => X /= "" and Y /= "";
+      -- ****
+
       -- ****f* TtkTreeView/Identify_Region
       -- FUNCTION
       -- Get the type of the element of the selected Ttk_Tree_View at the
