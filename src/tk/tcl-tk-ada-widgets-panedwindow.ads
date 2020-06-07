@@ -55,25 +55,33 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    --            Default value is null.
    -- RESULT
    -- Newly created Tk_PanedWindow
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Tk_PanedWindow with
       Pre => pathName /= "";
-      -- ****
+     -- ****
 
-   -- ****f* PanedWindow/Create (procedure)
-   -- FUNCTION
-   -- Creates a new Tk_PanedWindow in the specified interpreter.
-   -- PARAMETERS
-   -- Widgt    - Tk_PanedWindow which will be created
-   -- pathName - Tk path (starts with dot) for the widget
-   -- options  - Options which will be passed to the widget. Default value is
-      --            empty
-   -- Interp   - Tcl interpreter to which the widget will be created. If null,
-      --            the widget will be created in the "contextual" interpreter.
-      --            Default value is null.
-      -- SOURCE
+     -- ****f* PanedWindow/Create (procedure)
+     -- FUNCTION
+     -- Creates a new Tk_PanedWindow in the specified interpreter.
+     -- PARAMETERS
+     -- Widgt    - Tk_PanedWindow which will be created
+     -- pathName - Tk path (starts with dot) for the widget
+     -- options  - Options which will be passed to the widget. Default value is
+     --            empty
+     -- Interp   - Tcl interpreter to which the widget will be created. If null,
+     --            the widget will be created in the "contextual" interpreter.
+     --            Default value is null.
+     -- HISTORY
+     -- 8.6.1 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_PanedWindow; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
