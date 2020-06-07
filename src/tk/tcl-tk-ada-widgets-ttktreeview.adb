@@ -110,6 +110,13 @@ package body Tcl.Tk.Ada.Widgets.TtkTreeView is
       return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
    end Heading;
 
+   function Identify_Column
+     (TreeViewWidget: in Ttk_Tree_View; X, Y: in String) return String is
+   begin
+      Execute_Widget_Command(TreeViewWidget, "identify column", X & " " & Y);
+      return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
+   end Identify_Column;
+
    function Identify_Region
      (TreeViewWidget: in Ttk_Tree_View; X, Y: in String) return String is
    begin
