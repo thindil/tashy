@@ -214,6 +214,27 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Column /= "";
       -- ****
 
+      -- ****f* TtkTreeView/Identify_Region
+      -- FUNCTION
+      -- Get the type of the element of the selected Ttk_Tree_View at the
+      -- selected position
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View which will be queried for the elements
+      -- X              - X coordinate to check for the element
+      -- Y              - Y coordinate to check for the element
+      -- RESULT
+      -- Type of the element at selected position. Can be one of: "heading",
+      -- "separator", "tree" and "cell"
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Identify_Region
+     (TreeViewWidget: in Ttk_Tree_View; X, Y: in String) return String with
+      Pre => X /= "" and Y /= "";
+      -- ****
+
       -- ****f* TtkTreeView/Index
       -- FUNCTION
       -- Get index of selected item in the selected Ttk_Tree_View
