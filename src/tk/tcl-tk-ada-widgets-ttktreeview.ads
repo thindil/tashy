@@ -254,6 +254,26 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => X /= "" and Y /= "";
       -- ****
 
+      -- ****f* TtkTreeView/Identify_Item
+      -- FUNCTION
+      -- Get the identifier of the item of the selected Ttk_Tree_View at the
+      -- selected position
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View which will be queried for the items
+      -- X              - X coordinate to check for the item
+      -- Y              - Y coordinate to check for the item
+      -- RESULT
+      -- Identifier of the item at the selected position
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Identify_Item
+     (TreeViewWidget: in Ttk_Tree_View; X, Y: in String) return String with
+      Pre => X /= "" and Y /= "";
+      -- ****
+
       -- ****f* TtkTreeView/Identify_Region
       -- FUNCTION
       -- Get the type of the element of the selected Ttk_Tree_View at the
