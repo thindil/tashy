@@ -14,7 +14,8 @@ of the project.
 - Binding for Tk `ttk::scrollbar` commands: `delta`, `fraction`, `get`, `set`
 - Binding for Tk `ttk::sizegrip` widget
 - Binding for Tk `ttk::spinbox` commands: `current`, `set`
-- Binding for Tk `ttk::treeview` commands: `identify region`, `identify column`
+- Binding for Tk `ttk::treeview` commands: `identify region`,
+  `identify column`, `identify element`
 
 ### Changed
 - Updated code documentation
