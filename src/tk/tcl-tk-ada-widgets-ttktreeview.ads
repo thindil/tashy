@@ -491,17 +491,59 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Items /= "";
       -- ****
 
-   -- ****f* TtkTreeView/Selection_Toggle
-   -- FUNCTION
-   -- Toggle selection state for selected items in the selected Ttk_Tree_View
-   -- PARAMETERS
-   -- TreeViewWidget - Ttk_Tree_View in which items will have toggled selection
+      -- ****f* TtkTreeView/Selection_Toggle
+      -- FUNCTION
+      -- Toggle selection state for selected items in the selected Ttk_Tree_View
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View in which items will have toggled selection
       --                  state
       -- Items          - Tcl list of items to toggle
       -- SOURCE
    procedure Selection_Toggle
      (TreeViewWidget: in Ttk_Tree_View; Items: in String) with
       Pre => Items /= "";
+      -- ****
+
+      -- ****f* TtkTreeView/Set
+      -- FUNCTION
+      -- Get the value(s) of the selected item in the selected Ttk_Tree_View
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View in which the selected item will be
+      --                  queried
+      -- Item           - Identifier of the item which values will be taken
+      -- Column         - Identifier of the column of the item which value
+      --                  will be taken. Can be empty. Default value is empty
+      -- RESULT
+      -- If Column is empty, return a dictionary of columns/values pairs for
+      -- the selected item. Otherwise return value for the selected column
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Set
+     (TreeViewWidget: in Ttk_Tree_View; Item: in String;
+      Column: in String := "") return String with
+      Pre => Item /= "";
+      -- ****
+
+      -- ****f* TtkTreeView/Set
+      -- FUNCTION
+      -- Set the value of the selected column of the selected item in the
+      -- selected Ttk_Tree_View
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View in which the selected item will be set
+      -- Item           - Identifier of the item which value will be set
+      -- Column         - Identifier of the column which value will be set
+      -- Value          - A new value for the selected Column
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Set
+     (TreeViewWidget: in Ttk_Tree_View; Item, Column, Value: in String) with
+      Pre => Item /= "" and Column /= "" and Value /= "";
       -- ****
 
 private
