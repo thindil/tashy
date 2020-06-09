@@ -392,7 +392,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- Item is the last element of its parent
       -- SOURCE
    function Next
-     (TreeViewWidget: in Ttk_Tree_View; Item: String) return String with
+     (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
       Pre => Item /= "";
       -- ****
 
@@ -425,9 +425,24 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- string if Item is the first element of its parent
       -- SOURCE
    function Prev
-     (TreeViewWidget: in Ttk_Tree_View; Item: String) return String with
+     (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
       Pre => Item /= "";
       -- ****
+
+      -- ****f* TtkTreeView/See
+      -- FUNCTION
+      -- Make the selected item visible (scroll Ttk_Tree_View and open its
+      -- ancestor if needed)
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View in which the item will be visible
+      -- Item           - Identifier of the item which will be visible
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure See(TreeViewWidget: in Ttk_Tree_View; Item: in String) with
+      Pre => Item /= "";
 
       -- ****f* TtkTreeView/Selection
       -- FUNCTION

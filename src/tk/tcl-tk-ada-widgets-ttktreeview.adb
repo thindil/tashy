@@ -199,6 +199,11 @@ package body Tcl.Tk.Ada.Widgets.TtkTreeView is
       return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
    end Prev;
 
+   procedure See(TreeViewWidget: in Ttk_Tree_View; Item: in String) is
+   begin
+      Execute_Widget_Command(TreeViewWidget, "see", Item);
+   end See;
+
    function Selection(TreeViewWidget: in Ttk_Tree_View) return String is
    begin
       Execute_Widget_Command(TreeViewWidget, "selection");
