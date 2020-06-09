@@ -234,4 +234,19 @@ package body Tcl.Tk.Ada.Widgets.TtkTreeView is
       Execute_Widget_Command(TreeViewWidget, "selection toggle", Items);
    end Selection_Toggle;
 
+   function Set
+     (TreeViewWidget: in Ttk_Tree_View; Item: in String;
+      Column: in String := "") return String is
+   begin
+      Execute_Widget_Command(TreeViewWidget, "set", Item & " " & Column);
+      return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
+   end Set;
+
+   procedure Set
+     (TreeViewWidget: in Ttk_Tree_View; Item, Column, Value: in String) is
+   begin
+      Execute_Widget_Command
+        (TreeViewWidget, "set", Item & " " & Column & " " & Value);
+   end Set;
+
 end Tcl.Tk.Ada.Widgets.TtkTreeView;
