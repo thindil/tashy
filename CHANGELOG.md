@@ -15,7 +15,7 @@ of the project.
 - Binding for Tk `ttk::sizegrip` widget
 - Binding for Tk `ttk::spinbox` commands: `current`, `set`
 - Binding for Tk `ttk::treeview` commands: `identify region`,
-  `identify column`, `identify element`, `identify item`
+  `identify column`, `identify element`, `identify item`, `see`
 
 ### Changed
 - Updated code documentation
