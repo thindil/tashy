@@ -587,6 +587,47 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => TagName /= "";
       -- ****
 
+      -- ****f* TtkTreeView/Tag_Configure (procedure)
+      -- FUNCTION
+      -- Configure the selected tag in the selected Ttk_Tree_View widget
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View in which tag will be configured
+      -- TagName        - Name of the tag to configure
+      -- Options        - Tag options with values to set
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Tag_Configure
+     (TreeViewWidget: in Ttk_Tree_View; TagName, Options: in String) with
+      Pre => TagName /= "" and Options /= "";
+      -- ****
+
+      -- ****f* TtkTreeView/Tag_Configure (function)
+      -- FUNCTION
+      -- Get configuration of the selected tag in the selected Ttk_Tree_View
+      -- widget
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View in which the tag will be queried for
+      --                  options
+      -- TagName        - Name of the tag which configuration will be queried
+      -- Option         - Configuration option which value to get. Default value
+      --                  is empty
+      -- RESULT
+      -- The selected configuration option value. If Option is empty, return
+      -- string with all options and their values.
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Tag_Configure
+     (TreeViewWidget: in Ttk_Tree_View; TagName: in String;
+      Option: in String := "") return String with
+      Pre => TagName /= "";
+      -- ****
+
 private
 
    type Ttk_Tree_View is new Tk_Widget with null record;
