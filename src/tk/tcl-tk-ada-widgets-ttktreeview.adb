@@ -249,4 +249,21 @@ package body Tcl.Tk.Ada.Widgets.TtkTreeView is
         (TreeViewWidget, "set", Item & " " & Column & " " & Value);
    end Set;
 
+   procedure Tag_Bind
+     (TreeViewWidget: in Ttk_Tree_View;
+      TagName, Sequence, Script: in String) is
+   begin
+      Execute_Widget_Command
+        (TreeViewWidget, "tag bind", TagName & " " & Sequence & " " & Script);
+   end Tag_Bind;
+
+   function Tag_Bind
+     (TreeViewWidget: in Ttk_Tree_View; TagName: in String;
+      Sequence: in String := "") return String is
+   begin
+      Execute_Widget_Command
+        (TreeViewWidget, "tag bind", TagName & " " & Sequence);
+      return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
+   end Tag_Bind;
+
 end Tcl.Tk.Ada.Widgets.TtkTreeView;
