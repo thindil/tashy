@@ -546,6 +546,47 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Item /= "" and Column /= "" and Value /= "";
       -- ****
 
+      -- ****f* TtkTreeView/Tag_Bind (procedure)
+      -- FUNCTION
+      -- Bind the selected script to the selected sequence on the selected tag
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View in which script will be bound
+      -- TagName        - Name of the tag to which script will be bound
+      -- Sequence       - Name of the sequence to which script will be bound
+      -- Script         - Tcl commands which will be bound
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Tag_Bind
+     (TreeViewWidget: in Ttk_Tree_View;
+      TagName, Sequence, Script: in String) with
+      Pre => TagName /= "" and Sequence /= "" and Script /= "";
+      -- ****
+
+      -- ****f* TtkTreeView/Tag_Bind (function)
+      -- FUNCTION
+      -- Get scrips bounded to the selected tag in the selected Ttk_Tree_View
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View in which information will be queried
+      -- TagName        - Name of the tag which bindings will be queried
+      -- Sequence       - Name of the sequence. Can be empty. Default value is
+      --                  empty
+      -- RESULT
+      -- If Sequence is empty, return all binded sequences. Otherwise, return
+      -- script associated with the selected Sequence.
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Tag_Bind
+     (TreeViewWidget: in Ttk_Tree_View; TagName: in String;
+      Sequence: in String := "") return String with
+      Pre => TagName /= "";
+      -- ****
+
 private
 
    type Ttk_Tree_View is new Tk_Widget with null record;
