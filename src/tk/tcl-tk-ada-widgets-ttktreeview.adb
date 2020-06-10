@@ -266,4 +266,20 @@ package body Tcl.Tk.Ada.Widgets.TtkTreeView is
       return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
    end Tag_Bind;
 
+   procedure Tag_Configure
+     (TreeViewWidget: in Ttk_Tree_View; TagName, Options: in String) is
+   begin
+      Execute_Widget_Command
+        (TreeViewWidget, "tag configure", TagName & " " & Options);
+   end Tag_Configure;
+
+   function Tag_Configure
+     (TreeViewWidget: in Ttk_Tree_View; TagName: in String;
+      Option: in String := "") return String is
+   begin
+      Execute_Widget_Command
+        (TreeViewWidget, "tag configure", TagName & " " & Option);
+      return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
+   end Tag_Configure;
+
 end Tcl.Tk.Ada.Widgets.TtkTreeView;
