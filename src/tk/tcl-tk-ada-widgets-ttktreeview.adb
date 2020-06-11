@@ -282,4 +282,12 @@ package body Tcl.Tk.Ada.Widgets.TtkTreeView is
       return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
    end Tag_Configure;
 
+   function Tag_Has
+     (TreeViewWidget: in Ttk_Tree_View; TagName: in String;
+      Item: in String := "") return String is
+   begin
+      Execute_Widget_Command(TreeViewWidget, "tag has", TagName & " " & Item);
+      return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
+   end Tag_Has;
+
 end Tcl.Tk.Ada.Widgets.TtkTreeView;
