@@ -16,7 +16,7 @@ of the project.
 - Binding for Tk `ttk::spinbox` commands: `current`, `set`
 - Binding for Tk `ttk::treeview` commands: `identify region`,
   `identify column`, `identify element`, `identify item`, `see`, `set`,
-  `tag bind`, `tag configure`
+  `tag bind`, `tag configure`, `tag has`
 
 ### Changed
 - Updated code documentation
