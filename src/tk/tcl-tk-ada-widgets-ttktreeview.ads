@@ -642,12 +642,31 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- If Item is specified, return "1" when item has that tag, otherwise
       -- return "0". If Item is not specified return list of items which have
       -- the selected tag.
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Tag_Has
      (TreeViewWidget: in Ttk_Tree_View; TagName: in String;
       Item: in String := "") return String with
       Pre => TagName /= "";
       -- ****
+
+      -- ****f* TtkTreeView/Tag_Names
+      -- FUNCTION
+      -- Get the names of the all available tags in the selected Ttk_Tree_View
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View which will be queried for tags names
+      -- RESULT
+      -- List of names of all available tags
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Tag_Names(TreeViewWidget: in Ttk_Tree_View) return String;
+   -- ****
 
 private
 
