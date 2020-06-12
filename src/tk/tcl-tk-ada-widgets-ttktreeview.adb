@@ -302,4 +302,11 @@ package body Tcl.Tk.Ada.Widgets.TtkTreeView is
       return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
    end Tag_Names;
 
+   procedure Tag_Remove
+     (TreeViewWidget: in Ttk_Tree_View; Tag: in String;
+      Items: in String := "") is
+   begin
+      Execute_Widget_Command(TreeViewWidget, "tag remove", Tag & " " & Items);
+   end Tag_Remove;
+
 end Tcl.Tk.Ada.Widgets.TtkTreeView;
