@@ -48,25 +48,33 @@ package Tcl.Tk.Ada.Widgets.Text is
    --            Default value is null.
    -- RESULT
    -- Newly created Tk_Text
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Tk_Text with
       Pre => pathName /= "";
-      -- ****
+     -- ****
 
-   -- ****f* Text/Create (procedure)
-   -- FUNCTION
-   -- Creates a new Tk_Text in the specified interpreter.
-   -- PARAMETERS
-   -- Widgt    - Tk_Text which will be created
-   -- pathName - Tk path (starts with dot) for the widget
-   -- options  - Options which will be passed to the widget. Default value is
-      --            empty
-   -- Interp   - Tcl interpreter to which the widget will be created. If null,
-      --            the widget will be created in the "contextual" interpreter.
-      --            Default value is null.
-      -- SOURCE
+     -- ****f* Text/Create (procedure)
+     -- FUNCTION
+     -- Creates a new Tk_Text in the specified interpreter.
+     -- PARAMETERS
+     -- Widgt    - Tk_Text which will be created
+     -- pathName - Tk path (starts with dot) for the widget
+     -- options  - Options which will be passed to the widget. Default value is
+     --            empty
+     -- Interp   - Tcl interpreter to which the widget will be created. If null,
+     --            the widget will be created in the "contextual" interpreter.
+     --            Default value is null.
+     -- HISTORY
+     -- 8.6.1 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Text; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
@@ -188,6 +196,10 @@ package Tcl.Tk.Ada.Widgets.Text is
    --              It can be also values for another ranges of text to
    --              delete. If empty, delete only one character. Default
    --              value is empty.
+   -- HISTORY
+   -- 8.6.3 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Delete
      (TextWidget: in Tk_Text; StartIndex: in String;
@@ -516,6 +528,10 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- Index      - Tk_Text position on which text will be inserted. Lines
       --              starts from 1, characters starts from 0
       -- Text       - Text to insert to Tk_Text widget
+      -- HISTORY
+      -- 8.6.1 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Insert(TextWidget: in Tk_Text; Index, Text: in String) with
       Pre => Index /= "" and Text /= "";
@@ -827,6 +843,10 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- Indexes    - End position for adding the tag or more ranges for add
       --              the tag. If empty, tag will be added only for one
       --              character. Default value is empty
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Tag_Add
      (TextWidget: in Tk_Text; TagName, StartIndex: in String;
@@ -901,6 +921,10 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- TextWidget - Tk_Text in which tag will be configured
       -- TagName    - Name of the tag to configure
       -- Options    - Tag options with values to set
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Tag_Configure
      (TextWidget: in Tk_Text; TagName, Options: in String) with
@@ -918,6 +942,10 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- RESULT
       -- The selected configuration option value. If Option is empty, return
       -- string with all options and their values.
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Tag_Configure
      (TextWidget: in Tk_Text; TagName: in String; Option: in String := "")
