@@ -546,6 +546,24 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Item /= "" and Column /= "" and Value /= "";
       -- ****
 
+      -- ****f* TtkTreeView/Tag_Add
+      -- FUNCTION
+      -- Add the selected tag to the selected items in the selcted
+      -- Ttk_Tree_View
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View in which tag will be added
+      -- Tag            - Name of the tag to add
+      -- Items          - List of the items to which the Tag will be added
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Tag_Add
+     (TreeViewWidget: in Ttk_Tree_View; Tag, Items: in String) with
+      Pre => Tag /= "" and Items /= "";
+      -- ****
+
       -- ****f* TtkTreeView/Tag_Bind (procedure)
       -- FUNCTION
       -- Bind the selected script to the selected sequence on the selected tag
