@@ -686,6 +686,27 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    function Tag_Names(TreeViewWidget: in Ttk_Tree_View) return String;
    -- ****
 
+   -- ****f* TtkTreeView/Tag_Remove
+   -- FUNCTION
+   -- Remove the selected tag from the selected items in the selected
+   -- Ttk_Tree_View
+   -- PARAMETERS
+   -- TreeViewWidget - Ttk_Tree_View in which the selected tag will be removed
+   -- Tag            - The name of the tag to remove
+   -- Items          - List of the items to remove. If empty, remove the
+   --                  selected tag from all items in TreeViewWidget. Default
+   --                  value is empty
+   -- HISTORY
+   -- 8.6.6 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Tag_Remove
+     (TreeViewWidget: in Ttk_Tree_View; Tag: in String;
+      Items: in String := "") with
+      Pre => Tag /= "";
+      -- ****
+
 private
 
    type Ttk_Tree_View is new Tk_Widget with null record;
