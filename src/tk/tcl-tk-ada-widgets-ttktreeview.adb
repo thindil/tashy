@@ -249,6 +249,12 @@ package body Tcl.Tk.Ada.Widgets.TtkTreeView is
         (TreeViewWidget, "set", Item & " " & Column & " " & Value);
    end Set;
 
+   procedure Tag_Add
+     (TreeViewWidget: in Ttk_Tree_View; Tag, Items: in String) is
+   begin
+      Execute_Widget_Command(TreeViewWidget, "tag add", Tag & " " & Items);
+   end Tag_Add;
+
    procedure Tag_Bind
      (TreeViewWidget: in Ttk_Tree_View;
       TagName, Sequence, Script: in String) is
