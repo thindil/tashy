@@ -17,7 +17,8 @@ of the project.
 - Binding for Tk `ttk::treeview` commands: `identify region`,
   `identify column`, `identify element`, `identify item`, `see`, `set`,
   `tag add`,`tag bind`, `tag configure`, `tag has`, `tag names`,
-  `tag remove`
+  `tag remove`, `xview`, `xview moveto`, `xview scroll`, `yview`,
+  `yview moveto`, `yview scroll`
 
 ### Changed
 - Updated code documentation
