@@ -309,4 +309,42 @@ package body Tcl.Tk.Ada.Widgets.TtkTreeView is
       Execute_Widget_Command(TreeViewWidget, "tag remove", Tag & " " & Items);
    end Tag_Remove;
 
+   function XView(TreeViewWidget: in Ttk_Tree_View) return String is
+   begin
+      Execute_Widget_Command(TreeViewWidget, "xview");
+      return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
+   end XView;
+
+   procedure Xview_Move_To
+     (TreeViewWidget: in Ttk_Tree_View; Fraction: in String) is
+   begin
+      Execute_Widget_Command(TreeViewWidget, "xview moveto", Fraction);
+   end Xview_Move_To;
+
+   procedure Xview_Scroll
+     (TreeViewWidget: in Ttk_Tree_View; Number, What: in String) is
+   begin
+      Execute_Widget_Command
+        (TreeViewWidget, "xview scroll", Number & " " & What);
+   end Xview_Scroll;
+
+   function YView(TreeViewWidget: in Ttk_Tree_View) return String is
+   begin
+      Execute_Widget_Command(TreeViewWidget, "yview");
+      return Tcl.Ada.Tcl_GetResult(TreeViewWidget.Interp);
+   end YView;
+
+   procedure Yview_Move_To
+     (TreeViewWidget: in Ttk_Tree_View; Fraction: in String) is
+   begin
+      Execute_Widget_Command(TreeViewWidget, "yview moveto", Fraction);
+   end Yview_Move_To;
+
+   procedure Yview_Scroll
+     (TreeViewWidget: in Ttk_Tree_View; Number, What: in String) is
+   begin
+      Execute_Widget_Command
+        (TreeViewWidget, "yview scroll", Number & " " & What);
+   end Yview_Scroll;
+
 end Tcl.Tk.Ada.Widgets.TtkTreeView;
