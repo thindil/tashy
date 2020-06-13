@@ -707,6 +707,111 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Tag /= "";
       -- ****
 
+   -- ****f* TtkTreeView/XView
+   -- FUNCTION
+   -- Get which horizontal fraction of the Ttk_Tree_View is visible
+   -- PARAMETERS
+   -- TreeViewWidget - Ttk_Tree_View which will be queried for visibility
+   -- RESULT
+   -- Pair of elements: first element is the start of horizontal fraction of
+   -- the TreeViewWidget which is visible, second is the end of horizontal
+   -- fraction of the TreeViewWidget which is visible.
+   -- HISTORY
+   -- 8.6.6 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function XView(TreeViewWidget: in Ttk_Tree_View) return String;
+   -- ****
+
+   -- ****f* TtkTreeView/Xview_Move_To
+   -- FUNCTION
+   -- Adjusts the view in the window so that fraction of the total width of
+   -- the Ttk_Tree_View is off-screen to the left.
+   -- PARAMETERS
+   -- TreeViewWidget - Ttk_Tree_View which view will be adjusted
+   -- Fraction       - Fraction of the TreeViewWidget to move. Must be between 0
+   --                  and 1
+   -- HISTORY
+   -- 8.6.6 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Xview_Move_To
+     (TreeViewWidget: in Ttk_Tree_View; Fraction: in String) with
+      Pre => Fraction /= "";
+      -- ****
+
+      -- ****f* TtkTreeView/Xview_Scroll
+      -- FUNCTION
+      -- Shift the view in the window on left or right according to Number and
+      -- What.
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View which view will be shifted
+      -- Number         - The amount of What to shift the TreeViewWidget
+      -- What           - Type of amount to move. Can be "units" or "pages"
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Xview_Scroll
+     (TreeViewWidget: in Ttk_Tree_View; Number, What: in String) with
+      Pre => Number /= "" and (What = "units" or What = "pages");
+      -- ****
+
+      -- ****f* TtkTreeView/YView
+      -- FUNCTION
+      -- Get which vertical fraction of the Ttk_Tree_View is visible
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View which will be queried for visibility
+      -- RESULT
+      -- Pair of elements: first element is the start of vertical fraction of
+      -- the TreeViewWidget which is visible, second is the end of vertical
+      -- fraction of the TreeViewWidget which is visible.
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function YView(TreeViewWidget: in Ttk_Tree_View) return String;
+   -- ****
+
+   -- ****f* TtkTreeView/Yview_Move_To
+   -- FUNCTION
+   -- Adjusts the view in the window so that fraction of the total height of
+   -- the Ttk_Tree_View is off-screen to the top.
+   -- PARAMETERS
+   -- TreeViewWidget - Ttk_Tree_View which view will be adjusted
+   -- Fraction       - Fraction of the TreeViewWidget to move. Must be between 0
+   --                  and 1
+   -- HISTORY
+   -- 8.6.6 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Yview_Move_To
+     (TreeViewWidget: in Ttk_Tree_View; Fraction: in String) with
+      Pre => Fraction /= "";
+      -- ****
+
+      -- ****f* TtkTreeView/Yview_Scroll
+      -- FUNCTION
+      -- Shift the view in the window on top or bottom according to Number and
+      -- What.
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View which view will be shifted
+      -- Number         - The amount of What to shift the TreeViewWidget
+      -- What           - Type of amount to move. Can be "units" or "pages"
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Yview_Scroll
+     (TreeViewWidget: in Ttk_Tree_View; Number, What: in String) with
+      Pre => Number /= "" and (What = "units" or What = "pages");
+      -- ****
 private
 
    type Ttk_Tree_View is new Tk_Widget with null record;
