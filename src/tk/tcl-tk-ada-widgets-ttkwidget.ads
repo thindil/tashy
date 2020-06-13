@@ -27,6 +27,26 @@
 package Tcl.Tk.Ada.Widgets.TtkWidget is
 -- ****
 
+   -- ****f* TtkWidget/Identify_Element
+   -- FUNCTION
+   -- Get the name of the element at the selected coordinate
+   -- PARAMETERS
+   -- Widget - Ttk widget which will be queried for the elements
+   -- X      - X coordinate to check relative to the Widget
+   -- Y      - Y coordinate to check relative to the Widget
+   -- RESULT
+   -- The name of the element at the selected point or {} if no element was
+   -- found
+   -- HISTORY
+   -- 8.6.6 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function Identify_Element
+     (Widget: in Tk_Widget'Class; X, Y: in String) return String with
+      Pre => X /= "" and Y /= "";
+      -- ****
+
    -- ****f* TtkWidget/InState
    -- FUNCTION
    -- Check if the selected Ttk widget is in the selected state

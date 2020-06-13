@@ -24,6 +24,13 @@ with Tcl.Ada;
 
 package body Tcl.Tk.Ada.Widgets.TtkWidget is
 
+   function Identify_Element
+     (Widget: in Tk_Widget'Class; X, Y: in String) return String is
+   begin
+      Execute_Widget_Command(Widget, "identify element", X & " " & Y);
+      return Tcl.Ada.Tcl_GetResult(Widget.Interp);
+   end Identify_Element;
+
    function InState
      (Widget: in Tk_Widget'Class; StateSpec: in String;
       Script: in String := "") return String is
