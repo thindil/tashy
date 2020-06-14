@@ -340,6 +340,26 @@ package Tcl.Tk.Ada.Widgets.Menu is
       Pre => Index /= "";
       -- ****
 
+      -- ****f* Menu/Tk_Popup
+      -- FUNCTION
+      -- Post the selected menu at the selected screen position
+      -- PARAMETERS
+      -- MenuWidget - Tk_Menu which will be posted
+      -- X          - X screen coordinate on which MenuWidget will be posted
+      -- Y          - Y screen coordinate on which MenuWidget will be posted
+      -- MenuEntry  - Index of menu entry on which menu will be positioned. If
+      --              empty, top left corner of the menu will be set at the
+      --              selected position.
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Tk_Popup
+     (MenuWidget: in Tk_Menu; X, Y: in String; MenuEntry: in String := "") with
+      Pre => X /= "" and Y /= "";
+      -- ****
+
       -- ****f* Menu/Unpost
       -- FUNCTION
       -- Unmap the selected menu so it is no longer displayed. This procedure
