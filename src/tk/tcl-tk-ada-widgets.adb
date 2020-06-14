@@ -138,6 +138,11 @@ package body Tcl.Tk.Ada.Widgets is
       Tcl_Eval(Widgt.Interp, "raise " & Widget_Image(AboveThis));
    end Widget_Raise;
 
+   procedure Tk_Wait(WaitFor, Name: in String) is
+   begin
+      Tcl_Eval(Get_Context, "tkwait" & WaitFor & " " & Name);
+   end Tk_Wait;
+
    procedure Execute_Widget_Command
      (Widgt: in Tk_Widget'Class; command: in String;
       options: in String := "") is
