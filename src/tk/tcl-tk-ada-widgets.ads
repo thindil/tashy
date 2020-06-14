@@ -320,6 +320,19 @@ package Tcl.Tk.Ada.Widgets is
    procedure Widget_Raise(Widgt, AboveThis: in Tk_Widget'Class);
    -- ****
 
+   -- ****f* Widgets/Tk_Wait
+   -- FUNCTION
+   -- Wait until the selected thing to happen
+   -- PARAMETERS
+   -- WaitFor - "variable" - the selected variable was modified, "visibility"
+   --           the selected window visibility state was changed, "window" the
+   --           selected window was destroyed
+   -- Name    - Name of variable or window on which Tk_Wait should waits
+   -- SOURCE
+   procedure Tk_Wait(WaitFor, Name: in String) with
+      Pre => WaitFor in "variable" | "visibility" | "window" and Name /= "";
+      -- ****
+
    -- ****f* Widgets/Execute_Widget_Command
    -- FUNCTION
    -- Execute selected Tcl command in the selected widget. Generally, you
