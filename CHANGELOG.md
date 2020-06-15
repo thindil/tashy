@@ -20,7 +20,7 @@ of the project.
   `tag remove`, `xview`, `xview moveto`, `xview scroll`, `yview`,
   `yview moveto`, `yview scroll`
 - Binding for Tk commands: `identify element`, `tk_popup`, `tkwait`,
-  `tk_chooseColor`
+  `tk_chooseColor`, `tk_fontchooser configure`
 
 ### Changed
 - Updated code documentation
