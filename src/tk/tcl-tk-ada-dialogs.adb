@@ -25,6 +25,12 @@ with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
 
 package body Tcl.Tk.Ada.Dialogs is
 
+   function Choose_Color(Options: in String := "") return String is
+   begin
+      Tcl_Eval(Get_Context, "tk_chooseColor " & Options);
+      return Tcl_GetResult(Get_Context);
+   end Choose_Color;
+
    function Choose_Directory(Options: in String := "") return String is
    begin
       Tcl_Eval(Get_Context, "tk_chooseDirectory " & Options);
