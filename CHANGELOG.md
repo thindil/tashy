@@ -19,7 +19,8 @@ of the project.
   `tag add`,`tag bind`, `tag configure`, `tag has`, `tag names`,
   `tag remove`, `xview`, `xview moveto`, `xview scroll`, `yview`,
   `yview moveto`, `yview scroll`
-- Binding for Tk commands: `identify element`, `tk_popup`, `tkwait`
+- Binding for Tk commands: `identify element`, `tk_popup`, `tkwait`,
+  `tk_chooseColor`
 
 ### Changed
 - Updated code documentation
