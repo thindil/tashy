@@ -32,6 +32,22 @@ package Tcl.Tk.Ada.Dialogs is
 
    type DialogButtons is array(Positive range <>) of Unbounded_String;
 
+   -- ****f* Dialogs/Choose_Color
+   -- FUNCTION
+   -- Create dialog which allow the user select color.
+   -- PARAMETERS
+   -- Options - Tk options which will be passed to the dialog. Default value
+   --           is empty string
+   -- RESULT
+   -- Name of selected color or empty string if color was not selected
+   -- HISTORY
+   -- 8.6.6 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function Choose_Color(Options: in String := "") return String;
+   -- ****
+
    -- ****f* Dialogs/Choose_Directory
    -- FUNCTION
    -- Create dialog which allow the user select directory.
