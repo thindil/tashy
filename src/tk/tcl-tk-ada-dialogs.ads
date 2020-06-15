@@ -90,6 +90,38 @@ package Tcl.Tk.Ada.Dialogs is
        Default <= Buttons'Length);
       -- ****
 
+      -- ****f* Dialogs/FontChooser_Configure (procedure)
+      -- FUNCTION
+      -- Set the selected option for the font chooser dialog
+      -- PARAMETERS
+      -- Options - Tk font chooser options with values to set
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure FontChooser_Configure(Options: in String) with
+      Pre => Options /= "";
+      -- ****
+
+      -- ****f* Dialogs/FontChooser_Configure (function)
+      -- FUNCTION
+      -- Get the selected option value or values of all options for the font
+      -- chooser dialog
+      -- PARAMETERS
+      -- Option - Name of the font chooser option to get. Can be empty. Default
+      --          value is empty
+      -- RESULT
+      -- Value for the selected option or list of pairs name value of all
+      -- available options
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function FontChooser_Configure(Option: in String := "") return String;
+   -- ****
+
       -- ****f* Dialogs/Get_Open_File
       -- FUNCTION
       -- Create dialog which allow the user select file to open.
