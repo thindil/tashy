@@ -316,6 +316,18 @@ pack $g -side top
 
 set row 0
 
+proc DisplaySetting {name} {
+   global row g w tashvar
+
+   set w [string tolower $name]
+   ttk::label $g.$w-label -text "$name: " -anchor e
+   grid $g.$w-label  -row $row -column 0 -sticky e
+   ttk::entry $g.$w-entry -width 40
+   $g.$w-entry insert end $tashvar($name)
+   grid $g.$w-entry  -row $row -column 1
+   incr row
+}
+
 foreach name $tashorder {
    switch -regexp $name {
       "(TK|TCL)_(VERSION|RELEASE)" {
@@ -324,14 +336,20 @@ foreach name $tashorder {
       "EXE" {
          # don't display
       }
+      "(X11)(HOME|_LIB|_INCLUDE)" {
+         # don't display on Windows
+         if {$tcl_platform(platform) != "windows"} {
+            DisplaySetting $name
+         }
+      }
+      "(TK|TCL)_(LIBRARY)" {
+         # don't display on Windows
+         if {$tcl_platform(platform) != "windows"} {
+            DisplaySetting $name
+         }
+      }
       default {
-         set w [string tolower $name]
-         ttk::label $g.$w-label -text "$name: " -anchor e
-         grid $g.$w-label  -row $row -column 0 -sticky e
-         ttk::entry $g.$w-entry -width 40
-         $g.$w-entry insert end $tashvar($name)
-         grid $g.$w-entry  -row $row -column 1
-         incr row
+         DisplaySetting $name
       }
    }
 }
