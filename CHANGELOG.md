@@ -25,6 +25,9 @@ of the project.
 ### Changed
 - Updated code documentation
 
+### Fixed
+- Confusion about available bindings for build in setup script (issue #1)
+
 ## [8.6.5] - 2020-05-31
 
 ### Added
