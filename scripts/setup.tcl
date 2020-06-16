@@ -306,9 +306,9 @@ pack .instructions -side top -fill x
 set modulesframe [ttk::labelframe .modules -text "Select modules"]
 pack $modulesframe -side top
 
-pack [ttk::radiobutton .modules.all -text "Everything" -value "all" -variable buildoption]
-pack [ttk::radiobutton .modules.tcl -text "Tcl only" -value "tcl" -variable buildoption]
-pack [ttk::radiobutton .modules.select -text "Tcl, Tk and ..." -value "tcltk" -variable buildoption]
+pack [ttk::radiobutton .modules.all -text "Everything" -value "all" -variable buildoption] -fill x
+pack [ttk::radiobutton .modules.tcl -text "Tcl only" -value "tcl" -variable buildoption] -fill x
+pack [ttk::radiobutton .modules.select -text "Tcl, Tk and one from the list below" -value "tcltk" -variable buildoption]
 pack [ttk::checkbutton .modules.tklib -text "Tklib" -variable installtklib]
 
 set g [ttk::frame .grid]
