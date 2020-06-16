@@ -23,6 +23,8 @@ exec wish "$0" ${1+"$@"}
 # tash_options.gpr, which are included in makefiles/withed by GPRs to
 # customize to the local environment.
 
+package require Tk
+
 set buildoption all
 set installtklib 0
 set tashy_version 8.6.6
@@ -111,6 +113,7 @@ proc Save_GUI {g} {
          }
          default {
             set w [string tolower $name]
+            if {![winfo exists $g.$w-entry]} continue;
             set tashvar($name) [$g.$w-entry get]
          }
       }
