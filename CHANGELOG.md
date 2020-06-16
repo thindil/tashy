@@ -27,6 +27,7 @@ of the project.
 
 ### Fixed
 - Confusion about available bindings for build in setup script (issue #1)
+- Don't display unnecessary settings on Windows systems (issue #2)
 
 ## [8.6.5] - 2020-05-31
 
