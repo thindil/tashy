@@ -58,6 +58,7 @@ proc CreateGprFile {} {
       puts stderr $gprfid
       exit
    }
+   set library_switch [string range $library_switches 0 [string first "-ltcl" $library_switches]-1]
    puts $gprfid "--  $gpr
    ----------------------------------------------------------
    --
@@ -85,14 +86,15 @@ proc CreateGprFile {} {
    C_Compiler_Options :=
    (
    \"[join [concat $tashvar(CARGS)] "\",\n      \""]\",
-      \"[join [list [subst $tashvar(TCL_INCLUDE)] [subst $tashvar(X11_INCLUDE)]] "\",\n      \""]\"
+      \"[join [list "$tashvar(TCL_INCLUDE)" "$tashvar(X11_INCLUDE)"] "\",\n      \""]\"
    );
 
    --  These options determine the location of the system's Tcl, Tk
    --  libraries.
    Linker_Options :=
    (
-   \"[join $library_switches "\",\n      \""]\"
+   \"[string range $library_switches 0 [string first "-ltcl" $library_switches]-2]\"
+      \"[join [string range $library_switches [string first "-ltcl" $library_switches] [string length $library_switches]] "\",\n      \""]\"
    );
 
    end Tash_Options;"
@@ -115,7 +117,7 @@ proc Save_GUI {g} {
          default {
             set w [string tolower $name]
             if {![winfo exists $g.$w-entry]} continue;
-            set tashvar($name) [$g.$w-entry get]
+            set tashvar($name) "[$g.$w-entry get]"
          }
       }
    }
