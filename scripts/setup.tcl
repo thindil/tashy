@@ -93,7 +93,7 @@ proc CreateGprFile {} {
    --  libraries.
    Linker_Options :=
    (
-   \"[string range $library_switches 0 [string first "-ltcl" $library_switches]-2]\"
+   \"[string range $library_switches 0 [string first "-ltcl" $library_switches]-2]\",
       \"[join [string range $library_switches [string first "-ltcl" $library_switches] [string length $library_switches]] "\",\n      \""]\"
    );
 
