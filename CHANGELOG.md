@@ -28,6 +28,7 @@ of the project.
 ### Fixed
 - Confusion about available bindings for build in setup script (issue #1)
 - Don't display unnecessary settings on Windows systems (issue #2)
+- The setup script doesn't supports spaces in paths (issue #4)
 
 ## [8.6.5] - 2020-05-31
 
