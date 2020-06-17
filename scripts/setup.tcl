@@ -84,7 +84,8 @@ proc CreateGprFile {} {
    --  These are the C compiler options used to build Tashy.
    C_Compiler_Options :=
    (
-   \"[join [concat $tashvar(CARGS) $tashvar(TCL_INCLUDE) $tashvar(X11_INCLUDE)] "\",\n      \""]\"
+   \"[join [concat $tashvar(CARGS)] "\",\n      \""]\",
+      \"[join [list [subst $tashvar(TCL_INCLUDE)] [subst $tashvar(X11_INCLUDE)]] "\",\n      \""]\"
    );
 
    --  These options determine the location of the system's Tcl, Tk
