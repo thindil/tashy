@@ -48,6 +48,10 @@ package Tcl.Tk.Ada.Widgets.TtkButton is
    --            Default value is null.
    -- RESULT
    -- Newly created Ttk_Button
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -66,22 +70,30 @@ package Tcl.Tk.Ada.Widgets.TtkButton is
    -- Interp   - Tcl interpreter to which the widget will be created. If null,
    --            the widget will be created in the "contextual" interpreter.
    --            Default value is null.
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_Button; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
-      -- ****
+     -- ****
 
-      -- ****f* TtkButton/Invoke
-      -- FUNCTION
-      -- Invoke the Tcl command associated with the button.
-      -- PARAMETERS
-      -- Buttn   - Ttk_Button from which Tcl command will be invoked
-      -- options - Tk options for the Tcl command invoke
-      -- RESULT
-      -- Value returned by the Tcl command associated with the button
-      -- SOURCE
+     -- ****f* TtkButton/Invoke
+     -- FUNCTION
+     -- Invoke the Tcl command associated with the button.
+     -- PARAMETERS
+     -- Buttn   - Ttk_Button from which Tcl command will be invoked
+     -- options - Tk options for the Tcl command invoke
+     -- RESULT
+     -- Value returned by the Tcl command associated with the button
+     -- HISTORY
+     -- 8.6.1 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- SOURCE
    function Invoke
      (Buttn: in Ttk_Button'Class; options: in String := "") return String;
    -- ****
