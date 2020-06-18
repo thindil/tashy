@@ -19,11 +19,11 @@ exec wish "$0" ${1+"$@"}
 # 330, Boston, MA 02111-1307, USA.
 
 # This is a Tcl/Tk script which helps install TASHY.  It collects
-# information about the environment and creates files makeconf and
-# tash_options.gpr, which are included in makefiles/withed by GPRs to
-# customize to the local environment.
-
-package require Tk
+# information about the environment and creates file tash_options.gpr,
+# which is withed by GPRs to customize to the local environment. Note:
+# Please don't add "package require Tk" here. This script is designed
+# to work with headless servers also. Manually run it only with "wish"
+# command
 
 set buildoption all
 set installtklib 0
