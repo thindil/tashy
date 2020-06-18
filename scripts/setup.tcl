@@ -105,7 +105,8 @@ proc CreateGprFile {} {
 # GUI.
 #-----------------------------------------------------------------
 proc Save_GUI {g} {
-   global tashorder tashvar useLinkerOptions tcl_platform
+   global tashorder tashvar useLinkerOptions tcl_platform library_switches
+   global tcl_version tk_version
    foreach name $tashorder {
       switch -regexp $name {
          "(TK|TCL)_(VERSION|RELEASE)" {
@@ -118,6 +119,36 @@ proc Save_GUI {g} {
             set w [string tolower $name]
             if {![winfo exists $g.$w-entry]} continue;
             set tashvar($name) "[$g.$w-entry get]"
+         }
+      }
+   }
+   set library_switches ""
+   set tclhome $tashvar(TCLHOME)
+   regsub -all {[ \t]+} $tcl_platform(os) "_" os
+   switch $tcl_platform(platform) {
+      "windows" {
+         regsub {\.} $tcl_version {} tcl_short_version
+         regsub {\.} $tk_version  {} tk_short_version
+         append library_switches "-L$tclhome/lib "
+         set tail " "
+         if {![file exists [file join $tclhome lib tcl$tk_short_version.lib]]} {
+            set tail "t "
+         }
+         append library_switches "-ltcl$tcl_short_version$tail"
+         append library_switches "-ltk$tk_short_version$tail"
+      }
+      "unix" {
+         if [cequal $os "SunOS"] {
+            append library_switches " -R$tclhome/lib -L$tclhome/lib"
+            append library_switches " -ltcl$tcl_version -ltk$tk_version"
+         } elseif [cequal $os "Darwin"] {
+            append library_switches " -L$tclhome/lib"
+            append library_switches " -ltcl$tcl_version -ltk$tk_version"
+         } else {
+            # Must be Linux (?)
+            append library_switches " -Wl,-rpath,$tclhome/lib"
+            append library_switches " -L$tclhome/lib"
+            append library_switches " -ltcl$tcl_version -ltk$tk_version"
          }
       }
    }
