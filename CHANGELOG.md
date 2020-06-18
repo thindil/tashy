@@ -24,6 +24,7 @@ of the project.
 
 ### Changed
 - Updated code documentation
+- Updated README.md
 
 ### Fixed
 - Confusion about available bindings for build in setup script (issue #1)
