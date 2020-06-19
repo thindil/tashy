@@ -59,9 +59,14 @@ package body Tcl.Tk.Ada.Dialogs is
 
    function FontChooser_Configure(Option: in String := "") return String is
    begin
-      Tcl_Eval(Get_Context, "tk_fontchooser " & Option);
+      Tcl_Eval(Get_Context, "tk_fontchooser configure " & Option);
       return Tcl_GetResult(Get_Context);
    end FontChooser_Configure;
+
+   procedure FontChooser_Show is
+   begin
+      Tcl_Eval(Get_Context, "tk_fontchooser show");
+   end FontChooser_Show;
 
    function Get_Open_File(Options: in String := "") return String is
    begin
