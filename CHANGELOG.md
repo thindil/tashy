@@ -20,7 +20,7 @@ of the project.
   `tag remove`, `xview`, `xview moveto`, `xview scroll`, `yview`,
   `yview moveto`, `yview scroll`
 - Binding for Tk commands: `identify element`, `tk_popup`, `tkwait`,
-  `tk_chooseColor`, `tk_fontchooser configure`
+  `tk_chooseColor`, `tk_fontchooser configure`, `tk_fontchooser show`
 - Option to save the project settings in setup script to the file (issue #3)
 
 ### Changed
