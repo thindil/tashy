@@ -21,6 +21,7 @@ of the project.
   `yview moveto`, `yview scroll`
 - Binding for Tk commands: `identify element`, `tk_popup`, `tkwait`,
   `tk_chooseColor`, `tk_fontchooser configure`
+- Option to save the project settings in setup script to the file (issue #3)
 
 ### Changed
 - Updated code documentation
