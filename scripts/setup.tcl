@@ -28,6 +28,7 @@ exec wish "$0" ${1+"$@"}
 set buildoption all
 set installtklib 0
 set tashy_version 8.6.6
+set savesettings 0
 
 # Used for mostly for Docker, normally Tk should set this variable
 # by itself
@@ -159,7 +160,7 @@ proc Save_GUI {g} {
 # Also, create tcl_record_sizes.ads file
 #-----------------------------------------------------------------
 proc Save {} {
-   global tashvar tcl_platform buildoption library_switches installtklib
+   global tashvar tcl_platform buildoption library_switches installtklib savesettings
    if {$buildoption == "tcl"} {
       setvar TK_VERSION    ""        {Tk version}
       setvar TK_LIBRARY    ""        {Tk library}
@@ -183,6 +184,28 @@ proc Save {} {
    file delete [file join [pwd] src tcl_record_sizes.c]
    exec [file join [pwd] tcl_record_sizes] > [file join [pwd] src tcl_record_sizes.ads]
    file delete [file join [pwd] tcl_record_sizes$tashvar(EXE)]
+   if {$savesettings == 1} {
+      set f [open "settings.txt" w]
+      puts $f $tashvar(PLATFORM)
+      puts $f $tashvar(OS)
+      puts $f $tashvar(X11HOME)
+      puts $f $tashvar(X11_LIB)
+      puts $f $tashvar(X11_INCLUDE)
+      puts $f $tashvar(TCLSH)
+      puts $f $tashvar(TCLHOME)
+      puts $f $tashvar(TCL_INCLUDE)
+      puts $f $tashvar(TCL_VERSION)
+      puts $f $tashvar(TCL_LIBRARY)
+      puts $f $tashvar(TK_VERSION)
+      puts $f $tashvar(TK_LIBRARY)
+      puts $f $tashvar(CARGS)
+      puts $f $tashvar(AARGS)
+      puts $f $tashvar(BARGS)
+      puts $f $tashvar(EXE)
+      puts $f "$buildoption"
+      puts $f "$installtklib"
+      close $f
+   }
 }
 
 
@@ -190,128 +213,150 @@ proc Save {} {
 #------------------------------------------------------
 proc Set_Macros {platform os} {
    global tcl_version tk_version tcl_interactive tcl_library tk_library env
-   global library_switches gpr_switches
+   global library_switches gpr_switches buildoption installtklib
 
-   set x11home           ""
-   set x11_lib           ""
-   set x11_include       ""
-   set exec_suffix       ""
+   if {![file exists settings.txt]} {
+      set x11home           ""
+      set x11_lib           ""
+      set x11_include       ""
+      set exec_suffix       ""
 
-   regsub -all {[ \t]+} $os "_" os
+      regsub -all {[ \t]+} $os "_" os
 
-   if [cequal $os "Darwin"] {
-      set tclhome "/usr"
-      set tcl_include "/usr/include"
-   } else {
-      set tclhome [file dirname [file dirname [info nameofexecutable]]]
-      set tcl_include [file join $tclhome include]
-      if {![file exists [file join $tcl_include tcl.h]]} {
-         set tcl_include [file join $tcl_include [file tail $tcl_library]]
-      }
-   }
-   set library_switches  ""
-
-   set pwd               [pwd]
-
-   switch $platform {
-      "windows" {
-         # It assumes a GNAT that recognises tcl86.lib as a
-         # candidate for the linker switch -ltcl86.
-         #
-         # Should works with ActiveState Tcl and Magicsplat Tcl
-         # distributions
-         #
-         # Most development tools get confused by paths with spaces.
-         regsub {PROGRAM FILES} $tclhome "PROGRA~1" tclhome
-         regsub {\.} $tcl_version {} tcl_short_version
-         regsub {\.} $tk_version  {} tk_short_version
-         set tclsh "tclsh${tcl_short_version}"
-         set libtcl ""
-         set tcldll "tcl${tcl_short_version}.dll"
-         set libtk ""
-         set tkdll  "tk${tk_short_version}.dll"
-         append library_switches "-L$tclhome/lib "
-         set tail " "
-         if {![file exists [file join $tclhome lib tcl$tk_short_version.lib]]} {
-            set tail "t "
+      if [cequal $os "Darwin"] {
+         set tclhome "/usr"
+         set tcl_include "/usr/include"
+      } else {
+         set tclhome [file dirname [file dirname [info nameofexecutable]]]
+         set tcl_include [file join $tclhome include]
+         if {![file exists [file join $tcl_include tcl.h]]} {
+            set tcl_include [file join $tcl_include [file tail $tcl_library]]
          }
-         append library_switches "-ltcl$tcl_short_version$tail"
-         append library_switches "-ltk$tk_short_version$tail"
-         set exec_suffix ".exe"
       }
-      "unix" {
-         set tclsh "tclsh"
-         set dynlib [info sharedlibextension]
-         set libtcl "$tclhome/lib/libtcl${tcl_version}$dynlib"
-         set libtk  "$tclhome/lib/libtk${tk_version}$dynlib"
+      set library_switches  ""
 
-         set PossibleXHomes \
-            [list /usr/openwin /usr/X /usr/X11R6 /usr /opt/X11]
-         foreach dir $PossibleXHomes {
-            set lib [file join $dir lib]
-            foreach file [list "libX11$dynlib" "libX11.a"] {
-               if [file exists [file join $lib $file]] {
-                  set x11home $dir
-                  set x11_lib [file join $x11home lib]
-                  break
-               }
+      set pwd               [pwd]
+
+      switch $platform {
+         "windows" {
+            # It assumes a GNAT that recognises tcl86.lib as a
+            # candidate for the linker switch -ltcl86.
+            #
+            # Should works with ActiveState Tcl and Magicsplat Tcl
+            # distributions
+            #
+            # Most development tools get confused by paths with spaces.
+            regsub {PROGRAM FILES} $tclhome "PROGRA~1" tclhome
+            regsub {\.} $tcl_version {} tcl_short_version
+            regsub {\.} $tk_version  {} tk_short_version
+            set tclsh "tclsh${tcl_short_version}"
+            set libtcl ""
+            set tcldll "tcl${tcl_short_version}.dll"
+            set libtk ""
+            set tkdll  "tk${tk_short_version}.dll"
+            append library_switches "-L$tclhome/lib "
+            set tail " "
+            if {![file exists [file join $tclhome lib tcl$tk_short_version.lib]]} {
+               set tail "t "
             }
+            append library_switches "-ltcl$tcl_short_version$tail"
+            append library_switches "-ltk$tk_short_version$tail"
+            set exec_suffix ".exe"
          }
-         if [file isdirectory [file join $x11home include]] {
-            set x11_include [file join $x11home include]
-         } else {
+         "unix" {
+            set tclsh "tclsh"
+            set dynlib [info sharedlibextension]
+            set libtcl "$tclhome/lib/libtcl${tcl_version}$dynlib"
+            set libtk  "$tclhome/lib/libtk${tk_version}$dynlib"
+
+            set PossibleXHomes \
+               [list /usr/openwin /usr/X /usr/X11R6 /usr /opt/X11]
             foreach dir $PossibleXHomes {
-               set include [file join $dir include]
-               if [file isdirectory $include] {
-                  set x11_include $include
-                  break
+               set lib [file join $dir lib]
+               foreach file [list "libX11$dynlib" "libX11.a"] {
+                  if [file exists [file join $lib $file]] {
+                     set x11home $dir
+                     set x11_lib [file join $x11home lib]
+                     break
+                  }
                }
             }
-         }
-         if [cequal $os "SunOS"] {
-            append library_switches " -R$tclhome/lib -L$tclhome/lib"
-            append library_switches " -ltcl$tcl_version -ltk$tk_version"
-         } elseif [cequal $os "Darwin"] {
-            append library_switches " -L$tclhome/lib"
-            append library_switches " -ltcl$tcl_version -ltk$tk_version"
-         } else {
-            # Must be Linux (?)
-            append library_switches " -Wl,-rpath,$tclhome/lib"
-            append library_switches " -L$tclhome/lib"
-            append library_switches " -ltcl$tcl_version -ltk$tk_version"
+            if [file isdirectory [file join $x11home include]] {
+               set x11_include [file join $x11home include]
+            } else {
+               foreach dir $PossibleXHomes {
+                  set include [file join $dir include]
+                  if [file isdirectory $include] {
+                     set x11_include $include
+                     break
+                  }
+               }
+            }
+            if [cequal $os "SunOS"] {
+               append library_switches " -R$tclhome/lib -L$tclhome/lib"
+               append library_switches " -ltcl$tcl_version -ltk$tk_version"
+            } elseif [cequal $os "Darwin"] {
+               append library_switches " -L$tclhome/lib"
+               append library_switches " -ltcl$tcl_version -ltk$tk_version"
+            } else {
+               # Must be Linux (?)
+               append library_switches " -Wl,-rpath,$tclhome/lib"
+               append library_switches " -L$tclhome/lib"
+               append library_switches " -ltcl$tcl_version -ltk$tk_version"
+            }
          }
       }
-   }
-
-   setvar PLATFORM          $platform            {OS platform}
-   setvar OS                $os                  {Operating system}
-   if [lempty $x11home] {
-      setvar X11HOME       ""                   {X11 home directory}
+      setvar PLATFORM          $platform            {OS platform}
+      setvar OS                $os                  {Operating system}
+      if [lempty $x11home] {
+         setvar X11HOME       ""                   {X11 home directory}
+      } else {
+         setvar X11HOME       "$x11home"           {X11 home directory}
+      }
+      if [lempty $x11_lib] {
+         setvar X11_LIB       ""                   {X11 library directory}
+      } else {
+         setvar X11_LIB       "$x11_lib"           {X11 library directory}
+      }
+      if [lempty $x11_include] {
+         setvar X11_INCLUDE   ""                   {X11 include directory}
+      } else {
+         setvar X11_INCLUDE   "-I$x11_include"     {X11 include directory}
+      }
+      setvar TCLSH             "$tclsh"             {Tclsh executable}
+      setvar TCLHOME           "$tclhome"           {Tcl Home directory}
+      setvar TCL_INCLUDE       "-I$tcl_include"     {Tcl include directory}
+      setvar TCL_VERSION       "$tcl_version"       {Tcl version}
+      setvar TCL_LIBRARY       "$libtcl"            {Tcl library}
+      setvar TK_VERSION        "$tk_version"        {Tk version}
+      setvar TK_LIBRARY        "$libtk"             {Tk library}
+      setvar CARGS             "-g -O2"             {C compiler switches}
+      setvar AARGS             "-g -O2 -gnatqQafo -gnatwaL" \
+         {Ada compiler switches}
+      setvar BARGS             "-E"                 {gnatbind switches}
+      setvar EXE               "$exec_suffix"       {suffix for executable files}
    } else {
-      setvar X11HOME       "$x11home"           {X11 home directory}
+      set f [open "settings.txt"]
+      setvar PLATFORM          "[gets $f]"   {OS platform}
+      setvar OS                "[gets $f]"   {Operating system}
+      setvar X11HOME           "[gets $f]"   {X11 home directory}
+      setvar X11_LIB           "[gets $f]"   {X11 library directory}
+      setvar X11_INCLUDE       "[gets $f]"   {X11 include directory}
+      setvar TCLSH             "[gets $f]"   {Tclsh executable}
+      setvar TCLHOME           "[gets $f]"   {Tcl Home directory}
+      setvar TCL_INCLUDE       "[gets $f]"   {Tcl include directory}
+      setvar TCL_VERSION       "[gets $f]"   {Tcl version}
+      setvar TCL_LIBRARY       "[gets $f]"   {Tcl library}
+      setvar TK_VERSION        "[gets $f]"   {Tk version}
+      setvar TK_LIBRARY        "[gets $f]"   {Tk library}
+      setvar CARGS             "[gets $f]"   {C compiler switches}
+      setvar AARGS             "[gets $f]"   {Ada compiler switches}
+      setvar BARGS             "[gets $f]"   {gnatbind switches}
+      setvar EXE               "[gets $f]"   {suffix for executable files}
+      set buildoption "[gets $f]"
+      set installtklib "[gets $f]"
+      close $f
    }
-   if [lempty $x11_lib] {
-      setvar X11_LIB       ""                   {X11 library directory}
-   } else {
-      setvar X11_LIB       "$x11_lib"           {X11 library directory}
-   }
-   if [lempty $x11_include] {
-      setvar X11_INCLUDE   ""                   {X11 include directory}
-   } else {
-      setvar X11_INCLUDE   "-I$x11_include"     {X11 include directory}
-   }
-   setvar TCLSH             "$tclsh"             {Tclsh executable}
-   setvar TCLHOME           "$tclhome"           {Tcl Home directory}
-   setvar TCL_INCLUDE       "-I$tcl_include"     {Tcl include directory}
-   setvar TCL_VERSION       "$tcl_version"       {Tcl version}
-   setvar TCL_LIBRARY       "$libtcl"            {Tcl library}
-   setvar TK_VERSION        "$tk_version"        {Tk version}
-   setvar TK_LIBRARY        "$libtk"             {Tk library}
-   setvar CARGS             "-g -O2"             {C compiler switches}
-   setvar AARGS             "-g -O2 -gnatqQafo -gnatwaL" \
-      {Ada compiler switches}
-   setvar BARGS             "-E"                 {gnatbind switches}
-   setvar EXE               "$exec_suffix"       {suffix for executable files}
 }
 
 # Establish values for all macros depending on platform
@@ -391,6 +436,7 @@ foreach name $tashorder {
    }
 }
 
+pack [ttk::checkbutton .savesetting -text {Save these settings to the file} -variable savesettings]
 ttk::frame .buttons
 pack .buttons -side bottom -fill x -pady 2m
 ttk::button .buttons.save   -text Save   -command "Save_GUI $g; exit"
