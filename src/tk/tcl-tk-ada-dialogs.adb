@@ -63,6 +63,11 @@ package body Tcl.Tk.Ada.Dialogs is
       return Tcl_GetResult(Get_Context);
    end FontChooser_Configure;
 
+   procedure FontChooser_Hide is
+   begin
+      Tcl_Eval(Get_Context, "tk_fontchooser hide");
+   end FontChooser_Hide;
+
    procedure FontChooser_Show is
    begin
       Tcl_Eval(Get_Context, "tk_fontchooser show");

@@ -122,6 +122,17 @@ package Tcl.Tk.Ada.Dialogs is
    function FontChooser_Configure(Option: in String := "") return String;
    -- ****
 
+   -- ****f* Dialogs/FontChooser_Hide
+   -- FUNCTION
+   -- Hide the font chooser dialog
+   -- HISTORY
+   -- 8.6.6 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure FontChooser_Hide;
+   -- ****
+
    -- ****f* Dialogs/FontChooser_Show
    -- FUNCTION
    -- Show the font chooser dialog
