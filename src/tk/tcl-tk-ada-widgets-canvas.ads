@@ -246,7 +246,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "";
       -- ****
 
-      -- ****f* Canvas/Canvas_Create
+      -- ****f* Canvas/Canvas_Create (procedure)
       -- FUNCTION
       -- Add the child to the canvas
       -- PARAMETERS
@@ -261,6 +261,26 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    procedure Canvas_Create
      (Parent: in Tk_Canvas; Child_Type: in String;
       Options: in String := "") with
+      Pre => Child_Type /= "";
+      -- ****
+
+      -- ****f* Canvas/Canvas_Create (function)
+      -- FUNCTION
+      -- Add the child to the canvas
+      -- PARAMETERS
+      -- Parent     - Tk_Canvas to which child will be added
+      -- Child_Type - Tk type of child to add
+      -- Options    - Tk options to create command
+      -- RESULT
+      -- Id of the newly created window
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Canvas_Create
+     (Parent: in Tk_Canvas; Child_Type: in String; Options: in String := "")
+      return String with
       Pre => Child_Type /= "";
       -- ****
 
