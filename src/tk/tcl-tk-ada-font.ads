@@ -27,7 +27,7 @@
 package Tcl.Tk.Ada.Font is
 -- ****
 
-   -- ****f* Font/Font_Actual (current interpreter)
+   -- ****f* Font/Actual (current interpreter)
    -- FUNCTION
    -- Get the actual attributes of the selected font in the current interpreter
    -- PARAMETERS
@@ -43,12 +43,12 @@ package Tcl.Tk.Ada.Font is
    -- TODO
    -- Replace it with higher level of binding
    -- SOURCE
-   function Font_Actual
+   function Actual
      (FontDescription: in String; Options: in String := "") return String with
       Pre => FontDescription /= "";
       -- ****
 
-   -- ****f* Font/Font_Actual (selected interpreter)
+   -- ****f* Font/Actual (selected interpreter)
    -- FUNCTION
    -- Get the actual attributes of the selected font in the current interpreter
    -- PARAMETERS
@@ -65,10 +65,53 @@ package Tcl.Tk.Ada.Font is
    -- TODO
    -- Replace it with higher level of binding
    -- SOURCE
-   function Font_Actual
+   function Actual
      (Interp: in Tcl_Interp; FontDescription: in String;
       Options: in String := "") return String with
       Pre => FontDescription /= "";
+      -- ****
+
+      -- ****f* Font/Configure (procedure)
+      -- FUNCTION
+      -- Set the selected options for the selected font in the selected Tcl
+      -- interpreter
+      -- PARAMETERS
+      -- FontName - Name of the font which options will be modified
+      -- Options  - Names and new values for the options to set
+      -- Interp   - Tcl interpreter on which the selected font is. Default
+      --            value is current interpreter
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Configure
+     (FontName, Options: in String; Interp: Tcl_Interp := Get_Context) with
+      Pre => FontName /= "" and Options /= "";
+      -- ****
+
+      -- ****f* Font/Configure (procedure)
+      -- FUNCTION
+      -- Get the selected options for the selected font in the selected Tcl
+      -- interpreter
+      -- PARAMETERS
+      -- FontName - Name of the font which options will be modified
+      -- Option  - Name of the option which value will be taken. Default
+      --            value is empty
+      -- Interp   - Tcl interpreter on which the selected font is. Default
+      --            value is current interpreter
+      -- RESULT
+      -- If Option is empty return list of all available options and their
+      -- values. Otherwise return value of the selected option
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Configure
+     (FontName: in String; Option: in String := "";
+      Interp: Tcl_Interp := Get_Context) return String with
+      Pre => FontName /= "";
       -- ****
 
 end Tcl.Tk.Ada.Font;

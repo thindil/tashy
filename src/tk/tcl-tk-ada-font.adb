@@ -24,19 +24,33 @@ with Tcl.Ada;
 
 package body Tcl.Tk.Ada.Font is
 
-   function Font_Actual
+   function Actual
      (FontDescription: in String; Options: in String := "") return String is
    begin
       Tcl_Eval(Get_Context, "font actual" & FontDescription & " " & Options);
       return Tcl.Ada.Tcl_GetResult(Get_Context);
-   end Font_Actual;
+   end Actual;
 
-   function Font_Actual
+   function Actual
      (Interp: in Tcl_Interp; FontDescription: in String;
       Options: in String := "") return String is
    begin
       Tcl_Eval(Interp, "font actual" & FontDescription & " " & Options);
       return Tcl.Ada.Tcl_GetResult(Interp);
-   end Font_Actual;
+   end Actual;
+
+   procedure Configure
+     (FontName, Options: in String; Interp: Tcl_Interp := Get_Context) is
+   begin
+      Tcl_Eval(Interp, "font configure " & FontName & " " & Options);
+   end Configure;
+
+   function Configure
+     (FontName: in String; Option: in String := "";
+      Interp: Tcl_Interp := Get_Context) return String is
+   begin
+      Tcl_Eval(Interp, "font configure " & FontName & " " & Option);
+      return Tcl.Ada.Tcl_GetResult(Interp);
+   end Configure;
 
 end Tcl.Tk.Ada.Font;
