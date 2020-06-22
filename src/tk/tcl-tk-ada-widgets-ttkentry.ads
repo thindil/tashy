@@ -55,6 +55,10 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
    --            Default value is null.
    -- RESULT
    -- Newly created Ttk_Entry
+   -- HISTORY
+   -- 8.6.2 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -62,18 +66,22 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       Pre => pathName /= "";
      -- ****
 
-   -- ****f* TtkEntry/Create (procedure)
-   -- FUNCTION
-   -- Creates a new Ttk_Entry in the specified interpreter.
-   -- PARAMETERS
-   -- Widgt    - Ttk_Entry which will be created
-   -- pathName - Tk path (starts with dot) for the widget
-   -- options  - Options which will be passed to the widget. Default value is
-   --            empty
-   -- Interp   - Tcl interpreter to which the widget will be created. If null,
-   --            the widget will be created in the "contextual" interpreter.
-   --            Default value is null.
-   -- SOURCE
+     -- ****f* TtkEntry/Create (procedure)
+     -- FUNCTION
+     -- Creates a new Ttk_Entry in the specified interpreter.
+     -- PARAMETERS
+     -- Widgt    - Ttk_Entry which will be created
+     -- pathName - Tk path (starts with dot) for the widget
+     -- options  - Options which will be passed to the widget. Default value is
+     --            empty
+     -- Interp   - Tcl interpreter to which the widget will be created. If null,
+     --            the widget will be created in the "contextual" interpreter.
+     --            Default value is null.
+     -- HISTORY
+     -- 8.6.2 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_Entry; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
@@ -110,6 +118,10 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       -- FirstIndex - Index of text from which delete will start. Index starts from 0
       -- LastIndex  - End index to which text will be deleted. If empty, delete only one
       --              character. Default is empty.
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Delete
      (TextEntry: in Ttk_Entry; FirstIndex: in String;
@@ -124,6 +136,10 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       -- Widgt - Ttk_Entry from which text will be taken
       -- RESULT
       -- Returns the entry's string.
+      -- HISTORY
+      -- 8.6.2 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Get(Widgt: in Ttk_Entry) return String;
    -- ****
@@ -163,14 +179,18 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       Pre => Index /= "";
       -- ****
 
-   -- ****f* TtkEntry/Insert
-   -- FUNCTION
-   -- Insert text at selected index to the selected Ttk_Entry
-   -- PARAMETERS
-   -- TextEntry - Ttk_Entry to which text will be inserted
-   -- Index     - Index in which position text will be inserted
-   -- Text      - Text to insert
-   -- SOURCE
+      -- ****f* TtkEntry/Insert
+      -- FUNCTION
+      -- Insert text at selected index to the selected Ttk_Entry
+      -- PARAMETERS
+      -- TextEntry - Ttk_Entry to which text will be inserted
+      -- Index     - Index in which position text will be inserted
+      -- Text      - Text to insert
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
    procedure Insert
      (TextEntry: in Ttk_Entry; Index: in String; Text: in String) with
       Pre => Index /= "" and Text /= "";
