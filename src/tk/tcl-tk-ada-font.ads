@@ -96,7 +96,7 @@ package Tcl.Tk.Ada.Font is
       -- interpreter
       -- PARAMETERS
       -- FontName - Name of the font which options will be modified
-      -- Option  - Name of the option which value will be taken. Default
+      -- Option   - Name of the option which value will be taken. Default
       --            value is empty
       -- Interp   - Tcl interpreter on which the selected font is. Default
       --            value is current interpreter
@@ -112,6 +112,45 @@ package Tcl.Tk.Ada.Font is
      (FontName: in String; Option: in String := "";
       Interp: Tcl_Interp := Get_Context) return String with
       Pre => FontName /= "";
+      -- ****
+
+      -- ****f* Font/Create (procedure)
+      -- FUNCTION
+      -- Create the new font with the selected name and options
+      -- PARAMETERS
+      -- FontName - Name of the font to create
+      -- Options  - Options to set for the font. Can be empty. Default value
+      --            is empty
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Create
+     (FontName: in String; Options: in String := "";
+      Interp: Tcl_Interp := Get_Context) with
+      Pre => FontName /= "";
+      -- ****
+
+      -- ****f* Font/Create (function)
+      -- FUNCTION
+      -- Create the new font with the selected name and options
+      -- PARAMETERS
+      -- FontName - Name of the font to create. Can be empty. Default value
+      --            is empty
+      -- Options  - Options to set for the font. Can be empty. Default value
+      --            is empty
+      -- RESULT
+      -- The name of newly created font. If FontName is empty, the new font
+      -- name has form "fontx" where x is an integer.
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Create
+     (FontName, Options: in String := ""; Interp: Tcl_Interp := Get_Context)
+      return String;
       -- ****
 
 end Tcl.Tk.Ada.Font;

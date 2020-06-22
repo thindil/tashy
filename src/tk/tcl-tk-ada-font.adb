@@ -53,4 +53,19 @@ package body Tcl.Tk.Ada.Font is
       return Tcl.Ada.Tcl_GetResult(Interp);
    end Configure;
 
+   procedure Create
+     (FontName: in String; Options: in String := "";
+      Interp: Tcl_Interp := Get_Context) is
+   begin
+      Tcl_Eval(Interp, "font create " & FontName & " " & Options);
+   end Create;
+
+   function Create
+     (FontName, Options: in String := ""; Interp: Tcl_Interp := Get_Context)
+      return String is
+   begin
+      Tcl_Eval(Interp, "font create " & FontName & " " & Options);
+      return Tcl.Ada.Tcl_GetResult(Interp);
+   end Create;
+
 end Tcl.Tk.Ada.Font;
