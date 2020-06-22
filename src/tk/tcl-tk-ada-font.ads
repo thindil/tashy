@@ -121,6 +121,8 @@ package Tcl.Tk.Ada.Font is
       -- FontName - Name of the font to create
       -- Options  - Options to set for the font. Can be empty. Default value
       --            is empty
+      -- Interp   - Tcl interpreter on which the font will be created is.
+      --            Default value is current interpreter
       -- HISTORY
       -- 8.6.6 - Added
       -- TODO
@@ -140,6 +142,8 @@ package Tcl.Tk.Ada.Font is
       --            is empty
       -- Options  - Options to set for the font. Can be empty. Default value
       --            is empty
+      -- Interp   - Tcl interpreter on which the font will be created is.
+      --            Default value is current interpreter
       -- RESULT
       -- The name of newly created font. If FontName is empty, the new font
       -- name has form "fontx" where x is an integer.
@@ -151,6 +155,23 @@ package Tcl.Tk.Ada.Font is
    function Create
      (FontName, Options: in String := ""; Interp: Tcl_Interp := Get_Context)
       return String;
+      -- ****
+
+      -- ****f* Font/Delete
+      -- FUNCTION
+      -- Delete the selected font(s)
+      -- PARAMETERS
+      -- FontName - Name (or names) of the font(s) to delete
+      -- Interp   - Tcl interpreter on which the font(s) will be deleted.
+      --            Default value is current interpreter
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Delete
+     (FontName: in String; Interp: Tcl_Interp := Get_Context) with
+      Pre => FontName /= "";
       -- ****
 
 end Tcl.Tk.Ada.Font;

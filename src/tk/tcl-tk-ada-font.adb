@@ -68,4 +68,9 @@ package body Tcl.Tk.Ada.Font is
       return Tcl.Ada.Tcl_GetResult(Interp);
    end Create;
 
+   procedure Delete(FontName: in String; Interp: Tcl_Interp := Get_Context) is
+   begin
+      Tcl_Eval(Interp, "font delete " & FontName);
+   end Delete;
+
 end Tcl.Tk.Ada.Font;
