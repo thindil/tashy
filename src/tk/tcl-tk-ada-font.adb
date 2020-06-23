@@ -86,4 +86,22 @@ package body Tcl.Tk.Ada.Font is
       return Tcl.Ada.Tcl_GetResult(Widget.Interp);
    end Families;
 
+   function Measure
+     (Font, Text: in String; Interp: Tcl_Interp := Get_Context)
+      return String is
+   begin
+      Tcl_Eval(Interp, "font measure " & Font & " " & Text);
+      return Tcl.Ada.Tcl_GetResult(Interp);
+   end Measure;
+
+   function Measure
+     (Font, Text: in String; Widget: Tk_Widget'Class) return String is
+   begin
+      Tcl_Eval
+        (Widget.Interp,
+         "font measure " & Font & " -displayof " & Widget_Image(Widget) & " " &
+         Text);
+      return Tcl.Ada.Tcl_GetResult(Widget.Interp);
+   end Measure;
+
 end Tcl.Tk.Ada.Font;

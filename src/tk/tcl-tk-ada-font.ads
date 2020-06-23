@@ -205,4 +205,44 @@ package Tcl.Tk.Ada.Font is
    function Families(Widget: Tk_Widget'Class) return String;
    -- ****
 
+   -- ****f* Font/Measure (selected interpreter main window)
+   -- FUNCTION
+   -- Get the width in pixels of selected text with the selected font
+   -- PARAMETERS
+   -- Font   - The font description used to measure width of text
+   -- Text   - The text which width will be measured
+   -- Interp - Tcl interpreter on which measuring will be done. Can be empty.
+   --          Default value is the current interpreter
+   -- RESULT
+   -- Width in pixels of the selected text with the selected font
+   -- HISTORY
+   -- 8.6.6 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function Measure
+     (Font, Text: in String; Interp: Tcl_Interp := Get_Context)
+      return String with
+      Pre => Font /= "" and Text /= "";
+      -- ****
+
+   -- ****f* Font/Measure (selected window)
+   -- FUNCTION
+   -- Get the width in pixels of selected text with the selected font
+   -- PARAMETERS
+   -- Font   - The font description used to measure width of text
+   -- Text   - The text which width will be measured
+   -- Widget - Tk_Widget in which the Text will be measured
+   -- RESULT
+   -- Width in pixels of the selected text with the selected font
+   -- HISTORY
+   -- 8.6.6 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function Measure
+     (Font, Text: in String; Widget: Tk_Widget'Class) return String with
+      Pre => Font /= "" and Text /= "";
+      -- ****
+
 end Tcl.Tk.Ada.Font;
