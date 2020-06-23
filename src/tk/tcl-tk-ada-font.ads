@@ -20,6 +20,8 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
+with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
+
 -- ****h* TkAda/Font
 -- FUNCTION
 -- Provides code for manipulate Tk command Font
@@ -173,5 +175,34 @@ package Tcl.Tk.Ada.Font is
      (FontName: in String; Interp: Tcl_Interp := Get_Context) with
       Pre => FontName /= "";
       -- ****
+
+      -- ****f* Font/Families (current interpreter main window)
+      -- FUNCTION
+      -- Get all font families names available at the current interpreter main
+      -- window
+      -- RESULT
+      -- List of case-insensitives names of available fonts
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Families return String;
+   -- ****
+
+   -- ****f* Font/Families (selected window)
+   -- FUNCTION
+   -- Get all font families names available at the selected window
+   -- PARAMETERS
+   -- Widget - Tk_Widget which will be queried for the available fonts families
+   -- RESULT
+   -- List of case-insensitives names of available fonts
+   -- HISTORY
+   -- 8.6.6 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function Families(Widget: Tk_Widget'Class) return String;
+   -- ****
 
 end Tcl.Tk.Ada.Font;

@@ -73,4 +73,17 @@ package body Tcl.Tk.Ada.Font is
       Tcl_Eval(Interp, "font delete " & FontName);
    end Delete;
 
+   function Families return String is
+   begin
+      Tcl_Eval(Get_Context, "font families");
+      return Tcl.Ada.Tcl_GetResult(Get_Context);
+   end Families;
+
+   function Families(Widget: Tk_Widget'Class) return String is
+   begin
+      Tcl_Eval
+        (Widget.Interp, "font families -displayof " & Widget_Image(Widget));
+      return Tcl.Ada.Tcl_GetResult(Widget.Interp);
+   end Families;
+
 end Tcl.Tk.Ada.Font;
