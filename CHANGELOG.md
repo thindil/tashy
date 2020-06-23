@@ -23,7 +23,8 @@ of the project.
   `tk_chooseColor`, `tk_fontchooser configure`, `tk_fontchooser show`,
   `tk_fontchooser hide`
 - Option to save the project settings in setup script to the file (issue #3)
-- Binding for Tk `font` commands: `actual`, `configure`, `create`, `delete`
+- Binding for Tk `font` commands: `actual`, `configure`, `create`, `delete`,
+  `families`
 - Binding for Tk `canvas` command `create` as function
 
 ### Changed
