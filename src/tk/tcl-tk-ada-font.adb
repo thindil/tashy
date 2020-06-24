@@ -104,4 +104,23 @@ package body Tcl.Tk.Ada.Font is
       return Tcl.Ada.Tcl_GetResult(Widget.Interp);
    end Measure;
 
+   function Metrics
+     (Font: in String; Option: in String := "";
+      Interp: Tcl_Interp := Get_Context) return String is
+   begin
+      Tcl_Eval(Interp, "font metrics " & Font & " " & Option);
+      return Tcl.Ada.Tcl_GetResult(Interp);
+   end Metrics;
+
+   function Metrics
+     (Font: in String; Option: in String := ""; Widget: Tk_Widget'Class)
+      return String is
+   begin
+      Tcl_Eval
+        (Widget.Interp,
+         "font metrics " & Font & " -displayof " & Widget_Image(Widget) & " " &
+         Option);
+      return Tcl.Ada.Tcl_GetResult(Widget.Interp);
+   end Metrics;
+
 end Tcl.Tk.Ada.Font;

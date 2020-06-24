@@ -226,23 +226,63 @@ package Tcl.Tk.Ada.Font is
       Pre => Font /= "" and Text /= "";
       -- ****
 
-   -- ****f* Font/Measure (selected window)
-   -- FUNCTION
-   -- Get the width in pixels of selected text with the selected font
-   -- PARAMETERS
-   -- Font   - The font description used to measure width of text
-   -- Text   - The text which width will be measured
-   -- Widget - Tk_Widget in which the Text will be measured
-   -- RESULT
-   -- Width in pixels of the selected text with the selected font
-   -- HISTORY
-   -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
-   -- SOURCE
+      -- ****f* Font/Measure (selected window)
+      -- FUNCTION
+      -- Get the width in pixels of selected text with the selected font
+      -- PARAMETERS
+      -- Font   - The font description used to measure width of text
+      -- Text   - The text which width will be measured
+      -- Widget - Tk_Widget in which the Text will be measured
+      -- RESULT
+      -- Width in pixels of the selected text with the selected font
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
    function Measure
      (Font, Text: in String; Widget: Tk_Widget'Class) return String with
       Pre => Font /= "" and Text /= "";
+      -- ****
+
+      -- ****f* Font/Metrics (selected intepreter)
+      -- FUNCTION
+      -- Get the metrics of the selected font
+      -- PARAMETERS
+      -- Font   - The font which options will be queried
+      -- Option - The font option to take. Can be empty. Default value is empty
+      -- Interp - Tcl interpreter on which the font will be queried
+      -- RESULT
+      -- If Option is empty, return all metrics as list of pairs name, value.
+      -- Otherwise return value of the selected option
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Metrics
+     (Font: in String; Option: in String := "";
+      Interp: Tcl_Interp := Get_Context) return String with
+      Pre => Font /= "";
+      -- ****
+
+      -- ****f* Font/Metrics (selected window)
+      -- FUNCTION
+      -- Get the metrics of the selected font
+      -- PARAMETERS
+      -- Font   - The font which options will be queried
+      -- Option - The font option to take. Can be empty. Default value is empty
+      -- Widget - Tk_Widget in which the font will be queried
+      -- RESULT
+      -- If Option is empty, return all metrics as list of pairs name, value.
+      -- Otherwise return value of the selected option
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Metrics
+     (Font: in String; Option: in String := ""; Widget: Tk_Widget'Class)
+      return String with
+      Pre => Font /= "";
       -- ****
 
 end Tcl.Tk.Ada.Font;
