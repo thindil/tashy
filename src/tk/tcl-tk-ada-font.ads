@@ -255,6 +255,7 @@ package Tcl.Tk.Ada.Font is
       -- RESULT
       -- If Option is empty, return all metrics as list of pairs name, value.
       -- Otherwise return value of the selected option
+      -- HISTORY
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
@@ -275,6 +276,7 @@ package Tcl.Tk.Ada.Font is
       -- RESULT
       -- If Option is empty, return all metrics as list of pairs name, value.
       -- Otherwise return value of the selected option
+      -- HISTORY
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
@@ -284,5 +286,22 @@ package Tcl.Tk.Ada.Font is
       return String with
       Pre => Font /= "";
       -- ****
+
+      -- ****f* Tcl.Tk.Ada.Font/Names
+      -- FUNCTION
+      -- Get the names of the all available fonts on the selected Tcl
+      -- interpreter
+      -- PARAMETERS
+      -- Interp - Tcl interpreter on which the font will be queried. Can be
+      --          empty. Default value is current interpreter
+      -- RESULT
+      -- List with names of all available fonts on the selected Tcl interpreter
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Names(Interp: Tcl_Interp := Get_Context) return String;
+   -- ****
 
 end Tcl.Tk.Ada.Font;

@@ -123,4 +123,10 @@ package body Tcl.Tk.Ada.Font is
       return Tcl.Ada.Tcl_GetResult(Widget.Interp);
    end Metrics;
 
+   function Names(Interp: Tcl_Interp := Get_Context) return String is
+   begin
+      Tcl_Eval(Interp, "font names");
+      return Tcl.Ada.Tcl_GetResult(Interp);
+   end Names;
+
 end Tcl.Tk.Ada.Font;
