@@ -55,25 +55,33 @@ package Tcl.Tk.Ada.Widgets.TtkLabelFrame is
    --            Default value is null.
    -- RESULT
    -- Newly created Ttk_LabelFrame
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Ttk_LabelFrame with
       Pre => pathName /= "";
-      -- ****
+     -- ****
 
-   -- ****f* TtkLabelFrame/Create (procedure)
-   -- FUNCTION
-   -- Creates a new Ttk_LabelFrame in the specified interpreter.
-   -- PARAMETERS
-   -- Widgt    - Ttk_LabelFrame which will be created
-   -- pathName - Tk path (starts with dot) for the widget
-   -- options  - Options which will be passed to the widget. Default value is
-      --            empty
-   -- Interp   - Tcl interpreter to which the widget will be created. If null,
-      --            the widget will be created in the "contextual" interpreter.
-      --            Default value is null.
-      -- SOURCE
+     -- ****f* TtkLabelFrame/Create (procedure)
+     -- FUNCTION
+     -- Creates a new Ttk_LabelFrame in the specified interpreter.
+     -- PARAMETERS
+     -- Widgt    - Ttk_LabelFrame which will be created
+     -- pathName - Tk path (starts with dot) for the widget
+     -- options  - Options which will be passed to the widget. Default value is
+     --            empty
+     -- Interp   - Tcl interpreter to which the widget will be created. If null,
+     --            the widget will be created in the "contextual" interpreter.
+     --            Default value is null.
+     -- HISTORY
+     -- 8.6.1 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_LabelFrame; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
