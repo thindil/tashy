@@ -262,6 +262,21 @@ package Tcl.Tk.Ada.Widgets is
    function Focus
      (Interp: in Tcl_Interp := Get_Context; Option: in String := "")
       return String;
+      -- ****
+
+      -- ****f* Widgets/Focus_Next
+      -- FUNCTION
+      -- Get the next Widget in focus order after the selected Widget
+      -- PARAMETERS
+      -- Widgt - Tk Widget after which the next Widget will be get
+      -- RESULT
+      -- Name of the next Tk_Widget in focus order
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Focus_Next(Widgt: in Tk_Widget'Class) return String;
    -- ****
 
    -- ****f* Widgets/Lower
