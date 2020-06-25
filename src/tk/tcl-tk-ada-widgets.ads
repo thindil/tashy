@@ -272,11 +272,26 @@ package Tcl.Tk.Ada.Widgets is
       -- RESULT
       -- Name of the next Tk_Widget in focus order
       -- HISTORY
-      -- 8.6.4 - Added
+      -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
       -- SOURCE
    function Focus_Next(Widgt: in Tk_Widget'Class) return String;
+   -- ****
+
+      -- ****f* Widgets/Focus_Prev
+      -- FUNCTION
+      -- Get the previous Widget in focus order after the selected Widget
+      -- PARAMETERS
+      -- Widgt - Tk Widget before which the previous Widget will be get
+      -- RESULT
+      -- Name of the previous Tk_Widget in focus order
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Focus_Prev(Widgt: in Tk_Widget'Class) return String;
    -- ****
 
    -- ****f* Widgets/Lower

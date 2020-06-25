@@ -122,6 +122,12 @@ package body Tcl.Tk.Ada.Widgets is
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end Focus_Next;
 
+   function Focus_Prev(Widgt: in Tk_Widget'Class) return String is
+   begin
+      Tcl_Eval(Widgt.Interp, "tk_focusPrev " & Widget_Image(Widgt));
+      return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
+   end Focus_Prev;
+
    procedure Lower(Widgt: in Tk_Widget'Class) is
    begin
       Tcl_Eval(Widgt.Interp, "lower " & Widget_Image(Widgt));
