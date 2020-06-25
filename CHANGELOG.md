@@ -21,7 +21,7 @@ of the project.
   `yview moveto`, `yview scroll`
 - Binding for Tk commands: `identify element`, `tk_popup`, `tkwait`,
   `tk_chooseColor`, `tk_fontchooser configure`, `tk_fontchooser show`,
-  `tk_fontchooser hide`, `tk_focusNext`
+  `tk_fontchooser hide`, `tk_focusNext`, `tk_focusPrev`
 - Option to save the project settings in setup script to the file (issue #3)
 - Binding for Tk `font` commands: `actual`, `configure`, `create`, `delete`,
   `families`, `measure`, `metrics`, `names`
