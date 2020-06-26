@@ -116,6 +116,11 @@ package body Tcl.Tk.Ada.Widgets is
       return Tcl.Ada.Tcl_GetResult(Interp);
    end Focus;
 
+   procedure Focus_Follows_Mouse(Interp: Tcl_Interp := Get_Context) is
+   begin
+      Tcl_Eval(Interp, "tk_focusFollowsMouse");
+   end Focus_Follows_Mouse;
+
    function Focus_Next(Widgt: in Tk_Widget'Class) return String is
    begin
       Tcl_Eval(Widgt.Interp, "tk_focusNext " & Widget_Image(Widgt));
