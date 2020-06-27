@@ -26,7 +26,7 @@ of the project.
 - Binding for Tk `font` commands: `actual`, `configure`, `create`, `delete`,
   `families`, `measure`, `metrics`, `names`
 - Binding for Tk `canvas` command `create` as function
-- Binding for Tk `event` command: `add`
+- Binding for Tk `event` commands: `add`, `delete`
 
 ### Changed
 - Updated code documentation
