@@ -35,4 +35,14 @@ package body Tcl.Tk.Ada.Event is
       Tcl_Eval(Interp, "event delete " & Virtual & " " & Sequence);
    end Delete;
 
+   procedure Generate
+     (Window: in Tk_Widget'Class; EventName: in String;
+      Options: in String := "") is
+   begin
+      Tcl_Eval
+        (Window.Interp,
+         "event generate " & Widget_Image(Window) & " " & EventName & " " &
+         Options);
+   end Generate;
+
 end Tcl.Tk.Ada.Event;

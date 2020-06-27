@@ -20,6 +20,8 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
+with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
+
 -- ****h* TkAda/Event
 -- FUNCTION
 -- Provides code for manipulate Tk command Event
@@ -66,6 +68,25 @@ package Tcl.Tk.Ada.Event is
      (Virtual: in String; Sequence: in String := "";
       Interp: Tcl_Interp := Get_Context) with
       Pre => Virtual /= "";
+      -- ****
+
+      -- ****f* Event/Generate
+      -- FUNCTION
+      -- Generate the selected event at the selected window
+      -- PARAMETERS
+      -- Window    - Tk_Widget on which the selected event will be generated
+      -- EventName - Event to generate (like <Escape> or <<MyEvent>>)
+      -- Option    - Additional options for the event. Can be empty. Default
+      --             value is empty
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Generate
+     (Window: in Tk_Widget'Class; EventName: in String;
+      Options: in String := "") with
+      Pre => EventName /= "";
       -- ****
 
 end Tcl.Tk.Ada.Event;
