@@ -28,4 +28,11 @@ package body Tcl.Tk.Ada.Event is
       Tcl_Eval(Interp, "event add " & Virtual & " " & Sequence);
    end Add;
 
+   procedure Delete
+     (Virtual: in String; Sequence: in String := "";
+      Interp: Tcl_Interp := Get_Context) is
+   begin
+      Tcl_Eval(Interp, "event delete " & Virtual & " " & Sequence);
+   end Delete;
+
 end Tcl.Tk.Ada.Event;

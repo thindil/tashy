@@ -46,4 +46,26 @@ package Tcl.Tk.Ada.Event is
       Pre => Virtual /= "" and Sequence /= "";
       -- ****
 
+      -- ****f* Event/Delete
+      -- FUNCTION
+      -- Delete the selected Sequence from the selected Virtual event on the
+      -- selected interpreter
+      -- PARAMETERS
+      -- Virtual     - Name of the virtual even from which Sequence will be
+      --               removed
+      -- Sequence    - Tcl commands which will be removed. If empty, remove all
+      --               associated commands with the selected Virtual event.
+      --               Default value is empty
+      -- Interpreter - Tcl interpreter on which Sequence will be removed
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Delete
+     (Virtual: in String; Sequence: in String := "";
+      Interp: Tcl_Interp := Get_Context) with
+      Pre => Virtual /= "";
+      -- ****
+
 end Tcl.Tk.Ada.Event;
