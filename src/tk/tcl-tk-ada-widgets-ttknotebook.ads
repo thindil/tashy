@@ -55,25 +55,33 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
    --            Default value is null.
    -- RESULT
    -- Newly created Ttk_Notebook
+   -- HISTORY
+   -- 8.6.2 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Ttk_Notebook with
       Pre => pathName /= "";
-      -- ****
+     -- ****
 
-   -- ****f* TtkNotebook/Create (procedure)
-   -- FUNCTION
-   -- Creates a new Ttk_Notebook in the specified interpreter.
-   -- PARAMETERS
-   -- Widgt    - Ttk_Notebook which will be created
-   -- pathName - Tk path (starts with dot) for the widget
-   -- options  - Options which will be passed to the widget. Default value is
-      --            empty
-   -- Interp   - Tcl interpreter to which the widget will be created. If null,
-      --            the widget will be created in the "contextual" interpreter.
-      --            Default value is null.
-      -- SOURCE
+     -- ****f* TtkNotebook/Create (procedure)
+     -- FUNCTION
+     -- Creates a new Ttk_Notebook in the specified interpreter.
+     -- PARAMETERS
+     -- Widgt    - Ttk_Notebook which will be created
+     -- pathName - Tk path (starts with dot) for the widget
+     -- options  - Options which will be passed to the widget. Default value is
+     --            empty
+     -- Interp   - Tcl interpreter to which the widget will be created. If null,
+     --            the widget will be created in the "contextual" interpreter.
+     --            Default value is null.
+     -- HISTORY
+     -- 8.6.2 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_Notebook; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
@@ -87,6 +95,10 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- Notebook   - Ttk_Notebook to which window will be added
       -- WindowName - A name of widget to add to Ttk_Notebook
       -- Options    - Tk options for added window. Default value is empty
+      -- HISTORY
+      -- 8.6.2 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Add
      (Notebook: in Ttk_Notebook; WindowName: in String;
@@ -115,6 +127,10 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- PARAMETERS
       -- Notebook - Ttk_Notebook in which tab will be hidden
       -- TabId    - Id of the tab to hide
+      -- HISTORY
+      -- 8.6.2 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Hide(Notebook: in Ttk_Notebook; TabId: in String) with
       Pre => TabId /= "";
@@ -207,6 +223,10 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- PARAMETERS
       -- Notebook - Ttk_Notebook in which the tab will be selected
       -- TabId    - Id of the tab to select
+      -- HISTORY
+      -- 8.6.2 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Notebook_Select(Notebook: in Ttk_Notebook; TabId: in String) with
       Pre => TabId /= "";
@@ -219,6 +239,10 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- Notebook - Ttk_Notebook which will be queried for selected tab
       -- RESULT
       -- Identifier of the selected tab in Notebook
+      -- HISTORY
+      -- 8.6.2 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Get_Selected(Notebook: in Ttk_Notebook) return String;
    -- ****
