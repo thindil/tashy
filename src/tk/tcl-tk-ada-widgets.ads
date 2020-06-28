@@ -308,6 +308,41 @@ package Tcl.Tk.Ada.Widgets is
    function Focus_Prev(Widgt: in Tk_Widget'Class) return String;
    -- ****
 
+   -- ****f* Widgets/Grab_Current (selected interpreter)
+   -- FUNCTION
+   -- Get the name of the currently set as grab window on the selected Tcl
+   -- interpreter
+   -- PARAMETERS
+   -- Interp - Tcl interpreter which will be queried for the grab window. Can
+   --          be empty. Default value is current interpreter
+   -- RESULT
+   -- Name of the gra window in the selected Tcl interpreter or {} if no window
+   -- is set as grab window
+   -- HISTORY
+   -- 8.6.6 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function Grab_Current(Interp: Tcl_Interp := Get_Context) return String;
+   -- ****
+
+   -- ****f* Widgets/Grab_Current (selected window)
+   -- FUNCTION
+   -- Get the name of the currently set as grab window on the display where the
+   -- selected window is
+   -- PARAMETERS
+   -- Widgt - Tk_Widget which display will be queried for the grab window
+   -- RESULT
+   -- Name of the gra window in the selected display or {} if no window is set
+   -- as grab window
+   -- HISTORY
+   -- 8.6.6 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function Grab_Current(Widgt: in Tk_Widget'Class) return String;
+   -- ****
+
    -- ****f* Widgets/Lower
    -- FUNCTION
    -- Lowers the selected Tk_Widget below of all its siblings in the stacking

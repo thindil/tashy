@@ -133,6 +133,18 @@ package body Tcl.Tk.Ada.Widgets is
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end Focus_Prev;
 
+   function Grab_Current(Interp: Tcl_Interp := Get_Context) return String is
+   begin
+      Tcl_Eval(Interp, "grab current");
+      return Tcl.Ada.Tcl_GetResult(Interp);
+   end Grab_Current;
+
+   function Grab_Current(Widgt: in Tk_Widget'Class) return String is
+   begin
+      Tcl_Eval(Widgt.Interp, "grab current " & Widget_Image(Widgt));
+      return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
+   end Grab_Current;
+
    procedure Lower(Widgt: in Tk_Widget'Class) is
    begin
       Tcl_Eval(Widgt.Interp, "lower " & Widget_Image(Widgt));
