@@ -55,25 +55,33 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    --            Default value is null.
    -- RESULT
    -- Newly created Ttk_PanedWindow
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Ttk_PanedWindow with
       Pre => pathName /= "";
-      -- ****
+     -- ****
 
-   -- ****f* TtkPanedWindow/Create (procedure)
-   -- FUNCTION
-   -- Creates a new Ttk_PanedWindow in the specified interpreter.
-   -- PARAMETERS
-   -- Widgt    - Ttk_PanedWindow which will be created
-   -- pathName - Tk path (starts with dot) for the widget
-   -- options  - Options which will be passed to the widget. Default value is
-      --            empty
-   -- Interp   - Tcl interpreter to which the widget will be created. If null,
-      --            the widget will be created in the "contextual" interpreter.
-      --            Default value is null.
-      -- SOURCE
+     -- ****f* TtkPanedWindow/Create (procedure)
+     -- FUNCTION
+     -- Creates a new Ttk_PanedWindow in the specified interpreter.
+     -- PARAMETERS
+     -- Widgt    - Ttk_PanedWindow which will be created
+     -- pathName - Tk path (starts with dot) for the widget
+     -- options  - Options which will be passed to the widget. Default value is
+     --            empty
+     -- Interp   - Tcl interpreter to which the widget will be created. If null,
+     --            the widget will be created in the "contextual" interpreter.
+     --            Default value is null.
+     -- HISTORY
+     -- 8.6.1 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_PanedWindow; pathName: in String;
       options: in String := ""; Interp: in Tcl_Interp := null) with
@@ -88,6 +96,10 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       -- SubWindow - Tk_Widget which will be added to the Ttk_PanedWindow
       -- Options   - Tk options which will be passed to the command. Default
       --             value is empty.
+      -- HISTORY
+      -- 8.6.1 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Add
      (Paned: in Ttk_PanedWindow; SubWindow: in Tk_Widget'Class;
@@ -100,6 +112,10 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    -- PARAMETERS
    -- Paned     - Ttk_PanedWindow from which SubWindow will be removed
    -- SubWindow - Tk_Widget which will be removed from the Ttk_PanedWindow
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Forget(Paned: in Ttk_PanedWindow; SubWindow: in Tk_Widget'Class);
    -- ****
@@ -154,6 +170,10 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    -- SubWindow - Tk_Widget to insert to the Ttk_PanedWindow
    -- Options   - Tk options which will be passed to the command. Default
    --             value is empty.
+   -- HISTORY
+   -- 8.6.3 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Insert
      (Paned: in Ttk_PanedWindow; Position: in String;
@@ -208,6 +228,10 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       -- Paned - Ttk_PanedWindow which will be queried for widgets
       -- RESULT
       -- List of widgets inside of Ttk_PanedWindow
+      -- HISTORY
+      -- 8.6.1 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Panes(Paned: in Ttk_PanedWindow) return String;
    -- ****
