@@ -20,6 +20,8 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
+with Tcl.Ada;
+
 package body Tcl.Tk.Ada.Event is
 
    procedure Add
@@ -44,5 +46,13 @@ package body Tcl.Tk.Ada.Event is
          "event generate " & Widget_Image(Window) & " " & EventName & " " &
          Options);
    end Generate;
+
+   function Info
+     (EventName: in String := ""; Interp: Tcl_Interp := Get_Context)
+      return String is
+   begin
+      Tcl_Eval(Interp, "event info " & EventName);
+      return Tcl.Ada.Tcl_GetResult(Interp);
+   end Info;
 
 end Tcl.Tk.Ada.Event;

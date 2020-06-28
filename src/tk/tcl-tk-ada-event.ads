@@ -89,4 +89,26 @@ package Tcl.Tk.Ada.Event is
       Pre => EventName /= "";
       -- ****
 
+      -- ****f* Event/Info
+      -- FUNCTION
+      -- Get information about the virtual event(s)
+      -- PARAMETERS
+      -- EventName - The name of the virtual event to query. Can be empty.
+      --             Default value is empty
+      -- Interp    - Tcl interpreter on which the event(s) will be queried.
+      --             Can be empty. Default value is current interpreter
+      -- RESULT
+      -- If EventName is specified, return information about the selected
+      -- event. Otherwise return information about all available virtual
+      -- events
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Info
+     (EventName: in String := ""; Interp: Tcl_Interp := Get_Context)
+      return String;
+      -- ****
+
 end Tcl.Tk.Ada.Event;
