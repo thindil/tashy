@@ -150,6 +150,11 @@ package body Tcl.Tk.Ada.Widgets is
       Tcl_Eval(Widgt.Interp, "grab release " & Widget_Image(Widgt));
    end Grab_Release;
 
+   procedure Grab_Set(Widgt: in Tk_Widget'Class; Global: in String := "") is
+   begin
+      Tcl_Eval(Widgt.Interp, "grab set " & Global & " " & Widget_Image(Widgt));
+   end Grab_Set;
+
    procedure Lower(Widgt: in Tk_Widget'Class) is
    begin
       Tcl_Eval(Widgt.Interp, "lower " & Widget_Image(Widgt));

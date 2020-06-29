@@ -356,17 +356,33 @@ package Tcl.Tk.Ada.Widgets is
    procedure Grab_Release(Widgt: in Tk_Widget'Class);
    -- ****
 
-   -- ****f* Widgets/Lower
+   -- ****f* Tcl.Tk.Ada.Widgets/Grab_Set
    -- FUNCTION
-   -- Lowers the selected Tk_Widget below of all its siblings in the stacking
-   -- order
+   -- Set the grab to the selected widget
    -- PARAMETERS
-   -- Widgt - Tk_Widget to lower
+   -- Widgt  - Tk_Widget on which the grab will be set
+   -- Global - If empty, the grab is local, when "-global" then the grab is
+   --          global. Default value is empty
    -- HISTORY
-   -- 8.6.4 - Added
+   -- 8.6.6 - Added
    -- TODO
    -- Replace it with higher level of binding
    -- SOURCE
+   procedure Grab_Set(Widgt: in Tk_Widget'Class; Global: in String := "") with
+      Pre => Global in "" | "-global";
+      -- ****
+
+      -- ****f* Widgets/Lower
+      -- FUNCTION
+      -- Lowers the selected Tk_Widget below of all its siblings in the stacking
+      -- order
+      -- PARAMETERS
+      -- Widgt - Tk_Widget to lower
+      -- HISTORY
+      -- 8.6.4 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
    procedure Lower(Widgt: in Tk_Widget'Class);
    -- ****
 
