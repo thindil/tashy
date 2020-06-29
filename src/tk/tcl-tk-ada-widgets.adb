@@ -145,6 +145,11 @@ package body Tcl.Tk.Ada.Widgets is
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end Grab_Current;
 
+   procedure Grab_Release(Widgt: in Tk_Widget'Class) is
+   begin
+      Tcl_Eval(Widgt.Interp, "grab release " & Widget_Image(Widgt));
+   end Grab_Release;
+
    procedure Lower(Widgt: in Tk_Widget'Class) is
    begin
       Tcl_Eval(Widgt.Interp, "lower " & Widget_Image(Widgt));

@@ -343,6 +343,19 @@ package Tcl.Tk.Ada.Widgets is
    function Grab_Current(Widgt: in Tk_Widget'Class) return String;
    -- ****
 
+   -- ****f* Widgets/Grab_Release
+   -- FUNCTION
+   -- Release the grab on the selected Widget
+   -- PARAMETERS
+   -- Widgt - Tk_Widget on which the grab will be released
+   -- HISTORY
+   -- 8.6.6 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Grab_Release(Widgt: in Tk_Widget'Class);
+   -- ****
+
    -- ****f* Widgets/Lower
    -- FUNCTION
    -- Lowers the selected Tk_Widget below of all its siblings in the stacking
