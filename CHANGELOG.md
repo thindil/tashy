@@ -27,7 +27,7 @@ of the project.
   `families`, `measure`, `metrics`, `names`
 - Binding for Tk `canvas` command `create` as function
 - Binding for Tk `event` commands: `add`, `delete`, `generate`, `info`
-- Binding for Tk `grab` command: `current`, `release`
+- Binding for Tk `grab` command: `current`, `release`, `set`
 
 ### Changed
 - Updated code documentation
