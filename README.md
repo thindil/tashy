@@ -43,8 +43,8 @@ To build you need:
 
   https://www.adacore.com/download/
 
-  It is recommended to use GNAT GPL 2019 to compile the program.
-  The program does not work with old compilers (like GCC 4.9) since it
+  It is recommended to use GNAT GPL 2019 to compile the project.
+  The project does not work with old compilers (like GCC 4.9) since it
   lacks full support for Ada 2012.
 
 * Tcl/Tk library. Should be available in every Linux distribution. For
@@ -136,7 +136,7 @@ library.
 ## Generating the code documentation
 
 To generate (or regenerate) code documentation, you need [ROBODoc](https://rfsber.home.xs4all.nl/Robo/)
-If you have it, in main program directory (where this file is) enter terminal
+If you have it, in main project directory (where this file is) enter terminal
 command: `others/generatedocs.tcl`. For more information about this script,
 please look [here](https://github.com/thindil/roboada#generatedocstcl). This
 version of script have set all default settings for TASHY code. If you have
