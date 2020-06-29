@@ -27,7 +27,7 @@ of the project.
   `families`, `measure`, `metrics`, `names`
 - Binding for Tk `canvas` command `create` as function
 - Binding for Tk `event` commands: `add`, `delete`, `generate`, `info`
-- Binding for Tk `grab` command: `current`
+- Binding for Tk `grab` command: `current`, `release`
 
 ### Changed
 - Updated code documentation
@@ -193,7 +193,7 @@ of the project.
 - Binding for Tk `scrollbar` widget
 - Binding for Tk `scale` widget
 - Binding for Tk `menubutton` widget
-- Binding for Tk `ttk::progresbar` widget
+- Binding for Tk `ttk::progressbar` widget
 - Binding for Tk `ttk::frame` widget
 - Binding for Tk `spinbox` widget
 - Binding for Tk `ttk::separator` widget
