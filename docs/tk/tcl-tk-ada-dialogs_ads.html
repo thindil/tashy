@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.5 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.6 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,11 +27,16 @@
 <ul>
 <li>1. <a href="#robo16">TkAda/Dialogs</a></li>
 <ul>
-<li>1.1. <a href="#robo179">Dialogs/Choose_Directory</a></li>
-<li>1.2. <a href="#robo180">Dialogs/Dialog</a></li>
-<li>1.3. <a href="#robo181">Dialogs/Get_Open_File</a></li>
-<li>1.4. <a href="#robo182">Dialogs/Get_Save_File</a></li>
-<li>1.5. <a href="#robo183">Dialogs/MessageBox</a></li>
+<li>1.1. <a href="#robo184">Dialogs/Choose_Color</a></li>
+<li>1.2. <a href="#robo185">Dialogs/Choose_Directory</a></li>
+<li>1.3. <a href="#robo186">Dialogs/Dialog</a></li>
+<li>1.4. <a href="#robo187">Dialogs/FontChooser_Configure (function)</a></li>
+<li>1.5. <a href="#robo188">Dialogs/FontChooser_Configure (procedure)</a></li>
+<li>1.6. <a href="#robo189">Dialogs/FontChooser_Hide</a></li>
+<li>1.7. <a href="#robo190">Dialogs/FontChooser_Show</a></li>
+<li>1.8. <a href="#robo191">Dialogs/Get_Open_File</a></li>
+<li>1.9. <a href="#robo192">Dialogs/Get_Save_File</a></li>
+<li>1.10. <a href="#robo193">Dialogs/MessageBox</a></li>
 </ul>
 </ul>
 <hr />
@@ -47,12 +52,37 @@
 </pre>
 
 <hr />
-<a name="Dialogs2fChoose5fDirectory"></a>
-<a name="robo179"></a><h2>Dialogs/Choose_Directory [ Subprograms ]</h2>
+<a name="Dialogs2fChoose5fColor"></a>
+<a name="robo184"></a><h2>Dialogs/Choose_Color [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">Dialogs</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo288">Create</a> dialog which allow the user select directory.
+<pre> <a href="../cargv_ads.html#robo175">Create</a> dialog which allow the user select color.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Choose_Color</strong><span class="sign">(</span>Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Options - <a href="./tcl-tk_ads.html#robo12">Tk</a> options which will be passed to the dialog. Default value
+           is empty string
+</pre>
+<p class="item_name">RESULT</p>
+<pre> Name of selected color or empty string if color was not selected
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.6 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
+</pre>
+
+<hr />
+<a name="Dialogs2fChoose5fDirectory"></a>
+<a name="robo185"></a><h2>Dialogs/Choose_Directory [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">Dialogs</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="../cargv_ads.html#robo175">Create</a> dialog which allow the user select directory.
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Choose_Directory</strong><span class="sign">(</span>Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
@@ -68,51 +98,136 @@
 <pre> 8.6.1 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="Dialogs2fDialog"></a>
-<a name="robo180"></a><h2>Dialogs/Dialog [ Subprograms ]</h2>
+<a name="robo186"></a><h2>Dialogs/Dialog [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">Dialogs</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo288">Create</a> the dialog from selected <a href="./tcl-tk-ada-widgets-toplevel_ads.html#robo91">Tk_Toplevel</a> widget
+<pre> <a href="../cargv_ads.html#robo175">Create</a> the dialog from selected <a href="./tcl-tk-ada-widgets-toplevel_ads.html#robo94">Tk_Toplevel</a> widget
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Dialog</strong>
-     <span class="sign">(</span>Widget<span class="sign">:</span> <span class="keyword">in</span> <span class="keyword">out</span> <a href="./tcl-tk-ada-widgets-toplevel_ads.html#robo91">Tk_Toplevel</a><span class="sign">;</span> Title<span class="sign">,</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo44">Text</a><span class="sign">,</span> <a href="./tcl-tk-ada-image-bitmap_ads.html#robo5">Bitmap</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+     <span class="sign">(</span>Widget<span class="sign">:</span> <span class="keyword">in</span> <span class="keyword">out</span> <a href="./tcl-tk-ada-widgets-toplevel_ads.html#robo94">Tk_Toplevel</a><span class="sign">;</span> Title<span class="sign">,</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo46">Text</a><span class="sign">,</span> <a href="./tcl-tk-ada-image-bitmap_ads.html#robo5">Bitmap</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
       Default<span class="sign">:</span> <span class="keyword">in</span> Integer<span class="sign">;</span> Buttons<span class="sign">:</span> <span class="keyword">in</span> DialogButtons<span class="sign">)</span> <span class="keyword">return</span> Integer <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span>
-      <span class="sign">(</span>Title <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo44">Text</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> <a href="./tcl-tk-ada-image-bitmap_ads.html#robo5">Bitmap</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span>
+      <span class="sign">(</span>Title <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo46">Text</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> <a href="./tcl-tk-ada-image-bitmap_ads.html#robo5">Bitmap</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span>
        Default <span class="sign">&lt;</span><span class="sign">=</span> Buttons<span class="keyword">'Length</span><span class="sign">);</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Widget  - <a href="./tcl-tk-ada-widgets-toplevel_ads.html#robo91">Tk_Toplevel</a> widget which will be used as the dialog.
+<pre> Widget  - <a href="./tcl-tk-ada-widgets-toplevel_ads.html#robo94">Tk_Toplevel</a> widget which will be used as the dialog.
  Title   - Title of the dialog
- <a href="./tcl-tk-ada-widgets-text_ads.html#robo44">Text</a>    - <a href="./tcl-tk-ada-widgets-text_ads.html#robo44">Text</a> to display in the dialog
+ <a href="./tcl-tk-ada-widgets-text_ads.html#robo46">Text</a>    - <a href="./tcl-tk-ada-widgets-text_ads.html#robo46">Text</a> to display in the dialog
  <a href="./tcl-tk-ada-image-bitmap_ads.html#robo5">Bitmap</a>  - <a href="./tcl-tk_ads.html#robo12">Tk</a> bitmap name to show in dialog
  Default - Default button in dialog. Buttons counts from 0. If less than
            0 no button will be set as default.
  Buttons - Array with text to show on buttons. One element is one button
 </pre>
 <p class="item_name">RESULT</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo355">Index</a> of button which was clicked or -1 if no button was clicked.
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo236">Index</a> of button which was clicked or -1 if no button was clicked.
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.1 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
+</pre>
+
+<hr />
+<a name="Dialogs2fFontChooser5fConfigure2028function29"></a>
+<a name="robo187"></a><h2>Dialogs/FontChooser_Configure (function) [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">Dialogs</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo378">Get</a> the selected option value or values of all options for the font
+ chooser dialog
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> FontChooser_Configure<span class="sign">(</span>Option<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Option - Name of the font chooser option to get. Can be empty. Default
+          value is empty
+</pre>
+<p class="item_name">RESULT</p>
+<pre> Value for the selected option or list of pairs name value of all
+ available options
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.6 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
+</pre>
+
+<hr />
+<a name="Dialogs2fFontChooser5fConfigure2028procedure29"></a>
+<a name="robo188"></a><h2>Dialogs/FontChooser_Configure (procedure) [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">Dialogs</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo487">Set</a> the selected option for the font chooser dialog
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> FontChooser_Configure<span class="sign">(</span>Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Options - <a href="./tcl-tk_ads.html#robo12">Tk</a> font chooser options with values to set
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.6 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
+</pre>
+
+<hr />
+<a name="Dialogs2fFontChooser5fHide"></a>
+<a name="robo189"></a><h2>Dialogs/FontChooser_Hide [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">Dialogs</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-widgets-ttknotebook_ads.html#robo531">Hide</a> the font chooser dialog
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>FontChooser_Hide</strong><span class="sign">;</span>
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.6 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
+</pre>
+
+<hr />
+<a name="Dialogs2fFontChooser5fShow"></a>
+<a name="robo190"></a><h2>Dialogs/FontChooser_Show [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">Dialogs</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="../cargv_ads.html#robo178">Show</a> the font chooser dialog
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>FontChooser_Show</strong><span class="sign">;</span>
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.6 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="Dialogs2fGet5fOpen5fFile"></a>
-<a name="robo181"></a><h2>Dialogs/Get_Open_File [ Subprograms ]</h2>
+<a name="robo191"></a><h2>Dialogs/Get_Open_File [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">Dialogs</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo288">Create</a> dialog which allow the user select file to open.
+<pre> <a href="../cargv_ads.html#robo175">Create</a> dialog which allow the user select file to open.
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Get_Open_File</strong><span class="sign">(</span>Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
@@ -128,16 +243,16 @@
 <pre> 8.6.1 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="Dialogs2fGet5fSave5fFile"></a>
-<a name="robo182"></a><h2>Dialogs/Get_Save_File [ Subprograms ]</h2>
+<a name="robo192"></a><h2>Dialogs/Get_Save_File [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">Dialogs</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo288">Create</a> dialog which allow the user select file to save.
+<pre> <a href="../cargv_ads.html#robo175">Create</a> dialog which allow the user select file to save.
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Get_Save_File</strong><span class="sign">(</span>Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
@@ -153,16 +268,16 @@
 <pre> 8.6.1 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="Dialogs2fMessageBox"></a>
-<a name="robo183"></a><h2>Dialogs/MessageBox [ Subprograms ]</h2>
+<a name="robo193"></a><h2>Dialogs/MessageBox [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">Dialogs</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo288">Create</a> message window and show it to user
+<pre> <a href="../cargv_ads.html#robo175">Create</a> message window and show it to user
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>MessageBox</strong><span class="sign">(</span>Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
@@ -178,12 +293,12 @@
 <pre> 8.6.1 - Added
 </pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-dialogs.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Sun May 31 2020 09:30:57
+<p>Generated from ./src/tk/tcl-tk-ada-dialogs.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Jun 30 2020 09:41:00
 </p>
 </div> <!-- footer -->
 </body>

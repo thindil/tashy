@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.5 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.6 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,50 +27,50 @@
 <ul>
 <li>1. <a href="#robo3">Button/CheckButton</a></li>
 <ul>
-<li>1.1. <a href="#robo68">CheckButton/Tk_CheckButton</a></li>
-<li>1.2. <a href="#robo174">CheckButton/Create (function)</a></li>
-<li>1.3. <a href="#robo175">CheckButton/Create (procedure)</a></li>
-<li>1.4. <a href="#robo176">CheckButton/Deselect</a></li>
-<li>1.5. <a href="#robo177">CheckButton/Tk_Select</a></li>
-<li>1.6. <a href="#robo178">CheckButton/Toggle</a></li>
+<li>1.1. <a href="#robo71">CheckButton/Tk_CheckButton</a></li>
+<li>1.2. <a href="#robo179">CheckButton/Create (function)</a></li>
+<li>1.3. <a href="#robo180">CheckButton/Create (procedure)</a></li>
+<li>1.4. <a href="#robo181">CheckButton/Deselect</a></li>
+<li>1.5. <a href="#robo182">CheckButton/Tk_Select</a></li>
+<li>1.6. <a href="#robo183">CheckButton/Toggle</a></li>
 </ul>
 </ul>
 <hr />
 <a name="Button2fCheckButton"></a>
 <a name="robo3"></a><h2>Button/CheckButton [ Packages ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada-widgets-button_ads.html#robo32">Button</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada-widgets-button_ads.html#robo34">Button</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo12">Tk</a> widget <strong>CheckButton</strong>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo9">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo12">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo10">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo23">Widgets</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets-button_ads.html#robo32">Button</a><span class="sign">.</span><strong>CheckButton</strong> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo9">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo12">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo10">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo25">Widgets</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets-button_ads.html#robo34">Button</a><span class="sign">.</span><strong>CheckButton</strong> <span class="keyword">is</span>
 </pre>
 
 <hr />
 <a name="CheckButton2fTk5fCheckButton"></a>
-<a name="robo68"></a><h2>CheckButton/Tk_CheckButton [ Types ]</h2>
+<a name="robo71"></a><h2>CheckButton/Tk_CheckButton [ Types ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo3">CheckButton</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> This is a type derived from <a href="./tcl-tk-ada-widgets-button_ads.html#robo63">Tk_Button</a>.
+<pre> This is a type derived from <a href="./tcl-tk-ada-widgets-button_ads.html#robo66">Tk_Button</a>.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">type</span> <strong>Tk_CheckButton</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets-button_ads.html#robo63">Tk_Button</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">type</span> <strong>Tk_CheckButton</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets-button_ads.html#robo66">Tk_Button</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
 </pre>
 
 <hr />
 <a name="CheckButton2fCreate2028function29"></a>
-<a name="robo174"></a><h2>CheckButton/Create (function) [ Subprograms ]</h2>
+<a name="robo179"></a><h2>CheckButton/Create (function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo3">CheckButton</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Creates a new <a href="#robo68">Tk_CheckButton</a> in the specified interpreter.
+<pre> Creates a new <a href="#robo71">Tk_CheckButton</a> in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo288">Create</a>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="../cargv_ads.html#robo175">Create</a>
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo68">Tk_CheckButton</a> <span class="keyword">with</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo71">Tk_CheckButton</a> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
@@ -82,31 +82,31 @@
             Default value is null.
 </pre>
 <p class="item_name">RESULT</p>
-<pre> Newly created <a href="#robo68">Tk_CheckButton</a>
+<pre> Newly created <a href="#robo71">Tk_CheckButton</a>
 </pre>
 <p class="item_name">HISTORY</p>
-<pre> 8.6.1 - Moved from <a href="../tcl_ads.html#robo9">Tcl</a>.<a href="./tcl-tk_ads.html#robo12">Tk</a>.<a href="../tcl-ada_ads.html#robo10">Ada</a>.<a href="./tcl-tk-ada-widgets_ads.html#robo23">Widgets</a>
+<pre> 8.6.1 - Moved from <a href="../tcl_ads.html#robo9">Tcl</a>.<a href="./tcl-tk_ads.html#robo12">Tk</a>.<a href="../tcl-ada_ads.html#robo10">Ada</a>.<a href="./tcl-tk-ada-widgets_ads.html#robo25">Widgets</a>
 </pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="CheckButton2fCreate2028procedure29"></a>
-<a name="robo175"></a><h2>CheckButton/Create (procedure) [ Subprograms ]</h2>
+<a name="robo180"></a><h2>CheckButton/Create (procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo3">CheckButton</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Creates a new <a href="#robo68">Tk_CheckButton</a> in the specified interpreter.
+<pre> Creates a new <a href="#robo71">Tk_CheckButton</a> in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> <a href="./tcl-tk-ada-widgets-button-radiobutton_ads.html#robo288">Create</a>
-     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo68">Tk_CheckButton</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> <a href="../cargv_ads.html#robo175">Create</a>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo71">Tk_CheckButton</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
       Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Widgt    - <a href="#robo68">Tk_CheckButton</a> which will be created
+<pre> Widgt    - <a href="#robo71">Tk_CheckButton</a> which will be created
  pathName - <a href="./tcl-tk_ads.html#robo12">Tk</a> path (starts with dot) for the widget
  options  - Options which will be passed to the widget. Default value is
             empty
@@ -115,78 +115,78 @@
             Default value is null.
 </pre>
 <p class="item_name">HISTORY</p>
-<pre> 8.6.1 - Moved from <a href="../tcl_ads.html#robo9">Tcl</a>.<a href="./tcl-tk_ads.html#robo12">Tk</a>.<a href="../tcl-ada_ads.html#robo10">Ada</a>.<a href="./tcl-tk-ada-widgets_ads.html#robo23">Widgets</a>
+<pre> 8.6.1 - Moved from <a href="../tcl_ads.html#robo9">Tcl</a>.<a href="./tcl-tk_ads.html#robo12">Tk</a>.<a href="../tcl-ada_ads.html#robo10">Ada</a>.<a href="./tcl-tk-ada-widgets_ads.html#robo25">Widgets</a>
 </pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="CheckButton2fDeselect"></a>
-<a name="robo176"></a><h2>CheckButton/Deselect [ Subprograms ]</h2>
+<a name="robo181"></a><h2>CheckButton/Deselect [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo3">CheckButton</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> <strong>Deselect</strong> the button.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Deselect</strong><span class="sign">(</span>Buttn<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo68">Tk_CheckButton</a><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Deselect</strong><span class="sign">(</span>Buttn<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo71">Tk_CheckButton</a><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Buttn - <a href="#robo68">Tk_CheckButton</a> to deselect
+<pre> Buttn - <a href="#robo71">Tk_CheckButton</a> to deselect
 </pre>
 <p class="item_name">HISTORY</p>
-<pre> 8.6.1 - Moved from <a href="../tcl_ads.html#robo9">Tcl</a>.<a href="./tcl-tk_ads.html#robo12">Tk</a>.<a href="../tcl-ada_ads.html#robo10">Ada</a>.<a href="./tcl-tk-ada-widgets_ads.html#robo23">Widgets</a>
+<pre> 8.6.1 - Moved from <a href="../tcl_ads.html#robo9">Tcl</a>.<a href="./tcl-tk_ads.html#robo12">Tk</a>.<a href="../tcl-ada_ads.html#robo10">Ada</a>.<a href="./tcl-tk-ada-widgets_ads.html#robo25">Widgets</a>
 </pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="CheckButton2fTk5fSelect"></a>
-<a name="robo177"></a><h2>CheckButton/Tk_Select [ Subprograms ]</h2>
+<a name="robo182"></a><h2>CheckButton/Tk_Select [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo3">CheckButton</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Select the button.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Tk_Select</strong><span class="sign">(</span>Buttn<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo68">Tk_CheckButton</a><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Tk_Select</strong><span class="sign">(</span>Buttn<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo71">Tk_CheckButton</a><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Buttn - <a href="#robo68">Tk_CheckButton</a> to select
+<pre> Buttn - <a href="#robo71">Tk_CheckButton</a> to select
 </pre>
 <p class="item_name">HISTORY</p>
-<pre> 8.6.1 - Moved from <a href="../tcl_ads.html#robo9">Tcl</a>.<a href="./tcl-tk_ads.html#robo12">Tk</a>.<a href="../tcl-ada_ads.html#robo10">Ada</a>.<a href="./tcl-tk-ada-widgets_ads.html#robo23">Widgets</a>
+<pre> 8.6.1 - Moved from <a href="../tcl_ads.html#robo9">Tcl</a>.<a href="./tcl-tk_ads.html#robo12">Tk</a>.<a href="../tcl-ada_ads.html#robo10">Ada</a>.<a href="./tcl-tk-ada-widgets_ads.html#robo25">Widgets</a>
 </pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="CheckButton2fToggle"></a>
-<a name="robo178"></a><h2>CheckButton/Toggle [ Subprograms ]</h2>
+<a name="robo183"></a><h2>CheckButton/Toggle [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo3">CheckButton</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> <strong>Toggle</strong> the button.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Toggle</strong><span class="sign">(</span>Buttn<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo68">Tk_CheckButton</a><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Toggle</strong><span class="sign">(</span>Buttn<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo71">Tk_CheckButton</a><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Buttn - <a href="#robo68">Tk_CheckButton</a> to toggle
+<pre> Buttn - <a href="#robo71">Tk_CheckButton</a> to toggle
 </pre>
 <p class="item_name">HISTORY</p>
-<pre> 8.6.1 - Moved from <a href="../tcl_ads.html#robo9">Tcl</a>.<a href="./tcl-tk_ads.html#robo12">Tk</a>.<a href="../tcl-ada_ads.html#robo10">Ada</a>.<a href="./tcl-tk-ada-widgets_ads.html#robo23">Widgets</a>
+<pre> 8.6.1 - Moved from <a href="../tcl_ads.html#robo9">Tcl</a>.<a href="./tcl-tk_ads.html#robo12">Tk</a>.<a href="../tcl-ada_ads.html#robo10">Ada</a>.<a href="./tcl-tk-ada-widgets_ads.html#robo25">Widgets</a>
 </pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo367">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-button-checkbutton.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Sun May 31 2020 09:30:57
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-button-checkbutton.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Jun 30 2020 09:41:00
 </p>
 </div> <!-- footer -->
 </body>

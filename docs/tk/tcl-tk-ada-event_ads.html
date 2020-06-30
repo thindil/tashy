@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" href="../robodoc.css" type="text/css" />
+<title>./src/tk/tcl-tk-ada-event.ads</title>
+<!-- Source: ./src/tk/tcl-tk-ada-event.ads -->
+<!-- Generated with ROBODoc Version 4.99.43 (Feb  8 2020) -->
+</head>
+<body>
+<div id="logo">
+<a name="robo_top_of_doc">TASHY v8.6.6 code documentation</a>
+</div> <!-- logo -->
+<div id="navigation">
+<a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
+<a class="menuitem" href="../sources.html#top">Source files</a>
+<a class="menuitem" href="../index.html#top">Index</a>
+<a class="menuitem" href="../robo_subprograms.html#top">Subprograms</a>
+<a class="menuitem" href="../robo_packages.html#top">Packages</a>
+<a class="menuitem" href="../robo_types.html#top">Types</a>
+</div> <!-- navigation -->
+<div id="content">
+<h3>TABLE OF CONTENTS</h3>
+<ul>
+<li>1. <a href="#robo17">TkAda/Event</a></li>
+<ul>
+<li>1.1. <a href="#robo194">Event/Add</a></li>
+<li>1.2. <a href="#robo195">Event/Delete</a></li>
+<li>1.3. <a href="#robo196">Event/Generate</a></li>
+<li>1.4. <a href="#robo197">Event/Info</a></li>
+</ul>
+</ul>
+<hr />
+<a name="TkAda2fEvent"></a>
+<a name="robo17"></a><h2>TkAda/Event [ Packages ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada_ads.html#robo15">TkAda</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo12">Tk</a> command <strong>Event</strong>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo9">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo12">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo10">Ada</a><span class="sign">.</span><strong>Event</strong> <span class="keyword">is</span>
+</pre>
+
+<hr />
+<a name="Event2fAdd"></a>
+<a name="robo194"></a><h2>Event/Add [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo17">Event</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Assiociated the selected virtual event with the selected sequence on the
+ selected interpreter.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Add</strong>
+     <span class="sign">(</span>Virtual<span class="sign">,</span> Sequence<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo436">Get_Context</a><span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> Virtual <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Sequence <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Virtual  - Name of the virtual event which will be triggered when the
+            selected Sequence occurs
+ Sequence - <a href="../tcl_ads.html#robo9">Tcl</a> commands which will trigger the selected Virtual event
+ Interp   - <a href="../tcl_ads.html#robo9">Tcl</a> interpreter on which the event should be added
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.6 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
+</pre>
+
+<hr />
+<a name="Event2fDelete"></a>
+<a name="robo195"></a><h2>Event/Delete [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo17">Event</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <strong>Delete</strong> the selected Sequence from the selected Virtual event on the
+ selected interpreter
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Delete</strong>
+     <span class="sign">(</span>Virtual<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Sequence<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Interp<span class="sign">:</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo436">Get_Context</a><span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> Virtual <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Virtual     - Name of the virtual even from which Sequence will be
+               removed
+ Sequence    - <a href="../tcl_ads.html#robo9">Tcl</a> commands which will be removed. If empty, remove all
+               associated commands with the selected Virtual event.
+               Default value is empty
+ Interpreter - <a href="../tcl_ads.html#robo9">Tcl</a> interpreter on which Sequence will be removed
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.6 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
+</pre>
+
+<hr />
+<a name="Event2fGenerate"></a>
+<a name="robo196"></a><h2>Event/Generate [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo17">Event</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <strong>Generate</strong> the selected event at the selected window
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Generate</strong>
+     <span class="sign">(</span>Window<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo113">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> EventName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+      Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">)</span> <span class="keyword">with</span>
+      Pre =<span class="sign">&gt;</span> EventName /= ""<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Window    - <a href="./tcl-tk-ada-widgets_ads.html#robo113">Tk_Widget</a> on which the selected event will be generated
+ EventName - <a href="#robo17">Event</a> to generate (like &lt;Escape&gt; or &lt;&lt;MyEvent&gt;&gt;)
+ Option    - Additional options for the event. Can be empty. Default
+             value is empty
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.6 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
+</pre>
+
+<hr />
+<a name="Event2fInfo"></a>
+<a name="robo197"></a><h2>Event/Info [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo17">Event</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo378">Get</a> information about the virtual event(s)
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Info</strong>
+     <span class="sign">(</span>EventName<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span> Interp<span class="sign">:</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo436">Get_Context</a><span class="sign">)</span>
+      <span class="keyword">return</span> String<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> EventName - The name of the virtual event to query. Can be empty.
+             Default value is empty
+ Interp    - <a href="../tcl_ads.html#robo9">Tcl</a> interpreter on which the event(s) will be queried.
+             Can be empty. Default value is current interpreter
+</pre>
+<p class="item_name">RESULT</p>
+<pre> If EventName is specified, return information about the selected
+ event. Otherwise return information about all available virtual
+ events
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.6 - Added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
+</pre>
+
+</div> <!-- content -->
+<div id="footer">
+<p>Generated from ./src/tk/tcl-tk-ada-event.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Jun 30 2020 09:41:00
+</p>
+</div> <!-- footer -->
+</body>
+</html>
+
