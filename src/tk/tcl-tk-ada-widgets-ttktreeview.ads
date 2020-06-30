@@ -443,6 +443,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- SOURCE
    procedure See(TreeViewWidget: in Ttk_Tree_View; Item: in String) with
       Pre => Item /= "";
+      -- ****
 
       -- ****f* TtkTreeView/Selection
       -- FUNCTION
@@ -504,7 +505,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Items /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Set
+      -- ****f* TtkTreeView/Set (function)
       -- FUNCTION
       -- Get the value(s) of the selected item in the selected Ttk_Tree_View
       -- PARAMETERS
@@ -527,7 +528,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Item /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Set
+      -- ****f* TtkTreeView/Set (procedure)
       -- FUNCTION
       -- Set the value of the selected column of the selected item in the
       -- selected Ttk_Tree_View

@@ -27,14 +27,14 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
--- ****h* Widgets/TtkFrame
+-- ****h* Widgets/TtkSizeGrip
 -- FUNCTION
 -- Provides code for manipulate Tk widget Ttk::SizeGrip
 -- SOURCE
 package Tcl.Tk.Ada.Widgets.TtkSizeGrip is
 -- ****
 
-   -- ****t* TtkFrame/Ttk_SizeGrip
+   -- ****t* TtkSizeGrip/Ttk_SizeGrip
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -43,7 +43,7 @@ package Tcl.Tk.Ada.Widgets.TtkSizeGrip is
    type Ttk_SizeGrip is new Tk_Widget with private;
    -- ****
 
-   -- ****f* TtkFrame/Create (function)
+   -- ****f* TtkSizeGrip/Create (function)
    -- FUNCTION
    -- Creates a new Ttk_SizeGrip in the specified interpreter.
    -- PARAMETERS
@@ -66,7 +66,7 @@ package Tcl.Tk.Ada.Widgets.TtkSizeGrip is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* TtkFrame/Create (procedure)
+     -- ****f* TtkSizeGrip/Create (procedure)
      -- FUNCTION
      -- Creates a new Ttk_SizeGrip in the specified interpreter.
      -- PARAMETERS

@@ -92,7 +92,7 @@ package Tcl.Tk.Ada.Font is
       Pre => FontName /= "" and Options /= "";
       -- ****
 
-      -- ****f* Font/Configure (procedure)
+      -- ****f* Font/Configure (function)
       -- FUNCTION
       -- Get the selected options for the selected font in the selected Tcl
       -- interpreter
