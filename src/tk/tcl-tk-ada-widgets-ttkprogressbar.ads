@@ -55,25 +55,33 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
    --            Default value is null.
    -- RESULT
    -- Newly created Ttk_ProgressBar
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Ttk_ProgressBar with
       Pre => pathName /= "";
-      -- ****
+     -- ****
 
-   -- ****f* TtkProgressBar/Create (procedure)
-   -- FUNCTION
-   -- Creates a new Ttk_ProgressBar in the specified interpreter.
-   -- PARAMETERS
-   -- Widgt    - Ttk_ProgressBar which will be created
-   -- pathName - Tk path (starts with dot) for the widget
-   -- options  - Options which will be passed to the widget. Default value is
-      --            empty
-   -- Interp   - Tcl interpreter to which the widget will be created. If null,
-      --            the widget will be created in the "contextual" interpreter.
-      --            Default value is null.
-      -- SOURCE
+     -- ****f* TtkProgressBar/Create (procedure)
+     -- FUNCTION
+     -- Creates a new Ttk_ProgressBar in the specified interpreter.
+     -- PARAMETERS
+     -- Widgt    - Ttk_ProgressBar which will be created
+     -- pathName - Tk path (starts with dot) for the widget
+     -- options  - Options which will be passed to the widget. Default value is
+     --            empty
+     -- Interp   - Tcl interpreter to which the widget will be created. If null,
+     --            the widget will be created in the "contextual" interpreter.
+     --            Default value is null.
+     -- HISTORY
+     -- 8.6.1 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_ProgressBar; pathName: in String;
       options: in String := ""; Interp: in Tcl_Interp := null) with
@@ -95,14 +103,18 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
    procedure Start(Bar: in Ttk_ProgressBar; Interval: in String := "50");
    -- ****
 
-      -- ****f* TtkProgressBar/Step
-      -- FUNCTION
-      -- Increment value of the Ttk_ProgressBar by amount
-      -- PARAMETERS
-      -- Bar    - Ttk_ProgressBar which value will be modified
-      -- Amount - Amount to incremement. If empty, then value is incremented
-      --          by 1.0. Default value is empty
-      -- SOURCE
+   -- ****f* TtkProgressBar/Step
+   -- FUNCTION
+   -- Increment value of the Ttk_ProgressBar by amount
+   -- PARAMETERS
+   -- Bar    - Ttk_ProgressBar which value will be modified
+   -- Amount - Amount to incremement. If empty, then value is incremented
+   --          by 1.0. Default value is empty
+   -- HISTORY
+   -- 8.6.2 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
    procedure Step(Bar: in Ttk_ProgressBar; Amount: in String := "");
    -- ****
 
