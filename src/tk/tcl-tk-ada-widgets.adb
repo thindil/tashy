@@ -155,6 +155,12 @@ package body Tcl.Tk.Ada.Widgets is
       Tcl_Eval(Widgt.Interp, "grab set " & Global & " " & Widget_Image(Widgt));
    end Grab_Set;
 
+   function Grab_Status(Widgt: in Tk_Widget'Class) return String is
+   begin
+      Tcl_Eval(Widgt.Interp, "grab status " & Widget_Image(Widgt));
+      return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
+   end Grab_Status;
+
    procedure Lower(Widgt: in Tk_Widget'Class) is
    begin
       Tcl_Eval(Widgt.Interp, "lower " & Widget_Image(Widgt));
