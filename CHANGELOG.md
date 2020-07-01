@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 Tag **BREAKING:** means that change breaks compatibility with earlier version
 of the project.
 
+## [Unreleased]
+
+### Added
+- Biding for Tk `clipboard` command: `append`
+
 ## [8.6.6] - 2020-06-30
 
 ### Added
