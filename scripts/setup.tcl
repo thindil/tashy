@@ -27,7 +27,7 @@ exec wish "$0" ${1+"$@"}
 
 set buildoption all
 set installtklib 0
-set tashy_version 8.6.6
+set tashy_version 8.6.7
 set savesettings 0
 
 # Used for mostly for Docker, normally Tk should set this variable
