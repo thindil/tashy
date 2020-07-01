@@ -9,6 +9,9 @@ of the project.
 ### Added
 - Biding for Tk `clipboard` command: `append`
 
+### Changed
+- Updated code documentation
+
 ## [8.6.6] - 2020-06-30
 
 ### Added
