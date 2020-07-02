@@ -7,7 +7,7 @@ of the project.
 ## [Unreleased]
 
 ### Added
-- Biding for Tk `clipboard` command: `append`
+- Biding for Tk `clipboard` commands: `append`, `clear`
 
 ### Changed
 - Updated code documentation
