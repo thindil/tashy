@@ -32,4 +32,10 @@ package body Tcl.Tk.Ada.Clipboard is
          Format & " -type " & CType & " " & Data);
    end Append;
 
+   procedure Clear(Window: in Tk_Widget'Class) is
+   begin
+      Tcl_Eval
+        (Window.Interp, "clipboard clear -displayof " & Widget_Image(Window));
+   end Clear;
+
 end Tcl.Tk.Ada.Clipboard;

@@ -51,4 +51,17 @@ package Tcl.Tk.Ada.Clipboard is
       Ctype in "STRING" | "FILE_NAME";
       -- ****
 
+      -- ****f* Clipboard/Clear
+      -- FUNCTION
+      -- Claim ownership of the clipboard and remove any previous contents.
+      -- PARAMETERS
+      -- Window - Tk_Widget on which display the clipboard will be claimed
+      -- HISTORY
+      -- 8.6.7 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Clear(Window: in Tk_Widget'Class);
+   -- ****
+
 end Tcl.Tk.Ada.Clipboard;
