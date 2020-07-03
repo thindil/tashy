@@ -29,6 +29,7 @@ set buildoption all
 set installtklib 0
 set tashy_version 8.6.7
 set savesettings 0
+set installmsgcat 0
 
 # Used for mostly for Docker, normally Tk should set this variable
 # by itself
@@ -160,19 +161,27 @@ proc Save_GUI {g} {
 # Also, create tcl_record_sizes.ads file
 #-----------------------------------------------------------------
 proc Save {} {
-   global tashvar tcl_platform buildoption library_switches installtklib savesettings
+   global tashvar tcl_platform buildoption library_switches installtklib
+   global savesettings installmsgcat
    if {$buildoption == "tcl"} {
       setvar TK_VERSION    ""        {Tk version}
       setvar TK_LIBRARY    ""        {Tk library}
       setvar X11HOME       ""        {X11 home directory}
       setvar X11_LIB       ""        {X11 library directory}
       setvar X11_INCLUDE   ""        {X11 include directory}
-      setvar SOURCES       "\"src\""   {Source directories}
+      if {$installmsgcat == 1} {
+         setvar SOURCES "\"src\", \"src/msgcat\"" {Source directories}
+      } else {
+         setvar SOURCES       "\"src\""   {Source directories}
+      }
       set library_switches [string range $library_switches 0 [string first "-ltk" $library_switches]-1]
    } elseif {$buildoption != "all"} {
       set sources "\"src\", \"src/tk\""
       if {$installtklib == 1} {
          append sources ", \"src/tklib\""
+      }
+      if {$installmsgcat == 1} {
+         append sources ", \"src/msgcat\""
       }
       setvar SOURCES       $sources   {Source directories}
    } else {
@@ -204,6 +213,7 @@ proc Save {} {
       puts $f $tashvar(EXE)
       puts $f "$buildoption"
       puts $f "$installtklib"
+      puts $f "$installmsgcat"
       close $f
    }
 }
@@ -355,6 +365,7 @@ proc Set_Macros {platform os} {
       setvar EXE               "[gets $f]"   {suffix for executable files}
       set buildoption "[gets $f]"
       set installtklib "[gets $f]"
+      set installmsgcat "[gets $f]"
       close $f
    }
 }
@@ -389,9 +400,11 @@ set modulesframe [ttk::labelframe .modules -text "Select modules"]
 pack $modulesframe -side top
 
 pack [ttk::radiobutton .modules.all -text "Everything" -value "all" -variable buildoption] -fill x
-pack [ttk::radiobutton .modules.tcl -text "Tcl only" -value "tcl" -variable buildoption] -fill x
+pack [ttk::radiobutton .modules.tcl -text "Tcl and one from the list below" -value "tcl" -variable buildoption] -fill x
+pack [ttk::checkbutton .modules.msgcat -text "msgcat" -variable installmsgcat]
 pack [ttk::radiobutton .modules.select -text "Tcl, Tk and one from the list below" -value "tcltk" -variable buildoption]
 pack [ttk::checkbutton .modules.tklib -text "Tklib" -variable installtklib]
+pack [ttk::checkbutton .modules.msgcat2 -text "msgcat" -variable installmsgcat]
 
 set g [ttk::frame .grid]
 pack $g -side top
