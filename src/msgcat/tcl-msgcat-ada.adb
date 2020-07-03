@@ -33,4 +33,15 @@ package body Tcl.MsgCat.Ada is
       end if;
    end MsgCat_Init;
 
+   procedure Mc_Locale(NewLocale: in String; Interp: Tcl_Interp) is
+   begin
+      Tcl.Ada.Tcl_Eval(Interp, "::msgcat::mclocale " & NewLocale);
+   end Mc_Locale;
+
+   function Mc_Locale(Interp: Tcl_Interp) return String is
+   begin
+      Tcl.Ada.Tcl_Eval(Interp, "::msgcat::mclocale");
+      return Tcl.Ada.Tcl_GetResult(Interp);
+   end Mc_Locale;
+
 end Tcl.MsgCat.Ada;

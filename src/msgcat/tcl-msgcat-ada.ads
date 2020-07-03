@@ -22,7 +22,7 @@
 
 -- ****h* MsgCat/MsgCatAda
 -- FUNCTION
--- Dummy package
+-- Provide code for manipulate Tcl package msgcat
 -- SOURCE
 package Tcl.MsgCat.Ada is
 -- ****
@@ -31,9 +31,44 @@ package Tcl.MsgCat.Ada is
    -- FUNCTION
    -- Load package msgcat. Raise Program_Error if package can't be loaded
    -- PARAMETERS
-   -- Interp: Tcl interpreter to which msgcat package will be added
+   -- Interp - Tcl interpreter to which msgcat package will be added
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure MsgCat_Init(Interp: in Tcl_Interp);
+   -- ****
+
+   -- ****f* MsgCatAda/Mc_Locale (procedure)
+   -- FUNCTION
+   -- Set the new default locale for the selected interpreter
+   -- PARAMETERS
+   -- NewLocale - The name of the new default locale for the selected
+   --             Tcl interpreter
+   -- Interp    - Tcl interpreter on which locale will be set
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Mc_Locale(NewLocale: in String; Interp: Tcl_Interp) with
+      Pre => NewLocale /= "";
+      -- ****
+
+      -- ****f* MsgCatAda/Mc_Locale (function)
+      -- FUNCTION
+      -- Get the default locale for the selected interpreter
+      -- PARAMETERS
+      -- Interp - Tcl interpreter from which locale will be get
+      -- RESULT
+      -- The name of the currently set locale
+      -- HISTORY
+      -- 8.6.7 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Mc_Locale(Interp: Tcl_Interp) return String;
    -- ****
 
 end Tcl.MsgCat.Ada;
