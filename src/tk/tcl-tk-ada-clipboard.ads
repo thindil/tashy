@@ -64,4 +64,24 @@ package Tcl.Tk.Ada.Clipboard is
    procedure Clear(Window: in Tk_Widget'Class);
    -- ****
 
+   -- ****f* Clipboard/Get
+   -- FUNCTION
+   -- Retrieve the data from the clipboard
+   -- PARAMETERS
+   -- Window - Tk_Widget on which display the clipboard data will be retrieved
+   -- CType  - The form in which the data will be returned. Possible values
+   --          are STRING or FILE_NAME. Default value is STRING
+   -- RESULT
+   -- The content of the selected clipboard
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function Get
+     (Window: in Tk_Widget'Class; CType: in String := "STRING")
+      return String with
+      Pre => CType in "STRING" | "FILE_NAME";
+      -- ****
+
 end Tcl.Tk.Ada.Clipboard;

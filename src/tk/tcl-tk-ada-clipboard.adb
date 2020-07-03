@@ -20,6 +20,8 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
+with Tcl.Ada;
+
 package body Tcl.Tk.Ada.Clipboard is
 
    procedure Append
@@ -37,5 +39,16 @@ package body Tcl.Tk.Ada.Clipboard is
       Tcl_Eval
         (Window.Interp, "clipboard clear -displayof " & Widget_Image(Window));
    end Clear;
+
+   function Get
+     (Window: in Tk_Widget'Class; CType: in String := "STRING")
+      return String is
+   begin
+      Tcl_Eval
+        (Window.Interp,
+         "clipboard get -displayof " & Widget_Image(Window) & " -type " &
+         CType);
+      return Tcl.Ada.Tcl_GetResult(Window.Interp);
+   end Get;
 
 end Tcl.Tk.Ada.Clipboard;
