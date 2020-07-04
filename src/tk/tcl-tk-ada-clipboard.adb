@@ -51,4 +51,13 @@ package body Tcl.Tk.Ada.Clipboard is
       return Tcl.Ada.Tcl_GetResult(Window.Interp);
    end Get;
 
+   procedure Selection_Clear
+     (Window: in Tk_Widget'Class; Selection: in String := "PRIMARY") is
+   begin
+      Tcl_Eval
+        (Window.Interp,
+         "selection clear -displayof " & Widget_Image(Window) &
+         " -selection " & Selection);
+   end Selection_Clear;
+
 end Tcl.Tk.Ada.Clipboard;

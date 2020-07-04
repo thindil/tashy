@@ -84,4 +84,21 @@ package Tcl.Tk.Ada.Clipboard is
       Pre => CType in "STRING" | "FILE_NAME";
       -- ****
 
+      -- ****f* Clipboard/Selection_Clear
+      -- FUNCTION
+      -- Clear the selected selection on the selected window's display
+      -- PARAMETERS
+      -- Window    - Tk_Widget on which display the selection will be cleared
+      -- Selection - Type of selection to clear. Possible values are PRIMARY
+      --             and CLIPBOARD. Default value is PRIMARY
+      -- HISTORY
+      -- 8.6.7 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Selection_Clear
+     (Window: in Tk_Widget'Class; Selection: in String := "PRIMARY") with
+      Pre => Selection in "PRIMARY" | "CLIPBOARD";
+      -- ****
+
 end Tcl.Tk.Ada.Clipboard;
