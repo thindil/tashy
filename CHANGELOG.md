@@ -9,6 +9,7 @@ of the project.
 ### Added
 - Biding for Tk `clipboard` commands: `append`, `clear`, `get`
 - Binding for msgcat command: `mclocale`
+- Binding for Tk `selection` command: `clear`
 
 ### Changed
 - Updated code documentation
