@@ -33,6 +33,17 @@ package body Tcl.MsgCat.Ada is
       end if;
    end MsgCat_Init;
 
+   procedure Mc_Load(DirName: in String; Interp: in Tcl_Interp) is
+   begin
+      Tcl.Ada.Tcl_Eval(Interp, "::msgcat::mcload " & DirName);
+   end Mc_Load;
+
+   function Mc_Load(DirName: in String; Interp: in Tcl_Interp) return String is
+   begin
+      Tcl.Ada.Tcl_Eval(Interp, "::msgcat::mcload " & DirName);
+      return Tcl.Ada.Tcl_GetResult(Interp);
+   end Mc_Load;
+
    procedure Mc_Locale(NewLocale: in String; Interp: Tcl_Interp) is
    begin
       Tcl.Ada.Tcl_Eval(Interp, "::msgcat::mclocale " & NewLocale);

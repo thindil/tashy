@@ -40,19 +40,55 @@ package Tcl.MsgCat.Ada is
    procedure MsgCat_Init(Interp: in Tcl_Interp);
    -- ****
 
-   -- ****f* MsgCatAda/Mc_Locale (procedure)
+   -- ****f* MsgCatAda/Mc_Load (procedure)
    -- FUNCTION
-   -- Set the new default locale for the selected interpreter
+   -- Load the translations for the currently set locale from the selected
+   -- directory
    -- PARAMETERS
-   -- NewLocale - The name of the new default locale for the selected
-   --             Tcl interpreter
-   -- Interp    - Tcl interpreter on which locale will be set
+   -- DirName - The name of the directory which will be scanned for the
+   --           translations and if found anything, loaded
+   -- Interp  - Tcl interpreter on which the locations will be loaded
    -- HISTORY
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
    -- SOURCE
-   procedure Mc_Locale(NewLocale: in String; Interp: Tcl_Interp) with
+   procedure Mc_Load(DirName: in String; Interp: in Tcl_Interp) with
+      Pre => DirName /= "";
+      -- ****
+
+   -- ****f* MsgCatAda/Mc_Load (function)
+   -- FUNCTION
+   -- Load the translations for the currently set locale from the selected
+   -- directory
+   -- PARAMETERS
+   -- DirName - The name of the directory which will be scanned for the
+   --           translations and if found anything, loaded
+   -- Interp  - Tcl interpreter on which the locations will be loaded
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function Mc_Load(DirName: in String; Interp: in Tcl_Interp) return String with
+      Pre => DirName /= "";
+      -- ****
+
+      -- ****f* MsgCatAda/Mc_Locale (function)
+      -- FUNCTION
+      -- Set the new default locale for the selected interpreter
+      -- PARAMETERS
+      -- NewLocale - The name of the new default locale for the selected
+      --             Tcl interpreter
+      -- Interp    - Tcl interpreter on which locale will be set
+      -- RESULT
+      -- Number of translation files loaded
+      -- HISTORY
+      -- 8.6.7 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Mc_Locale(NewLocale: in String; Interp: in Tcl_Interp) with
       Pre => NewLocale /= "";
       -- ****
 
@@ -68,7 +104,7 @@ package Tcl.MsgCat.Ada is
       -- TODO
       -- Replace it with higher level of binding
       -- SOURCE
-   function Mc_Locale(Interp: Tcl_Interp) return String;
+   function Mc_Locale(Interp: in Tcl_Interp) return String;
    -- ****
 
 end Tcl.MsgCat.Ada;
