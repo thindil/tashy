@@ -101,4 +101,29 @@ package Tcl.Tk.Ada.Clipboard is
       Pre => Selection in "PRIMARY" | "CLIPBOARD";
       -- ****
 
+      -- ****f* Clipboard/Selection_Get
+      -- FUNCTION
+      -- Retrieve the data from the selected selection on the selected
+      -- window's display
+      -- PARAMETERS
+      -- Window    - Tk_Widget on which display the contents of the selection
+      --             will be get
+      -- Selection - The type of the selection. Possible values are PRIMARY
+      --             and CLIPBOARD. Default value is PRIMARY
+      -- SType     - Form in which the data will be returned. Possible values
+      --             are STRING and FILE_NAME. Default value is STRING
+      -- RESULT
+      -- The contents of the selected selection
+      -- HISTORY
+      -- 8.6.7 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Selection_Get
+     (Window: in Tk_Widget'Class; Selection: in String := "PRIMARY";
+      SType: in String := "STRING") return String with
+      Pre => Selection in "PRIMARY" | "CLIPBOARD" and
+      SType in "STRING" | "FILE_NAME";
+      -- ****
+
 end Tcl.Tk.Ada.Clipboard;
