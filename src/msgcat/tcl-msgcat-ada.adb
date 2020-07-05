@@ -55,4 +55,25 @@ package body Tcl.MsgCat.Ada is
       return Tcl.Ada.Tcl_GetResult(Interp);
    end Mc_Locale;
 
+   procedure Mc_Set
+     (Interp: Tcl_Interp; Locale, Src_String: in String;
+      Translate_String: in String := "") is
+   begin
+      Tcl.Ada.Tcl_Eval
+        (Interp,
+         "::msgcat::mcset " & Locale & " " & Src_String & " " &
+         Translate_String);
+   end Mc_Set;
+
+   function Mc_Set
+     (Interp: Tcl_Interp; Locale, Src_String: in String;
+      Translate_String: in String := "") return String is
+   begin
+      Tcl.Ada.Tcl_Eval
+        (Interp,
+         "::msgcat::mcset " & Locale & " " & Src_String & " " &
+         Translate_String);
+      return Tcl.Ada.Tcl_GetResult(Interp);
+   end Mc_Set;
+
 end Tcl.MsgCat.Ada;
