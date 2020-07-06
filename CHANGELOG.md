@@ -9,7 +9,7 @@ of the project.
 ### Added
 - Biding for Tk `clipboard` commands: `append`, `clear`, `get`
 - Binding for msgcat commands: `mclocale`, `mcload`, `mcset`
-- Binding for Tk `selection` commands: `clear`, `get`
+- Binding for Tk `selection` commands: `clear`, `get`, `handle`
 
 ### Changed
 - Updated code documentation
@@ -196,10 +196,10 @@ of the project.
 ### Added
 - Binding for Tk `menu` widget
 - Binding for Tk `wm` command
-- Binding for Tk `ttk:button` widget
+- Binding for Tk `ttk::button` widget
 - Binding fot Tk `image` command
 - Binding for Tk `photo` object
-- Binding for Tk `ttk:treeview` widget
+- Binding for Tk `ttk::treeview` widget
 - Binding for Tk `panedwindow` widget
 - Binding for Tk `scrollbar` widget
 - Binding for Tk `scale` widget
