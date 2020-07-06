@@ -71,4 +71,15 @@ package body Tcl.Tk.Ada.Clipboard is
       return Tcl.Ada.Tcl_GetResult(Window.Interp);
    end Selection_Get;
 
+   procedure Selection_Handle
+     (Window: in Tk_Widget'Class; Command: in String;
+      Selection: in String := "PRIMARY"; SType: in String := "STRING";
+      Format: in String := "STRING") is
+   begin
+      Tcl_Eval
+        (Window.Interp,
+         "selection handle -selection " & Selection & " -type " & SType &
+         " -format " & Format & " " & Widget_Image(Window) & " " & Command);
+   end Selection_Handle;
+
 end Tcl.Tk.Ada.Clipboard;

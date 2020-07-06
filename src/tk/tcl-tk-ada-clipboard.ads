@@ -126,4 +126,32 @@ package Tcl.Tk.Ada.Clipboard is
       SType in "STRING" | "FILE_NAME";
       -- ****
 
+      -- ****f* Clipboard/Selection_Handle
+      -- FUNCTION
+      -- Creates a handler for selection requests, such that command will be
+      -- executed whenever selection is owned by the selected window
+      -- PARAMETERS
+      -- Window    - Tk_Widget which will be owe the selection
+      -- Command   - Tcl command which will be executed
+      -- Selection - The selection which will be queried. Possible values are
+      --             PRIMARY and CLIPBOARD. Default value is PRIMARY
+      -- SType     - Form of data retrieved from the selection. Possible
+      --             values are STRING or FILE_NAME. Default value is STRING
+      -- Format    - Format used to transmit the selection to the requester.
+      --             Possible values are STRING, UTF8_STRING, ATOM and INTEGER.
+      --             Default value is STRING
+      -- HISTORY
+      -- 8.6.7 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Selection_Handle
+     (Window: in Tk_Widget'Class; Command: in String;
+      Selection: in String := "PRIMARY"; SType: in String := "STRING";
+      Format: in String := "STRING") with
+      Pre => Command /= "" and Selection in "PRIMARY" | "CLIPBOARD" and
+      SType in "STRING" | "FILE_NAME" and
+      Format in "STRING" | "UTF8_STRING" | "ATOM" | "INTEGER";
+      -- ****
+
 end Tcl.Tk.Ada.Clipboard;
