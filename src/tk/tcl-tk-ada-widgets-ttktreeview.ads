@@ -48,6 +48,10 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    --            Default value is null.
    -- RESULT
    -- Newly created Ttk_Tree_View
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -55,18 +59,22 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => pathName /= "";
      -- ****
 
-   -- ****f* TtkTreeView/Create (procedure)
-   -- FUNCTION
-   -- Creates a new Ttk_Tree_View in the specified interpreter.
-   -- PARAMETERS
-   -- Widgt    - Ttk_Tree_View which will be created
-   -- pathName - Tk path (starts with dot) for the widget
-   -- options  - Options which will be passed to the widget. Default value is
-   --            empty
-   -- Interp   - Tcl interpreter to which the widget will be created. If null,
-   --            the widget will be created in the "contextual" interpreter.
-   --            Default value is null.
-   -- SOURCE
+     -- ****f* TtkTreeView/Create (procedure)
+     -- FUNCTION
+     -- Creates a new Ttk_Tree_View in the specified interpreter.
+     -- PARAMETERS
+     -- Widgt    - Ttk_Tree_View which will be created
+     -- pathName - Tk path (starts with dot) for the widget
+     -- options  - Options which will be passed to the widget. Default value is
+     --            empty
+     -- Interp   - Tcl interpreter to which the widget will be created. If null,
+     --            the widget will be created in the "contextual" interpreter.
+     --            Default value is null.
+     -- HISTORY
+     -- 8.6.1 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_Tree_View; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
@@ -81,6 +89,10 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- Item           - Item ID from TreeViewWidget or {} for root item
       -- RESULT
       -- String with list of items which belong to the selected item
+      -- HISTORY
+      -- 8.6.2 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Children
      (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
@@ -94,6 +106,10 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- TreeViewWidget - Ttk_Tree_View in which column will be modified
       -- Col            - Identificator of the column to modify
       -- Options        - Tk options to pass to the column
+      -- HISTORY
+      -- 8.6.2 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Column
      (TreeViewWidget: in Ttk_Tree_View; Col: in String;
@@ -115,6 +131,10 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- If Option is set, return value of the selected option for the
       -- selected column. Otherwise return all options with their values for
       -- the selected column.
+      -- HISTORY
+      -- 8.6.2 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Column
      (TreeViewWidget: in Ttk_Tree_View; Col: in String;
@@ -128,6 +148,10 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- PARAMETERS
       -- TreeViewWidget - Ttk_Tree_View in which items will be deleted
       -- ItemsList      - List of items to delete
+      -- HISTORY
+      -- 8.6.1 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Delete
      (TreeViewWidget: in Ttk_Tree_View; ItemsList: in String) with
@@ -141,6 +165,10 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- PARAMETERS
       -- TreeViewWidget - Ttk_Tree_View in which items will be unlinked
       -- ItemsList      - List of items to unlink
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Detach
      (TreeViewWidget: in Ttk_Tree_View; ItemsList: in String) with
@@ -155,6 +183,10 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- Item           - Item identifier which will be looking for
       -- RESULT
       -- 0 if item don't exists in the selected TreeViewWidget, otherwise 1.
+      -- HISTORY
+      -- 8.6.2 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Exists
      (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
@@ -167,6 +199,10 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- PARAMETERS
       -- TreeViewWidget - Ttk_Tree_View in which item will be set
       -- Item           - Identifier of the item which will be set as focused
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Focus(TreeViewWidget: in Ttk_Tree_View; Item: in String) with
       Pre => Item /= "";
@@ -180,6 +216,10 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       --                  item
       -- RESULT
       -- Identifier ot the currently focused item or empty string if none
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Focus(TreeViewWidget: in Ttk_Tree_View) return String;
    -- ****
@@ -191,6 +231,10 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- TreeViewWidget - Ttk_Tree_View in which header will be configured
    -- Column         - Id of column which header will be configured
    -- Options        - Tk options for selected header
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Heading
      (TreeViewWidget: in Ttk_Tree_View; Column, Options: in String) with
@@ -207,6 +251,10 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- RESULT
       -- Configuration options of selected header. If option is specified,
       -- return selected option value
+      -- HISTORY
+      -- 8.6.1 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Heading
      (TreeViewWidget: in Ttk_Tree_View; Column: in String;
@@ -304,6 +352,10 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       --                  looking for
       -- RESULT
       -- Numeric index of the selected item in the selected Ttk_Tree_View
+      -- HISTORY
+      -- 8.6.2 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Index
      (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
@@ -316,6 +368,10 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- PARAMETERS
       -- TreeViewWidget - Ttk_Tree_View in which item will be inserted
       -- Options        - Tk options for the item which will be inserted
+      -- HISTORY
+      -- 8.6.1 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Insert(TreeViewWidget: in Ttk_Tree_View; Options: in String) with
       Pre => Options /= "";
@@ -329,6 +385,10 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- Options        - Tk options for the item which will be inserted
       -- RESULT
       -- Index of newly inserted item
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Insert
      (TreeViewWidget: in Ttk_Tree_View; Options: in String) return String with
@@ -342,6 +402,10 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- TreeViewWidget - Ttk_Tree_View in which item options will be modified
       -- Item           - Id of the item to modify
       -- Options        - Tk options to set for the selected item
+      -- HISTORY
+      -- 8.6.1 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Item
      (TreeViewWidget: in Ttk_Tree_View; Item, Options: in String) with
@@ -350,12 +414,16 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
 
       -- ****f* TtkTreeView/Item (function)
       -- FUNCTION
-   -- Get options of the selected item in tree view
-   -- PARAMETERS
-   -- TreeViewWidget - Ttk_Tree_View in which item options will be queried
-   -- Item           - Id of the item to query
-   -- Options        - Tk options to get from the selected item. If empty, get
+      -- Get options of the selected item in tree view
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View in which item options will be queried
+      -- Item           - Id of the item to query
+      -- Options        - Tk options to get from the selected item. If empty, get
       --                  all options. Default is empty.
+      -- HISTORY
+      -- 8.6.1 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Item
      (TreeViewWidget: in Ttk_Tree_View; Item: in String;
@@ -373,6 +441,10 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- Parent         - Parent to which item will be moved. Use {} for
       --                  root item
       -- Index          - Index to which the item will be moved
+      -- HISTORY
+      -- 8.6.2 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Move
      (TreeViewWidget: in Ttk_Tree_View; Item, Parent, Index: in String) with
@@ -390,6 +462,10 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- RESULT
       -- Identifier of the next sibling of the selected item or empty string if
       -- Item is the last element of its parent
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Next
      (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
@@ -406,6 +482,10 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- RESULT
       -- ID of the parent of the selected Item or empty string if item is at
       -- the top of the hiearchy
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Parent
      (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
@@ -423,6 +503,10 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- RESULT
       -- Identifier of the previous sibling of the selected item or empty
       -- string if Item is the first element of its parent
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Prev
      (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
@@ -452,6 +536,10 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- TreeViewWidget - Ttk_Tree_View from which selection will be taken
       -- RESULT
       -- List of items currently selected in TreeViewWidget
+      -- HISTORY
+      -- 8.6.2 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Selection(TreeViewWidget: in Ttk_Tree_View) return String;
    -- ****
@@ -462,19 +550,27 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- PARAMETERS
    -- TreeViewWidget - Ttk_Tree_View in which selection will be set
    -- Items          - Tcl list of items to set as selected
+   -- HISTORY
+   -- 8.6.2 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Selection_Set
      (TreeViewWidget: in Ttk_Tree_View; Items: in String) with
       Pre => Items /= "";
       -- ****
 
-   -- ****f* TtkTreeView/Selection_Add
-   -- FUNCTION
-   -- Add new items to the selection in the selected Ttk_Tree_View
-   -- PARAMETERS
-   -- TreeViewWidget - Ttk_Tree_View in which items will be added to selection
-   -- Items          - Tcl list of items to add to the selection
-   -- SOURCE
+      -- ****f* TtkTreeView/Selection_Add
+      -- FUNCTION
+      -- Add new items to the selection in the selected Ttk_Tree_View
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View in which items will be added to selection
+      -- Items          - Tcl list of items to add to the selection
+      -- HISTORY
+      -- 8.6.2 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
    procedure Selection_Add
      (TreeViewWidget: in Ttk_Tree_View; Items: in String) with
       Pre => Items /= "";
@@ -486,6 +582,10 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- PARAMETERS
       -- TreeViewWidget - Ttk_Tree_View from which items will be removed
       -- Items          - Tcl list of items to remove from the selection
+      -- HISTORY
+      -- 8.6.2 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Selection_Remove
      (TreeViewWidget: in Ttk_Tree_View; Items: in String) with
@@ -499,6 +599,10 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- TreeViewWidget - Ttk_Tree_View in which items will have toggled selection
       --                  state
       -- Items          - Tcl list of items to toggle
+      -- HISTORY
+      -- 8.6.2 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Selection_Toggle
      (TreeViewWidget: in Ttk_Tree_View; Items: in String) with
