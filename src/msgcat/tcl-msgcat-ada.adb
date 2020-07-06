@@ -33,6 +33,14 @@ package body Tcl.MsgCat.Ada is
       end if;
    end MsgCat_Init;
 
+   function Mc
+     (Interp: Tcl_Interp; Src_String: in String; Arguments: in String := "")
+      return String is
+   begin
+      Tcl.Ada.Tcl_Eval(Interp, "::msgcat::mc " & Src_String & " " & Arguments);
+      return Tcl.Ada.Tcl_GetResult(Interp);
+   end Mc;
+
    procedure Mc_Load(DirName: in String; Interp: in Tcl_Interp) is
    begin
       Tcl.Ada.Tcl_Eval(Interp, "::msgcat::mcload " & DirName);

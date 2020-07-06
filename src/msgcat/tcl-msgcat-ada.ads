@@ -40,6 +40,29 @@ package Tcl.MsgCat.Ada is
    procedure MsgCat_Init(Interp: in Tcl_Interp);
    -- ****
 
+   -- ****f* MsgCatAda/Mc
+   -- FUNCTION
+   -- Get the translation for the selected string
+   -- PARAMETERS
+   -- Interp     - Tcl interpreter on which translation will be get
+   -- Src_String - Source string which for which translation will be get
+   -- Arguments  - Additional arguments. If not empty, command format will be
+   --              used for format translation result and Arguments will be
+   --              passed to it. Default value is empty.
+   -- RESULT
+   -- String with translation of Src_String. If no translation string exists,
+   -- it return result string from routine mcunknown
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function Mc
+     (Interp: Tcl_Interp; Src_String: in String; Arguments: in String := "")
+      return String with
+      Pre => Src_String /= "";
+      -- ****
+
    -- ****f* MsgCatAda/Mc_Load (procedure)
    -- FUNCTION
    -- Load the translations for the currently set locale from the selected
