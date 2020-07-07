@@ -56,6 +56,10 @@ package Tcl.Tk.Ada.Widgets.TtkWidget is
    -- Script    - If Widget is in the selected StateSpec, run this Tcl script
    -- RESULT
    -- 1 if the selected widget is in the selected state, otherwise 0.
+   -- HISTORY
+   -- 8.6.3 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function InState
      (Widget: in Tk_Widget'Class; StateSpec: in String;
@@ -69,6 +73,10 @@ package Tcl.Tk.Ada.Widgets.TtkWidget is
       -- PARAMETERS
       -- Widget    - Ttk widget which state will be set
       -- StateSpec - Ttk state to set
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure State(Widget: in Tk_Widget'Class; StateSpec: in String) with
       Pre => StateSpec /= "";
@@ -81,6 +89,10 @@ package Tcl.Tk.Ada.Widgets.TtkWidget is
       -- Widget - Ttk widget which will be queried for the state
       -- RESULT
       -- List of currently enabled state flags
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function State(Widget: in Tk_Widget'Class) return String;
    -- ****
