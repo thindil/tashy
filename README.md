@@ -56,9 +56,13 @@ To build you need:
 
   https://www.magicsplat.com/tcl-installer/index.html
 
+  ActiveState version of Tcl/Tk also works:
+
+  https://www.activestate.com/products/tcl/
+
 * If you want Tklib library binding, you will be need this library too. Should
   be available in every Linux distribution. For Windows it is included in the
-  MagicSplat version.
+  MagicSplat and ActiveState versions.
 
 If you have all the required packages, navigate to the main directory(where
 this file is) to compile and type in the console:
