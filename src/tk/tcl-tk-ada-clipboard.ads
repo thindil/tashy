@@ -154,4 +154,27 @@ package Tcl.Tk.Ada.Clipboard is
       Format in "STRING" | "UTF8_STRING" | "ATOM" | "INTEGER";
       -- ****
 
+      -- ****f* Clipboard/Selection_Own
+      -- FUNCTION
+      -- Get the name of the window which owns the selected selection in the
+      -- selected window's display
+      -- PARAMETERS
+      -- Window    - Tk_Widget on which display the owner of selection will be
+      --             get
+      -- Selection - The selection which will be checked. Possible values are
+      --             PRIMARY and CLIPBOARD. Default value is PRIMARY
+      -- RESULT
+      -- The name of the window which owns the selection or {} if no window
+      -- owns the selection.
+      -- HISTORY
+      -- 8.6.7 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Selection_Own
+     (Window: in Tk_Widget'Class; Selection: in String := "PRIMARY")
+      return String with
+      Pre => Selection in "PRIMARY" | "CLIPBOARD";
+      -- ****
+
 end Tcl.Tk.Ada.Clipboard;
