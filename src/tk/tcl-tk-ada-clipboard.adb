@@ -93,4 +93,14 @@ package body Tcl.Tk.Ada.Clipboard is
       return Tcl.Ada.Tcl_GetResult(Window.Interp);
    end Selection_Own;
 
+   procedure Selection_Own
+     (Window: in Tk_Widget'Class; Command: in String := "";
+      Selection: in String := "PRIMARY") is
+   begin
+      Tcl_Eval
+        (Window.Interp,
+         "selection own " & Command & " -selection " & Selection & " " &
+         Widget_Image(Window));
+   end Selection_Own;
+
 end Tcl.Tk.Ada.Clipboard;

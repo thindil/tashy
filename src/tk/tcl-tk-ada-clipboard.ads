@@ -154,7 +154,7 @@ package Tcl.Tk.Ada.Clipboard is
       Format in "STRING" | "UTF8_STRING" | "ATOM" | "INTEGER";
       -- ****
 
-      -- ****f* Clipboard/Selection_Own
+      -- ****f* Clipboard/Selection_Own (function)
       -- FUNCTION
       -- Get the name of the window which owns the selected selection in the
       -- selected window's display
@@ -174,6 +174,24 @@ package Tcl.Tk.Ada.Clipboard is
    function Selection_Own
      (Window: in Tk_Widget'Class; Selection: in String := "PRIMARY")
       return String with
+      Pre => Selection in "PRIMARY" | "CLIPBOARD";
+      -- ****
+
+      -- ****f* Clipboard/Selection_Own (procedure)
+      -- FUNCTION
+      -- Set the Window as a new owner of the selected selection.
+      -- PARAMETERS
+      -- Window    - Tk_Widget which will be set as the owner of the selected
+      --             Selection
+      -- Command   - Tcl command to execute when other window claims ownership
+      --             of the Selection from the Window. Must starts with
+      --             "-command "
+      -- Selection - The selection which will be owned. Possible values are
+      --             PRIMARY and CLIPBOARD. Default value is PRIMARY
+      -- SOURCE
+   procedure Selection_Own
+     (Window: in Tk_Widget'Class; Command: in String := "";
+      Selection: in String := "PRIMARY") with
       Pre => Selection in "PRIMARY" | "CLIPBOARD";
       -- ****
 
