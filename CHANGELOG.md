@@ -11,6 +11,7 @@ of the project.
 - Binding for msgcat commands: `mc`, `mclocale`, `mcload`, `mcset`
 - Binding for Tk `selection` commands: `clear`, `get`, `handle`, `own` (get
   name of owner of selection), `own` (set owner of selection)
+- Binding for Tklib `autoscroll` command: `wrap`
 
 ### Changed
 - Updated code documentation
