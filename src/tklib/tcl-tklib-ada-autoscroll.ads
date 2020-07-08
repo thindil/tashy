@@ -32,8 +32,26 @@ package Tcl.Tklib.Ada.Autoscroll is
    -- Load package autoscroll. Raise Program_Error if package can't be loaded
    -- PARAMETERS
    -- Interp: Tcl interpreter to which autoscroll package will be added
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Autoscroll_Init(Interp: in Tcl_Interp);
+   -- ****
+
+   -- ****f* Autoscroll/Wrap
+   -- FUNCTION
+   -- Arranges for all scrollbars created after to be automatically mapped and
+   -- unmapped as needed.
+   -- PARAMETERS
+   -- Interp: Tcl interpreter on which scrollbars will be arranged
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Wrap(Interp: in Tcl_Interp);
    -- ****
 
 end Tcl.Tklib.Ada.Autoscroll;

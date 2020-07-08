@@ -33,4 +33,9 @@ package body Tcl.Tklib.Ada.Autoscroll is
       end if;
    end Autoscroll_Init;
 
+   procedure Wrap(Interp: in Tcl_Interp) is
+   begin
+      Tcl.Ada.Tcl_Eval(Interp, "::autoscroll::wrap");
+   end Wrap;
+
 end Tcl.Tklib.Ada.Autoscroll;
