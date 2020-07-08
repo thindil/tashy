@@ -58,6 +58,10 @@ package Tcl.Tk.Ada.Widgets is
    -- Win - Tk_Widget which name will be returned.
    -- RESULT
    -- String with name of Tk_Widget
+   -- HISTORY
+   -- 8.6.0 - Imported from TASH
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function Widget_Image(Win: in Tk_Widget'Class) return String;
    -- ****
@@ -71,6 +75,10 @@ package Tcl.Tk.Ada.Widgets is
    -- Right - Second Tk_Widget or String to concatenate
    -- RESULT
    -- String with concantenate name
+   -- HISTORY
+   -- 8.6.0 - Imported from TASH
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function "&"
      (Left: in Tk_Widget'Class; Right: in Tk_Widget'Class) return String;
@@ -87,6 +95,10 @@ package Tcl.Tk.Ada.Widgets is
    -- Widgt - Tk_Widget which belongs to Tcl interpreter
    -- RESULT
    -- Tcl interpreter of the specified Tk_Widget
+   -- HISTORY
+   -- 8.6.0 - Imported from TASH
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function Get_Interp(Widgt: in Tk_Widget'Class) return Tcl_Interp;
    -- ****
@@ -110,6 +122,10 @@ package Tcl.Tk.Ada.Widgets is
    --            Default value is null.
    -- RESULT
    -- Newly created Tk_Widget
+   -- HISTORY
+   -- 8.6.0 - Imported from TASH
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
@@ -128,6 +144,10 @@ package Tcl.Tk.Ada.Widgets is
    -- Interp   - Tcl interpreter to which the widget will be created. If null,
    --            the widget will be created in the "contextual" interpreter.
    --            Default value is null.
+   -- HISTORY
+   -- 8.6.0 - Imported from TASH
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Create
      (Widgt: out Tk_Widget; pathName: in String; options: in String := "";
@@ -145,6 +165,10 @@ package Tcl.Tk.Ada.Widgets is
    -- Destroys a Tk_Widget.
    -- PARAMETERS
    -- Widgt - Tk_Widget to destroy
+   -- HISTORY
+   -- 8.6.0 - Imported from TASH
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Destroy(Widgt: in out Tk_Widget'Class);
    -- ****
@@ -163,6 +187,10 @@ package Tcl.Tk.Ada.Widgets is
    -- option - Name of the option to get
    -- RESULT
    -- Returns the current value of the specified configuration option.
+   -- HISTORY
+   -- 8.6.0 - Imported from TASH
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function cget(Widgt: in Tk_Widget'Class; option: in String) return String;
    -- ****
@@ -177,6 +205,10 @@ package Tcl.Tk.Ada.Widgets is
    -- RESULT
    -- String with Tcl information about finished action (for example, list
    -- of options).
+   -- HISTORY
+   -- 8.6.0 - Imported from TASH
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function configure
      (Widgt: in Tk_Widget'Class; options: in String := "") return String;
@@ -188,6 +220,10 @@ package Tcl.Tk.Ada.Widgets is
    -- PARAMETERS
    -- Widgt   - Tk_Widget from which options will be queried or modified
    -- options - Options to configure.
+   -- HISTORY
+   -- 8.6.0 - Imported from TASH
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure configure(Widgt: in Tk_Widget'Class; options: in String) with
       Pre => options /= "";
@@ -208,6 +244,10 @@ package Tcl.Tk.Ada.Widgets is
       -- Widgt    - Tk_Widget to which script will be binded
       -- Sequence - Name of Tk event which will be binded with the script
       -- Script   - Tcl code which will be binded to the Tk_Widget
+      -- HISTORY
+      -- 8.6.0 - Imported from TASH
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Bind
      (Widgt: in Tk_Widget'Class; Sequence: in String; Script: in String);
@@ -219,6 +259,10 @@ package Tcl.Tk.Ada.Widgets is
    -- PARAMETERS
    -- Widgt    - Tk_Widget from which selected event will be removed
    -- Sequence - Name of Tk event which will be removed from the widget
+   -- HISTORY
+   -- 8.6.0 - Imported from TASH
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Unbind(Widgt: in Tk_Widget'Class; Sequence: in String);
    -- ****
@@ -231,19 +275,27 @@ package Tcl.Tk.Ada.Widgets is
    -- Sequence - Name of Tk event which will be removed from the widget
    -- RESULT
    -- String with Tcl information about finished action
+   -- HISTORY
+   -- 8.6.0 - Imported from TASH
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function Unbind
      (Widgt: in Tk_Widget'Class; Sequence: in String) return String;
-   -- ****
+     -- ****
 
-   -- ****f* Widgets/Focus (procedure)
-   -- FUNCTION
-   -- Set input focus on the selected Tk_Widget with the selected option
-   -- PARAMETERS
-   -- Widgt  - Tk_Widget to set as input focus
-   -- Option - Set to "-force" to set input focus even if application don't
-   --        have it. Default value is empty
-   -- SOURCE
+     -- ****f* Widgets/Focus (procedure)
+     -- FUNCTION
+     -- Set input focus on the selected Tk_Widget with the selected option
+     -- PARAMETERS
+     -- Widgt  - Tk_Widget to set as input focus
+     -- Option - Set to "-force" to set input focus even if application don't
+     --        have it. Default value is empty
+     -- HISTORY
+     -- 8.6.3 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- SOURCE
    procedure Focus(Widgt: in Tk_Widget'Class; Option: in String := "") with
       Pre => Option in "" | "-force";
       -- ****
@@ -258,6 +310,10 @@ package Tcl.Tk.Ada.Widgets is
       -- RESULT
       -- A name of a Tk widget which have input focus or empty string if
       -- no window in this application has focus (depending on the option)
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    function Focus
      (Interp: in Tcl_Interp := Get_Context; Option: in String := "")
@@ -452,6 +508,10 @@ package Tcl.Tk.Ada.Widgets is
    --           the selected window visibility state was changed, "window" the
    --           selected window was destroyed
    -- Name    - Name of variable or window on which Tk_Wait should waits
+   -- HISTORY
+   -- 8.6.6 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Tk_Wait(WaitFor, Name: in String) with
       Pre => WaitFor in "variable" | "visibility" | "window" and Name /= "";
@@ -465,6 +525,10 @@ package Tcl.Tk.Ada.Widgets is
    -- Widgt   - Tk_Widget in which command will be executed
    -- command - Tcl command to execute
    -- options - Options for the selected Tcl command
+   -- HISTORY
+   -- 8.6.0 - Imported from TASH
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Execute_Widget_Command
      (Widgt: in Tk_Widget'Class; command: in String; options: in String := "");
