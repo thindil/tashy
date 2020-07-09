@@ -38,6 +38,10 @@ package Tcl.Tk.Ada.Winfo is
    -- Options   - Options for selected information. Default is empty
    -- RESULT
    -- Selected information about selected Tk_Widget
+   -- HISTORY
+   -- 8.6.2 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    function Winfo_Get
      (Widgt: in Tk_Widget'Class; Info: in String; Options: in String := "")
