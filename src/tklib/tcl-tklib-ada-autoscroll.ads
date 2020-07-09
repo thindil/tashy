@@ -54,4 +54,18 @@ package Tcl.Tklib.Ada.Autoscroll is
    procedure Wrap(Interp: in Tcl_Interp);
    -- ****
 
+   -- ****f* Autoscroll/Unwrap
+   -- FUNCTION
+   -- Turns off the automatic autoscrolling of all new scrollbars. Does not
+   -- effect existing scrollbars
+   -- PARAMETERS
+   -- Interp: Tcl interpreter on which autoscrolling will be disabled
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Unwrap(Interp: in Tcl_Interp);
+   -- ****
+
 end Tcl.Tklib.Ada.Autoscroll;
