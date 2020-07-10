@@ -36,6 +36,10 @@ package Tcl.Tk.Ada.Wm is
    -- Tk_Widget   - Tk_Widget which will be modified
    -- Action   - WM action to do
    -- Options  - Options for selected action. Default is empty
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Wm_Set
      (Widgt: in Tk_Widget'Class; Action: in String; Options: in String := "");
