@@ -47,4 +47,13 @@ package Tcl.Tk.Ada.Option is
       Pre => Pattern /= "" and Value /= "";
       -- ****
 
+      -- ****f* Option/Clear
+      -- FUNCTION
+      -- Clear option's database
+      -- PARAMETERS
+      -- Interp - Tcl interpreter on which option's database will be cleared
+      -- SOURCE
+   procedure Clear(Interp: in Tcl_Interp);
+   -- ****
+
 end Tcl.Tk.Ada.Option;

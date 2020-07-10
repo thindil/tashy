@@ -32,4 +32,9 @@ package body Tcl.Tk.Ada.Option is
         (Interp, "option add " & Pattern & " " & Value & " " & OPriority);
    end Add;
 
+   procedure Clear(Interp: in Tcl_Interp) is
+   begin
+      Tcl.Ada.Tcl_Eval(Interp, "option clear");
+   end Clear;
+
 end Tcl.Tk.Ada.Option;
