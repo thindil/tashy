@@ -12,7 +12,7 @@ of the project.
 - Binding for Tk `selection` commands: `clear`, `get`, `handle`, `own` (get
   name of owner of selection), `own` (set owner of selection)
 - Binding for Tklib `autoscroll` commands: `wrap`, `unwrap`
-- Bindinf for Tk `option` command: `add`
+- Bindinf for Tk `option` command: `add`, `clear`
 
 ### Changed
 - Updated code documentation
