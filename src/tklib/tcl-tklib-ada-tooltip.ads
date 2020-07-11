@@ -34,6 +34,10 @@ package Tcl.Tklib.Ada.Tooltip is
    -- Load package Tooltip. Raise Program_Error if package can't be loaded
    -- PARAMETERS
    -- Interp: Tcl interpreter to which tooltip package will be added
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Tooltip_Init(Interp: in Tcl_Interp);
    -- ****
@@ -45,6 +49,10 @@ package Tcl.Tklib.Ada.Tooltip is
    -- Widget  - Tk_Widget to which the tooltip will be added
    -- Message - Text which will be show in the tooltip
    -- Options - Additional tooltip options
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- TODO
+   -- Replace it with higher level of binding
    -- SOURCE
    procedure Add
      (Widget: in Tk_Widget'Class; Message: in String;
