@@ -37,4 +37,13 @@ package body Tcl.Tk.Ada.Option is
       Tcl.Ada.Tcl_Eval(Interp, "option clear");
    end Clear;
 
+   function Get
+     (Window: in Tk_Widget'Class; Name, Class: in String) return String is
+   begin
+      Tcl.Ada.Tcl_Eval
+        (Window.Interp,
+         "option get " & Widget_Image(Window) & " " & Name & " " & Class);
+      return Tcl.Ada.Tcl_GetResult(Window.Interp);
+   end Get;
+
 end Tcl.Tk.Ada.Option;

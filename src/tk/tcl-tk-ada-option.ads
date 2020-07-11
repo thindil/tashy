@@ -20,6 +20,8 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
+with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
+
 -- ****h* TkAda/Option
 -- FUNCTION
 -- Provides code for manipulate Tk command Option
@@ -52,8 +54,31 @@ package Tcl.Tk.Ada.Option is
       -- Clear option's database
       -- PARAMETERS
       -- Interp - Tcl interpreter on which option's database will be cleared
+      -- HISTORY
+      -- 8.6.7 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Clear(Interp: in Tcl_Interp);
    -- ****
+
+   -- ****f* Option/Get
+   -- FUNCTION
+   -- Get the value of the selected option
+   -- PARAMETERS
+   -- Window - Tk_Widget which will be queried for option
+   -- Name   - The name of the option to get
+   -- Class  - The class of the option to get
+   -- RESULT
+   -- The value of the selected option or {} if no option was found
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function Get
+     (Window: in Tk_Widget'Class; Name, Class: in String) return String with
+      Pre => Name /= "" and Class /= "";
+      -- ****
 
 end Tcl.Tk.Ada.Option;
