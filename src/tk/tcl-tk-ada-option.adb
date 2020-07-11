@@ -46,4 +46,12 @@ package body Tcl.Tk.Ada.Option is
       return Tcl.Ada.Tcl_GetResult(Window.Interp);
    end Get;
 
+   procedure Read_File
+     (Interp: in Tcl_Interp; FileName: in String;
+      OPriority: in String := "interactive") is
+   begin
+      Tcl.Ada.Tcl_Eval
+        (Interp, "option readfile " & FileName & " " & OPriority);
+   end Read_File;
+
 end Tcl.Tk.Ada.Option;

@@ -81,4 +81,23 @@ package Tcl.Tk.Ada.Option is
       Pre => Name /= "" and Class /= "";
       -- ****
 
+      -- ****f* Option/Read_File
+      -- FUNCTION
+      -- Read file and add all the options from it to the options database
+      -- PARAMETERS
+      -- Interp    - Tcl interpreter on which options will be loaded
+      -- FileName  - Name of the file with options to load
+      -- OPriority - Priority of the loaded option. Can be empty. Default value
+      --             is interactive
+      -- HISTORY
+      -- 8.6.7 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Read_File
+     (Interp: in Tcl_Interp; FileName: in String;
+      OPriority: in String := "interactive") with
+      Pre => FileName /= "";
+      -- ****
+
 end Tcl.Tk.Ada.Option;
