@@ -284,6 +284,22 @@ package Tcl.Tk.Ada.Widgets is
      (Widgt: in Tk_Widget'Class; Sequence: in String) return String;
      -- ****
 
+     -- ****f* Widgets/Bell
+     -- FUNCTION
+     -- Rings the bell on the selected Widget display
+     -- PARAMETERS
+     -- Widgt  - Tk_Widget on which display bell will be rings
+     -- Option - Can be empty or "-nice". Default is empty. If is empty then
+     --          also reset screen saver state.
+     -- HISTORY
+     -- 8.6.7 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- SOURCE
+   procedure Bell(Widgt: in Tk_Widget'Class; Option: in String := "") with
+      Pre => Option in "" | "-nice";
+      -- ****
+
      -- ****f* Widgets/Focus (procedure)
      -- FUNCTION
      -- Set input focus on the selected Tk_Widget with the selected option

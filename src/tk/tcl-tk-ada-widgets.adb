@@ -103,6 +103,13 @@ package body Tcl.Tk.Ada.Widgets is
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end Unbind;
 
+   procedure Bell(Widgt: in Tk_Widget'Class; Option: in String := "") is
+   begin
+      Tcl_Eval
+        (Widgt.Interp,
+         "bell -displayof " & Widget_Image(Widgt) & " " & Option);
+   end Bell;
+
    procedure Focus(Widgt: in Tk_Widget'Class; Option: in String := "") is
    begin
       Tcl_Eval(Widgt.Interp, "focus " & Option & " " & Widget_Image(Widgt));
