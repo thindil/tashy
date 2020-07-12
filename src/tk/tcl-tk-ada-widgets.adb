@@ -89,6 +89,18 @@ package body Tcl.Tk.Ada.Widgets is
          "bind " & Widget_Image(Widgt) & " " & Sequence & " " & Script);
    end Bind;
 
+   procedure Bind_Tags(Widgt: in Tk_Widget'Class; TagList: in String) is
+   begin
+      Tcl_Eval
+        (Widgt.Interp, "bindtags " & Widget_Image(Widgt) & " " & TagList);
+   end Bind_Tags;
+
+   function Bind_Tags(Widgt: in Tk_Widget'Class) return String is
+   begin
+      Tcl_Eval(Widgt.Interp, "bindtags " & Widget_Image(Widgt));
+      return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
+   end Bind_Tags;
+
    procedure Unbind(Widgt: in Tk_Widget'Class; Sequence: in String) is
    begin --  Unbind
       Tcl_Eval

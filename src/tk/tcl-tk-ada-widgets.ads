@@ -253,6 +253,36 @@ package Tcl.Tk.Ada.Widgets is
      (Widgt: in Tk_Widget'Class; Sequence: in String; Script: in String);
    -- ****
 
+   -- ****f* Widgets/Bind_Tags (procedure)
+   -- FUNCTION
+   -- Set binding tags for the selected window
+   -- PARAMETERS
+   -- Widgt   - Tk_Widget which binding tags will be changed
+   -- TagList - The new list of binding tags for the selected window
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Bind_Tags(Widgt: in Tk_Widget'Class; TagList: in String) with
+      Pre => TagList /= "";
+      -- ****
+
+      -- ****f* Widgets/Bind_Tags (function)
+      -- FUNCTION
+      -- Get binding tags for the selected window
+      -- PARAMETERS
+      -- Widgt   - Tk_Widget which binding tags will be queried
+      -- RESULT
+      -- List of binding tags associated with the selected window
+      -- HISTORY
+      -- 8.6.7 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Bind_Tags(Widgt: in Tk_Widget'Class) return String;
+   -- ****
+
    -- ****f* Widgets/Unbind (procedure)
    -- FUNCTION
    -- Disassociates the binding from the event Sequence.
