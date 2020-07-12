@@ -98,7 +98,7 @@ package Tcl.MsgCat.Ada is
       Pre => DirName /= "";
       -- ****
 
-      -- ****f* MsgCatAda/Mc_Locale (function)
+      -- ****f* MsgCatAda/Mc_Locale (procedure)
       -- FUNCTION
       -- Set the new default locale for the selected interpreter
       -- PARAMETERS
