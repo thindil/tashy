@@ -14,7 +14,7 @@ of the project.
 - Binding for Tklib `autoscroll` commands: `wrap`, `unwrap`
 - Binding for Tk `option` command: `add`, `clear`, `get`, `readfile`
 - Binding for Tklib `getstring` package
-- Binding for Tk command: `bell`
+- Binding for Tk command: `bell`, `bindtags`
 
 ### Changed
 - Updated code documentation
