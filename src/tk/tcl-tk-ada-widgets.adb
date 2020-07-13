@@ -216,6 +216,19 @@ package body Tcl.Tk.Ada.Widgets is
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end Tk_Caret;
 
+   procedure Tk_Inactive(Widgt: in Tk_Widget'Class) is
+   begin
+      Tcl_Eval
+        (Widgt.Interp,
+         "tk inactive -display " & Widget_Image(Widgt) & " reset");
+   end Tk_Inactive;
+
+   function Tk_Inactive(Widgt: in Tk_Widget'Class) return String is
+   begin
+      Tcl_Eval(Widgt.Interp, "tk inactive -display " & Widget_Image(Widgt));
+      return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
+   end Tk_Inactive;
+
    procedure Tk_Wait(WaitFor, Name: in String) is
    begin
       Tcl_Eval(Get_Context, "tkwait" & WaitFor & " " & Name);

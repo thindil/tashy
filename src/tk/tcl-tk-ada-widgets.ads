@@ -579,6 +579,35 @@ package Tcl.Tk.Ada.Widgets is
    function Tk_Caret(Widgt: in Tk_Widget'Class) return String;
    -- ****
 
+   -- ****f* Widgets/Tk_Inactive
+   -- FUNCTION
+   -- Reset the user inactivity timer
+   -- PARAMETERS
+   -- Widgt - Tk_Widget on which display inactivity timer will be reseted
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Tk_Inactive(Widgt: in Tk_Widget'Class);
+   -- ****
+
+   -- ****f* Widgets/Tk_Inactive
+   -- FUNCTION
+   -- Get the number of miliseconds since last interaction of the user on the
+   -- selected display
+   -- PARAMETERS
+   -- Widgt - Tk_Widget on which display inactivity timer will be get
+   -- RESULT
+   -- Number of miliseconds since last interaction of the user
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function Tk_Inactive(Widgt: in Tk_Widget'Class) return String;
+   -- ****
+
    -- ****f* Widgets/Tk_Wait
    -- FUNCTION
    -- Wait until the selected thing to happen
