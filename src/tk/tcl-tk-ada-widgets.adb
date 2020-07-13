@@ -202,6 +202,20 @@ package body Tcl.Tk.Ada.Widgets is
       Tcl_Eval(Widgt.Interp, "raise " & Widget_Image(AboveThis));
    end Widget_Raise;
 
+   procedure Tk_Caret(Widgt: in Tk_Widget'Class; X, Y, Height: in String) is
+   begin
+      Tcl_Eval
+        (Widgt.Interp,
+         "tk caret " & Widget_Image(Widgt) & " -x " & X & " -y" & Y &
+         " -height " & Height);
+   end Tk_Caret;
+
+   function Tk_Caret(Widgt: in Tk_Widget'Class) return String is
+   begin
+      Tcl_Eval(Widgt.Interp, "tk caret " & Widget_Image(Widgt));
+      return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
+   end Tk_Caret;
+
    procedure Tk_Wait(WaitFor, Name: in String) is
    begin
       Tcl_Eval(Get_Context, "tkwait" & WaitFor & " " & Name);

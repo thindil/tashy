@@ -546,6 +546,39 @@ package Tcl.Tk.Ada.Widgets is
    procedure Widget_Raise(Widgt, AboveThis: in Tk_Widget'Class);
    -- ****
 
+   -- ****f* Widgets/Tk_Caret (procedure)
+   -- FUNCTION
+   -- Set the caret location in the selected window
+   -- PARAMETERS
+   -- Widgt  - Tk_Widget in which the caret will be set
+   -- X      - The new X coordinate of the caret
+   -- Y      - The new Y coordinate of the caret
+   -- Height - The height of current cursor location
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Tk_Caret(Widgt: in Tk_Widget'Class; X, Y, Height: in String) with
+      Pre => X /= "" and Y /= "" and Height /= "";
+      -- ****
+
+      -- ****f* Widgets/Tk_Caret
+      -- FUNCTION
+      -- Get the caret location in the selected window
+      -- PARAMETERS
+      -- Widgt  - Tk_Widget in which the caret will be get
+      -- RESULT
+      -- String with 3 values: X coordinate of the carret, Y coordinate of the
+      -- caret and height of the Widgt
+      -- HISTORY
+      -- 8.6.7 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Tk_Caret(Widgt: in Tk_Widget'Class) return String;
+   -- ****
+
    -- ****f* Widgets/Tk_Wait
    -- FUNCTION
    -- Wait until the selected thing to happen
