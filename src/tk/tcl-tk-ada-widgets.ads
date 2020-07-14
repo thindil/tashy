@@ -640,6 +640,37 @@ package Tcl.Tk.Ada.Widgets is
    function Tk_Scaling(Widgt: in Tk_Widget'Class) return String;
    -- ****
 
+   -- ****f* Widgets/Tk_Use_Input_Methods (procedure)
+   -- FUNCTION
+   -- Set Tk to use XIM (X Input Methods) for filtering events
+   -- PARAMETERS
+   -- Widgt   - Tk_Widget on which display the filtering will be set
+   -- Enabled - If "1" then enable filtering, when "0" disable it
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Tk_Use_Input_Methods
+     (Widgt: in Tk_Widget'Class; Enabled: in String) with
+      Pre => Enabled in "1" | "0";
+      -- ****
+
+      -- ****f* Widgets/Tk_Use_Input_Methods (function)
+      -- FUNCTION
+      -- Get if Tk uses XIM (X Input Methods) for filtering events
+      -- PARAMETERS
+      -- Widgt   - Tk_Widget on which display the filtering will be get
+      -- RESULT
+      -- "1" if Tk uses XIM otherwise "0"
+      -- HISTORY
+      -- 8.6.7 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Tk_Use_Input_Methods(Widgt: in Tk_Widget'Class) return String;
+   -- ****
+
    -- ****f* Widgets/Tk_Wait
    -- FUNCTION
    -- Wait until the selected thing to happen

@@ -242,6 +242,21 @@ package body Tcl.Tk.Ada.Widgets is
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end Tk_Scaling;
 
+   procedure Tk_Use_Input_Methods
+     (Widgt: in Tk_Widget'Class; Enabled: in String) is
+   begin
+      Tcl_Eval
+        (Widgt.Interp,
+         "tk useinputmethods -display " & Widget_Image(Widgt) & " " & Enabled);
+   end Tk_Use_Input_Methods;
+
+   function Tk_Use_Input_Methods(Widgt: in Tk_Widget'Class) return String is
+   begin
+      Tcl_Eval
+        (Widgt.Interp, "tk useinputmethods -display " & Widget_Image(Widgt));
+      return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
+   end Tk_Use_Input_Methods;
+
    procedure Tk_Wait(WaitFor, Name: in String) is
    begin
       Tcl_Eval(Get_Context, "tkwait" & WaitFor & " " & Name);
