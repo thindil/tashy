@@ -229,6 +229,19 @@ package body Tcl.Tk.Ada.Widgets is
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end Tk_Inactive;
 
+   procedure Tk_Scaling(Widgt: in Tk_Widget'Class; Number: in String) is
+   begin
+      Tcl_Eval
+        (Widgt.Interp,
+         "tk scaling -display " & Widget_Image(Widgt) & " " & Number);
+   end Tk_Scaling;
+
+   function Tk_Scaling(Widgt: in Tk_Widget'Class) return String is
+   begin
+      Tcl_Eval(Widgt.Interp, "tk scaling -display " & Widget_Image(Widgt));
+      return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
+   end Tk_Scaling;
+
    procedure Tk_Wait(WaitFor, Name: in String) is
    begin
       Tcl_Eval(Get_Context, "tkwait" & WaitFor & " " & Name);

@@ -579,7 +579,7 @@ package Tcl.Tk.Ada.Widgets is
    function Tk_Caret(Widgt: in Tk_Widget'Class) return String;
    -- ****
 
-   -- ****f* Widgets/Tk_Inactive
+   -- ****f* Widgets/Tk_Inactive (procedure)
    -- FUNCTION
    -- Reset the user inactivity timer
    -- PARAMETERS
@@ -592,7 +592,7 @@ package Tcl.Tk.Ada.Widgets is
    procedure Tk_Inactive(Widgt: in Tk_Widget'Class);
    -- ****
 
-   -- ****f* Widgets/Tk_Inactive
+   -- ****f* Widgets/Tk_Inactive (function)
    -- FUNCTION
    -- Get the number of miliseconds since last interaction of the user on the
    -- selected display
@@ -606,6 +606,38 @@ package Tcl.Tk.Ada.Widgets is
    -- Replace it with higher level of binding
    -- SOURCE
    function Tk_Inactive(Widgt: in Tk_Widget'Class) return String;
+   -- ****
+
+   -- ****f* Widgets/Tk_Scaling (procedure)
+   -- FUNCTION
+   -- Set the scaling factor for the selected display
+   -- PARAMETERS
+   -- Widgt  - Tk_Widget on which display the scaling factor will be set
+   -- Number - Floating point number which specifies the number of pixels per
+   --          point of Widgt display
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Tk_Scaling(Widgt: in Tk_Widget'Class; Number: in String) with
+      Pre => Number /= "";
+      -- ****
+
+      -- ****f* Widgets/Tk_Scaling
+      -- FUNCTION
+      -- Get the scaling factor of the selected display
+      -- PARAMETERS
+      -- Widgt  - Tk_Widget on which display the scaling factor will be get
+      -- RESULT
+      -- Floating point number which specifies the number of pixels per point
+      -- of Widgt display
+      -- HISTORY
+      -- 8.6.7 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Tk_Scaling(Widgt: in Tk_Widget'Class) return String;
    -- ****
 
    -- ****f* Widgets/Tk_Wait
