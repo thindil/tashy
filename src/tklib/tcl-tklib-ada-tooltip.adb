@@ -53,4 +53,9 @@ package body Tcl.Tklib.Ada.Tooltip is
       Tcl.Ada.Tcl_Eval(Interp, "tooltip::tooltip clear " & Pattern);
    end Clear;
 
+   procedure Disable(Interp: in Tcl_Interp := Get_Context) is
+   begin
+      Tcl.Ada.Tcl_Eval(Interp, "tooltip::tooltip disable");
+   end Disable;
+
 end Tcl.Tklib.Ada.Tooltip;
