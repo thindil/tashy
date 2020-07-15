@@ -48,4 +48,9 @@ package body Tcl.Tklib.Ada.Tooltip is
       end if;
    end Add;
 
+   procedure Clear(Pattern: in String; Interp: in Tcl_Interp := Get_Context) is
+   begin
+      Tcl.Ada.Tcl_Eval(Interp, "tooltip::tooltip clear " & Pattern);
+   end Clear;
+
 end Tcl.Tklib.Ada.Tooltip;

@@ -20,6 +20,7 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
+with Tcl.Tk.Ada; use Tcl.Tk.Ada;
 with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
 
 -- ****h* TklibAda/Tooltip
@@ -58,6 +59,24 @@ package Tcl.Tklib.Ada.Tooltip is
      (Widget: in Tk_Widget'Class; Message: in String;
       Options: in String := "") with
       Pre => Message /= "";
+      -- ****
+
+      -- ****f* Tooltip/Clear
+      -- FUNCTION
+      -- Prevent the selected widgets from showing tooltips
+      -- PARAMETERS
+      -- Pattern - Tk glob pattern for widgets which should not showing
+      --           tooltips
+      -- Interp  - Tcl interpreter on which widgets will be set. Default value
+      --           is current interpreter
+      -- HISTORY
+      -- 8.6.7 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Clear
+     (Pattern: in String; Interp: in Tcl_Interp := Get_Context) with
+      Pre => Pattern /= "";
       -- ****
 
 end Tcl.Tklib.Ada.Tooltip;
