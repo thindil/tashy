@@ -83,7 +83,7 @@ package Tcl.Tklib.Ada.Tooltip is
       -- FUNCTION
       -- Disable all tooptips on the selected Tcl interpreter
       -- PARAMETERS
-      -- Interp - Tcl interpreter on which tooltips will be disables. Default
+      -- Interp - Tcl interpreter on which tooltips will be disabled. Default
       --          value is current interpreter
       -- HISTORY
       -- 8.6.7 - Added
@@ -92,6 +92,21 @@ package Tcl.Tklib.Ada.Tooltip is
       -- SOURCE
    procedure Disable(Interp: in Tcl_Interp := Get_Context);
    procedure Off(Interp: in Tcl_Interp := Get_Context) renames Disable;
+   -- ****
+
+   -- ****f* Tooltip/Enable
+   -- FUNCTION
+   -- Enable all tooptips on the selected Tcl interpreter
+   -- PARAMETERS
+   -- Interp - Tcl interpreter on which tooltips will be enabled. Default
+   --          value is current interpreter
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Enable(Interp: in Tcl_Interp := Get_Context);
+   procedure On(Interp: in Tcl_Interp := Get_Context) renames Enable;
    -- ****
 
 end Tcl.Tklib.Ada.Tooltip;

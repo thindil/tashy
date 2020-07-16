@@ -58,4 +58,9 @@ package body Tcl.Tklib.Ada.Tooltip is
       Tcl.Ada.Tcl_Eval(Interp, "tooltip::tooltip disable");
    end Disable;
 
+   procedure Enable(Interp: in Tcl_Interp := Get_Context) is
+   begin
+      Tcl.Ada.Tcl_Eval(Interp, "tooltip::tooltip enable");
+   end Enable;
+
 end Tcl.Tklib.Ada.Tooltip;
