@@ -79,17 +79,51 @@ package Tcl.Tklib.Ada.Tooltip is
       Pre => Pattern /= "";
       -- ****
 
-      -- ****f* Tooltip/Disable
+      -- ****f* Tooltip/Tooltip_Delay (procedure)
       -- FUNCTION
-      -- Disable all tooptips on the selected Tcl interpreter
+      -- Set delay between show tooltip and moment when the pointer enters a
+      -- widget
       -- PARAMETERS
-      -- Interp - Tcl interpreter on which tooltips will be disabled. Default
-      --          value is current interpreter
+      -- Milisecs  - A new value for delay (in miliseconds)
+      -- Interp    - Tcl interpreter on which tooltip delay will be set
       -- HISTORY
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
       -- SOURCE
+   procedure Tooltip_Delay
+     (Milisecs: in String; Interp: in Tcl_Interp := Get_Context) with
+      Pre => Milisecs /= "";
+      -- ****
+
+      -- ****f* Tooltip/Tooltip_Delay (function)
+      -- FUNCTION
+      -- Get the delay between show tooltip and moment when the pointer enters
+      -- a widget
+      -- PARAMETERS
+      -- Interp    - Tcl interpreter on which tooltip delay will be get
+      -- RESULT
+      -- The miliseconds difference between entering the pointer a widget and
+      -- showing tooltip
+      -- HISTORY
+      -- 8.6.7 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Tooltip_Delay(Interp: in Tcl_Interp := Get_Context) return String;
+   -- ****
+
+   -- ****f* Tooltip/Disable
+   -- FUNCTION
+   -- Disable all tooptips on the selected Tcl interpreter
+   -- PARAMETERS
+   -- Interp - Tcl interpreter on which tooltips will be disabled. Default
+   --          value is current interpreter
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
    procedure Disable(Interp: in Tcl_Interp := Get_Context);
    procedure Off(Interp: in Tcl_Interp := Get_Context) renames Disable;
    -- ****

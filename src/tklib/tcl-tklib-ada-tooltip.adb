@@ -53,6 +53,19 @@ package body Tcl.Tklib.Ada.Tooltip is
       Tcl.Ada.Tcl_Eval(Interp, "tooltip::tooltip clear " & Pattern);
    end Clear;
 
+   procedure Tooltip_Delay
+     (Milisecs: in String; Interp: in Tcl_Interp := Get_Context) is
+   begin
+      Tcl.Ada.Tcl_Eval(Interp, "tooltip::tooltip delay " & Milisecs);
+   end Tooltip_Delay;
+
+   function Tooltip_Delay
+     (Interp: in Tcl_Interp := Get_Context) return String is
+   begin
+      Tcl.Ada.Tcl_Eval(Interp, "tooltip::tooltip delay");
+      return Tcl.Ada.Tcl_GetResult(Interp);
+   end Tooltip_Delay;
+
    procedure Disable(Interp: in Tcl_Interp := Get_Context) is
    begin
       Tcl.Ada.Tcl_Eval(Interp, "tooltip::tooltip disable");
