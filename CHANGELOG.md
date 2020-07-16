@@ -16,7 +16,7 @@ of the project.
 - Binding for Tklib `getstring` package
 - Binding for Tk command: `bell`, `bindtags`, `tk caret`, `tk inactive`,
   `tk scaling`, `tk useinputmethods`
-- Binding for Tklib `tooltip` commands: `clear`, `disable`, `enable`
+- Binding for Tklib `tooltip` commands: `clear`, `disable`, `enable`, `delay`
 
 ### Changed
 - Updated code documentation
