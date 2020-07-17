@@ -39,25 +39,39 @@ package Tcl.Tk.Ada.Busy is
    -- 8.6.2 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Set the My_Main_Window widget busy
+   -- Tcl.Tk.Ada.Busy.Busy(My_Main_Window);
+   --
+   -- -- Set the My_Main_Window widget busy and mouse curson on it to watch cursor
+   -- Tcl.Tk.Ada.Busy.Hold(My_Main_Window, "-cursor watch");
+   -- COMMANDS
+   -- tk busy window ?options?
+   -- tk busy hold window ?options?
    -- SOURCE
    procedure Busy(Window: in Tk_Widget'Class; Options: in String := "");
    procedure Hold(Window: in Tk_Widget'Class; Options: in String := "") renames
      Busy;
-   -- ****
+     -- ****
 
-   -- ****f* TkBusy/cget
-   -- FUNCTION
-   -- Get value of the selected option for the selected busy window
-   -- PARAMETERS
-   -- Window - Tk_Widget which is set as busy
-   -- Option - Busy option to query
-   -- RESULT
-   -- Value of the selected option of the selected busy window
-   -- HISTORY
-   -- 8.6.3 - Added
-   -- TODO
-   -- Replace it with higher level of binding
-   -- SOURCE
+     -- ****f* TkBusy/cget
+     -- FUNCTION
+     -- Get value of the selected option for the selected busy window
+     -- PARAMETERS
+     -- Window - Tk_Widget which is set as busy
+     -- Option - Busy option to query
+     -- RESULT
+     -- Value of the selected option of the selected busy window
+     -- HISTORY
+     -- 8.6.3 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Get the currently set cursor for busy My_Main_Window
+     -- Cursor_Name: constant String := Tcl.Tk.Ada.Busy.cget(My_Main_Window, "-cursor");
+     -- COMMANDS
+     -- tk busy cget window option
+     -- SOURCE
    function cget
      (Window: in Tk_Widget'Class; Option: in String) return String with
       Pre => Option /= "";
@@ -73,6 +87,11 @@ package Tcl.Tk.Ada.Busy is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Change the busy cursor for the My_Main_Window
+      -- Tcl.Tk.Ada.Busy.Configure(My_Main_Window, "-cursor watch");
+      -- COMMANDS
+      -- tk busy configure window option value ?option2 value2...?
       -- SOURCE
    procedure Configure(Window: in Tk_Widget'Class; Options: in String) with
       Pre => Options /= "";
@@ -92,25 +111,41 @@ package Tcl.Tk.Ada.Busy is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the currently set cursor for busy My_Main_Window
+      -- Cursor_Name: constant String := Tcl.Tk.Ada.Busy.Configure(My_Main_Window, "-cursor");
+      --
+      -- -- Get all available options for the busy My_Main_Window
+      -- Options_List: constant String := Tcl.Tk.Ada.Busy.Configure(My_Main_Window);
+      -- COMMANDS
+      -- tk busy configure window ?option?
       -- SOURCE
    function Configure
      (Window: in Tk_Widget'Class; Option: in String := "") return String;
-   -- ****
+     -- ****
 
-   -- ****f* TkBusy/Current
-   -- FUNCTION
-   -- Get list of Tk_Widgets names currently set as busy
-   -- PARAMETERS
-   -- Pattern - Pattern which must be match in busy Tk_Widget names.
-   --           Default value is empty
-   -- RESULT
-   -- If Pattern is empty, return all busy Tk_Widgets names. If Pattern is
-   -- specified, return only this which match the Pattern.
-   -- HISTORY
-   -- 8.6.3 - Added
-   -- TODO
-   -- Replace it with higher level of binding
-   -- SOURCE
+     -- ****f* TkBusy/Current
+     -- FUNCTION
+     -- Get list of Tk_Widgets names currently set as busy
+     -- PARAMETERS
+     -- Pattern - Pattern which must be match in busy Tk_Widget names.
+     --           Default value is empty
+     -- RESULT
+     -- If Pattern is empty, return all busy Tk_Widgets names. If Pattern is
+     -- specified, return only this which match the Pattern.
+     -- HISTORY
+     -- 8.6.3 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Get names of all busy windows
+     -- Busy_Windows: constant String := Tcl.Tk.Ada.Busy.Current;
+     --
+     -- -- Get names of busy windows which names contains mywindow
+     -- Busy_Windows: constant String := Tcl.Tk.Ada.Busy.Current("*mywindow*");
+     -- COMMANDS
+     -- tk busy current ?pattern?
+     -- SOURCE
    function Current(Pattern: in String := "") return String;
    -- ****
 
@@ -123,6 +158,11 @@ package Tcl.Tk.Ada.Busy is
    -- 8.6.2 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Enable the widget My_Main_Window
+   -- Tcl.Tk.Ada.Busy.Forget(My_Main_Window);
+   -- COMMANDS
+   -- tk busy forget window
    -- SOURCE
    procedure Forget(Window: in Tk_Widget'Class);
    -- ****
@@ -138,6 +178,11 @@ package Tcl.Tk.Ada.Busy is
    -- 8.6.3 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the status of widget My_Main_Window
+   -- Busy_Status: constant String := Tcl.Tk.Ada.Busy.Status(My_Main_Window);
+   -- COMMANDS
+   -- tk busy status window
    -- SOURCE
    function Status(Window: in Tk_Widget'Class) return String;
    -- ****
