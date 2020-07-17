@@ -143,4 +143,15 @@ package Tcl.Tklib.Ada.Tooltip is
    procedure On(Interp: in Tcl_Interp := Get_Context) renames Enable;
    -- ****
 
+   -- ****f* Tooltip/Fade
+   -- FUNCTION
+   -- Enable of disable fading of tooltips
+   -- PARAMETERS
+   -- Enable - If true, enable fading, if false disable it
+   -- Interp - Tcl interpreter on which fading will be set
+   -- SOURCE
+   procedure Fade(Enable: in String; Interp: in Tcl_Interp := Get_Context) with
+      Pre => Enable in "true" | "false";
+      -- ****
+
 end Tcl.Tklib.Ada.Tooltip;

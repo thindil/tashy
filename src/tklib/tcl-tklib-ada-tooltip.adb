@@ -76,4 +76,9 @@ package body Tcl.Tklib.Ada.Tooltip is
       Tcl.Ada.Tcl_Eval(Interp, "tooltip::tooltip enable");
    end Enable;
 
+   procedure Fade(Enable: in String; Interp: in Tcl_Interp := Get_Context) is
+   begin
+      Tcl.Ada.Tcl_Eval(Interp, "tooltip::tooltip fade " & Enable);
+   end Fade;
+
 end Tcl.Tklib.Ada.Tooltip;
