@@ -20,6 +20,8 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
+with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
+
 -- ****h* TklibAda/Autoscroll
 -- FUNCTION
 -- Provides code for manipulate Tklib autoscroll package
@@ -31,7 +33,7 @@ package Tcl.Tklib.Ada.Autoscroll is
    -- FUNCTION
    -- Load package autoscroll. Raise Program_Error if package can't be loaded
    -- PARAMETERS
-   -- Interp: Tcl interpreter to which autoscroll package will be added
+   -- Interp - Tcl interpreter to which autoscroll package will be added
    -- HISTORY
    -- 8.6.7 - Added
    -- TODO
@@ -40,12 +42,25 @@ package Tcl.Tklib.Ada.Autoscroll is
    procedure Autoscroll_Init(Interp: in Tcl_Interp);
    -- ****
 
+   -- ****f* Autoscroll/Autoscroll
+   -- FUNCTION
+   -- Set autohide for the selected scroll
+   -- PARAMETERS
+   -- Scroll - Tk_Widget which will be arranged for autohiding
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Autoscroll(Scroll: in Tk_Widget'Class);
+   -- ****
+
    -- ****f* Autoscroll/Wrap
    -- FUNCTION
    -- Arranges for all scrollbars created after to be automatically mapped and
    -- unmapped as needed.
    -- PARAMETERS
-   -- Interp: Tcl interpreter on which scrollbars will be arranged
+   -- Interp - Tcl interpreter on which scrollbars will be arranged
    -- HISTORY
    -- 8.6.7 - Added
    -- TODO
@@ -59,7 +74,7 @@ package Tcl.Tklib.Ada.Autoscroll is
    -- Turns off the automatic autoscrolling of all new scrollbars. Does not
    -- effect existing scrollbars
    -- PARAMETERS
-   -- Interp: Tcl interpreter on which autoscrolling will be disabled
+   -- Interp - Tcl interpreter on which autoscrolling will be disabled
    -- HISTORY
    -- 8.6.7 - Added
    -- TODO
