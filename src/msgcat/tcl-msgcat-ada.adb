@@ -63,6 +63,12 @@ package body Tcl.MsgCat.Ada is
       return Tcl.Ada.Tcl_GetResult(Interp);
    end Mc_Locale;
 
+   function Mc_Max(Strings: in String; Interp: in Tcl_Interp) return String is
+   begin
+      Tcl.Ada.Tcl_Eval(Interp, "::msgcat::mcmax " & Strings);
+      return Tcl.Ada.Tcl_GetResult(Interp);
+   end Mc_Max;
+
    procedure Mc_Set
      (Interp: Tcl_Interp; Locale, Src_String: in String;
       Translate_String: in String := "") is

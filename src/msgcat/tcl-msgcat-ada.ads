@@ -131,23 +131,41 @@ package Tcl.MsgCat.Ada is
    function Mc_Locale(Interp: in Tcl_Interp) return String;
    -- ****
 
-   -- ****f* MsgCatAda/Mc_Set (procedure)
+   -- ****f* MsgCatAda/Mc_Max
    -- FUNCTION
-   -- Set the translation for the selected string for the selected locale in
-   -- the selected interpreter
+   -- Get the longest translated string for selected values.
    -- PARAMETERS
-   -- Interp           - Tcl interpreter on which translation will be set
-   -- Locale           - The name of locale in which the translation will be
-   --                    set
-   -- Src_String       - The string which will be translated
-   -- Translate_String - The translation of the Src_String. If empty,
-   --                    Src_String will be used as translation. Default value
-   --                    is empty
+   -- Strings - Source strings which translations will be check for length
+   -- Interp  - Tcl interpreter on which length check will be done
+   -- RESULT
+   -- Length of the longest translated string for selected Strings
    -- HISTORY
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
    -- SOURCE
+   function Mc_Max
+     (Strings: in String; Interp: in Tcl_Interp) return String with
+      Pre => Strings /= "";
+      -- ****
+
+      -- ****f* MsgCatAda/Mc_Set (procedure)
+      -- FUNCTION
+      -- Set the translation for the selected string for the selected locale in
+      -- the selected interpreter
+      -- PARAMETERS
+      -- Interp           - Tcl interpreter on which translation will be set
+      -- Locale           - The name of locale in which the translation will be
+      --                    set
+      -- Src_String       - The string which will be translated
+      -- Translate_String - The translation of the Src_String. If empty,
+      --                    Src_String will be used as translation. Default value
+      --                    is empty
+      -- HISTORY
+      -- 8.6.7 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
    procedure Mc_Set
      (Interp: Tcl_Interp; Locale, Src_String: in String;
       Translate_String: in String := "") with
