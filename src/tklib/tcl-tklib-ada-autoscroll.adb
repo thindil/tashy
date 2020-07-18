@@ -44,6 +44,12 @@ package body Tcl.Tklib.Ada.Autoscroll is
       Tcl.Ada.Tcl_Eval(Interp, "::autoscroll::wrap");
    end Wrap;
 
+   procedure Unautoscroll(Scroll: in Tk_Widget'Class) is
+   begin
+      Tcl.Ada.Tcl_Eval
+        (Scroll.Interp, "::autoscroll::unautoscroll " & Widget_Image(Scroll));
+   end Unautoscroll;
+
    procedure Unwrap(Interp: in Tcl_Interp) is
    begin
       Tcl.Ada.Tcl_Eval(Interp, "::autoscroll::unwrap");
