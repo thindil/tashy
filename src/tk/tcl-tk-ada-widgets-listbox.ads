@@ -153,7 +153,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => First /= "";
       -- ****
 
-      -- ****f* Tcl.Tk.Ada.Widgets.ListBox/Get
+      -- ****f* ListBox/Get
       -- FUNCTION
       -- Get the content of the selected elements in the selected Tk_ListBox
       -- PARAMETERS

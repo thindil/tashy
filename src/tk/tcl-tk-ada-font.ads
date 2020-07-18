@@ -287,7 +287,7 @@ package Tcl.Tk.Ada.Font is
       Pre => Font /= "";
       -- ****
 
-      -- ****f* Tcl.Tk.Ada.Font/Names
+      -- ****f* Font/Names
       -- FUNCTION
       -- Get the names of the all available fonts on the selected Tcl
       -- interpreter
