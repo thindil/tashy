@@ -63,19 +63,40 @@ package Tcl.MsgCat.Ada is
       Pre => Src_String /= "";
       -- ****
 
-   -- ****f* MsgCatAda/Mc_Load (procedure)
-   -- FUNCTION
-   -- Load the translations for the currently set locale from the selected
-   -- directory
-   -- PARAMETERS
-   -- DirName - The name of the directory which will be scanned for the
-   --           translations and if found anything, loaded
-   -- Interp  - Tcl interpreter on which the locations will be loaded
-   -- HISTORY
-   -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
-   -- SOURCE
+      -- ****f* MsgCatAda/Mc_Exists
+      -- FUNCTION
+      -- Check it translation for the selected string exists
+      -- PARAMETERS
+      -- Interp     - Tcl interpreter on which translation will be looking for
+      -- Src_String - Source string for which translation will be looking for
+      -- Options    - Additional options, can be "-exactnamespace" or
+      --              "-exactlocale" or both. Default value is empty
+      -- Result
+      -- True if translation for the selected string exists, otherwise false
+      -- HISTORY
+      -- 8.6.7 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Mc_Exists
+     (Interp: Tcl_Interp; Src_String: in String; Options: in String := "")
+      return String with
+      Pre => Src_String /= "";
+      -- ****
+
+      -- ****f* MsgCatAda/Mc_Load (procedure)
+      -- FUNCTION
+      -- Load the translations for the currently set locale from the selected
+      -- directory
+      -- PARAMETERS
+      -- DirName - The name of the directory which will be scanned for the
+      --           translations and if found anything, loaded
+      -- Interp  - Tcl interpreter on which the locations will be loaded
+      -- HISTORY
+      -- 8.6.7 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
    procedure Mc_Load(DirName: in String; Interp: in Tcl_Interp) with
       Pre => DirName /= "";
       -- ****

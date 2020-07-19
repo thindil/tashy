@@ -41,6 +41,15 @@ package body Tcl.MsgCat.Ada is
       return Tcl.Ada.Tcl_GetResult(Interp);
    end Mc;
 
+   function Mc_Exists
+     (Interp: Tcl_Interp; Src_String: in String; Options: in String := "")
+      return String is
+   begin
+      Tcl.Ada.Tcl_Eval
+        (Interp, "::msgcat::mcexists " & Options & " " & Src_String);
+      return Tcl.Ada.Tcl_GetResult(Interp);
+   end Mc_Exists;
+
    procedure Mc_Load(DirName: in String; Interp: in Tcl_Interp) is
    begin
       Tcl.Ada.Tcl_Eval(Interp, "::msgcat::mcload " & DirName);
