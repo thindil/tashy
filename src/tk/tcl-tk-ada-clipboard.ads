@@ -43,6 +43,11 @@ package Tcl.Tk.Ada.Clipboard is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Add text as string to the clipboard on display where My_Main_Window widget is
+   -- Append("Data to add to clipboard", My_Main_Window);
+   -- COMMANDS
+   -- clipboard append -displayof window -format format -type ctype ?--? data
    -- SOURCE
    procedure Append
      (Data: in String; Window: in Tk_Widget'Class;
@@ -60,6 +65,13 @@ package Tcl.Tk.Ada.Clipboard is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Clear the clipboard on display where My_Main_Window widget is
+      -- Clear(My_Main_Window);
+      -- COMMANDS
+      -- clipboard clear -displayof window
+      -- SEE ALSO
+      -- Tcl.Tk.Ada.Clipboard.Selection_Clear
       -- SOURCE
    procedure Clear(Window: in Tk_Widget'Class);
    -- ****
@@ -77,6 +89,14 @@ package Tcl.Tk.Ada.Clipboard is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the content of the clipboard in the string form on display where
+   -- -- My_Main_Window is
+   -- Clipboard_Content: constant String := Get(My_Main_Window);
+   -- COMMANDS
+   -- clipboard get -displayof window -type ctype
+   -- SEE ALSO
+   -- Tcl.Tk.Ada.Clipboard.Selection_Get
    -- SOURCE
    function Get
      (Window: in Tk_Widget'Class; CType: in String := "STRING")
@@ -95,6 +115,15 @@ package Tcl.Tk.Ada.Clipboard is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Clear the PRIMARY selection on the My_Main_Window display
+      -- Selection_Clear(My_Main_Window);
+      -- -- Clear the CLIPBOARD selection on the My_Main_Window display
+      -- Selection_Clear(My_Main_Window, "CLIPBOARD");
+      -- COMMANDS
+      -- selection clear -displayof window -selection selection
+      -- SEE ALSO
+      -- Tcl.Tk.Ada.Clipboard.Clear
       -- SOURCE
    procedure Selection_Clear
      (Window: in Tk_Widget'Class; Selection: in String := "PRIMARY") with
@@ -118,6 +147,18 @@ package Tcl.Tk.Ada.Clipboard is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the PRIMARY selection on My_Main_Window widget display in
+      -- -- form of string
+      -- Selection_Content: constant String := Selection_Get(My_Main_Window);
+      -- -- Get the CLIPBOARD selection on My_Main_Window widget display in
+      -- -- form of file name
+      -- File_Name: constant String := Selection_Get(My_Main_Window, "CLIPBOARD",
+      --                                             "FILE_NAME");
+      -- COMMANDS
+      -- selection get -displayof window -selection selection -type stype
+      -- SEE ALSO
+      -- Tcl.Tk.Ada.Clipboard.Get
       -- SOURCE
    function Selection_Get
      (Window: in Tk_Widget'Class; Selection: in String := "PRIMARY";
@@ -144,6 +185,16 @@ package Tcl.Tk.Ada.Clipboard is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Create a handerl for My_Main_Window widget display PRIMARY
+      -- -- selection which runs Tcl puts hello command
+      -- Selection_Handle(My_Main_Window, "{puts hello}");
+      -- -- Create a handerl for My_Main_Window widget display CLIPBOARD
+      -- -- selection which runs Tcl puts hello command and data will be
+      -- -- retrieved as file name
+      -- Selection_Handle(My_Main_Window, "{puts hello}", "CLIPBOARD", "FILE_NAME");
+      -- COMMANDS
+      -- selection handle -selection selection -type stype -format format window command
       -- SOURCE
    procedure Selection_Handle
      (Window: in Tk_Widget'Class; Command: in String;
@@ -170,6 +221,15 @@ package Tcl.Tk.Ada.Clipboard is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the name of owner of PRIMARY selection on My_Main_Window
+      -- -- widget display
+      -- Owner_Name: constant String := Selection_Own(My_Main_Window);
+      -- -- Get the name of owner of CLIPBOARD selection on My_Main_Window
+      -- -- widget display
+      -- Owner_Name: constant String := Selection_Own(My_Main_Window, "CLIPBOARD");
+      -- COMMANDS
+      -- selection own -displayof window -selection selection
       -- SOURCE
    function Selection_Own
      (Window: in Tk_Widget'Class; Selection: in String := "PRIMARY")
@@ -188,6 +248,19 @@ package Tcl.Tk.Ada.Clipboard is
       --             "-command "
       -- Selection - The selection which will be owned. Possible values are
       --             PRIMARY and CLIPBOARD. Default value is PRIMARY
+      -- HISTORY
+      -- 8.6.7 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the name of owner of PRIMARY selection to My_Main_Window
+      -- -- widget
+      -- Selection_Own(My_Main_Window);
+      -- -- Set the name of owner of CLIPBOARD selection to My_Main_Window and
+      -- -- execute Tcl command puts hello when other widget will claim ownership
+      -- Selection_Own(My_Main_Window, "{puts hello}", "CLIPBOARD");
+      -- COMMANDS
+      -- selection own -command command -selection selection window
       -- SOURCE
    procedure Selection_Own
      (Window: in Tk_Widget'Class; Command: in String := "";
