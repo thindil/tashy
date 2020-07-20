@@ -119,20 +119,35 @@ package Tcl.MsgCat.Ada is
       Pre => DirName /= "";
       -- ****
 
-      -- ****f* MsgCatAda/Mc_Locale (procedure)
+      -- ****f* MsgCatAda/Mc_LoadedLocales_Get
       -- FUNCTION
-      -- Set the new default locale for the selected interpreter
+      -- Get the list of the currently loaded locales
       -- PARAMETERS
-      -- NewLocale - The name of the new default locale for the selected
-      --             Tcl interpreter
-      -- Interp    - Tcl interpreter on which locale will be set
+      -- Interp - Tcl interpreter on which the loaded locales will be queried
       -- RESULT
-      -- Number of translation files loaded
+      -- The list of the currently loaded locales
       -- HISTORY
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
       -- SOURCE
+   function Mc_LoadedLocales_Get(Interp: in Tcl_Interp) return String;
+   -- ****
+
+   -- ****f* MsgCatAda/Mc_Locale (procedure)
+   -- FUNCTION
+   -- Set the new default locale for the selected interpreter
+   -- PARAMETERS
+   -- NewLocale - The name of the new default locale for the selected
+   --             Tcl interpreter
+   -- Interp    - Tcl interpreter on which locale will be set
+   -- RESULT
+   -- Number of translation files loaded
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
    procedure Mc_Locale(NewLocale: in String; Interp: in Tcl_Interp) with
       Pre => NewLocale /= "";
       -- ****

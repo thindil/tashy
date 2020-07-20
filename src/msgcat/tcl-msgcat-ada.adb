@@ -61,6 +61,12 @@ package body Tcl.MsgCat.Ada is
       return Tcl.Ada.Tcl_GetResult(Interp);
    end Mc_Load;
 
+   function Mc_LoadedLocales_Get(Interp: in Tcl_Interp) return String is
+   begin
+      Tcl.Ada.Tcl_Eval(Interp, "::msgcat::mcloadedlocales get ");
+      return Tcl.Ada.Tcl_GetResult(Interp);
+   end Mc_LoadedLocales_Get;
+
    procedure Mc_Locale(NewLocale: in String; Interp: Tcl_Interp) is
    begin
       Tcl.Ada.Tcl_Eval(Interp, "::msgcat::mclocale " & NewLocale);
