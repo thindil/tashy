@@ -44,6 +44,12 @@ package Tcl.Tk.Ada.Dialogs is
    -- 8.6.6 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the name of the color from dialog created with title Color and
+   -- -- with main window as a parent
+   -- Color: constant String := Choose_Color("-title {Color} -parent .");
+   -- COMMANDS
+   -- tk_chooseColor options
    -- SOURCE
    function Choose_Color(Options: in String := "") return String;
    -- ****
@@ -60,6 +66,12 @@ package Tcl.Tk.Ada.Dialogs is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the name of the selected directory which must exists and dialog
+   -- -- has title Choose Directory and it parent is a main window
+   -- Directory_Name : constant String := Choose_Directory("-mustexists true -title {Choose Directory} -parent .");
+   -- COMMANDS
+   -- tk_chooseDirectory options
    -- SOURCE
    function Choose_Directory(Options: in String := "") return String;
    -- ****
@@ -81,6 +93,14 @@ package Tcl.Tk.Ada.Dialogs is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create dialog from My_Dialog widget with title MyDialog, text My
+   -- -- Dialog Text, bitmap question, default first button and buttons
+   -- -- Yes and No
+   -- Buttons: constant DialogButtons := array(To_Unbounded_String("Yes"), To_Unbounded_String("No"));
+   -- Response: constant String := Dialog(My_Dialog, "MyDialog", "{My Dialog Text}", "question", 0, Buttons);
+   -- COMMANDS
+   -- tk_dialog window title text bitmap default string string
    -- SOURCE
    function Dialog
      (Widget: in out Tk_Toplevel; Title, Text, Bitmap: in String;
@@ -99,6 +119,14 @@ package Tcl.Tk.Ada.Dialogs is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set a main window as parent and title Choose Font for the
+      -- -- font chooser
+      -- FontChooser_Configure("-parent . -title {Choose Font}");
+      -- COMMANDS
+      -- tk fontchooser configure -option value -option value ...
+      -- SEE ALSO
+      -- FontChooser_Configure (function)
       -- SOURCE
    procedure FontChooser_Configure(Options: in String) with
       Pre => Options /= "";
@@ -118,6 +146,13 @@ package Tcl.Tk.Ada.Dialogs is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Check if fontchooser dialog is visible
+      -- if FontChooser_Configure("-visible") then
+      -- -- Get the all available options for fontchooser dialog
+      -- Options: constant String := FontChooser_Configure;
+      -- SEE ALSO
+      -- FontChooser_Configure (procedure)
       -- SOURCE
    function FontChooser_Configure(Option: in String := "") return String;
    -- ****
