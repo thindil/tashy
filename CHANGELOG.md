@@ -10,7 +10,7 @@ of the project.
 - Biding for Tk `clipboard` commands: `append`, `clear`, `get`
 - Binding for msgcat commands: `mc`, `mclocale`, `mcload`, `mcset`, `mcmax`,
   `mcexists`, `mcpreferences`, `mcloadedlocales get`,
-  `mcloadedlocales present`
+  `mcloadedlocales present`, `mcloadedlocales clear`
 - Binding for Tk `selection` commands: `clear`, `get`, `handle`, `own` (get
   name of owner of selection), `own` (set owner of selection)
 - Binding for Tklib `autoscroll` commands: `wrap`, `unwrap`, `autoscroll`,
