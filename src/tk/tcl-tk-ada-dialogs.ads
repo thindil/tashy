@@ -151,6 +151,8 @@ package Tcl.Tk.Ada.Dialogs is
       -- if FontChooser_Configure("-visible") then
       -- -- Get the all available options for fontchooser dialog
       -- Options: constant String := FontChooser_Configure;
+      -- COMMANDS
+      -- tk fontchooser configure ?-option?
       -- SEE ALSO
       -- FontChooser_Configure (procedure)
       -- SOURCE
@@ -164,6 +166,11 @@ package Tcl.Tk.Ada.Dialogs is
    -- 8.6.6 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Hide fontchooser dialog
+   -- FontChooser_Hide;
+   -- COMMANDS
+   -- tk fontchooser hide
    -- SOURCE
    procedure FontChooser_Hide;
    -- ****
@@ -175,6 +182,11 @@ package Tcl.Tk.Ada.Dialogs is
    -- 8.6.6 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Show fontchooser dialog
+   -- FontChooser_Show;
+   -- COMMANDS
+   -- tk fontchooser show
    -- SOURCE
    procedure FontChooser_Show;
    -- ****
@@ -191,6 +203,12 @@ package Tcl.Tk.Ada.Dialogs is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the name of the selected file from dialog which parent is set to
+   -- -- a main window, title to Open File and initial dir to current directory
+   -- File_Name: constant String := Get_Open_File("-parent . -title {Open File} -initialdir .");
+   -- COMMANDS
+   -- tk_getOpenFile ?option value ...?
    -- SOURCE
    function Get_Open_File(Options: in String := "") return String;
    -- ****
@@ -207,6 +225,13 @@ package Tcl.Tk.Ada.Dialogs is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the name of the selected file from dialog which parent is set to
+   -- -- a main window, title to Save File As and confirm overwrite an
+   -- -- existing file
+   -- File_Name: constant String := Get_Save_File("-parent . -title {Sve File As} -confirmoverwrite true");
+   -- COMMANDS
+   -- tk_getSaveFile ?option value ...?
    -- SOURCE
    function Get_Save_File(Options: in String := "") return String;
    -- ****
@@ -223,6 +248,12 @@ package Tcl.Tk.Ada.Dialogs is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Show dialog with a main window as parent, text Hello, icon info and
+   -- -- button Ok
+   -- Answer := constant String := MessageBox("-parent . -message {Hello} -icon info -type ok");
+   -- COMMANDS
+   -- tk_messageBox ?option value ...?
    -- SOURCE
    function MessageBox(Options: in String := "") return String;
    -- ****
