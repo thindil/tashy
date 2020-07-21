@@ -119,18 +119,32 @@ package Tcl.MsgCat.Ada is
       Pre => DirName /= "";
       -- ****
 
-      -- ****f* MsgCatAda/Mc_LoadedLocales_Get
+      -- ****f* MsgCatAda/Mc_LoadedLocales_Clear
       -- FUNCTION
-      -- Get the list of the currently loaded locales
+      -- Remove locales and their data, which are not in the current
+      -- preferences list
       -- PARAMETERS
-      -- Interp - Tcl interpreter on which the loaded locales will be queried
-      -- RESULT
-      -- The list of the currently loaded locales
+      -- Interp - Tcl interpreter on which locales will be cleared
       -- HISTORY
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
       -- SOURCE
+   procedure Mc_LoadedLocales_Clear(Interp: in Tcl_Interp);
+   -- ****
+
+   -- ****f* MsgCatAda/Mc_LoadedLocales_Get
+   -- FUNCTION
+   -- Get the list of the currently loaded locales
+   -- PARAMETERS
+   -- Interp - Tcl interpreter on which the loaded locales will be queried
+   -- RESULT
+   -- The list of the currently loaded locales
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
    function Mc_LoadedLocales_Get(Interp: in Tcl_Interp) return String;
    -- ****
 
