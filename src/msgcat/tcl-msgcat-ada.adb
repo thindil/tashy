@@ -96,6 +96,20 @@ package body Tcl.MsgCat.Ada is
       return Tcl.Ada.Tcl_GetResult(Interp);
    end Mc_Max;
 
+   procedure Mc_Mset(Interp: in Tcl_Interp; Locale, List: in String) is
+   begin
+      Tcl.Ada.Tcl_Eval
+        (Interp, "::msgcat::mcmset " & Locale & " [list " & List & "]");
+   end Mc_Mset;
+
+   function Mc_Mset
+     (Interp: in Tcl_Interp; Locale, List: in String) return String is
+   begin
+      Tcl.Ada.Tcl_Eval
+        (Interp, "::msgcat::mcmset " & Locale & " [list " & List & "]");
+      return Tcl.Ada.Tcl_GetResult(Interp);
+   end Mc_Mset;
+
    function Mc_Preferences(Interp: in Tcl_Interp) return String is
    begin
       Tcl.Ada.Tcl_Eval(Interp, "::msgcat::mcpreferences");

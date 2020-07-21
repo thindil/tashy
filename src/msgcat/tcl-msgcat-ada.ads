@@ -217,6 +217,43 @@ package Tcl.MsgCat.Ada is
       Pre => Strings /= "";
       -- ****
 
+      -- ****f* MsgCatAda/Mc_Mset (procedure)
+      -- FUNCTION
+      -- Set the translations for the multiple source strings for the selected
+      -- locale in the selected interpreter
+      -- PARAMETERS
+      -- Interp - Tcl interpreter in which translations will be set
+      -- Locale - The name of the locale in which translations will be added
+      -- List   - List of source translation source translation ... to add
+      -- HISTORY
+      -- 8.6.7 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Mc_Mset(Interp: in Tcl_Interp; Locale, List: in String) with
+      Pre => Locale /= "" and List /= "";
+      -- ****
+
+      -- ****f* MsgCatAda/Mc_Mset (function)
+      -- FUNCTION
+      -- Set the translations for the multiple source strings for the selected
+      -- locale in the selected interpreter
+      -- PARAMETERS
+      -- Interp - Tcl interpreter in which translations will be set
+      -- Locale - The name of the locale in which translations will be added
+      -- List   - List of source translation source translation ... to add
+      -- RESULT
+      -- Number of translations set
+      -- HISTORY
+      -- 8.6.7 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   function Mc_Mset
+     (Interp: in Tcl_Interp; Locale, List: in String) return String with
+      Pre => Locale /= "" and List /= "";
+      -- ****
+
       -- ****f* MsgCatAda/Mc_Preferences
       -- FUNCTION
       -- Get the list with locales preferred by the user, based on the user's
