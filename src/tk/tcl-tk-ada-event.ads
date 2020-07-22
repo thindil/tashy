@@ -42,6 +42,12 @@ package Tcl.Tk.Ada.Event is
    -- 8.6.6 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Trigger virtual event MyEvent when the user press Control+Y keys on
+   -- -- default Tcl interpreter
+   -- Add("<<MyEvent>>", "<Control-y>");
+   -- COMMANDS
+   -- event add virtual sequence ?sequence ...?
    -- SOURCE
    procedure Add
      (Virtual, Sequence: in String; Interp: Tcl_Interp := Get_Context) with
@@ -63,6 +69,12 @@ package Tcl.Tk.Ada.Event is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Delete triggering MyEvent when user press Control+Y keys on
+      -- -- My_Interpreter Tcl interpreter
+      -- Delete("<<MyEvent>>", "<Control-y>", My_Interpreter);
+      -- COMMANDS
+      -- event delete virtual ?sequence sequence ...?
       -- SOURCE
    procedure Delete
      (Virtual: in String; Sequence: in String := "";
@@ -82,6 +94,12 @@ package Tcl.Tk.Ada.Event is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Generate KeyPress event on My_Main_Window widget and set the event
+      -- -- x value to 10
+      -- Generate(My_Main_Window, "<KeyPress>", "-x 10");
+      -- COMMANDS
+      -- event generate window event ?option value option value ...?
       -- SOURCE
    procedure Generate
      (Window: in Tk_Widget'Class; EventName: in String;
@@ -105,6 +123,14 @@ package Tcl.Tk.Ada.Event is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the list of all virtual events at the current Tcl interpreter
+      -- Events_List: constant String := Info;
+      -- -- Get the list of physical events associated with the MyEvent
+      -- -- virtual event on My_Interpreter Tcl interpreter
+      -- Events_List: constant String := Info("<<MyEvent>>", My_Interpreter);
+      -- COMMANDS
+      -- event info ?virtual?
       -- SOURCE
    function Info
      (EventName: in String := ""; Interp: Tcl_Interp := Get_Context)
