@@ -288,7 +288,7 @@ package Tcl.MsgCat.Ada is
    -- Replace it with higher level of binding
    -- SOURCE
    procedure Mc_Set
-     (Interp: Tcl_Interp; Locale, Src_String: in String;
+     (Interp: in Tcl_Interp; Locale, Src_String: in String;
       Translate_String: in String := "") with
       Pre => Locale /= "" and Src_String /= "";
       -- ****
@@ -313,9 +313,22 @@ package Tcl.MsgCat.Ada is
       -- Replace it with higher level of binding
       -- SOURCE
    function Mc_Set
-     (Interp: Tcl_Interp; Locale, Src_String: in String;
+     (Interp: in Tcl_Interp; Locale, Src_String: in String;
       Translate_String: in String := "") return String with
       Pre => Locale /= "" and Src_String /= "";
       -- ****
+
+      -- ****f* MsgCatAda/Mc_Forget_Package
+      -- FUNCTION
+      -- Clear all msgcat settings and translations at the selected interpreter
+      -- PARAMETERS
+      -- Interp - Tcl interpreter on which current state of mgscat will be
+      --          cleared
+      -- 8.6.7 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Mc_Forget_Package(Interp: in Tcl_Interp);
+   -- ****
 
 end Tcl.MsgCat.Ada;

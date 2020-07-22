@@ -137,4 +137,9 @@ package body Tcl.MsgCat.Ada is
       return Tcl.Ada.Tcl_GetResult(Interp);
    end Mc_Set;
 
+   procedure Mc_Forget_Package(Interp: in Tcl_Interp) is
+   begin
+      Tcl.Ada.Tcl_Eval(Interp, "::msgcat::mcforgetpackage");
+   end Mc_Forget_Package;
+
 end Tcl.MsgCat.Ada;
