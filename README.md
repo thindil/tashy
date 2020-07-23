@@ -32,12 +32,12 @@ and vice versa. Included bindings:
   development at this moment.
 * Tklib - Requires Tcl and Tk bindings. Allows use additional packages for
   Tk GUI in the Ada code. At this moment it is a low level binding only to
-  tooltip, getstring and autoscroll packages. If you want binding to any other
-  package from this library, feel free to [open an issue](https://github.com/thindil/tashy/issues/new) with it.
+  tooltip, getstring, autoscroll and ctext packages. If you want binding to
+  any other package from this library, feel free to [open an issue](https://github.com/thindil/tashy/issues/new) with it.
 * Msgcat - Requires Tcl binding. Allows create multi-language text messages.
-  At this moment it is a low level binding to a few msgcat commands - mostly
-  works like standard Tcl commands. If you want binding to any other command
-  from this package, please [open an issue](https://github.com/thindil/tashy/issues/new) with it.
+  At this moment it is a low level binding to msgcat commands - mostly works
+  like standard Tcl commands. If you want binding to any other command from
+  this package, please [open an issue](https://github.com/thindil/tashy/issues/new) with it.
 
 ## Build the library from sources
 
