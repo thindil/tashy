@@ -21,7 +21,7 @@ of the project.
   `tk scaling`, `tk useinputmethods`
 - Binding for Tklib `tooltip` commands: `clear`, `disable`, `enable`, `delay`,
   `fade`
-- Binding for Tklib `ctext`
+- Binding for Tklib `ctext` commands: `ctext`
 
 ### Changed
 - Updated code documentation
