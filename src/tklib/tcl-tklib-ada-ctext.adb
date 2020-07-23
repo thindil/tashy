@@ -20,7 +20,8 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
-with Tcl.Ada;
+with Tcl.Ada; use Tcl.Ada;
+with Tcl.Tk.Ada; use Tcl.Tk.Ada;
 
 package body Tcl.Tklib.Ada.Ctext is
 
@@ -32,5 +33,27 @@ package body Tcl.Tklib.Ada.Ctext is
            Tcl.Ada.Tcl_GetStringResult(Interp);
       end if;
    end Ctext_Init;
+
+   function Create
+     (pathName: in String; options: in String := "";
+      Interp: in Tcl_Interp := null) return Tklib_Ctext is
+      The_Widget: Tklib_Ctext;
+   begin
+      if Interp = null then
+         The_Widget.Interp := Get_Context;
+      else
+         The_Widget.Interp := Interp;
+      end if;
+      The_Widget.Name := C.Strings.New_String(pathName);
+      Tcl_Eval(The_Widget.Interp, "ctext " & pathName & " " & options);
+      return The_Widget;
+   end Create;
+
+   procedure Create
+     (Widgt: out Tklib_Ctext; pathName: in String; options: in String := "";
+      Interp: in Tcl_Interp := null) is
+   begin
+      Widgt := Create(pathName, options, Interp);
+   end Create;
 
 end Tcl.Tklib.Ada.Ctext;

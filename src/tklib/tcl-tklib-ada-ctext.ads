@@ -20,6 +20,8 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
+with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
+
 -- ****h* TklibAda/Ctext
 -- FUNCTION
 -- Provides code for manipulate Tklib ctext package
@@ -39,5 +41,63 @@ package Tcl.Tklib.Ada.Ctext is
    -- SOURCE
    procedure Ctext_Init(Interp: in Tcl_Interp);
    -- ****
+
+   -- ****t* Ctext/Tklib_Ctext
+   -- FUNCTION
+   -- This is a non-abstract type derived directly from Tk_Widget.
+   -- Each of the derived widgets redefines the Create subprogram
+   -- in order to create the correct type of widget.
+   -- SOURCE
+   type Tklib_Ctext is new Tk_Widget with private;
+   -- ****
+
+   -- ****f* Ctext/Create (function)
+   -- FUNCTION
+   -- Creates a new Tklib_Ctext in the specified interpreter.
+   -- PARAMETERS
+   -- pathName - Tk path (starts with dot) for the widget
+   -- options  - Options which will be passed to the widget. Default value is
+   --            empty
+   -- Interp   - Tcl interpreter to which the widget will be created. If null,
+   --            the widget will be created in the "contextual" interpreter.
+   --            Default value is null.
+   -- RESULT
+   -- Newly created Tklib_Ctext
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   overriding function Create
+     (pathName: in String; options: in String := "";
+      Interp: in Tcl_Interp := null) return Tklib_Ctext with
+      Pre => pathName /= "";
+      -- ****
+
+     -- ****f* Ctext/Create (procedure)
+     -- FUNCTION
+     -- Creates a new Tklib_Ctext in the specified interpreter.
+     -- PARAMETERS
+     -- Widgt    - Tklib_Ctext which will be created
+     -- pathName - Tk path (starts with dot) for the widget
+     -- options  - Options which will be passed to the widget. Default value is
+     --            empty
+     -- Interp   - Tcl interpreter to which the widget will be created. If null,
+     --            the widget will be created in the "contextual" interpreter.
+     --            Default value is null.
+     -- HISTORY
+     -- 8.6.7 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- SOURCE
+   overriding procedure Create
+     (Widgt: out Tklib_Ctext; pathName: in String; options: in String := "";
+      Interp: in Tcl_Interp := null) with
+      Pre => pathName /= "";
+     -- ****
+
+private
+
+   type Tklib_Ctext is new Tk_Widget with null record;
 
 end Tcl.Tklib.Ada.Ctext;
