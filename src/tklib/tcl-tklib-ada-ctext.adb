@@ -56,4 +56,13 @@ package body Tcl.Tklib.Ada.Ctext is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   procedure Add_Highlight_Class
+     (CtextWidget: in Tklib_Ctext; Class, Color, Keywordlist: in String) is
+   begin
+      Tcl.Ada.Tcl_Eval
+        (CtextWidget.Interp,
+         "::ctext::AddHighlightClass " & Widget_Image(CtextWidget) & " " &
+         Class & " " & Color & " [list " & Keywordlist & "]");
+   end Add_Highlight_Class;
+
 end Tcl.Tklib.Ada.Ctext;
