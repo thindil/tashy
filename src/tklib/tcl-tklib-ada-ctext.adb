@@ -65,4 +65,13 @@ package body Tcl.Tklib.Ada.Ctext is
          Class & " " & Color & " [list " & Keywordlist & "]");
    end Add_Highlight_Class;
 
+   procedure Add_Highlight_Class_With_Only_Char_Start
+     (CtextWidget: in Tklib_Ctext; Class, Color, Char: in String) is
+   begin
+      Tcl.Ada.Tcl_Eval
+        (CtextWidget.Interp,
+         "::ctext::AddHighlightClassWithOnlyCharStart " &
+         Widget_Image(CtextWidget) & " " & Class & " " & Color & " " & Char);
+   end Add_Highlight_Class_With_Only_Char_Start;
+
 end Tcl.Tklib.Ada.Ctext;
