@@ -134,6 +134,24 @@ package Tcl.Tklib.Ada.Ctext is
       Pre => Class /= "" and Color /= "" and Char /= "";
       -- ****
 
+      -- ****f* Ctext/Add_Highlight_Class_For_Special_Chars
+      -- FUNCTION
+      -- Add highlighting class to the selected Ctext widget.
+      -- CtextWidget - Ctext widget to which a new highlighting Class will be
+      --               added
+      -- Class       - The name of highlighting class to add
+      -- Color       - The name of color which will be used by the Class
+      -- CharString  - Characters which will be highlighted
+      -- HISTORY
+      -- 8.6.7 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Add_Highlight_Class_For_Special_Chars
+     (CtextWidget: in Tklib_Ctext; Class, Color, CharString: in String) with
+      Pre => Class /= "" and Color /= "" and CharString /= "";
+      -- ****
+
 private
 
    type Tklib_Ctext is new Tk_Widget with null record;

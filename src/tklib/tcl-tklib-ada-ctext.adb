@@ -74,4 +74,14 @@ package body Tcl.Tklib.Ada.Ctext is
          Widget_Image(CtextWidget) & " " & Class & " " & Color & " " & Char);
    end Add_Highlight_Class_With_Only_Char_Start;
 
+   procedure Add_Highlight_Class_For_Special_Chars
+     (CtextWidget: in Tklib_Ctext; Class, Color, CharString: in String) is
+   begin
+      Tcl.Ada.Tcl_Eval
+        (CtextWidget.Interp,
+         "::ctext::AddHighlightClassForSpecialChars " &
+         Widget_Image(CtextWidget) & " " & Class & " " & Color & " " &
+         CharString);
+   end Add_Highlight_Class_For_Special_Chars;
+
 end Tcl.Tklib.Ada.Ctext;
