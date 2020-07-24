@@ -44,29 +44,43 @@ package Tcl.Tk.Ada.Font is
    -- 8.6.6 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the size of font with name MyFont
+   -- Font_Size: constant String := Actual("MyFont", "-size");
+   -- -- Get all attributes of the system font
+   -- Font_Attributes: constant String := Actual("system");
+   -- COMMANDS
+   -- font actual font -displayof . ?option? ?--? ?char?
    -- SOURCE
    function Actual
      (FontDescription: in String; Options: in String := "") return String with
       Pre => FontDescription /= "";
       -- ****
 
-   -- ****f* Font/Actual (selected interpreter)
-   -- FUNCTION
-   -- Get the actual attributes of the selected font in the current interpreter
-   -- PARAMETERS
-   -- Interp          - Tcl interpreter on which font will be check
-   -- FontDescription - Font description (in Tk term, can be name or
-   --                   declaration)
-   -- Options         - Options passed to the command font actual. Can be
-   --                   empty. Default value is empty
-   -- RESULT
-   -- If attribute is not specified, return all possible attributes with their
-   -- values. Otherwise return value of the selected attribute
-   -- HISTORY
-   -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
-   -- SOURCE
+      -- ****f* Font/Actual (selected interpreter)
+      -- FUNCTION
+      -- Get the actual attributes of the selected font in the current interpreter
+      -- PARAMETERS
+      -- Interp          - Tcl interpreter on which font will be check
+      -- FontDescription - Font description (in Tk term, can be name or
+      --                   declaration)
+      -- Options         - Options passed to the command font actual. Can be
+      --                   empty. Default value is empty
+      -- RESULT
+      -- If attribute is not specified, return all possible attributes with their
+      -- values. Otherwise return value of the selected attribute
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the weight of font with name MyFont on interpreter My_Interpreter
+      -- Font_Weight: constant String := Actual(My_Interpreter, "MyFont", "-weight");
+      -- -- Get all attributes of the system font on interpreter Main_Tk
+      -- Font_Attributes: constant String := Actual(Main_Tk, "system");
+      -- COMMANDS
+      -- font actual font -displayof . ?option? ?--? ?char?
+      -- SOURCE
    function Actual
      (Interp: in Tcl_Interp; FontDescription: in String;
       Options: in String := "") return String with
@@ -86,6 +100,11 @@ package Tcl.Tk.Ada.Font is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the slant of the font My_Font to roman on interpreter My_Interpreter
+      -- Configure("My_Font", "-slant roman", My_Interpreter);
+      -- COMMANDS
+      -- font configure fontname option value ?option value ...?
       -- SOURCE
    procedure Configure
      (FontName, Options: in String; Interp: Tcl_Interp := Get_Context) with
@@ -109,6 +128,11 @@ package Tcl.Tk.Ada.Font is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the family of the font My_Font on the current interpreter
+      -- Font_Family: constant String := Configure("My_Font", "-family");
+      -- COMMANDS
+      -- font configure fontname ?option?
       -- SOURCE
    function Configure
      (FontName: in String; Option: in String := "";
@@ -129,6 +153,11 @@ package Tcl.Tk.Ada.Font is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Create font My_Font with size of 10pts on current interpreter
+      -- Create("My_Font", "-size 10");
+      -- COMMANDS
+      -- font create ?fontname? ?option value ...?
       -- SOURCE
    procedure Create
      (FontName: in String; Options: in String := "";
@@ -153,6 +182,11 @@ package Tcl.Tk.Ada.Font is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Create font with random name and slant roman on My_Interpreter interpreter
+      -- FontName: constant String := Create(Options => "-slant roman", Interp => My_Interpreter);
+      -- COMMANDS
+      -- font create ?fontname? ?option value ...?
       -- SOURCE
    function Create
      (FontName, Options: in String := ""; Interp: Tcl_Interp := Get_Context)
