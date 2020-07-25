@@ -84,4 +84,13 @@ package body Tcl.Tklib.Ada.Ctext is
          CharString);
    end Add_Highlight_Class_For_Special_Chars;
 
+   procedure Add_Highlight_Class_For_Regexp
+     (CtextWidget: in Tklib_Ctext; Class, Color, Pattern: in String) is
+   begin
+      Tcl.Ada.Tcl_Eval
+        (CtextWidget.Interp,
+         "::ctext::AddHighlightClassForRegexp " & Widget_Image(CtextWidget) &
+         " " & Class & " " & Color & " " & Pattern);
+   end Add_Highlight_Class_For_Regexp;
+
 end Tcl.Tklib.Ada.Ctext;

@@ -152,6 +152,25 @@ package Tcl.Tklib.Ada.Ctext is
       Pre => Class /= "" and Color /= "" and CharString /= "";
       -- ****
 
+      -- ****f* Ctext/Add_Highlight_Class_For_Regexp
+      -- FUNCTION
+      -- Add highlighting class to the selected Ctext widget.
+      -- CtextWidget - Ctext widget to which a new highlighting Class will be
+      --               added
+      -- Class       - The name of highlighting class to add
+      -- Color       - The name of color which will be used by the Class
+      -- Pattern     - Regular expression pattern. All text parts matching it
+      --               will be highlighted
+      -- HISTORY
+      -- 8.6.7 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Add_Highlight_Class_For_Regexp
+     (CtextWidget: in Tklib_Ctext; Class, Color, Pattern: in String) with
+      Pre => Class /= "" and Color /= "" and Pattern /= "";
+      -- ****
+
 private
 
    type Tklib_Ctext is new Tk_Widget with null record;
