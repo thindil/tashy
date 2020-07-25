@@ -204,6 +204,13 @@ package Tcl.Tk.Ada.Font is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Delete font with name My_Font on current interpreter
+      -- Delete("My_Font");
+      -- -- Delete fonts Font1 and Font2 on My_Interpreter interpreter
+      -- Delete("Font1 Font2", My_Interpreter);
+      -- COMMANDS
+      -- font delete fontname ?fontname ...?
       -- SOURCE
    procedure Delete
      (FontName: in String; Interp: Tcl_Interp := Get_Context) with
@@ -220,6 +227,11 @@ package Tcl.Tk.Ada.Font is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the list of all available font families
+      -- Font_Families: constant String := Families;
+      -- COMMANDS
+      -- font families
       -- SOURCE
    function Families return String;
    -- ****
@@ -235,6 +247,12 @@ package Tcl.Tk.Ada.Font is
    -- 8.6.6 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the list of all available font families on My_Window widget's
+   -- -- display
+   -- Font_Families: constant String := Families(My_Window);
+   -- COMMANDS
+   -- font families -displayof widget
    -- SOURCE
    function Families(Widget: Tk_Widget'Class) return String;
    -- ****
@@ -253,6 +271,11 @@ package Tcl.Tk.Ada.Font is
    -- 8.6.6 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the width of text "text" in My_Font on the current interpreter
+   -- Font_Width: constant String := Measure("My_Font", "text");
+   -- COMMANDS
+   -- font measure font -displayof interp text
    -- SOURCE
    function Measure
      (Font, Text: in String; Interp: Tcl_Interp := Get_Context)
@@ -273,6 +296,11 @@ package Tcl.Tk.Ada.Font is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the width of text "text" in My_Font on My_Window widget
+      -- Font_Width: constant String := Measure("My_Font", "text", My_Window);
+      -- COMMANDS
+      -- font measure font -displayof interp text
       -- SOURCE
    function Measure
      (Font, Text: in String; Widget: Tk_Widget'Class) return String with
@@ -293,6 +321,11 @@ package Tcl.Tk.Ada.Font is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Check if My_Font is fixed (monospace) font
+      -- Is_Monospace: constant String := Metrics("MyFont", "-fixed");
+      -- COMMANDS
+      -- font metrics font -displayof interp ?option?
       -- SOURCE
    function Metrics
      (Font: in String; Option: in String := "";
@@ -314,6 +347,11 @@ package Tcl.Tk.Ada.Font is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get all the metrics of the font My_Font in My_Window widget
+      -- Font_Metrics: constant String := Metrics("My_Font", "", My_Window);
+      -- COMMANDS
+      -- font metrics font -displayof interp ?option?
       -- SOURCE
    function Metrics
      (Font: in String; Option: in String := ""; Widget: Tk_Widget'Class)
@@ -334,6 +372,11 @@ package Tcl.Tk.Ada.Font is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the names of the all available fonts on the current interpreter
+      -- Font_Names: constant String := Names;
+      -- COMMANDS
+      -- font names
       -- SOURCE
    function Names(Interp: Tcl_Interp := Get_Context) return String;
    -- ****
