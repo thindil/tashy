@@ -22,7 +22,8 @@ of the project.
 - Binding for Tklib `tooltip` commands: `clear`, `disable`, `enable`, `delay`,
   `fade`
 - Binding for Tklib `ctext` commands: `ctext`, `addHighlightClass`,
-  `addHighlightClassWithOnlyCharStart`, `addHighlightClassForSpecialChars`
+  `addHighlightClassWithOnlyCharStart`, `addHighlightClassForSpecialChars`,
+  `addHighlightClassForRegexp`
 
 ### Changed
 - Updated code documentation
