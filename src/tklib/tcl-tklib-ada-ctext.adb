@@ -61,7 +61,7 @@ package body Tcl.Tklib.Ada.Ctext is
    begin
       Tcl.Ada.Tcl_Eval
         (CtextWidget.Interp,
-         "::ctext::AddHighlightClass " & Widget_Image(CtextWidget) & " " &
+         "::ctext::addHighlightClass " & Widget_Image(CtextWidget) & " " &
          Class & " " & Color & " [list " & Keywordlist & "]");
    end Add_Highlight_Class;
 
@@ -70,7 +70,7 @@ package body Tcl.Tklib.Ada.Ctext is
    begin
       Tcl.Ada.Tcl_Eval
         (CtextWidget.Interp,
-         "::ctext::AddHighlightClassWithOnlyCharStart " &
+         "::ctext::addHighlightClassWithOnlyCharStart " &
          Widget_Image(CtextWidget) & " " & Class & " " & Color & " " & Char);
    end Add_Highlight_Class_With_Only_Char_Start;
 
@@ -79,7 +79,7 @@ package body Tcl.Tklib.Ada.Ctext is
    begin
       Tcl.Ada.Tcl_Eval
         (CtextWidget.Interp,
-         "::ctext::AddHighlightClassForSpecialChars " &
+         "::ctext::addHighlightClassForSpecialChars " &
          Widget_Image(CtextWidget) & " " & Class & " " & Color & " " &
          CharString);
    end Add_Highlight_Class_For_Special_Chars;
@@ -89,8 +89,15 @@ package body Tcl.Tklib.Ada.Ctext is
    begin
       Tcl.Ada.Tcl_Eval
         (CtextWidget.Interp,
-         "::ctext::AddHighlightClassForRegexp " & Widget_Image(CtextWidget) &
+         "::ctext::addHighlightClassForRegexp " & Widget_Image(CtextWidget) &
          " " & Class & " " & Color & " " & Pattern);
    end Add_Highlight_Class_For_Regexp;
+
+   procedure Clear_Highlight_Classes(CtextWidget: in Tklib_Ctext) is
+   begin
+      Tcl.Ada.Tcl_Eval
+        (CtextWidget.Interp,
+         "::ctext::clearHighlightClasses " & Widget_Image(CtextWidget));
+   end Clear_Highlight_Classes;
 
 end Tcl.Tklib.Ada.Ctext;
