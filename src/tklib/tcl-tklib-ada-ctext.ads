@@ -185,6 +185,23 @@ package Tcl.Tklib.Ada.Ctext is
    procedure Clear_Highlight_Classes(CtextWidget: in Tklib_Ctext);
    -- ****
 
+   -- ****f* Ctext/Delete_Highlight_Class
+   -- FUNCTION
+   -- Delete the selected highlight class from the widget
+   -- PARAMETERS
+   -- CtextWidget - Ctext widget from which the selected highlight class will
+   --               be removed
+   -- Class       - Name of the highlight class to remove
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Delete_Highlight_Class
+     (CtextWidget: in Tklib_Ctext; Class: in String) with
+      Pre => Class /= "";
+      -- ****
+
    -- ****f* Ctext/Get_Highlight_Classes
    -- FUNCTION
    -- Get the list of all highlight classes for the widget
