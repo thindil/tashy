@@ -106,11 +106,6 @@ If you have installed [Bob](https://github.com/thindil/bob) you can type:
 The library (in the static version) is available also as a Docker container with
 GNAT GPL version.
 
-* For the development version of the library, you can use this command to
-download:
-
-`docker pull thindil/gnat-tashy-devel`
-
 * For the stable version of the library, you can use this command to download:
 
 `docker pull thindil/gnat-tashy`
@@ -134,14 +129,33 @@ TASHY versioning is in X.Y.Z schema where:
 
 ## Documentation
 
-For the last release, the library code documenation is available online at:
+For the latest release, the library code documentation is available online at:
 
 https://thindil.github.io/tashy/
+
+### Documentation sections
+
+* FUNCTION   - general information what the subprogram is doing
+* SOURCE     - declaration of the subprogram
+* PARAMETERS - detailed information about the subprogram parameters
+* RESULT     - value returned by the function
+* OUTPUT     - value returned by the procedure
+* HISTORY    - list of main changes to the subprogram
+* TODO       - list of things to do, plans for the future of the subprogram
+* EXAMPLE    - Simple example how to use the subprogram
+* COMMANDS   - Tcl command equivalent for the subprogram. Notation is similar
+  to this used in Tcl manual `?parameter?` means that parameter is optional,
+  `...` means "repeat previous parameters/values/pairs". **NOTE:** if COMMANDS
+  value differs from this what is in Tcl manual, it means that Ada subprogram
+  uses exactly that variant of the Tcl command.
+* SEE ALSO   - Points to the similar Ada subprogram
+
+### Examples
 
 Also, in directory [demos](demos/) you will find some examples of usage of the
 library.
 
-## Generating the code documentation
+### Generating the code documentation
 
 To generate (or regenerate) code documentation, you need [ROBODoc](https://rfsber.home.xs4all.nl/Robo/)
 If you have it, in main project directory (where this file is) enter terminal
