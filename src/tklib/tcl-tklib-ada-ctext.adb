@@ -100,4 +100,12 @@ package body Tcl.Tklib.Ada.Ctext is
          "::ctext::clearHighlightClasses " & Widget_Image(CtextWidget));
    end Clear_Highlight_Classes;
 
+   function Get_Highlight_Classes(CtextWidget: in Tklib_Ctext) return String is
+   begin
+      Tcl.Ada.Tcl_Eval
+        (CtextWidget.Interp,
+         "::ctext::getHighlightClasses " & Widget_Image(CtextWidget));
+      return Tcl.Ada.Tcl_GetResult(CtextWidget.Interp);
+   end Get_Highlight_Classes;
+
 end Tcl.Tklib.Ada.Ctext;

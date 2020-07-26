@@ -185,6 +185,21 @@ package Tcl.Tklib.Ada.Ctext is
    procedure Clear_Highlight_Classes(CtextWidget: in Tklib_Ctext);
    -- ****
 
+   -- ****f* Ctext/Get_Highlight_Classes
+   -- FUNCTION
+   -- Get the list of all highlight classes for the widget
+   -- PARAMETERS
+   -- CtextWidget - Ctext widget which will be queried for classes
+   -- RESULT
+   -- List of all highlight classes for the CtextWidget
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function Get_Highlight_Classes(CtextWidget: in Tklib_Ctext) return String;
+   -- ****
+
 private
 
    type Tklib_Ctext is new Tk_Widget with null record;
