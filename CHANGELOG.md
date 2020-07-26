@@ -23,7 +23,7 @@ of the project.
   `fade`
 - Binding for Tklib `ctext` commands: `ctext`, `addHighlightClass`,
   `addHighlightClassWithOnlyCharStart`, `addHighlightClassForSpecialChars`,
-  `addHighlightClassForRegexp`, `clearHighlightClasses`
+  `addHighlightClassForRegexp`, `clearHighlightClasses`, `getHighlightClasses`
 
 ### Changed
 - Updated code documentation
