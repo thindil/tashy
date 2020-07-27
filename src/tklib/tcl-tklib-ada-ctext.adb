@@ -109,6 +109,13 @@ package body Tcl.Tklib.Ada.Ctext is
          Class);
    end Delete_Highlight_Class;
 
+   procedure Enable_Comments(CtextWidget: in Tklib_Ctext) is
+   begin
+      Tcl.Ada.Tcl_Eval
+        (CtextWidget.Interp,
+         "ctext::enableComments " & Widget_Image(CtextWidget));
+   end Enable_Comments;
+
    function Get_Highlight_Classes(CtextWidget: in Tklib_Ctext) return String is
    begin
       Tcl.Ada.Tcl_Eval
