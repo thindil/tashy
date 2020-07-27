@@ -109,6 +109,13 @@ package body Tcl.Tklib.Ada.Ctext is
          Class);
    end Delete_Highlight_Class;
 
+   procedure Disable_Comments(CtextWidget: in Tklib_Ctext) is
+   begin
+      Tcl.Ada.Tcl_Eval
+        (CtextWidget.Interp,
+         "ctext::disableComments " & Widget_Image(CtextWidget));
+   end Disable_Comments;
+
    procedure Enable_Comments(CtextWidget: in Tklib_Ctext) is
    begin
       Tcl.Ada.Tcl_Eval

@@ -202,17 +202,31 @@ package Tcl.Tklib.Ada.Ctext is
       Pre => Class /= "";
       -- ****
 
-      -- ****f* Ctext/Enable_Comments
+      -- ****f* Ctext/Disable_Comments
       -- FUNCTION
-      -- Enable C comment highlighting on the selected ctext widget
+      -- Disable C comment highlighting on the selected ctext widget
       -- PARAMETERS
       -- CtextWidget - Ctext widget on which comment highlighting will be
-      --               enabled
+      --               disabled
       -- HISTORY
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
       -- SOURCE
+   procedure Disable_Comments(CtextWidget: in Tklib_Ctext);
+   -- ****
+
+   -- ****f* Ctext/Enable_Comments
+   -- FUNCTION
+   -- Enable C comment highlighting on the selected ctext widget
+   -- PARAMETERS
+   -- CtextWidget - Ctext widget on which comment highlighting will be
+   --               enabled
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
    procedure Enable_Comments(CtextWidget: in Tklib_Ctext);
    -- ****
 
