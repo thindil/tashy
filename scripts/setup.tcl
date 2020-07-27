@@ -147,9 +147,7 @@ proc Save_GUI {g} {
             append library_switches " -L$tclhome/lib"
             append library_switches " -ltcl$tcl_version -ltk$tk_version"
          } else {
-            # Must be Linux (?)
-            append library_switches " -Wl,-rpath,$tclhome/lib"
-            append library_switches " -L$tclhome/lib"
+            # Must be Linux
             append library_switches " -ltcl$tcl_version -ltk$tk_version"
          }
       }
@@ -309,9 +307,7 @@ proc Set_Macros {platform os} {
                append library_switches " -L$tclhome/lib"
                append library_switches " -ltcl$tcl_version -ltk$tk_version"
             } else {
-               # Must be Linux (?)
-               append library_switches " -Wl,-rpath,$tclhome/lib"
-               append library_switches " -L$tclhome/lib"
+               # Must be Linux
                append library_switches " -ltcl$tcl_version -ltk$tk_version"
             }
          }
@@ -341,7 +337,7 @@ proc Set_Macros {platform os} {
       setvar TK_VERSION        "$tk_version"        {Tk version}
       setvar TK_LIBRARY        "$libtk"             {Tk library}
       setvar CARGS             "-g -O2"             {C compiler switches}
-      setvar AARGS             "-g -O2 -gnatqQafo -gnatwaL" \
+      setvar AARGS             "-g -O2 -gnatafoE -gnatwaL" \
          {Ada compiler switches}
       setvar BARGS             "-E"                 {gnatbind switches}
       setvar EXE               "$exec_suffix"       {suffix for executable files}
