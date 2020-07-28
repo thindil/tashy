@@ -24,7 +24,7 @@ of the project.
 - Binding for Tklib `ctext` commands: `ctext`, `addHighlightClass`,
   `addHighlightClassWithOnlyCharStart`, `addHighlightClassForSpecialChars`,
   `addHighlightClassForRegexp`, `clearHighlightClasses`, `getHighlightClasses`,
-  `deleteHighlightClass`, `enableComments`, `disableComments`
+  `deleteHighlightClass`, `enableComments`, `disableComments`, `highlight`
 
 ### Changed
 - Updated code documentation
