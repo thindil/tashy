@@ -123,6 +123,13 @@ package body Tcl.Tklib.Ada.Ctext is
          "ctext::enableComments " & Widget_Image(CtextWidget));
    end Enable_Comments;
 
+   procedure Fast_Delete
+     (CtextWidget: in Tklib_Ctext; Index1: in String;
+      Index2: in String := "") is
+   begin
+      Execute_Widget_Command(CtextWidget, "fastdelete", Index1 & " " & Index2);
+   end Fast_Delete;
+
    function Get_Highlight_Classes(CtextWidget: in Tklib_Ctext) return String is
    begin
       Tcl.Ada.Tcl_Eval

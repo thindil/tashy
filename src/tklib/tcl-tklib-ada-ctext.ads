@@ -230,6 +230,27 @@ package Tcl.Tklib.Ada.Ctext is
    procedure Enable_Comments(CtextWidget: in Tklib_Ctext);
    -- ****
 
+   -- ****f* Ctext/Fast_Delete
+   -- FUNCTION
+   -- Delete text range without updating the highlighting
+   -- PARAMETERS
+   -- CtextWidget - Tk_Text in which text will be deleted
+   -- Index1      - Start index of character which will be deleted
+   -- Index2      - End index of character before which delete will be done.
+   --               It can be also values for another ranges of text to
+   --               delete. If empty, delete only one character. Default
+   --               value is empty.
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Fast_Delete
+     (CtextWidget: in Tklib_Ctext; Index1: in String;
+      Index2: in String := "") with
+      Pre => Index1 /= "";
+      -- ****
+
    -- ****f* Ctext/Get_Highlight_Classes
    -- FUNCTION
    -- Get the list of all highlight classes for the widget
