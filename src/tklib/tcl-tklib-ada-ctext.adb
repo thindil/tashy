@@ -131,4 +131,11 @@ package body Tcl.Tklib.Ada.Ctext is
       return Tcl.Ada.Tcl_GetResult(CtextWidget.Interp);
    end Get_Highlight_Classes;
 
+   procedure Highlight
+     (CtextWidget: in Tklib_Ctext; StartIndex, EndIndex: in String) is
+   begin
+      Execute_Widget_Command
+        (CtextWidget, "highlight", StartIndex & " " & EndIndex);
+   end Highlight;
+
 end Tcl.Tklib.Ada.Ctext;

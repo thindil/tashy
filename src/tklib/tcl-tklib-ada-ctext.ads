@@ -245,6 +245,23 @@ package Tcl.Tklib.Ada.Ctext is
    function Get_Highlight_Classes(CtextWidget: in Tklib_Ctext) return String;
    -- ****
 
+   -- ****f* Ctext/Highlight
+   -- FUNCTION
+   -- Highlight the text between the selected indexes
+   -- PARAMETERS
+   -- CtextWidget - Ctext widget in which the text will be highlighted
+   -- StartIndex  - The start index of highlighting text
+   -- EndIndex    - The end index of highlighting text
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Highlight
+     (CtextWidget: in Tklib_Ctext; StartIndex, EndIndex: in String) with
+      Pre => StartIndex /= "" and EndIndex /= "";
+      -- ****
+
 private
 
    type Tklib_Ctext is new Tk_Widget with null record;
