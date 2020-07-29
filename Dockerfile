@@ -8,7 +8,6 @@ RUN apt-get update && apt-get install -y \
  gprbuild \
  tcl-dev \
  tk-dev \
- tklib \
  && cd tashy \
  && wish scripts/setup.tcl --nogui \
  && gprbuild -P tashy.gpr \
