@@ -251,6 +251,20 @@ package Tcl.Tklib.Ada.Ctext is
       Pre => Index1 /= "";
       -- ****
 
+      -- ****f* Ctext/Fast_Insert
+      -- FUNCTION
+      -- Insert the text to Ctext widget without updating the highlighting
+      -- PARAMETERS
+      -- CtextWidget - Tklib_Ctext to which text will be inserted
+      -- Index       - Tklib_Ctext position on which text will be inserted.
+      --               Lines starts from 1, characters starts from 0
+      -- Text        - Text to insert to Tklib_Ctext widget
+      -- SOURCE
+   procedure Fast_Insert
+     (CtextWidget: in Tklib_Ctext; Index, Text: in String) with
+      Pre => Index /= "" and Text /= "";
+      -- ****
+
    -- ****f* Ctext/Get_Highlight_Classes
    -- FUNCTION
    -- Get the list of all highlight classes for the widget

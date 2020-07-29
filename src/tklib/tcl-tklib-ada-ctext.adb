@@ -130,6 +130,12 @@ package body Tcl.Tklib.Ada.Ctext is
       Execute_Widget_Command(CtextWidget, "fastdelete", Index1 & " " & Index2);
    end Fast_Delete;
 
+   procedure Fast_Insert
+     (CtextWidget: in Tklib_Ctext; Index, Text: in String) is
+   begin
+      Execute_Widget_Command(CtextWidget, "fastinsert", Index & " " & Text);
+   end Fast_Insert;
+
    function Get_Highlight_Classes(CtextWidget: in Tklib_Ctext) return String is
    begin
       Tcl.Ada.Tcl_Eval
