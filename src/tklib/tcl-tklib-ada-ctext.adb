@@ -100,6 +100,11 @@ package body Tcl.Tklib.Ada.Ctext is
          "::ctext::clearHighlightClasses " & Widget_Image(CtextWidget));
    end Clear_Highlight_Classes;
 
+   procedure Copy(CtextWidget: in Tklib_Ctext) is
+   begin
+      Execute_Widget_Command(CtextWidget, "copy");
+   end Copy;
+
    procedure Delete_Highlight_Class
      (CtextWidget: in Tklib_Ctext; Class: in String) is
    begin
