@@ -161,4 +161,9 @@ package body Tcl.Tklib.Ada.Ctext is
         (CtextWidget, "highlight", StartIndex & " " & EndIndex);
    end Highlight;
 
+   procedure Paste(CtextWidget: in Tklib_Ctext) is
+   begin
+      Execute_Widget_Command(CtextWidget, "paste");
+   end Paste;
+
 end Tcl.Tklib.Ada.Ctext;

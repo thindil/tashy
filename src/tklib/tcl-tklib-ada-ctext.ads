@@ -323,6 +323,19 @@ package Tcl.Tklib.Ada.Ctext is
       Pre => StartIndex /= "" and EndIndex /= "";
       -- ****
 
+      -- ****f* Ctext/Paste
+      -- FUNCTION
+      -- Call tk_textPaste for the Ctext widget
+      -- PARAMETERS
+      -- CtextWidget - Ctext widget on which tk_textPaste will be called
+      -- HISTORY
+      -- 8.6.7 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- SOURCE
+   procedure Paste(CtextWidget: in Tklib_Ctext);
+   -- ****
+
 private
 
    type Tklib_Ctext is new Tk_Widget with null record;
