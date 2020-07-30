@@ -105,6 +105,11 @@ package body Tcl.Tklib.Ada.Ctext is
       Execute_Widget_Command(CtextWidget, "copy");
    end Copy;
 
+   procedure Cut(CtextWidget: in Tklib_Ctext) is
+   begin
+      Execute_Widget_Command(CtextWidget, "cut");
+   end Cut;
+
    procedure Delete_Highlight_Class
      (CtextWidget: in Tklib_Ctext; Class: in String) is
    begin

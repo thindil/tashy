@@ -198,6 +198,19 @@ package Tcl.Tklib.Ada.Ctext is
    procedure Copy(CtextWidget: in Tklib_Ctext);
    -- ****
 
+   -- ****f* Ctext/Cut
+   -- FUNCTION
+   -- Call tk_textCut for the Ctext widget.
+   -- PARAMETERS
+   -- CtextWidget - Ctext widget on which tk_textCut will be called
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   procedure Cut(CtextWidget: in Tklib_Ctext);
+   -- ****
+
    -- ****f* Ctext/Delete_Highlight_Class
    -- FUNCTION
    -- Delete the selected highlight class from the widget
