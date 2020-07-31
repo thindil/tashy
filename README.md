@@ -104,7 +104,7 @@ If you have installed [Bob](https://github.com/thindil/bob) you can type:
 
 ## Docker images
 The library (in the static version) is available also as a Docker container with
-GNAT GPL version.
+the newest Ubuntu GNAT FSF version.
 
 * For the stable version of the library, you can use this command to download:
 
