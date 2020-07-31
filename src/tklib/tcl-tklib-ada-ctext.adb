@@ -93,6 +93,11 @@ package body Tcl.Tklib.Ada.Ctext is
          " " & Class & " " & Color & " " & Pattern);
    end Add_Highlight_Class_For_Regexp;
 
+   procedure Append(CtextWidget: in Tklib_Ctext) is
+   begin
+      Execute_Widget_Command(CtextWidget, "append");
+   end Append;
+
    procedure Clear_Highlight_Classes(CtextWidget: in Tklib_Ctext) is
    begin
       Tcl.Ada.Tcl_Eval

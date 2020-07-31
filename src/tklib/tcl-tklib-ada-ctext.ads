@@ -171,17 +171,30 @@ package Tcl.Tklib.Ada.Ctext is
       Pre => Class /= "" and Color /= "" and Pattern /= "";
       -- ****
 
-      -- ****f* Ctext/Clear_Highlight_Classes
+      -- ****f* Ctext/Append
       -- FUNCTION
-      -- Remove all highlight classes from the widget
+      -- Append the current selection to the clipboard
       -- PARAMETERS
-      -- CtextWidget - Ctext widget from which highlight classes will be
-      --               removed
+      -- CtextWidget - Ctext widget to which selection will be added
       -- HISTORY
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
       -- SOURCE
+   procedure Append(CtextWidget: in Tklib_Ctext);
+   -- ****
+
+   -- ****f* Ctext/Clear_Highlight_Classes
+   -- FUNCTION
+   -- Remove all highlight classes from the widget
+   -- PARAMETERS
+   -- CtextWidget - Ctext widget from which highlight classes will be
+   --               removed
+   -- HISTORY
+   -- 8.6.7 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
    procedure Clear_Highlight_Classes(CtextWidget: in Tklib_Ctext);
    -- ****
 
