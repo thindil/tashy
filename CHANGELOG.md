@@ -25,7 +25,7 @@ of the project.
   `addHighlightClassWithOnlyCharStart`, `addHighlightClassForSpecialChars`,
   `addHighlightClassForRegexp`, `clearHighlightClasses`, `getHighlightClasses`,
   `deleteHighlightClass`, `enableComments`, `disableComments`, `highlight`,
-  `fastdelete`, `fastinsert`, `copy`, `cut`, `paste`
+  `fastdelete`, `fastinsert`, `copy`, `cut`, `paste`, `append`
 
 ### Changed
 - Updated code documentation
