@@ -39,6 +39,13 @@ package Tcl.Tk.Ada.Grid is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Add My_Label widget to the grid with default options
+   -- Tcl.Tk.Ada.Grid.Grid(My_Label);
+   -- -- Add My_Entry widget to the grid in first row and second column
+   -- Tcl.Tk.Ada.Grid.Grid(My_Entry, "-row 0 -column 1");
+   -- COMMANDS
+   -- grid slave ?options?
    -- SOURCE
    procedure Grid(Slave: in Tk_Widget'Class; Options: in String := "");
    -- ****
@@ -53,6 +60,11 @@ package Tcl.Tk.Ada.Grid is
    -- 8.6.2 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Set the anchor to north for My_Main_Window widget
+   -- Grid_Anchor(My_Main_Window, "n");
+   -- COMMANDS
+   -- grid anchor master anchor
    -- SOURCE
    procedure Grid_Anchor(Master: in Tk_Widget'Class; Direction: in String) with
       Pre => Direction /= "";
@@ -69,6 +81,11 @@ package Tcl.Tk.Ada.Grid is
       -- 8.6.2 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the anchor for the My_Frame widget
+      -- Anchor: constant String := Grid_Anchor(My_Frame);
+      -- COMMANDS
+      -- grid anchor master
       -- SOURCE
    function Grid_Anchor(Master: in Tk_Widget'Class) return String;
    -- ****
@@ -84,8 +101,8 @@ package Tcl.Tk.Ada.Grid is
    --           empty
    -- Column2 - Ending column from which bounding box will be count. Default
    --           is empty
-   -- Row2    - Ending column from which bounding box will be count. Default
-   --           is empty
+   -- Row2    - Ending row from which bounding box will be count. Default is
+   --           empty
    -- RESULT
    -- If all parameters are empty, return bounding box for whole grid. If
    -- only Column and Row specified, return box for the selected cell. If all
@@ -94,24 +111,36 @@ package Tcl.Tk.Ada.Grid is
    -- 8.6.2 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the bounding box for the whole My_Frame widget grid
+   -- Coordinates: constant String := Grid_BBox(My_Frame);
+   -- -- Get the bounding box for the first row of My_Window grid and first and second column
+   -- Coordinates: constant String := Grid_BBox(My_Window, "0", "0", "1", "0");
+   -- COMMANDS
+   -- grid bbox master ?column row? ?column2 row2?
    -- SOURCE
    function Grid_BBox
      (Master: in Tk_Widget'Class; Column, Row, Column2, Row2: in String := "")
       return String;
-   -- ****
+      -- ****
 
-   -- ****f* TkGrid/Column_Configure (procedure)
-   -- FUNCTION
-   -- Set column configuration options for Slave widget in Master grid.
-   -- PARAMETERS
-   -- Master  - Tk_Widget which is set as grid
-   -- Slave   - Tk_Widget inside Master
-   -- Options - Tk options for selected Slave
-   -- HISTORY
-   -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
-   -- SOURCE
+      -- ****f* TkGrid/Column_Configure (procedure)
+      -- FUNCTION
+      -- Set column configuration options for Slave widget in Master grid.
+      -- PARAMETERS
+      -- Master  - Tk_Widget which is set as grid
+      -- Slave   - Tk_Widget inside Master
+      -- Options - Tk options for selected Slave
+      -- HISTORY
+      -- 8.6.1 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the weight of the column to 3 for My_Frame grid and My_Label widget
+      -- Column_Configure(My_Frame, My_Label, "-weight 3");
+      -- COMMANDS
+      -- grid columnconfigure master slave ?-option value...?
+      -- SOURCE
    procedure Column_Configure
      (Master, Slave: in Tk_Widget'Class; Options: in String) with
       Pre => Options /= "";
@@ -129,6 +158,11 @@ package Tcl.Tk.Ada.Grid is
       -- 8.6.1 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the all column options for My_Frame grid and My_Entry widget
+      -- Options: constant String := Column_Configure(My_Frame, My_Entry);
+      -- COMMANDS
+      -- grid columnconfigure master slave
       -- SOURCE
    function Column_Configure(Master, Slave: in Tk_Widget'Class) return String;
    -- ****
