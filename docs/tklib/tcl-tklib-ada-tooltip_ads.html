@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.6 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.7 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -25,62 +25,220 @@
 <div id="content">
 <h3>TABLE OF CONTENTS</h3>
 <ul>
-<li>1. <a href="#robo29">TklibAda/Tooltip</a></li>
+<li>1. <a href="#robo36">TklibAda/Tooltip</a></li>
 <ul>
-<li>1.1. <a href="#robo488">Tooltip/Add</a></li>
-<li>1.2. <a href="#robo489">Tooltip/Tooltip_Init</a></li>
+<li>1.1. <a href="#robo551">Tooltip/Add</a></li>
+<li>1.2. <a href="#robo552">Tooltip/Clear</a></li>
+<li>1.3. <a href="#robo553">Tooltip/Disable</a></li>
+<li>1.4. <a href="#robo554">Tooltip/Enable</a></li>
+<li>1.5. <a href="#robo555">Tooltip/Fade</a></li>
+<li>1.6. <a href="#robo556">Tooltip/Tooltip_Delay (function)</a></li>
+<li>1.7. <a href="#robo557">Tooltip/Tooltip_Delay (procedure)</a></li>
+<li>1.8. <a href="#robo558">Tooltip/Tooltip_Init</a></li>
 </ul>
 </ul>
 <hr />
 <a name="TklibAda2fTooltip"></a>
-<a name="robo29"></a><h2>TklibAda/Tooltip [ Packages ]</h2>
+<a name="robo36"></a><h2>TklibAda/Tooltip [ Packages ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tklib-ada_ads.html#robo28">TklibAda</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tklib-ada_ads.html#robo32">TklibAda</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Provides code for manipulate <a href="./tcl-tklib_ads.html#robo13">Tklib</a> tooltip package
+<pre> Provides code for manipulate <a href="./tcl-tklib_ads.html#robo15">Tklib</a> tooltip package
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo9">Tcl</a><span class="sign">.</span><a href="./tcl-tklib_ads.html#robo13">Tklib</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo10">Ada</a><span class="sign">.</span><strong>Tooltip</strong> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tklib_ads.html#robo15">Tklib</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><strong>Tooltip</strong> <span class="keyword">is</span>
 </pre>
 
 <hr />
 <a name="Tooltip2fAdd"></a>
-<a name="robo488"></a><h2>Tooltip/Add [ Subprograms ]</h2>
+<a name="robo551"></a><h2>Tooltip/Add [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo29">Tooltip</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Tooltip</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <strong>Add</strong> the tooltip to selected <a href="../tk/tcl-tk-ada-widgets_ads.html#robo113">Tk_Widget</a>
+<pre> <strong>Add</strong> the tooltip to selected <a href="../tk/tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Add</strong>
-     <span class="sign">(</span>Widget<span class="sign">:</span> <span class="keyword">in</span> <a href="../tk/tcl-tk-ada-widgets_ads.html#robo113">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> <a href="../tk/tcl-tk-ada-widgets-message_ads.html#robo41">Message</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+     <span class="sign">(</span>Widget<span class="sign">:</span> <span class="keyword">in</span> <a href="../tk/tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> <a href="../tk/tcl-tk-ada-widgets-message_ads.html#robo48">Message</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
       Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">)</span> <span class="keyword">with</span>
-      Pre =<span class="sign">&gt;</span> <a href="../tk/tcl-tk-ada-widgets-message_ads.html#robo41">Message</a> /= ""<span class="sign">;</span>
+      Pre =<span class="sign">&gt;</span> <a href="../tk/tcl-tk-ada-widgets-message_ads.html#robo48">Message</a> /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Widget  - <a href="../tk/tcl-tk-ada-widgets_ads.html#robo113">Tk_Widget</a> to which the tooltip will be added
- <a href="../tk/tcl-tk-ada-widgets-message_ads.html#robo41">Message</a> - <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo46">Text</a> which will be show in the tooltip
+<pre> Widget  - <a href="../tk/tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> to which the tooltip will be added
+ <a href="../tk/tcl-tk-ada-widgets-message_ads.html#robo48">Message</a> - <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo53">Text</a> which will be show in the tooltip
  Options - Additional tooltip options
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.1 - Added
+</pre>
+
+<hr />
+<a name="Tooltip2fClear"></a>
+<a name="robo552"></a><h2>Tooltip/Clear [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Tooltip</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Prevent the selected widgets from showing tooltips
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Clear</strong>
+     <span class="sign">(</span>Pattern<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="../tk/tcl-tk-ada_ads.html#robo499">Get_Context</a><span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> Pattern <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Pattern - <a href="../tk/tcl-tk_ads.html#robo14">Tk</a> glob pattern for widgets which should not showing
+           tooltips
+ Interp  - <a href="../tcl_ads.html#robo10">Tcl</a> interpreter on which widgets will be set. Default value
+           is current interpreter
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.7 - Added
+</pre>
+
+<hr />
+<a name="Tooltip2fDisable"></a>
+<a name="robo553"></a><h2>Tooltip/Disable [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Tooltip</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <strong>Disable</strong> all tooptips on the selected <a href="../tcl_ads.html#robo10">Tcl</a> interpreter
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Disable</strong><span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="../tk/tcl-tk-ada_ads.html#robo499">Get_Context</a><span class="sign">)</span><span class="sign">;</span>
+   <span class="keyword">procedure</span> Off<span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="../tk/tcl-tk-ada_ads.html#robo499">Get_Context</a><span class="sign">)</span> <span class="keyword">renames</span> <strong>Disable</strong><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Interp - <a href="../tcl_ads.html#robo10">Tcl</a> interpreter on which tooltips will be disabled. Default
+          value is current interpreter
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.7 - Added
+</pre>
+
+<hr />
+<a name="Tooltip2fEnable"></a>
+<a name="robo554"></a><h2>Tooltip/Enable [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Tooltip</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <strong>Enable</strong> all tooptips on the selected <a href="../tcl_ads.html#robo10">Tcl</a> interpreter
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Enable</strong><span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="../tk/tcl-tk-ada_ads.html#robo499">Get_Context</a><span class="sign">)</span><span class="sign">;</span>
+   <span class="keyword">procedure</span> On<span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="../tk/tcl-tk-ada_ads.html#robo499">Get_Context</a><span class="sign">)</span> <span class="keyword">renames</span> <strong>Enable</strong><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Interp - <a href="../tcl_ads.html#robo10">Tcl</a> interpreter on which tooltips will be enabled. Default
+          value is current interpreter
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.7 - Added
+</pre>
+
+<hr />
+<a name="Tooltip2fFade"></a>
+<a name="robo555"></a><h2>Tooltip/Fade [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Tooltip</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="#robo554">Enable</a> of disable fading of tooltips
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Fade</strong><span class="sign">(</span><a href="#robo554">Enable</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="../tk/tcl-tk-ada_ads.html#robo499">Get_Context</a><span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo554">Enable</a> <span class="keyword">in</span> <span class="quote">"true"</span> <span class="sign">|</span> <span class="quote">"false"</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> <a href="#robo554">Enable</a> - If true, enable fading, if false disable it
+ Interp - <a href="../tcl_ads.html#robo10">Tcl</a> interpreter on which fading will be set
+</pre>
+
+<hr />
+<a name="Tooltip2fTooltip5fDelay2028function29"></a>
+<a name="robo556"></a><h2>Tooltip/Tooltip_Delay (function) [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Tooltip</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> the delay between show tooltip and moment when the pointer enters
+ a widget
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> Tooltip_Delay<span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="../tk/tcl-tk-ada_ads.html#robo499">Get_Context</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Interp    - <a href="../tcl_ads.html#robo10">Tcl</a> interpreter on which tooltip delay will be get
+</pre>
+<p class="item_name">RESULT</p>
+<pre> The miliseconds difference between entering the pointer a widget and
+ showing tooltip
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.7 - Added
+</pre>
+
+<hr />
+<a name="Tooltip2fTooltip5fDelay2028procedure29"></a>
+<a name="robo557"></a><h2>Tooltip/Tooltip_Delay (procedure) [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Tooltip</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-ttkscale_ads.html#robo632">Set</a> delay between show tooltip and moment when the pointer enters a
+ widget
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> Tooltip_Delay
+     <span class="sign">(</span>Milisecs<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="../tk/tcl-tk-ada_ads.html#robo499">Get_Context</a><span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> Milisecs <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Milisecs  - A new value for delay (in miliseconds)
+ Interp    - <a href="../tcl_ads.html#robo10">Tcl</a> interpreter on which tooltip delay will be set
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.7 - Added
 </pre>
 
 <hr />
 <a name="Tooltip2fTooltip5fInit"></a>
-<a name="robo489"></a><h2>Tooltip/Tooltip_Init [ Subprograms ]</h2>
+<a name="robo558"></a><h2>Tooltip/Tooltip_Init [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo29">Tooltip</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo36">Tooltip</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Load package <a href="#robo29">Tooltip</a>. <a href="../tk/tcl-tk-ada-widgets_ads.html#robo663">Raise</a> Program_Error if package can't be loaded
+<pre> Load package <a href="#robo36">Tooltip</a>. <a href="../tk/tcl-tk-ada-widgets_ads.html#robo735">Raise</a> Program_Error if package can't be loaded
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Tooltip_Init</strong><span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Interp: <a href="../tcl_ads.html#robo9">Tcl</a> interpreter to which tooltip package will be added
+<pre> Interp: <a href="../tcl_ads.html#robo10">Tcl</a> interpreter to which tooltip package will be added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.1 - Added
 </pre>
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tklib/tcl-tklib-ada-tooltip.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Jun 30 2020 09:41:00
+<p>Generated from ./src/tklib/tcl-tklib-ada-tooltip.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Jul 31 2020 09:32:36
 </p>
 </div> <!-- footer -->
 </body>

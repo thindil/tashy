@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.6 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.7 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -25,38 +25,38 @@
 <div id="content">
 <h3>TABLE OF CONTENTS</h3>
 <ul>
-<li>1. <a href="#robo24">TkAda/TtkStyle</a></li>
+<li>1. <a href="#robo28">TkAda/TtkStyle</a></li>
 <ul>
-<li>1.1. <a href="#robo579">TtkStyle/Element_Create</a></li>
-<li>1.2. <a href="#robo580">TtkStyle/Element_Names</a></li>
-<li>1.3. <a href="#robo581">TtkStyle/Element_Options</a></li>
-<li>1.4. <a href="#robo582">TtkStyle/Style_Configure</a></li>
-<li>1.5. <a href="#robo583">TtkStyle/Style_Layout (function)</a></li>
-<li>1.6. <a href="#robo584">TtkStyle/Style_Layout (procedure)</a></li>
-<li>1.7. <a href="#robo585">TtkStyle/Style_Lookup</a></li>
-<li>1.8. <a href="#robo586">TtkStyle/Style_Map</a></li>
-<li>1.9. <a href="#robo587">TtkStyle/Theme_Names</a></li>
-<li>1.10. <a href="#robo588">TtkStyle/Theme_Use (function)</a></li>
-<li>1.11. <a href="#robo589">TtkStyle/Theme_Use (procedure)</a></li>
+<li>1.1. <a href="#robo648">TtkStyle/Element_Create</a></li>
+<li>1.2. <a href="#robo649">TtkStyle/Element_Names</a></li>
+<li>1.3. <a href="#robo650">TtkStyle/Element_Options</a></li>
+<li>1.4. <a href="#robo651">TtkStyle/Style_Configure</a></li>
+<li>1.5. <a href="#robo652">TtkStyle/Style_Layout (function)</a></li>
+<li>1.6. <a href="#robo653">TtkStyle/Style_Layout (procedure)</a></li>
+<li>1.7. <a href="#robo654">TtkStyle/Style_Lookup</a></li>
+<li>1.8. <a href="#robo655">TtkStyle/Style_Map</a></li>
+<li>1.9. <a href="#robo656">TtkStyle/Theme_Names</a></li>
+<li>1.10. <a href="#robo657">TtkStyle/Theme_Use (function)</a></li>
+<li>1.11. <a href="#robo658">TtkStyle/Theme_Use (procedure)</a></li>
 </ul>
 </ul>
 <hr />
 <a name="TkAda2fTtkStyle"></a>
-<a name="robo24"></a><h2>TkAda/TtkStyle [ Packages ]</h2>
+<a name="robo28"></a><h2>TkAda/TtkStyle [ Packages ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada_ads.html#robo15">TkAda</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada_ads.html#robo17">TkAda</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo12">Tk</a> command ttk::style
+<pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo14">Tk</a> command ttk::style
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo9">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo12">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo10">Ada</a><span class="sign">.</span><strong>TtkStyle</strong> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><strong>TtkStyle</strong> <span class="keyword">is</span>
 </pre>
 
 <hr />
 <a name="TtkStyle2fElement5fCreate"></a>
-<a name="robo579"></a><h2>TtkStyle/Element_Create [ Subprograms ]</h2>
+<a name="robo648"></a><h2>TtkStyle/Element_Create [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo28">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Creates a new element in the current theme of the selected type
 </pre>
@@ -70,38 +70,38 @@
  Element_Type - Type of the element to create
  Options      - Additional options for the created element
 </pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="TtkStyle2fElement5fNames"></a>
-<a name="robo580"></a><h2>TtkStyle/Element_Names [ Subprograms ]</h2>
+<a name="robo649"></a><h2>TtkStyle/Element_Names [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo28">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Return list of elements in the current theme
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Element_Names</strong> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="TtkStyle2fElement5fOptions"></a>
-<a name="robo581"></a><h2>TtkStyle/Element_Options [ Subprograms ]</h2>
+<a name="robo650"></a><h2>TtkStyle/Element_Options [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo28">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo378">Get</a> options set for the selected element in current theme
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> options set for the selected element in current theme
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Element_Options</strong><span class="sign">(</span>Element<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
@@ -113,18 +113,18 @@
 <p class="item_name">RESULT</p>
 <pre> List of element options
 </pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="TtkStyle2fStyle5fConfigure"></a>
-<a name="robo582"></a><h2>TtkStyle/Style_Configure [ Subprograms ]</h2>
+<a name="robo651"></a><h2>TtkStyle/Style_Configure [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo28">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Configure selected or create new Ttk style
 </pre>
@@ -136,20 +136,20 @@
 <pre> Name    - Name of style to configure or create
  Options - Options for the style
 </pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.1 - Added
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="TtkStyle2fStyle5fLayout2028function29"></a>
-<a name="robo583"></a><h2>TtkStyle/Style_Layout (function) [ Subprograms ]</h2>
+<a name="robo652"></a><h2>TtkStyle/Style_Layout (function) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo28">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo378">Get</a> widget layout for the selected style
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> widget layout for the selected style
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Style_Layout <span class="sign">(</span>Name <span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
@@ -161,18 +161,18 @@
 <p class="item_name">RESULT</p>
 <pre> String with layout setting for the selected style
 </pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.2 - Added
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="TtkStyle2fStyle5fLayout2028procedure29"></a>
-<a name="robo584"></a><h2>TtkStyle/Style_Layout (procedure) [ Subprograms ]</h2>
+<a name="robo653"></a><h2>TtkStyle/Style_Layout (procedure) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo28">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Define widget layout style for the selected style
 </pre>
@@ -184,30 +184,30 @@
 <pre> Name    - Name of the style to modify
  Options - Options for the layout
 </pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.2 - Added
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="TtkStyle2fStyle5fLookup"></a>
-<a name="robo585"></a><h2>TtkStyle/Style_Lookup [ Subprograms ]</h2>
+<a name="robo654"></a><h2>TtkStyle/Style_Lookup [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo28">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo378">Get</a> value of the selected option in the selected style
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> value of the selected option in the selected style
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Style_Lookup</strong>
-     <span class="sign">(</span>Name<span class="sign">,</span> Option <span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> State <span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+     <span class="sign">(</span>Name<span class="sign">,</span> <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a> <span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> State <span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
       Default      <span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Name <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Option <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> Name <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Name    - Name of the style to query
- Option  - Name of the option to query
+ <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a>  - Name of the option to query
  State   - List of the states names. If empty, mean "normal" state.
            Default value is empty
  Default - Default value to return when option was not found
@@ -216,18 +216,18 @@
 <pre> Value of the selected option in the selected style. If option was not
  found, return value of Default parameter.
 </pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="TtkStyle2fStyle5fMap"></a>
-<a name="robo586"></a><h2>TtkStyle/Style_Map [ Subprograms ]</h2>
+<a name="robo655"></a><h2>TtkStyle/Style_Map [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo28">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Define widget style dynamic map for the selected style
 </pre>
@@ -239,20 +239,20 @@
 <pre> Name    - Name of the style to modify
  Options - Options for the widget
 </pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.2 - Added
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="TtkStyle2fTheme5fNames"></a>
-<a name="robo587"></a><h2>TtkStyle/Theme_Names [ Subprograms ]</h2>
+<a name="robo656"></a><h2>TtkStyle/Theme_Names [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo28">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo378">Get</a> list of all available Ttk themes
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> list of all available Ttk themes
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Theme_Names</strong> <span class="keyword">return</span> String<span class="sign">;</span>
@@ -260,20 +260,20 @@
 <p class="item_name">RESULT</p>
 <pre> String with list of all available Ttk themes
 </pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.1 - Added
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="TtkStyle2fTheme5fUse2028function29"></a>
-<a name="robo588"></a><h2>TtkStyle/Theme_Use (function) [ Subprograms ]</h2>
+<a name="robo657"></a><h2>TtkStyle/Theme_Use (function) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo28">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo378">Get</a> currently used Ttk theme
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> currently used Ttk theme
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Theme_Use <span class="keyword">return</span> String<span class="sign">;</span>
@@ -281,20 +281,20 @@
 <p class="item_name">RESULT</p>
 <pre> Name of currently used Ttk theme
 </pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.1 - Added
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="TtkStyle2fTheme5fUse2028procedure29"></a>
-<a name="robo589"></a><h2>TtkStyle/Theme_Use (procedure) [ Subprograms ]</h2>
+<a name="robo658"></a><h2>TtkStyle/Theme_Use (procedure) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo28">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo487">Set</a> new Ttk theme and redraw all widgets
+<pre> <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo632">Set</a> new Ttk theme and redraw all widgets
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Theme_Use <span class="sign">(</span>ThemeName <span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
@@ -303,16 +303,16 @@
 <p class="item_name">PARAMETERS</p>
 <pre> Name of Ttk theme to set
 </pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.1 - Added
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-ttkstyle.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Jun 30 2020 09:41:00
+<p>Generated from ./src/tk/tcl-tk-ada-ttkstyle.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Jul 31 2020 09:32:36
 </p>
 </div> <!-- footer -->
 </body>

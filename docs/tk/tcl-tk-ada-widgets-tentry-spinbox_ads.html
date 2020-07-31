@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.6 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.7 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -25,122 +25,122 @@
 <div id="content">
 <h3>TABLE OF CONTENTS</h3>
 <ul>
-<li>1. <a href="#robo14">TEntry/SpinBox</a></li>
+<li>1. <a href="#robo16">TEntry/SpinBox</a></li>
 <ul>
-<li>1.1. <a href="#robo90">SpinBox/Tk_SpinBox</a></li>
-<li>1.2. <a href="#robo329">SpinBox/Create (function)</a></li>
-<li>1.3. <a href="#robo330">SpinBox/Create (procedure)</a></li>
-<li>1.4. <a href="#robo331">SpinBox/Identify</a></li>
-<li>1.5. <a href="#robo332">SpinBox/Invoke</a></li>
-<li>1.6. <a href="#robo333">SpinBox/Selection_Element</a></li>
-<li>1.7. <a href="#robo334">SpinBox/Selection_Element (procedure)</a></li>
-<li>1.8. <a href="#robo335">SpinBox/Set (function)</a></li>
-<li>1.9. <a href="#robo336">SpinBox/Set (procedure)</a></li>
+<li>1.1. <a href="#robo98">SpinBox/Tk_SpinBox</a></li>
+<li>1.2. <a href="#robo394">SpinBox/Create (function)</a></li>
+<li>1.3. <a href="#robo395">SpinBox/Create (procedure)</a></li>
+<li>1.4. <a href="#robo396">SpinBox/Identify</a></li>
+<li>1.5. <a href="#robo397">SpinBox/Invoke</a></li>
+<li>1.6. <a href="#robo398">SpinBox/Selection_Element</a></li>
+<li>1.7. <a href="#robo399">SpinBox/Selection_Element (procedure)</a></li>
+<li>1.8. <a href="#robo400">SpinBox/Set (function)</a></li>
+<li>1.9. <a href="#robo401">SpinBox/Set (procedure)</a></li>
 </ul>
 </ul>
 <hr />
 <a name="TEntry2fSpinBox"></a>
-<a name="robo14"></a><h2>TEntry/SpinBox [ Packages ]</h2>
+<a name="robo16"></a><h2>TEntry/SpinBox [ Packages ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo45">TEntry</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo52">TEntry</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo12">Tk</a> widget <strong>SpinBox</strong>
+<pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo14">Tk</a> widget <strong>SpinBox</strong>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo9">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo12">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo10">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo25">Widgets</a><span class="sign">.</span>Tentry<span class="sign">.</span><strong>SpinBox</strong> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo29">Widgets</a><span class="sign">.</span>Tentry<span class="sign">.</span><strong>SpinBox</strong> <span class="keyword">is</span>
 </pre>
 
 <hr />
 <a name="SpinBox2fTk5fSpinBox"></a>
-<a name="robo90"></a><h2>SpinBox/Tk_SpinBox [ Types ]</h2>
+<a name="robo98"></a><h2>SpinBox/Tk_SpinBox [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo14">SpinBox</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">SpinBox</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo113">Tk_Widget</a>.
- Each of the derived widgets redefines the <a href="../cargv_ads.html#robo175">Create</a> subprogram
+<pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a>.
+ Each of the derived widgets redefines the <a href="../cargv_ads.html#robo188">Create</a> subprogram
  in order to create the correct type of widget.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">type</span> <strong>Tk_SpinBox</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo91">Tk_Entry</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">type</span> <strong>Tk_SpinBox</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo99">Tk_Entry</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
 </pre>
 
 <hr />
 <a name="SpinBox2fCreate2028function29"></a>
-<a name="robo329"></a><h2>SpinBox/Create (function) [ Subprograms ]</h2>
+<a name="robo394"></a><h2>SpinBox/Create (function) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo14">SpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">SpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Creates a new <a href="#robo90">Tk_SpinBox</a> in the specified interpreter.
+<pre> Creates a new <a href="#robo98">Tk_SpinBox</a> in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="../cargv_ads.html#robo175">Create</a>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="../cargv_ads.html#robo188">Create</a>
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo90">Tk_SpinBox</a> <span class="keyword">with</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo98">Tk_SpinBox</a> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> pathName - <a href="./tcl-tk_ads.html#robo12">Tk</a> path (starts with dot) for the widget
+<pre> pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
  options  - Options which will be passed to the widget. Default value is
             empty
- Interp   - <a href="../tcl_ads.html#robo9">Tcl</a> interpreter to which the widget will be created. If null,
+ Interp   - <a href="../tcl_ads.html#robo10">Tcl</a> interpreter to which the widget will be created. If null,
             the widget will be created in the "contextual" interpreter.
             Default value is null.
 </pre>
 <p class="item_name">RESULT</p>
-<pre> Newly created <a href="#robo90">Tk_SpinBox</a>
+<pre> Newly created <a href="#robo98">Tk_SpinBox</a>
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.1 - Added
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="SpinBox2fCreate2028procedure29"></a>
-<a name="robo330"></a><h2>SpinBox/Create (procedure) [ Subprograms ]</h2>
+<a name="robo395"></a><h2>SpinBox/Create (procedure) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo14">SpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">SpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Creates a new <a href="#robo90">Tk_SpinBox</a> in the specified interpreter.
+<pre> Creates a new <a href="#robo98">Tk_SpinBox</a> in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> <a href="../cargv_ads.html#robo175">Create</a>
-     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo90">Tk_SpinBox</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> <a href="../cargv_ads.html#robo188">Create</a>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo98">Tk_SpinBox</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
       Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Widgt    - <a href="#robo90">Tk_SpinBox</a> which will be created
- pathName - <a href="./tcl-tk_ads.html#robo12">Tk</a> path (starts with dot) for the widget
+<pre> Widgt    - <a href="#robo98">Tk_SpinBox</a> which will be created
+ pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
  options  - Options which will be passed to the widget. Default value is
             empty
- Interp   - <a href="../tcl_ads.html#robo9">Tcl</a> interpreter to which the widget will be created. If null,
+ Interp   - <a href="../tcl_ads.html#robo10">Tcl</a> interpreter to which the widget will be created. If null,
             the widget will be created in the "contextual" interpreter.
             Default value is null.
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.1 - Added
 </pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
-</pre>
 
 <hr />
 <a name="SpinBox2fIdentify"></a>
-<a name="robo331"></a><h2>SpinBox/Identify [ Subprograms ]</h2>
+<a name="robo396"></a><h2>SpinBox/Identify [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo14">SpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">SpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo378">Get</a> the name of the <a href="#robo90">Tk_SpinBox</a> element at the selected coordinates
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> the name of the <a href="#robo98">Tk_SpinBox</a> element at the selected coordinates
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Identify</strong>
-     <span class="sign">(</span>SpinBoxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo90">Tk_SpinBox</a><span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+     <span class="sign">(</span>SpinBoxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo98">Tk_SpinBox</a><span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> SpinBoxWidget - <a href="#robo90">Tk_SpinBox</a> which will be queried for the name of the
+<pre> SpinBoxWidget - <a href="#robo98">Tk_SpinBox</a> which will be queried for the name of the
                  element
  X             - X coordinate of the pixel which will be check
  Y             - Y coordinate of the pixel which will be check
@@ -149,138 +149,138 @@
 <pre> Name of the element: "buttondown", "buttonup", "entry" or "none" if
  pixel is outside SpinBoxWidget
 </pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="SpinBox2fInvoke"></a>
-<a name="robo332"></a><h2>SpinBox/Invoke [ Subprograms ]</h2>
+<a name="robo397"></a><h2>SpinBox/Invoke [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo14">SpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">SpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <strong>Invoke</strong> the selected button of the selected <a href="#robo90">Tk_SpinBox</a>
+<pre> <strong>Invoke</strong> the selected button of the selected <a href="#robo98">Tk_SpinBox</a>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Invoke</strong><span class="sign">(</span>SpinBoxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo90">Tk_SpinBox</a><span class="sign">;</span> Element<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Invoke</strong><span class="sign">(</span>SpinBoxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo98">Tk_SpinBox</a><span class="sign">;</span> Element<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Element <span class="keyword">in</span> <span class="quote">"buttondown"</span> <span class="sign">|</span> <span class="quote">"buttonup"</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> SpinBoxWidget - <a href="#robo90">Tk_SpinBox</a> in which the selected button will be
+<pre> SpinBoxWidget - <a href="#robo98">Tk_SpinBox</a> in which the selected button will be
                  invoked
  Element       - Name of the selected button. Can be "buttondown" or
                  "buttonup"
 </pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="SpinBox2fSelection5fElement"></a>
-<a name="robo333"></a><h2>SpinBox/Selection_Element [ Subprograms ]</h2>
+<a name="robo398"></a><h2>SpinBox/Selection_Element [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo14">SpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">SpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo378">Get</a> the currently selected element of the selected <a href="#robo90">Tk_SpinBox</a>
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> the currently selected element of the selected <a href="#robo98">Tk_SpinBox</a>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Selection_Element</strong><span class="sign">(</span>SpinBoxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo90">Tk_SpinBox</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> <strong>Selection_Element</strong><span class="sign">(</span>SpinBoxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo98">Tk_SpinBox</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> SpinBoxWidget - <a href="#robo90">Tk_SpinBox</a> which will be queried for the selected
+<pre> SpinBoxWidget - <a href="#robo98">Tk_SpinBox</a> which will be queried for the selected
                  element
 </pre>
 <p class="item_name">RESULT</p>
 <pre> Name of the currently selected element in SpinBoxWidget
 </pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.5 - Added
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="SpinBox2fSelection5fElement2028procedure29"></a>
-<a name="robo334"></a><h2>SpinBox/Selection_Element (procedure) [ Subprograms ]</h2>
+<a name="robo399"></a><h2>SpinBox/Selection_Element (procedure) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo14">SpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">SpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo487">Set</a> the element of <a href="#robo90">Tk_SpinBox</a> as the selected element
+<pre> <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo632">Set</a> the element of <a href="#robo98">Tk_SpinBox</a> as the selected element
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <a href="#robo333">Selection_Element</a>
-     <span class="sign">(</span>SpinBoxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo90">Tk_SpinBox</a><span class="sign">;</span> Element<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+<pre class="source">   <span class="keyword">procedure</span> <a href="#robo398">Selection_Element</a>
+     <span class="sign">(</span>SpinBoxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo98">Tk_SpinBox</a><span class="sign">;</span> Element<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Element <span class="keyword">in</span> <span class="quote">"buttondown"</span> <span class="sign">|</span> <span class="quote">"buttonup"</span> <span class="sign">|</span> <span class="quote">"entry"</span> <span class="sign">|</span> <span class="quote">"none"</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> SpinBoxWidget - <a href="#robo90">Tk_SpinBox</a> in which element will be selected
+<pre> SpinBoxWidget - <a href="#robo98">Tk_SpinBox</a> in which element will be selected
  Element       - Name of the element to select. Possible values are
                  "buttonup", "buttondown", "entry" or "none"
 </pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.5 - Added
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="SpinBox2fSet2028function29"></a>
-<a name="robo335"></a><h2>SpinBox/Set (function) [ Subprograms ]</h2>
+<a name="robo400"></a><h2>SpinBox/Set (function) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo14">SpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">SpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo378">Get</a> the value for the selected <a href="#robo90">Tk_SpinBox</a>
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> the value for the selected <a href="#robo98">Tk_SpinBox</a>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo487">Set</a><span class="sign">(</span>SpinBoxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo90">Tk_SpinBox</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo632">Set</a><span class="sign">(</span>SpinBoxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo98">Tk_SpinBox</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> SpinBoxWidget - <a href="#robo90">Tk_SpinBox</a> which value will be set
+<pre> SpinBoxWidget - <a href="#robo98">Tk_SpinBox</a> which value will be set
 </pre>
 <p class="item_name">RESULT</p>
 <pre> The current value of the SpinBoxWidget
 </pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.5 - Added
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="SpinBox2fSet2028procedure29"></a>
-<a name="robo336"></a><h2>SpinBox/Set (procedure) [ Subprograms ]</h2>
+<a name="robo401"></a><h2>SpinBox/Set (procedure) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo14">SpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">SpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo487">Set</a> the selected String as a new value for the selected <a href="#robo90">Tk_SpinBox</a>
+<pre> <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo632">Set</a> the selected String as a new value for the selected <a href="#robo98">Tk_SpinBox</a>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo487">Set</a><span class="sign">(</span>SpinBoxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo90">Tk_SpinBox</a><span class="sign">;</span> Value<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+<pre class="source">   <span class="keyword">procedure</span> <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo632">Set</a><span class="sign">(</span>SpinBoxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo98">Tk_SpinBox</a><span class="sign">;</span> Value<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Value <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> SpinBoxWidget - <a href="#robo90">Tk_SpinBox</a> which value will be set
+<pre> SpinBoxWidget - <a href="#robo98">Tk_SpinBox</a> which value will be set
  Value         - Value to set
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.5 - Added
 </pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
-</pre>
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-tentry-spinbox.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Jun 30 2020 09:41:00
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-tentry-spinbox.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Jul 31 2020 09:32:36
 </p>
 </div> <!-- footer -->
 </body>

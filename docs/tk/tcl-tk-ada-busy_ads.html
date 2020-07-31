@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.6 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.7 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -25,205 +25,264 @@
 <div id="content">
 <h3>TABLE OF CONTENTS</h3>
 <ul>
-<li>1. <a href="#robo20">TkAda/TkBusy</a></li>
+<li>1. <a href="#robo24">TkAda/TkBusy</a></li>
 <ul>
-<li>1.1. <a href="#robo445">TkBusy/Busy</a></li>
-<li>1.2. <a href="#robo446">TkBusy/cget</a></li>
-<li>1.3. <a href="#robo447">TkBusy/Configure (function)</a></li>
-<li>1.4. <a href="#robo448">TkBusy/Configure (procedure)</a></li>
-<li>1.5. <a href="#robo449">TkBusy/Current</a></li>
-<li>1.6. <a href="#robo450">TkBusy/Forget</a></li>
-<li>1.7. <a href="#robo451">TkBusy/Status</a></li>
+<li>1.1. <a href="#robo508">TkBusy/Busy</a></li>
+<li>1.2. <a href="#robo509">TkBusy/cget</a></li>
+<li>1.3. <a href="#robo510">TkBusy/Configure (function)</a></li>
+<li>1.4. <a href="#robo511">TkBusy/Configure (procedure)</a></li>
+<li>1.5. <a href="#robo512">TkBusy/Current</a></li>
+<li>1.6. <a href="#robo513">TkBusy/Forget</a></li>
+<li>1.7. <a href="#robo514">TkBusy/Status</a></li>
 </ul>
 </ul>
 <hr />
 <a name="TkAda2fTkBusy"></a>
-<a name="robo20"></a><h2>TkAda/TkBusy [ Packages ]</h2>
+<a name="robo24"></a><h2>TkAda/TkBusy [ Packages ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada_ads.html#robo15">TkAda</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada_ads.html#robo17">TkAda</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo12">Tk</a> command <a href="#robo445">Busy</a>
+<pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo14">Tk</a> command <a href="#robo508">Busy</a>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo9">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo12">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo10">Ada</a><span class="sign">.</span><a href="#robo445">Busy</a> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><a href="#robo508">Busy</a> <span class="keyword">is</span>
 </pre>
 
 <hr />
 <a name="TkBusy2fBusy"></a>
-<a name="robo445"></a><h2>TkBusy/Busy [ Subprograms ]</h2>
+<a name="robo508"></a><h2>TkBusy/Busy [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">TkBusy</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">TkBusy</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo487">Set</a> selected window busy
+<pre> <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo632">Set</a> selected window busy
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Busy</strong><span class="sign">(</span>Window<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo113">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">);</span>
-   <span class="keyword">procedure</span> Hold<span class="sign">(</span>Window<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo113">Tk_Widget</a>'</span>Class<span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">renames</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Busy</strong><span class="sign">(</span>Window<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">);</span>
+   <span class="keyword">procedure</span> Hold<span class="sign">(</span>Window<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a>'</span>Class<span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">renames</span>
      <strong>Busy</strong><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Window  - <a href="./tcl-tk-ada-widgets_ads.html#robo113">Tk_Widget</a> which will be set busy
- Options - <a href="./tcl-tk_ads.html#robo12">Tk</a> options for busy command
+<pre> Window  - <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> which will be set busy
+ Options - <a href="./tcl-tk_ads.html#robo14">Tk</a> options for busy command
+</pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo632">Set</a> the My_Main_Window widget busy</span>
+   <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><strong>Busy</strong><span class="sign">.</span><strong>Busy</strong><span class="sign">(</span>My_Main_Window<span class="sign">)</span><span class="sign">;</span>
+   
+   <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo632">Set</a> the My_Main_Window widget busy and mouse curson on it to watch cursor</span>
+   <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><strong>Busy</strong><span class="sign">.</span>Hold<span class="sign">(</span>My_Main_Window<span class="sign">,</span> <span class="quote">"-cursor watch"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> tk busy window ?options?
+ tk busy hold window ?options?
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.2 - Added
 </pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
-</pre>
 
 <hr />
 <a name="TkBusy2fcget"></a>
-<a name="robo446"></a><h2>TkBusy/cget [ Subprograms ]</h2>
+<a name="robo509"></a><h2>TkBusy/cget [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">TkBusy</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">TkBusy</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo378">Get</a> value of the selected option for the selected busy window
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> value of the selected option for the selected busy window
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>cget</strong>
-     <span class="sign">(</span>Window<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo113">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Option<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre =<span class="sign">&gt;</span> Option /= ""<span class="sign">;</span>
+     <span class="sign">(</span>Window<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre =<span class="sign">&gt;</span> <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a> /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Window - <a href="./tcl-tk-ada-widgets_ads.html#robo113">Tk_Widget</a> which is set as busy
- Option - <a href="#robo445">Busy</a> option to query
+<pre> Window - <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> which is set as busy
+ <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a> - <a href="#robo508">Busy</a> option to query
 </pre>
 <p class="item_name">RESULT</p>
 <pre> Value of the selected option of the selected busy window
 </pre>
-<p class="item_name">HISTORY</p>
-<pre> 8.6.3 - Added
+<p class="item_name">EXAMPLE</p>
+<pre class="source">     <span class="comment">-- <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> the currently set cursor for busy My_Main_Window</span>
+     Cursor_Name<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><a href="#robo508">Busy</a><span class="sign">.</span><strong>cget</strong><span class="sign">(</span>My_Main_Window<span class="sign">,</span> <span class="quote">"-cursor"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> tk busy <strong>cget</strong> window option
 </pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.3 - Added
 </pre>
 
 <hr />
 <a name="TkBusy2fConfigure2028function29"></a>
-<a name="robo447"></a><h2>TkBusy/Configure (function) [ Subprograms ]</h2>
+<a name="robo510"></a><h2>TkBusy/Configure (function) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">TkBusy</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">TkBusy</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo378">Get</a> busy configuration values for the selected busy <a href="./tcl-tk-ada-widgets_ads.html#robo113">Tk_Widget</a>
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> busy configuration values for the selected busy <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Configure
-     <span class="sign">(</span>Window<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo113">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Option<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+     <span class="sign">(</span>Window<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a><span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Window  - <a href="#robo445">Busy</a> <a href="./tcl-tk-ada-widgets_ads.html#robo113">Tk_Widget</a> which will be queried for options
- Option  - <a href="./tcl-tk_ads.html#robo12">Tk</a> busy option's value to get from the <a href="./tcl-tk-ada-widgets_ads.html#robo113">Tk_Widget</a>. Default
+<pre> Window  - <a href="#robo508">Busy</a> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> which will be queried for options
+ <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a>  - <a href="./tcl-tk_ads.html#robo14">Tk</a> busy option's value to get from the <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a>. Default
            value is empty
 </pre>
 <p class="item_name">RESULT</p>
-<pre> If Option is empty, return all configuration options with their
+<pre> If <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a> is empty, return all configuration options with their
  values, otherwise return value of the selected option
+</pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> the currently set cursor for busy My_Main_Window</span>
+      Cursor_Name<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><a href="#robo508">Busy</a><span class="sign">.</span>Configure<span class="sign">(</span>My_Main_Window<span class="sign">,</span> <span class="quote">"-cursor"</span><span class="sign">)</span><span class="sign">;</span>
+      
+      <span class="comment">-- <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> all available options for the busy My_Main_Window</span>
+      Options_List<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><a href="#robo508">Busy</a><span class="sign">.</span>Configure<span class="sign">(</span>My_Main_Window<span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> tk busy configure window ?option?
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
 </pre>
 
 <hr />
 <a name="TkBusy2fConfigure2028procedure29"></a>
-<a name="robo448"></a><h2>TkBusy/Configure (procedure) [ Subprograms ]</h2>
+<a name="robo511"></a><h2>TkBusy/Configure (procedure) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">TkBusy</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">TkBusy</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Change configuration of the selected busy <a href="./tcl-tk-ada-widgets_ads.html#robo113">Tk_Widget</a>
+<pre> Change configuration of the selected busy <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> Configure<span class="sign">(</span>Window<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo113">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+<pre class="source">   <span class="keyword">procedure</span> Configure<span class="sign">(</span>Window<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
       Pre =<span class="sign">&gt;</span> Options /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Window  - <a href="#robo445">Busy</a> <a href="./tcl-tk-ada-widgets_ads.html#robo113">Tk_Widget</a> to configure
- Options - <a href="./tcl-tk_ads.html#robo12">Tk</a> options to set to the selected <a href="./tcl-tk-ada-widgets_ads.html#robo113">Tk_Widget</a>
+<pre> Window  - <a href="#robo508">Busy</a> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> to configure
+ Options - <a href="./tcl-tk_ads.html#robo14">Tk</a> options to set to the selected <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a>
+</pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">      <span class="comment">-- Change the busy cursor for the My_Main_Window</span>
+      <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><a href="#robo508">Busy</a><span class="sign">.</span>Configure<span class="sign">(</span>My_Main_Window<span class="sign">,</span> <span class="quote">"-cursor watch"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> tk busy configure window option value ?option2 value2...?
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
 </pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
-</pre>
 
 <hr />
 <a name="TkBusy2fCurrent"></a>
-<a name="robo449"></a><h2>TkBusy/Current [ Subprograms ]</h2>
+<a name="robo512"></a><h2>TkBusy/Current [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">TkBusy</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">TkBusy</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo378">Get</a> list of Tk_Widgets names currently set as busy
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> list of Tk_Widgets names currently set as busy
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Current</strong><span class="sign">(</span>Pattern<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Pattern - Pattern which must be match in busy <a href="./tcl-tk-ada-widgets_ads.html#robo113">Tk_Widget</a> names.
+<pre> Pattern - Pattern which must be match in busy <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> names.
            Default value is empty
 </pre>
 <p class="item_name">RESULT</p>
 <pre> If Pattern is empty, return all busy Tk_Widgets names. If Pattern is
  specified, return only this which match the Pattern.
 </pre>
-<p class="item_name">HISTORY</p>
-<pre> 8.6.3 - Added
+<p class="item_name">EXAMPLE</p>
+<pre class="source">     <span class="comment">-- <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> names of all busy windows</span>
+     Busy_Windows<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><a href="#robo508">Busy</a><span class="sign">.</span><strong>Current</strong><span class="sign">;</span>
+     
+     <span class="comment">-- <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> names of busy windows which names contains mywindow</span>
+     Busy_Windows<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><a href="#robo508">Busy</a><span class="sign">.</span><strong>Current</strong><span class="sign">(</span><span class="quote">"*mywindow*"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> tk busy current ?pattern?
 </pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.3 - Added
 </pre>
 
 <hr />
 <a name="TkBusy2fForget"></a>
-<a name="robo450"></a><h2>TkBusy/Forget [ Subprograms ]</h2>
+<a name="robo513"></a><h2>TkBusy/Forget [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">TkBusy</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">TkBusy</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Make window enabled again
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Forget</strong><span class="sign">(</span>Window<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo113">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">);</span>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Forget</strong><span class="sign">(</span>Window<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">);</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Window - <a href="./tcl-tk-ada-widgets_ads.html#robo113">Tk_Widget</a> which will be enabled
+<pre> Window - <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> which will be enabled
+</pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">   <span class="comment">-- <a href="../tklib/tcl-tklib-ada-tooltip_ads.html#robo554">Enable</a> the widget My_Main_Window</span>
+   <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><a href="#robo508">Busy</a><span class="sign">.</span><strong>Forget</strong><span class="sign">(</span>My_Main_Window<span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> tk busy forget window
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.2 - Added
 </pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
-</pre>
 
 <hr />
 <a name="TkBusy2fStatus"></a>
-<a name="robo451"></a><h2>TkBusy/Status [ Subprograms ]</h2>
+<a name="robo514"></a><h2>TkBusy/Status [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">TkBusy</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo24">TkBusy</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo378">Get</a> information if the selected <a href="./tcl-tk-ada-widgets_ads.html#robo113">Tk_Widget</a> is busy or not
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> information if the selected <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> is busy or not
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Status</strong><span class="sign">(</span>Window<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo113">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> <strong>Status</strong><span class="sign">(</span>Window<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Window - <a href="./tcl-tk-ada-widgets_ads.html#robo113">Tk_Widget</a> which will be queried for status
+<pre> Window - <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> which will be queried for status
 </pre>
 <p class="item_name">RESULT</p>
-<pre> 1 if <a href="./tcl-tk-ada-widgets_ads.html#robo113">Tk_Widget</a> is busy, otherwise 0
+<pre> 1 if <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> is busy, otherwise 0
+</pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> the status of widget My_Main_Window</span>
+   Busy_Status<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><a href="#robo508">Busy</a><span class="sign">.</span><strong>Status</strong><span class="sign">(</span>My_Main_Window<span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> tk busy status window
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
 </pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo396">Replace</a> it with higher level of binding
-</pre>
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-busy.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Jun 30 2020 09:41:00
+<p>Generated from ./src/tk/tcl-tk-ada-busy.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Jul 31 2020 09:32:36
 </p>
 </div> <!-- footer -->
 </body>

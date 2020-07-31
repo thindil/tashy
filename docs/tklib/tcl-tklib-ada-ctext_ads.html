@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" href="../robodoc.css" type="text/css" />
+<title>./src/tklib/tcl-tklib-ada-ctext.ads</title>
+<!-- Source: ./src/tklib/tcl-tklib-ada-ctext.ads -->
+<!-- Generated with ROBODoc Version 4.99.43 (Feb  8 2020) -->
+</head>
+<body>
+<div id="logo">
+<a name="robo_top_of_doc">TASHY v8.6.7 code documentation</a>
+</div> <!-- logo -->
+<div id="navigation">
+<a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
+<a class="menuitem" href="../sources.html#top">Source files</a>
+<a class="menuitem" href="../index.html#top">Index</a>
+<a class="menuitem" href="../robo_subprograms.html#top">Subprograms</a>
+<a class="menuitem" href="../robo_packages.html#top">Packages</a>
+<a class="menuitem" href="../robo_types.html#top">Types</a>
+</div> <!-- navigation -->
+<div id="content">
+<h3>TABLE OF CONTENTS</h3>
+<ul>
+<li>1. <a href="#robo34">TklibAda/Ctext</a></li>
+<ul>
+<li>1.1. <a href="#robo83">Ctext/Tklib_Ctext</a></li>
+<li>1.2. <a href="#robo205">Ctext/Add_Highlight_Class</a></li>
+<li>1.3. <a href="#robo206">Ctext/Add_Highlight_Class_For_Regexp</a></li>
+<li>1.4. <a href="#robo207">Ctext/Add_Highlight_Class_For_Special_Chars</a></li>
+<li>1.5. <a href="#robo208">Ctext/Add_Highlight_Class_With_Only_Char_Start</a></li>
+<li>1.6. <a href="#robo209">Ctext/Append</a></li>
+<li>1.7. <a href="#robo210">Ctext/Clear_Highlight_Classes</a></li>
+<li>1.8. <a href="#robo211">Ctext/Copy</a></li>
+<li>1.9. <a href="#robo212">Ctext/Create (function)</a></li>
+<li>1.10. <a href="#robo213">Ctext/Create (procedure)</a></li>
+<li>1.11. <a href="#robo214">Ctext/Ctext_Init</a></li>
+<li>1.12. <a href="#robo215">Ctext/Cut</a></li>
+<li>1.13. <a href="#robo216">Ctext/Delete_Highlight_Class</a></li>
+<li>1.14. <a href="#robo217">Ctext/Disable_Comments</a></li>
+<li>1.15. <a href="#robo218">Ctext/Enable_Comments</a></li>
+<li>1.16. <a href="#robo219">Ctext/Fast_Delete</a></li>
+<li>1.17. <a href="#robo220">Ctext/Fast_Insert</a></li>
+<li>1.18. <a href="#robo221">Ctext/Get_Highlight_Classes</a></li>
+<li>1.19. <a href="#robo222">Ctext/Highlight</a></li>
+<li>1.20. <a href="#robo223">Ctext/Paste</a></li>
+</ul>
+</ul>
+<hr />
+<a name="TklibAda2fCtext"></a>
+<a name="robo34"></a><h2>TklibAda/Ctext [ Packages ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tklib-ada_ads.html#robo32">TklibAda</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Provides code for manipulate <a href="./tcl-tklib_ads.html#robo15">Tklib</a> ctext package
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tklib_ads.html#robo15">Tklib</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><strong>Ctext</strong> <span class="keyword">is</span>
+</pre>
+
+<hr />
+<a name="Ctext2fTklib5fCtext"></a>
+<a name="robo83"></a><h2>Ctext/Tklib_Ctext [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> This is a non-abstract type derived directly from <a href="../tk/tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a>.
+ Each of the derived widgets redefines the <a href="../cargv_ads.html#robo188">Create</a> subprogram
+ in order to create the correct type of widget.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">type</span> <strong>Tklib_Ctext</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="../tk/tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="Ctext2fAdd5fHighlight5fClass"></a>
+<a name="robo205"></a><h2>Ctext/Add_Highlight_Class [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tklib-ada-tooltip_ads.html#robo551">Add</a> highlighting class to the selected <a href="#robo34">Ctext</a> widget
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Add_Highlight_Class</strong>
+     <span class="sign">(</span>CtextWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo83">Tklib_Ctext</a><span class="sign">;</span> Class<span class="sign">,</span> Color<span class="sign">,</span> Keywordlist<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> Class <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Color <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Keywordlist <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CtextWidget - <a href="#robo34">Ctext</a> widget to which a new highlighting Class will be
+               added
+ Class       - The name of highlighting class to add
+ Color       - The name of color which will be used by the Class
+ Keywordlist - List of keywords which will be included in that Class
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.7 - Added
+</pre>
+
+<hr />
+<a name="Ctext2fAdd5fHighlight5fClass5fFor5fRegexp"></a>
+<a name="robo206"></a><h2>Ctext/Add_Highlight_Class_For_Regexp [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tklib-ada-tooltip_ads.html#robo551">Add</a> highlighting class to the selected <a href="#robo34">Ctext</a> widget.
+ CtextWidget - <a href="#robo34">Ctext</a> widget to which a new highlighting Class will be
+               added
+ Class       - The name of highlighting class to add
+ Color       - The name of color which will be used by the Class
+ Pattern     - Regular expression pattern. All text parts matching it
+               will be highlighted
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Add_Highlight_Class_For_Regexp</strong>
+     <span class="sign">(</span>CtextWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo83">Tklib_Ctext</a><span class="sign">;</span> Class<span class="sign">,</span> Color<span class="sign">,</span> Pattern<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> Class <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Color <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Pattern <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.7 - Added
+</pre>
+
+<hr />
+<a name="Ctext2fAdd5fHighlight5fClass5fFor5fSpecial5fChars"></a>
+<a name="robo207"></a><h2>Ctext/Add_Highlight_Class_For_Special_Chars [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tklib-ada-tooltip_ads.html#robo551">Add</a> highlighting class to the selected <a href="#robo34">Ctext</a> widget.
+ CtextWidget - <a href="#robo34">Ctext</a> widget to which a new highlighting Class will be
+               added
+ Class       - The name of highlighting class to add
+ Color       - The name of color which will be used by the Class
+ CharString  - Characters which will be highlighted
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Add_Highlight_Class_For_Special_Chars</strong>
+     <span class="sign">(</span>CtextWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo83">Tklib_Ctext</a><span class="sign">;</span> Class<span class="sign">,</span> Color<span class="sign">,</span> CharString<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> Class <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Color <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> CharString <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.7 - Added
+</pre>
+
+<hr />
+<a name="Ctext2fAdd5fHighlight5fClass5fWith5fOnly5fChar5fStart"></a>
+<a name="robo208"></a><h2>Ctext/Add_Highlight_Class_With_Only_Char_Start [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tklib-ada-tooltip_ads.html#robo551">Add</a> highlighting class to the selected <a href="#robo34">Ctext</a> widget.
+ CtextWidget - <a href="#robo34">Ctext</a> widget to which a new highlighting Class will be
+               added
+ Class       - The name of highlighting class to add
+ Color       - The name of color which will be used by the Class
+ Char        - All words which starts with that string will be
+               highlighted
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Add_Highlight_Class_With_Only_Char_Start</strong>
+     <span class="sign">(</span>CtextWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo83">Tklib_Ctext</a><span class="sign">;</span> Class<span class="sign">,</span> Color<span class="sign">,</span> Char<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> Class <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Color <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Char <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.7 - Added
+</pre>
+
+<hr />
+<a name="Ctext2fAppend"></a>
+<a name="robo209"></a><h2>Ctext/Append [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <strong>Append</strong> the current selection to the clipboard
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Append</strong><span class="sign">(</span>CtextWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo83">Tklib_Ctext</a><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CtextWidget - <a href="#robo34">Ctext</a> widget to which selection will be added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.7 - Added
+</pre>
+
+<hr />
+<a name="Ctext2fClear5fHighlight5fClasses"></a>
+<a name="robo210"></a><h2>Ctext/Clear_Highlight_Classes [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Remove all highlight classes from the widget
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Clear_Highlight_Classes</strong><span class="sign">(</span>CtextWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo83">Tklib_Ctext</a><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CtextWidget - <a href="#robo34">Ctext</a> widget from which highlight classes will be
+               removed
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.7 - Added
+</pre>
+
+<hr />
+<a name="Ctext2fCopy"></a>
+<a name="robo211"></a><h2>Ctext/Copy [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Call tk_textCopy for the <a href="#robo34">Ctext</a> widget
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Copy</strong><span class="sign">(</span>CtextWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo83">Tklib_Ctext</a><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CtextWidget - <a href="#robo34">Ctext</a> widget on which tk_textCopy will be called
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.7 - Added
+</pre>
+
+<hr />
+<a name="Ctext2fCreate2028function29"></a>
+<a name="robo212"></a><h2>Ctext/Create (function) [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Creates a new <a href="#robo83">Tklib_Ctext</a> in the specified interpreter.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="../cargv_ads.html#robo188">Create</a>
+     <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo83">Tklib_Ctext</a> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> pathName - <a href="../tk/tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
+ options  - Options which will be passed to the widget. Default value is
+            empty
+ Interp   - <a href="../tcl_ads.html#robo10">Tcl</a> interpreter to which the widget will be created. If null,
+            the widget will be created in the "contextual" interpreter.
+            Default value is null.
+</pre>
+<p class="item_name">RESULT</p>
+<pre> Newly created <a href="#robo83">Tklib_Ctext</a>
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.7 - Added
+</pre>
+
+<hr />
+<a name="Ctext2fCreate2028procedure29"></a>
+<a name="robo213"></a><h2>Ctext/Create (procedure) [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Creates a new <a href="#robo83">Tklib_Ctext</a> in the specified interpreter.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> <a href="../cargv_ads.html#robo188">Create</a>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo83">Tklib_Ctext</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Widgt    - <a href="#robo83">Tklib_Ctext</a> which will be created
+ pathName - <a href="../tk/tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
+ options  - Options which will be passed to the widget. Default value is
+            empty
+ Interp   - <a href="../tcl_ads.html#robo10">Tcl</a> interpreter to which the widget will be created. If null,
+            the widget will be created in the "contextual" interpreter.
+            Default value is null.
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.7 - Added
+</pre>
+
+<hr />
+<a name="Ctext2fCtext5fInit"></a>
+<a name="robo214"></a><h2>Ctext/Ctext_Init [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Load package <a href="#robo34">Ctext</a>. <a href="../tk/tcl-tk-ada-widgets_ads.html#robo735">Raise</a> Program_Error if package can't be loaded
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Ctext_Init</strong><span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Interp: <a href="../tcl_ads.html#robo10">Tcl</a> interpreter to which getstring package will be added
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.7 - Added
+</pre>
+
+<hr />
+<a name="Ctext2fCut"></a>
+<a name="robo215"></a><h2>Ctext/Cut [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Call tk_textCut for the <a href="#robo34">Ctext</a> widget.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Cut</strong><span class="sign">(</span>CtextWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo83">Tklib_Ctext</a><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CtextWidget - <a href="#robo34">Ctext</a> widget on which tk_textCut will be called
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.7 - Added
+</pre>
+
+<hr />
+<a name="Ctext2fDelete5fHighlight5fClass"></a>
+<a name="robo216"></a><h2>Ctext/Delete_Highlight_Class [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-tentry_ads.html#robo405">Delete</a> the selected highlight class from the widget
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Delete_Highlight_Class</strong>
+     <span class="sign">(</span>CtextWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo83">Tklib_Ctext</a><span class="sign">;</span> Class<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> Class <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CtextWidget - <a href="#robo34">Ctext</a> widget from which the selected highlight class will
+               be removed
+ Class       - Name of the highlight class to remove
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.7 - Added
+</pre>
+
+<hr />
+<a name="Ctext2fDisable5fComments"></a>
+<a name="robo217"></a><h2>Ctext/Disable_Comments [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tklib-ada-tooltip_ads.html#robo553">Disable</a> C comment highlighting on the selected ctext widget
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Disable_Comments</strong><span class="sign">(</span>CtextWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo83">Tklib_Ctext</a><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CtextWidget - <a href="#robo34">Ctext</a> widget on which comment highlighting will be
+               disabled
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.7 - Added
+</pre>
+
+<hr />
+<a name="Ctext2fEnable5fComments"></a>
+<a name="robo218"></a><h2>Ctext/Enable_Comments [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tklib-ada-tooltip_ads.html#robo554">Enable</a> C comment highlighting on the selected ctext widget
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Enable_Comments</strong><span class="sign">(</span>CtextWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo83">Tklib_Ctext</a><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CtextWidget - <a href="#robo34">Ctext</a> widget on which comment highlighting will be
+               enabled
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.7 - Added
+</pre>
+
+<hr />
+<a name="Ctext2fFast5fDelete"></a>
+<a name="robo219"></a><h2>Ctext/Fast_Delete [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-tentry_ads.html#robo405">Delete</a> text range without updating the highlighting
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Fast_Delete</strong>
+     <span class="sign">(</span>CtextWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo83">Tklib_Ctext</a><span class="sign">;</span> Index1<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+      Index2<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> Index1 <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CtextWidget - <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo100">Tk_Text</a> in which text will be deleted
+ Index1      - <a href="../tk/tcl-tk-ada-widgets-ttkprogressbar_ads.html#robo623">Start</a> index of character which will be deleted
+ Index2      - End index of character before which delete will be done.
+               It can be also values for another ranges of text to
+               delete. If empty, delete only one character. Default
+               value is empty.
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.7 - Added
+</pre>
+
+<hr />
+<a name="Ctext2fFast5fInsert"></a>
+<a name="robo220"></a><h2>Ctext/Fast_Insert [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-ttknotebook_ads.html#robo604">Insert</a> the text to <a href="#robo34">Ctext</a> widget without updating the highlighting
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Fast_Insert</strong>
+     <span class="sign">(</span>CtextWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo83">Tklib_Ctext</a><span class="sign">;</span> <a href="../tk/tcl-tk-ada-widgets-menu_ads.html#robo315">Index</a><span class="sign">,</span> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo53">Text</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="../tk/tcl-tk-ada-widgets-menu_ads.html#robo315">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo53">Text</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CtextWidget - <a href="#robo83">Tklib_Ctext</a> to which text will be inserted
+ <a href="../tk/tcl-tk-ada-widgets-menu_ads.html#robo315">Index</a>       - <a href="#robo83">Tklib_Ctext</a> position on which text will be inserted.
+               Lines starts from 1, characters starts from 0
+ <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo53">Text</a>        - <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo53">Text</a> to insert to <a href="#robo83">Tklib_Ctext</a> widget
+</pre>
+
+<hr />
+<a name="Ctext2fGet5fHighlight5fClasses"></a>
+<a name="robo221"></a><h2>Ctext/Get_Highlight_Classes [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> the list of all highlight classes for the widget
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> <strong>Get_Highlight_Classes</strong><span class="sign">(</span>CtextWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo83">Tklib_Ctext</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CtextWidget - <a href="#robo34">Ctext</a> widget which will be queried for classes
+</pre>
+<p class="item_name">RESULT</p>
+<pre> List of all highlight classes for the CtextWidget
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.7 - Added
+</pre>
+
+<hr />
+<a name="Ctext2fHighlight"></a>
+<a name="robo222"></a><h2>Ctext/Highlight [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <strong>Highlight</strong> the text between the selected indexes
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Highlight</strong>
+     <span class="sign">(</span>CtextWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo83">Tklib_Ctext</a><span class="sign">;</span> StartIndex<span class="sign">,</span> EndIndex<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> StartIndex <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> EndIndex <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CtextWidget - <a href="#robo34">Ctext</a> widget in which the text will be highlighted
+ StartIndex  - The start index of highlighting text
+ EndIndex    - The end index of highlighting text
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.7 - Added
+</pre>
+
+<hr />
+<a name="Ctext2fPaste"></a>
+<a name="robo223"></a><h2>Ctext/Paste [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Call tk_textPaste for the <a href="#robo34">Ctext</a> widget
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> <strong>Paste</strong><span class="sign">(</span>CtextWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo83">Tklib_Ctext</a><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> CtextWidget - <a href="#robo34">Ctext</a> widget on which tk_textPaste will be called
+</pre>
+<p class="item_name">TODO</p>
+<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.7 - Added
+</pre>
+
+</div> <!-- content -->
+<div id="footer">
+<p>Generated from ./src/tklib/tcl-tklib-ada-ctext.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Jul 31 2020 09:32:36
+</p>
+</div> <!-- footer -->
+</body>
+</html>
+
