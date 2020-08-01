@@ -102,10 +102,3 @@ version: 2.0
    execute:
       - gprinstall --uninstall -P tashy.gpr
    description: Uninstall the library for use with GNAT
-- command:
-   name: reinstall
-   execute:
-      - bob build
-      - bob uninstall
-      - bob install
-   description: Build, uninstall and install the library for use with GNAT
