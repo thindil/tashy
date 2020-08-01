@@ -1,0 +1,11 @@
+language: minimal
+
+dist: bionic
+
+before_install:
+   - sudo apt-get update
+   - sudo apt-get install -y gnat gprbuild tcl-dev tk-dev
+
+script:
+   - scripts/setup.tcl --nogui
+   - gprbuild -P tashy.gpr
