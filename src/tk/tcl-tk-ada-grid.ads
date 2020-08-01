@@ -177,6 +177,11 @@ package Tcl.Tk.Ada.Grid is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Insert My_Label slave to second column
+   -- Grid_Configure(My_Label, "-column 1");
+   -- COMMANDS
+   -- grid configure slave ?options?
    -- SOURCE
    procedure Grid_Configure
      (Slave: in Tk_Widget'Class; Options: in String := "");
@@ -192,6 +197,11 @@ package Tcl.Tk.Ada.Grid is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Remove (hide) My_Label widget from UI
+   -- Grid_Forget(My_Label);
+   -- COMMANDS
+   -- grid forget slave
    -- SOURCE
    procedure Grid_Forget(Slave: in Tk_Widget'Class);
    -- ****
@@ -208,6 +218,11 @@ package Tcl.Tk.Ada.Grid is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get information about widget My_Label's grid configuration
+   -- Configuration: constant String := Grid_Info(My_Label);
+   -- COMMANDS
+   -- grid info slave
    -- SOURCE
    function Grid_Info(Slave: in Tk_Widget'Class) return String;
    -- ****
@@ -226,6 +241,10 @@ package Tcl.Tk.Ada.Grid is
    -- 8.6.2 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- -- Get the column and row number for point X=23, Y=67 in grid My_Main_Window
+   -- Location: constant String := Grid_Location(My_Main_Window, "23", "67");
+   -- COMMANDS
+   -- grid location master x y
    -- SOURCE
    function Grid_Location
      (Master: in Tk_Widget'Class; X, Y: in String) return String with
@@ -243,6 +262,13 @@ package Tcl.Tk.Ada.Grid is
       -- 8.6.2 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Enable propagation for the grid My_Main_Window
+      -- Grid_Propagate(My_Main_Window, "on");
+      -- -- Disbale propagation for the grid My_Frame
+      -- Grid_Propagete(My_Frame, "0");
+      -- COMMANDS
+      -- grid propagate master boolean
       -- SOURCE
    procedure Grid_Propagate(Master: in Tk_Widget'Class; Value: in String) with
       Pre => Value /= "";
@@ -259,6 +285,10 @@ package Tcl.Tk.Ada.Grid is
       -- 8.6.2 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- -- Get the propagation state of grid My_Main_Window
+      -- Propagation: constant String := Grid_Propagate(My_Main_Window);
+      -- COMMANDS
+      -- grid propagate master
       -- SOURCE
    function Grid_Propagate(Master: in Tk_Widget'Class) return String;
    -- ****
