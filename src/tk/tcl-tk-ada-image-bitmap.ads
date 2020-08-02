@@ -52,6 +52,11 @@ package Tcl.Tk.Ada.Image.Bitmap is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create bitmap image with name arrow-up from the code on default interpreter
+   -- Arrow_Up: constant Tk_Bitmap := Create("arrow-up", "-data {#define arrowUp_width 7  #define arrowUp_height 4 static char arrowUp_bits[] = { 0x08, 0x1c, 0x3e, 0x7f };}");
+   -- COMMANDS
+   -- image create bitmap name ?options?
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
@@ -70,10 +75,21 @@ package Tcl.Tk.Ada.Image.Bitmap is
       -- Interp   - Tcl interpreter to which the image will be created. If null,
       --            the image will be created in the "contextual" interpreter.
       --            Default value is null.
+      -- OUTPUT
+      -- Newly created Tk_Bitmap as the Widgt parameter
       -- HISTORY
       -- 8.6.1 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Create bitmap image with name arrow-down from the code on default interpreter
+      -- declare
+      --    Arrow_Down: Tk_Bitmap;
+      -- begin
+      --    Create(Arror_Down, "arrow-down", "-data {#define arrowDown_width 7  #define arrowDown_height 4 static char arrowDown_bits[] = { 0x7f, 0x3e, 0x1c, 0x08 };}");
+      -- end;
+      -- COMMANDS
+      -- image create bitmap name ?options?
       -- SOURCE
    procedure Create
      (Widgt: out Tk_Bitmap; pathName: in String; options: in String := "";
