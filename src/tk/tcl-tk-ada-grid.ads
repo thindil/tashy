@@ -241,6 +241,7 @@ package Tcl.Tk.Ada.Grid is
    -- 8.6.2 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
    -- -- Get the column and row number for point X=23, Y=67 in grid My_Main_Window
    -- Location: constant String := Grid_Location(My_Main_Window, "23", "67");
    -- COMMANDS
@@ -285,6 +286,7 @@ package Tcl.Tk.Ada.Grid is
       -- 8.6.2 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
       -- -- Get the propagation state of grid My_Main_Window
       -- Propagation: constant String := Grid_Propagate(My_Main_Window);
       -- COMMANDS
@@ -303,6 +305,11 @@ package Tcl.Tk.Ada.Grid is
    -- 8.6.2 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Remove My_Label from grid
+   -- Grid_Remove(My_Label);
+   -- COMMANDS
+   -- grid remove slave
    -- SOURCE
    procedure Grid_Remove(Slave: in Tk_Widget'Class);
    -- ****
@@ -318,6 +325,11 @@ package Tcl.Tk.Ada.Grid is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Set minimal size of My_Label widget's row in My_Main_Window grid to 20 pixels
+   -- Row_Configure(My_Main_Window, My_Label, "-minsize 20");
+   -- COMMANDS
+   -- grid rowconfigure master slave -option value?...?
    -- SOURCE
    procedure Row_Configure
      (Master, Slave: in Tk_Widget'Class; Options: in String) with
@@ -336,6 +348,11 @@ package Tcl.Tk.Ada.Grid is
       -- 8.6.1 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get all configuration options of My_Label widget's row in My_Main_Window grid
+      -- Options: constant String := Row_Configure(My_Main_Window, My_Label);
+      -- COMMANDS
+      -- grid rowconfigure master slave
       -- SOURCE
    function Row_Configure(Master, Slave: in Tk_Widget'Class) return String;
    -- ****
@@ -352,6 +369,11 @@ package Tcl.Tk.Ada.Grid is
    -- 8.6.2 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the size of My_Main_Window grid
+   -- Size: constant String := Grid_Size(My_Main_Window);
+   -- COMMANDS
+   -- grid size master
    -- SOURCE
    function Grid_Size(Master: in Tk_Widget'Class) return String;
    -- ****
@@ -371,6 +393,11 @@ package Tcl.Tk.Ada.Grid is
    -- 8.6.2 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the list of slaves in My_Main_Window first row
+   -- Slaves: constant String := Grid_Slaves(My_Main_Window, "-row 0");
+   -- COMMANDS
+   -- grid slaves master ?-option value?
    -- SOURCE
    function Grid_Slaves
      (Master: in Tk_Widget'Class; Option: in String := "") return String;
