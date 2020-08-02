@@ -40,7 +40,7 @@ package Tcl.Tklib.Ada.GetString is
    procedure GetString_Init(Interp: in Tcl_Interp);
    -- ****
 
-   -- ****f* Get_String/Tk_Get_String
+   -- ****f* GetString/Tk_Get_String
    -- FUNCTION
    -- Create a dialog which prompts the user with text to input a text string.
    -- PARAMETERS
