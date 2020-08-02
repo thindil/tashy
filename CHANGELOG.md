@@ -9,6 +9,9 @@ of the project.
 ### Changed
 - Updated code documentation
 
+### Fixed
+- Code documentation for Tcl.Tklib.Ada.GetString.Tk\_Get\_String
+
 ## [8.6.7] - 2020-07-31
 
 ### Added
