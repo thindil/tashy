@@ -1,4 +1,6 @@
-language: minimal
+language: shell
+
+os: linux
 
 dist: bionic
 
