@@ -27,7 +27,7 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
--- ****h* Widgets/TtkComboBox
+-- ****h* TtkEntry/TtkComboBox
 -- FUNCTION
 -- Provides code for manipulate Tk widget ComboBox
 -- SOURCE
