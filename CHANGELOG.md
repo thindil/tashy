@@ -11,7 +11,8 @@ of the project.
 - Removed generating debugging information from default compilation flags
 
 ### Fixed
-- Code documentation for Tcl.Tklib.Ada.GetString.Tk\_Get\_String
+- Code documentation for Tcl.Tklib.Ada.GetString.Tk\_Get\_String and
+  Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox
 
 ## [8.6.7] - 2020-07-31
 
