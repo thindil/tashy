@@ -8,6 +8,7 @@ of the project.
 
 ### Changed
 - Updated code documentation
+- Removed generating debugging information from default compilation flags
 
 ### Fixed
 - Code documentation for Tcl.Tklib.Ada.GetString.Tk\_Get\_String
