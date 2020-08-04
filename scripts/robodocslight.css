@@ -1,0 +1,316 @@
+/****h* ROBODoc/ROBODoc Cascading Style Sheet
+ * FUNCTION
+ *   This is the default cascading style sheet for documentation
+ *   generated with ROBODoc.
+ *   You can edit this file to your own liking and then use
+ *   it with the option
+ *      --css <filename>
+ *
+ *   This style-sheet defines the following layout
+ *      +----------------------------------------+
+ *      |    logo                                |
+ *      +----------------------------------------+
+ *      |    extra                               |
+ *      +----------------------------------------+
+ *      |                              | navi-   |
+ *      |                              | gation  |
+ *      |      content                 |         |
+ *      |                              |         |
+ *      +----------------------------------------+
+ *      |    footer                              |
+ *      +----------------------------------------+
+ *
+ *   This style-sheet is based on a style-sheet that was automatically
+ *   generated with the Strange Banana stylesheet generator.
+ *   See http://www.strangebanana.com/generator.aspx
+ *
+ ******
+ * $Id: html_generator.c,v 1.94 2008/06/17 11:49:27 gumpu Exp $
+ */
+
+body
+{
+    background-color:    rgb(23,23,23);
+    color:               rgb(238,232,170);
+    font-family:         serif;
+    border-color:        rgb(226,199,143);
+}
+
+pre
+{
+    font-family:      monospace;
+    margin:      15px;
+    padding:     5px;
+    white-space: pre;
+    color:       #ebdbb2;
+}
+
+pre.source
+{
+    background-color: #1d2021;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 10px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,0.1), 0 -1px 0 rgba(0,0,0,0.5);
+}
+
+p
+{
+    margin:15px;
+}
+
+p.item_name
+{
+    font-weight: bolder;
+    margin:5px;
+    font-size: 120%;
+}
+
+#content
+{
+    font-size:           100%;
+    color:               rgb(238,232,170);
+    background-color:    rgb(23,23,23);
+    border-left-width:   0px;
+    border-right-width:  0px;
+    border-top-width:    0px;
+    border-bottom-width: 0px;
+    border-left-style:   none;
+    border-right-style:  none;
+    border-top-style:    none;
+    border-bottom-style: none;
+    padding:             40px 31px 14px 17px;
+    border-color:        rgb(0,0,0);
+    text-align:          justify;
+}
+
+#navigation
+{
+    background-color: #1d2021;
+    color:            rgb(230,221,202);
+    font-family:      serif;
+    font-style:       normal;
+}
+
+a.menuitem
+{
+    font-size: 120%;
+    background-color:    #1d2021;
+    color:               #d79921;
+    font-variant:        normal;
+    text-transform:      none;
+    font-weight:         normal;
+    padding:             8px;
+    border-color:        rgb(159,126,57);
+    text-align:          right;
+}
+
+#logo
+{
+    border-style:       solid;
+    border-radius:      10px;
+    border-color:       #282828;
+}
+
+#logo, #logo a
+{
+    font-size: 130%;
+    background-color:   #282828;
+    color:              #fbf17c;
+    font-family:        serif;
+    font-style:         normal;
+    font-variant:       normal;
+    text-transform:     none;
+    font-weight:        bold;
+    padding:            20px 18px 20px 18px;
+    text-align:         center;
+}
+
+#extra, #extra a
+{
+    font-size: 128%;
+    color:               rgb(230,221,202);
+    font-style:          normal;
+    font-variant:        normal;
+    text-transform:      none;
+    font-weight:         normal;
+    border-left-width:   0px;
+    border-right-width:  0px;
+    border-top-width:    0px;
+    border-bottom-width: 0px;
+    border-left-style:   none;
+    border-right-style:  none;
+    border-top-style:    none;
+    border-bottom-style: none;
+    padding: 12px 12px 12px 12px;
+    border-color:        rgb(195,165,100);
+    text-align:          center;
+}
+
+#content a
+{
+    color:              #d79921;
+    text-decoration:    none;
+}
+
+#content a:hover, #content a:active
+{
+    color:              #282828;
+    background-color:   #d79921;
+}
+
+a.indexitem
+{
+    display: block;
+}
+
+hr {
+   border: 0px;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    background-color: #282828;
+    font-family:      Arial, serif;
+    font-style:       normal;
+    font-variant:     normal;
+    text-transform:   none;
+    font-weight:      normal;
+    border-style:     solid;
+    border-radius:    5px;
+    border-color:     #282828;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,0.1), 0 1px 0 rgba(0,0,0,0.5);
+}
+
+h1
+{
+    font-size: 151%;
+}
+
+h2
+{
+    font-size: 142%;
+}
+
+h3
+{
+    font-size: 133%;
+}
+
+h4
+{
+    font-size: 124%;
+}
+
+h5
+{
+    font-size: 115%;
+}
+
+h6
+{
+    font-size: 106%;
+}
+
+#navigation a
+{
+   text-decoration: none;
+   float: left;
+   display: block;
+}
+
+.menuitem:hover
+{
+    background-color:   #d79921;
+    color:              #1d2021;
+}
+
+#extra a
+{
+    text-decoration: none;
+}
+
+#logo a
+{
+    text-decoration: none;
+}
+
+#extra a:hover
+{
+}
+
+/* layout */
+#navigation
+{
+    position:    fixed;
+    top:         0;
+    width:       100%;
+}
+
+#logo
+{
+   margin-top: 50px;
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
+}
+
+.menuitem       {width: auto;}
+#content        {width: auto;}
+.menuitem       {display: block;}
+
+
+div#footer
+{
+    background-color: #282828;
+    color:      #a89984;
+    clear:      left;
+    width:      100%;
+    font-size:   71%;
+}
+
+div#footer a
+{
+    color:            #a89984;
+}
+
+div#footer p
+{
+    margin:0;
+    padding:5px 10px
+}
+
+span.keyword
+{
+    color: #b16286;
+}
+
+span.comment
+{
+    color: #98971a;
+}
+
+span.quote
+{
+    color: #cc241d;
+}
+
+span.squote
+{
+    color: #cc241d;
+}
+
+span.sign
+{
+    color: #d65d0e;
+}
+
+span.line_number
+{
+    color: #808080;
+}
+
+@media print
+{
+    #navigation {display: none;}
+    #content    {padding: 0px;}
+    #content a  {text-decoration: underline;}
+}
