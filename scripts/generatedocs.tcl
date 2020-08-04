@@ -91,8 +91,8 @@ if {$argc > 2} {
    set cssfile [file join scripts robodoc.css]
 }
 
-if [file exists docsdir ] {
-   file delete docsdir
+if [file exists $docsdir ] {
+   file delete -force $docsdir
 }
 exec robodoc --rc $configfile --css $cssfile
 fixdocs $docsdir
