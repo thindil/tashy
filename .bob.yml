@@ -87,14 +87,14 @@ version: 2.0
    name: docs
    execute:
       - scripts/generatedocs.tcl
-   description: Generate code documentation
+   description: Generate code documentation (default dark theme)
    flags:
       - unixonly
 - command:
    name: docs
    execute:
       - tclsh scripts\generatedocs.tcl
-   description: Generate code documentation
+   description: Generate code documentation (default dark theme)
    flags:
       - windowsonly
 - command:
@@ -102,3 +102,17 @@ version: 2.0
    execute:
       - gprinstall --uninstall -P tashy.gpr
    description: Uninstall the library for use with GNAT
+- command:
+   name: docslight
+   execute:
+      - scripts/generatedocs.tcl scripts/robodocada.rc docs scripts/robodoclight.css
+   description: Generate code documentation (with light theme)
+   flags:
+      - unixonly
+- command:
+   name: docslight
+   execute:
+      - tclsh scripts\generatedocs.tcl scripts\robodocada.rc docs scripts\robodoclight.css
+   description: Generate code documentation (with light theme)
+   flags:
+      - windowsonly
