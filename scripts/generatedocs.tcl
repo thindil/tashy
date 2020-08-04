@@ -85,9 +85,14 @@ if {$argc > 0} {
 if {$argc > 1} {
    set docsdir [lindex $argv 1]
 }
+if {$argc > 2} {
+   set cssfile [lindex $argv 2]
+} else {
+   set cssfile [file join scripts robodoc.css]
+}
 
 if [file exists docsdir ] {
    file delete docsdir
 }
-exec robodoc --rc $configfile
+exec robodoc --rc $configfile --css $cssfile
 fixdocs $docsdir
