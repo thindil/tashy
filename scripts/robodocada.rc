@@ -12,7 +12,6 @@ options:
   --index
   --documenttitle "TASHY v8.6.8 code documentation"
   --syntaxcolors
-  --css scripts/robodoc.css
   --sections
   --toc
   --masterindex "Index,index"
