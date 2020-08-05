@@ -240,6 +240,11 @@ package Tcl.Tk.Ada.Image.Photo is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Redither My_Image
+      -- Redither(My_Image);
+      -- COMMANDS
+      -- image redither
       -- SOURCE
    procedure Redither(Image: in Tk_Photo);
    -- ****
@@ -257,6 +262,11 @@ package Tcl.Tk.Ada.Image.Photo is
    -- 8.6.3 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the transparency of the pixel (5, 12) at My_Image
+   -- Transparency: constant String := Transparency_Get(My_Image, "5", "12");
+   -- COMMANDS
+   -- image transparency get x y
    -- SOURCE
    function Transparency_Get
      (Image: in Tk_Photo; X, Y: in String) return String with
