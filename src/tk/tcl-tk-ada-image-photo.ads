@@ -52,6 +52,13 @@ package Tcl.Tk.Ada.Image.Photo is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create image Logo from file mylogo.png on the current Tcl interpreter
+   -- My_Logo: constant Tk_Photo := Create("Logo", "-file mylogo.png");
+   -- COMMANDS
+   -- image create photo name ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
@@ -70,10 +77,23 @@ package Tcl.Tk.Ada.Image.Photo is
       -- Interp   - Tcl interpreter to which the image will be created. If null,
       --            the image will be created in the "contextual" interpreter.
       --            Default value is null.
+      -- OUTPUT
+      -- Newly created Tk_Photo as parameter Widgt
       -- HISTORY
       -- 8.6.1 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Create image Paint from file mypaint.gif on the current Tcl interpreter
+      -- declare
+      --    My_Paint: Tk_Photo;
+      -- begin
+      --    Create(My_Paint, "Paint", "-file mypaint.gif");
+      -- end;
+      -- COMMANDS
+      -- image create photo name ?options?
+      -- SEE ALSO
+      -- Create (function)
       -- SOURCE
    procedure Create
      (Widgt: out Tk_Photo; pathName: in String; options: in String := "";
@@ -90,6 +110,11 @@ package Tcl.Tk.Ada.Image.Photo is
       -- 8.6.2 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Make transparent image My_Image
+      -- Blank(My_Image);
+      -- COMMANDS
+      -- image blank
       -- SOURCE
    procedure Blank(Image: in Tk_Photo);
    -- ****
@@ -106,6 +131,10 @@ package Tcl.Tk.Ada.Image.Photo is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- -- Copy image My_Image to Other_Image and shrink it
+   -- Copy(My_Image, Other_Image, "-shrink");
+   -- COMMANDS
+   -- target copy source ?option value(s) ...?
    -- SOURCE
    procedure Copy(Source, Target: in Tk_Photo; Options: in String := "");
    -- ****
