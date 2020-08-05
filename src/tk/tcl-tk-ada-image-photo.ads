@@ -131,6 +131,7 @@ package Tcl.Tk.Ada.Image.Photo is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
    -- -- Copy image My_Image to Other_Image and shrink it
    -- Copy(My_Image, Other_Image, "-shrink");
    -- COMMANDS
@@ -151,6 +152,11 @@ package Tcl.Tk.Ada.Image.Photo is
    -- 8.6.2 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the data of the My_Image from (0,5) point to (10,10)
+   -- ImageData: constant String := Data(My_Image, "0", "5", "10", "10");
+   -- COMMANDS
+   -- image data ?option value(s) ...?
    -- SOURCE
    function Data(Image: in Tk_Photo; Options: in String := "") return String;
    -- ****
@@ -168,6 +174,11 @@ package Tcl.Tk.Ada.Image.Photo is
    -- 8.6.2 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the color of the pixel at (1, 4) of the My_Image
+   -- PixelColor: constant String := Get(My_Image, "1", "4");
+   -- COMMANDS
+   -- image get x y
    -- SOURCE
    function Get(Image: in Tk_Photo; X, Y: in String) return String with
       Pre => X /= "" and Y /= "";
@@ -185,6 +196,11 @@ package Tcl.Tk.Ada.Image.Photo is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set all pixels of the My_Image to red color
+      -- Put(My_Image, "red");
+      -- COMMANDS
+      -- image put data ?option value(s) ...?
       -- SOURCE
    procedure Put
      (Image: in Tk_Photo; Data: in String; Options: in String := "") with
@@ -202,6 +218,13 @@ package Tcl.Tk.Ada.Image.Photo is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Read file myimage.png and put it to the My_Image
+      -- Read(My_Image, "myimage.png");
+      -- -- Read file image.gif, put it into Some_Image and shrink
+      -- Read(Some_Image, "image.gif", "-shrink");
+      -- COMMANDS
+      -- image read filename ?option value(s) ...?
       -- SOURCE
    procedure Read
      (Image: in Tk_Photo; FileName: in String; Options: in String := "") with
