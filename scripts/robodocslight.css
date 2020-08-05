@@ -30,8 +30,8 @@
 
 body
 {
-    background-color:    rgb(23,23,23);
-    color:               rgb(238,232,170);
+    background-color:    #fbf1c7;
+    color:               #3c3836;
     font-family:         serif;
     border-color:        rgb(226,199,143);
 }
@@ -42,12 +42,12 @@ pre
     margin:      15px;
     padding:     5px;
     white-space: pre;
-    color:       #ebdbb2;
+    color:       #3c3836;
 }
 
 pre.source
 {
-    background-color: #1d2021;
+    background-color: #f2e5bc;
     border-radius: 5px;
     box-shadow: inset 0 1px 10px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,0.1), 0 -1px 0 rgba(0,0,0,0.5);
 }
@@ -67,8 +67,8 @@ p.item_name
 #content
 {
     font-size:           100%;
-    color:               rgb(238,232,170);
-    background-color:    rgb(23,23,23);
+    color:               #3c3836;
+    background-color:    #fbf1c7;
     border-left-width:   0px;
     border-right-width:  0px;
     border-top-width:    0px;
@@ -84,8 +84,8 @@ p.item_name
 
 #navigation
 {
-    background-color: #1d2021;
-    color:            rgb(230,221,202);
+    background-color: #ebdbb2;
+    color:            #3c3836;
     font-family:      serif;
     font-style:       normal;
 }
@@ -93,8 +93,8 @@ p.item_name
 a.menuitem
 {
     font-size: 120%;
-    background-color:    #1d2021;
-    color:               #d79921;
+    background-color:    #ebdbb2;
+    color:               #b57514;
     font-variant:        normal;
     text-transform:      none;
     font-weight:         normal;
@@ -107,14 +107,14 @@ a.menuitem
 {
     border-style:       solid;
     border-radius:      10px;
-    border-color:       #282828;
+    border-color:       #ebdbb2;
 }
 
 #logo, #logo a
 {
     font-size: 130%;
-    background-color:   #282828;
-    color:              #fbf17c;
+    background-color:   #ebdbb2;
+    color:              #282828;
     font-family:        serif;
     font-style:         normal;
     font-variant:       normal;
@@ -127,7 +127,7 @@ a.menuitem
 #extra, #extra a
 {
     font-size: 128%;
-    color:               rgb(230,221,202);
+    color:               #b57514;
     font-style:          normal;
     font-variant:        normal;
     text-transform:      none;
@@ -147,14 +147,14 @@ a.menuitem
 
 #content a
 {
-    color:              #d79921;
+    color:              #b57514;
     text-decoration:    none;
 }
 
 #content a:hover, #content a:active
 {
-    color:              #282828;
-    background-color:   #d79921;
+    color:              #ebdbb2;
+    background-color:   #b57514;
 }
 
 a.indexitem
@@ -168,7 +168,7 @@ hr {
 
 h1, h2, h3, h4, h5, h6
 {
-    background-color: #282828;
+    background-color: #ebdbb2;
     font-family:      Arial, serif;
     font-style:       normal;
     font-variant:     normal;
@@ -176,8 +176,8 @@ h1, h2, h3, h4, h5, h6
     font-weight:      normal;
     border-style:     solid;
     border-radius:    5px;
-    border-color:     #282828;
-    box-shadow: 0 1px 10px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,0.1), 0 1px 0 rgba(0,0,0,0.5);
+    border-color:     #ebdbb2;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,0.1), 0 1px 0 rgba(0,0,0,0.1);
 }
 
 h1
@@ -219,8 +219,8 @@ h6
 
 .menuitem:hover
 {
-    background-color:   #d79921;
-    color:              #1d2021;
+    background-color:   #b57514;
+    color:              #ebdbb2;
 }
 
 #extra a
@@ -260,8 +260,8 @@ h6
 
 div#footer
 {
-    background-color: #282828;
-    color:      #a89984;
+    background-color: #ebdbb2;
+    color:      #282828;
     clear:      left;
     width:      100%;
     font-size:   71%;
@@ -269,7 +269,7 @@ div#footer
 
 div#footer a
 {
-    color:            #a89984;
+    color:            #b57514;
 }
 
 div#footer p
@@ -280,17 +280,17 @@ div#footer p
 
 span.keyword
 {
-    color: #b16286;
+    color: #8f3f71;
 }
 
 span.comment
 {
-    color: #98971a;
+    color: #79740e;
 }
 
 span.quote
 {
-    color: #cc241d;
+    color: #9d0006;
 }
 
 span.squote
@@ -300,12 +300,12 @@ span.squote
 
 span.sign
 {
-    color: #d65d0e;
+    color: #af3a03;
 }
 
 span.line_number
 {
-    color: #808080;
+    color: #282828;
 }
 
 @media print
