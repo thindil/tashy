@@ -34,10 +34,17 @@ package Tcl.Tk.Ada.Image is
    -- Delete the selected image widget
    -- PARAMETERS
    -- Img - Image to delete
+   -- OUTPUT
+   -- Empty parameter Img
    -- HISTORY
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Delete image My_Image
+   -- Delete(My_Image);
+   -- COMMANDS
+   -- image delete img
    -- SOURCE
    procedure Delete(Img: in out Tk_Widget'Class);
    -- ****
@@ -53,6 +60,11 @@ package Tcl.Tk.Ada.Image is
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the height of the My_Image image
+   -- Image_Height: constant String := Height(My_Image);
+   -- COMMANDS
+   -- image height img
    -- SOURCE
    function Height(Img: in Tk_Widget'Class) return String;
    -- ****
@@ -68,6 +80,11 @@ package Tcl.Tk.Ada.Image is
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the type of image My_Image
+   -- My_Image_Type: constant String := Image_Type(My_Image);
+   -- COMMANDS
+   -- image type img
    -- SOURCE
    function Image_Type(Img: in Tk_Widget'Class) return String;
    -- ****
@@ -83,6 +100,11 @@ package Tcl.Tk.Ada.Image is
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Check if My_Image is in use
+   -- Is_Used: constant String := Inuse(My_Image);
+   -- COMMANDS
+   -- image inuse img
    -- SOURCE
    function Inuse(Img: in Tk_Widget'Class) return String;
    -- ****
