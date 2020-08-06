@@ -277,16 +277,18 @@ package Tcl.Tk.Ada.Image.Photo is
       -- FUNCTION
       -- Set transparency for the selected pixel in the selected image
       -- PARAMETERS
-      -- Image - Tk_Photo in which pixel transparency will be set
-      -- X     - X coordinate of the pixel which transparency will be set
-      -- Y     - Y coordinate of the pixel which transparency will be set
+      -- Image  - Tk_Photo in which pixel transparency will be set
+      -- X      - X coordinate of the pixel which transparency will be set
+      -- Y      - Y coordinate of the pixel which transparency will be set
+      -- Enable - If true, enable transparency, otherwise disable it
       -- HISTORY
       -- 8.6.3 - Added
+      -- 8.6.8 - Fixed setting transparency
       -- TODO
       -- Replace it with higher level of binding
       -- SOURCE
-   procedure Transparency_Set(Image: in Tk_Photo; X, Y: in String) with
-      Pre => X /= "" and Y /= "";
+   procedure Transparency_Set(Image: in Tk_Photo; X, Y, Enable: in String) with
+      Pre => X /= "" and Y /= "" and Enable in "true" | "false";
       -- ****
 
       -- ****f* Photo/Write
