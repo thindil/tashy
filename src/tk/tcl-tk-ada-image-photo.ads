@@ -286,6 +286,11 @@ package Tcl.Tk.Ada.Image.Photo is
       -- 8.6.8 - Fixed setting transparency
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Enable transparency for pixel (7, 12) in My_Image
+      -- Transparency_Set(My_Image, "7", "12", "true");
+      -- COMMANDS
+      -- image transparency set x y enable
       -- SOURCE
    procedure Transparency_Set(Image: in Tk_Photo; X, Y, Enable: in String) with
       Pre => X /= "" and Y /= "" and Enable in "true" | "false";
@@ -303,6 +308,11 @@ package Tcl.Tk.Ada.Image.Photo is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Write My_Image to the "myimage.png" file in grayscale
+      -- Write(My_Image, "myimage.png", "-grayscale");
+      -- COMMANDS
+      -- image write filename ?option value(s) ...?
       -- SOURCE
    procedure Write
      (Image: in Tk_Photo; FileName: in String; Options: in String := "") with
