@@ -114,7 +114,7 @@ package Tcl.Tk.Ada.Image.Photo is
       -- -- Make transparent image My_Image
       -- Blank(My_Image);
       -- COMMANDS
-      -- image blank
+      -- imageName blank
       -- SOURCE
    procedure Blank(Image: in Tk_Photo);
    -- ****
@@ -156,7 +156,7 @@ package Tcl.Tk.Ada.Image.Photo is
    -- -- Get the data of the My_Image from (0,5) point to (10,10)
    -- ImageData: constant String := Data(My_Image, "0", "5", "10", "10");
    -- COMMANDS
-   -- image data ?option value(s) ...?
+   -- imageName data ?option value(s) ...?
    -- SOURCE
    function Data(Image: in Tk_Photo; Options: in String := "") return String;
    -- ****
@@ -178,7 +178,7 @@ package Tcl.Tk.Ada.Image.Photo is
    -- -- Get the color of the pixel at (1, 4) of the My_Image
    -- PixelColor: constant String := Get(My_Image, "1", "4");
    -- COMMANDS
-   -- image get x y
+   -- imageName get x y
    -- SOURCE
    function Get(Image: in Tk_Photo; X, Y: in String) return String with
       Pre => X /= "" and Y /= "";
@@ -200,7 +200,7 @@ package Tcl.Tk.Ada.Image.Photo is
       -- -- Set all pixels of the My_Image to red color
       -- Put(My_Image, "red");
       -- COMMANDS
-      -- image put data ?option value(s) ...?
+      -- imageName put data ?option value(s) ...?
       -- SOURCE
    procedure Put
      (Image: in Tk_Photo; Data: in String; Options: in String := "") with
@@ -224,7 +224,7 @@ package Tcl.Tk.Ada.Image.Photo is
       -- -- Read file image.gif, put it into Some_Image and shrink
       -- Read(Some_Image, "image.gif", "-shrink");
       -- COMMANDS
-      -- image read filename ?option value(s) ...?
+      -- imageName read filename ?option value(s) ...?
       -- SOURCE
    procedure Read
      (Image: in Tk_Photo; FileName: in String; Options: in String := "") with
@@ -244,7 +244,7 @@ package Tcl.Tk.Ada.Image.Photo is
       -- -- Redither My_Image
       -- Redither(My_Image);
       -- COMMANDS
-      -- image redither
+      -- imageName redither
       -- SOURCE
    procedure Redither(Image: in Tk_Photo);
    -- ****
@@ -266,7 +266,7 @@ package Tcl.Tk.Ada.Image.Photo is
    -- -- Get the transparency of the pixel (5, 12) at My_Image
    -- Transparency: constant String := Transparency_Get(My_Image, "5", "12");
    -- COMMANDS
-   -- image transparency get x y
+   -- imageName transparency get x y
    -- SOURCE
    function Transparency_Get
      (Image: in Tk_Photo; X, Y: in String) return String with
@@ -290,7 +290,7 @@ package Tcl.Tk.Ada.Image.Photo is
       -- -- Enable transparency for pixel (7, 12) in My_Image
       -- Transparency_Set(My_Image, "7", "12", "true");
       -- COMMANDS
-      -- image transparency set x y enable
+      -- imageName transparency set x y enable
       -- SOURCE
    procedure Transparency_Set(Image: in Tk_Photo; X, Y, Enable: in String) with
       Pre => X /= "" and Y /= "" and Enable in "true" | "false";
@@ -312,7 +312,7 @@ package Tcl.Tk.Ada.Image.Photo is
       -- -- Write My_Image to the "myimage.png" file in grayscale
       -- Write(My_Image, "myimage.png", "-grayscale");
       -- COMMANDS
-      -- image write filename ?option value(s) ...?
+      -- imageName write filename ?option value(s) ...?
       -- SOURCE
    procedure Write
      (Image: in Tk_Photo; FileName: in String; Options: in String := "") with
