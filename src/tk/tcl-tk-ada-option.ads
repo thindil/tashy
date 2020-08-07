@@ -42,6 +42,11 @@ package Tcl.Tk.Ada.Option is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Add option *Button.foreground with value red on current Tcl interpreter
+   -- Add(Get_Context, "*Button.foreground", "red");
+   -- COMMANDS
+   -- option add pattern value priority
    -- SOURCE
    procedure Add
      (Interp: in Tcl_Interp; Pattern, Value: in String;
@@ -58,6 +63,11 @@ package Tcl.Tk.Ada.Option is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Clear the options database on My_Interpreter interpreter
+      -- Clear(My_Interpreter);
+      -- COMMANDS
+      -- option clear
       -- SOURCE
    procedure Clear(Interp: in Tcl_Interp);
    -- ****
@@ -75,6 +85,11 @@ package Tcl.Tk.Ada.Option is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the returnCommand value of the class Command of the window My_Window
+   -- Value: constant String := Get(My_Window, "returnValue", "Command");
+   -- COMMANDS
+   -- option get window name class
    -- SOURCE
    function Get
      (Window: in Tk_Widget'Class; Name, Class: in String) return String with
@@ -93,6 +108,11 @@ package Tcl.Tk.Ada.Option is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Read the file .Xdefaults at userDefault priority on My_Interpreter interpreter
+      -- Read_File(My_Interpreter, ".Xdefaults", "userDefault");
+      -- COMMANDS
+      -- option readfile fileName priority
       -- SOURCE
    procedure Read_File
      (Interp: in Tcl_Interp; FileName: in String;
