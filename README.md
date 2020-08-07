@@ -158,11 +158,13 @@ library.
 ### Generating the code documentation
 
 To generate (or regenerate) code documentation, you need [ROBODoc](https://rfsber.home.xs4all.nl/Robo/)
-If you have it, in main project directory (where this file is) enter terminal
-command: `others/generatedocs.tcl`. For more information about this script,
-please look [here](https://github.com/thindil/roboada#generatedocstcl). This
-version of script have set all default settings for TASHY code. If you have
-[Bob](https://github.com/thindil/bob) installed, you can type `bob docs`.
+To generate the code documentation with default dark style, in the main project
+directory (where this file is) enter terminal command: `scripts/generatedocs.tcl`.
+To generate the code documentation with light style, in main project directory
+enter terminal command: `scripts/generatedocs.tcl scripts/robodocada.rc docs scripts/robodoclight.css`
+If you have [Bob](https://github.com/thindil/bob) installed, you can type
+`bob docs` for generate the documentation with the dark theme or `bob docslight`
+to generate the documentation with the light theme.
 
 ## Contributing to the project
 
