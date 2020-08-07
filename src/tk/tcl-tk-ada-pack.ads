@@ -39,6 +39,11 @@ package Tcl.Tk.Ada.Pack is
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Add My_Entry widget and strech it in all directions
+   -- Pack.Pack(My_Entry, "-fill both");
+   -- COMMANDS
+   -- pack slave ?options?
    -- SOURCE
    procedure Pack(Slave: in Tk_Widget'Class; Options: in String := "");
    -- ****
@@ -53,6 +58,11 @@ package Tcl.Tk.Ada.Pack is
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Put My_Label widget after .mytext widget
+   -- Pack_Configure(My_Label, "-after .mytext");
+   -- COMMANDS
+   -- pack configure slave ?options?
    -- SOURCE
    procedure Pack_Configure
      (Slave: in Tk_Widget'Class; Options: in String := "");
@@ -68,6 +78,11 @@ package Tcl.Tk.Ada.Pack is
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Remove (hide) My_Label widget from UI
+   -- Pack_Forget(My_Label);
+   -- COMMANDS
+   -- pack forget slave
    -- SOURCE
    procedure Pack_Forget(Slave: in Tk_Widget'Class);
    -- ****
@@ -84,6 +99,11 @@ package Tcl.Tk.Ada.Pack is
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the pack configuration of the My_Label widget
+   -- Pack_Options: constant String := Pack_Info(My_Label);
+   -- COMMANDS
+   -- pack info slave
    -- SOURCE
    function Pack_Info(Slave: in Tk_Widget'Class) return String;
    -- ****
