@@ -118,6 +118,11 @@ package Tcl.Tk.Ada.Image is
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the all existing images names
+   -- Images_List: constant String := Names;
+   -- COMMANDS
+   -- image names
    -- SOURCE
    function Names return String;
    -- ****
@@ -131,6 +136,11 @@ package Tcl.Tk.Ada.Image is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the all available types of images
+   -- Images_Types: constant String := Types;
+   -- COMMANDS
+   -- image types
    -- SOURCE
    function Types return String;
    -- ****
@@ -146,6 +156,11 @@ package Tcl.Tk.Ada.Image is
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the width of My_Image image
+   -- Image_Width: constant String := Width(My_Image);
+   -- COMMANDS
+   -- image width img
    -- SOURCE
    function Width(Img: in Tk_Widget'Class) return String;
    -- ****
