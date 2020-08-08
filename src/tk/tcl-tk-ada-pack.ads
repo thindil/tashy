@@ -118,6 +118,11 @@ package Tcl.Tk.Ada.Pack is
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Enable propagation on My_Main_Window pack
+   -- Pack_Propagate(My_Main_Window, "true");
+   -- COMMANDS
+   -- pack propagate master boolean
    -- SOURCE
    procedure Pack_Propagate(Master: in Tk_Widget'Class; State: in Boolean);
    -- ****
@@ -133,6 +138,11 @@ package Tcl.Tk.Ada.Pack is
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the propagation state of the My_Main_Window pack
+   -- Propagation: constant String := Pack_Propagate(My_Main_Window);
+   -- COMMANDS
+   -- pack propagate master
    -- SOURCE
    function Pack_Propagate(Master: in Tk_Widget'Class) return Boolean;
    -- ****
@@ -149,6 +159,11 @@ package Tcl.Tk.Ada.Pack is
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the list of slaves for the My_Main_Window pack
+   -- Slaves: constant String := Pack_Slaves(My_Main_Window)
+   -- COMMANDS
+   -- pack slaves master
    -- SOURCE
    function Pack_Slaves(Master: in Tk_Widget'Class) return String;
    -- ****
