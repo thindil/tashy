@@ -115,6 +115,11 @@ package Tcl.Tk.Ada.TtkStyle is
       -- 8.6.2 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Define layout for the TButton in the current theme
+      -- Style_Layout("TButton", "{Button.button -children { Button.padding -children { Button.label -side left -expand true } } }");
+      -- COMMANDS
+      -- ttk::style layout name options
       -- SOURCE
    procedure Style_Layout (Name, Options : in String) with
       Pre => Name /= "" and Options /= "";
@@ -131,6 +136,11 @@ package Tcl.Tk.Ada.TtkStyle is
       -- 8.6.2 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the layout for the Toolbutton in the current theme
+      -- Layout: constant String := Style_Layout("Toolbutton");
+      -- COMMANDS
+      -- ttk::style layout name
       -- SOURCE
    function Style_Layout (Name : in String) return String with
       Pre => Name /= "";
@@ -152,6 +162,11 @@ package Tcl.Tk.Ada.TtkStyle is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the font (Tcl name) used by the main window
+      -- Font_Name: constant String := Style_Lookup(".", "-font");
+      -- COMMANDS
+      -- ttk::style lookup name option ?state? ?default?
       -- SOURCE
    function Style_Lookup
      (Name, Option : in String; State : in String := "";
@@ -169,6 +184,11 @@ package Tcl.Tk.Ada.TtkStyle is
       -- 8.6.2 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the background of the TPanedwindow when mouse is hovering about to black
+      -- Style_Map("TPanedwindow", "-background [list hover black]");
+      -- COMMANDS
+      -- ttk::style map name options
       -- SOURCE
    procedure Style_Map (Name, Options : in String) with
       Pre => Name /= "" and Options /= "";
