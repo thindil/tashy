@@ -38,6 +38,11 @@ package Tcl.Tk.Ada.TtkStyle is
    -- 8.6.3 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new element with name My_Image and type of image from image named someimage
+   -- Element_Create("My_Image", "image", "someimage");
+   -- COMMANDS
+   -- ttk::style element create name element_type ?options?
    -- SOURCE
    procedure Element_Create
      (Name, Element_Type : in String; Options : in String := "") with
@@ -51,6 +56,11 @@ package Tcl.Tk.Ada.TtkStyle is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the list of available elements
+      -- Names: constant String := Element_Names;
+      -- COMMAND
+      -- ttk::style element names
       -- SOURCE
    function Element_Names return String;
    -- ****
@@ -66,22 +76,31 @@ package Tcl.Tk.Ada.TtkStyle is
    -- 8.6.3 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- -- Get the options for the element named Entry
+   -- Options: constant String := Element_Options("Entry");
+   -- COMMANDS
+   -- ttk::style element options element
    -- SOURCE
    function Element_Options(Element: in String) return String with
       Pre => Element /= "";
       -- ****
 
-   -- ****f* TtkStyle/Style_Configure
-   -- FUNCTION
-   -- Configure selected or create new Ttk style
-   -- PARAMETERS
-   -- Name    - Name of style to configure or create
-   -- Options - Options for the style
-   -- HISTORY
-   -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
-   -- SOURCE
+      -- ****f* TtkStyle/Style_Configure
+      -- FUNCTION
+      -- Configure selected or create new Ttk style
+      -- PARAMETERS
+      -- Name    - Name of style to configure or create
+      -- Options - Options for the style
+      -- HISTORY
+      -- 8.6.1 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set padding for TButton to 4px in each direction
+      -- Style_Configure("TButton", "-padding {4 4 4 4}");
+      -- COMMANDS
+      -- ttk::style configure name options
+      -- SOURCE
    procedure Style_Configure (Name, Options : in String) with
       Pre => Name /= "" and Options /= "";
       -- ****
