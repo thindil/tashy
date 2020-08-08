@@ -39,6 +39,11 @@ package Tcl.Tk.Ada.Place is
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Add My_Entry widget at point (12, 32)
+   -- Place.Place(My_Entry, "-x 12 -y 32");
+   -- COMMANDS
+   -- place slave ?options?
    -- SOURCE
    procedure Place(Slave: in Tk_Widget'Class; Options: in String := "");
    -- ****
@@ -53,6 +58,11 @@ package Tcl.Tk.Ada.Place is
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Set My_Label widget width to 20 pixels
+   -- Place_Configure(My_Label, "-width 20");
+   -- COMMANDS
+   -- place configure slave ?options?
    -- SOURCE
    procedure Place_Configure
      (Slave: in Tk_Widget'Class; Options: in String := "");
@@ -68,6 +78,11 @@ package Tcl.Tk.Ada.Place is
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Remove (hide) My_Label widget from UI
+   -- Place_Forget(My_Label);
+   -- COMMANDS
+   -- place forget slave
    -- SOURCE
    procedure Place_Forget(Slave: in Tk_Widget'Class);
    -- ****
@@ -84,6 +99,11 @@ package Tcl.Tk.Ada.Place is
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the place configuration of the My_Label widget
+   -- Place_Options: constant String := Place_Info(My_Label);
+   -- COMMANDS
+   -- place info slave
    -- SOURCE
    function Place_Info(Slave: in Tk_Widget'Class) return String;
    -- ****
