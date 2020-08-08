@@ -120,6 +120,11 @@ package Tcl.Tk.Ada.Place is
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the list of slaves for the My_Main_Window
+   -- Slaves: constant String := Place_Slaves(My_Main_Window)
+   -- COMMANDS
+   -- place slaves master
    -- SOURCE
    function Place_Slaves(Master: in Tk_Widget'Class) return String;
    -- ****
