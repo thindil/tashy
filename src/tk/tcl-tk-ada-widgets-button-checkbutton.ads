@@ -144,6 +144,11 @@ package Tcl.Tk.Ada.Widgets.Button.CheckButton is
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Toggle My_Checkbutton
+   -- Toggle(My_Checkbutton);
+   -- COMMANDS
+   -- Buttn toggle
    -- SOURCE
    procedure Toggle(Buttn: in Tk_CheckButton);
    -- ****
