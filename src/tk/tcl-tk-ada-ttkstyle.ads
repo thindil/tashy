@@ -203,6 +203,11 @@ package Tcl.Tk.Ada.TtkStyle is
       -- 8.6.1 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the list of available themes
+      -- Themes: constant String := Theme_Names;
+      -- COMMANDS
+      -- ttk::style theme names
       -- SOURCE
    function Theme_Names return String;
    -- ****
@@ -216,6 +221,11 @@ package Tcl.Tk.Ada.TtkStyle is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Use theme clam as the current theme
+   -- Theme_Use("clam");
+   -- COMMANDS
+   -- ttk::style theme use ThemeName
    -- SOURCE
    procedure Theme_Use (ThemeName : in String) with
       Pre => ThemeName /= "";
@@ -230,6 +240,11 @@ package Tcl.Tk.Ada.TtkStyle is
       -- 8.6.1 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the name of the current theme
+      -- Current_Theme: constant String := Theme_Use;
+      -- COMMANDS
+      -- ttk::style theme use
       -- SOURCE
    function Theme_Use return String;
    -- ****
