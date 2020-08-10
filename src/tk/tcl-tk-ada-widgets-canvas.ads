@@ -52,6 +52,13 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new canvas with pathname .mycanvas
+   -- My_Canvas: constant Tk_Canvas := Create(".mycanvas");
+   -- COMMANDS
+   -- canvas pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -70,10 +77,23 @@ package Tcl.Tk.Ada.Widgets.Canvas is
      -- Interp   - Tcl interpreter to which the widget will be created. If null,
      --            the widget will be created in the "contextual" interpreter.
      --            Default value is null.
+     -- OUTPUT
+     -- Newly created Tk_Canvas as parameter Widgt
      -- HISTORY
      -- 8.6.1 - Added
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create canvas My_Canvas with pathname .mycanvas and with black backgroud on the current Tcl interpreter
+     -- declare
+     --    My_Canvas: Tk_Canvas;
+     -- begin
+     --    Create(My_Canvas, ".mycanvas", "-background black");
+     -- end;
+     -- COMMANDS
+     -- canvas pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Canvas; pathName: in String; options: in String := "";
@@ -92,6 +112,11 @@ package Tcl.Tk.Ada.Widgets.Canvas is
      -- 8.6.3 - Added
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Add tag mytag to the all items below item taged othertag in the My_Canvas canvas
+     -- Add_Tag(My_Canvas, "mytag", "below", "othertag");
+     -- COMMANDS
+     -- CanvasWidget addtag tag searchSpec ?arguments?
      -- SOURCE
    procedure Add_Tag
      (CanvasWidget: in Tk_Canvas; Tag, SearchSpec: in String;
@@ -117,6 +142,11 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the bouding box for the whole My_Canvas canvas
+      -- Bounding_Box: constant String := BBox(My_Canvas, "all");
+      -- COMMANDS
+      -- CanvasWidget bbox tagOrId ?tagOrId tagOrId ...?
       -- SOURCE
    function BBox
      (CanvasWidget: in Tk_Canvas; TagOrId: in String) return String with
