@@ -170,7 +170,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- -- Bind the command exit to the tag mytag in My_Canvas at left mouse button click
       -- Bind(My_Canvas, "mytag", "<1>", "exit");
       -- COMMANDS
-      -- pathName bind tagOrId sequence command
+      -- CanvasWidget bind tagOrId sequence command
       -- SEE ALSO
       -- Bind (function)
       -- SOURCE
@@ -199,7 +199,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- -- Get the all binding associated with the mytag tag in the My_Canvas canvas
       -- Bindings: constant String := Bind(My_Canvas, "mytag");
       -- COMMANDS
-      -- pathName bind tagOrId ?sequence?
+      -- CanvasWidget bind tagOrId ?sequence?
       -- SEE ALSO
       -- Bind (procedure)
       -- SOURCE
@@ -228,7 +228,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- -- Get the X coordinate for screen X coordinate 14 at My_Canvas canvas
       -- X: constant String := CanvasX(My_Canvas, "14");
       -- COMMANDS
-      -- pathName canvasx screenx ?gridspacing?
+      -- CanvasWidget canvasx screenx ?gridspacing?
       -- SOURCE
    function CanvasX
      (CanvasWidget: in Tk_Canvas; ScreenX: in String;
@@ -255,7 +255,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- -- Get the Y coordinate for screen Y coordinate 23 at My_Canvas canvas
       -- Y: constant String := CanvasX(My_Canvas, "23");
       -- COMMANDS
-      -- pathName canvasy screeny ?gridspacing?
+      -- CanvasWidget canvasy screeny ?gridspacing?
       -- SOURCE
    function CanvasY
      (CanvasWidget: in Tk_Canvas; ScreenY: in String;
@@ -276,6 +276,13 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the coordinate for mytag item in My_Canvas canvas to (23, 56)
+      -- Coords(My_Canvas, "mytag", " 23 56");
+      -- COMMANDS
+      -- CanvasWidget coords tagOrId x y
+      -- SEE ALSO
+      -- Coords (function)
       -- SOURCE
    procedure Coords
      (CanvasWidget: in Tk_Canvas; TagOrId, Coordinates: in String) with
@@ -294,6 +301,13 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the coordinates of the mytag tag in My_Canvas canvas
+      -- Coorditates: constant String := Coords(My_Canvas, "mytag");
+      -- COMMANDS
+      -- CanvasWidget coords tagOrId
+      -- SEE ALSO
+      -- Coords (procedure)
       -- SOURCE
    function Coords
      (CanvasWidget: in Tk_Canvas; TagOrId: in String) return String with
@@ -311,6 +325,13 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Add button My_Button as a window to My_Canvas canvas at (0,0) point
+      -- Canvas_Create(My_Canvas, "window", "0 0 -window " & Widget_Image(My_Button));
+      -- COMMANDS
+      -- pathName create type ?options?
+      -- SEE ALSO
+      -- Canvas_Create (function)
       -- SOURCE
    procedure Canvas_Create
      (Parent: in Tk_Canvas; Child_Type: in String;
@@ -331,6 +352,13 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Add button My_Button as a window to My_Canvas canvas at (0,0) point and get it Id
+      -- Button_Id := constant Sttring := Canvas_Create(My_Canvas, "window", "0 0 -window " & Widget_Image(My_Button));
+      -- COMMANDS
+      -- pathName create type ?options?
+      -- SEE ALSO
+      -- Canvas_Create (procedure)
       -- SOURCE
    function Canvas_Create
      (Parent: in Tk_Canvas; Child_Type: in String; Options: in String := "")
