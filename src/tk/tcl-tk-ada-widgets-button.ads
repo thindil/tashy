@@ -52,6 +52,13 @@ package Tcl.Tk.Ada.Widgets.Button is
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new button with pathname .mybutton and label select me
+   -- My_Button: constant Tk_Button := Create(".mybutton", "-text {select me}");
+   -- COMMANDS
+   -- button pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -70,10 +77,23 @@ package Tcl.Tk.Ada.Widgets.Button is
      -- Interp   - Tcl interpreter to which the widget will be created. If null,
      --            the widget will be created in the "contextual" interpreter.
      --            Default value is null.
+     -- OUTPUT
+     -- Newly created Tk_Button as parameter Widgt
      -- HISTORY
      -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create button My_Button with pathname .mybutton and label click me on the current Tcl interpreter
+     -- declare
+     --    My_Button: Tk_Button;
+     -- begin
+     --    Create(My_Button, ".mybutton", "-text {click me}");
+     -- end;
+     -- COMMANDS
+     -- button pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Button; pathName: in String; options: in String := "";
@@ -90,6 +110,11 @@ package Tcl.Tk.Ada.Widgets.Button is
      -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
      -- TODO
      -- Replace it with higher level of binding
+     -- ExAMPLE
+     -- -- Flash the button My_Button
+     -- Flash(My_Button);
+     -- COMMANDS
+     -- Buttn flash
      -- SOURCE
    procedure Flash(Buttn: in Tk_Button);
    -- ****
@@ -106,6 +131,11 @@ package Tcl.Tk.Ada.Widgets.Button is
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Invoke the Tcl command associated with My_Button
+   -- Result: constant String := Invoke(My_Button);
+   -- COMMANDS
+   -- Buttn invoke
    -- SOURCE
    function Invoke
      (Buttn: in Tk_Button; options: in String := "") return String;
