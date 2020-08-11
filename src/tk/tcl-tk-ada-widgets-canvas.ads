@@ -886,6 +886,10 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- -- Resize selection to 10th index in item tagged mytag in My_Canvas canvas
+      -- Select_Adjust(My_Canvas, "mytag", "9");
+      -- COMMANDS
+      -- CanvasWidget select adjust tagOrId index
       -- SOURCE
    procedure Select_Adjust
      (CanvasWidget: in Tk_Canvas; TagOrId, Index: in String) with
@@ -901,6 +905,11 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Clear selection in My_Canvas canvas
+      -- Select_Clear(My_Canvas);
+      -- COMMANDS
+      -- CanvasWidget select clear
       -- SOURCE
    procedure Select_Clear(CanvasWidget: in Tk_Canvas);
    -- ****
@@ -918,6 +927,11 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    -- 8.6.3 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Set the selection anchor point at first index in item tagged mytag in My_Canvas canvas
+   -- Select_From(My_Canvas, "mytag", "0");
+   -- COMMANDS
+   -- CanvasWidget select from tagOrId index
    -- SOURCE
    procedure Select_From
      (CanvasWidget: in Tk_Canvas; TagOrId, Index: in String) with
@@ -935,6 +949,11 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the Id of the selected item in My_Canvas canvas
+      -- Item_Id: constant String := Select_Item(My_Canvas);
+      -- COMMANDS
+      -- CanvasWidget select item
       -- SOURCE
    function Select_Item(CanvasWidget: in Tk_Canvas) return String;
    -- ****
