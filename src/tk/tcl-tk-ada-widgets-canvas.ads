@@ -578,6 +578,11 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the index of the first index in mytag tagged item in My_Canvas canvas
+      -- My_Index: constant String := Index(My_Canvas, "mytag", "0");
+      -- COMMANDS
+      -- CanvasWidget index tagOrId index
       -- SOURCE
    function Index
      (CanvasWidget: in Tk_Canvas; TagOrId, Index: in String) return String with
@@ -599,6 +604,11 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Insert hello world text at 10th character to all items tagged mytag in My_Canvas canvas
+      -- Insert(My_Canvas, "mytag", "9", "hello world");
+      -- COMMANDS
+      -- CanvasWidget insert tagOrId beforeThis item
       -- SOURCE
    procedure Insert
      (CanvasWidget: in Tk_Canvas; TagOrId, BeforeThis, Item: in String) with
@@ -619,6 +629,11 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the text from the item tagged mytag in My_Canvas canvas
+      -- Text: constant String := Item_Cget(My_Canvas, "mytag", "-text");
+      -- COMMANDS
+      -- CanvasWidget itemcget tagOrId option
       -- SOURCE
    function Item_Cget
      (CanvasWidget: in Tk_Canvas; TagOrId, Option: in String)
@@ -637,6 +652,11 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the text to hello world in item tagged mytag in My_Canvas canvas
+      -- Item_Configure(My_Canvas, "mytag", "-text {hello world}");
+      -- COMMANDS
+      -- CanvasWidget itemconfigure tagOrId options
       -- SOURCE
    procedure Item_Configure
      (CanvasWidget: in Tk_Canvas; TagOrId, Options: in String) with
