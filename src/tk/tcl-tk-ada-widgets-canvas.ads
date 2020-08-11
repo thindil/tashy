@@ -657,6 +657,8 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- Item_Configure(My_Canvas, "mytag", "-text {hello world}");
       -- COMMANDS
       -- CanvasWidget itemconfigure tagOrId options
+      -- SEE ALSO
+      -- Item_Configure (function)
       -- SOURCE
    procedure Item_Configure
      (CanvasWidget: in Tk_Canvas; TagOrId, Options: in String) with
@@ -684,6 +686,8 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- Text: constant String := Item_Configure(My_Canvas, "mytag", "-text");
       -- COMMANDS
       -- CanvasWidget itemconfigure tagOrId ?options?
+      -- SEE ALSO
+      -- Item_Configure (procedure)
       -- SOURCE
    function Item_Configure
      (CanvasWidget: in Tk_Canvas; TagOrId: in String; Options: in String := "")
@@ -777,6 +781,11 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Save all the My_Canvas canvas to the file mycanvas.ps
+      -- Postscript(My_Canvas, "-file mycanvas.ps");
+      -- COMMANDS
+      -- CanvasWidget postscript options
       -- SOURCE
    function Postscript
      (CanvasWidget: in Tk_Canvas; Options: in String) return String with
@@ -791,12 +800,17 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- TagOrId      - Tag or Id of the items to move. If refers to more than
       --                one item, all items will be moved but they relative
       --                order will be preserved
-      -- AfterThis    - Tag or Id of the item after which selected items will
+      -- AboveThis    - Tag or Id of the item above which selected items will
       --                be moved. Default value is empty
       -- HISTORY
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Move items tagged with mytag higher in My_Canvas canvas
+      -- Canvas_Raise(My_Canvas, "mytag");
+      -- COMMANDS
+      -- CanvasWidget raise tagOrId ?aboveThis?
       -- SOURCE
    procedure Canvas_Raise
      (CanvasWidget: in Tk_Canvas; TagOrId: in String;
@@ -820,6 +834,11 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Replace text in items tagged mytag between first and third character with text hello world in My_Canvas
+      -- Rchars(My_Canvas, "mytag", "0", "2", "{hello world}");
+      -- COMMANDS
+      -- CanvasWidget rchars tagOrId first last Text
       -- SOURCE
    procedure Rchars
      (CanvasWidget: in Tk_Canvas; TagOrId, First, Last, Text: in String) with
@@ -842,6 +861,11 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Scale all items tagged mytag in My_Canvas canvas from point (34, 54) by 0.5 in both dimensions
+      -- Scale(My_Canvas, "mytag", "34", "54", "0.5", "0.5");
+      -- COMMANDS
+      -- CanvasWidget scale tagOrId xOrigin yOrigin xScale yScale
       -- SOURCE
    procedure Scale
      (CanvasWidget: in Tk_Canvas;
