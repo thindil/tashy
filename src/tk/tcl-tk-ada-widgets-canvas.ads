@@ -477,6 +477,11 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the focus in the My_Canvas canvas to item tagged "mytag"
+      -- Focus(My_Canvas, "mytag");
+      -- COMMANDS
+      -- CanvasWidget focus ?tagOrId?
       -- SOURCE
    procedure Focus(CanvasWidget: in Tk_Canvas; TagOrId: in String := "");
    -- ****
@@ -497,6 +502,11 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    -- 8.6.3 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the list of tags associated with the item tagged "mytag" in the canvas My_Canvas
+   -- Tags: constant String := Get_Tags(My_Canvas, "mytag");
+   -- COMMANDS
+   -- CanvasWidget gettags tagOrId
    -- SOURCE
    function Get_Tags
      (CanvasWidget: in Tk_Canvas; TagOrId: in String) return String with
@@ -518,6 +528,11 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the insertion cursor to start in the item tagged mytag in canvas My_Canvas
+      -- ICursor(My_Canvas, "mytag", "0");
+      -- COMMANDS
+      -- CanvasWidget icursor tagOrId index
       -- SOURCE
    procedure ICursor
      (CanvasWidget: in Tk_Canvas; TagOrId, Index: in String) with
@@ -538,6 +553,11 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Move first index in the mytag tagged item in My_Canvas canvas to position (15, 89)
+      -- IMove(My_Canvas, "mytag", "0", "15", "89");
+      -- COMMANDS
+      -- CanvasWidget imove tagOrId index x y
       -- SOURCE
    procedure IMove
      (CanvasWidget: in Tk_Canvas; TagOrId, Index, X, Y: in String) with
