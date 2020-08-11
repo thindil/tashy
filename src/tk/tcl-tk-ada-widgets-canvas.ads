@@ -679,6 +679,11 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the text of the item tagged mytag in My_Canvas canvas
+      -- Text: constant String := Item_Configure(My_Canvas, "mytag", "-text");
+      -- COMMANDS
+      -- CanvasWidget itemconfigure tagOrId ?options?
       -- SOURCE
    function Item_Configure
      (CanvasWidget: in Tk_Canvas; TagOrId: in String; Options: in String := "")
@@ -700,6 +705,11 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Move items tagged mytag in My_Canvas canvas
+      -- Lower(My_Canvas, "mytag");
+      -- COMMANDS
+      -- CanvasWidget lower tagOrId ?belowThis?
       -- SOURCE
    procedure Lower
      (CanvasWidget: in Tk_Canvas; TagOrId: in String;
@@ -719,6 +729,11 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Move items tagged mytag in My_Canvas canvas by 10px in X and 14px in Y
+      -- Move(My_Canvas, "mytag", "10", "14");
+      -- COMMANDS
+      -- CanvasWidget move tagOrId xAmount yAmount
       -- SOURCE
    procedure Move
      (CanvasWidget: in Tk_Canvas; TagOrId, XAmount, YAmount: in String) with
@@ -737,6 +752,11 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Move all items tagged mytag in My_Canvas to point (24, 42)
+      -- MoveTo(My_Canvas, "mytag", "24", "42");
+      -- COMMANDS
+      -- CanvasWidget moveto tagOrId xPos yPos
       -- SOURCE
    procedure MoveTo
      (CanvasWidget: in Tk_Canvas; TagOrId, XPos, YPos: in String) with
