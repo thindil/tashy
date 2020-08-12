@@ -84,7 +84,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
      -- TODO
      -- Replace it with higher level of binding
      -- EXAMPLE
-     -- -- Create canvas My_Canvas with pathname .mycanvas and with black backgroud on the current Tcl interpreter
+     -- -- Create canvas My_Canvas with pathname .mycanvas and with black background on the current Tcl interpreter
      -- declare
      --    My_Canvas: Tk_Canvas;
      -- begin
