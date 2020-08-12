@@ -1069,6 +1069,13 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Move the view in the My_Canvas canvas by 10 units to right
+      -- Xview_Scroll(My_Canvas, "10", "units");
+      -- COMMANDS
+      -- CanvasWidget xview scroll number what
+      -- SEE ALSO
+      -- Yview_Scroll
       -- SOURCE
    procedure Xview_Scroll
      (CanvasWidget: in Tk_Canvas; Number, What: in String) with
@@ -1088,6 +1095,13 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the vertical fraction of the My_Canvas canvas
+      -- Vertical_Fraction: constant String := YView(My_Canvas);
+      -- COMMANDS
+      -- CanvasWidget yview
+      -- SEE ALSO
+      -- XView
       -- SOURCE
    function YView(CanvasWidget: in Tk_Canvas) return String;
    -- ****
@@ -1104,6 +1118,13 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Show the first half of the canvas My_Canvas
+   -- Yview_Move_To(My_Canvas, "0.5");
+   -- COMMANDS
+   -- CanvasWidget yview moveto fraction
+   -- SEE ALSO
+   -- Xview_Move_To
    -- SOURCE
    procedure Yview_Move_To
      (CanvasWidget: in Tk_Canvas; Fraction: in String) with
@@ -1122,6 +1143,13 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Move the view in the My_Canvas canvas by 10 units to top
+      -- Yview_Scroll(My_Canvas, "-10", "units");
+      -- COMMANDS
+      -- CanvasWidget yview scroll number what
+      -- SEE ALSO
+      -- Xview_Scroll
       -- SOURCE
    procedure Yview_Scroll
      (CanvasWidget: in Tk_Canvas; Number, What: in String) with
