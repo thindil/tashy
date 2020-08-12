@@ -54,7 +54,7 @@ package Tcl.Tk.Ada.Widgets.Frame is
    -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new frame with pathname .myframe
-   -- My_Canvas: constant Tk_Frame := Create(".myframe");
+   -- My_Frame: constant Tk_Frame := Create(".myframe");
    -- COMMANDS
    -- frame pathName ?options?
    -- SEE ALSO
