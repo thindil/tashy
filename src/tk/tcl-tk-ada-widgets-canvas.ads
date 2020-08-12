@@ -886,6 +886,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
       -- -- Resize selection to 10th index in item tagged mytag in My_Canvas canvas
       -- Select_Adjust(My_Canvas, "mytag", "9");
       -- COMMANDS
@@ -971,6 +972,11 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    -- 8.6.3 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Set the end of the selection to 10th index in mytag tagged item in My_Canvas canvas
+   -- Select_To(My_Canvas, "mytag", "9");
+   -- COMMANDS
+   -- CanvasWidget select to tagOrId index
    -- SOURCE
    procedure Select_To
      (CanvasWidget: in Tk_Canvas; TagOrId, Index: in String) with
@@ -991,6 +997,11 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the type of the item tagged mytag in My_Canvas canvas
+      -- Item_Type: constant String := Canvas_Type(My_Canvas, "mytag");
+      -- COMMANDS
+      -- CanvasWidget type tagOrId
       -- SOURCE
    function Canvas_Type
      (CanvasWidget: in Tk_Canvas; TagOrId: in String) return String with
@@ -1010,6 +1021,13 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the horizontal fraction of the My_Canvas canvas
+      -- Horizontal_Fraction: constant String := XView(My_Canvas);
+      -- COMMANDS
+      -- CanvasWidget xview
+      -- SEE ALSO
+      -- YView
       -- SOURCE
    function XView(CanvasWidget: in Tk_Canvas) return String;
    -- ****
@@ -1026,6 +1044,13 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    -- 8.6.3 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Show the first half of the canvas My_Canvas
+   -- Xview_Move_To(My_Canvas, "0.5");
+   -- COMMANDS
+   -- CanvasWidget xview moveto fraction
+   -- SEE ALSO
+   -- Yview_Move_To
    -- SOURCE
    procedure Xview_Move_To
      (CanvasWidget: in Tk_Canvas; Fraction: in String) with
