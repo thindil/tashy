@@ -52,6 +52,13 @@ package Tcl.Tk.Ada.Widgets.Frame is
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new frame with pathname .myframe
+   -- My_Canvas: constant Tk_Frame := Create(".myframe");
+   -- COMMANDS
+   -- frame pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -74,6 +81,17 @@ package Tcl.Tk.Ada.Widgets.Frame is
      -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create frame My_Frame with pathname .myframe and with black backgroud on the current Tcl interpreter
+     -- declare
+     --    My_Frame: Tk_Frame;
+     -- begin
+     --    Create(My_Frame, ".myframe", "-background black");
+     -- end;
+     -- COMMANDS
+     -- frame pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Frame; pathName: in String; options: in String := "";
