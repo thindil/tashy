@@ -253,6 +253,11 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Insert elements one and two elements at the end of the My_Listbox listbox
+      -- Insert(My_Listbox, "end", "one two");
+      -- COMMANDS
+      -- ListboxWidget insert index ?elements?
       -- SOURCE
    procedure Insert
      (ListboxWidget: in Tk_ListBox; Index: in String;
@@ -262,16 +267,21 @@ package Tcl.Tk.Ada.Widgets.ListBox is
 
       -- ****f* ListBox/Item_Cget
       -- FUNCTION
-   -- Get the selected option of the selected item in the selected Tk_ListBox
-   -- PARAMETERS
-   -- ListboxWidget - Tk_ListBox which will be queried for the option
-   -- Index         - Index of the item in ListboxWidget which will be
+      -- Get the selected option of the selected item in the selected Tk_ListBox
+      -- PARAMETERS
+      -- ListboxWidget - Tk_ListBox which will be queried for the option
+      -- Index         - Index of the item in ListboxWidget which will be
       --                 queried for the option
       -- Option        - Tk option to get
       -- HISTORY
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the background color of the second element in My_Listbox listbox
+      -- Options := constant String := Item_Cget(My_Listbox, "1", "-background");
+      -- COMMANDS
+      -- ListboxWidget itemcget index option
       -- SOURCE
    function Item_Cget
      (ListboxWidget: in Tk_ListBox; Index, Option: in String)
@@ -290,18 +300,25 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the background color of the third item in the My_Listbox listbox to green
+      -- Item_Configure(My_Listbox, "2", "-background green");
+      -- COMMANDS
+      -- ListBoxWidget itemconfigure index options
+      -- SEE ALSO
+      -- Item_Configure (function)
       -- SOURCE
    procedure Item_Configure
      (ListBoxWidget: in Tk_ListBox; Index, Options: in String) with
       Pre => Index /= "" and Options /= "";
       -- ****
 
-   -- ****f* ListBox/Item_Configure (function)
-   -- FUNCTION
-   -- Queries or modifies the configuration options of the selected item
-   -- PARAMETERS
-   -- ListBoxWidget - Tk_ListBox which will be queried or modified for options
-   -- Index         - Index of the item which will be queried or modified
+      -- ****f* ListBox/Item_Configure (function)
+      -- FUNCTION
+      -- Queries or modifies the configuration options of the selected item
+      -- PARAMETERS
+      -- ListBoxWidget - Tk_ListBox which will be queried or modified for options
+      -- Index         - Index of the item which will be queried or modified
       --                 for options
       -- Options       - Options to modify or get. Can be empty. Default value
       --                 is empty
@@ -313,6 +330,13 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the all options of the last element in the My_Listbox listbox
+      -- Options: constant String := Item_Configure(My_Listbox, "end");
+      -- COMMANDS
+      -- ListBoxWidget itemconfigure index ?options?
+      -- SEE ALSO
+      -- Item_Configure (procedure)
       -- SOURCE
    function Item_Configure
      (ListBoxWidget: in Tk_ListBox; Index: in String; Options: in String := "")
