@@ -52,6 +52,13 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    -- 8.6.2 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new listbox with pathname .mylistbox
+   -- My_Listbox: constant Tk_ListBox := Create(".mylistbox");
+   -- COMMANDS
+   -- listbox pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -74,24 +81,40 @@ package Tcl.Tk.Ada.Widgets.ListBox is
      -- 8.6.2 - Added
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create listbox My_Listbox with pathname .mylistbox and with black background on the current Tcl interpreter
+     -- declare
+     --    My_Listbox: Tk_Listbox;
+     -- begin
+     --    Create(My_Listbox, ".mylistbox", "-background black");
+     -- end;
+     -- COMMANDS
+     -- listbox pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_ListBox; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
-      -- ****
+     -- ****
 
-      -- ****f* ListBox/Activate
-      -- FUNCTION
-      -- Set the active element of Tk_ListBox to the selected index.
-      -- PARAMETERS
-      -- ListboxWidget - Tk_ListBox in which element will be set as active
-      -- Index         - Index of element to set as active
-      -- HISTORY
-      -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
-      -- SOURCE
+     -- ****f* ListBox/Activate
+     -- FUNCTION
+     -- Set the active element of Tk_ListBox to the selected index.
+     -- PARAMETERS
+     -- ListboxWidget - Tk_ListBox in which element will be set as active
+     -- Index         - Index of element to set as active
+     -- HISTORY
+     -- 8.6.4 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Set second element as active in My_Listbox
+     -- Activate(My_Listbox, "1");
+     -- COMMANDS
+     -- ListboxWidget activate index
+     -- SOURCE
    procedure Activate(ListboxWidget: in Tk_ListBox; Index: in String) with
       Pre => Index /= "";
       -- ****
@@ -112,6 +135,11 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the bounding box of My_Listbox listbox for third element
+      -- Bounding_Box: constant String := BBox(My_Listbox, "2");
+      -- COMMANDS
+      -- ListboxWidget bbox index
       -- SOURCE
    function BBox
      (ListboxWidget: in Tk_ListBox; Index: in String) return String with
