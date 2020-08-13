@@ -356,6 +356,11 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the index of the element at 10px in My_Listbox listbox
+      -- Index := constant String := Nearest(My_Listbox, "10");
+      -- COMMANDS
+      -- ListboxWidget nearest y
       -- SOURCE
    function Nearest
      (ListboxWidget: in Tk_ListBox; Y: in String) return String with
@@ -373,6 +378,11 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the starting point for scan at point (10, 24) in My_Listbox listbox
+      -- Scan_Mark(My_Listbox, "10", "24");
+      -- COMMANDS
+      -- ListboxWidget scan mark x y
       -- SOURCE
    procedure Scan_Mark(ListboxWidget: in Tk_ListBox; X, Y: in String) with
       Pre => X /= "" and Y /= "";
@@ -391,6 +401,11 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Adjust the view of My_Listbox listbox to point (12, 84)
+      -- Scan_DragTo(My_Listbox, "12", "84");
+      -- COMMANDS
+      -- ListboxWidget scan dragto x y
       -- SOURCE
    procedure Scan_DragTo(ListboxWidget: in Tk_ListBox; X, Y: in String) with
       Pre => X /= "" and Y /= "";
@@ -408,6 +423,11 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Make visible third element in My_Listbox listbox
+      -- See(My_Listbox, "2");
+      -- COMMANDS
+      -- ListboxWidget see index
       -- SOURCE
    procedure See(ListboxWidget: in Tk_ListBox; Index: in String) with
       Pre => Index /= "";
