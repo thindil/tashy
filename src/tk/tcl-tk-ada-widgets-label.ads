@@ -52,6 +52,13 @@ package Tcl.Tk.Ada.Widgets.Label is
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new label with pathname .mylabel with text hello world
+   -- My_Label: constant Tk_Label := Create(".mylabel", "-text {hello world}");
+   -- COMMANDS
+   -- label pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -74,6 +81,17 @@ package Tcl.Tk.Ada.Widgets.Label is
      -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create label My_Label with pathname .mylabel and with text hello world on the current Tcl interpreter
+     -- declare
+     --    My_Label: Tk_Label;
+     -- begin
+     --    Create(My_Label, ".mylabel", "-text {hello world}");
+     -- end;
+     -- COMMANDS
+     -- label pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Label; pathName: in String; options: in String := "";
