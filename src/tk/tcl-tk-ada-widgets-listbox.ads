@@ -158,6 +158,11 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the current seelction in My_Listbox listbox
+      -- Selection: constant String := CurSelection(My_Listbox);
+      -- COMMANDS
+      -- ListboxWidget curselection
       -- SOURCE
    function CurSelection(ListboxWidget: in Tk_ListBox) return String;
    -- ****
@@ -174,6 +179,11 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Delete second item from My_Listbox listbox
+   -- Delete(My_Listbox, "1");
+   -- COMMANDS
+   -- ListboxWidget delete first ?last?
    -- SOURCE
    procedure Delete
      (ListboxWidget: in Tk_ListBox; First: in String;
@@ -196,6 +206,11 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the content of the second and third element in My_Listbox listbox
+      -- Elements: constant String := Get(My_Listbox, "1", "2");
+      -- COMMANDS
+      -- ListboxWidget get first ?last?
       -- SOURCE
    function Get
      (ListboxWidget: in Tk_ListBox; First: in String; Last: in String := "")
@@ -216,6 +231,11 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the index of the active element in My_Listbox listbox
+      -- ActiveIndex: constant String := Index(My_Listbox, "active");
+      -- COMMANDS
+      -- ListboxWidget index index
       -- SOURCE
    function Index
      (ListboxWidget: in Tk_ListBox; Index: in String) return String with
