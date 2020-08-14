@@ -446,6 +446,11 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the selection anchor to the active element at the My_Listbox listbox
+      -- Selection_Anchor(My_Listbox, "active");
+      -- COMMANDS
+      -- ListboxWidget selection anchor index
       -- SOURCE
    procedure Selection_Anchor
      (ListboxWidget: in Tk_ListBox; Index: in String) with
@@ -464,6 +469,11 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Deselect first element in My_Listbox listbox
+      -- Selection_Clear(My_Listbox, "0");
+      -- COMMANDS
+      -- ListboxWidget selection clear first ?last?
       -- SOURCE
    procedure Selection_Clear
      (ListboxWidget: in Tk_ListBox; First: in String;
@@ -484,6 +494,11 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Check if second element in My_Listbox listbox is selected
+      -- Is_Selected: constant String := Selection_Includes(My_Listbox, "1");
+      -- COMMANDS
+      -- ListboxWidget selection includes index
       -- SOURCE
    function Selection_Includes
      (ListboxWidget: in Tk_ListBox; Index: in String) return String with
@@ -503,6 +518,11 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Select all elements in the My_Listbox listbox
+      -- Selection_Set(My_Listbox, "0", "end");
+      -- COMMANDS
+      -- ListboxWidget selection set first ?last?
       -- SOURCE
    procedure Selection_Set
      (ListboxWidget: in Tk_ListBox; First: in String;
