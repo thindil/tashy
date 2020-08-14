@@ -674,12 +674,12 @@ package Tcl.Tk.Ada.Widgets.ListBox is
 
    -- ****f* ListBox/YView (procedure)
    -- FUNCTION
-   -- Adjusts the view in the window so that the character position given by
-   -- index is displayed at the top edge of the window
+   -- Adjusts the view in the window so that the element given by index is
+   -- displayed at the top edge of the window
    -- PARAMETERS
    -- ListboxWidget - Tk_ListBox which will be adjusted
-   -- Index         - Character index to which ListboxWidget will be adjusted.
-   --                 Character position starts from 0
+   -- Index         - Element index to which ListboxWidget will be adjusted.
+   --                 Element position starts from 0
    -- HISTORY
    -- 8.6.4 - Added
    -- TODO
