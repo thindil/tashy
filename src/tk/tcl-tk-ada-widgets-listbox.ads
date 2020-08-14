@@ -541,6 +541,11 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the amount of the elements in the My_Listbox listbox
+      -- Elements: constant String := Size(My_Listbox);
+      -- COMMANDS
+      -- ListboxWidget size
       -- SOURCE
    function Size(ListboxWidget: in Tk_ListBox) return String;
    -- ****
@@ -558,6 +563,13 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the horizontal fraction of the My_Listbox listbox
+   -- Horizontal_Fraction: constant String := XView(My_Listbox);
+   -- COMMANDS
+   -- ListboxWidget xview
+   -- SEE ALSO
+   -- YView (function), XView (procedure), YView (procedure)
    -- SOURCE
    function XView(ListboxWidget: in Tk_ListBox) return String;
    -- ****
@@ -574,23 +586,37 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Adjust the view in the My_Listbox listbox to second character index
+   -- XView(My_Listbox, "1");
+   -- COMMANDS
+   -- ListboxWidget xview index
+   -- SEE ALSO
+   -- YView (function), XView (function), YView (procedure)
    -- SOURCE
    procedure XView(ListboxWidget: in Tk_ListBox; Index: in String) with
       Pre => Index /= "";
       -- ****
 
-   -- ****f* ListBox/Xview_Move_To
-   -- FUNCTION
-   -- Adjusts the view in the window so that fraction of the total width of
-   -- the Tk_ListBox is off-screen to the left.
-   -- PARAMETERS
-   -- ListboxWidget - Tk_ListBox which view will be adjusted
-   -- Fraction      - Fraction of the ListboxWidget to move. Must be between 0
+      -- ****f* ListBox/Xview_Move_To
+      -- FUNCTION
+      -- Adjusts the view in the window so that fraction of the total width of
+      -- the Tk_ListBox is off-screen to the left.
+      -- PARAMETERS
+      -- ListboxWidget - Tk_ListBox which view will be adjusted
+      -- Fraction      - Fraction of the ListboxWidget to move. Must be between 0
       --                 and 1
       -- HISTORY
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Show the first half of the listbox My_Listbox
+      -- Xview_Move_To(My_Listbox, "0.5");
+      -- COMMANDS
+      -- ListboxWidget xview moveto fraction
+      -- SEE ALSO
+      -- Yview_Move_To
       -- SOURCE
    procedure Xview_Move_To
      (ListboxWidget: in Tk_ListBox; Fraction: in String) with
