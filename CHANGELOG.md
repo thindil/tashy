@@ -13,7 +13,7 @@ of the project.
 
 ### Fixed
 - Code documentation for Tcl.Tklib.Ada.GetString.Tk\_Get\_String and
-  Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox
+  Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox and Tcl.Tk.Ada.Widgets.Listbox.Yview
 - Setting transparency (Tcl.Tk.Image.Photo.Transparency\_Set) for photo images
 
 ## [8.6.7] - 2020-07-31
