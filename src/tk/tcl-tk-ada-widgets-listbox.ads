@@ -635,6 +635,13 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Move the view in the My_Listbox listbox by 10 units to right
+      -- Xview_Scroll(My_Listbox, "10", "units");
+      -- COMMANDS
+      -- ListboxWidget xview scroll number what
+      -- SEE ALSO
+      -- Yview_Scroll
       -- SOURCE
    procedure Xview_Scroll
      (ListboxWidget: in Tk_ListBox; Number, What: in String) with
@@ -654,6 +661,13 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the vertical fraction of the My_Listbox listbox
+      -- Vertical_Fraction: constant String := YView(My_Listbox);
+      -- COMMANDS
+      -- ListboxWidget yview
+      -- SEE ALSO
+      -- YView (procedure), XView (function), XView (procedure)
       -- SOURCE
    function YView(ListboxWidget: in Tk_ListBox) return String;
    -- ****
@@ -670,6 +684,13 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Adjust the view in the My_Listbox listbox to show the first element
+   -- YView(My_Listbox, "0");
+   -- COMMANDS
+   -- ListboxWidget yview index
+   -- SEE ALSO
+   -- XView (procedure), XView (function), YView (procedure)
    -- SOURCE
    procedure YView(ListboxWidget: in Tk_ListBox; Index: in String) with
       Pre => Index /= "";
