@@ -357,6 +357,13 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Post My_Menu menu at point (10, 87)
+      -- Post(My_Menu, "10", "87");
+      -- COMMANDS
+      -- MenuWidget post x y
+      -- SEE ALSO
+      -- Post (function)
       -- SOURCE
    procedure Post(MenuWidget: in Tk_Menu; X, Y: in String) with
       Pre => X /= "" and Y /= "";
@@ -379,6 +386,13 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Post My_Menu menu at point (34, 67) and get the result of the command
+      -- Result: constant String := Post(My_Menu, "34", "67");
+      -- COMMANDS
+      -- MenuWidget post x y
+      -- SEE ALSO
+      -- Post (procedure)
       -- SOURCE
    function Post(MenuWidget: in Tk_Menu; X, Y: in String) return String with
       Pre => X /= "" and Y /= "";
@@ -395,6 +409,11 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Show the submenu of My_Menu from the second entry
+      -- PostCascade(My_Menu, "1");
+      -- COMMANDS
+      -- MenuWidget postcascade index
       -- SOURCE
    procedure PostCascade(MenuWidget: in Tk_Menu; Index: in String) with
       Pre => Index /= "";
@@ -412,6 +431,11 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the type of the active entry in My_Menu menu
+      -- MType: constant String := Menu_Type(My_Menu, "active");
+      -- COMMANDS
+      -- MenuWidget type index
       -- SOURCE
    function Menu_Type
      (MenuWidget: in Tk_Menu; Index: in String) return String with
