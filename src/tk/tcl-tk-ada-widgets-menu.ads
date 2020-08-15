@@ -154,6 +154,11 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Clone My_Menu to new normal menu which will have pathname .mynewmenu
+      -- Clone(My_Menu, ".mynewmenu", "normal");
+      -- COMMANDS
+      -- MenuWidget clone newPathname cloneType
       -- SOURCE
    procedure Clone
      (MenuWidget: in Tk_Menu'Class; NewPathName, CloneType: in String) with
@@ -173,6 +178,11 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- 8.6.1 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Delete second menu entry from the My_Menu menu
+      -- Delete(My_Menu, "1");
+      -- COMMANDS
+      -- MenuWidget delete startindex ?endindex?
       -- SOURCE
    procedure Delete
      (MenuWidget: in Tk_Menu; StartIndex: in String;
@@ -194,6 +204,13 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the font used by first entry in My_Menu menu
+      -- Font: constant String := Entry_Cget(My_Menu, "0", "-font");
+      -- COMMANDS
+      -- MenuWidget entrycget index option
+      -- SEE ALSO
+      -- Entry_Configure (function)
       -- SOURCE
    function Entry_Cget
      (MenuWidget: in Tk_Menu; Index, Option: in String) return String with
@@ -211,6 +228,13 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- 8.6.2 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the label of the third entry in My_Menu menu to hello world
+      -- Entry_Configure(My_Menu, "2", "-label {hello world}");
+      -- COMMANDS
+      -- MenuWidget entryconfigure index ?options?
+      -- SEE ALSO
+      -- Entry_Configure (function)
       -- SOURCE
    procedure Entry_Configure
      (MenuWidget: in Tk_Menu; Index, Options: in String) with
