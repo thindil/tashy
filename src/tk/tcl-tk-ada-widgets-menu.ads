@@ -136,6 +136,8 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- Add(My_Menu, "command", "-label Quit -command exit");
       -- COMMANDS
       -- MenuWidget add EntryType ?options?
+      -- SEE ALSO
+      -- Insert
       -- SOURCE
    procedure Add
      (MenuWidget: in Tk_Menu'Class; EntryType: in String;
@@ -232,7 +234,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- -- Set the label of the third entry in My_Menu menu to hello world
       -- Entry_Configure(My_Menu, "2", "-label {hello world}");
       -- COMMANDS
-      -- MenuWidget entryconfigure index ?options?
+      -- MenuWidget entryconfigure index options
       -- SEE ALSO
       -- Entry_Configure (function)
       -- SOURCE
@@ -255,6 +257,13 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- 8.6.2 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the configuration options of the active menu entry in My_Menu menu
+      -- Options: constant String := Entry_Configure(My_Menu, "active");
+      -- COMMANDS
+      -- MenuWidget entryconfigure index
+      -- SEE ALSO
+      -- Entry_Configure (procedure), Entry_Cget
       -- SOURCE
    function Entry_Configure
      (MenuWidget: in Tk_Menu; Index: in String) return String with
@@ -275,6 +284,11 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the index of the last element in the My_Menu menu
+      -- EntryIndex: constant String := Index(My_Menu, "end");
+      -- COMMANDS
+      -- MenuWidget index index
       -- SOURCE
    function Index(MenuWidget: in Tk_Menu; Index: in String) return String with
       Pre => Index /= "";
@@ -293,6 +307,13 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Add an element with text Quit which will be quit from the program to the My_Menu menu as second entry
+      -- Add(My_Menu, "2" ,"command", "-label Quit -command exit");
+      -- COMMANDS
+      -- MenuWidget insert index EntryType ?options?
+      -- SEE ALSO
+      -- AddMenu
       -- SOURCE
    procedure Insert
      (MenuWidget: in Tk_Menu'Class; Index, EntryType: in String;
@@ -313,6 +334,11 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Invoke the third element of the My_Menu menu
+      -- Result: constant String := Invoke(My_Menu, "2");
+      -- COMMANDS
+      -- MenuWidget invoke index
       -- SOURCE
    function Invoke(MenuWidget: in Tk_Menu; Index: in String) return String with
       Pre => Index /= "";
