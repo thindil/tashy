@@ -52,6 +52,13 @@ package Tcl.Tk.Ada.Widgets.Menu is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new menu with pathname .mymenu
+   -- My_Menu: constant Tk_Menu := Create(".mymenu");
+   -- COMMANDS
+   -- menu pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -59,40 +66,56 @@ package Tcl.Tk.Ada.Widgets.Menu is
       Pre => pathName /= "";
      -- ****
 
-   -- ****f* Menu/Create (procedure)
-   -- FUNCTION
-   -- Creates a new Tk_Menu in the specified interpreter.
-   -- PARAMETERS
-   -- Widgt    - Tk_Menu which will be created
-   -- pathName - Tk path (starts with dot) for the widget
-   -- options  - Options which will be passed to the widget. Default value is
-   --            empty
-   -- Interp   - Tcl interpreter to which the widget will be created. If null,
-   --            the widget will be created in the "contextual" interpreter.
-   --            Default value is null.
-   -- HISTORY
-   -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
-   -- SOURCE
+     -- ****f* Menu/Create (procedure)
+     -- FUNCTION
+     -- Creates a new Tk_Menu in the specified interpreter.
+     -- PARAMETERS
+     -- Widgt    - Tk_Menu which will be created
+     -- pathName - Tk path (starts with dot) for the widget
+     -- options  - Options which will be passed to the widget. Default value is
+     --            empty
+     -- Interp   - Tcl interpreter to which the widget will be created. If null,
+     --            the widget will be created in the "contextual" interpreter.
+     --            Default value is null.
+     -- HISTORY
+     -- 8.6.1 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create a new menu My_Menu with pathname .mymenu and with disabled tearoff option on the current Tcl interpreter
+     -- declare
+     --    My_Menu: Tk_Menu;
+     -- begin
+     --    Create(My_Menu, ".mymenu", "-tearoff false");
+     -- end;
+     -- COMMANDS
+     -- menu pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
+     -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Menu; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
-      -- ****
+     -- ****
 
-      -- ****f* Menu/Activate
-      -- FUNCTION
-      -- Activate the selected item in the selected menu. Previously active
-      -- is deactivated.
-      -- PARAMETERS
-      -- MenuWidget - Tk_Menu in which item will be activated
-      -- Index      - Index of the item to activate
-      -- HISTORY
-      -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
-      -- SOURCE
+     -- ****f* Menu/Activate
+     -- FUNCTION
+     -- Activate the selected item in the selected menu. Previously active
+     -- is deactivated.
+     -- PARAMETERS
+     -- MenuWidget - Tk_Menu in which item will be activated
+     -- Index      - Index of the item to activate
+     -- HISTORY
+     -- 8.6.4 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Activate the second element in menu My_Menu
+     -- Activate(My_Menu, "1");
+     -- COMMANDS
+     -- MenuWidget activate index
+     -- SOURCE
    procedure Activate(MenuWidget: in Tk_Menu'Class; Index: in String) with
       Pre => Index /= "";
       -- ****
@@ -108,6 +131,11 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- 8.6.1 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Add an element with text Quit which will be quit from the program to the My_Menu menu
+      -- Add(My_Menu, "command", "-label Quit -command exit");
+      -- COMMANDS
+      -- MenuWidget add EntryType ?options?
       -- SOURCE
    procedure Add
      (MenuWidget: in Tk_Menu'Class; EntryType: in String;
