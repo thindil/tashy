@@ -696,18 +696,25 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => Index /= "";
       -- ****
 
-   -- ****f* ListBox/Yview_Move_To
-   -- FUNCTION
-   -- Adjusts the view in the window so that fraction of the total height of
-   -- the Tk_ListBox is off-screen to the top.
-   -- PARAMETERS
-   -- ListboxWidget - Tk_ListBox which view will be adjusted
-   -- Fraction      - Fraction of the ListboxWidget to move. Must be between 0
+      -- ****f* ListBox/Yview_Move_To
+      -- FUNCTION
+      -- Adjusts the view in the window so that fraction of the total height of
+      -- the Tk_ListBox is off-screen to the top.
+      -- PARAMETERS
+      -- ListboxWidget - Tk_ListBox which view will be adjusted
+      -- Fraction      - Fraction of the ListboxWidget to move. Must be between 0
       --                 and 1
       -- HISTORY
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Show the first half of the listbox My_Listbox
+      -- Yview_Move_To(My_Listbox, "0.5");
+      -- COMMANDS
+      -- ListboxWidget yview moveto fraction
+      -- SEE ALSO
+      -- Xview_Move_To
       -- SOURCE
    procedure Yview_Move_To
      (ListboxWidget: in Tk_ListBox; Fraction: in String) with
@@ -726,6 +733,13 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Move the view in the My_Listbox listbox by 10 units to top
+      -- Yview_Scroll(My_Listbox, "-10", "units");
+      -- COMMANDS
+      -- ListboxWidget yview scroll number what
+      -- SEE ALSO
+      -- Xview_Scroll
       -- SOURCE
    procedure Yview_Scroll
      (ListboxWidget: in Tk_ListBox; Number, What: in String) with
