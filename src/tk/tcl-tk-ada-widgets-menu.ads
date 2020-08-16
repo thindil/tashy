@@ -456,6 +456,11 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Show My_Menu menu at point (24, 89) on the screen
+      -- Tk_Popup(My_Menu, "24", "89");
+      -- COMMANDS
+      -- tk_popup MenuWidget x y ?MenuEntry?
       -- SOURCE
    procedure Tk_Popup
      (MenuWidget: in Tk_Menu; X, Y: in String; MenuEntry: in String := "") with
@@ -473,6 +478,11 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Hide My_Menu menu
+      -- Unpost(My_Menu);
+      -- COMMANDS
+      -- MenuWidget unpost
       -- SOURCE
    procedure Unpost(MenuWidget: in Tk_Menu);
    -- ****
@@ -491,6 +501,13 @@ package Tcl.Tk.Ada.Widgets.Menu is
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the X coordinate of the first element in My_Menu menu
+   -- X_Position: constant String := XPosition(My_Menu, "0");
+   -- COMMANDS
+   -- MenuWidget xposition index
+   -- SEE ALSO
+   -- YPosition
    -- SOURCE
    function XPosition
      (MenuWidget: in Tk_Menu; Index: in String) return String with
@@ -511,6 +528,13 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the Y coordinate of the first element in My_Menu menu
+      -- Y_Position: constant String := YPosition(My_Menu, "0");
+      -- COMMANDS
+      -- MenuWidget yposition index
+      -- SEE ALSO
+      -- XPosition
       -- SOURCE
    function YPosition
      (MenuWidget: in Tk_Menu; Index: in String) return String with
