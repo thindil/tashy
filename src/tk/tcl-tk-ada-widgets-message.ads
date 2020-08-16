@@ -52,6 +52,13 @@ package Tcl.Tk.Ada.Widgets.Message is
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new message with pathname .mymessage and text hello world
+   -- My_Message: constant Tk_Message := Create(".mymessage", "-text {hello world}");
+   -- COMMANDS
+   -- message pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -74,6 +81,17 @@ package Tcl.Tk.Ada.Widgets.Message is
      -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create message My_Message with pathname .mymessage and text hello world on the current Tcl interpreter
+     -- declare
+     --    My_Message: Tk_Message;
+     -- begin
+     --    Create(My_Message, ".mymessage", "-text {hello world}");
+     -- end;
+     -- COMMANDS
+     -- message pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Message; pathName: in String; options: in String := "";
