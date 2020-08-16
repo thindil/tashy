@@ -53,6 +53,13 @@ package Tcl.Tk.Ada.Widgets.OptionMenu is
    -- 8.6.2 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new optionmenu with pathname .mymenu and options One Two Three and variable myvar
+   -- My_Option_Menu: constant Tk_OptionMenu := Create(".mymenu", "myvar One Two Three");
+   -- COMMANDS
+   -- tk_optionMenu pathName options
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName, options: in String; Interp: in Tcl_Interp := null)
@@ -76,6 +83,17 @@ package Tcl.Tk.Ada.Widgets.OptionMenu is
      -- 8.6.2 - Added
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create optionmenu My_Menu with pathname .mymenu and options One Two Three and variable myvar on the current Tcl interpreter
+     -- declare
+     --    My_Menu: Tk_OptionMenu;
+     -- begin
+     --    Create(My_Menu, ".mymenu", "myvar One Two Three");
+     -- end;
+     -- COMMANDS
+     -- tk_optionMenu pathName options
+     -- SEE ALSO
+     -- Create (function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_OptionMenu; pathName, options: in String;
