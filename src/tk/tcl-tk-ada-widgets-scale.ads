@@ -59,6 +59,13 @@ package Tcl.Tk.Ada.Widgets.Scale is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new scale with pathname .myscale and orientation horizontal
+   -- My_Scale: constant Tk_Scale := Create(".myscale", "-orient horizontal");
+   -- COMMANDS
+   -- scale pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -81,6 +88,17 @@ package Tcl.Tk.Ada.Widgets.Scale is
      -- 8.6.1 - Added
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create scale My_Scale with pathname .myscale and label my scale on the current Tcl interpreter
+     -- declare
+     --    My_Scale: Tk_Scale;
+     -- begin
+     --    Create(My_Scale, ".scale", "-label {my scale}");
+     -- end;
+     -- COMMANDS
+     -- scale pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Scale; pathName: in String; options: in String := "";
@@ -106,20 +124,27 @@ package Tcl.Tk.Ada.Widgets.Scale is
       -- SOURCE
    function Coords
      (ScaleWidget: in Tk_Scale; Value: in String := "") return String;
-   -- ****
+     -- ****
 
-   -- ****f* TkScale/Get (current value)
-   -- FUNCTION
-   -- Get current value of the Tk_Scale
-   -- PARAMETERS
-   -- ScaleWidget - Tk_Scale which will be queried for value
-   -- RESULT
-   -- Current value of the ScaleWidget
-   -- HISTORY
-   -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
-   -- SOURCE
+     -- ****f* TkScale/Get (current value)
+     -- FUNCTION
+     -- Get current value of the Tk_Scale
+     -- PARAMETERS
+     -- ScaleWidget - Tk_Scale which will be queried for value
+     -- RESULT
+     -- Current value of the ScaleWidget
+     -- HISTORY
+     -- 8.6.4 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Get the current value of the My_Scale scale
+     -- Value: constant String := Get(My_Scale);
+     -- COMMANDS
+     -- pathName get
+     -- SEE ALSO
+     -- Get (at selected pixel)
+     -- SOURCE
    function Get(ScaleWidget: in Tk_Scale) return String;
    -- ****
 
@@ -136,6 +161,13 @@ package Tcl.Tk.Ada.Widgets.Scale is
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the value at pixel (45, 21) in My_Scale scale
+   -- Value := constant String := Get(My_Scale, "45", "21");
+   -- COMMANDS
+   -- pathName get x y
+   -- SEE ALSO
+   -- Get (current value)
    -- SOURCE
    function Get(ScaleWidget: in Tk_Scale; X, Y: in String) return String with
       Pre => X /= "" and Y /= "";
