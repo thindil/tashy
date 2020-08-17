@@ -165,6 +165,11 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Identify the My_Paned paned element at point (24, 56)
+   -- Element: constant String := Identify(My_Paned, "24", "56");
+   -- COMMANDS
+   -- Paned identify x y
    -- SOURCE
    function Identify
      (Paned: in Tk_PanedWindow; X, Y: in String) return String with
@@ -185,6 +190,13 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the visibility of the .mypaned.myframe widget in My_Paned panedwindow
+      -- Visibility: constant String := Pane_Cget(My_Paned, ".mypaned.myframe", "-hide");
+      -- COMMANDS
+      -- Paned panecget window option
+      -- SEE ALSO
+      -- Pane_Configure (function)
       -- SOURCE
    function Pane_Cget
      (Paned: in Tk_PanedWindow; Window, Option: in String) return String with
@@ -204,6 +216,13 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the widget .mypaned.myframe sticky option to north in My_Paned panedwindow
+      -- Pane_Configure(My_Paned, ".mypaned.myframe", "-sticky n");
+      -- COMMANDS
+      -- Paned paneconfigure window options
+      -- SEE ALSO
+      -- Pane_Configure (function)
       -- SOURCE
    procedure Pane_Configure
      (Paned: in Tk_PanedWindow; Window, Options: in String) with
@@ -228,6 +247,13 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the height of the .mypaned.myframe widget in My_Paned panedwindow
+      -- Height: constant String := Pane_Configure(My_Paned, ".mypaned.myframe", "-height");
+      -- COMMANDS
+      -- Paned paneconfigure window ?options?
+      -- SEE ALSO
+      -- Pane_Configure (procedure), Pane_Cget
       -- SOURCE
    function Pane_Configure
      (Paned: in Tk_PanedWindow; Window: in String; Options: in String := "")
