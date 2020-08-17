@@ -352,6 +352,11 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get coordinates of the first sash in the My_Paned panedwindow
+      -- Coords: constant String := Sash_Coord(My_Paned, "0");
+      -- COMMANDS
+      -- Paned sash coord index
       -- SOURCE
    function Sash_Coord
      (Paned: in Tk_PanedWindow; Index: in String) return String with
@@ -371,6 +376,13 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Move second sash in the My_Paned panedwindow by difference (22, 54) and Sash_Mark call
+      -- Sash_DragTo(My_Paned, "1", "22", "54");
+      -- COMMANDS
+      -- Paned sash dragto index x y
+      -- SEE ALSO
+      -- Sash_Mark
       -- SOURCE
    procedure Sash_DragTo(Paned: in Tk_PanedWindow; Index, X, Y: in String) with
       Pre => Index /= "" and X /= "" and Y /= "";
@@ -390,6 +402,13 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the sash mark for second sash in My_Paned panewindow to (89, 34)
+      -- Sash_Mark(My_Paned, "1", "89", "34");
+      -- COMMANDS
+      -- Paned sash mark index x y
+      -- SEE ALSO
+      -- Sash_DragTo
       -- SOURCE
    procedure Sash_Mark(Paned: in Tk_PanedWindow; Index, X, Y: in String) with
       Pre => Index /= "" and X /= "" and Y /= "";
@@ -407,6 +426,11 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Place the first sash in My_Paned panedwindow at position (56, 32)
+      -- Sash_Place(My_Paned, "0", "56", "32");
+      -- COMMANDS
+      -- Paned sash place index x y
       -- SOURCE
    procedure Sash_Place(Paned: in Tk_PanedWindow; Index, X, Y: in String) with
       Pre => Index /= "" and X /= "" and Y /= "";
