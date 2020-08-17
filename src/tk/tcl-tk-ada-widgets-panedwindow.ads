@@ -272,6 +272,11 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the names of all widget in the My_Paned panedwindow
+      -- Children: constant String := Panes(My_Paned);
+      -- COMMANDS
+      -- Paned panes
       -- SOURCE
    function Panes(Paned: in Tk_PanedWindow) return String;
    -- ****
@@ -287,6 +292,11 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the coordinates of sash proxy in My_Paned panedwindow
+   -- Coords: constant String := Proxy_Coord(My_Paned);
+   -- COMMANDS
+   -- Paned proxy coord
    -- SOURCE
    function Proxy_Coord(Paned: in Tk_PanedWindow) return String;
    -- ****
@@ -300,6 +310,11 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Remove the proxy from the My_Paned panedwindow
+   -- Proxy_Forget(My_Paned);
+   -- COMMANDS
+   -- Paned proxy forget
    -- SOURCE
    procedure Proxy_Forget(Paned: in Tk_PanedWindow);
    -- ****
@@ -315,6 +330,11 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Place the My_Paned panedwindow proxy at (24, 57)
+   -- Proxy_Place(My_Paned, "24", "57");
+   -- COMMANDS
+   -- Paned proxy place x y
    -- SOURCE
    procedure Proxy_Place(Paned: in Tk_PanedWindow; X, Y: in String) with
       Pre => X /= "" and Y /= "";
