@@ -104,24 +104,29 @@ package Tcl.Tk.Ada.Widgets.Scale is
      (Widgt: out Tk_Scale; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
-      -- ****
+     -- ****
 
-      -- ****f* TkScale/Coords
-      -- FUNCTION
-      -- Get the elements which the x and y coordinates of the point
-      -- along the centerline of the trough that corresponds to Value
-      -- PARAMETERS
-      -- ScaleWidget - Tk_Scale which will be queried for coordinates
-      -- Value       - Value for query. Can be empty. Default value is empty
-      -- RESULT
-      -- A list whose elements are the x and y coordinates of the point along
-      -- the centerline of the trough that corresponds to Value. If Value is
-      -- omitted then the ScaleWidget's current value is used.
-      -- HISTORY
-      -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
-      -- SOURCE
+     -- ****f* TkScale/Coords
+     -- FUNCTION
+     -- Get the elements which the x and y coordinates of the point
+     -- along the centerline of the trough that corresponds to Value
+     -- PARAMETERS
+     -- ScaleWidget - Tk_Scale which will be queried for coordinates
+     -- Value       - Value for query. Can be empty. Default value is empty
+     -- RESULT
+     -- A list whose elements are the x and y coordinates of the point along
+     -- the centerline of the trough that corresponds to Value. If Value is
+     -- omitted then the ScaleWidget's current value is used.
+     -- HISTORY
+     -- 8.6.4 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Get the element at the current value of My_Scale scale
+     -- Element: constant String := Coords(My_Scale);
+     -- COMMANDS
+     -- ScaleWidget coords ?value?
+     -- SOURCE
    function Coords
      (ScaleWidget: in Tk_Scale; Value: in String := "") return String;
      -- ****
@@ -141,7 +146,7 @@ package Tcl.Tk.Ada.Widgets.Scale is
      -- -- Get the current value of the My_Scale scale
      -- Value: constant String := Get(My_Scale);
      -- COMMANDS
-     -- pathName get
+     -- ScaleWidget get
      -- SEE ALSO
      -- Get (at selected pixel)
      -- SOURCE
@@ -165,7 +170,7 @@ package Tcl.Tk.Ada.Widgets.Scale is
    -- -- Get the value at pixel (45, 21) in My_Scale scale
    -- Value := constant String := Get(My_Scale, "45", "21");
    -- COMMANDS
-   -- pathName get x y
+   -- ScaleWidget get x y
    -- SEE ALSO
    -- Get (current value)
    -- SOURCE
@@ -188,6 +193,11 @@ package Tcl.Tk.Ada.Widgets.Scale is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the name of the element at pixel (56, 32) in My_Scale scale
+      -- Element_Name: constant String := Identify(My_Scale, "56", "32");
+      -- COMMANDS
+      -- ScaleWidget identify x y
       -- SOURCE
    function Identify
      (ScaleWidget: in Tk_Scale; X, Y: in String) return String with
@@ -204,6 +214,11 @@ package Tcl.Tk.Ada.Widgets.Scale is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the value of the My_Scale scale to 20
+      -- Set(My_Scale, "20");
+      -- COMMANDS
+      -- ScaleWidget set value
       -- SOURCE
    procedure Set(ScaleWidget: in Tk_Scale; Value: in String) with
       Pre => Value /= "";
