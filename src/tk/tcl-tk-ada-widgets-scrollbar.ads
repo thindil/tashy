@@ -154,7 +154,7 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
 
    -- ****f* Scrollbar/Scrollbar_Delta
    -- FUNCTION
-   -- Get the faction change between current Tk_Scrollbar setting and the
+   -- Get the fraction change between current Tk_Scrollbar setting and the
    -- selected value
    -- PARAMETERS
    -- ScrollbarWidget - Tk_Scrollbar which will be queried
@@ -169,6 +169,11 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the fraction for horizontal scrollbar My_Scrollbar for value 10
+   -- Delta: constant String := Scrollbar_Delta(My_Scrollbar, "10", "0");
+   -- COMMANDS
+   -- ScrollbarWidget delta deltaX deltaY
    -- SOURCE
    function Scrollbar_Delta
      (ScrollbarWidget: in Tk_Scrollbar; DeltaX, DeltaY: in String)
@@ -190,6 +195,11 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the fraction for My_Scrollbar at point (23, 56)
+      -- Scroll_Fraction: constant String := Fraction(My_Scrollbar, "23", "56");
+      -- COMMANDS
+      -- ScrollbarWidget fraction x y
       -- SOURCE
    function Fraction
      (ScrollbarWidget: in Tk_Scrollbar; X, Y: in String) return String with
@@ -209,6 +219,13 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the visibility setting for the scrollbar My_Scrollbar
+      -- Visible: constant String := Get(My_Scrollbar);
+      -- COMMANDS
+      -- ScrollbarWidget get
+      -- SEE ALSO
+      -- Set
       -- SOURCE
    function Get(ScrollbarWidget: in Tk_Scrollbar) return String;
    -- ****
@@ -228,6 +245,11 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the name of the My_Scrollbar scrollbar element at point (56, 23)
+   -- Element_Name: constant String := Identify(My_Scrollbar, "56", "23");
+   -- COMMANDS
+   -- ScrollbarWidget identify x y
    -- SOURCE
    function Identify
      (ScrollbarWidget: in Tk_Scrollbar; X, Y: in String) return String with
