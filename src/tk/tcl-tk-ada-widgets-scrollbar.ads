@@ -270,6 +270,13 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set visibility of the associated widget to My_Scrollbar scrollbar from 0 to 20%
+      -- Set(My_Scrollbar, "0.0", "0.2");
+      -- COMMANDS
+      -- ScrollbarWidget set first last
+      -- SEE ALSO
+      -- Get
       -- SOURCE
    procedure Set(ScrollbarWidget: in Tk_Scrollbar; First, Last: in String) with
       Pre => First /= "" and Last /= "";
