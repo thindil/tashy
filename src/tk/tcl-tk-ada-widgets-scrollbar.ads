@@ -59,6 +59,13 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new scrollbar with pathname .myscroll and orientation horizontal
+   -- My_Scrollbar: constant Tk_Scrollbar := Create(".myscroll", "-orient horizontal");
+   -- COMMANDS
+   -- scrollbar pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -81,25 +88,42 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
      -- 8.6.1 - Added
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create scrollbar My_Scrollbar with pathname .myscroll and relief solid on the current Tcl interpreter
+     -- declare
+     --    My_Scrollbar: Tk_Scrollbar;
+     -- begin
+     --    Create(My_Scrollbar, ".myscroll", "-relief solid");
+     -- end;
+     -- COMMANDS
+     -- scrollbar pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Scrollbar; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
-      -- ****
+     -- ****
 
-      -- ****f* Scrollbar/Activate (procedure)
-      -- FUNCTION
-      -- Set the selected element as an active in the selected Tk_Scrollbar
-      -- PARAMETERS
-      -- ScrollbarWidget - Tk_Scrollbar in which an element will be activated
-      -- Element         - The element to activate. Can be "arrow1", "slider"
-      --                   or "arrow2"
-      -- HISTORY
-      -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
-      -- SOURCE
+     -- ****f* Scrollbar/Activate (procedure)
+     -- FUNCTION
+     -- Set the selected element as an active in the selected Tk_Scrollbar
+     -- PARAMETERS
+     -- ScrollbarWidget - Tk_Scrollbar in which an element will be activated
+     -- Element         - The element to activate. Can be "arrow1", "slider"
+     --                   or "arrow2"
+     -- HISTORY
+     -- 8.6.4 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- -- Activate "arrow1" in My_Scrollbar scrollbar
+     -- Activate(My_Scrollbar, "arrow1");
+     -- COMMANDS
+     -- ScrollbarWidget activate element
+     -- SEE ALSO
+     -- Activate (function)
+     -- SOURCE
    procedure Activate
      (ScrollbarWidget: in Tk_Scrollbar; Element: in String) with
       Pre => Element in "arrow1" | "slider" | "arrow2";
@@ -117,6 +141,13 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the active element in the My_Scrollbar scrollbar
+      -- Element: constant String := Activate(My_Scrollbar);
+      -- COMMANDS
+     -- ScrollbarWidget activate
+     -- SEE ALSO
+     -- Activate (procedure)
       -- SOURCE
    function Activate(ScrollbarWidget: in Tk_Scrollbar) return String;
    -- ****
