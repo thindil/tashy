@@ -59,6 +59,13 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new spinbox with pathname .myspinbox and relief solid
+   -- My_Spinbox: constant Tk_SpinBox := Create(".myspinbox", "-relief solid");
+   -- COMMANDS
+   -- spinbox pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -81,29 +88,45 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
      -- 8.6.1 - Added
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create spinbox My_Spinbox with pathname .myspinbox and black background on the current Tcl interpreter
+     -- declare
+     --    My_Spinbox: Tk_SpinBox;
+     -- begin
+     --    Create(My_Spinbox, ".myspinbox", "-background black");
+     -- end;
+     -- COMMANDS
+     -- spinbox pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_SpinBox; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
-      -- ****
+     -- ****
 
-      -- ****f* SpinBox/Identify
-      -- FUNCTION
-      -- Get the name of the Tk_SpinBox element at the selected coordinates
-      -- PARAMETERS
-      -- SpinBoxWidget - Tk_SpinBox which will be queried for the name of the
-      --                 element
-      -- X             - X coordinate of the pixel which will be check
-      -- Y             - Y coordinate of the pixel which will be check
-      -- RESULT
-      -- Name of the element: "buttondown", "buttonup", "entry" or "none" if
-      -- pixel is outside SpinBoxWidget
-      -- HISTORY
-      -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
-      -- SOURCE
+     -- ****f* SpinBox/Identify
+     -- FUNCTION
+     -- Get the name of the Tk_SpinBox element at the selected coordinates
+     -- PARAMETERS
+     -- SpinBoxWidget - Tk_SpinBox which will be queried for the name of the
+     --                 element
+     -- X             - X coordinate of the pixel which will be check
+     -- Y             - Y coordinate of the pixel which will be check
+     -- RESULT
+     -- Name of the element: "buttondown", "buttonup", "entry" or "none" if
+     -- pixel is outside SpinBoxWidget
+     -- HISTORY
+     -- 8.6.4 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Get the name of the element of the My_Spinbox spinbox at point (43, 28)
+     -- Element_Name: constant String := Identify(My_Spinbox, "43", "28");
+     -- COMMANDS
+     -- SpinBoxWidget identify x y
+     -- SOURCE
    function Identify
      (SpinBoxWidget: in Tk_SpinBox; X, Y: in String) return String with
       Pre => X /= "" and Y /= "";
@@ -121,6 +144,11 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
       -- 8.6.4 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Invoke button "buttonup" of My_Spinbox spinbox
+      -- Invoke(My_Spinbox, "buttonup");
+      -- COMMANDS
+      -- SpinBoxWidget invoke element
       -- SOURCE
    procedure Invoke(SpinBoxWidget: in Tk_SpinBox; Element: in String) with
       Pre => Element in "buttondown" | "buttonup";
