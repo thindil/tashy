@@ -93,7 +93,7 @@ package Tcl.Tk.Ada.Widgets.Scale is
      -- declare
      --    My_Scale: Tk_Scale;
      -- begin
-     --    Create(My_Scale, ".scale", "-label {my scale}");
+     --    Create(My_Scale, ".myscale", "-label {my scale}");
      -- end;
      -- COMMANDS
      -- scale pathName ?options?
