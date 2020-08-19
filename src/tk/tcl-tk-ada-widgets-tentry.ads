@@ -155,6 +155,15 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- Widgt - Tk_Entry from which text will be taken
       -- RESULT
       -- Returns the entry's string.
+      -- HISTORY
+      -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
+      -- TODO
+      -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the text of My_Entry entry
+      -- Text: constant String := Get(My_Entry);
+      -- COMMANDS
+      -- Widgt get
       -- SOURCE
    function Get(Widgt: in Tk_Entry'Class) return String;
    -- ****
@@ -171,6 +180,11 @@ package Tcl.Tk.Ada.Widgets.TEntry is
    -- 8.6.5 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Place the insertion cursor in My_Entry entry at start
+   -- ICursor(My_Entry, "0");
+   -- COMMANDS
+   -- TextEntry icursor index
    -- SOURCE
    procedure ICursor(TextEntry: in Tk_Entry'Class; Index: in String) with
       Pre => Index /= "";
@@ -181,13 +195,17 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- Get numerical index of character from the selected Index
       -- PARAMETERS
       -- TextEntry - Tk_Entry which will be queried for index
-      -- Index         - Index of character which numeric index will be taken
+      -- Index     - Index of character which numeric index will be taken
       -- RESULT
       -- Numerical index of the selected character
       -- HISTORY
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- -- Get the numerical index of the last character in My_Entry entry
+      -- Index: constant String := Entry_Index(My_Entry, "end");
+      -- COMMANDS
+      -- TextEntry index index
       -- SOURCE
    function Entry_Index
      (TextEntry: in Tk_Entry'Class; Index: in String) return String with
@@ -205,6 +223,10 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- 8.6.2 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- -- Insert hello world text at the end of the My_Entry entry current text
+      -- Insert(My_Entry, "end", "{hello world}");
+      -- COMMANDS
+      -- TextEntry insert index text
       -- SOURCE
    procedure Insert
      (TextEntry: in Tk_Entry'Class; Index: in String; Text: in String) with
