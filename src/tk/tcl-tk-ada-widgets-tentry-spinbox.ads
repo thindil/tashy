@@ -154,24 +154,31 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
       Pre => Element in "buttondown" | "buttonup";
       -- ****
 
-   -- ****f* SpinBox/Selection_Element (procedure)
-   -- FUNCTION
-   -- Set the element of Tk_SpinBox as the selected element
-   -- PARAMETERS
-   -- SpinBoxWidget - Tk_SpinBox in which element will be selected
-   -- Element       - Name of the element to select. Possible values are
-   --                 "buttonup", "buttondown", "entry" or "none"
-   -- HISTORY
-   -- 8.6.5 - Added
-   -- TODO
-   -- Replace it with higher level of binding
-   -- SOURCE
+      -- ****f* SpinBox/Selection_Element (procedure)
+      -- FUNCTION
+      -- Set the element of Tk_SpinBox as the selected element
+      -- PARAMETERS
+      -- SpinBoxWidget - Tk_SpinBox in which element will be selected
+      -- Element       - Name of the element to select. Possible values are
+      --                 "buttonup", "buttondown", "entry" or "none"
+      -- HISTORY
+      -- 8.6.5 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set entry of the My_Spinbox spinbox as a selected element
+      -- Selection_Element(My_Spinbox, "entry");
+      -- COMMANDS
+      -- SpinBoxWidget selection element element
+      -- SEE ALSO
+      -- Selection_Element (function)
+      -- SOURCE
    procedure Selection_Element
      (SpinBoxWidget: in Tk_SpinBox; Element: in String) with
       Pre => Element in "buttondown" | "buttonup" | "entry" | "none";
       -- ****
 
-      -- ****f* SpinBox/Selection_Element
+      -- ****f* SpinBox/Selection_Element (function)
       -- FUNCTION
       -- Get the currently selected element of the selected Tk_SpinBox
       -- PARAMETERS
@@ -183,21 +190,35 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the currently selected element for My_Spinbox spinbox
+      -- Selected_Element: constant String := Selection_Element(My_Spinbox);
+      -- COMMANDS
+      -- SpinBoxWidget selection element
+      -- SEE ALSO
+      -- Selection_Element (procdure)
       -- SOURCE
    function Selection_Element(SpinBoxWidget: in Tk_SpinBox) return String;
    -- ****
 
-      -- ****f* SpinBox/Set (procedure)
-      -- FUNCTION
-      -- Set the selected String as a new value for the selected Tk_SpinBox
-      -- PARAMETERS
-      -- SpinBoxWidget - Tk_SpinBox which value will be set
-      -- Value         - Value to set
-      -- HISTORY
-      -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
-      -- SOURCE
+   -- ****f* SpinBox/Set (procedure)
+   -- FUNCTION
+   -- Set the selected String as a new value for the selected Tk_SpinBox
+   -- PARAMETERS
+   -- SpinBoxWidget - Tk_SpinBox which value will be set
+   -- Value         - Value to set
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Set the value of My_Spinbox spinbox to 100
+   -- Set(My_Spinbox, "100");
+   -- COMMANDS
+   -- SpinBoxWidget set value
+   -- SEE ALSO
+   -- Set (function)
+   -- SOURCE
    procedure Set(SpinBoxWidget: in Tk_SpinBox; Value: in String) with
       Pre => Value /= "";
       -- ****
@@ -213,6 +234,13 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the current value of My_Spinbox spinbox
+      -- Value: constant String := Set(My_Spinbox);
+      -- COMMANDS
+      -- SpinBoxWidget set
+      -- SEE ALSO
+      -- Set (procedure)
       -- SOURCE
    function Set(SpinBoxWidget: in Tk_SpinBox) return String;
    -- ****
