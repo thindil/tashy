@@ -329,6 +329,11 @@ package Tcl.Tk.Ada.Widgets.TEntry is
    -- 8.6.5 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Set the selection anchor to the 10th character in My_Entry entry
+   -- Selection_From(My_Entry, "9");
+   -- COMMANDS
+   -- TextEntry selection from index
    -- SOURCE
    procedure Selection_From
      (TextEntry: in Tk_Entry'Class; Index: in String) with
@@ -346,6 +351,11 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Check if any character is selected in My_Entry entry
+      -- Is_Selected: constant String := Selection_Present(My_Entry);
+      -- COMMANDS
+      -- TextEntry selection present
       -- SOURCE
    function Selection_Present(TextEntry: in Tk_Entry'Class) return String;
    -- ****
@@ -361,6 +371,11 @@ package Tcl.Tk.Ada.Widgets.TEntry is
    -- 8.6.5 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Set the selection in My_Entry entry from first character to 5th
+   -- Selection_Range(My_Entry, "0", "4");
+   -- COMMANDS
+   -- TextEntry selection range startindex endindex
    -- SOURCE
    procedure Selection_Range
      (TextEntry: in Tk_Entry'Class; StartIndex, EndIndex: in String) with
@@ -380,6 +395,11 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the selection from anchor point to the last character in My_Entry
+      -- Selection_To(My_Entry, "end");
+      -- COMMANDS
+      -- TextEntry selection to index
       -- SOURCE
    procedure Selection_To(TextEntry: in Tk_Entry'Class; Index: in String) with
       Pre => Index /= "";
