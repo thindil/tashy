@@ -51,6 +51,13 @@ package Tcl.Tk.Ada.Widgets.TEntry is
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new tentry with pathname .myentry and width of 10 characters
+   -- My_Entry: constant Tk_Entry := Create(".myentry", "-width 10");
+   -- COMMANDS
+   -- entry pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -72,30 +79,46 @@ package Tcl.Tk.Ada.Widgets.TEntry is
      -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create tentry My_Entry with pathname .myentry and state readonly on the current Tcl interpreter
+     -- declare
+     --    My_Entry: Tk_Entry;
+     -- begin
+     --    Create(My_Entry, ".myentry", "-state readonly");
+     -- end;
+     -- COMMANDS
+     -- entry pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Entry; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
-      -- ****
+     -- ****
 
-      -- ****f* TEntry/BBox
-      -- FUNCTION
-      -- Get size of bounding box of the selected character in the selected
-      -- Tk_Entry
-      -- PARAMETERS
-      -- EntryWidget - Tk_Entry which will be queried
-      -- Index       - Index of the character which bounding box will be
-      -- taken
-      -- RESULT
-      -- Four values: x1, y1 - coordinates of starting point of bounding box
-      -- from top left, x2, y2 - coordinates of ending point from bottom right
-      -- of bounding box.
-      -- HISTORY
-      -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
-      -- SOURCE
+     -- ****f* TEntry/BBox
+     -- FUNCTION
+     -- Get size of bounding box of the selected character in the selected
+     -- Tk_Entry
+     -- PARAMETERS
+     -- EntryWidget - Tk_Entry which will be queried
+     -- Index       - Index of the character which bounding box will be
+     -- taken
+     -- RESULT
+     -- Four values: x1, y1 - coordinates of starting point of bounding box
+     -- from top left, x2, y2 - coordinates of ending point from bottom right
+     -- of bounding box.
+     -- HISTORY
+     -- 8.6.5 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Get the bounding box of the whole My_Entry entry
+     -- Coords: constant String := BBox(My_Entry, "all");
+     -- COMMANDS
+     -- TextEntry bbox index
+     -- SOURCE
    function BBox
      (TextEntry: in Tk_Entry'Class; Index: in String) return String with
       Pre => Index /= "";
@@ -109,6 +132,15 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- FirstIndex - Index of text from which delete will start. Index starts from 0
       -- LastIndex  - End index to which text will be deleted. If empty, delete only one
       --              character. Default is empty.
+      -- HISTORY
+      -- 8.6.2 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Delete second character from My_Entry entry
+      -- Delete(My_Entry, "1");
+      -- COMMANDS
+      -- TextEntry delete first ?last?
       -- SOURCE
    procedure Delete
      (TextEntry: in Tk_Entry'Class; FirstIndex: in String;
@@ -169,6 +201,10 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- TextEntry - Tk_Entry to which text will be inserted
       -- Index     - Index in which position text will be inserted
       -- Text      - Text to insert
+      -- HISTORY
+      -- 8.6.2 - Added
+      -- TODO
+      -- Replace it with higher level of binding
       -- SOURCE
    procedure Insert
      (TextEntry: in Tk_Entry'Class; Index: in String; Text: in String) with
