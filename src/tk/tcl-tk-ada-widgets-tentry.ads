@@ -243,6 +243,11 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the starting position for scan in My_Entry entry to X coordinate 18
+      -- Scan_Mark(My_Entry, "18");
+      -- COMMANDS
+      -- TextEntry scan mark x
       -- SOURCE
    procedure Scan_Mark(TextEntry: in Tk_Entry'Class; X: in String) with
       Pre => X /= "";
@@ -260,6 +265,11 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Drag view of My_Entry entry to X coordinate 24
+      -- Scan_DragTo(My_Entry, "24");
+      -- COMMANDS
+      -- TextEntry scan dragto x
       -- SOURCE
    procedure Scan_DragTo(TextEntry: in Tk_Entry'Class; X: in String) with
       Pre => X /= "";
@@ -272,12 +282,17 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- character
       -- PARAMETERS
       -- TextEntry - Tk_Entry in which selection will be adjusted
-      -- Index         - Index of character to set as the last in the
-      --                 selection
+      -- Index     - Index of character to set as the last in the
+      --             selection
       -- HISTORY
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Add second character in My_Entry entry to the selection
+      -- Selection_Adjust(My_Entry, "1");
+      -- COMMANDS
+      -- TextEntry selection adjust index
       -- SOURCE
    procedure Selection_Adjust
      (TextEntry: in Tk_Entry'Class; Index: in String) with
@@ -293,6 +308,11 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Remove the selection from My_Entry entry
+      -- Selection_Clear(My_Entry);
+      -- COMMANDS
+      -- TextEntry selection clear
       -- SOURCE
    procedure Selection_Clear(TextEntry: in Tk_Entry'Class);
    -- ****
