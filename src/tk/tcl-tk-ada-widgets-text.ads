@@ -175,6 +175,11 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the amount of the selected item in My_Text between first and 10th character in second line
+      -- Amount: constant String := Count(My_Text, "-indices", "2.0", "2.9");
+      -- COMMANDS
+      -- TextWidget count options index1 index2
       -- SOURCE
    function Count
      (TextWidget: in Tk_Text; Options, Index1, Index2: in String)
@@ -193,6 +198,13 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Enable consistency checks in My_Text text
+      -- Debug(My_Text, "true");
+      -- COMMANDS
+      -- TextWidget debug boolean
+      -- SEE ALSO
+      -- Debug (function)
       -- SOURCE
    procedure Debug(TextWidget: in Tk_Text; Enable: in String) with
       Pre => Enable in "true" | "false";
@@ -210,6 +222,13 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the state of consistency checks in My_Text text
+      -- Debug_State: constant String := Debug(My_Text);
+      -- COMMANDS
+      -- TextWidget debug
+      -- SEE ALSO
+      -- Debug (function)
       -- SOURCE
    function Debug(TextWidget: in Tk_Text) return String;
    -- ****
@@ -228,6 +247,11 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- 8.6.3 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Delete the whole first line in the My_Text text
+   -- Delete(My_Text, "1.0", "1.end");
+   -- COMMANDS
+   -- pathName delete startindex ?indexes?
    -- SOURCE
    procedure Delete
      (TextWidget: in Tk_Text; StartIndex: in String;
