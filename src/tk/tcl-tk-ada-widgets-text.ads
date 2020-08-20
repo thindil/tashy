@@ -251,7 +251,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- -- Delete the whole first line in the My_Text text
    -- Delete(My_Text, "1.0", "1.end");
    -- COMMANDS
-   -- pathName delete startindex ?indexes?
+   -- TextWidget delete startindex ?indexes?
    -- SOURCE
    procedure Delete
      (TextWidget: in Tk_Text; StartIndex: in String;
@@ -284,6 +284,11 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the information about 10th character in third line in My_Text text
+      -- Info: constant String := DLineInfo(My_Text, "3.9");
+      -- COMMANDS
+      -- TextWidget dlineinfo index
       -- SOURCE
    function DLineInfo
      (TextWidget: in Tk_Text; Index: in String) return String with
@@ -311,6 +316,11 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the whole content of My_Text text
+      -- Content: constant String := Dump(My_Text, "-all", "1.0", "end");
+      -- COMMANDS
+      -- TextWidget dump ?switches? index1 ?index2?
       -- SOURCE
    function Dump
      (TextWidget: in Tk_Text; Switches: in String := "-all"; Index1: in String;
@@ -329,6 +339,11 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Check if redo action is available for My_Text text
+      -- Can_Redo: constant String := Edit_CanRedo(My_Text);
+      -- COMMANDS
+      -- TextWidget edit canredo
       -- SOURCE
    function Edit_CanRedo(TextWidget: in Tk_Text) return String;
    -- ****
@@ -344,6 +359,11 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- 8.6.5 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Check if undo action is available for My_Text text
+   -- Can_Undo: constant String := Edit_CanUndo(My_Text);
+   -- COMMANDS
+   -- TextWidget edit canundo
    -- SOURCE
    function Edit_CanUndo(TextWidget: in Tk_Text) return String;
    -- ****
