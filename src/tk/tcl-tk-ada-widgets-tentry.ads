@@ -416,6 +416,11 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Revalidate value of My_Entry entry
+      -- Valid: constant String := Validate(My_Entry);
+      -- COMMANDS
+      -- TextEntry validate
       -- SOURCE
    function Validate(TextEntry: in Tk_Entry'Class) return String;
    -- ****
@@ -433,6 +438,13 @@ package Tcl.Tk.Ada.Widgets.TEntry is
    -- 8.6.5 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the horizontal fraction of the My_Entry entry
+   -- Horizontal_Fraction: constant String := XView(My_Entry);
+   -- COMMANDS
+   -- TextEntry xview
+   -- SEE ALSO
+   -- YView (function), XView (procedure)
    -- SOURCE
    function XView(TextEntry: in Tk_Entry'Class) return String;
    -- ****
@@ -449,6 +461,13 @@ package Tcl.Tk.Ada.Widgets.TEntry is
    -- 8.6.5 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Set view of My_Entry entry to second character
+   -- XView(My_Entry, "1");
+   -- COMMANDS
+   -- TextEntry xview index
+   -- SEE ALSO
+   -- YView (procedure), XView (function)
    -- SOURCE
    procedure XView(TextEntry: in Tk_Entry'Class; Index: in String) with
       Pre => Index /= "";
@@ -466,6 +485,13 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Show the first half of the entry My_Entry
+      -- Xview_Move_To(My_Entry, "0.5");
+      -- COMMANDS
+      -- TextEntry xview moveto fraction
+      -- SEE ALSO
+      -- Yview_Move_To
       -- SOURCE
    procedure Xview_Move_To
      (TextEntry: in Tk_Entry'Class; Fraction: in String) with
