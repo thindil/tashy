@@ -444,7 +444,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
    -- COMMANDS
    -- TextEntry xview
    -- SEE ALSO
-   -- YView (function), XView (procedure)
+   -- XView (procedure)
    -- SOURCE
    function XView(TextEntry: in Tk_Entry'Class) return String;
    -- ****
@@ -467,7 +467,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
    -- COMMANDS
    -- TextEntry xview index
    -- SEE ALSO
-   -- YView (procedure), XView (function)
+   -- XView (function)
    -- SOURCE
    procedure XView(TextEntry: in Tk_Entry'Class; Index: in String) with
       Pre => Index /= "";
@@ -490,8 +490,6 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- Xview_Move_To(My_Entry, "0.5");
       -- COMMANDS
       -- TextEntry xview moveto fraction
-      -- SEE ALSO
-      -- Yview_Move_To
       -- SOURCE
    procedure Xview_Move_To
      (TextEntry: in Tk_Entry'Class; Fraction: in String) with
@@ -510,6 +508,11 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Move the view in the My_Entry entry by 10 units to right
+      -- Xview_Scroll(My_Entry, "10", "units");
+      -- COMMANDS
+      -- TextEntry xview scroll number what
       -- SOURCE
    procedure Xview_Scroll
      (TextEntry: in Tk_Entry'Class; Number, What: in String) with
