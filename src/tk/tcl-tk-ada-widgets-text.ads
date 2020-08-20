@@ -52,6 +52,13 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new text with pathname .mytext and height of 10 characters
+   -- My_Text: constant Tk_Text := Create(".text", "-height 10");
+   -- COMMANDS
+   -- text pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -74,29 +81,45 @@ package Tcl.Tk.Ada.Widgets.Text is
      -- 8.6.1 - Added
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create text My_Text with pathname .mytext and state readonly on the current Tcl interpreter
+     -- declare
+     --    My_Text: Tk_Text;
+     -- begin
+     --    Create(My_Text, ".mytext", "-state readonly");
+     -- end;
+     -- COMMANDS
+     -- text pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Text; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
-      -- ****
+     -- ****
 
-      -- ****f* Text/BBox
-      -- FUNCTION
-      -- Get size of bounding box of the selected character in the selected
-      -- Tk_Text
-      -- PARAMETERS
-      -- TextWidget - Tk_Text which will be queried
-      -- Index      - Index of the character which bounding box will be taken
-      -- RESULT
-      -- Four values: x1, y1 - coordinates of starting point of bounding box
-      -- from top left, x2, y2 - coordinates of ending point from bottom right
-      -- of bounding box.
-      -- HISTORY
-      -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
-      -- SOURCE
+     -- ****f* Text/BBox
+     -- FUNCTION
+     -- Get size of bounding box of the selected character in the selected
+     -- Tk_Text
+     -- PARAMETERS
+     -- TextWidget - Tk_Text which will be queried
+     -- Index      - Index of the character which bounding box will be taken
+     -- RESULT
+     -- Four values: x1, y1 - coordinates of starting point of bounding box
+     -- from top left, x2, y2 - coordinates of ending point from bottom right
+     -- of bounding box.
+     -- HISTORY
+     -- 8.6.5 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Get the bouding box for the first character in My_Text text
+     -- Bounding_Box: constant String := BBox(My_Text, "1.0");
+     -- COMMANDS
+     -- TextWidget bbox index
+     -- SOURCE
    function BBox(TextWidget: in Tk_Text; Index: in String) return String with
       Pre => Index /= "";
       -- ****
@@ -117,6 +140,11 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Check if the first character in My_Text text is that same as the last
+      -- Equal: constant String := Compare(My_Text, "1.0", "==", "end");
+      -- COMMANDS
+      -- TextWidget compare index1 op index2
       -- SOURCE
    function Compare
      (TextWidget: in Tk_Text; Index1, Op, Index2: in String) return String with
