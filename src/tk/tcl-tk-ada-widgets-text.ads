@@ -379,6 +379,13 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- 8.6.5 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Set the modified flag for the My_Text text to true
+   -- Edit_Modified(My_Text, "true");
+   -- COMMANDS
+   -- TextWidget edit modified value
+   -- SEE ALSO
+   -- Edit_Modified (function)
    -- SOURCE
    procedure Edit_Modified(TextWidget: in Tk_Text; Value: in String) with
       Pre => Value in "0" | "1" | "true" | "false";
@@ -395,6 +402,13 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- Replace it with higher level of binding
       -- RESULT
       -- Value of the flag Modified of TextWidget
+      -- EXAMPLE
+      -- -- Get the modified flag of My_Text text
+      -- Modified_Flag: constant String := Edit_Modified(My_Text);
+      -- COMMANDS
+      -- TextWidget edit modified
+      -- SEE ALSO
+      -- Edit_Modified (procedure)
       -- SOURCE
    function Edit_Modified(TextWidget: in Tk_Text) return String;
    -- ****
@@ -411,6 +425,11 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- 8.6.5 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Reapply the last undone edit to the My_Text text
+   -- Edit_Redo(My_Text);
+   -- COMMANDS
+   -- TextWidget edit redo
    -- SOURCE
    procedure Edit_Redo(TextWidget: in Tk_Text);
    -- ****
@@ -424,6 +443,11 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- 8.6.5 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Clear redo and undo stacks for the My_Text text
+   -- Edit_Reset(My_Text);
+   -- COMMANDS
+   -- TextWidget edit reset
    -- SOURCE
    procedure Edit_Reset(TextWidget: in Tk_Text);
    -- ****
