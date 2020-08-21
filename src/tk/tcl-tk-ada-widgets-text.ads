@@ -462,6 +462,11 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- 8.6.5 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Add a separator to the My_Text text undo stack
+   -- Edit_Separator(My_Text);
+   -- COMMANDS
+   -- TextWidget edit separator
    -- SOURCE
    procedure Edit_Separator(TextWidget: in Tk_Text);
    -- ****
@@ -479,6 +484,11 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- 8.6.5 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Undo the last edit in My_Text text
+   -- Edit_Undo(My_Text);
+   -- COMMANDS
+   -- TextWidget edit undo
    -- SOURCE
    procedure Edit_Undo(TextWidget: in Tk_Text);
    -- ****
@@ -498,6 +508,11 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- 8.6.5 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the 6th character in 5th line in My_Text text
+   -- Char: constant String := Get(My_Text, "5.5");
+   -- COMMANDS
+   -- TextWidget get options
    -- SOURCE
    function Get(TextWidget: in Tk_Text; Options: in String) return String with
       Pre => Options /= "";
@@ -516,6 +531,13 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the name of the image at 6th character in second line in My_Text text
+      -- Image_Name: constant String := Image_Cget(My_Text, "2.5", "-name");
+      -- COMMANDS
+      -- TextWidget image cget index option
+      -- SEE ALSO
+      -- Image_Configure (function)
       -- SOURCE
    function Image_Cget
      (TextWidget: in Tk_Text; Index, Option: in String) return String with
