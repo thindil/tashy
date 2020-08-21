@@ -656,6 +656,11 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- 8.6.5 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the index of the image myimage in My_Text text
+   -- Image_Index: constant String := Index(My_Text, "myimage");
+   -- COMMANDS
+   -- TextWidget index index
    -- SOURCE
    function Index
      (TextWidget: in Tk_Text; TextIndex: in String) return String with
@@ -669,11 +674,17 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- TextWidget - Tk_Text to which text will be inserted
       -- Index      - Tk_Text position on which text will be inserted. Lines
       --              starts from 1, characters starts from 0
-      -- Text       - Text to insert to Tk_Text widget
+      -- Text       - Text to insert to Tk_Text widget and if needed, tags for
+      --              the text to insert
       -- HISTORY
       -- 8.6.1 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- Insert hello world at the ent of the My_Text text
+      -- Insert(My_Text, "end", "{hello world}");
+      -- COMMANDS
+      -- TextWidget insert index text
       -- SOURCE
    procedure Insert(TextWidget: in Tk_Text; Index, Text: in String) with
       Pre => Index /= "" and Text /= "";
@@ -691,6 +702,13 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the mark mymark gravity to left in My_Text text
+      -- Mark_Gravity(My_Text, "mymark", "left");
+      -- COMMANDS
+      -- TextWidget mark gravity markName direction
+      -- SEE ALSO
+      -- Mark_Gravity (function)
       -- SOURCE
    procedure Mark_Gravity
      (TextWidget: in Tk_Text; MarkName, Direction: in String) with
@@ -710,6 +728,13 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the gravity of mark mymark in My_Text text
+      -- Gravity: constant String := Mark_Gravity(My_Text, "mymark");
+      -- COMMANDS
+      -- TextWidget mark gravity markName
+      -- SEE ALSO
+      -- Mark_Gravity (procedure)
       -- SOURCE
    function Mark_Gravity
      (TextWidget: in Tk_Text; MarkName: in String) return String with
