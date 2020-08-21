@@ -752,6 +752,11 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the name of the all marks in the My_Text text
+      -- Marks_Names: constant String := Mark_Names(My_Text);
+      -- COMMANDS
+      -- TextWidget mark names
       -- SOURCE
    function Mark_Names(TextWidget: in Tk_Text) return String;
    -- ****
@@ -769,6 +774,13 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- 8.6.5 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the next mark name after 6th character in 4th line in My_Text text
+   -- Mark_Name: constant String := Mark_Next(My_Text, "4.5");
+   -- COMMANDS
+   -- TextWidget mark next index
+   -- SEE ALSO
+   -- Mark_Previous
    -- SOURCE
    function Mark_Next
      (TextWidget: in Tk_Text; Index: in String) return String with
@@ -789,6 +801,13 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the previous mark name before last character in My_Text text
+      -- Mark_Name: constant String := Mark_Previous(My_Text, "end");
+      -- COMMANDS
+      -- TextWidget mark previous index
+      -- SEE ALSO
+      -- Mark_Next
       -- SOURCE
    function Mark_Previous
      (TextWidget: in Tk_Text; Index: in String) return String with
@@ -810,6 +829,11 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the mymark mark at start of the My_Text text
+      -- Mark_Set(My_Text, "mymark", "1.0");
+      -- COMMANDS
+      -- TextWidget mark set markName index
       -- SOURCE
    procedure Mark_Set(TextWidget: in Tk_Text; MarkName, Index: in String) with
       Pre => MarkName /= "" and Index /= "";
