@@ -556,6 +556,13 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the name of the image at first character in first line in My_Text text
+      -- Image_Configure(My_Text, "1.0", "-name myimage");
+      -- COMMANDS
+      -- TextWidget image configure index options
+      -- SEE ALSO
+      -- Image_Configure (function)
       -- SOURCE
    procedure Image_Configure
      (TextWidget: in Tk_Text; Index, Options: in String) with
@@ -577,6 +584,13 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the name of Tk image which is in My_Text text at 10th character in 8th line
+      -- Image_Name: constant String := Image_Configure(My_Text, "8.9", "-image");
+      -- COMMANDS
+      -- TextWidget image configure index ?options?
+      -- SEE ALSO
+      -- Image_Configure(procedure), Image_Cget
       -- SOURCE
    function Image_Configure
      (TextWidget: in Tk_Text; Index: in String; Option: in String := "")
@@ -597,6 +611,11 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Create image named myimage from image otherimage at first character in first line in My_Text text
+      -- Image_Create(My_Text, "1.0", "-image otherimage -name myimage");
+      -- COMMANDS
+      -- TextWidget image create index ?options?
       -- SOURCE
    function Image_Create
      (TextWidget: in Tk_Text; Index: in String; Options: in String := "")
@@ -615,6 +634,11 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the names of all images in the My_Text text
+      -- Names: constant String := Image_Names(My_Text);
+      -- COMMANDS
+      -- TextWidget image names
       -- SOURCE
    function Image_Names(TextWidget: in Tk_Text) return String;
    -- ****
