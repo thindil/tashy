@@ -1035,6 +1035,11 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Scroll My_Text text so 5th character in 10th line will be visible
+      -- See(My_Text, "10.4");
+      -- COMMANDS
+      -- TextWidget see index
       -- SOURCE
    procedure See(TextWidget: in Tk_Text; Index: in String) with
       Pre => Index /= "";
@@ -1049,6 +1054,13 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Update line metrics for the My_Text text
+      -- Sync(My_Text);
+      -- COMMANDS
+      -- TextWidget sync
+      -- SEE ALSO
+      -- Sync_Command
       -- SOURCE
    procedure Sync(TextWidget: in Tk_Text);
    -- ****
@@ -1063,6 +1075,13 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- 8.6.5 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Update line metrics for the My_Text text and execute commands Save
+   -- Sync_Command(My_Text, "Save");
+   -- COMMANDS
+   -- TextWidget sync -command command sync -command command
+   -- SEE ALSO
+   -- Sync
    -- SOURCE
    procedure Sync_Command(TextWidget: in Tk_Text; Command: in String) with
       Pre => Command /= "";
@@ -1082,6 +1101,11 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Add tag mytag to the first 10 items in first line in My_Text text
+      -- Tag_Add(My_Text, "mytag", "1.0", "1.9");
+      -- COMMANDS
+      -- TextWidget tag add tagName startindex ?indexes?
       -- SOURCE
    procedure Tag_Add
      (TextWidget: in Tk_Text; TagName, StartIndex: in String;
