@@ -938,6 +938,11 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- 8.6.5 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Replace first 5 characters in the first line in the My_Text text with newtex text
+   -- Replace(My_Text, "1.0", "1.4", "{newtex}");
+   -- COMMANDS
+   -- TextWidget replace index1 index2 chars
    -- SOURCE
    procedure Replace
      (TextWidget: in Tk_Text; Index1, Index2, Chars: in String) with
@@ -955,6 +960,13 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the scan mark to the top left corner of My_Text text
+      -- Scan_Mark(My_Text, "0", "0");
+      -- COMMANDS
+      -- TextWidget scan mark x y
+      -- SEE ALSO
+      -- Scan_DragTo
       -- SOURCE
    procedure Scan_Mark(TextWidget: in Tk_Text; X, Y: in String) with
       Pre => X /= "" and Y /= "";
@@ -973,6 +985,13 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Drag view of My_Text text to point (24, 28)
+      -- Scan_DragTo(My_Text, "24", "28");
+      -- COMMANDS
+      -- TextWidget scan dragto x y
+      -- SEE ALSO
+      -- Scan_Mark
       -- SOURCE
    procedure Scan_DragTo(TextWidget: in Tk_Text; X, Y: in String) with
       Pre => X /= "" and Y /= "";
@@ -994,6 +1013,11 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Search the My_Text text for word hello forward from the first element in the second line
+      -- Result := constant String := Search(My_Text, "-forwards", "{hello}", "2.0");
+      -- COMMANDS
+      -- TextWidget search ?switches? pattern index ?stopIndex?
       -- SOURCE
    function Search
      (TextWidget: in Tk_Text; Switches: in String := "";
