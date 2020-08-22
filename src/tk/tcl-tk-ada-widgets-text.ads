@@ -850,6 +850,11 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Remove mymark mark from the My_Text text
+      -- Mark_Unset(My_Text, "mymark");
+      -- COMMANDS
+      -- pathName mark unset markName
       -- SOURCE
    procedure Mark_Unset(TextWidget: in Tk_Text; MarkName: in String) with
       Pre => MarkName /= "";
@@ -867,6 +872,11 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Create a peer text with pathname .mynewpeer from My_Text text
+      -- Peer_Create(My_Text, ".mynewpeer");
+      -- COMMANDS
+      -- TextWidget peer create newPathName ?options?
       -- SOURCE
    procedure Peer_Create
      (TextWidget: in Tk_Text; NewPathName: in String;
@@ -886,6 +896,11 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the names of all peers for My_Text text
+      -- Names: constant String := Peer_Names(My_Text);
+      -- COMMANDS
+      -- TextWidget peer names
       -- SOURCE
    function Peer_Names(TextWidget: in Tk_Text) return String;
    -- ****
@@ -902,6 +917,11 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- 8.6.5 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Check if line height calculation for My_Text text is up to date or not
+   -- Sync_Status: constant String := PendingSync(My_Text);
+   -- COMMANDS
+   -- TextWidget pendingsync
    -- SOURCE
    function PendingSync(TextWidget: in Tk_Text) return String;
    -- ****
