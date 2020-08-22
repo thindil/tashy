@@ -1233,6 +1233,13 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the names and values of all available options for mytag tag in My_Text text
+      -- Options: constant String := Tag_Configure(My_Text, "mytag");
+      -- COMMANDS
+      -- TextWidget tag configure tagName ?option?
+      -- SEE ALSO
+      -- Tag_Cget, Tag_Configure (procedure)
       -- SOURCE
    function Tag_Configure
      (TextWidget: in Tk_Text; TagName: in String; Option: in String := "")
@@ -1251,6 +1258,11 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Delete tag mytag in My_Text text
+      -- Tag_Delete(My_Text, "mytag");
+      -- COMMANDS
+      -- TextWidget tag delete tagName
       -- SOURCE
    procedure Tag_Delete(TextWidget: in Tk_Text; TagName: in String) with
       Pre => TagName /= "";
@@ -1270,6 +1282,11 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Move mytag tag below secondtag tag in My_Text text
+      -- Tag_Lower(My_Text, "mytag", "secondtag");
+      -- COMMANDS
+      -- TextWidget tag lower tagName ?belowThis?
       -- SOURCE
    procedure Tag_Lower
      (TextWidget: in Tk_Text; TagName: in String;
@@ -1291,6 +1308,11 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the names of all tags for first character in 10th line in My_Text text
+      -- Names: constant String := Tag_Names(My_Text, "10.0");
+      -- COMMANDS
+      -- pathName tag names ?index?
       -- SOURCE
    function Tag_Names
      (TextWidget: in Tk_Text; Index: in String := "") return String;
