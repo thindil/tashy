@@ -1125,6 +1125,13 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Execute command ShowMenu on left mouse click on the mytag tag in My_Text text
+      -- Tag_Bind(My_Text, "mytag", "<1>", "ShowMenu");
+      -- COMMANDS
+      -- TextWidget tag bind tagName sequence script
+      -- SEE ALSO
+      -- Tag_Bind (function)
       -- SOURCE
    procedure Tag_Bind
      (TextWidget: in Tk_Text; TagName, Sequence, Script: in String) with
@@ -1146,6 +1153,13 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXECUTE
+      -- -- Get the all binded sequences for the mytag tag in My_Text text
+      -- Sequences: constant String := Tag_Bind(My_Text, "mytag");
+      -- COMMANDS
+      -- TextWidget tag bind tagName ?sequence?
+      -- SEE ALSO
+      -- Tag_Bind (procedure)
       -- SOURCE
    function Tag_Bind
      (TextWidget: in Tk_Text; TagName: in String; Sequence: in String := "")
@@ -1167,6 +1181,13 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the Tk font name for mytag tag in My_Text text
+      -- Font_Name: constant String := Tag_Cget(My_Text, "-font");
+      -- COMMANDS
+      -- TextWidget tag cget tagName option
+      -- SEE ALSO
+      -- Tag_Configure (function)
       -- SOURCE
    function Tag_Cget
      (TextWidget: in Tk_Text; TagName, Option: in String) return String with
@@ -1184,6 +1205,13 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the font to the default Tk font for mytag tag in My_Text text
+      -- Tag_Configure(My_Text, "mytag", "-font TkDefaultFont");
+      -- COMMANDS
+      -- TextWidget tag configure tagName options
+      -- SEE ALSO
+      -- Tag_Configure (function)
       -- SOURCE
    procedure Tag_Configure
      (TextWidget: in Tk_Text; TagName, Options: in String) with
