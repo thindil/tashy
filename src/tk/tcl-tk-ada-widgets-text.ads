@@ -1448,6 +1448,11 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Remove mytag tag from first ten characters in the first line in My_Text text
+      -- Tag_Remove(My_Text, "mytag", "1.0", "1.9");
+      -- COMMANDS
+      -- TextWidget tag remove tagName index1 ?index2?
       -- SOURCE
    procedure Tag_Remove
      (TextWidget: in Tk_Text; TagName, Index1: in String;
@@ -1468,6 +1473,13 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the align of the window from second line, third character in My_Text text
+      -- Align: constant String := Window_Cget(My_Text, "2.2", "-align");
+      -- COMMANDS
+      -- TextWidget window cget index option
+      -- SEE ALSO
+      -- Window_Configure (function)
       -- SOURCE
    function Window_Cget
      (TextWidget: in Tk_Text; Index, Option: in String) return String with
@@ -1486,6 +1498,13 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the align to center for the window in third line and 8th character in My_Text text
+      -- Window_Configure(My_Text, "3.7", "-align center");
+      -- COMMANDS
+      -- TextWidget window configure index options
+      -- SEE ALSO
+      -- Window_Configure (function)
       -- SOURCE
    procedure Window_Configure
      (TextWidget: in Tk_Text; Index, Options: in String) with
@@ -1507,6 +1526,13 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the window name of the window in sixth line and first character in My_Text text
+      -- Window_Name: constant String := Window_Configure(My_Text, "6.0", "-window");
+      -- COMMANDS
+      -- TextWidget window configure index ?option?
+      -- SEE ALSO
+      -- Window_Cget, Window_Configure (procedure)
       -- SOURCE
    function Window_Configure
      (TextWidget: in Tk_Text; Index: in String; Option: in String := "")
