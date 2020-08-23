@@ -1553,6 +1553,11 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Create a new window from widget .mywindow in top left corner of the My_Text text
+      -- Window_Create(My_Text, "1.0", "-window .mywindow");
+      -- COMMANDS
+      -- TextWidget window create index ?options?
       -- SOURCE
    function Window_Create
      (TextWidget: in Tk_Text; Index: in String; Options: in String := "")
@@ -1571,6 +1576,11 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the names of windows in My_Text text
+      -- Names: constant String := Window_Names(My_Text);
+      -- COMMANDS
+      -- TextWidget window names
       -- SOURCE
    function Window_Names(TextWidget: in Tk_Text) return String;
    -- ****
@@ -1588,6 +1598,13 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- 8.6.5 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the horizontal fraction of the My_Text text
+   -- Horizontal_Fraction: constant String := XView(My_Text);
+   -- COMMANDS
+   -- TextWidget xview
+   -- SEE ALSO
+   -- YView
    -- SOURCE
    function XView(TextWidget: in Tk_Text) return String;
    -- ****
@@ -1604,6 +1621,13 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- 8.6.5 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Show the first half of the text My_Text
+   -- Xview_Move_To(My_Text, "0.5");
+   -- COMMANDS
+   -- TextWidget xview moveto fraction
+   -- SEE ALSO
+   -- Yview_Move_To
    -- SOURCE
    procedure Xview_Move_To(TextWidget: in Tk_Text; Fraction: in String) with
       Pre => Fraction /= "";
