@@ -1645,6 +1645,13 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Move the view in the My_Text text by 10 units to right
+      -- Xview_Scroll(My_Text, "10", "units");
+      -- COMMANDS
+      -- TextWidget xview scroll number what
+      -- SEE ALSO
+      -- Yview_Scroll
       -- SOURCE
    procedure Xview_Scroll(TextWidget: in Tk_Text; Number, What: in String) with
       Pre => Number /= "" and (What = "units" or What = "pages");
@@ -1663,6 +1670,13 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the vertical fraction of the My_Text text
+      -- Vertical_Fraction: constant String := YView(My_Text);
+      -- COMMANDS
+      -- TextWidget yview
+      -- SEE ALSO
+      -- XView
       -- SOURCE
    function YView(TextWidget: in Tk_Text) return String;
    -- ****
@@ -1679,6 +1693,13 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- 8.6.5 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Show the first half of the text My_Text
+   -- Yview_Move_To(My_Text, "0.5");
+   -- COMMANDS
+   -- TextWidget yview moveto fraction
+   -- SEE ALSO
+   -- Xview_Move_To
    -- SOURCE
    procedure Yview_Move_To(TextWidget: in Tk_Text; Fraction: in String) with
       Pre => Fraction /= "";
@@ -1696,6 +1717,13 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Move the view in the My_Text text by 10 units to top
+      -- Yview_Scroll(My_Text, "-10", "units");
+      -- COMMANDS
+      -- TextWidget yview scroll number what
+      -- SEE ALSO
+      -- Xview_Scroll
       -- SOURCE
    procedure Yview_Scroll(TextWidget: in Tk_Text; Number, What: in String) with
       Pre => Number /= "" and (What = "units" or What = "pages");
