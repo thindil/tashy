@@ -1312,7 +1312,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- -- Get the names of all tags for first character in 10th line in My_Text text
       -- Names: constant String := Tag_Names(My_Text, "10.0");
       -- COMMANDS
-      -- pathName tag names ?index?
+      -- TextWidget tag names ?index?
       -- SOURCE
    function Tag_Names
      (TextWidget: in Tk_Text; Index: in String := "") return String;
@@ -1336,6 +1336,11 @@ package Tcl.Tk.Ada.Widgets.Text is
      -- 8.6.5 - Added
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Find the range with tag mytag in first line of My_Text text
+     -- Range: constant String := Tag_NextRange(My_Text, "1.0", "1.end");
+     -- COMMANDS
+     -- TextWidget tag nextrange tagName index1 ?index2?
      -- SOURCE
    function Tag_NextRange
      (TextWidget: in Tk_Text; TagName, Index1: in String;
@@ -1362,6 +1367,11 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Find the range with tag mytag in the whole My_Text text
+      -- Range: constant String := Tag_PrevRange(My_Text, "end");
+      -- COMMANDS
+      -- TextWidget tag prevrange tagName index1 ?index2?
       -- SOURCE
    function Tag_PrevRange
      (TextWidget: in Tk_Text; TagName, Index1: in String;
@@ -1383,6 +1393,11 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Make mytag tag the most prioritized tag in My_Text text
+      -- Tag_Raise(My_Text, "mytag");
+      -- COMMANDS
+      -- TextWidget tag raise tagName ?aboveThis?
       -- SOURCE
    procedure Tag_Raise
      (TextWidget: in Tk_Text; TagName: in String;
@@ -1405,6 +1420,11 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the ranges of character with mytag tag in My_Text text
+      -- Ranges: Tag_Ranges(My_Text, "mytag");
+      -- COMMANDS
+      -- TextWidget tag ranges tagName
       -- SOURCE
    function Tag_Ranges
      (TextWidget: in Tk_Text; TagName: in String) return String with
