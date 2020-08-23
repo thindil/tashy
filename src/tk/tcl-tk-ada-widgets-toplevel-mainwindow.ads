@@ -31,6 +31,9 @@ package Tcl.Tk.Ada.Widgets.Toplevel.MainWindow is
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the main window at current Tcl interpreter
+   -- Main_Window: constant Tk_Toplevel := Get_Main_Window(Get_Context);
    -- SOURCE
    function Get_Main_Window(Interp: in Tcl_Interp) return Tk_Toplevel;
    -- ****
@@ -46,6 +49,11 @@ package Tcl.Tk.Ada.Widgets.Toplevel.MainWindow is
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Close the program when the press ALT-q on My_Interpreter Tcl interpreter
+   -- Bind_To_Main_Window(My_Interpreter, "<Alt-q>", "{exit}");
+   -- COMMANDS
+   -- bind . sequence script
    -- SOURCE
    procedure Bind_To_Main_Window
      (Interp: in Tcl_Interp; Sequence: in String; Script: in String) with
@@ -63,6 +71,11 @@ package Tcl.Tk.Ada.Widgets.Toplevel.MainWindow is
       -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Unbind left mouse click from the main window on current Tcl interpreter
+      -- Unbind_From_Main_Window(Get_Context, "<1>");
+      -- COMMANDS
+      -- bind . sequence {}
       -- SOURCE
    procedure Unbind_From_Main_Window
      (Interp: in Tcl_Interp; Sequence: in String) with
@@ -82,6 +95,11 @@ package Tcl.Tk.Ada.Widgets.Toplevel.MainWindow is
       -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Unbind left mouse click from the main window on current Tcl interpreter
+      -- Result: constant String := Unbind_From_Main_Window(Get_Context, "<1>");
+      -- COMMANDS
+      -- bind . sequence {}
       -- SOURCE
    function Unbind_From_Main_Window
      (Interp: in Tcl_Interp; Sequence: in String) return String with
