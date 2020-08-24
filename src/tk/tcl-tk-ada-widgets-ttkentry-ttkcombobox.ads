@@ -59,6 +59,13 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
    -- 8.6.2 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new entry with pathname .mycombobox and values yes and no
+   -- My_Combobox: constant Ttk_Entry := Create(".mycombobox", "-values [list yes no]");
+   -- COMMANDS
+   -- ttk::combobox pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
@@ -81,6 +88,17 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
       -- 8.6.2 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Create combobox My_Combobox with pathname .mycombobox and width 10 characters on the current Tcl interpreter
+      -- declare
+      --    My_Combobox: Ttk_ComboBox;
+      -- begin
+      --    Create(My_Combobox, ".mycombobox", "-width 10");
+      -- end;
+      -- COMMANDS
+      -- ttk::combobox pathName ?options?
+      -- SEE ALSO
+      -- Create (function)
       -- SOURCE
    procedure Create
      (Widgt: out Ttk_ComboBox; pathName: in String; options: in String := "";
@@ -100,11 +118,18 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the current value of My_Combobox combobox
+      -- Value: constant String := Current(My_Combobox);
+      -- COMMANDS
+      -- ComboBox current
+      -- SEE ALSO
+      -- Current (procedure)
       -- SOURCE
    function Current(ComboBox: in Ttk_ComboBox) return String;
    -- ****
 
-   -- ****f* TtkComboBox/Current
+   -- ****f* TtkComboBox/Current (procedure)
    -- FUNCTION
    -- Set the current value for the selected Ttk_ComboBox
    -- PARAMETERS
@@ -115,6 +140,13 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
    -- 8.6.5 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Set the current value of My_Combobox combobox to second value in list
+   -- Current(My_Combobox, "1");
+   -- COMMANDS
+   -- pathName current newIndex
+   -- SEE ALSO
+   -- Current (function), Set
    -- SOURCE
    procedure Current(ComboBox: in Ttk_ComboBox; NewIndex: in String) with
       Pre => NewIndex /= "";
@@ -130,6 +162,11 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the value of My_Combobox to text my new value
+      -- Set(My_Combobox, "-text {my new value}");
+      -- COMMANDS
+      -- ComboBox set value
       -- SOURCE
    procedure Set(ComboBox: in Ttk_ComboBox; Value: in String);
    -- ****
