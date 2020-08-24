@@ -52,6 +52,13 @@ package Tcl.Tk.Ada.Widgets.TtkButton.TtkCheckButton is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new checkbutton with pathname .mybutton and text hello world
+   -- My_Button: constant Ttk_CheckButton := Create(".mybutton", "-text {hello world}");
+   -- COMMANDS
+   -- ttk::checkbutton pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -74,6 +81,17 @@ package Tcl.Tk.Ada.Widgets.TtkButton.TtkCheckButton is
      -- 8.6.1 - Added
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create checkbutton My_Button with pathname .mybutton and selected state on the current Tcl interpreter
+     -- declare
+     --    My_Button: Ttk_CheckButton;
+     -- begin
+     --    Create(My_Button, ".mybutton", "-state selected");
+     -- end;
+     -- COMMANDS
+     -- ttk::checkbutton pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_CheckButton; pathName: in String;
