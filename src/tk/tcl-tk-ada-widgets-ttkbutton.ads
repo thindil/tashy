@@ -52,6 +52,13 @@ package Tcl.Tk.Ada.Widgets.TtkButton is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new button with pathname .mybutton and text hello world
+   -- My_Button: constant Ttk_Button := Create(".mybutton", "-text {hello world}");
+   -- COMMANDS
+   -- ttk::button pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -59,22 +66,33 @@ package Tcl.Tk.Ada.Widgets.TtkButton is
       Pre => pathName /= "";
      -- ****
 
-   -- ****f* TtkButton/Create (procedure)
-   -- FUNCTION
-   -- Creates a new Ttk_Button in the specified interpreter.
-   -- PARAMETERS
-   -- Widgt    - Ttk_Button which will be created
-   -- pathName - Tk path (starts with dot) for the widget
-   -- options  - Options which will be passed to the widget. Default value is
-   --            empty
-   -- Interp   - Tcl interpreter to which the widget will be created. If null,
-   --            the widget will be created in the "contextual" interpreter.
-   --            Default value is null.
-   -- HISTORY
-   -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
-   -- SOURCE
+     -- ****f* TtkButton/Create (procedure)
+     -- FUNCTION
+     -- Creates a new Ttk_Button in the specified interpreter.
+     -- PARAMETERS
+     -- Widgt    - Ttk_Button which will be created
+     -- pathName - Tk path (starts with dot) for the widget
+     -- options  - Options which will be passed to the widget. Default value is
+     --            empty
+     -- Interp   - Tcl interpreter to which the widget will be created. If null,
+     --            the widget will be created in the "contextual" interpreter.
+     --            Default value is null.
+     -- HISTORY
+     -- 8.6.1 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create button My_Button with pathname .mybutton and width 100px on the current Tcl interpreter
+     -- declare
+     --    My_Button: Ttk_Button;
+     -- begin
+     --    Create(My_Button, ".mybutton", "-width 100");
+     -- end;
+     -- COMMANDS
+     -- ttk::button pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
+     -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_Button; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
@@ -93,6 +111,11 @@ package Tcl.Tk.Ada.Widgets.TtkButton is
      -- 8.6.1 - Added
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Invoke the code related to My_Button
+     -- Result: constant String := Invoke(My_Button);
+     -- COMMANDS
+     -- Buttn invoke
      -- SOURCE
    function Invoke
      (Buttn: in Ttk_Button'Class; options: in String := "") return String;
