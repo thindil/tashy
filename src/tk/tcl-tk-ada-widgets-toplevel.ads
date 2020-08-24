@@ -45,6 +45,13 @@ package Tcl.Tk.Ada.Widgets.Toplevel is
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new toplevel with pathname .mywindow and black background
+   -- My_Window: constant Tk_Toplevel := Create(".mywindow", "-background black");
+   -- COMMANDS
+   -- toplevel pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -67,6 +74,17 @@ package Tcl.Tk.Ada.Widgets.Toplevel is
      -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create toplevel My_Window with pathname .mywindow and width 200px on the current Tcl interpreter
+     -- declare
+     --    My_Window: Tk_Toplevel;
+     -- begin
+     --    Create(My_Window, ".mywindow", "-width 200");
+     -- end;
+     -- COMMANDS
+     -- toplevel pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Toplevel; pathName: in String; options: in String := "";
