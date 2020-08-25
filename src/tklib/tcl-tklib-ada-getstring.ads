@@ -51,6 +51,8 @@ package Tcl.Tklib.Ada.GetString is
    -- Text       - Additional text to show to the user
    -- Options    - Additional options for the dialog. Can be empty. Default
    --              value is empty
+   -- RESULT
+   -- 1 if the user pressed Ok button, otherwise 0
    -- HISTORY
    -- 8.6.7 - Added
    -- TODO
