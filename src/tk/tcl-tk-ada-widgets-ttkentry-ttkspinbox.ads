@@ -59,6 +59,13 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox is
    -- 8.6.2 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new spinbox with pathname .myspinbox with range from 1 to 100
+   -- My_Spinbox: constant Ttk_SpinBox := Create(".myspinbox", "-from 1 -to 100");
+   -- COMMANDS
+   -- ttk::spinbox pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -81,6 +88,17 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox is
      -- 8.6.2 - Added
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create spinbox My_Spinbox with pathname .myspinbox which wraps values on the current Tcl interpreter
+     -- declare
+     --    My_Spinbox: Ttk_SpinBox;
+     -- begin
+     --    Create(My_Spinbox, ".myspinbox", "-wrap true");
+     -- end;
+     -- COMMANDS
+     -- ttk::spinbox pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_SpinBox; pathName: in String; options: in String := "";
@@ -100,6 +118,13 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the current value of My_Spinbox spinbox
+      -- Value: constant String := Current(My_Spinbox);
+      -- COMMANDS
+      -- SpinBox current
+      -- SEE ALSO
+      -- Current (procedure)
       -- SOURCE
    function Current(SpinBox: in Ttk_SpinBox) return String;
    -- ****
@@ -115,6 +140,13 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox is
    -- 8.6.6 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Set the current value of My_Spinbox spinbox to 1
+   -- Current(My_Spinbox, "1");
+   -- COMMANDS
+   -- SpinBox current newIndex
+   -- SEE ALSO
+   -- Current (function), Set
    -- SOURCE
    procedure Current(SpinBox: in Ttk_SpinBox; NewIndex: in String) with
       Pre => NewIndex /= "";
@@ -130,6 +162,11 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the value of My_Spinbox to 2
+      -- Set(My_Combobox, "2");
+      -- COMMANDS
+      -- SpinBox set value
       -- SOURCE
    procedure Set(SpinBox: in Ttk_SpinBox; Value: in String);
    -- ****
