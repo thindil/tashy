@@ -60,8 +60,8 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
    -- TODO
    -- Replace it with higher level of binding
    -- EXAMPLE
-   -- -- Create a new entry with pathname .mycombobox and values yes and no
-   -- My_Combobox: constant Ttk_Entry := Create(".mycombobox", "-values [list yes no]");
+   -- -- Create a new combobox with pathname .mycombobox and values yes and no
+   -- My_Combobox: constant Ttk_ComboBox := Create(".mycombobox", "-values [list yes no]");
    -- COMMANDS
    -- ttk::combobox pathName ?options?
    -- SEE ALSO
@@ -144,7 +144,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
    -- -- Set the current value of My_Combobox combobox to second value in list
    -- Current(My_Combobox, "1");
    -- COMMANDS
-   -- pathName current newIndex
+   -- ComboBox current newIndex
    -- SEE ALSO
    -- Current (function), Set
    -- SOURCE
@@ -164,7 +164,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
       -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the value of My_Combobox to text my new value
-      -- Set(My_Combobox, "-text {my new value}");
+      -- Set(My_Combobox, "{my new value}");
       -- COMMANDS
       -- ComboBox set value
       -- SOURCE
