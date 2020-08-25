@@ -59,6 +59,13 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
    -- 8.6.2 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new entry with pathname .myentry and state readonly
+   -- My_Entry: constant Ttk_Entry := Create(".myentry", "-state readonly");
+   -- COMMANDS
+   -- ttk::entry pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -81,6 +88,17 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
      -- 8.6.2 - Added
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create entry My_Entry with pathname .myentry and width 10 characters on the current Tcl interpreter
+     -- declare
+     --    My_Entry: Ttk_Entry;
+     -- begin
+     --    Create(My_Entry, ".myentry", "-width 10");
+     -- end;
+     -- COMMANDS
+     -- ttk::entry pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_Entry; pathName: in String; options: in String := "";
@@ -104,6 +122,11 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the bouding box for the first character in My_Entry entry
+      -- Bounding_Box: constant String := BBox(My_Entry, "0");
+      -- COMMANDS
+      -- TextEntry bbox index
       -- SOURCE
    function BBox
      (TextEntry: in Ttk_Entry'Class; Index: in String) return String with
@@ -122,6 +145,11 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Delete the whole text of My_Entry entry
+      -- Delete(My_Entry, "0", "end");
+      -- COMMANDS
+      -- TextEntry delete first ?last?
       -- SOURCE
    procedure Delete
      (TextEntry: in Ttk_Entry; FirstIndex: in String;
