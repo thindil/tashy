@@ -168,6 +168,11 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       -- 8.6.2 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the text of My_Entry entry
+      -- Text: constant String := Get(My_Entry);
+      -- COMMANDS
+      -- Widgt get
       -- SOURCE
    function Get(Widgt: in Ttk_Entry) return String;
    -- ****
@@ -184,6 +189,11 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
    -- 8.6.5 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Place insertion cursor at the end of My_Entry entry
+   -- ICursor(My_Entry, "end");
+   -- COMMANDS
+   -- TextEntry icursor index
    -- SOURCE
    procedure ICursor(TextEntry: in Ttk_Entry'Class; Index: in String) with
       Pre => Index /= "";
@@ -201,6 +211,11 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the index of the last character in My_Entry entry
+      -- Character_Index: constant String := Index(My_Entry, "end");
+      -- COMMANDS
+      -- TextEntry index index
       -- SOURCE
    function Index
      (TextEntry: in Ttk_Entry'Class; Index: in String) return String with
@@ -218,6 +233,11 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Insert hello world text at start of My_Entry entry
+      -- Insert(My_Entry, "0", "{hello world}");
+      -- COMMANDS
+      -- TextEntry insert index text
       -- SOURCE
    procedure Insert
      (TextEntry: in Ttk_Entry; Index: in String; Text: in String) with
