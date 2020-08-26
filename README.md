@@ -70,8 +70,10 @@ this file is) to compile and type in the console:
 1. `scripts/setup.tcl` to setup all configuration needed for compilation.
    On Windows it will be `wish scripts\setup.tcl`. If you want to use default
    settings (like include all other bindings), you can use auto setup by
-   adding parameter `--nogui`. You need to run this script only the first time
-   when you compile the library on the selected platform. If you only
+   adding parameter `--nogui`. You can also set the C compiler used in the
+   setup stage by adding the parameter `--CC=[nameofexecutable]`. By default
+   it is set to GCC. You need to run this script only the first time when you
+   compile the library on the selected platform. If you only
    recompile the configured project, skip this step.
 2. `gprbuild -P tashy.gpr` to compile the library in static mode. If you want
    to build relocatable version of the library, use command
@@ -90,7 +92,9 @@ that way:
     to use default settings (like include all other bindings), you can use
     auto setup by typing `bob autosetup`. You need to run this command only
     the first time when you compile the library on the selected platform. If
-    you only recompile the configured project, skip this step.
+    you only recompile the configured project, skip this step. If you want to
+    change also C compiler used in the setup stage, you must run manually the
+    setup script (for more information, please look above).
 2. `bob build` to compile the library in static and relocatable versions on
    Unix and static only on Windows.
 3. `bob install` to install the library with gprinstall which allow use it
