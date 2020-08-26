@@ -253,22 +253,32 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Remove selection from My_Entry entry
+      -- Selection_Clear(My_Entry);
+      -- COMMANDS
+      -- TextEntry selection clear
       -- SOURCE
    procedure Selection_Clear(TextEntry: in Ttk_Entry'Class);
    -- ****
 
-      -- ****f* TtkEntry/Selection_Present
-      -- FUNCTION
-      -- Check if any character is selected in the selected Ttk_Entry
-      -- PARAMETERS
-      -- TextEntry - Ttk_Entry which will be queried for the selection
-      -- RESULT
-      -- "1" if any character in TextEntry is selected, otherwise "0"
-      -- HISTORY
-      -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
-      -- SOURCE
+   -- ****f* TtkEntry/Selection_Present
+   -- FUNCTION
+   -- Check if any character is selected in the selected Ttk_Entry
+   -- PARAMETERS
+   -- TextEntry - Ttk_Entry which will be queried for the selection
+   -- RESULT
+   -- "1" if any character in TextEntry is selected, otherwise "0"
+   -- HISTORY
+   -- 8.6.5 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Check if something is selected in My_Entry entry
+   -- Check_Selection: constant String := Selection_Present(My_Entry);
+   -- COMMANDS
+   -- TextEntry selection present
+   -- SOURCE
    function Selection_Present(TextEntry: in Ttk_Entry'Class) return String;
    -- ****
 
@@ -283,6 +293,11 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
    -- 8.6.5 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Select the whole text of My_Entry entry
+   -- Selection_Range(My_Entry, "0", "end");
+   -- COMMANDS
+   -- TextEntry selection range startindex endindex
    -- SOURCE
    procedure Selection_Range
      (TextEntry: in Ttk_Entry'Class; StartIndex, EndIndex: in String) with
@@ -300,6 +315,11 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Revalidate My_Entry entry value
+      -- Valid: constant String := Validate(My_Entry);
+      -- COMMANDS
+      -- TextEntry validate
       -- SOURCE
    function Validate(TextEntry: in Ttk_Entry'Class) return String;
    -- ****
