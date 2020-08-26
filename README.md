@@ -1,7 +1,6 @@
 ## Table of Contents
 * [General information](#General-information)
 * [Build the library from sources](#Build-the-library-from-sources)
-* [Docker images](#Docker-images)
 * [Using the library in your project](#Using-the-library-in-your-project)
 * [Versioning](#Versioning)
 * [Documentation](#Documentation)
@@ -105,16 +104,6 @@ To remove all generated/compiled files type in the console:
 `scripts/clean.tcl` (on Unix) or `tclsh scripts\clean.tcl` (on Windows).
 If you have installed [Bob](https://github.com/thindil/bob) you can type:
 `bob clean`
-
-## Docker images
-The library (in the static version) is available also as a Docker container with
-the newest Ubuntu GNAT FSF version.
-
-* For the stable version of the library, you can use this command to download:
-
-`docker pull thindil/gnat-tashy`
-
-Full list of all available versions is [here](https://hub.docker.com/repository/registry-1.docker.io/thindil/gnat-tashy/tags?page=1)
 
 ## Using the library in your project
 
