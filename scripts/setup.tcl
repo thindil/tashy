@@ -160,7 +160,7 @@ proc Save_GUI {g} {
 #-----------------------------------------------------------------
 proc Save {} {
    global tashvar tcl_platform buildoption library_switches installtklib
-   global savesettings installmsgcat
+   global savesettings installmsgcat argv
    if {$buildoption == "tcl"} {
       setvar TK_VERSION    ""        {Tk version}
       setvar TK_LIBRARY    ""        {Tk library}
@@ -187,7 +187,12 @@ proc Save {} {
    }
    CreateGprFile
    source [file join [pwd] scripts tcl_record_sizes.tcl]
-   exec gcc -Wno-format $tashvar(TCL_INCLUDE) -o tcl_record_sizes [file join [pwd] src tcl_record_sizes.c]
+   set CC gcc
+   set argument [lsearch -inline $argv "--CC=*"]
+   if {$argument != {}} {
+      set CC [string range $argument 5 [string length $argument]]
+   }
+   exec $CC -Wno-format $tashvar(TCL_INCLUDE) -o tcl_record_sizes [file join [pwd] src tcl_record_sizes.c]
    file delete [file join [pwd] src tcl_record_sizes.c]
    exec [file join [pwd] tcl_record_sizes] > [file join [pwd] src tcl_record_sizes.ads]
    file delete [file join [pwd] tcl_record_sizes$tashvar(EXE)]
