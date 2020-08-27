@@ -59,6 +59,13 @@ package Tcl.Tk.Ada.Widgets.TtkMenuButton is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new menubutton with pathname .mymenubutton and menu .mymenu
+   -- My_Menu_Button: constant Ttk_MenuButton := Create(".mymenubutton", "-menu .mymenu");
+   -- COMMANDS
+   -- ttk::menubutton pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -81,6 +88,17 @@ package Tcl.Tk.Ada.Widgets.TtkMenuButton is
      -- 8.6.1 - Added
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create menubutton My_Menu_Button with pathname .mymenubutton and label click me on the current Tcl interpreter
+     -- declare
+     --    My_Menu_Button: Ttk_MenuButton;
+     -- begin
+     --    Create(My_Menu_Button, ".mymenubutton", "-text {click me}");
+     -- end;
+     -- COMMANDS
+     -- ttk::menubutton pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_MenuButton; pathName: in String; options: in String := "";
