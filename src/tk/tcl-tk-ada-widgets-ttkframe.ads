@@ -59,6 +59,13 @@ package Tcl.Tk.Ada.Widgets.TtkFrame is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new frame with pathname .myframe
+   -- My_Frame: constant Ttk_Frame := Create(".myframe");
+   -- COMMANDS
+   -- ttk::frame pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -81,6 +88,17 @@ package Tcl.Tk.Ada.Widgets.TtkFrame is
      -- 8.6.1 - Added
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create frame My_Frame with pathname .myframe and with relief raised on the current Tcl interpreter
+     -- declare
+     --    My_Frame: Ttk_Frame;
+     -- begin
+     --    Create(My_Frame, ".myframe", "-relief raised");
+     -- end;
+     -- COMMANDS
+     -- ttk::frame pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_Frame; pathName: in String; options: in String := "";
