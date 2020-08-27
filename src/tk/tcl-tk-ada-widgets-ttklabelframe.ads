@@ -59,6 +59,13 @@ package Tcl.Tk.Ada.Widgets.TtkLabelFrame is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new frame with pathname .myframe with label hello world
+   -- My_Frame: constant Ttk_LabelFrame := Create(".myframe", "-text {hello world}");
+   -- COMMANDS
+   -- ttk::labelframe pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -81,6 +88,17 @@ package Tcl.Tk.Ada.Widgets.TtkLabelFrame is
      -- 8.6.1 - Added
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create frame My_Frame with pathname .myframe and with label hello world on the current Tcl interpreter
+     -- declare
+     --    My_Frame: Ttk_LabelFrame;
+     -- begin
+     --    Create(My_Frame, ".myframe", "-text {hello world}");
+     -- end;
+     -- COMMANDS
+     -- ttk::labelframe pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_LabelFrame; pathName: in String; options: in String := "";
