@@ -59,6 +59,13 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
    -- 8.6.2 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new notebook with pathname .mynotebook
+   -- My_Notebook: constant Ttk_Notebook := Create(".mynotebook");
+   -- COMMANDS
+   -- ttk::notebook pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -81,25 +88,41 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
      -- 8.6.2 - Added
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create notebook My_Notebook with pathname .mynotebook on the current Tcl interpreter
+     -- declare
+     --    My_Notebook: Ttk_Notebook;
+     -- begin
+     --    Create(My_Notebook, ".mynotebook");
+     -- end;
+     -- COMMANDS
+     -- ttk::notebook pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_Notebook; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
-      -- ****
+     -- ****
 
-      -- ****f* TtkNotebook/Add
-      -- FUNCTION
-      -- Add a new window to the selected notebook
-      -- PARAMETERS
-      -- Notebook   - Ttk_Notebook to which window will be added
-      -- WindowName - A name of widget to add to Ttk_Notebook
-      -- Options    - Tk options for added window. Default value is empty
-      -- HISTORY
-      -- 8.6.2 - Added
-      -- TODO
-      -- Replace it with higher level of binding
-      -- SOURCE
+     -- ****f* TtkNotebook/Add
+     -- FUNCTION
+     -- Add a new window to the selected notebook
+     -- PARAMETERS
+     -- Notebook   - Ttk_Notebook to which window will be added
+     -- WindowName - A name of widget to add to Ttk_Notebook
+     -- Options    - Tk options for added window. Default value is empty
+     -- HISTORY
+     -- 8.6.2 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Add a widget with pathname .myframe to the My_Notebook notebook with tab label my tab
+     -- Add(My_Notebook, ".myframe", "-text {my tab}");
+     -- COMMANDS
+     -- Notebook add windowname ?options?
+     -- SOURCE
    procedure Add
      (Notebook: in Ttk_Notebook; WindowName: in String;
       Options: String := "") with
@@ -116,6 +139,11 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Remove the currently selected tab in the My_Notebook notebook
+      -- Forget(My_Notebook, "current");
+      -- COMMANDS
+      -- Notebook forget tabid
       -- SOURCE
    procedure Forget(Notebook: in Ttk_Notebook; TabId: in String) with
       Pre => TabId /= "";
