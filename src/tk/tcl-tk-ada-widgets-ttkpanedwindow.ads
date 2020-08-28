@@ -59,6 +59,13 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new panedwindow with pathname .mypaned
+   -- My_Paned: constant Ttk_PanedWindow := Create(".mypaned");
+   -- COMMANDS
+   -- ttk::panedwindow pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -81,26 +88,42 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
      -- 8.6.1 - Added
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create panedwindow My_Paned with pathname .mypaned on the current Tcl interpreter
+     -- declare
+     --    My_Paned: Ttk_PanedWindow;
+     -- begin
+     --    Create(My_Paned, ".mypaned");
+     -- end;
+     -- COMMANDS
+     -- ttk::panedwindow pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_PanedWindow; pathName: in String;
       options: in String := ""; Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
-      -- ****
+     -- ****
 
-      -- ****f* TtkPanedWindow/Add
-      -- FUNCTION
-      -- Adds the Tk_Widget to the Ttk_PanedWindow.
-      -- PARAMETERS
-      -- Paned     - Ttk_PanedWindow to which SubWindow will be added
-      -- SubWindow - Tk_Widget which will be added to the Ttk_PanedWindow
-      -- Options   - Tk options which will be passed to the command. Default
-      --             value is empty.
-      -- HISTORY
-      -- 8.6.1 - Added
-      -- TODO
-      -- Replace it with higher level of binding
-      -- SOURCE
+     -- ****f* TtkPanedWindow/Add
+     -- FUNCTION
+     -- Adds the Tk_Widget to the Ttk_PanedWindow.
+     -- PARAMETERS
+     -- Paned     - Ttk_PanedWindow to which SubWindow will be added
+     -- SubWindow - Tk_Widget which will be added to the Ttk_PanedWindow
+     -- Options   - Tk options which will be passed to the command. Default
+     --             value is empty.
+     -- HISTORY
+     -- 8.6.1 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Add My_Frame widget to My_Paned panedwindow
+     -- Add(My_Paned, My_Frame);
+     -- COMMANDS
+     -- Paned add subwindow ?options?
+     -- SOURCE
    procedure Add
      (Paned: in Ttk_PanedWindow; SubWindow: in Tk_Widget'Class;
       Options: in String := "");
@@ -116,6 +139,11 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Remove My_Frame from My_Paned panedwindow
+   -- Forget(My_Paned, My_Frame);
+   -- COMMANDS
+   -- Paned forget subwindow
    -- SOURCE
    procedure Forget(Paned: in Ttk_PanedWindow; SubWindow: in Tk_Widget'Class);
    -- ****
