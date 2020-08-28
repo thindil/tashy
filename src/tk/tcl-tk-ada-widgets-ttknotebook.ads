@@ -159,6 +159,11 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- 8.6.2 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Hide the second tab of My_Notebook notebook
+      -- Hide(My_Notebook, "1");
+      -- COMMANDS
+      -- Notebook hide tabid
       -- SOURCE
    procedure Hide(Notebook: in Ttk_Notebook; TabId: in String) with
       Pre => TabId /= "";
@@ -178,6 +183,11 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the element at point (24, 82) in My_Notebook notebook
+      -- Element_Name: constant String := Identify_Element(My_Notebook, "24", "82");
+      -- COMMANDS
+      -- Notebook identify element x y
       -- SOURCE
    function Identify_Element
      (Notebook: in Ttk_Notebook; X, Y: in String) return String with
@@ -198,6 +208,11 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the index of the tab at point (10, 56) in My_Notebook notebook
+      -- Tab_Index: constant String := Identify_Tab(Notebook, "10", "56");
+      -- COMMANDS
+      -- Notebook identify tab x y
       -- SOURCE
    function Identify_Tab
      (Notebook: in Ttk_Notebook; X, Y: in String) return String with
@@ -217,6 +232,11 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the amount of the tabs in My_Notebook notebook
+      -- Amount: constant String := Index(My_Notebook, "end");
+      -- COMMANDS
+      -- Notebook index tabid
       -- SOURCE
    function Index
      (Notebook: in Ttk_Notebook; TabId: in String) return String with
