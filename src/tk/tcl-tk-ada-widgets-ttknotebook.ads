@@ -348,6 +348,11 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the title of the last tab in My_Notebook notebook
+      -- Title: constant String := Tab(My_Notebook, "end", "-text");
+      -- COMMANDS
+      -- Notebook tab tabid
       -- SOURCE
    function Tab
      (Notebook: in Ttk_Notebook; TabId: in String; Option: in String := "")
@@ -366,6 +371,11 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the names of the windows managed by My_Notebook notebook
+      -- Names: constant String := Tabs(My_Notebook);
+      -- COMMANDS
+      -- Notebook tabs
       -- SOURCE
    function Tabs(Notebook: in Ttk_Notebook) return String;
    -- ****
