@@ -258,6 +258,11 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Insert My_Frame to My_Notebook notebook at second position with label my tab
+      -- Insert(My_Notebook, "1", My_Frame, "-text {my tab}");
+      -- COMMANDS
+      -- Notebook insert pos subwindow ?options?
       -- SOURCE
    procedure Insert
      (Notebook: in Ttk_Notebook; Pos: in String; SubWindow: in Tk_Widget'Class;
@@ -275,6 +280,11 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- 8.6.2 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the first tab as the currently selected tab in My_Notebook notebook
+      -- Notebook_Select(My_Notebook, "0");
+      -- COMMANDS
+      -- Notebook select tabid
       -- SOURCE
    procedure Notebook_Select(Notebook: in Ttk_Notebook; TabId: in String) with
       Pre => TabId /= "";
@@ -291,6 +301,11 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- 8.6.2 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the identifier of the selected tab in My_Notebook notebook
+      -- Tab_Index: constant String := Get_Selected(My_Notebook);
+      -- COMMANDS
+      -- Notebook select
       -- SOURCE
    function Get_Selected(Notebook: in Ttk_Notebook) return String;
    -- ****
@@ -307,6 +322,11 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
    -- 8.6.6 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Set the title of the second tab in My_Notebook notebook to my new tab
+   -- Tab(My_Notebook, "1", "-text {my new tab}");
+   -- COMMANDS
+   -- Notebook tab tabid ?options?
    -- SOURCE
    procedure Tab(Notebook: in Ttk_Notebook; TabId, Options: in String) with
       Pre => TabId /= "" and Options /= "";
