@@ -59,6 +59,13 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new horizontal progressbar with pathname .myprogress
+   -- My_Progress: constant Ttk_ProgressBar := Create(".myprogress", "-orient horizontal");
+   -- COMMANDS
+   -- ttk::progressbar pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -81,6 +88,17 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
      -- 8.6.1 - Added
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create vertical progressbar My_Progress with pathname .myprogress on the current Tcl interpreter
+     -- declare
+     --    My_Progress: Ttk_ProgressBar;
+     -- begin
+     --    Create(My_Progress, ".myprogress", "-orient vertical");
+     -- end;
+     -- COMMANDS
+     -- ttk::progressbar pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_ProgressBar; pathName: in String;
@@ -99,6 +117,11 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
      -- 8.6.6 - Added
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Start the autoincrement mode on My_Progress progressbar every 100 miliseconds
+     -- Start(My_Progress, "100");
+     -- COMMANDS
+     -- Bar start ?interval?
      -- SOURCE
    procedure Start(Bar: in Ttk_ProgressBar; Interval: in String := "50");
    -- ****
@@ -114,6 +137,11 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
    -- 8.6.2 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Increment My_Progress progressbar by 10
+   -- Step(My_Progress, "10.0");
+   -- COMMANDS
+   -- Bar step ?amount?
    -- SOURCE
    procedure Step(Bar: in Ttk_ProgressBar; Amount: in String := "");
    -- ****
