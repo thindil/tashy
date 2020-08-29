@@ -262,6 +262,11 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get all available options for first subwindow in My_Paned panedwindow
+      -- Options: constant String := Pane(My_Paned, "0");
+      -- COMMANDS
+      -- Paned pane pane ?option?
       -- SOURCE
    function Pane
      (Paned: in Ttk_PanedWindow; Index: in String; Option: in String := "")
@@ -280,6 +285,11 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       -- 8.6.1 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the names of all subwindows in My_Paned panedwindow
+      -- Windows_Names: constant String := Panes(My_Paned);
+      -- COMMANDS
+      -- Paned panes
       -- SOURCE
    function Panes(Paned: in Ttk_PanedWindow) return String;
    -- ****
@@ -296,6 +306,11 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    -- 8.6.6 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Set the position of the first sash in My_Paned panedwindow to 35 pixels from start
+   -- SashPos(My_Paned, "0", "35");
+   -- COMMANDS
+   -- Paned sashpos index newpos
    -- SOURCE
    procedure SashPos(Paned: in Ttk_PanedWindow; Index, NewPos: in String) with
       Pre => Index /= "" and NewPos /= "";
@@ -315,6 +330,11 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the current position of the second sash in My_Paned panedwindow
+      -- Position: constant String := SashPos(My_Paned, "1");
+      -- COMMANDS
+      -- Paned sashpos index
       -- SOURCE
    function SashPos
      (Paned: in Ttk_PanedWindow; Index: in String) return String with
