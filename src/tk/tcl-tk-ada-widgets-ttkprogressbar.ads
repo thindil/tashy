@@ -156,6 +156,11 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
    -- 8.6.6 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Stop the autoincrement mode in My_Progress progressbar
+   -- Stop(My_Progress);
+   -- COMMANDS
+   -- Bar stop
    -- SOURCE
    procedure Stop(Bar: in Ttk_ProgressBar);
    -- ****
