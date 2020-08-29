@@ -162,6 +162,11 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    -- 8.6.6 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the name of the element at point (56, 32) in My_Paned panedwindow
+   -- Element_Name: constant String := Identify_Element(My_Paned, "56", "32");
+   -- COMMANDS
+   -- Paned identify element x y
    -- SOURCE
    function Identify_Element
      (Paned: in Ttk_PanedWindow; X, Y: in String) return String with
@@ -182,27 +187,37 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Identify sash at point (43, 86) in My_Paned panedwindow
+      -- Sash_Index: constant String := Identify_Sash(My_Paned, "43", "86");
+      -- COMMANDS
+      -- Paned identify sash x y
       -- SOURCE
    function Identify_Sash
      (Paned: in Ttk_PanedWindow; X, Y: in String) return String with
       Pre => X /= "" and Y /= "";
       -- ****
 
-   -- ****f* TtkPanedWindow/Insert
-   -- FUNCTION
-   -- Insert the selected Tk_Widget in the selected Ttk_PanedWindow on the
-   -- selected position
-   -- PARAMETERS
-   -- Paned     - Ttk_PanedWindow in which SubWindow will be inserted
-   -- Position  - Position on which SubWindow will be inserted
-   -- SubWindow - Tk_Widget to insert to the Ttk_PanedWindow
-   -- Options   - Tk options which will be passed to the command. Default
-   --             value is empty.
-   -- HISTORY
-   -- 8.6.3 - Added
-   -- TODO
-   -- Replace it with higher level of binding
-   -- SOURCE
+      -- ****f* TtkPanedWindow/Insert
+      -- FUNCTION
+      -- Insert the selected Tk_Widget in the selected Ttk_PanedWindow on the
+      -- selected position
+      -- PARAMETERS
+      -- Paned     - Ttk_PanedWindow in which SubWindow will be inserted
+      -- Position  - Position on which SubWindow will be inserted
+      -- SubWindow - Tk_Widget to insert to the Ttk_PanedWindow
+      -- Options   - Tk options which will be passed to the command. Default
+      --             value is empty.
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Insert My_Frame at the end of the My_Paned panedwindow
+      -- Insert(My_Paned, "end", My_Frame);
+      -- COMMANDS
+      -- Paned insert pos subwindow ?options?
+      -- SOURCE
    procedure Insert
      (Paned: in Ttk_PanedWindow; Position: in String;
       SubWindow: in Tk_Widget'Class; Options: in String := "") with
@@ -221,6 +236,11 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the weight of first subwindow in My_Paned panedwindow to 2
+      -- Pane(My_Paned, "0", "-weight 2");
+      -- COMMANDS
+      -- Paned pane index ?options?
       -- SOURCE
    procedure Pane(Paned: in Ttk_PanedWindow; Index, Options: in String) with
       Pre => Index /= "" and Options /= "";
