@@ -59,6 +59,13 @@ package Tcl.Tk.Ada.Widgets.TtkSizeGrip is
    -- 8.6.6 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new sizegrip with pathname .mygrip
+   -- My_Grip: constant Ttk_SizeGrip := Create(".mygrip");
+   -- COMMANDS
+   -- ttk::sizegrip pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -81,6 +88,17 @@ package Tcl.Tk.Ada.Widgets.TtkSizeGrip is
      -- 8.6.6 - Added
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create sizegrip My_Grip with pathname .mygrip on the current Tcl interpreter
+     -- declare
+     --    My_Grip: Ttk_SizeGrip;
+     -- begin
+     --    Create(My_Grip, ".mygrip");
+     -- end;
+     -- COMMANDS
+     -- ttk::sizegrip pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_SizeGrip; pathName: in String; options: in String := "";
