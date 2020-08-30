@@ -59,6 +59,13 @@ package Tcl.Tk.Ada.Widgets.TtkSeparator is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new horizontal separator with pathname .myseparator
+   -- My_Separator: constant Ttk_Separator := Create(".myseparator", "-orient horizontal");
+   -- COMMANDS
+   -- ttk::separator pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -81,6 +88,17 @@ package Tcl.Tk.Ada.Widgets.TtkSeparator is
      -- 8.6.1 - Added
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create vertical separator My_Separator with pathname .myseparator on the current Tcl interpreter
+     -- declare
+     --    My_Separator: Ttk_Separator;
+     -- begin
+     --    Create(My_Separator, ".myseparator", "-orient vertical");
+     -- end;
+     -- COMMANDS
+     -- ttk::separator pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_Separator; pathName: in String; options: in String := "";
