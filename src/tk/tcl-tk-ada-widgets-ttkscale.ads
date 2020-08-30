@@ -159,6 +159,11 @@ package Tcl.Tk.Ada.Widgets.TtkScale is
       -- 8.6.5 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set value of My_Scale scale to 10.0
+      -- Set(My_Scale, "10.0");
+      -- COMMANDS
+      -- ScaleWidget set value
       -- SOURCE
    procedure Set(ScaleWidget: in Ttk_Scale; Value: in String) with
       Pre => Value /= "";
