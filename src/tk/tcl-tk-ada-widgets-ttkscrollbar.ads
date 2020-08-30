@@ -59,6 +59,13 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new horizontal scrollbar with pathname .myscroll
+   -- My_Scroll: constant Ttk_Scrollbar := Create(".myscroll", "-orient horizontal");
+   -- COMMANDS
+   -- ttk::scrollbar pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -81,31 +88,47 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
      -- 8.6.1 - Added
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create vertical scrollbar My_Scroll with pathname .myscroll on the current Tcl interpreter
+     -- declare
+     --    My_Scroll: Ttk_Scrollbar;
+     -- begin
+     --    Create(My_Scroll, ".myscroll", "-orient vertical");
+     -- end;
+     -- COMMANDS
+     -- ttk::scrollbar pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_Scrollbar; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
-      -- ****
+     -- ****
 
-   -- ****f* TtkScrollbar/Scrollbar_Delta
-   -- FUNCTION
-   -- Get the faction change between current Ttk_Scrollbar setting and the
-   -- selected value
-   -- PARAMETERS
-   -- ScrollbarWidget - Ttk_Scrollbar which will be queried
-   -- DeltaX          - An value to check for horizontal scrollbar. Ignored
-   --                   when ScrollbarWidget is a vertical scrollbar.
-   -- DeltaY          - An value to check for vertical scrollbar. Ignored when
-   --                   ScrollbarWidget is a horizontal widget.
-   -- RESULT
-   -- A string with a real number indicating the fractional change in the
-   -- scrollbar setting that corresponds to a given change in slider position.
-   -- HISTORY
-   -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
-   -- SOURCE
+     -- ****f* TtkScrollbar/Scrollbar_Delta
+     -- FUNCTION
+     -- Get the fraction change between current Ttk_Scrollbar setting and the
+     -- selected value
+     -- PARAMETERS
+     -- ScrollbarWidget - Ttk_Scrollbar which will be queried
+     -- DeltaX          - An value to check for horizontal scrollbar. Ignored
+     --                   when ScrollbarWidget is a vertical scrollbar.
+     -- DeltaY          - An value to check for vertical scrollbar. Ignored when
+     --                   ScrollbarWidget is a horizontal widget.
+     -- RESULT
+     -- A string with a real number indicating the fractional change in the
+     -- scrollbar setting that corresponds to a given change in slider position.
+     -- HISTORY
+     -- 8.6.6 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Get the fractional change between current setting of horizontal My_Scroll scrollbar and value 1.0
+     -- Fraction: constant String := Scrollbar_Delta(My_Scroll, "1.0", "0.0");
+     -- COMMANDS
+     -- ScrollbarWidget delta deltaX deltaY
+     -- SOURCE
    function Scrollbar_Delta
      (ScrollbarWidget: in Ttk_Scrollbar; DeltaX, DeltaY: in String)
       return String with
@@ -126,6 +149,11 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the fraction in My_Scroll scrollbar point (24, 56)
+      -- Fraction_Value: constant String := Fraction(My_Scroll, "24", "56");
+      -- COMMANDS
+      -- ScrollbarWidget fraction x y
       -- SOURCE
    function Fraction
      (ScrollbarWidget: in Ttk_Scrollbar; X, Y: in String) return String with
