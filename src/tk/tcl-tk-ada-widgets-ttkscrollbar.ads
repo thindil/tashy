@@ -173,25 +173,35 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the My_Scroll scrollbar setting
+      -- Visible: constant String := Get(My_Scroll);
+      -- COMMANDS
+      -- ScrollbarWidget get
       -- SOURCE
    function Get(ScrollbarWidget: in Ttk_Scrollbar) return String;
    -- ****
 
-      -- ****f* TtkScrollbar/Set
-      -- FUNCTION
-      -- Set the Ttk_Scrollbar setting for which part of associated widget is
-      -- currently visible
-      -- PARAMETERS
-      -- ScrollbarWidget - Ttk_Scrollbar which setting will be changed
-      -- First           - Start fraction of visible part of the associated
-      --                   widget
-      -- Last            - End fraction of visible part of the associated
-      --                   widget
-      -- HISTORY
-      -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
-      -- SOURCE
+   -- ****f* TtkScrollbar/Set
+   -- FUNCTION
+   -- Set the Ttk_Scrollbar setting for which part of associated widget is
+   -- currently visible
+   -- PARAMETERS
+   -- ScrollbarWidget - Ttk_Scrollbar which setting will be changed
+   -- First           - Start fraction of visible part of the associated
+   --                   widget
+   -- Last            - End fraction of visible part of the associated
+   --                   widget
+   -- HISTORY
+   -- 8.6.6 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Set the visible fraction of associated widget with My_Scroll scrollbar to 0.0 and 0.5
+   -- Set(My_Scroll, "0.0", "0.5");
+   -- COMMANDS
+   -- ScrollbarWidget set first last
+   -- SOURCE
    procedure Set
      (ScrollbarWidget: in Ttk_Scrollbar; First, Last: in String) with
       Pre => First /= "" and Last /= "";
