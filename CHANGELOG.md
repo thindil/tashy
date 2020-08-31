@@ -6,6 +6,9 @@ of the project.
 
 ## [Unreleased]
 
+### Added
+- Binding for Tk command: `bind tag sequence`
+
 ### Changed
 - Updated code documentation
 - Removed generating debugging information from default compilation flags
