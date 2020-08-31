@@ -52,6 +52,13 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new treeview with pathname .myview and with columns name and amount
+   -- My_View: constant Ttk_Tree_View := Create(".myview", "-columns [list name amount]");
+   -- COMMANDS
+   -- ttk::treeview pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -74,26 +81,42 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
      -- 8.6.1 - Added
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create treeview My_View with pathname .myview on the current Tcl interpreter and hide columns headings
+     -- declare
+     --    My_View: Ttk_Tree_View;
+     -- begin
+     --    Create(My_Viewm, ".myview", "-show tree");
+     -- end;
+     -- COMMANDS
+     -- ttk::treeview pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_Tree_View; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
-      -- ****
+     -- ****
 
-      -- ****f* TtkTreeView/Children
-      -- FUNCTION
-      -- Get children of the selected item in the selected Ttk_Tree_View
-      -- PARAMETERS
-      -- TreeViewWidget - Ttk_Tree_View in which items will be queried
-      -- Item           - Item ID from TreeViewWidget or {} for root item
-      -- RESULT
-      -- String with list of items which belong to the selected item
-      -- HISTORY
-      -- 8.6.2 - Added
-      -- TODO
-      -- Replace it with higher level of binding
-      -- SOURCE
+     -- ****f* TtkTreeView/Children
+     -- FUNCTION
+     -- Get children of the selected item in the selected Ttk_Tree_View
+     -- PARAMETERS
+     -- TreeViewWidget - Ttk_Tree_View in which items will be queried
+     -- Item           - Item ID from TreeViewWidget or {} for root item
+     -- RESULT
+     -- String with list of items which belong to the selected item
+     -- HISTORY
+     -- 8.6.2 - Added
+     -- TODO
+     -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Get the names of the children of the root item in My_View treeview
+     -- Children_Names: constant String := Children(My_View, "{}");
+     -- COMMANDS
+     -- TreeViewWidget children item
+     -- SOURCE
    function Children
      (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
       Pre => Item /= "";
@@ -110,6 +133,13 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.2 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set width of column name in My_View treeview to 200 pixels
+      -- Column(My_View, "name", "-width 200");
+      -- COMMANDS
+      -- TreeViewWidget column col ?options?
+      -- SEE ALSO
+      -- Column (function)
       -- SOURCE
    procedure Column
      (TreeViewWidget: in Ttk_Tree_View; Col: in String;
