@@ -237,7 +237,7 @@ package Tcl.Tk.Ada.Widgets is
       --
       ---------------------------------------------
 
-      -- ****f* Widgets/Bind
+      -- ****f* Widgets/Bind (procedure)
       -- FUNCTION
       -- Associates Tcl script Script with the event Sequence.
       -- PARAMETERS
@@ -251,6 +251,23 @@ package Tcl.Tk.Ada.Widgets is
       -- SOURCE
    procedure Bind
      (Widgt: in Tk_Widget'Class; Sequence: in String; Script: in String);
+   -- ****
+
+   -- ****f* Widgets/Bind (function)
+   -- FUNCTION
+   -- Get the associated Tcl script Script with the event Sequence.
+   -- PARAMETERS
+   -- Widgt    - Tk_Widget to which script will be binded
+   -- Sequence - Name of Tk event which the script will be get
+   -- RESULT
+   -- Script which is associated with the selected event or {} if no script
+   -- is binded to that event.
+   -- HISTORY
+   -- 8.6.8 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- SOURCE
+   function Bind(Widgt: in Tk_Widget'Class; Sequence: in String) return String;
    -- ****
 
    -- ****f* Widgets/Bind_Tags (procedure)
