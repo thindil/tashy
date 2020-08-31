@@ -38,7 +38,7 @@ package Tcl.Tk.Ada.Widgets.Toplevel.MainWindow is
    function Get_Main_Window(Interp: in Tcl_Interp) return Tk_Toplevel;
    -- ****
 
-   -- ****f* MainWindow/Bind_To_Main_Window
+   -- ****f* MainWindow/Bind_To_Main_Window (procedure)
    -- FUNCTION
    -- Associates Tcl script Script with the event Sequence in the main window.
    -- PARAMETERS
@@ -58,6 +58,27 @@ package Tcl.Tk.Ada.Widgets.Toplevel.MainWindow is
    procedure Bind_To_Main_Window
      (Interp: in Tcl_Interp; Sequence: in String; Script: in String) with
       Pre => Sequence /= "" and Script /= "";
+      -- ****
+
+   -- ****f* MainWindow/Bind_To_Main_Window (function)
+   -- FUNCTION
+   -- Get the associated Tcl script Script with the event Sequence in the main window.
+   -- PARAMETERS
+   -- Interp   - Tcl interpreter to which main window scrip will be binded
+   -- Sequence - Name of Tk event which will be binded with the script
+   -- HISTORY
+   -- 8.6.8 - Added
+   -- TODO
+   -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the script which will be run on press ALT-q on My_Interpreter Tcl interpreter
+   -- Script: constant String := Bind_To_Main_Window(My_Interpreter, "<Alt-q>");
+   -- COMMANDS
+   -- bind . sequence
+   -- SOURCE
+   function Bind_To_Main_Window
+     (Interp: in Tcl_Interp; Sequence: in String) return String with
+      Pre => Sequence /= "";
       -- ****
 
       -- ****f* MainWindow/Unbind_From_Main_Window (procedure)

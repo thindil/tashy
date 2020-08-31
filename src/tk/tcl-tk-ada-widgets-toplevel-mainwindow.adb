@@ -28,6 +28,13 @@ package body Tcl.Tk.Ada.Widgets.Toplevel.MainWindow is
       Tcl_Eval(Interp, "bind . " & Sequence & " " & Script);
    end Bind_To_Main_Window;
 
+   function Bind_To_Main_Window
+     (Interp: in Tcl_Interp; Sequence: in String) return String is
+   begin
+      Tcl_Eval(Interp, "bind . " & Sequence);
+      return Tcl.Ada.Tcl_GetResult(Interp);
+   end Bind_To_Main_Window;
+
    procedure Unbind_From_Main_Window
      (Interp: in Tcl_Interp; Sequence: in String) is
    begin --  Unbind_From_Main_Window
