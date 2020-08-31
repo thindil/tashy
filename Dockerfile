@@ -5,9 +5,9 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
  tcl-dev \
  tk-dev \
  wget \
- && wget https://github.com/thindil/tashy/archive/8.6.7.tar.gz \
- && tar -xzf 8.6.7.tar.gz \
- && cd /tashy-8.6.7 \
+ && wget https://github.com/thindil/tashy/archive/8.6.8.tar.gz \
+ && tar -xzf 8.6.8.tar.gz \
+ && cd /tashy-8.6.8 \
  && tclsh scripts/setup.tcl --nogui \
  && gprbuild -P tashy.gpr \
  && gprinstall -P tashy.gpr -p -XLIBRARY_TYPE=static --build-var=LIBRARY_TYPE --build-name=static \
