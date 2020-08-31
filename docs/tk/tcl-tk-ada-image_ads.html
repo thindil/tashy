@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.7 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.8 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -36,18 +36,18 @@
 <li>1.2. <a href="./tcl-tk-ada-image-photo_ads.html#robo6">Image/Photo</a></li>
 <ul>
 <li>1.2.1. <a href="./tcl-tk-ada-image-photo_ads.html#robo95">Photo/Tk_Photo</a></li>
-<li>1.2.2. <a href="./tcl-tk-ada-image-photo_ads.html#robo369">Photo/Blank</a></li>
-<li>1.2.3. <a href="./tcl-tk-ada-image-photo_ads.html#robo370">Photo/Copy</a></li>
-<li>1.2.4. <a href="./tcl-tk-ada-image-photo_ads.html#robo371">Photo/Create (function)</a></li>
-<li>1.2.5. <a href="./tcl-tk-ada-image-photo_ads.html#robo372">Photo/Create (procedure)</a></li>
-<li>1.2.6. <a href="./tcl-tk-ada-image-photo_ads.html#robo373">Photo/Data</a></li>
-<li>1.2.7. <a href="./tcl-tk-ada-image-photo_ads.html#robo374">Photo/Get</a></li>
-<li>1.2.8. <a href="./tcl-tk-ada-image-photo_ads.html#robo375">Photo/Put</a></li>
-<li>1.2.9. <a href="./tcl-tk-ada-image-photo_ads.html#robo376">Photo/Read</a></li>
-<li>1.2.10. <a href="./tcl-tk-ada-image-photo_ads.html#robo377">Photo/Redither</a></li>
-<li>1.2.11. <a href="./tcl-tk-ada-image-photo_ads.html#robo378">Photo/Transparency_Get</a></li>
-<li>1.2.12. <a href="./tcl-tk-ada-image-photo_ads.html#robo379">Photo/Transparency_Set</a></li>
-<li>1.2.13. <a href="./tcl-tk-ada-image-photo_ads.html#robo380">Photo/Write</a></li>
+<li>1.2.2. <a href="./tcl-tk-ada-image-photo_ads.html#robo370">Photo/Blank</a></li>
+<li>1.2.3. <a href="./tcl-tk-ada-image-photo_ads.html#robo371">Photo/Copy</a></li>
+<li>1.2.4. <a href="./tcl-tk-ada-image-photo_ads.html#robo372">Photo/Create (function)</a></li>
+<li>1.2.5. <a href="./tcl-tk-ada-image-photo_ads.html#robo373">Photo/Create (procedure)</a></li>
+<li>1.2.6. <a href="./tcl-tk-ada-image-photo_ads.html#robo374">Photo/Data</a></li>
+<li>1.2.7. <a href="./tcl-tk-ada-image-photo_ads.html#robo375">Photo/Get</a></li>
+<li>1.2.8. <a href="./tcl-tk-ada-image-photo_ads.html#robo376">Photo/Put</a></li>
+<li>1.2.9. <a href="./tcl-tk-ada-image-photo_ads.html#robo377">Photo/Read</a></li>
+<li>1.2.10. <a href="./tcl-tk-ada-image-photo_ads.html#robo378">Photo/Redither</a></li>
+<li>1.2.11. <a href="./tcl-tk-ada-image-photo_ads.html#robo379">Photo/Transparency_Get</a></li>
+<li>1.2.12. <a href="./tcl-tk-ada-image-photo_ads.html#robo380">Photo/Transparency_Set</a></li>
+<li>1.2.13. <a href="./tcl-tk-ada-image-photo_ads.html#robo381">Photo/Write</a></li>
 </ul>
 <li>1.3. <a href="#robo264">Image/Delete</a></li>
 <li>1.4. <a href="#robo265">Image/Height</a></li>
@@ -84,8 +84,18 @@
 <p class="item_name">PARAMETERS</p>
 <pre> Img - <a href="#robo22">Image</a> to delete
 </pre>
+<p class="item_name">OUTPUT</p>
+<pre> <a href="../cargv_ads.html#robo189">Empty</a> parameter Img
+</pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">   <span class="comment">-- <strong>Delete</strong> image My_Image</span>
+   <strong>Delete</strong><span class="sign">(</span>My_Image<span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> image delete img
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.1 - Added
@@ -97,7 +107,7 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo22">Image</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> the selected image height
+<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the selected image height
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Height</strong><span class="sign">(</span>Img<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
@@ -108,8 +118,15 @@
 <p class="item_name">RESULT</p>
 <pre> The selected image height in pixels
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the height of the My_Image image</span>
+   Image_Height<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Height</strong><span class="sign">(</span>My_Image<span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> image height img
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
@@ -121,7 +138,7 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo22">Image</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> type of the selected image
+<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> type of the selected image
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Image_Type</strong><span class="sign">(</span>Img<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
@@ -132,8 +149,15 @@
 <p class="item_name">RESULT</p>
 <pre> The selected image type
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the type of image My_Image</span>
+   My_Image_Type<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Image_Type</strong><span class="sign">(</span>My_Image<span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> image type img
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
@@ -156,8 +180,15 @@
 <p class="item_name">RESULT</p>
 <pre> 0 if image is not used, otherwise 1
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">   <span class="comment">-- Check if My_Image <span class="keyword">is</span> <span class="keyword">in</span> use</span>
+   Is_Used<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Inuse</strong><span class="sign">(</span>My_Image<span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> image inuse img
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
@@ -169,7 +200,7 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo22">Image</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> names of all existing images
+<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> names of all existing images
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Names</strong> <span class="keyword">return</span> String<span class="sign">;</span>
@@ -177,8 +208,15 @@
 <p class="item_name">RESULT</p>
 <pre> List of names of all existing images or {} if no images exists
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the all existing images names</span>
+   Images_List<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Names</strong><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> image names
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
@@ -190,7 +228,7 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo22">Image</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> types of images available
+<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> types of images available
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Types</strong> <span class="keyword">return</span> String<span class="sign">;</span>
@@ -198,8 +236,15 @@
 <p class="item_name">RESULT</p>
 <pre> List of types of images available
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the all available types of images</span>
+   Images_Types<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Types</strong><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> image types
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.1 - Added
@@ -211,7 +256,7 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo22">Image</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> the selected image width
+<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the selected image width
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Width</strong><span class="sign">(</span>Img<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
@@ -222,8 +267,15 @@
 <p class="item_name">RESULT</p>
 <pre> The selected image width in pixels
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the width of My_Image image</span>
+   Image_Width<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Width</strong><span class="sign">(</span>My_Image<span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> image width img
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
@@ -231,7 +283,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-image.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Jul 31 2020 09:32:36
+<p>Generated from ./src/tk/tcl-tk-ada-image.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Mon Aug 31 2020 10:08:49
 </p>
 </div> <!-- footer -->
 </body>

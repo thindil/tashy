@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.7 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.8 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -28,20 +28,20 @@
 <li>1. <a href="#robo63">Widgets/TtkNotebook</a></li>
 <ul>
 <li>1.1. <a href="#robo111">TtkNotebook/Ttk_Notebook</a></li>
-<li>1.2. <a href="#robo595">TtkNotebook/Add</a></li>
-<li>1.3. <a href="#robo596">TtkNotebook/Create (function)</a></li>
-<li>1.4. <a href="#robo597">TtkNotebook/Create (procedure)</a></li>
-<li>1.5. <a href="#robo598">TtkNotebook/Forget</a></li>
-<li>1.6. <a href="#robo599">TtkNotebook/Get_Selected</a></li>
-<li>1.7. <a href="#robo600">TtkNotebook/Hide</a></li>
-<li>1.8. <a href="#robo601">TtkNotebook/Identify_Element</a></li>
-<li>1.9. <a href="#robo602">TtkNotebook/Identify_Tab</a></li>
-<li>1.10. <a href="#robo603">TtkNotebook/Index</a></li>
-<li>1.11. <a href="#robo604">TtkNotebook/Insert</a></li>
-<li>1.12. <a href="#robo605">TtkNotebook/Notebook_Select</a></li>
-<li>1.13. <a href="#robo606">TtkNotebook/Tab</a></li>
-<li>1.14. <a href="#robo607">TtkNotebook/Tab (procedure)</a></li>
-<li>1.15. <a href="#robo608">TtkNotebook/Tabs</a></li>
+<li>1.2. <a href="#robo597">TtkNotebook/Add</a></li>
+<li>1.3. <a href="#robo598">TtkNotebook/Create (function)</a></li>
+<li>1.4. <a href="#robo599">TtkNotebook/Create (procedure)</a></li>
+<li>1.5. <a href="#robo600">TtkNotebook/Forget</a></li>
+<li>1.6. <a href="#robo601">TtkNotebook/Get_Selected</a></li>
+<li>1.7. <a href="#robo602">TtkNotebook/Hide</a></li>
+<li>1.8. <a href="#robo603">TtkNotebook/Identify_Element</a></li>
+<li>1.9. <a href="#robo604">TtkNotebook/Identify_Tab</a></li>
+<li>1.10. <a href="#robo605">TtkNotebook/Index</a></li>
+<li>1.11. <a href="#robo606">TtkNotebook/Insert</a></li>
+<li>1.12. <a href="#robo607">TtkNotebook/Notebook_Select</a></li>
+<li>1.13. <a href="#robo608">TtkNotebook/Tab</a></li>
+<li>1.14. <a href="#robo609">TtkNotebook/Tab (procedure)</a></li>
+<li>1.15. <a href="#robo610">TtkNotebook/Tabs</a></li>
 </ul>
 </ul>
 <hr />
@@ -72,7 +72,7 @@
 
 <hr />
 <a name="TtkNotebook2fAdd"></a>
-<a name="robo595"></a><h2>TtkNotebook/Add [ Subprograms ]</h2>
+<a name="robo597"></a><h2>TtkNotebook/Add [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -89,8 +89,15 @@
  WindowName - A name of widget to add to <a href="#robo111">Ttk_Notebook</a>
  Options    - <a href="./tcl-tk_ads.html#robo14">Tk</a> options for added window. Default value is empty
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">     <span class="comment">-- <strong>Add</strong> a widget <span class="keyword">with</span> pathname .myframe to the My_Notebook notebook <span class="keyword">with</span> tab label my tab</span>
+     <strong>Add</strong><span class="sign">(</span>My_Notebook<span class="sign">,</span> <span class="quote">".myframe"</span><span class="sign">,</span> <span class="quote">"-text {my tab}"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> Notebook add windowname ?options?
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.2 - Added
@@ -98,7 +105,7 @@
 
 <hr />
 <a name="TtkNotebook2fCreate2028function29"></a>
-<a name="robo596"></a><h2>TtkNotebook/Create (function) [ Subprograms ]</h2>
+<a name="robo598"></a><h2>TtkNotebook/Create (function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -121,8 +128,18 @@
 <p class="item_name">RESULT</p>
 <pre> Newly created <a href="#robo111">Ttk_Notebook</a>
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">   <span class="comment">-- <a href="../cargv_ads.html#robo188">Create</a> a new notebook <span class="keyword">with</span> pathname .mynotebook</span>
+   My_Notebook<span class="sign">:</span> <span class="keyword">constant</span> <a href="#robo111">Ttk_Notebook</a> <span class="sign">:</span><span class="sign">=</span> <a href="../cargv_ads.html#robo188">Create</a><span class="sign">(</span><span class="quote">".mynotebook"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="../cargv_ads.html#robo188">Create</a> (procedure)
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> ttk::notebook pathName ?options?
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.2 - Added
@@ -130,7 +147,7 @@
 
 <hr />
 <a name="TtkNotebook2fCreate2028procedure29"></a>
-<a name="robo597"></a><h2>TtkNotebook/Create (procedure) [ Subprograms ]</h2>
+<a name="robo599"></a><h2>TtkNotebook/Create (procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -151,8 +168,22 @@
             the widget will be created in the "contextual" interpreter.
             Default value is null.
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">     <span class="comment">-- <a href="../cargv_ads.html#robo188">Create</a> notebook My_Notebook <span class="keyword">with</span> pathname .mynotebook on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+     <span class="keyword">declare</span>
+        My_Notebook<span class="sign">:</span> <a href="#robo111">Ttk_Notebook</a><span class="sign">;</span>
+     <span class="keyword">begin</span>
+        <a href="../cargv_ads.html#robo188">Create</a><span class="sign">(</span>My_Notebook<span class="sign">,</span> <span class="quote">".mynotebook"</span><span class="sign">)</span><span class="sign">;</span>
+     <span class="keyword">end</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="../cargv_ads.html#robo188">Create</a> (function)
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> ttk::notebook pathName ?options?
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.2 - Added
@@ -160,7 +191,7 @@
 
 <hr />
 <a name="TtkNotebook2fForget"></a>
-<a name="robo598"></a><h2>TtkNotebook/Forget [ Subprograms ]</h2>
+<a name="robo600"></a><h2>TtkNotebook/Forget [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -174,8 +205,15 @@
 <pre> Notebook - <a href="#robo111">Ttk_Notebook</a> in which the tab will be removed
  TabId    - Id of the tab to remove
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">      <span class="comment">-- Remove the currently selected tab <span class="keyword">in</span> the My_Notebook notebook</span>
+      <strong>Forget</strong><span class="sign">(</span>My_Notebook<span class="sign">,</span> <span class="quote">"current"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> Notebook forget tabid
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.5 - Added
@@ -183,11 +221,11 @@
 
 <hr />
 <a name="TtkNotebook2fGet5fSelected"></a>
-<a name="robo599"></a><h2>TtkNotebook/Get_Selected [ Subprograms ]</h2>
+<a name="robo601"></a><h2>TtkNotebook/Get_Selected [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> selected tab indentifier in the selected <a href="#robo111">Ttk_Notebook</a>
+<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> selected tab indentifier in the selected <a href="#robo111">Ttk_Notebook</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Get_Selected</strong><span class="sign">(</span>Notebook<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo111">Ttk_Notebook</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
@@ -198,8 +236,15 @@
 <p class="item_name">RESULT</p>
 <pre> Identifier of the selected tab in Notebook
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the identifier of the selected tab <span class="keyword">in</span> My_Notebook notebook</span>
+      Tab_Index<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Get_Selected</strong><span class="sign">(</span>My_Notebook<span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> Notebook select
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.2 - Added
@@ -207,11 +252,11 @@
 
 <hr />
 <a name="TtkNotebook2fHide"></a>
-<a name="robo600"></a><h2>TtkNotebook/Hide [ Subprograms ]</h2>
+<a name="robo602"></a><h2>TtkNotebook/Hide [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <strong>Hide</strong> selected tab. Hidden tab can be restored with <a href="../tklib/tcl-tklib-ada-tooltip_ads.html#robo551">Add</a> procedure
+<pre> <strong>Hide</strong> selected tab. Hidden tab can be restored with <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo611">Add</a> procedure
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Hide</strong><span class="sign">(</span>Notebook<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo111">Ttk_Notebook</a><span class="sign">;</span> TabId<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
@@ -221,8 +266,15 @@
 <pre> Notebook - <a href="#robo111">Ttk_Notebook</a> in which tab will be hidden
  TabId    - Id of the tab to hide
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">      <span class="comment">-- <strong>Hide</strong> the second tab of My_Notebook notebook</span>
+      <strong>Hide</strong><span class="sign">(</span>My_Notebook<span class="sign">,</span> <span class="quote">"1"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> Notebook hide tabid
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.2 - Added
@@ -230,11 +282,11 @@
 
 <hr />
 <a name="TtkNotebook2fIdentify5fElement"></a>
-<a name="robo601"></a><h2>TtkNotebook/Identify_Element [ Subprograms ]</h2>
+<a name="robo603"></a><h2>TtkNotebook/Identify_Element [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> the name of the element at the specific location
+<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the name of the element at the specific location
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Identify_Element</strong>
@@ -250,8 +302,15 @@
 <pre> Name of the element at the specific location or {} if no component
  is present there
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the element at point <span class="sign">(</span>24<span class="sign">,</span> 82<span class="sign">)</span> <span class="keyword">in</span> My_Notebook notebook</span>
+      Element_Name<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Identify_Element</strong><span class="sign">(</span>My_Notebook<span class="sign">,</span> <span class="quote">"24"</span><span class="sign">,</span> <span class="quote">"82"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> Notebook identify element x y
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.5 - Added
@@ -259,11 +318,11 @@
 
 <hr />
 <a name="TtkNotebook2fIdentify5fTab"></a>
-<a name="robo602"></a><h2>TtkNotebook/Identify_Tab [ Subprograms ]</h2>
+<a name="robo604"></a><h2>TtkNotebook/Identify_Tab [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> the index of the tab at the specific location
+<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the index of the tab at the specific location
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Identify_Tab</strong>
@@ -276,11 +335,18 @@
  Y        - Y coordinate of the location to query
 </pre>
 <p class="item_name">RESULT</p>
-<pre> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo315">Index</a> of the tab at the specific location or {} if no tab is present
+<pre> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo316">Index</a> of the tab at the specific location or {} if no tab is present
  there
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the index of the tab at point <span class="sign">(</span>10<span class="sign">,</span> 56<span class="sign">)</span> <span class="keyword">in</span> My_Notebook notebook</span>
+      Tab_Index<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Identify_Tab</strong><span class="sign">(</span>Notebook<span class="sign">,</span> <span class="quote">"10"</span><span class="sign">,</span> <span class="quote">"56"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> Notebook identify tab x y
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.5 - Added
@@ -288,11 +354,11 @@
 
 <hr />
 <a name="TtkNotebook2fIndex"></a>
-<a name="robo603"></a><h2>TtkNotebook/Index [ Subprograms ]</h2>
+<a name="robo605"></a><h2>TtkNotebook/Index [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> numeric index of the selected tab
+<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> numeric index of the selected tab
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Index</strong>
@@ -307,8 +373,15 @@
 <pre> Numeric index of the selected tab or amount of all tabs in Notebook,
  if TabId was "end"
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the amount of the tabs <span class="keyword">in</span> My_Notebook notebook</span>
+      Amount<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Index</strong><span class="sign">(</span>My_Notebook<span class="sign">,</span> <span class="quote">"end"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> Notebook index tabid
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.5 - Added
@@ -316,7 +389,7 @@
 
 <hr />
 <a name="TtkNotebook2fInsert"></a>
-<a name="robo604"></a><h2>TtkNotebook/Insert [ Subprograms ]</h2>
+<a name="robo606"></a><h2>TtkNotebook/Insert [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -337,8 +410,15 @@
  SubWindow - <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> which will be inserted or moved
  Options   - Additional options for inserted or moved SubWindow
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">      <span class="comment">-- <strong>Insert</strong> My_Frame to My_Notebook notebook at second position <span class="keyword">with</span> label my tab</span>
+      <strong>Insert</strong><span class="sign">(</span>My_Notebook<span class="sign">,</span> <span class="quote">"1"</span><span class="sign">,</span> My_Frame<span class="sign">,</span> <span class="quote">"-text {my tab}"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> Notebook insert pos subwindow ?options?
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.6 - Added
@@ -346,11 +426,11 @@
 
 <hr />
 <a name="TtkNotebook2fNotebook5fSelect"></a>
-<a name="robo605"></a><h2>TtkNotebook/Notebook_Select [ Subprograms ]</h2>
+<a name="robo607"></a><h2>TtkNotebook/Notebook_Select [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo632">Set</a> selected tab as a currently selected in the <a href="#robo111">Ttk_Notebook</a>
+<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo552">Set</a> selected tab as a currently selected in the <a href="#robo111">Ttk_Notebook</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Notebook_Select</strong><span class="sign">(</span>Notebook<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo111">Ttk_Notebook</a><span class="sign">;</span> TabId<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
@@ -360,8 +440,15 @@
 <pre> Notebook - <a href="#robo111">Ttk_Notebook</a> in which the tab will be selected
  TabId    - Id of the tab to select
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-scale_ads.html#robo552">Set</a> the first tab as the currently selected tab <span class="keyword">in</span> My_Notebook notebook</span>
+      <strong>Notebook_Select</strong><span class="sign">(</span>My_Notebook<span class="sign">,</span> <span class="quote">"0"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> Notebook select tabid
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.2 - Added
@@ -369,11 +456,11 @@
 
 <hr />
 <a name="TtkNotebook2fTab"></a>
-<a name="robo606"></a><h2>TtkNotebook/Tab [ Subprograms ]</h2>
+<a name="robo608"></a><h2>TtkNotebook/Tab [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> the value of the options of the selected tab in the selected
+<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the value of the options of the selected tab in the selected
  <a href="#robo111">Ttk_Notebook</a>
 </pre>
 <p class="item_name">SOURCE</p>
@@ -392,8 +479,15 @@
 <pre> If <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a> is specified, return value of this option, otherwise return
  names and values of all options of the selected tab
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the title of the last tab <span class="keyword">in</span> My_Notebook notebook</span>
+      Title<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Tab</strong><span class="sign">(</span>My_Notebook<span class="sign">,</span> <span class="quote">"end"</span><span class="sign">,</span> <span class="quote">"-text"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> Notebook tab tabid
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.6 - Added
@@ -401,15 +495,15 @@
 
 <hr />
 <a name="TtkNotebook2fTab2028procedure29"></a>
-<a name="robo607"></a><h2>TtkNotebook/Tab (procedure) [ Subprograms ]</h2>
+<a name="robo609"></a><h2>TtkNotebook/Tab (procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo632">Set</a> a new values for the selected options of the selected tab in the
+<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo552">Set</a> a new values for the selected options of the selected tab in the
  selected <a href="#robo111">Ttk_Notebook</a>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <a href="#robo606">Tab</a><span class="sign">(</span>Notebook<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo111">Ttk_Notebook</a><span class="sign">;</span> TabId<span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+<pre class="source">   <span class="keyword">procedure</span> <a href="#robo608">Tab</a><span class="sign">(</span>Notebook<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo111">Ttk_Notebook</a><span class="sign">;</span> TabId<span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> TabId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
@@ -417,8 +511,15 @@
  TabId    - Id of the tab which options will be set
  Options  - List of options with their new values
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-scale_ads.html#robo552">Set</a> the title of the second tab <span class="keyword">in</span> My_Notebook notebook to my new tab</span>
+   <a href="#robo608">Tab</a><span class="sign">(</span>My_Notebook<span class="sign">,</span> <span class="quote">"1"</span><span class="sign">,</span> <span class="quote">"-text {my new tab}"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> Notebook tab tabid ?options?
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.6 - Added
@@ -426,11 +527,11 @@
 
 <hr />
 <a name="TtkNotebook2fTabs"></a>
-<a name="robo608"></a><h2>TtkNotebook/Tabs [ Subprograms ]</h2>
+<a name="robo610"></a><h2>TtkNotebook/Tabs [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> the list of windows names managed by <a href="#robo111">Ttk_Notebook</a>
+<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the list of windows names managed by <a href="#robo111">Ttk_Notebook</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Tabs</strong><span class="sign">(</span>Notebook<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo111">Ttk_Notebook</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
@@ -441,8 +542,15 @@
 <p class="item_name">RESULT</p>
 <pre> A list of names of the windows managed by Notebook
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the names of the windows managed by My_Notebook notebook</span>
+      <a href="./tcl-tk-ada-font_ads.html#robo251">Names</a><span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Tabs</strong><span class="sign">(</span>My_Notebook<span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> Notebook tabs
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.6 - Added
@@ -450,7 +558,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-ttknotebook.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Jul 31 2020 09:32:36
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-ttknotebook.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Mon Aug 31 2020 10:08:49
 </p>
 </div> <!-- footer -->
 </body>

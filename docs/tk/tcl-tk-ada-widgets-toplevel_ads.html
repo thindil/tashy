@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.7 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.8 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -25,23 +25,24 @@
 <div id="content">
 <h3>TABLE OF CONTENTS</h3>
 <ul>
-<li>1. <a href="#robo55">Widgets/Toplevel</a></li>
+<li>1. <a href="#robo56">Widgets/Toplevel</a></li>
 <ul>
 <li>1.1. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo37">Toplevel/MainWindow</a></li>
 <ul>
-<li>1.1.1. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo302">MainWindow/Bind_To_Main_Window</a></li>
-<li>1.1.2. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo303">MainWindow/Get_Main_Window</a></li>
-<li>1.1.3. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo304">MainWindow/Unbind_From_Main_Window (function)</a></li>
-<li>1.1.4. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo305">MainWindow/Unbind_From_Main_Window (procedure)</a></li>
+<li>1.1.1. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo302">MainWindow/Bind_To_Main_Window (function)</a></li>
+<li>1.1.2. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo303">MainWindow/Bind_To_Main_Window (procedure)</a></li>
+<li>1.1.3. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo304">MainWindow/Get_Main_Window</a></li>
+<li>1.1.4. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo305">MainWindow/Unbind_From_Main_Window (function)</a></li>
+<li>1.1.5. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo306">MainWindow/Unbind_From_Main_Window (procedure)</a></li>
 </ul>
 <li>1.2. <a href="#robo102">Toplevel/Tk_Toplevel</a></li>
-<li>1.3. <a href="#robo559">Toplevel/Create (function)</a></li>
-<li>1.4. <a href="#robo560">Toplevel/Create (procedure)</a></li>
+<li>1.3. <a href="#robo561">Toplevel/Create (function)</a></li>
+<li>1.4. <a href="#robo562">Toplevel/Create (procedure)</a></li>
 </ul>
 </ul>
 <hr />
 <a name="Widgets2fToplevel"></a>
-<a name="robo55"></a><h2>Widgets/Toplevel [ Packages ]</h2>
+<a name="robo56"></a><h2>Widgets/Toplevel [ Packages ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada-widgets_ads.html#robo29">Widgets</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -55,7 +56,7 @@
 <a name="Toplevel2fTk5fToplevel"></a>
 <a name="robo102"></a><h2>Toplevel/Tk_Toplevel [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo55">Toplevel</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo56">Toplevel</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a>.
  Each of the derived widgets redefines the <a href="../cargv_ads.html#robo188">Create</a> subprogram
@@ -67,9 +68,9 @@
 
 <hr />
 <a name="Toplevel2fCreate2028function29"></a>
-<a name="robo559"></a><h2>Toplevel/Create (function) [ Subprograms ]</h2>
+<a name="robo561"></a><h2>Toplevel/Create (function) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo55">Toplevel</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo56">Toplevel</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Creates a new <a href="#robo102">Tk_Toplevel</a> in the specified interpreter.
 </pre>
@@ -90,8 +91,18 @@
 <p class="item_name">RESULT</p>
 <pre> Newly created <a href="#robo102">Tk_Toplevel</a>
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">   <span class="comment">-- <a href="../cargv_ads.html#robo188">Create</a> a new toplevel <span class="keyword">with</span> pathname .mywindow and black background</span>
+   My_Window<span class="sign">:</span> <span class="keyword">constant</span> <a href="#robo102">Tk_Toplevel</a> <span class="sign">:</span><span class="sign">=</span> <a href="../cargv_ads.html#robo188">Create</a><span class="sign">(</span><span class="quote">".mywindow"</span><span class="sign">,</span> <span class="quote">"-background black"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="../cargv_ads.html#robo188">Create</a> (procedure)
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> toplevel pathName ?options?
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.1 - Moved from <a href="../tcl_ads.html#robo10">Tcl</a>.<a href="./tcl-tk_ads.html#robo14">Tk</a>.<a href="../tcl-ada_ads.html#robo11">Ada</a>.<a href="./tcl-tk-ada-widgets_ads.html#robo29">Widgets</a>
@@ -99,9 +110,9 @@
 
 <hr />
 <a name="Toplevel2fCreate2028procedure29"></a>
-<a name="robo560"></a><h2>Toplevel/Create (procedure) [ Subprograms ]</h2>
+<a name="robo562"></a><h2>Toplevel/Create (procedure) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo55">Toplevel</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo56">Toplevel</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Creates a new <a href="#robo102">Tk_Toplevel</a> in the specified interpreter.
 </pre>
@@ -120,8 +131,22 @@
             the widget will be created in the "contextual" interpreter.
             Default value is null.
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">     <span class="comment">-- <a href="../cargv_ads.html#robo188">Create</a> toplevel My_Window <span class="keyword">with</span> pathname .mywindow and width 200px on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+     <span class="keyword">declare</span>
+        My_Window<span class="sign">:</span> <a href="#robo102">Tk_Toplevel</a><span class="sign">;</span>
+     <span class="keyword">begin</span>
+        <a href="../cargv_ads.html#robo188">Create</a><span class="sign">(</span>My_Window<span class="sign">,</span> <span class="quote">".mywindow"</span><span class="sign">,</span> <span class="quote">"-width 200"</span><span class="sign">)</span><span class="sign">;</span>
+     <span class="keyword">end</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="../cargv_ads.html#robo188">Create</a> (function)
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> toplevel pathName ?options?
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.1 - Moved from <a href="../tcl_ads.html#robo10">Tcl</a>.<a href="./tcl-tk_ads.html#robo14">Tk</a>.<a href="../tcl-ada_ads.html#robo11">Ada</a>.<a href="./tcl-tk-ada-widgets_ads.html#robo29">Widgets</a>
@@ -129,7 +154,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-toplevel.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Jul 31 2020 09:32:36
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-toplevel.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Mon Aug 31 2020 10:08:49
 </p>
 </div> <!-- footer -->
 </body>

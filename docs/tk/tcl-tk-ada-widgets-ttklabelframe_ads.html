@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.7 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.8 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -28,8 +28,8 @@
 <li>1. <a href="#robo61">Widgets/TtkLabelFrame</a></li>
 <ul>
 <li>1.1. <a href="#robo109">TtkLabelFrame/Ttk_LabelFrame</a></li>
-<li>1.2. <a href="#robo591">TtkLabelFrame/Create (function)</a></li>
-<li>1.3. <a href="#robo592">TtkLabelFrame/Create (procedure)</a></li>
+<li>1.2. <a href="#robo593">TtkLabelFrame/Create (function)</a></li>
+<li>1.3. <a href="#robo594">TtkLabelFrame/Create (procedure)</a></li>
 </ul>
 </ul>
 <hr />
@@ -60,7 +60,7 @@
 
 <hr />
 <a name="TtkLabelFrame2fCreate2028function29"></a>
-<a name="robo591"></a><h2>TtkLabelFrame/Create (function) [ Subprograms ]</h2>
+<a name="robo593"></a><h2>TtkLabelFrame/Create (function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo61">TtkLabelFrame</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -83,8 +83,18 @@
 <p class="item_name">RESULT</p>
 <pre> Newly created <a href="#robo109">Ttk_LabelFrame</a>
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">   <span class="comment">-- <a href="../cargv_ads.html#robo188">Create</a> a new frame <span class="keyword">with</span> pathname .myframe <span class="keyword">with</span> label hello world</span>
+   My_Frame<span class="sign">:</span> <span class="keyword">constant</span> <a href="#robo109">Ttk_LabelFrame</a> <span class="sign">:</span><span class="sign">=</span> <a href="../cargv_ads.html#robo188">Create</a><span class="sign">(</span><span class="quote">".myframe"</span><span class="sign">,</span> <span class="quote">"-text {hello world}"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="../cargv_ads.html#robo188">Create</a> (procedure)
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> ttk::labelframe pathName ?options?
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.1 - Added
@@ -92,7 +102,7 @@
 
 <hr />
 <a name="TtkLabelFrame2fCreate2028procedure29"></a>
-<a name="robo592"></a><h2>TtkLabelFrame/Create (procedure) [ Subprograms ]</h2>
+<a name="robo594"></a><h2>TtkLabelFrame/Create (procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo61">TtkLabelFrame</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -113,8 +123,22 @@
             the widget will be created in the "contextual" interpreter.
             Default value is null.
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">     <span class="comment">-- <a href="../cargv_ads.html#robo188">Create</a> frame My_Frame <span class="keyword">with</span> pathname .myframe and <span class="keyword">with</span> label hello world on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+     <span class="keyword">declare</span>
+        My_Frame<span class="sign">:</span> <a href="#robo109">Ttk_LabelFrame</a><span class="sign">;</span>
+     <span class="keyword">begin</span>
+        <a href="../cargv_ads.html#robo188">Create</a><span class="sign">(</span>My_Frame<span class="sign">,</span> <span class="quote">".myframe"</span><span class="sign">,</span> <span class="quote">"-text {hello world}"</span><span class="sign">)</span><span class="sign">;</span>
+     <span class="keyword">end</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="../cargv_ads.html#robo188">Create</a> (function)
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> ttk::labelframe pathName ?options?
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.1 - Added
@@ -122,7 +146,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-ttklabelframe.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Jul 31 2020 09:32:36
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-ttklabelframe.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Mon Aug 31 2020 10:08:49
 </p>
 </div> <!-- footer -->
 </body>

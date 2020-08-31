@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.7 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.8 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -83,8 +83,15 @@
 <p class="item_name">RESULT</p>
 <pre> Newly created <a href="#robo72">Tk_Bitmap</a>
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">   <span class="comment">-- <a href="../cargv_ads.html#robo188">Create</a> bitmap image <span class="keyword">with</span> name arrow-up from the code on default interpreter</span>
+   Arrow_Up<span class="sign">:</span> <span class="keyword">constant</span> <a href="#robo72">Tk_Bitmap</a> <span class="sign">:</span><span class="sign">=</span> <a href="../cargv_ads.html#robo188">Create</a><span class="sign">(</span><span class="quote">"arrow-up"</span><span class="sign">,</span> <span class="quote">"-data {#define arrowUp_width 7  #define arrowUp_height 4 static char arrowUp_bits[] = { 0x08<span class="sign">,</span> 0x1c<span class="sign">,</span> 0x3e<span class="sign">,</span> 0x7f }<span class="sign">;</span>}"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> image create bitmap name ?options?
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.1 - Added
@@ -113,8 +120,22 @@
             the image will be created in the "contextual" interpreter.
             Default value is null.
 </pre>
+<p class="item_name">OUTPUT</p>
+<pre> Newly created <a href="#robo72">Tk_Bitmap</a> as the Widgt parameter
+</pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">      <span class="comment">-- <a href="../cargv_ads.html#robo188">Create</a> bitmap image <span class="keyword">with</span> name arrow-down from the code on default interpreter</span>
+      <span class="keyword">declare</span>
+         Arrow_Down<span class="sign">:</span> <a href="#robo72">Tk_Bitmap</a><span class="sign">;</span>
+      <span class="keyword">begin</span>
+         <a href="../cargv_ads.html#robo188">Create</a><span class="sign">(</span>Arror_Down<span class="sign">,</span> <span class="quote">"arrow-down"</span><span class="sign">,</span> <span class="quote">"-data {#define arrowDown_width 7  #define arrowDown_height 4 static char arrowDown_bits[] = { 0x7f<span class="sign">,</span> 0x3e<span class="sign">,</span> 0x1c<span class="sign">,</span> 0x08 }<span class="sign">;</span>}"</span><span class="sign">)</span><span class="sign">;</span>
+      <span class="keyword">end</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> image create bitmap name ?options?
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.1 - Added
@@ -122,7 +143,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-image-bitmap.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Jul 31 2020 09:32:36
+<p>Generated from ./src/tk/tcl-tk-ada-image-bitmap.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Mon Aug 31 2020 10:08:49
 </p>
 </div> <!-- footer -->
 </body>

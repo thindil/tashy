@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.7 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.8 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -25,23 +25,23 @@
 <div id="content">
 <h3>TABLE OF CONTENTS</h3>
 <ul>
-<li>1. <a href="#robo51">Widgets/Scrollbar</a></li>
+<li>1. <a href="#robo52">Widgets/Scrollbar</a></li>
 <ul>
 <li>1.1. <a href="#robo97">Scrollbar/Tk_Scrollbar</a></li>
-<li>1.2. <a href="#robo385">Scrollbar/Activate (function)</a></li>
-<li>1.3. <a href="#robo386">Scrollbar/Activate (procedure)</a></li>
-<li>1.4. <a href="#robo387">Scrollbar/Create (function)</a></li>
-<li>1.5. <a href="#robo388">Scrollbar/Create (procedure)</a></li>
-<li>1.6. <a href="#robo389">Scrollbar/Fraction</a></li>
-<li>1.7. <a href="#robo390">Scrollbar/Get</a></li>
-<li>1.8. <a href="#robo391">Scrollbar/Identify</a></li>
-<li>1.9. <a href="#robo392">Scrollbar/Scrollbar_Delta</a></li>
-<li>1.10. <a href="#robo393">Scrollbar/Set</a></li>
+<li>1.2. <a href="#robo387">Scrollbar/Activate (function)</a></li>
+<li>1.3. <a href="#robo388">Scrollbar/Activate (procedure)</a></li>
+<li>1.4. <a href="#robo389">Scrollbar/Create (function)</a></li>
+<li>1.5. <a href="#robo390">Scrollbar/Create (procedure)</a></li>
+<li>1.6. <a href="#robo391">Scrollbar/Fraction</a></li>
+<li>1.7. <a href="#robo392">Scrollbar/Get</a></li>
+<li>1.8. <a href="#robo393">Scrollbar/Identify</a></li>
+<li>1.9. <a href="#robo394">Scrollbar/Scrollbar_Delta</a></li>
+<li>1.10. <a href="#robo395">Scrollbar/Set</a></li>
 </ul>
 </ul>
 <hr />
 <a name="Widgets2fScrollbar"></a>
-<a name="robo51"></a><h2>Widgets/Scrollbar [ Packages ]</h2>
+<a name="robo52"></a><h2>Widgets/Scrollbar [ Packages ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada-widgets_ads.html#robo29">Widgets</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -55,7 +55,7 @@
 <a name="Scrollbar2fTk5fScrollbar"></a>
 <a name="robo97"></a><h2>Scrollbar/Tk_Scrollbar [ Types ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">Scrollbar</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo52">Scrollbar</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a>.
  Each of the derived widgets redefines the <a href="../cargv_ads.html#robo188">Create</a> subprogram
@@ -67,11 +67,11 @@
 
 <hr />
 <a name="Scrollbar2fActivate2028function29"></a>
-<a name="robo385"></a><h2>Scrollbar/Activate (function) [ Subprograms ]</h2>
+<a name="robo387"></a><h2>Scrollbar/Activate (function) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">Scrollbar</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo52">Scrollbar</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> an active element of the selected <a href="#robo97">Tk_Scrollbar</a>
+<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> an active element of the selected <a href="#robo97">Tk_Scrollbar</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo273">Activate</a><span class="sign">(</span>ScrollbarWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo97">Tk_Scrollbar</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
@@ -83,8 +83,18 @@
 <pre> Name of currently active element: "arrow1", "slider" or "arrow2" or
  {} if no element is currently active
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the active element <span class="keyword">in</span> the My_Scrollbar scrollbar</span>
+      Element<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo273">Activate</a><span class="sign">(</span>My_Scrollbar<span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo273">Activate</a> (procedure)
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> ScrollbarWidget activate
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
@@ -92,11 +102,11 @@
 
 <hr />
 <a name="Scrollbar2fActivate2028procedure29"></a>
-<a name="robo386"></a><h2>Scrollbar/Activate (procedure) [ Subprograms ]</h2>
+<a name="robo388"></a><h2>Scrollbar/Activate (procedure) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">Scrollbar</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo52">Scrollbar</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo632">Set</a> the selected element as an active in the selected <a href="#robo97">Tk_Scrollbar</a>
+<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo552">Set</a> the selected element as an active in the selected <a href="#robo97">Tk_Scrollbar</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo273">Activate</a>
@@ -108,8 +118,16 @@
  Element         - The element to activate. Can be "arrow1", "slider"
                    or "arrow2"
 </pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo273">Activate</a> (function)
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> ScrollbarWidget activate element
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
+ -- <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo273">Activate</a> "arrow1" in My_Scrollbar scrollbar
+ <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo273">Activate</a>(My_Scrollbar, "arrow1");
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
@@ -117,9 +135,9 @@
 
 <hr />
 <a name="Scrollbar2fCreate2028function29"></a>
-<a name="robo387"></a><h2>Scrollbar/Create (function) [ Subprograms ]</h2>
+<a name="robo389"></a><h2>Scrollbar/Create (function) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">Scrollbar</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo52">Scrollbar</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Creates a new <a href="#robo97">Tk_Scrollbar</a> in the specified interpreter.
 </pre>
@@ -140,8 +158,18 @@
 <p class="item_name">RESULT</p>
 <pre> Newly created <a href="#robo97">Tk_Scrollbar</a>
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">   <span class="comment">-- <a href="../cargv_ads.html#robo188">Create</a> a new scrollbar <span class="keyword">with</span> pathname .myscroll and orientation horizontal</span>
+   My_Scrollbar<span class="sign">:</span> <span class="keyword">constant</span> <a href="#robo97">Tk_Scrollbar</a> <span class="sign">:</span><span class="sign">=</span> <a href="../cargv_ads.html#robo188">Create</a><span class="sign">(</span><span class="quote">".myscroll"</span><span class="sign">,</span> <span class="quote">"-orient horizontal"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="../cargv_ads.html#robo188">Create</a> (procedure)
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> scrollbar pathName ?options?
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.1 - Added
@@ -149,9 +177,9 @@
 
 <hr />
 <a name="Scrollbar2fCreate2028procedure29"></a>
-<a name="robo388"></a><h2>Scrollbar/Create (procedure) [ Subprograms ]</h2>
+<a name="robo390"></a><h2>Scrollbar/Create (procedure) [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">Scrollbar</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo52">Scrollbar</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Creates a new <a href="#robo97">Tk_Scrollbar</a> in the specified interpreter.
 </pre>
@@ -170,8 +198,22 @@
             the widget will be created in the "contextual" interpreter.
             Default value is null.
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">     <span class="comment">-- <a href="../cargv_ads.html#robo188">Create</a> scrollbar My_Scrollbar <span class="keyword">with</span> pathname .myscroll and relief solid on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+     <span class="keyword">declare</span>
+        My_Scrollbar<span class="sign">:</span> <a href="#robo97">Tk_Scrollbar</a><span class="sign">;</span>
+     <span class="keyword">begin</span>
+        <a href="../cargv_ads.html#robo188">Create</a><span class="sign">(</span>My_Scrollbar<span class="sign">,</span> <span class="quote">".myscroll"</span><span class="sign">,</span> <span class="quote">"-relief solid"</span><span class="sign">)</span><span class="sign">;</span>
+     <span class="keyword">end</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="../cargv_ads.html#robo188">Create</a> (function)
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> scrollbar pathName ?options?
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.1 - Added
@@ -179,11 +221,11 @@
 
 <hr />
 <a name="Scrollbar2fFraction"></a>
-<a name="robo389"></a><h2>Scrollbar/Fraction [ Subprograms ]</h2>
+<a name="robo391"></a><h2>Scrollbar/Fraction [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">Scrollbar</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo52">Scrollbar</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> the fraction of the selected <a href="#robo97">Tk_Scrollbar</a> at the selected pixel
+<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the fraction of the selected <a href="#robo97">Tk_Scrollbar</a> at the selected pixel
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Fraction</strong>
@@ -199,8 +241,15 @@
 <pre> Value between 0 and 1 where 0 is top or left of the trough and 1 is
  bottom or right, middle is 0.5.
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the fraction for My_Scrollbar at point <span class="sign">(</span>23<span class="sign">,</span> 56)</span>
+      Scroll_Fraction<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Fraction</strong><span class="sign">(</span>My_Scrollbar<span class="sign">,</span> <span class="quote">"23"</span><span class="sign">,</span> <span class="quote">"56"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> ScrollbarWidget fraction x y
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
@@ -208,9 +257,9 @@
 
 <hr />
 <a name="Scrollbar2fGet"></a>
-<a name="robo390"></a><h2>Scrollbar/Get [ Subprograms ]</h2>
+<a name="robo392"></a><h2>Scrollbar/Get [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">Scrollbar</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo52">Scrollbar</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> <strong>Get</strong> the <a href="#robo97">Tk_Scrollbar</a> setting for which part of associated widget is
  currently visible
@@ -225,8 +274,18 @@
 <pre> Two values of real fraction between 0 and 1 for visible part of the
  associated widget.
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">      <span class="comment">-- <strong>Get</strong> the visibility setting for the scrollbar My_Scrollbar</span>
+      Visible<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Get</strong><span class="sign">(</span>My_Scrollbar<span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo552">Set</a>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> ScrollbarWidget get
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
@@ -234,11 +293,11 @@
 
 <hr />
 <a name="Scrollbar2fIdentify"></a>
-<a name="robo391"></a><h2>Scrollbar/Identify [ Subprograms ]</h2>
+<a name="robo393"></a><h2>Scrollbar/Identify [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">Scrollbar</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo52">Scrollbar</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> the name of the <a href="#robo97">Tk_Scrollbar</a> element at the selected pixel
+<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the name of the <a href="#robo97">Tk_Scrollbar</a> element at the selected pixel
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Identify</strong>
@@ -255,8 +314,15 @@
 <pre> Name of the ScrollbarWidget's element in which the selected pixel is.
  If the selected pixel is outside of the ScrollbarWidget, return {}
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the name of the My_Scrollbar scrollbar element at point <span class="sign">(</span>56<span class="sign">,</span> 23)</span>
+   Element_Name<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Identify</strong><span class="sign">(</span>My_Scrollbar<span class="sign">,</span> <span class="quote">"56"</span><span class="sign">,</span> <span class="quote">"23"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> ScrollbarWidget identify x y
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
@@ -264,11 +330,11 @@
 
 <hr />
 <a name="Scrollbar2fScrollbar5fDelta"></a>
-<a name="robo392"></a><h2>Scrollbar/Scrollbar_Delta [ Subprograms ]</h2>
+<a name="robo394"></a><h2>Scrollbar/Scrollbar_Delta [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">Scrollbar</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo52">Scrollbar</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> the faction change between current <a href="#robo97">Tk_Scrollbar</a> setting and the
+<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the fraction change between current <a href="#robo97">Tk_Scrollbar</a> setting and the
  selected value
 </pre>
 <p class="item_name">SOURCE</p>
@@ -288,8 +354,15 @@
 <pre> A string with a real number indicating the fractional change in the
  scrollbar setting that corresponds to a given change in slider position.
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the fraction for horizontal scrollbar My_Scrollbar for value 10</span>
+   Delta<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Scrollbar_Delta</strong><span class="sign">(</span>My_Scrollbar<span class="sign">,</span> <span class="quote">"10"</span><span class="sign">,</span> <span class="quote">"0"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> ScrollbarWidget delta deltaX deltaY
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
@@ -297,9 +370,9 @@
 
 <hr />
 <a name="Scrollbar2fSet"></a>
-<a name="robo393"></a><h2>Scrollbar/Set [ Subprograms ]</h2>
+<a name="robo395"></a><h2>Scrollbar/Set [ Subprograms ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">Scrollbar</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo52">Scrollbar</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> <strong>Set</strong> the <a href="#robo97">Tk_Scrollbar</a> setting for which part of associated widget is
  currently visible
@@ -310,13 +383,23 @@
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> ScrollbarWidget - <a href="#robo97">Tk_Scrollbar</a> which setting will be changed
- First           - <a href="./tcl-tk-ada-widgets-ttkprogressbar_ads.html#robo623">Start</a> fraction of visible part of the associated
+ First           - <a href="./tcl-tk-ada-widgets-ttkprogressbar_ads.html#robo625">Start</a> fraction of visible part of the associated
                    widget
  Last            - End fraction of visible part of the associated
                    widget
 </pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">      <span class="comment">-- <strong>Set</strong> visibility of the associated widget to My_Scrollbar scrollbar from 0 to 20%</span>
+      <strong>Set</strong><span class="sign">(</span>My_Scrollbar<span class="sign">,</span> <span class="quote">"0.0"</span><span class="sign">,</span> <span class="quote">"0.2"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> ScrollbarWidget set first last
+</pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
@@ -324,7 +407,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-scrollbar.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Jul 31 2020 09:32:36
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-scrollbar.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Mon Aug 31 2020 10:08:49
 </p>
 </div> <!-- footer -->
 </body>

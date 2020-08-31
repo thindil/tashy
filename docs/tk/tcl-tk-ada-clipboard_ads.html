@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.7 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.8 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -55,17 +55,17 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">Clipboard</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="../tklib/tcl-tklib-ada-tooltip_ads.html#robo551">Add</a> the selected data to the clipboard
+<pre> <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo611">Add</a> the selected data to the clipboard
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Append</strong>
-     <span class="sign">(</span><a href="./tcl-tk-ada-image-photo_ads.html#robo373">Data</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Window<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span>
+     <span class="sign">(</span><a href="./tcl-tk-ada-image-photo_ads.html#robo374">Data</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Window<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span>
       Format<span class="sign">,</span> Ctype<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> "STRING"<span class="sign">)</span> <span class="keyword">with</span>
-      Pre =<span class="sign">&gt;</span> <a href="./tcl-tk-ada-image-photo_ads.html#robo373">Data</a> /= "" and Format <span class="keyword">in</span> "STRING" | "ATOM" and
+      Pre =<span class="sign">&gt;</span> <a href="./tcl-tk-ada-image-photo_ads.html#robo374">Data</a> /= "" and Format <span class="keyword">in</span> "STRING" | "ATOM" and
       Ctype <span class="keyword">in</span> "STRING" | "FILE_NAME"<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo373">Data</a>   - The data which will be added to the clipboard
+<pre> <a href="./tcl-tk-ada-image-photo_ads.html#robo374">Data</a>   - The data which will be added to the clipboard
  Window - <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> on which display the data will be added to clipboard
  Format - Format in which the data is transmitted to the requester.
           Possible values are STRING or ATOM. Default value is STRING
@@ -73,14 +73,14 @@
           FILE_NAME. Default value is STRING
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="../tklib/tcl-tklib-ada-tooltip_ads.html#robo551">Add</a> text as string to the clipboard on display where My_Main_Window widget is</span>
-   <strong>Append</strong><span class="sign">(</span><span class="quote">"<a href="./tcl-tk-ada-image-photo_ads.html#robo373">Data</a> to add to clipboard"</span><span class="sign">,</span> My_Main_Window<span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo611">Add</a> text as string to the clipboard on display where My_Main_Window widget is</span>
+   <strong>Append</strong><span class="sign">(</span><span class="quote">"<a href="./tcl-tk-ada-image-photo_ads.html#robo374">Data</a> to add to clipboard"</span><span class="sign">,</span> My_Main_Window<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> clipboard append -displayof window -format format -type ctype ?--? data
 </pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.7 - Added
@@ -105,13 +105,13 @@
       <strong>Clear</strong><span class="sign">(</span>My_Main_Window<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="../tcl_ads.html#robo10">Tcl</a>.<a href="./tcl-tk_ads.html#robo14">Tk</a>.<a href="../tcl-ada_ads.html#robo11">Ada</a>.<a href="#robo18">Clipboard</a>.<a href="./tcl-tk-ada-widgets-listbox_ads.html#robo290">Selection_Clear</a>
+<pre> <a href="../tcl_ads.html#robo10">Tcl</a>.<a href="./tcl-tk_ads.html#robo14">Tk</a>.<a href="../tcl-ada_ads.html#robo11">Ada</a>.<a href="#robo18">Clipboard</a>.<a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo581">Selection_Clear</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> clipboard clear -displayof window
 </pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.7 - Added
@@ -151,7 +151,7 @@
 <pre> clipboard get -displayof window -type ctype
 </pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.7 - Added
@@ -163,32 +163,32 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">Clipboard</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="../tklib/tcl-tklib-ada-tooltip_ads.html#robo552">Clear</a> the selected selection on the selected window's display
+<pre> <a href="./tcl-tk-ada-option_ads.html#robo349">Clear</a> the selected selection on the selected window's display
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Selection_Clear</strong>
-     <span class="sign">(</span>Window<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo685">Selection</a><span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> "PRIMARY"<span class="sign">)</span> <span class="keyword">with</span>
-      Pre =<span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo685">Selection</a> <span class="keyword">in</span> "PRIMARY" | "CLIPBOARD"<span class="sign">;</span>
+     <span class="sign">(</span>Window<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo687">Selection</a><span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> "PRIMARY"<span class="sign">)</span> <span class="keyword">with</span>
+      Pre =<span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo687">Selection</a> <span class="keyword">in</span> "PRIMARY" | "CLIPBOARD"<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Window    - <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> on which display the selection will be cleared
- <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo685">Selection</a> - Type of selection to clear. Possible values are PRIMARY
+ <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo687">Selection</a> - Type of selection to clear. Possible values are PRIMARY
              and CLIPBOARD. Default value is PRIMARY
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="../tklib/tcl-tklib-ada-tooltip_ads.html#robo552">Clear</a> the PRIMARY selection on the My_Main_Window display</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-option_ads.html#robo349">Clear</a> the PRIMARY selection on the My_Main_Window display</span>
       <strong>Selection_Clear</strong><span class="sign">(</span>My_Main_Window<span class="sign">)</span><span class="sign">;</span>
-      <span class="comment">-- <a href="../tklib/tcl-tklib-ada-tooltip_ads.html#robo552">Clear</a> the CLIPBOARD selection on the My_Main_Window display</span>
+      <span class="comment">-- <a href="./tcl-tk-ada-option_ads.html#robo349">Clear</a> the CLIPBOARD selection on the My_Main_Window display</span>
       <strong>Selection_Clear</strong><span class="sign">(</span>My_Main_Window<span class="sign">,</span> <span class="quote">"CLIPBOARD"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="../tcl_ads.html#robo10">Tcl</a>.<a href="./tcl-tk_ads.html#robo14">Tk</a>.<a href="../tcl-ada_ads.html#robo11">Ada</a>.<a href="#robo18">Clipboard</a>.<a href="../tklib/tcl-tklib-ada-tooltip_ads.html#robo552">Clear</a>
+<pre> <a href="../tcl_ads.html#robo10">Tcl</a>.<a href="./tcl-tk_ads.html#robo14">Tk</a>.<a href="../tcl-ada_ads.html#robo11">Ada</a>.<a href="#robo18">Clipboard</a>.<a href="./tcl-tk-ada-option_ads.html#robo349">Clear</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> selection clear -displayof window -selection selection
 </pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.7 - Added
@@ -205,15 +205,15 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Selection_Get</strong>
-     <span class="sign">(</span>Window<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo685">Selection</a><span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> "PRIMARY"<span class="sign">;</span>
+     <span class="sign">(</span>Window<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo687">Selection</a><span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> "PRIMARY"<span class="sign">;</span>
       SType<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> "STRING"<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre =<span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo685">Selection</a> <span class="keyword">in</span> "PRIMARY" | "CLIPBOARD" and
+      Pre =<span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo687">Selection</a> <span class="keyword">in</span> "PRIMARY" | "CLIPBOARD" and
       SType <span class="keyword">in</span> "STRING" | "FILE_NAME"<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Window    - <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> on which display the contents of the selection
              will be get
- <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo685">Selection</a> - The type of the selection. Possible values are PRIMARY
+ <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo687">Selection</a> - The type of the selection. Possible values are PRIMARY
              and CLIPBOARD. Default value is PRIMARY
  SType     - Form in which the data will be returned. Possible values
              are STRING and FILE_NAME. Default value is STRING
@@ -222,22 +222,22 @@
 <pre> The contents of the selected selection
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> the PRIMARY selection on My_Main_Window widget display in</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the PRIMARY selection on My_Main_Window widget display in</span>
       <span class="comment">-- form of string</span>
       Selection_Content<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Selection_Get</strong><span class="sign">(</span>My_Main_Window<span class="sign">)</span><span class="sign">;</span>
-      <span class="comment">-- <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> the CLIPBOARD selection on My_Main_Window widget display in</span>
+      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the CLIPBOARD selection on My_Main_Window widget display in</span>
       <span class="comment">-- form of file name</span>
       File_Name<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Selection_Get</strong><span class="sign">(</span>My_Main_Window<span class="sign">,</span> <span class="quote">"CLIPBOARD"</span><span class="sign">,</span>
                                                   <span class="quote">"FILE_NAME"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="../tcl_ads.html#robo10">Tcl</a>.<a href="./tcl-tk_ads.html#robo14">Tk</a>.<a href="../tcl-ada_ads.html#robo11">Ada</a>.<a href="#robo18">Clipboard</a>.<a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a>
+<pre> <a href="../tcl_ads.html#robo10">Tcl</a>.<a href="./tcl-tk_ads.html#robo14">Tk</a>.<a href="../tcl-ada_ads.html#robo11">Ada</a>.<a href="#robo18">Clipboard</a>.<a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> selection get -displayof window -selection selection -type stype
 </pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.7 - Added
@@ -255,16 +255,16 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Selection_Handle</strong>
      <span class="sign">(</span>Window<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Command<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
-      <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo685">Selection</a><span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> "PRIMARY"<span class="sign">;</span> SType<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> "STRING"<span class="sign">;</span>
+      <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo687">Selection</a><span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> "PRIMARY"<span class="sign">;</span> SType<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> "STRING"<span class="sign">;</span>
       Format<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> "STRING"<span class="sign">)</span> <span class="keyword">with</span>
-      Pre =<span class="sign">&gt;</span> Command /= "" and <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo685">Selection</a> <span class="keyword">in</span> "PRIMARY" | "CLIPBOARD" and
+      Pre =<span class="sign">&gt;</span> Command /= "" and <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo687">Selection</a> <span class="keyword">in</span> "PRIMARY" | "CLIPBOARD" and
       SType <span class="keyword">in</span> "STRING" | "FILE_NAME" and
       Format <span class="keyword">in</span> "STRING" | "UTF8_STRING" | "ATOM" | "INTEGER"<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Window    - <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> which will be owe the selection
  Command   - <a href="../tcl_ads.html#robo10">Tcl</a> command which will be executed
- <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo685">Selection</a> - The selection which will be queried. Possible values are
+ <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo687">Selection</a> - The selection which will be queried. Possible values are
              PRIMARY and CLIPBOARD. Default value is PRIMARY
  SType     - Form of data retrieved from the selection. Possible
              values are STRING or FILE_NAME. Default value is STRING
@@ -285,7 +285,7 @@
 <pre> selection handle -selection selection -type stype -format format window command
 </pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.7 - Added
@@ -297,19 +297,19 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">Clipboard</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> the name of the window which owns the selected selection in the
+<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the name of the window which owns the selected selection in the
  selected window's display
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Selection_Own
-     <span class="sign">(</span>Window<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo685">Selection</a><span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> "PRIMARY"<span class="sign">)</span>
+     <span class="sign">(</span>Window<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo687">Selection</a><span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> "PRIMARY"<span class="sign">)</span>
       <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre =<span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo685">Selection</a> <span class="keyword">in</span> "PRIMARY" | "CLIPBOARD"<span class="sign">;</span>
+      Pre =<span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo687">Selection</a> <span class="keyword">in</span> "PRIMARY" | "CLIPBOARD"<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Window    - <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> on which display the owner of selection will be
              get
- <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo685">Selection</a> - The selection which will be checked. Possible values are
+ <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo687">Selection</a> - The selection which will be checked. Possible values are
              PRIMARY and CLIPBOARD. Default value is PRIMARY
 </pre>
 <p class="item_name">RESULT</p>
@@ -317,10 +317,10 @@
  owns the selection.
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> the name of owner of PRIMARY selection on My_Main_Window</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the name of owner of PRIMARY selection on My_Main_Window</span>
       <span class="comment">-- widget display</span>
       Owner_Name<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Selection_Own<span class="sign">(</span>My_Main_Window<span class="sign">)</span><span class="sign">;</span>
-      <span class="comment">-- <a href="./tcl-tk-ada-widgets-listbox_ads.html#robo279">Get</a> the name of owner of CLIPBOARD selection on My_Main_Window</span>
+      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the name of owner of CLIPBOARD selection on My_Main_Window</span>
       <span class="comment">-- widget display</span>
       Owner_Name<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Selection_Own<span class="sign">(</span>My_Main_Window<span class="sign">,</span> <span class="quote">"CLIPBOARD"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
@@ -328,7 +328,7 @@
 <pre> selection own -displayof window -selection selection
 </pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.7 - Added
@@ -340,28 +340,28 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">Clipboard</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo632">Set</a> the Window as a new owner of the selected selection.
+<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo552">Set</a> the Window as a new owner of the selected selection.
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Selection_Own
      <span class="sign">(</span>Window<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Command<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">;</span>
-      <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo685">Selection</a><span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> "PRIMARY"<span class="sign">)</span> <span class="keyword">with</span>
-      Pre =<span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo685">Selection</a> <span class="keyword">in</span> "PRIMARY" | "CLIPBOARD"<span class="sign">;</span>
+      <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo687">Selection</a><span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> "PRIMARY"<span class="sign">)</span> <span class="keyword">with</span>
+      Pre =<span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo687">Selection</a> <span class="keyword">in</span> "PRIMARY" | "CLIPBOARD"<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Window    - <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> which will be set as the owner of the selected
-             <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo685">Selection</a>
+             <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo687">Selection</a>
  Command   - <a href="../tcl_ads.html#robo10">Tcl</a> command to execute when other window claims ownership
-             of the <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo685">Selection</a> from the Window. Must starts with
+             of the <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo687">Selection</a> from the Window. Must starts with
              "-command "
- <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo685">Selection</a> - The selection which will be owned. Possible values are
+ <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo687">Selection</a> - The selection which will be owned. Possible values are
              PRIMARY and CLIPBOARD. Default value is PRIMARY
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo632">Set</a> the name of owner of PRIMARY selection to My_Main_Window</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-scale_ads.html#robo552">Set</a> the name of owner of PRIMARY selection to My_Main_Window</span>
       <span class="comment">-- widget</span>
       Selection_Own<span class="sign">(</span>My_Main_Window<span class="sign">)</span><span class="sign">;</span>
-      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkscale_ads.html#robo632">Set</a> the name of owner of CLIPBOARD selection to My_Main_Window and</span>
+      <span class="comment">-- <a href="./tcl-tk-ada-widgets-scale_ads.html#robo552">Set</a> the name of owner of CLIPBOARD selection to My_Main_Window and</span>
       <span class="comment">-- execute <a href="../tcl_ads.html#robo10">Tcl</a> command puts hello when other widget will claim ownership</span>
       Selection_Own<span class="sign">(</span>My_Main_Window<span class="sign">,</span> <span class="quote">"{puts hello}"</span><span class="sign">,</span> <span class="quote">"CLIPBOARD"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
@@ -369,7 +369,7 @@
 <pre> selection own -command command -selection selection window
 </pre>
 <p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo459">Replace</a> it with higher level of binding
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.7 - Added
@@ -377,7 +377,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-clipboard.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Jul 31 2020 09:32:36
+<p>Generated from ./src/tk/tcl-tk-ada-clipboard.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Mon Aug 31 2020 10:08:49
 </p>
 </div> <!-- footer -->
 </body>
