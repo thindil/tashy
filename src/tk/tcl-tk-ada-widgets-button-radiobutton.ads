@@ -62,6 +62,7 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Tk_RadioButton with
       Pre => pathName /= "";
+     -- ****
 
 
      -- ****f* RadioButton/Create (procedure)
