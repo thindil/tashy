@@ -165,6 +165,13 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.2 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the minimum width of the column name in My_View
+      -- Min_Width: constant String := Column(My_View, "name", "-minwidth");
+      -- COMMANDS
+      -- TreeViewWidget column col ?option?
+      -- SEE ALSO
+      -- Column (procedure)
       -- SOURCE
    function Column
      (TreeViewWidget: in Ttk_Tree_View; Col: in String;
@@ -182,6 +189,13 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.1 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Delete item with index myitem from My_View treeview
+      -- Delete(My_View, "[list myitem]");
+      -- COMMANDS
+      -- TreeViewWidget delete itemList
+      -- SEE ALSO
+      -- Detach
       -- SOURCE
    procedure Delete
      (TreeViewWidget: in Ttk_Tree_View; ItemsList: in String) with
@@ -199,6 +213,13 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Hide item with index I001 from My_View treeview
+      -- Detach(My_View, "[list I001]");
+      -- COMMANDS
+      -- TreeViewWidget detach itemList
+      -- SEE ALSO
+      -- Delete
       -- SOURCE
    procedure Detach
      (TreeViewWidget: in Ttk_Tree_View; ItemsList: in String) with
@@ -217,6 +238,11 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.2 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Check if item with index MyItem12 exists in My_View treeview
+      -- Item_Exists: constant String := Exists(My_View, "MyItem12");
+      -- COMMANDS
+      -- TreeViewWidget exists item
       -- SOURCE
    function Exists
      (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
