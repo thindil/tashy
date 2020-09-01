@@ -360,6 +360,11 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the identifier of column at point (23, 48) in My_View treeview
+      -- Identifier: constant String := Identify_Column(My_View, "23", "48");
+      -- COMMANDS
+      -- TreeViewWidget identify column x y
       -- SOURCE
    function Identify_Column
      (TreeViewWidget: in Ttk_Tree_View; X, Y: in String) return String with
@@ -380,6 +385,11 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the element name at point (12, 87) in My_View treeview
+      -- Element_Name: constant String := Identify_Element(My_View, "12", "87");
+      -- COMMANDS
+      -- TreeViewWidget identify element x y
       -- SOURCE
    function Identify_Element
      (TreeViewWidget: in Ttk_Tree_View; X, Y: in String) return String with
@@ -400,6 +410,11 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the identifier of the item at point (76, 23) in My_View treeview
+      -- Item_Index: constant String := Identify_Item(My_View, "76", "23");
+      -- COMMANDS
+      -- TreeViewWidget identify item x y
       -- SOURCE
    function Identify_Item
      (TreeViewWidget: in Ttk_Tree_View; X, Y: in String) return String with
@@ -421,6 +436,11 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the element type at point (45, 89) in My_View treeview
+      -- Element_Type: constant String := Identify_Region(My_View, "45", "89");
+      -- COMMANDS
+      -- TreeViewWidget identify region x y
       -- SOURCE
    function Identify_Region
      (TreeViewWidget: in Ttk_Tree_View; X, Y: in String) return String with
