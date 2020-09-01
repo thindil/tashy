@@ -259,6 +259,13 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the focus on item I001 in My_View treeview
+      -- Focus(My_View, "I001");
+      -- COMMANDS
+      -- TreeViewWidget focus item
+      -- SEE ALSO
+      -- Focus (function)
       -- SOURCE
    procedure Focus(TreeViewWidget: in Ttk_Tree_View; Item: in String) with
       Pre => Item /= "";
@@ -276,6 +283,13 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the currently focused item index in My_View treeview
+      -- Focus_Index: constant String := Focus(My_View);
+      -- COMMANDS
+      -- TreeViewWidget focus
+      -- SEE ALSO
+      -- Focus (procedure)
       -- SOURCE
    function Focus(TreeViewWidget: in Ttk_Tree_View) return String;
    -- ****
@@ -291,6 +305,13 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Set text displayed on header of tree column to # in My_View treeview
+   -- Heading(My_View, "#0", "-text {#}");
+   -- COMMANDS
+   -- TreeViewWidget heading column options
+   -- SEE ALSO
+   -- Heading (function)
    -- SOURCE
    procedure Heading
      (TreeViewWidget: in Ttk_Tree_View; Column, Options: in String) with
@@ -311,6 +332,13 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.1 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- Get the text displayed on header of column name in My_View treeview
+      -- Text: constant String := Heading(My_View, "name", "-text");
+      -- COMMANDS
+      -- TreeViewWidget heading column ?option?
+      -- SEE ALSO
+      -- Heading (procedure)
       -- SOURCE
    function Heading
      (TreeViewWidget: in Ttk_Tree_View; Column: in String;
