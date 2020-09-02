@@ -460,6 +460,11 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.2 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the numeric idex of item with index I012 in My_View treeview
+      -- Item_Index: constant String := Index(My_View, "I012");
+      -- COMMANDS
+      -- TreeViewWidget index item
       -- SOURCE
    function Index
      (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
@@ -476,6 +481,13 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.1 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Insert a new top-level item with id myitem1 and text my item text at the end of My_View treeview
+      -- Insert(My_View, "{} end -id myitem1 -text {my item text}");
+      -- COMMANDS
+      -- TreeViewWidget insert options
+      -- SEE ALSO
+      -- Insert (function)
       -- SOURCE
    procedure Insert(TreeViewWidget: in Ttk_Tree_View; Options: in String) with
       Pre => Options /= "";
@@ -493,6 +505,12 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- -- Insert a new top-level item with text my new text at the end of My_View treeview
+      -- Item_Index: constant String := Insert(My_View, "{} end -text {my new text}");
+      -- COMMANDS
+      -- TreeViewWidget insert options
+      -- SEE ALSO
+      -- Insert (procedure)
       -- SOURCE
    function Insert
      (TreeViewWidget: in Ttk_Tree_View; Options: in String) return String with
@@ -510,6 +528,13 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.1 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the text of item I001 to new text in My_View treeview
+      -- Item(My_View, "I001", "-text {new text}");
+      -- COMMANDS
+      -- TreeViewWidget item item options
+      -- SEE ALSO
+      -- Item (procedure)
       -- SOURCE
    procedure Item
      (TreeViewWidget: in Ttk_Tree_View; Item, Options: in String) with
