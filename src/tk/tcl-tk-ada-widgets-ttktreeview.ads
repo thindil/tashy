@@ -534,7 +534,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- COMMANDS
       -- TreeViewWidget item item options
       -- SEE ALSO
-      -- Item (procedure)
+      -- Item (function)
       -- SOURCE
    procedure Item
      (TreeViewWidget: in Ttk_Tree_View; Item, Options: in String) with
@@ -553,6 +553,13 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.1 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the text of item I001 from My_View treeview
+      -- Text: constant String := Item(My_View, "I001", "-text");
+      -- COMMANDS
+      -- TreeViewWidget item item ?options?
+      -- SEE ALSO
+      -- Item (procedure)
       -- SOURCE
    function Item
      (TreeViewWidget: in Ttk_Tree_View; Item: in String;
@@ -574,6 +581,11 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.2 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Move item I001 to first row in root in My_View treeview
+      -- Move(My_View, "I001", "{}", "0");
+      -- COMMANDS
+      -- TreeViewWidget move item parent index
       -- SOURCE
    procedure Move
      (TreeViewWidget: in Ttk_Tree_View; Item, Parent, Index: in String) with
@@ -595,6 +607,11 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the identifier of next item after item I001 in My_View treeview
+      -- Identifier: constant String := Next(My_View, "I001");
+      -- COMMANDS
+      -- TreeViewWidget next item
       -- SOURCE
    function Next
      (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
@@ -615,6 +632,11 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the identifier of the parent of item I001 in My_View treeview
+      -- Parent_ID := constant String := Parent(My_View, "I001");
+      -- COMMANDS
+      -- TreeViewWidget parent item
       -- SOURCE
    function Parent
      (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
