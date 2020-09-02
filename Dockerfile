@@ -13,5 +13,5 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
  && gprinstall -P tashy.gpr -p -XLIBRARY_TYPE=static --build-var=LIBRARY_TYPE --build-name=static \
  && cd .. \
  && rm -rf /tashy \
- && apt-get purge -y wget && apt-get clean \
+ && apt-get purge -y wget && apt-get autoremove && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
