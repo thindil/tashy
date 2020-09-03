@@ -741,6 +741,11 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.2 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Add item I001 to the selection in My_View treeview
+      -- Selection_Add(My_View, "[list I001]");
+      -- COMMANDS
+      -- TreeViewWidget selection add items
       -- SOURCE
    procedure Selection_Add
      (TreeViewWidget: in Ttk_Tree_View; Items: in String) with
@@ -757,6 +762,11 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.2 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Remove item I001 from the selection in My_View treeview
+      -- Selection_Remove(My_View, "[list I001]");
+      -- COMMANDS
+      -- TreeViewWidget selection remove items
       -- SOURCE
    procedure Selection_Remove
      (TreeViewWidget: in Ttk_Tree_View; Items: in String) with
@@ -774,6 +784,11 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.2 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Toggle selection state for items I001 and I010 in My_View treeview
+      -- Selection_Toggle(My_View, "[list I001 I010]");
+      -- COMMANDS
+      -- TreeViewWidget selection toggle items
       -- SOURCE
    procedure Selection_Toggle
      (TreeViewWidget: in Ttk_Tree_View; Items: in String) with
@@ -796,6 +811,11 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the value for column name for item I001 in My_View treeview
+      -- Item_Name: constant String := Set(My_View, "I001", "name");
+      -- COMMANDS
+      -- TreeViewWidget set item ?column?
       -- SOURCE
    function Set
      (TreeViewWidget: in Ttk_Tree_View; Item: in String;
