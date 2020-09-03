@@ -1,0 +1,42 @@
+FROM docker.pkg.github.com/thindil/dockerada/gnat-mingw64:2020.2
+COPY . /app
+ENV TZ=Europe/Berlin
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
+ && apt-get update && apt-get install -y \
+ wget \
+ make \
+ tcl \
+ gcc \
+ && wget https://prdownloads.sourceforge.net/tcl/tcl8.6.10-src.tar.gz \
+ && tar -xzf tcl8.6.10-src.tar.gz \
+ && rm tcl8.6.10-src.tar.gz \
+ && cd tcl8.6.10/win \
+ && ./configure --prefix=/opt --host=x86_64-w64-mingw32 \
+ && make -j2 \
+ && make install \
+ && cd / \
+ && wget https://prdownloads.sourceforge.net/tcl/tk8.6.10-src.tar.gz \
+ && tar -xzf tk8.6.10-src.tar.gz \
+ && rm tk8.6.10-src.tar.gz \
+ && cd tk8.6.10/win \
+ && ./configure --prefix=/opt --host=x86_64-w64-mingw32 --with-tcl=/opt/lib \
+ && make -j2 \
+ && make install \
+ && cd / \
+ && rm -rf tcl8.6.10 \
+ && rm -rf tk8.6.10 \
+ && cd /app \
+ && sed -i -e 's/$CC/$CC -I\/opt\/include/g' scripts/setup.tcl \
+ && tclsh scripts/setup.tcl --nogui \
+ && sed -i -e 's/usr/opt/g' tash_options.gpr \
+ && sed -i -e 's/8.6/86/g' tash_options.gpr \
+ && sed -i -e 's/""/"-L\/opt\/lib"/g' tash_options.gpr \
+ && gprbuild -P tashy.gpr -XLIBRARY_TYPE=static --target=x86_64-windows \
+ && gprinstall -f -P tashy.gpr --create-missing-dirs -XLIBRARY_TYPE=static --build-var=LIBRARY_TYPE --build-name=static --target=x86_64-windows \
+ && apt-get purge -y \
+ wget \
+ make \
+ tcl \
+ gcc \
+ && apt-get autoremove -y && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
