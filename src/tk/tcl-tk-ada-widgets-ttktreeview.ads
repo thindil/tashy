@@ -658,6 +658,11 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the identifier of item before item I010 in My_View treeview
+      -- Identifier: constant String := Prev(My_View, "I010");
+      -- COMMANDS
+      -- TreeViewWidget prev item
       -- SOURCE
    function Prev
      (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
@@ -675,6 +680,11 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Scroll the My_View treeview to item I001
+      -- See(My_View, "I001");
+      -- COMMANDS
+      -- TreeViewWidget see item
       -- SOURCE
    procedure See(TreeViewWidget: in Ttk_Tree_View; Item: in String) with
       Pre => Item /= "";
@@ -691,6 +701,11 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.2 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the selected items from My_View treeview
+      -- Selected_Items: constant String := Selection(My_View);
+      -- COMMANDS
+      -- TreeViewWidget selection
       -- SOURCE
    function Selection(TreeViewWidget: in Ttk_Tree_View) return String;
    -- ****
@@ -705,6 +720,11 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- 8.6.2 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Set the selection in My_View treeview to item I001
+   -- Selection_Set(My_View, "[list I001]");
+   -- COMMANDS
+   -- TreeViewWidget selection set items
    -- SOURCE
    procedure Selection_Set
      (TreeViewWidget: in Ttk_Tree_View; Items: in String) with
