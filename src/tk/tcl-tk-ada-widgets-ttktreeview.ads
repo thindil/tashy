@@ -816,6 +816,8 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- Item_Name: constant String := Set(My_View, "I001", "name");
       -- COMMANDS
       -- TreeViewWidget set item ?column?
+      -- SEE ALSO
+      -- Set (procedure)
       -- SOURCE
    function Set
      (TreeViewWidget: in Ttk_Tree_View; Item: in String;
@@ -836,6 +838,13 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set name of the item I001 in My_View treeview to new name
+      -- Set(My_View, "I001", "name", "{new name}");
+      -- COMMANDS
+      -- TreeViewWidget set item column value
+      -- SEE ALSO
+      -- Set (function)
       -- SOURCE
    procedure Set
      (TreeViewWidget: in Ttk_Tree_View; Item, Column, Value: in String) with
@@ -844,7 +853,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
 
       -- ****f* TtkTreeView/Tag_Add
       -- FUNCTION
-      -- Add the selected tag to the selected items in the selcted
+      -- Add the selected tag to the selected items in the selected
       -- Ttk_Tree_View
       -- PARAMETERS
       -- TreeViewWidget - Ttk_Tree_View in which tag will be added
@@ -854,6 +863,11 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Add tag mytag to the item I001 in My_View treeview
+      -- Tag_Add(My_View, "mytag", "[list I001]");
+      -- COMMANDS
+      -- TreeViewWidget tag add tag items
       -- SOURCE
    procedure Tag_Add
      (TreeViewWidget: in Ttk_Tree_View; Tag, Items: in String) with
@@ -872,6 +886,13 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Bind the tcl command MyCommand to tag mytag in My_View treeview when someone left click mouse on it
+      -- Tag_Bind(My_View, "mytag", "<1>","MyCommand");
+      -- COMMANDS
+      -- TreeViewWidget tag bind tagName sequence script
+      -- SEE ALSO
+      -- Tag_Bind (function)
       -- SOURCE
    procedure Tag_Bind
      (TreeViewWidget: in Ttk_Tree_View;
@@ -894,6 +915,12 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- -- Get the script bounded to left click mouse event on tag mytag in My_View treeview
+      -- Script: constant String := Tag_Bind(My_View, "mytag", "<1>");
+      -- COMMANDS
+      -- TreeViewWidget tag bind tagName ?sequence?
+      -- SEE ALSO
+      -- Tag_Bind (procedure)
       -- SOURCE
    function Tag_Bind
      (TreeViewWidget: in Ttk_Tree_View; TagName: in String;
