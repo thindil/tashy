@@ -939,6 +939,13 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Create a new tag with name mytag and text color white in My_View treeview
+      -- Tag_Configure(My_View, "mytag", "-foreground white");
+      -- COMMANDS
+      -- TreeViewWidget tag configure tagName options
+      -- SEE ALSO
+      -- Tag_Configure (function)
       -- SOURCE
    procedure Tag_Configure
      (TreeViewWidget: in Ttk_Tree_View; TagName, Options: in String) with
@@ -962,6 +969,13 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the configuration for the tag mytag in My_View treeview
+      -- Options: constant String := Tag_Configure(My_View, "mytag");
+      -- COMMANDS
+      -- TreeViewWidget tag configure tagName ?option?
+      -- SEE ALSO
+      -- Tag_Configure (procedure)
       -- SOURCE
    function Tag_Configure
      (TreeViewWidget: in Ttk_Tree_View; TagName: in String;
@@ -987,6 +1001,11 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Check if the item I001 has the tag mytag in My_View treeview
+      -- Has_Tag: constant String := Tag_Has(My_View, "mytag", "I001");
+      -- COMMANDS
+      -- TreeViewWidget tag has tagName ?item?
       -- SOURCE
    function Tag_Has
      (TreeViewWidget: in Ttk_Tree_View; TagName: in String;
@@ -1005,6 +1024,11 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the names of all tags in My_View treeview
+      -- Tags_Names: constant String := Tag_Names(My_View);
+      -- COMMANDS
+      -- TreeViewWidget tag names
       -- SOURCE
    function Tag_Names(TreeViewWidget: in Ttk_Tree_View) return String;
    -- ****
