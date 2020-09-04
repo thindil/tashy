@@ -1047,6 +1047,11 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- 8.6.6 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Remove tag mytag from the item I001 in My_View treeview
+   -- Tag_Remove(My_View, "mytag", "I001");
+   -- COMMANDS
+   -- TreeViewWidget tag remove tag ?items?
    -- SOURCE
    procedure Tag_Remove
      (TreeViewWidget: in Ttk_Tree_View; Tag: in String;
@@ -1054,20 +1059,27 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Tag /= "";
       -- ****
 
-   -- ****f* TtkTreeView/XView
-   -- FUNCTION
-   -- Get which horizontal fraction of the Ttk_Tree_View is visible
-   -- PARAMETERS
-   -- TreeViewWidget - Ttk_Tree_View which will be queried for visibility
-   -- RESULT
-   -- Pair of elements: first element is the start of horizontal fraction of
-   -- the TreeViewWidget which is visible, second is the end of horizontal
-   -- fraction of the TreeViewWidget which is visible.
-   -- HISTORY
-   -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
-   -- SOURCE
+      -- ****f* TtkTreeView/XView
+      -- FUNCTION
+      -- Get which horizontal fraction of the Ttk_Tree_View is visible
+      -- PARAMETERS
+      -- TreeViewWidget - Ttk_Tree_View which will be queried for visibility
+      -- RESULT
+      -- Pair of elements: first element is the start of horizontal fraction of
+      -- the TreeViewWidget which is visible, second is the end of horizontal
+      -- fraction of the TreeViewWidget which is visible.
+      -- HISTORY
+      -- 8.6.6 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the horizontal fraction of the My_View treeview
+      -- Horizontal_Fraction: constant String := XView(My_View);
+      -- COMMANDS
+      -- TreeViewWidget xview
+      -- SEE ALSO
+      -- YView
+      -- SOURCE
    function XView(TreeViewWidget: in Ttk_Tree_View) return String;
    -- ****
 
@@ -1083,6 +1095,13 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- 8.6.6 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Show the first half of the My_View treeview
+   -- Xview_Move_To(My_View, "0.5");
+   -- COMMANDS
+   -- TreeViewWidget xview moveto fraction
+   -- SEE ALSO
+   -- Yview_Move_To
    -- SOURCE
    procedure Xview_Move_To
      (TreeViewWidget: in Ttk_Tree_View; Fraction: in String) with
@@ -1101,6 +1120,13 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Move the view in the My_View treeview by 10 units to right
+      -- Xview_Scroll(My_View, "10", "units");
+      -- COMMANDS
+      -- TreeViewWidget xview scroll number what
+      -- SEE ALSO
+      -- Yview_Scroll
       -- SOURCE
    procedure Xview_Scroll
      (TreeViewWidget: in Ttk_Tree_View; Number, What: in String) with
