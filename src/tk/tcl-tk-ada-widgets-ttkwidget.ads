@@ -41,26 +41,36 @@ package Tcl.Tk.Ada.Widgets.TtkWidget is
    -- 8.6.6 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the name of the element at point (25, 87) in My_Widget widget
+   -- Element_Name: constant String := Identify_Element(My_Widget, "25", "87");
+   -- COMMANDS
+   -- Widget identify element x y
    -- SOURCE
    function Identify_Element
      (Widget: in Tk_Widget'Class; X, Y: in String) return String with
       Pre => X /= "" and Y /= "";
       -- ****
 
-   -- ****f* TtkWidget/InState
-   -- FUNCTION
-   -- Check if the selected Ttk widget is in the selected state
-   -- PARAMETERS
-   -- Widget    - Ttk widget which will be queried for state
-   -- StateSpec - Ttk state to check
-   -- Script    - If Widget is in the selected StateSpec, run this Tcl script
-   -- RESULT
-   -- 1 if the selected widget is in the selected state, otherwise 0.
-   -- HISTORY
-   -- 8.6.3 - Added
-   -- TODO
-   -- Replace it with higher level of binding
-   -- SOURCE
+      -- ****f* TtkWidget/InState
+      -- FUNCTION
+      -- Check if the selected Ttk widget is in the selected state
+      -- PARAMETERS
+      -- Widget    - Ttk widget which will be queried for state
+      -- StateSpec - Ttk state to check
+      -- Script    - If Widget is in the selected StateSpec, run this Tcl script
+      -- RESULT
+      -- 1 if the selected widget is in the selected state, otherwise 0.
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Check if widget My_Widget is disabled
+      -- Is_Disabled: constant String := InState(My_Widget, "disabled");
+      -- COMMANDS
+      -- Widget instate statespec ?script?
+      -- SOURCE
    function InState
      (Widget: in Tk_Widget'Class; StateSpec: in String;
       Script: in String := "") return String with
@@ -77,6 +87,11 @@ package Tcl.Tk.Ada.Widgets.TtkWidget is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Reenable My_Widget
+      -- State(My_Widget, "!disabled");
+      -- COMMANDS
+      -- Widget state stateSpec
       -- SOURCE
    procedure State(Widget: in Tk_Widget'Class; StateSpec: in String) with
       Pre => StateSpec /= "";
@@ -93,6 +108,11 @@ package Tcl.Tk.Ada.Widgets.TtkWidget is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the current state of My_Widget widget
+      -- Current_State: constant String := State(My_Widget);
+      -- COMMANDS
+      -- Widget state
       -- SOURCE
    function State(Widget: in Tk_Widget'Class) return String;
    -- ****
