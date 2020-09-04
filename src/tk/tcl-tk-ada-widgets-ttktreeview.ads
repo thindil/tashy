@@ -1146,6 +1146,13 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the vertical fraction of the My_View treeview
+      -- Vertical_Fraction: constant String := YView(My_View);
+      -- COMMANDS
+      -- TreeViewWidget yview
+      -- SEE ALSO
+      -- XView
       -- SOURCE
    function YView(TreeViewWidget: in Ttk_Tree_View) return String;
    -- ****
@@ -1162,6 +1169,13 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- 8.6.6 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Show the first half of the My_View treeview
+   -- Yview_Move_To(My_View, "0.5");
+   -- COMMANDS
+   -- TreeViewWidget yview moveto fraction
+   -- SEE ALSO
+   -- Xview_Move_To
    -- SOURCE
    procedure Yview_Move_To
      (TreeViewWidget: in Ttk_Tree_View; Fraction: in String) with
@@ -1180,6 +1194,13 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Move the view in the My_View treeview by 10 units to top
+      -- Yview_Scroll(My_View, "-10", "units");
+      -- COMMANDS
+      -- TreeViewWidget yview scroll number what
+      -- SEE ALSO
+      -- Xview_Scroll
       -- SOURCE
    procedure Yview_Scroll
      (TreeViewWidget: in Ttk_Tree_View; Number, What: in String) with
