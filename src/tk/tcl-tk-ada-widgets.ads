@@ -62,6 +62,9 @@ package Tcl.Tk.Ada.Widgets is
    -- 8.6.0 - Imported from TASH
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the name of widget My_Widget
+   -- Name: constant String := Widget_Image(My_Widget);
    -- SOURCE
    function Widget_Image(Win: in Tk_Widget'Class) return String;
    -- ****
@@ -79,6 +82,9 @@ package Tcl.Tk.Ada.Widgets is
    -- 8.6.0 - Imported from TASH
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create name for a new widget from My_Widget name and .subwindow
+   -- New_Name: constant String := My_Widget & ".subwindow";
    -- SOURCE
    function "&"
      (Left: in Tk_Widget'Class; Right: in Tk_Widget'Class) return String;
@@ -99,6 +105,9 @@ package Tcl.Tk.Ada.Widgets is
    -- 8.6.0 - Imported from TASH
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the interpreter of My_Widget widget
+   -- Interp: constant Tcl_Interp := Get_Interp(My_Widget);
    -- SOURCE
    function Get_Interp(Widgt: in Tk_Widget'Class) return Tcl_Interp;
    -- ****
@@ -160,16 +169,21 @@ package Tcl.Tk.Ada.Widgets is
    --
    ---------------------------------------------
 
-   -- ****f* Widgets/Destroy
-   -- FUNCTION
-   -- Destroys a Tk_Widget.
-   -- PARAMETERS
-   -- Widgt - Tk_Widget to destroy
-   -- HISTORY
-   -- 8.6.0 - Imported from TASH
-   -- TODO
-   -- Replace it with higher level of binding
-   -- SOURCE
+      -- ****f* Widgets/Destroy
+      -- FUNCTION
+      -- Destroys a Tk_Widget.
+      -- PARAMETERS
+      -- Widgt - Tk_Widget to destroy
+      -- HISTORY
+      -- 8.6.0 - Imported from TASH
+      -- TODO
+      -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Destroy My_Widget widget
+      -- Destroy(My_Widget);
+      -- COMMANDS
+      -- destroy Widgt
+      -- SOURCE
    procedure Destroy(Widgt: in out Tk_Widget'Class);
    -- ****
 
