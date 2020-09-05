@@ -285,7 +285,7 @@ package Tcl.Tk.Ada.Widgets is
       -- -- Exit from the program on press CTRL-q in My_Window widget
       -- Bind(My_Window, "<Control-q>", "exit");
       -- COMMANDS
-      -- bind tag sequence script
+      -- bind Widgt sequence script
       -- SEE ALSO
       -- Bind (function)
       -- SOURCE
@@ -306,6 +306,13 @@ package Tcl.Tk.Ada.Widgets is
    -- 8.6.8 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the script associated with left click in My_Window widget
+   -- Script: constant String := Bind(My_Window, "<1>");
+   -- COMMANDS
+   -- bind Widgt sequence
+   -- SEE ALSO
+   -- Bind (procedure)
    -- SOURCE
    function Bind(Widgt: in Tk_Widget'Class; Sequence: in String) return String;
    -- ****
@@ -320,6 +327,13 @@ package Tcl.Tk.Ada.Widgets is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Determine order of bindings for My_Button button as itself (name .button) then all
+   -- Bind_Tags(My_Button, "{.button all}");
+   -- COMMANDS
+   -- bindtags Widgt taglist
+   -- SEE ALSO
+   -- Bind_Tags (function)
    -- SOURCE
    procedure Bind_Tags(Widgt: in Tk_Widget'Class; TagList: in String) with
       Pre => TagList /= "";
@@ -336,6 +350,13 @@ package Tcl.Tk.Ada.Widgets is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the order and tags themself for the My_Button widget
+      -- Tags_Info: constant String := Bind_Tags(My_Button)
+      -- COMMANDS
+      -- bindtags Widgt
+      -- SEE ALSO
+      -- Bind_Tags (procedure)
       -- SOURCE
    function Bind_Tags(Widgt: in Tk_Widget'Class) return String;
    -- ****
@@ -350,6 +371,13 @@ package Tcl.Tk.Ada.Widgets is
    -- 8.6.0 - Imported from TASH
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Remove left click binding for My_Window widget
+   -- Unbind(My_Window, "<1>");
+   -- COMMANDS
+   -- bind Widgt sequence {}
+   -- SEE ALSO
+   -- Unbind (function)
    -- SOURCE
    procedure Unbind(Widgt: in Tk_Widget'Class; Sequence: in String);
    -- ****
