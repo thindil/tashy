@@ -205,6 +205,11 @@ package Tcl.Tk.Ada.Widgets is
    -- 8.6.0 - Imported from TASH
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the text of My_Label widget
+   -- Text: constant String := cget(My_Label, "-text");
+   -- COMMANDS
+   -- Widgt cget option
    -- SOURCE
    function cget(Widgt: in Tk_Widget'Class; option: in String) return String;
    -- ****
@@ -223,22 +228,36 @@ package Tcl.Tk.Ada.Widgets is
    -- 8.6.0 - Imported from TASH
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the all available options of the My_Label widget
+   -- Options: constant String := configure(My_Label);
+   -- COMMANDS
+   -- Widgt configure ?options?
+   -- SEE ALSO
+   -- cget, configure (procedure)
    -- SOURCE
    function configure
      (Widgt: in Tk_Widget'Class; options: in String := "") return String;
-   -- ****
+     -- ****
 
-   -- ****f* Widgets/configure (procedure)
-   -- FUNCTION
-   -- Queries or modifies the configuration options.
-   -- PARAMETERS
-   -- Widgt   - Tk_Widget from which options will be queried or modified
-   -- options - Options to configure.
-   -- HISTORY
-   -- 8.6.0 - Imported from TASH
-   -- TODO
-   -- Replace it with higher level of binding
-   -- SOURCE
+     -- ****f* Widgets/configure (procedure)
+     -- FUNCTION
+     -- Queries or modifies the configuration options.
+     -- PARAMETERS
+     -- Widgt   - Tk_Widget from which options will be queried or modified
+     -- options - Options to configure.
+     -- HISTORY
+     -- 8.6.0 - Imported from TASH
+     -- TODO
+     -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Configure text to hello world on My_Label widget
+     -- configure(My_Label, "-text {hello world}");
+     -- COMMANDS
+     -- Widgt configure options
+     -- SEE ALSO
+     -- cget, configure (function)
+     -- SOURCE
    procedure configure(Widgt: in Tk_Widget'Class; options: in String) with
       Pre => options /= "";
       -- ****
@@ -262,6 +281,13 @@ package Tcl.Tk.Ada.Widgets is
       -- 8.6.0 - Imported from TASH
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Exit from the program on press CTRL-q in My_Window widget
+      -- Bind(My_Window, "<Control-q>", "exit");
+      -- COMMANDS
+      -- bind tag sequence script
+      -- SEE ALSO
+      -- Bind (function)
       -- SOURCE
    procedure Bind
      (Widgt: in Tk_Widget'Class; Sequence: in String; Script: in String);
