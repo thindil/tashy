@@ -487,6 +487,11 @@ package Tcl.Tk.Ada.Widgets is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the focus model to follow the mouse on the default Tcl interpreter
+      -- Focus_Follows_Mouse;
+      -- COMMANDS
+      -- tk_focusFollowsMouse
       -- SOURCE
    procedure Focus_Follows_Mouse(Interp: Tcl_Interp := Get_Context);
    -- ****
@@ -502,6 +507,13 @@ package Tcl.Tk.Ada.Widgets is
    -- 8.6.6 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the name of the next widget in focus traversal order after My_Window widget
+   -- Widget_Name: constant String := Focus_Next(My_Window);
+   -- COMMANDS
+   -- tk_focusNext Widgt
+   -- SEE ALSO
+   -- Focus_Prev
    -- SOURCE
    function Focus_Next(Widgt: in Tk_Widget'Class) return String;
    -- ****
@@ -517,6 +529,13 @@ package Tcl.Tk.Ada.Widgets is
    -- 8.6.6 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the name of the previous widget in focus traversal order before My_Button widget
+   -- Widget_Name: constant String := Focus_Prev(My_Button);
+   -- COMMANDS
+   -- tk_focusPrev Widgt
+   -- SEE ALSO
+   -- Focus_Next
    -- SOURCE
    function Focus_Prev(Widgt: in Tk_Widget'Class) return String;
    -- ****
@@ -535,6 +554,13 @@ package Tcl.Tk.Ada.Widgets is
    -- 8.6.6 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the name of currently set as grab window widget on default Tcl interpreter
+   -- Widget_Name: constant String := Grab_Current;
+   -- COMMANDS
+   -- grab current
+   -- SEE ALSO
+   -- Grab_Current (selected window)
    -- SOURCE
    function Grab_Current(Interp: Tcl_Interp := Get_Context) return String;
    -- ****
