@@ -578,6 +578,13 @@ package Tcl.Tk.Ada.Widgets is
    -- 8.6.6 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- Get the name of currently set as grab window widget on display where My_Label is
+   -- Widget_Name: constant String := Grab_Current(My_Label);
+   -- COMMANDS
+   -- grab current Widgt
+   -- SEE ALSO
+   -- Grab_Current (selected interpreter)
    -- SOURCE
    function Grab_Current(Widgt: in Tk_Widget'Class) return String;
    -- ****
@@ -591,6 +598,11 @@ package Tcl.Tk.Ada.Widgets is
    -- 8.6.6 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Release the grab from My_Window widget
+   -- Grab_Release(My_Window);
+   -- COMMANDS
+   -- grab release Widgt
    -- SOURCE
    procedure Grab_Release(Widgt: in Tk_Widget'Class);
    -- ****
@@ -606,6 +618,11 @@ package Tcl.Tk.Ada.Widgets is
    -- 8.6.6 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Set the grab to the My_Entry widget
+   -- Grab_Set(My_Entry);
+   -- COMMANDS
+   -- grab set global Widgt
    -- SOURCE
    procedure Grab_Set(Widgt: in Tk_Widget'Class; Global: in String := "") with
       Pre => Global in "" | "-global";
@@ -623,6 +640,11 @@ package Tcl.Tk.Ada.Widgets is
       -- 8.6.6 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the status of the grab for My_Window widget
+      -- Status: constant String := Grab_Status(My_Window);
+      -- COMMANDS
+      -- grab status Widgt
       -- SOURCE
    function Grab_Status(Widgt: in Tk_Widget'Class) return String;
    -- ****
