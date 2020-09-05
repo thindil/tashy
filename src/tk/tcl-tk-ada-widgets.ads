@@ -394,6 +394,13 @@ package Tcl.Tk.Ada.Widgets is
    -- 8.6.0 - Imported from TASH
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Remove Control-q binding from My_Frame widget and get info about finished action
+   -- Result: constant String := Unbind(My_Frame, "<Control-q>");
+   -- COMMANDS
+   -- bind Widgt sequence {}
+   -- SEE ALSO
+   -- Unbind (procedure)
    -- SOURCE
    function Unbind
      (Widgt: in Tk_Widget'Class; Sequence: in String) return String;
@@ -410,23 +417,35 @@ package Tcl.Tk.Ada.Widgets is
      -- 8.6.7 - Added
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Ring the bell for the widget My_Window display
+     -- Bell(My_Window);
+     -- COMMANDS
+     -- bell -displayof Widgt option
      -- SOURCE
    procedure Bell(Widgt: in Tk_Widget'Class; Option: in String := "") with
       Pre => Option in "" | "-nice";
       -- ****
 
-     -- ****f* Widgets/Focus (procedure)
-     -- FUNCTION
-     -- Set input focus on the selected Tk_Widget with the selected option
-     -- PARAMETERS
-     -- Widgt  - Tk_Widget to set as input focus
-     -- Option - Set to "-force" to set input focus even if application don't
-     --        have it. Default value is empty
-     -- HISTORY
-     -- 8.6.3 - Added
-     -- TODO
-     -- Replace it with higher level of binding
-     -- SOURCE
+      -- ****f* Widgets/Focus (procedure)
+      -- FUNCTION
+      -- Set input focus on the selected Tk_Widget with the selected option
+      -- PARAMETERS
+      -- Widgt  - Tk_Widget to set as input focus
+      -- Option - Set to "-force" to set input focus even if application don't
+      --        have it. Default value is empty
+      -- HISTORY
+      -- 8.6.3 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the input focus on My_Entry widget
+      -- Focus(My_Entry);
+      -- COMMANDS
+      -- focus Widgt
+      -- SEE ALSO
+      -- Focus (function)
+      -- SOURCE
    procedure Focus(Widgt: in Tk_Widget'Class; Option: in String := "") with
       Pre => Option in "" | "-force";
       -- ****
@@ -445,6 +464,13 @@ package Tcl.Tk.Ada.Widgets is
       -- 8.6.3 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the name of the currently focused widget on the default Tcl interpreter
+      -- Focused_Name: constant String := Focus;
+      -- COMMANDS
+      -- focus
+      -- SEE ALSO
+      -- Focus (procedure)
       -- SOURCE
    function Focus
      (Interp: in Tcl_Interp := Get_Context; Option: in String := "")
