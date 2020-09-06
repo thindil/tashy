@@ -745,6 +745,13 @@ package Tcl.Tk.Ada.Widgets is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Set the caret to point (24, 56) and height 54 in My_Text widget
+   -- Tk_Caret(My_Text, "24", "56", "54");
+   -- COMMANDS
+   -- tk caret Widgt x y height
+   -- SEE ALSO
+   -- Tk_Caret (function)
    -- SOURCE
    procedure Tk_Caret(Widgt: in Tk_Widget'Class; X, Y, Height: in String) with
       Pre => X /= "" and Y /= "" and Height /= "";
@@ -762,6 +769,13 @@ package Tcl.Tk.Ada.Widgets is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the coordinates of the caret in My_Window widget
+      -- Coordinates: constant String := Tk_Caret(My_Window);
+      -- COMMANDS
+      -- tk caret Widgt
+      -- SEE ALSO
+      -- Tk_Caret (procedure)
       -- SOURCE
    function Tk_Caret(Widgt: in Tk_Widget'Class) return String;
    -- ****
@@ -775,6 +789,13 @@ package Tcl.Tk.Ada.Widgets is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Reset the user inactivity timer for My_Window widget
+   -- Tk_Inactive(My_Window);
+   -- COMMANDS
+   -- tk inactive -displayof Widgt reset
+   -- SEE ALSO
+   -- Tk_Inactive (function)
    -- SOURCE
    procedure Tk_Inactive(Widgt: in Tk_Widget'Class);
    -- ****
@@ -791,6 +812,13 @@ package Tcl.Tk.Ada.Widgets is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the inactivity time for My_Entry widget
+   -- Inactive_For: constant String := Tk_Inactive(My_Entry);
+   -- COMMANDS
+   -- tk inactive -displayof Widgt
+   -- SEE ALSO
+   -- Tk_Inactive (procedure)
    -- SOURCE
    function Tk_Inactive(Widgt: in Tk_Widget'Class) return String;
    -- ****
