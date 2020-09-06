@@ -659,6 +659,13 @@ package Tcl.Tk.Ada.Widgets is
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Move the My_Window widget at the end of stacking order
+   -- Lower(My_Window);
+   -- COMMANDS
+   -- lower Widgt
+   -- SEE ALSO
+   -- Lower (below selected widget)
    -- SOURCE
    procedure Lower(Widgt: in Tk_Widget'Class);
    -- ****
@@ -673,6 +680,13 @@ package Tcl.Tk.Ada.Widgets is
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Move My_Window widget after My_Dialog widget in the stacking order
+   -- Lower(My_Window, My_Dialog);
+   -- COMMANDS
+   -- lower Widgt BelowThis
+   -- SEE ALSO
+   -- Lower
    -- SOURCE
    procedure Lower(Widgt, BelowThis: in Tk_Widget'Class);
    -- ****
@@ -687,6 +701,13 @@ package Tcl.Tk.Ada.Widgets is
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Raise My_Window widget at top of the stacking order
+   -- Widget_Raise(My_Window);
+   -- COMMANDS
+   -- raise Widgt
+   -- SEE ALSO
+   -- Raise (above selected widget)
    -- SOURCE
    procedure Widget_Raise(Widgt: in Tk_Widget'Class);
    -- ****
@@ -701,6 +722,13 @@ package Tcl.Tk.Ada.Widgets is
    -- 8.6.4 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Raise My_Window widget above My_Dialog widget in the stacking order
+   -- Widget_Raise(My_Window, My_Dialog);
+   -- COMMANDS
+   -- raise Widgt AboveThis
+   -- SEE ALSO
+   -- Raise
    -- SOURCE
    procedure Widget_Raise(Widgt, AboveThis: in Tk_Widget'Class);
    -- ****
