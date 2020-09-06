@@ -829,17 +829,24 @@ package Tcl.Tk.Ada.Widgets is
    -- PARAMETERS
    -- Widgt  - Tk_Widget on which display the scaling factor will be set
    -- Number - Floating point number which specifies the number of pixels per
-   --          point of Widgt display
+   --          point of Widgt display. 1.0 means 72 dpi.
    -- HISTORY
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Set scaling to 1.2 (90 dpi) for My_Window widget
+   -- Tk_Scaling(My_Window, "1.2");
+   -- COMMANDS
+   -- tk scaling -displayof Widgt number
+   -- SEE ALSO
+   -- Tk_Scaling (function)
    -- SOURCE
    procedure Tk_Scaling(Widgt: in Tk_Widget'Class; Number: in String) with
       Pre => Number /= "";
       -- ****
 
-      -- ****f* Widgets/Tk_Scaling
+      -- ****f* Widgets/Tk_Scaling (function)
       -- FUNCTION
       -- Get the scaling factor of the selected display
       -- PARAMETERS
@@ -851,6 +858,13 @@ package Tcl.Tk.Ada.Widgets is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the scaling factor for the My_Window window
+      -- Scaling: constant String := Tk_Scaling(My_Window);
+      -- COMMANDS
+      -- tk scaling -displayof Widgt
+      -- SEE ALSO
+      -- Tk_Scaling (procedure)
       -- SOURCE
    function Tk_Scaling(Widgt: in Tk_Widget'Class) return String;
    -- ****
@@ -865,6 +879,13 @@ package Tcl.Tk.Ada.Widgets is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Enable XIM for My_Window widget
+   -- Tk_Use_Input_Methods(M_Window, "true");
+   -- COMMANDS
+   -- tk useinputmethods -displayof window enabled
+   -- SEE ALSO
+   -- Tk_Use_Input_Methods (function)
    -- SOURCE
    procedure Tk_Use_Input_Methods
      (Widgt: in Tk_Widget'Class; Enabled: in String) with
@@ -882,6 +903,13 @@ package Tcl.Tk.Ada.Widgets is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the state of XIM for My_Window widget
+      -- XIM_Enabled: constant String := Tk_Use_Input_Methods(My_Window);
+      -- COMMANDS
+      -- tk useinputmethods -displayof window
+      -- SEE ALSO
+      -- Tk_Use_Input_Methods (procedure)
       -- SOURCE
    function Tk_Use_Input_Methods(Widgt: in Tk_Widget'Class) return String;
    -- ****
