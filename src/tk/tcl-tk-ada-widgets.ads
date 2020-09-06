@@ -926,24 +926,32 @@ package Tcl.Tk.Ada.Widgets is
    -- 8.6.6 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Wait until Tcl variable myvariable will be modified
+   -- Tk_Wait("variable", "myvariable");
+   -- COMMANDS
+   -- tkwait waitfor name
    -- SOURCE
    procedure Tk_Wait(WaitFor, Name: in String) with
       Pre => WaitFor in "variable" | "visibility" | "window" and Name /= "";
       -- ****
 
-   -- ****f* Widgets/Execute_Widget_Command
-   -- FUNCTION
-   -- Execute selected Tcl command in the selected widget. Generally, you
-   -- should not use this procedure outside library, unless here are no
-   -- direct binding for selected Tk widget command.
-   -- Widgt   - Tk_Widget in which command will be executed
-   -- command - Tcl command to execute
-   -- options - Options for the selected Tcl command
-   -- HISTORY
-   -- 8.6.0 - Imported from TASH
-   -- TODO
-   -- Replace it with higher level of binding
-   -- SOURCE
+      -- ****f* Widgets/Execute_Widget_Command
+      -- FUNCTION
+      -- Execute selected Tcl command in the selected widget. Generally, you
+      -- should not use this procedure outside library, unless here are no
+      -- direct binding for selected Tk widget command.
+      -- Widgt   - Tk_Widget in which command will be executed
+      -- command - Tcl command to execute
+      -- options - Options for the selected Tcl command
+      -- HISTORY
+      -- 8.6.0 - Imported from TASH
+      -- TODO
+      -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Change background of My_Window to black
+      -- Execute_Widget_Command(My_Window, "configure", "-background=black");
+      -- SOURCE
    procedure Execute_Widget_Command
      (Widgt: in Tk_Widget'Class; command: in String; options: in String := "");
    -- ****
