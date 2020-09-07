@@ -40,6 +40,11 @@ package Tcl.Tk.Ada.Wm is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Set title of My_Window to My window title
+   -- Wm_Set(My_Window, "title", "{My window title}");
+   -- COMMANDS
+   -- wm action Widgt options
    -- SOURCE
    procedure Wm_Set
      (Widgt: in Tk_Widget'Class; Action: in String; Options: in String := "");
