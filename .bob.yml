@@ -117,9 +117,10 @@ version: 2.0
    flags:
       - windowsonly
 - command:
-   name: dockerlinux
+   name: docker
    execute:
-      - sudo docker build --file docker/Dockerfile.linux .
-   description: Create a Docker image with Linux 64-bit version of Tashy
+      - sudo docker build -f docker/Dockerfile.linux -t docker.pkg.github.com/thindil/tashy/tashy:$1 .
+      - sudo docker build -f docker/Dockerfile.mingw64 -t docker.pkg.github.com/thindil/tashy/tashy-mingw64:$1 .
+   description: Create a Docker images of Tashy (requitred argument is the library version)
    flags:
       - unixonly
