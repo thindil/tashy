@@ -1,0 +1,16 @@
+FROM docker.pkg.github.com/thindil/dockerada/gnat-arm64:2020.1
+COPY . /app
+ENV TZ=Europe/Berlin
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
+ && apt-get update && apt-get install -y \
+ tcl-dev:arm64 \
+ tk-dev:arm64 \
+ gcc-aarch64-linux-gnu \
+ && cd /app \
+ && tclsh scripts/setup.tcl --nogui \
+ && gprbuild -P tashy.gpr --target=aarch64-linux-gnu \
+ && gprinstall -P tashy.gpr -p -XLIBRARY_TYPE=static --build-var=LIBRARY_TYPE --build-name=static --target=aarch64-linux-gnu \
+ && cd .. \
+ && rm -rf /app \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
