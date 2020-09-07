@@ -43,6 +43,9 @@ package Tcl.Tk.Ada is
    -- Turn on tracing of Tcl/Tk command execution.
    -- PARAMETERS
    -- State - If true, turn on tracing.
+   -- EXAMPLE
+   -- -- Enable tracing
+   -- Set_Trace(True);
    -- SOURCE
    procedure Set_Trace(State: in Boolean);
    -- ****
@@ -53,6 +56,9 @@ package Tcl.Tk.Ada is
    -- either an Interp or Widget parameter.
    -- PARAMETERS
    -- Interp - Tcl interpreter to which context will be set
+   -- EXAMPLE
+   -- -- Set Tcl interpreter to My_Interpreter
+   -- Set_Context(My_Interpreter);
    -- SOURCE
    procedure Set_Context(Interp: in Tcl_Interp);
    -- ****
@@ -62,6 +68,9 @@ package Tcl.Tk.Ada is
    -- Gets the current interpreter context.
    -- RESULT
    -- Current Tcl interpreter
+   -- EXAMPLE
+   -- -- Get the current Tcl interpreter
+   -- My_Interpreter: constant Tcl_Interp := Get_Context;
    -- SOURCE
    function Get_Context return Tcl_Interp;
    -- ****
@@ -80,6 +89,11 @@ package Tcl.Tk.Ada is
    -- Sleeps for Ms milliseconds in the "contextual" interpreter.
    -- PARAMETERS
    -- Ms - Amount of miliseconds to sleep
+   -- EXAMPLE
+   -- -- Sleep by 1 sec
+   -- After(1000);
+   -- COMMANDS
+   -- after ms
    -- SOURCE
    procedure After(Ms: in Natural);
    -- ****
