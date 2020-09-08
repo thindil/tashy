@@ -238,6 +238,11 @@ package Tcl.Tk.Ada is
    -- handler in the "contextual" interpreter.
    -- PARAMETERS
    -- Script - Tcl script to execute
+   -- EXAMPLE
+   -- -- Print in console idle when the program has no events to parse
+   -- Idle("{puts idle}");
+   -- COMMANDS
+   -- after idle script
    -- SOURCE
    procedure Idle(Script: in String);
    -- ****
@@ -251,6 +256,11 @@ package Tcl.Tk.Ada is
    -- Script - Tcl script to execute
    -- RESULT
    -- The function returns an identifier suitable for canceling the command.
+   -- EXAMPLE
+   -- -- Print in console idle when the program has no events to parse on My_Interp interpreter
+   -- Idle_Id: constant String := Idle(My_Interp, "{puts idle}");
+   -- COMMANDS
+   -- after idle script
    -- SOURCE
    function Idle(Interp: in Tcl_Interp; Script: in String) return String;
    -- ****
@@ -262,6 +272,11 @@ package Tcl.Tk.Ada is
    -- PARAMETERS
    -- Interp - Tcl interpreter in which script will be executed
    -- Script - Tcl script to execute
+   -- EXAMPLE
+   -- -- Print in console idle when the program has no events to parse on My_Interp interpreter
+   -- Idle(My_Interp, "{puts idle}");
+   -- COMMANDS
+   -- after idle script
    -- SOURCE
    procedure Idle(Interp: in Tcl_Interp; Script: in String);
    -- ****
@@ -275,6 +290,11 @@ package Tcl.Tk.Ada is
    -- RESULT
    -- Returns information about existing event handlers in the
    -- "contextual" interpreter.
+   -- EXAMPLE
+   -- -- Get all identifiers for existing event handlers
+   -- Events_Id: constant String := Info;
+   -- COMMANDS
+   -- after info ?id?
    -- SOURCE
    function Info(id: in String := "") return String;
    -- ****
