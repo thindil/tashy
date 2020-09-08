@@ -104,6 +104,11 @@ package Tcl.Tk.Ada is
    -- PARAMETERS
    -- Interp - Tcl interpreter to sleep
    -- Ms     - Amount of miliseconds to sleep
+   -- EXAMPLE
+   -- -- Sleep by 1 sec on My_Interp Tcl interpreter
+   -- After(My_Interp, 1000);
+   -- COMMANDS
+   -- after ms
    -- SOURCE
    procedure After(Interp: in Tcl_Interp; Ms: in Natural);
    -- ****
@@ -117,6 +122,11 @@ package Tcl.Tk.Ada is
    -- Script - Tcl script to execute
    -- RESULT
    -- The function returns an identifier suitable for canceling the command.
+   -- EXAMPLE
+   -- -- Write to console hello world after 1 sec
+   -- After_Id: constant String := After(1000, "{puts {hello world}}");
+   -- COMMANDS
+   -- after ms script
    -- SOURCE
    function After(Ms: in Natural; Script: in String) return String;
    -- ****
@@ -128,6 +138,11 @@ package Tcl.Tk.Ada is
    -- PARAMETERS
    -- Ms     - Amount of miliseconds after which script will be executed
    -- Script - Tcl script to execute
+   -- EXAMPLE
+   -- -- Write to console hello world after 1 sec
+   -- After(1000, "{puts {hello world}}");
+   -- COMMANDS
+   -- after ms script
    -- SOURCE
    procedure After(Ms: in Natural; Script: in String);
    -- ****
@@ -142,6 +157,11 @@ package Tcl.Tk.Ada is
    -- Script - Tcl script to execute
    -- RESULT
    -- The function returns an identifier suitable for canceling the command.
+   -- EXAMPLE
+   -- -- Write to console hello world after 1 sec on My_Interp Tcl interpreter
+   -- After_Id: constant String := After(My_Interp, 1000, "{puts {hello world}}");
+   -- COMMANDS
+   -- after ms script
    -- SOURCE
    function After
      (Interp: in Tcl_Interp; Ms: in Natural; Script: in String) return String;
