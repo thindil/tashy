@@ -165,17 +165,22 @@ package Tcl.Tk.Ada is
    -- SOURCE
    function After
      (Interp: in Tcl_Interp; Ms: in Natural; Script: in String) return String;
-   -- ****
+     -- ****
 
-   -- ****f* TkAda/After (selected interpreter and execute script and procedure)
-   -- FUNCTION
-   -- Arranges for the Tcl Script to be executed after Ms milliseconds
-   -- in the specified interpreter.
-   -- PARAMETERS
-   -- Interp - Tcl interpreter in which script will be executed
-   -- Ms     - Amount of miliseconds after which script will be executed
-   -- Script - Tcl script to execute
-   -- SOURCE
+     -- ****f* TkAda/After (selected interpreter and execute script and procedure)
+     -- FUNCTION
+     -- Arranges for the Tcl Script to be executed after Ms milliseconds
+     -- in the specified interpreter.
+     -- PARAMETERS
+     -- Interp - Tcl interpreter in which script will be executed
+     -- Ms     - Amount of miliseconds after which script will be executed
+     -- Script - Tcl script to execute
+     -- EXAMPLE
+     -- -- Write to console hello world after 1 sec on My_Interp Tcl interpreter
+     -- After(My_Interp, 1000, "{puts {hello world}}");
+     -- COMMANDS
+     -- after ms script
+     -- SOURCE
    procedure After(Interp: in Tcl_Interp; Ms: in Natural; Script: in String);
    -- ****
 
@@ -185,6 +190,11 @@ package Tcl.Tk.Ada is
    -- interpreter.
    -- PARAMETERS
    -- id_or_script - Id or script to cancel
+   -- EXAMPLE
+   -- -- Cancel delayed command with id 412
+   -- Cancel("412");
+   -- COMMANDS
+   -- after cancel id_or_script
    -- SOURCE
    procedure Cancel(id_or_script: in String);
    -- ****
@@ -196,6 +206,11 @@ package Tcl.Tk.Ada is
    -- PARAMETERS
    -- Interp       - Tcl interpreter in which command will be cancelled
    -- id_or_script - Id or script to cancel
+   -- EXAMPLE
+   -- -- Cancel delayed command exit on My_Interp interpreter
+   -- Cancel(My_Interp, "exit");
+   -- COMMANDS
+   -- after cancel id_or_script
    -- SOURCE
    procedure Cancel(Interp: in Tcl_Interp; id_or_script: in String);
    -- ****
@@ -208,6 +223,11 @@ package Tcl.Tk.Ada is
    -- Script - Tcl script to execute
    -- RESULT
    -- The function returns an identifier suitable for canceling the command.
+   -- EXAMPLE
+   -- -- Print in console idle when the program has no events to parse
+   -- Idle_Id: constant String := Idle("{puts idle}");
+   -- COMMANDS
+   -- after idle script
    -- SOURCE
    function Idle(Script: in String) return String;
    -- ****
