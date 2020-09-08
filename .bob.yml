@@ -121,6 +121,8 @@ version: 2.0
    execute:
       - sudo docker build -f docker/Dockerfile.linux -t docker.pkg.github.com/thindil/tashy/tashy:$1 .
       - sudo docker build -f docker/Dockerfile.mingw64 -t docker.pkg.github.com/thindil/tashy/tashy-mingw64:$1 .
-   description: Create a Docker images of Tashy (requitred argument is the library version)
+      - sudo docker build -f docker/Dockerfile.linuxarm64 -t docker.pkg.github.com/thindil/tashy/tashy-arm64:$1 .
+      - sudo docker build -f docker/Dockerfile.linuxarm7 -t docker.pkg.github.com/thindil/tashy/tashy-arm7:$1 .
+   description: Create a Docker images of Tashy (required argument is the library version)
    flags:
       - unixonly
