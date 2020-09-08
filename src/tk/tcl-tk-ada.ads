@@ -309,6 +309,11 @@ package Tcl.Tk.Ada is
    -- RESULT
    -- Returns information about existing event handlers in the
    -- specified interpreter.
+   -- EXAMPLE
+   -- -- Get the info about event with id 512 in My_Interp interpreter
+   -- Event_Info: constant String := Info(My_Interp, "512");
+   -- COMMANDS
+   -- after info ?id?
    -- SOURCE
    function Info(Interp: in Tcl_Interp; id: in String := "") return String;
    -- ****
