@@ -320,6 +320,13 @@ package Tcl.MsgCat.Ada is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the translations hello world to helloword and my word to myword in locale en_US in My_Interp interpreter
+      -- Translations_Amount: constant String := Mc_Mset(My_Interp, "en_US", "[list {hello world} {helloword} {my word} {myword}]");
+      -- COMMANDS
+      -- ::msgcat::mcmset locale list
+      -- SEE ALSO
+      -- Mc_Mset (function)
       -- SOURCE
    function Mc_Mset
      (Interp: in Tcl_Interp; Locale, List: in String) return String with
@@ -338,6 +345,11 @@ package Tcl.MsgCat.Ada is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the list of locales for the user on My_Interp Tcl interpreter
+      -- Languages_List: constant String := Mc_Preferences(My_Interp);
+      -- COMMANDS
+      -- ::msgcat::mcpreferences
       -- SOURCE
    function Mc_Preferences(Interp: in Tcl_Interp) return String;
    -- ****
@@ -358,6 +370,13 @@ package Tcl.MsgCat.Ada is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Set the translation of hello world to helloword1 in locale en_US on My_Interp interpreter
+   -- Mc_Set(My_Interp, "en_US", "{hello world}", "{helloword1}");
+   -- COMMANDS
+   -- ::msgcat::mcset locale src-string ?translate-string?
+   -- SEE ALSO
+   -- Mc_Set (function)
    -- SOURCE
    procedure Mc_Set
      (Interp: in Tcl_Interp; Locale, Src_String: in String;
@@ -383,6 +402,13 @@ package Tcl.MsgCat.Ada is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the translation of hello world to helloword1 in locale en_US on My_Interp interpreter
+      -- Translation: constant String := Mc_Set(My_Interp, "en_US", "{hello world}", "{helloword1}");
+      -- COMMANDS
+      -- ::msgcat::mcset locale src-string ?translate-string?
+      -- SEE ALSO
+      -- Mc_Set (procedure)
       -- SOURCE
    function Mc_Set
      (Interp: in Tcl_Interp; Locale, Src_String: in String;
