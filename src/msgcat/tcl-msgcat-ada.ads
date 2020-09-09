@@ -36,6 +36,11 @@ package Tcl.MsgCat.Ada is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Init msgcat package on My_Interp Tcl interpreter
+   -- MsgCat_Init(My_Interp);
+   -- COMMANDS
+   -- package require msgcat
    -- SOURCE
    procedure MsgCat_Init(Interp: in Tcl_Interp);
    -- ****
@@ -56,6 +61,11 @@ package Tcl.MsgCat.Ada is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the translation for string hello world in My_Interp Tcl interpreter
+   -- Translation: constant String := Mc(My_Interp, "{hello world}");
+   -- COMMANDS
+   -- ::msgcat::mc src-string ?arguments?
    -- SOURCE
    function Mc
      (Interp: Tcl_Interp; Src_String: in String; Arguments: in String := "")
@@ -77,6 +87,11 @@ package Tcl.MsgCat.Ada is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Check if translation for string hello world exists in My_Interp interpreter
+      -- Is_Translated: constant String := Mc_Exists(My_Interp, "{hello world}");
+      -- COMMANDS
+      -- ::msgcat::mcexists ?options? src-string
       -- SOURCE
    function Mc_Exists
      (Interp: Tcl_Interp; Src_String: in String; Options: in String := "")
@@ -96,6 +111,11 @@ package Tcl.MsgCat.Ada is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Load translations from directory messages to My_Interp interpreter
+      -- Mc_Load("messages", My_Interp);
+      -- COMMANDS
+      -- ::msgcat::mcload dirname
       -- SOURCE
    procedure Mc_Load(DirName: in String; Interp: in Tcl_Interp) with
       Pre => DirName /= "";
