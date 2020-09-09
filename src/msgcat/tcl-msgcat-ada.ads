@@ -425,6 +425,11 @@ package Tcl.MsgCat.Ada is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Clear all msgcat settings on My_Interp Tcl interpreter
+      -- Mc_Forget_Package(My_Interp);
+      -- COMMANDS
+      -- ::msgcat::mcforgetpackage
       -- SOURCE
    procedure Mc_Forget_Package(Interp: in Tcl_Interp);
    -- ****
