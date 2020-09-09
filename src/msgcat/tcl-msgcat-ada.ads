@@ -116,24 +116,35 @@ package Tcl.MsgCat.Ada is
       -- Mc_Load("messages", My_Interp);
       -- COMMANDS
       -- ::msgcat::mcload dirname
+      -- SEE ALSO
+      -- Mc_Load (function)
       -- SOURCE
    procedure Mc_Load(DirName: in String; Interp: in Tcl_Interp) with
       Pre => DirName /= "";
       -- ****
 
-   -- ****f* MsgCatAda/Mc_Load (function)
-   -- FUNCTION
-   -- Load the translations for the currently set locale from the selected
-   -- directory
-   -- PARAMETERS
-   -- DirName - The name of the directory which will be scanned for the
-   --           translations and if found anything, loaded
-   -- Interp  - Tcl interpreter on which the locations will be loaded
-   -- HISTORY
-   -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
-   -- SOURCE
+      -- ****f* MsgCatAda/Mc_Load (function)
+      -- FUNCTION
+      -- Load the translations for the currently set locale from the selected
+      -- directory
+      -- PARAMETERS
+      -- DirName - The name of the directory which will be scanned for the
+      --           translations and if found anything, loaded
+      -- Interp  - Tcl interpreter on which the locations will be loaded
+      -- RESULT
+      -- Amount of loaded translation files
+      -- HISTORY
+      -- 8.6.7 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Load translations from directory messages to My_Interp interpreter
+      -- Loaded_Files: constant String := Mc_Load("messages", My_Interp);
+      -- COMMANDS
+      -- ::msgcat::mcload dirname
+      -- SEE ALSO
+      -- Mc_Load (procedure)
+      -- SOURCE
    function Mc_Load
      (DirName: in String; Interp: in Tcl_Interp) return String with
       Pre => DirName /= "";
@@ -149,6 +160,11 @@ package Tcl.MsgCat.Ada is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Remove all locales and their data from My_Interp interpreter
+      -- Mc_LoadedLocales_Clear(My_Interp);
+      -- COMMANDS
+      -- ::msgcat:mcloadedlocales clear
       -- SOURCE
    procedure Mc_LoadedLocales_Clear(Interp: in Tcl_Interp);
    -- ****
@@ -164,6 +180,11 @@ package Tcl.MsgCat.Ada is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the list of currently loaded locales in My_Interp Tcl interpreter
+   -- Loaded_Locales: constant String := Mc_LoadedLocales_Get(My_Interp);
+   -- COMMANDS
+   -- ::msgcat:mcloadedlocales get
    -- SOURCE
    function Mc_LoadedLocales_Get(Interp: in Tcl_Interp) return String;
    -- ****
@@ -180,6 +201,11 @@ package Tcl.MsgCat.Ada is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Check if locale pl was loaded to My_Interp Tcl interpreter
+   -- Is_Loaded: constant String := Mc_LoadedLocales_Present(My_Interp, "pl");
+   -- COMMANDS
+   -- ::msgcat:mcloadedlocales present locale
    -- SOURCE
    function Mc_LoadedLocales_Present
      (Interp: in Tcl_Interp; Locale: in String) return String with
