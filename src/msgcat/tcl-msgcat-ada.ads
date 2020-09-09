@@ -225,6 +225,13 @@ package Tcl.MsgCat.Ada is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set default locale to en_US on My_Interp Tcl interpreter
+      -- Mc_Locale("en_US", My_Interp);
+      -- COMMANDS
+      -- ::msgcat::mclocale newlocale
+      -- SEE ALSO
+      -- Mc_Locale (function)
       -- SOURCE
    procedure Mc_Locale(NewLocale: in String; Interp: in Tcl_Interp) with
       Pre => NewLocale /= "";
@@ -241,6 +248,13 @@ package Tcl.MsgCat.Ada is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the name of default locale for My_Interp Tcl interpreter
+      -- Locale_Name: constant String := Mc_Locale(My_Interp);
+      -- COMMANDS
+      -- ::msgcat::mclocale
+      -- SEE ALSO
+      -- Mc_Locale (procedure)
       -- SOURCE
    function Mc_Locale(Interp: in Tcl_Interp) return String;
    -- ****
@@ -257,6 +271,11 @@ package Tcl.MsgCat.Ada is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Get the longest translation length for string my word and hello world in My_Interp interpreter
+   -- Max_Length: constant String := Mc_Max("{my word} {hello word}", My_Interp);
+   -- COMMANDS
+   -- ::msgcat::mcmax strings
    -- SOURCE
    function Mc_Max
      (Strings: in String; Interp: in Tcl_Interp) return String with
@@ -275,6 +294,13 @@ package Tcl.MsgCat.Ada is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the translations hello world to helloword and my word to myword in locale en_US in My_Interp interpreter
+      -- Mc_Mset(My_Interp, "en_US", "[list {hello world} {helloword} {my word} {myword}]");
+      -- COMMANDS
+      -- ::msgcat::mcmset locale list
+      -- SEE ALSO
+      -- Mc_Mset (function)
       -- SOURCE
    procedure Mc_Mset(Interp: in Tcl_Interp; Locale, List: in String) with
       Pre => Locale /= "" and List /= "";
