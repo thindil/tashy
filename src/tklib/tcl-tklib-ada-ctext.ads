@@ -136,7 +136,7 @@ package Tcl.Tklib.Ada.Ctext is
      -- -- Add red highlight for some Ada keywords in class adakeywords to My_Ctext ctext
      -- Add_Highlight_Class(My_Ctext, "adakeywords", "red", "[list procedure function with and]");
      -- COMMANDS
-     -- ::ctext::addHighlightClass pathName class color keywordlist
+     -- ::ctext::addHighlightClass CtextWidget class color keywordlist
      -- SOURCE
    procedure Add_Highlight_Class
      (CtextWidget: in Tklib_Ctext; Class, Color, Keywordlist: in String) with
@@ -156,6 +156,11 @@ package Tcl.Tklib.Ada.Ctext is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Add blue highlight to words which starts with p in class pwords to My_Ctext ctext
+      -- Add_Highlight_Class_With_Only_Char_Start(My_Ctext, "pwords", "blue", "p");
+      -- COMMANDS
+      -- ::ctext::addHighlightClassWithOnlyCharStart CtextWidget class color char
       -- SOURCE
    procedure Add_Highlight_Class_With_Only_Char_Start
      (CtextWidget: in Tklib_Ctext; Class, Color, Char: in String) with
@@ -174,6 +179,11 @@ package Tcl.Tklib.Ada.Ctext is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Add white highlight to characters p w d in class pwdcolor to My_Ctext ctext
+      -- Add_Highlight_Class_For_Special_Chars(My_Ctext, "pwdcolor", "white", "pwd");
+      -- COMMANDS
+      -- ::ctext::addHighlightClassForSpecialChars CtextWidget class color charstring
       -- SOURCE
    procedure Add_Highlight_Class_For_Special_Chars
      (CtextWidget: in Tklib_Ctext; Class, Color, CharString: in String) with
@@ -193,6 +203,11 @@ package Tcl.Tklib.Ada.Ctext is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Add yellow highlight to words which ends with my in class mycolor to My_Ctext ctext
+      -- Add_Highlight_Class_For_Regexp(My_Ctext, "mycolor", "yellow", "[:alnum:]+my");
+      -- COMMANDS
+      -- ::ctext::addHighlightClassForRegexp CtextWidget class color pattern
       -- SOURCE
    procedure Add_Highlight_Class_For_Regexp
      (CtextWidget: in Tklib_Ctext; Class, Color, Pattern: in String) with
@@ -208,6 +223,11 @@ package Tcl.Tklib.Ada.Ctext is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Append current selection to My_Ctext ctext
+      -- Append(My_Ctext);
+      -- COMMANDS
+      -- CtextWidget append
       -- SOURCE
    procedure Append(CtextWidget: in Tklib_Ctext);
    -- ****
