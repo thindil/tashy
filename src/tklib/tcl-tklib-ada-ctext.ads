@@ -38,6 +38,11 @@ package Tcl.Tklib.Ada.Ctext is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Init ctext package on My_Interp Tcl interpreter
+   -- Ctext_Init(My_Interp);
+   -- COMMANDS
+   -- package require ctext
    -- SOURCE
    procedure Ctext_Init(Interp: in Tcl_Interp);
    -- ****
@@ -67,6 +72,13 @@ package Tcl.Tklib.Ada.Ctext is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create a new ctext with pathname .mytext and hide line map
+   -- My_Ctext: constant Tklib_Ctext := Create(".mytext", "-linemap 0");
+   -- COMMANDS
+   -- ctext pathName ?options?
+   -- SEE ALSO
+   -- Create (procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -89,6 +101,17 @@ package Tcl.Tklib.Ada.Ctext is
      -- 8.6.7 - Added
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Create ctext My_Ctext with pathname .mytext and show line map on the current Tcl interpreter
+     -- declare
+     --    My_Ctext: Tklib_Ctext;
+     -- begin
+     --    Create(My_Ctext, ".mytext", "-linemap 1");
+     -- end;
+     -- COMMANDS
+     -- ctext pathName ?options?
+     -- SEE ALSO
+     -- Create (function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tklib_Ctext; pathName: in String; options: in String := "";
@@ -109,6 +132,11 @@ package Tcl.Tklib.Ada.Ctext is
      -- 8.6.7 - Added
      -- TODO
      -- Replace it with higher level of binding
+     -- EXAMPLE
+     -- -- Add red highlight for some Ada keywords in class adakeywords to My_Ctext ctext
+     -- Add_Highlight_Class(My_Ctext, "adakeywords", "red", "[list procedure function with and]");
+     -- COMMANDS
+     -- ::ctext::addHighlightClass pathName class color keywordlist
      -- SOURCE
    procedure Add_Highlight_Class
      (CtextWidget: in Tklib_Ctext; Class, Color, Keywordlist: in String) with
