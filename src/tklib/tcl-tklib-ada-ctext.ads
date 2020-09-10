@@ -242,6 +242,11 @@ package Tcl.Tklib.Ada.Ctext is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Remove all highlight classes from My_Ctext ctext
+   -- Clear_Highlight_Classes(My_Ctext);
+   -- COMMANDS
+   -- ::ctext::clearHighlightClasses CtextWidget
    -- SOURCE
    procedure Clear_Highlight_Classes(CtextWidget: in Tklib_Ctext);
    -- ****
@@ -255,6 +260,11 @@ package Tcl.Tklib.Ada.Ctext is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Call tk_textCopy on My_Ctext ctext
+   -- Copy(My_Ctext);
+   -- COMMANDS
+   -- CtextWidget copy
    -- SOURCE
    procedure Copy(CtextWidget: in Tklib_Ctext);
    -- ****
@@ -268,6 +278,11 @@ package Tcl.Tklib.Ada.Ctext is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Call tk_textCut on My_Ctext ctext
+   -- Cut(My_Ctext);
+   -- COMMANDS
+   -- CtextWidget cut
    -- SOURCE
    procedure Cut(CtextWidget: in Tklib_Ctext);
    -- ****
@@ -283,6 +298,11 @@ package Tcl.Tklib.Ada.Ctext is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Delete highlight class adakeywords from My_Ctext ctext
+   -- Delete_Highlight_Class(My_Ctext, "adakeywords");
+   -- COMMANDS
+   -- ::ctext::deleteHighlightClass CtextWidget class
    -- SOURCE
    procedure Delete_Highlight_Class
      (CtextWidget: in Tklib_Ctext; Class: in String) with
