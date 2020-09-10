@@ -112,6 +112,11 @@ package Tcl.Tklib.Ada.Autoscroll is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Turn off autohide for all scrollbars on My_Interp Tcl interpreter
+   -- Wrap(My_Interp);
+   -- COMMANDS
+   -- ::autoscroll::unwrap
    -- SOURCE
    procedure Unwrap(Interp: in Tcl_Interp);
    -- ****
