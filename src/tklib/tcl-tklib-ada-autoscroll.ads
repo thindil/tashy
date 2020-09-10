@@ -38,6 +38,11 @@ package Tcl.Tklib.Ada.Autoscroll is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Init autoscroll package on My_Interp Tcl interpreter
+   -- Autoscroll_Init(My_Interp);
+   -- COMMANDS
+   -- package require autoscroll
    -- SOURCE
    procedure Autoscroll_Init(Interp: in Tcl_Interp);
    -- ****
@@ -51,6 +56,11 @@ package Tcl.Tklib.Ada.Autoscroll is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Set autohide for scrollbar My_Scroll
+   -- Autoscroll(My_Scroll);
+   -- COMMANDS
+   -- :autoscroll::autoscroll scroll
    -- SOURCE
    procedure Autoscroll(Scroll: in Tk_Widget'Class);
    -- ****
@@ -65,6 +75,11 @@ package Tcl.Tklib.Ada.Autoscroll is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Set autohide for all scrollbars on My_Interp Tcl interpreter
+   -- Wrap(My_Interp);
+   -- COMMANDS
+   -- ::autoscroll::wrap
    -- SOURCE
    procedure Wrap(Interp: in Tcl_Interp);
    -- ****
@@ -78,6 +93,11 @@ package Tcl.Tklib.Ada.Autoscroll is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Set static state for scrollbar My_Scroll
+   -- Unautoscroll(My_Scroll);
+   -- COMMANDS
+   -- :autoscroll::unautoscroll scroll
    -- SOURCE
    procedure Unautoscroll(Scroll: in Tk_Widget'Class);
    -- ****
