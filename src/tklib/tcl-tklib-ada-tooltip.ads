@@ -39,6 +39,11 @@ package Tcl.Tklib.Ada.Tooltip is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Init tooltip package on My_Interp Tcl interpreter
+   -- Tooltip_Init(My_Interp);
+   -- COMMANDS
+   -- package require tooltip
    -- SOURCE
    procedure Tooltip_Init(Interp: in Tcl_Interp);
    -- ****
@@ -54,6 +59,11 @@ package Tcl.Tklib.Ada.Tooltip is
    -- 8.6.1 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Add tooltip with text my tooltip text to the My_Label widget
+   -- Add(My_Label, "my tooltip text");
+   -- COMMANDS
+   -- ::tooltip::tooltip Widget ?options? message
    -- SOURCE
    procedure Add
      (Widget: in Tk_Widget'Class; Message: in String;
@@ -73,6 +83,11 @@ package Tcl.Tklib.Ada.Tooltip is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Prevent to show tooltip to all widgets which name starts from .mylabel on current interpreter
+      -- Clear("^.mylabel");
+      -- COMMANDS
+      -- :tooltip::tooltip clear pattern
       -- SOURCE
    procedure Clear
      (Pattern: in String; Interp: in Tcl_Interp := Get_Context) with
@@ -90,6 +105,13 @@ package Tcl.Tklib.Ada.Tooltip is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Set the tooltips delay to 2 seconds on current Tcl interpreter
+      -- Tooltip_Delay("2000");
+      -- COMMANDS
+      -- :tooltip::tooltip delay milisecs
+      -- SEE ALSO
+      -- Tooltip_Delay (function)
       -- SOURCE
    procedure Tooltip_Delay
      (Milisecs: in String; Interp: in Tcl_Interp := Get_Context) with
