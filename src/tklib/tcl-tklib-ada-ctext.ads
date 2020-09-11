@@ -392,18 +392,23 @@ package Tcl.Tklib.Ada.Ctext is
       Pre => Index /= "" and Text /= "";
       -- ****
 
-   -- ****f* Ctext/Get_Highlight_Classes
-   -- FUNCTION
-   -- Get the list of all highlight classes for the widget
-   -- PARAMETERS
-   -- CtextWidget - Ctext widget which will be queried for classes
-   -- RESULT
-   -- List of all highlight classes for the CtextWidget
-   -- HISTORY
-   -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
-   -- SOURCE
+      -- ****f* Ctext/Get_Highlight_Classes
+      -- FUNCTION
+      -- Get the list of all highlight classes for the widget
+      -- PARAMETERS
+      -- CtextWidget - Ctext widget which will be queried for classes
+      -- RESULT
+      -- List of all highlight classes for the CtextWidget
+      -- HISTORY
+      -- 8.6.7 - Added
+      -- TODO
+      -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the highlight classes for My_Ctext ctext
+      -- Highlight_Classes: constant String := Get_Highlight_Classes(My_Ctext);
+      -- COMMANDS
+      -- ::ctext::getHighlightClasses CtextWidget
+      -- SOURCE
    function Get_Highlight_Classes(CtextWidget: in Tklib_Ctext) return String;
    -- ****
 
@@ -418,6 +423,11 @@ package Tcl.Tklib.Ada.Ctext is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Highlight the first three characters in second line in My_Ctext ctext
+   -- Highlight(My_Ctext, "2.0", "2.2");
+   -- COMMANDS
+   -- CtextWidget highlight startIndex endIndex
    -- SOURCE
    procedure Highlight
      (CtextWidget: in Tklib_Ctext; StartIndex, EndIndex: in String) with
@@ -433,6 +443,11 @@ package Tcl.Tklib.Ada.Ctext is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Call tk_textPaste on My_Ctext ctext
+      -- Paste(My_Ctext);
+      -- COMMANDS
+      -- CtextWidget paste
       -- SOURCE
    procedure Paste(CtextWidget: in Tklib_Ctext);
    -- ****
