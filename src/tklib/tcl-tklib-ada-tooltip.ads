@@ -131,6 +131,13 @@ package Tcl.Tklib.Ada.Tooltip is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Get the tooltip delay on current Tcl interpreter
+      -- T_Delay: constant String := Tooltip_Delay;
+      -- COMMANDS
+      -- :tooltip::tooltip delay
+      -- SEE ALSO
+      -- Tooltip_Delay (procedure)
       -- SOURCE
    function Tooltip_Delay(Interp: in Tcl_Interp := Get_Context) return String;
    -- ****
@@ -145,6 +152,14 @@ package Tcl.Tklib.Ada.Tooltip is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Disable all tooltips on current Tcl interpreter
+   -- Disable;
+   -- COMMANDS
+   -- :tooltip::tooltip disable
+   -- :tooltip::tooltip off
+   -- SEE ALSO
+   -- Enable
    -- SOURCE
    procedure Disable(Interp: in Tcl_Interp := Get_Context);
    procedure Off(Interp: in Tcl_Interp := Get_Context) renames Disable;
@@ -160,6 +175,14 @@ package Tcl.Tklib.Ada.Tooltip is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Enable all tooltips on current Tcl interpreter
+   -- Enable;
+   -- COMMANDS
+   -- :tooltip::tooltip enable
+   -- :tooltip::tooltip on
+   -- SEE ALSO
+   -- Enable
    -- SOURCE
    procedure Enable(Interp: in Tcl_Interp := Get_Context);
    procedure On(Interp: in Tcl_Interp := Get_Context) renames Enable;
@@ -171,6 +194,11 @@ package Tcl.Tklib.Ada.Tooltip is
    -- PARAMETERS
    -- Enable - If true, enable fading, if false disable it
    -- Interp - Tcl interpreter on which fading will be set
+   -- EXAMPLE
+   -- -- Enable tooltips fading on current Tcl interpreter
+   -- Fade("true");
+   -- COMMANDS
+   -- :tooltip::tooltip fade ?enable?
    -- SOURCE
    procedure Fade(Enable: in String; Interp: in Tcl_Interp := Get_Context) with
       Pre => Enable in "true" | "false";
