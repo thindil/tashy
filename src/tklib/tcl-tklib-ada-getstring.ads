@@ -36,6 +36,11 @@ package Tcl.Tklib.Ada.GetString is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Init getstring package on My_Interp Tcl interpreter
+   -- GetString_Init(My_Interp);
+   -- COMMANDS
+   -- package require getstring
    -- SOURCE
    procedure GetString_Init(Interp: in Tcl_Interp);
    -- ****
@@ -57,6 +62,13 @@ package Tcl.Tklib.Ada.GetString is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Create dialog .mygs with text Enter text and and store entered text in mytext Tcl variable on My_Interp interpreter
+   -- if Tk_Get_String(My_Interp, ".mygs", "mytext", "{Enter text}") = "1" then
+   --    Ada.Text_IO.Put_Line("Entered text: " & Tcl_GetVar(My_Interp, "mytext"));
+   -- end if;
+   -- COMMANDS
+   -- ::getstring::tk_getString pathName variable text ?options?
    -- SOURCE
    function Tk_Get_String
      (Interp: in Tcl_Interp; DialogName, Variable, Text: in String;
