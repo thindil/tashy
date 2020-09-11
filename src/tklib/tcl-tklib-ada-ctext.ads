@@ -319,6 +319,11 @@ package Tcl.Tklib.Ada.Ctext is
       -- 8.6.7 - Added
       -- TODO
       -- Replace it with higher level of binding
+      -- EXAMPLE
+      -- -- Disable highlight for C comments in My_Ctext ctext
+      -- Disable_Comments(My_Ctext);
+      -- COMMANDS
+      -- ::ctext::disableComments CtextWidget
       -- SOURCE
    procedure Disable_Comments(CtextWidget: in Tklib_Ctext);
    -- ****
@@ -333,6 +338,11 @@ package Tcl.Tklib.Ada.Ctext is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Enable highlight for C comments in My_Ctext ctext
+   -- Enable_Comments(My_Ctext);
+   -- COMMANDS
+   -- ::ctext::enableComments CtextWidget
    -- SOURCE
    procedure Enable_Comments(CtextWidget: in Tklib_Ctext);
    -- ****
@@ -351,6 +361,11 @@ package Tcl.Tklib.Ada.Ctext is
    -- 8.6.7 - Added
    -- TODO
    -- Replace it with higher level of binding
+   -- EXAMPLE
+   -- -- Delete first three characters in first row in My_Ctext ctext
+   -- Fast_Delete(My_Ctext, "1.0", "1.2");
+   -- COMMANDS
+   -- CtextWidget fastdelete index1 ?index2?
    -- SOURCE
    procedure Fast_Delete
      (CtextWidget: in Tklib_Ctext; Index1: in String;
@@ -366,6 +381,11 @@ package Tcl.Tklib.Ada.Ctext is
       -- Index       - Tklib_Ctext position on which text will be inserted.
       --               Lines starts from 1, characters starts from 0
       -- Text        - Text to insert to Tklib_Ctext widget
+      -- EXAMPLE
+      -- -- Insert text hello world to the end of the text in My_Ctext ctext
+      -- Fast_Insert(My_Ctext, "end", "{hello world}");
+      -- COMMANDS
+      -- CtextWidget fastinsert index text
       -- SOURCE
    procedure Fast_Insert
      (CtextWidget: in Tklib_Ctext; Index, Text: in String) with
