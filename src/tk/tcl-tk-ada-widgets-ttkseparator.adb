@@ -45,4 +45,14 @@ package body Tcl.Tk.Ada.Widgets.TtkSeparator is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Ttk_Separator is
+   begin
+      return New_Separator: Ttk_Separator do
+         New_Separator.Interp := Interp;
+         New_Separator.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
 end Tcl.Tk.Ada.Widgets.TtkSeparator;

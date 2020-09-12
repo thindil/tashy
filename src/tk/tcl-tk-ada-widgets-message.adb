@@ -44,4 +44,14 @@ package body Tcl.Tk.Ada.Widgets.Message is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_Message is
+   begin
+      return New_Message: Tk_Message do
+         New_Message.Interp := Interp;
+         New_Message.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
 end Tcl.Tk.Ada.Widgets.Message;

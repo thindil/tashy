@@ -44,6 +44,16 @@ package body Tcl.Tk.Ada.Widgets.Button.RadioButton is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_RadioButton is
+   begin
+      return New_Button: Tk_RadioButton do
+         New_Button.Interp := Interp;
+         New_Button.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
    procedure Deselect(Buttn: in Tk_RadioButton) is
    begin --  Deselect
       Execute_Widget_Command(Buttn, "deselect");

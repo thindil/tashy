@@ -46,6 +46,16 @@ package body Tcl.Tk.Ada.Widgets.TtkNotebook is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Ttk_Notebook is
+   begin
+      return New_Notebook: Ttk_Notebook do
+         New_Notebook.Interp := Interp;
+         New_Notebook.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
    procedure Add
      (Notebook: in Ttk_Notebook; WindowName: in String;
       Options: String := "") is

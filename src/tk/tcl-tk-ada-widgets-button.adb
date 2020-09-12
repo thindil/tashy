@@ -46,6 +46,16 @@ package body Tcl.Tk.Ada.Widgets.Button is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_Button is
+   begin
+      return New_Button: Tk_Button do
+         New_Button.Interp := Interp;
+         New_Button.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
    procedure Flash(Buttn: in Tk_Button) is
    begin --  Flash
       Execute_Widget_Command(Buttn, "flash");

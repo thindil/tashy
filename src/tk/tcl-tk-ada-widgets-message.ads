@@ -99,6 +99,26 @@ package Tcl.Tk.Ada.Widgets.Message is
       Pre => pathName /= "";
       -- ****
 
+     -- ****f* Message/Get_Widget
+     -- FUNCTION
+     -- Get the existing Tk_Message widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Tk_Message widget
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get message widget with name .mymessage on the current Tcl interpreter
+     -- My_Message: constant Tk_Message := Get_Widget(".mymessage");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_Message;
+     -- ****
+
 private
 
    type Tk_Message is new Tk_Widget with null record;

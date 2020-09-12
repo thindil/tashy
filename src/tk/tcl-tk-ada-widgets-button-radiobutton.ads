@@ -100,6 +100,26 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
       Pre => pathName /= "";
      -- ****
 
+     -- ****f* RadioButton/Get_Widget
+     -- FUNCTION
+     -- Get the existing Tk_RadioButton widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Tk_RadioButton widget
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get button widget with name .mybutton on the current Tcl interpreter
+     -- My_Button: constant Tk_RadioButton := Get_Widget(".mybutton");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_RadioButton;
+     -- ****
+
      -- ****f* RadioButton/Deselect
      -- FUNCTION
      -- Deselect the button.

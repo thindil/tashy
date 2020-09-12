@@ -117,6 +117,7 @@ package Tcl.Tk.Ada.Widgets.TtkButton is
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
       return Ttk_Button;
+     -- ****
 
      -- ****f* TtkButton/Invoke
      -- FUNCTION

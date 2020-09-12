@@ -106,6 +106,26 @@ package Tcl.Tk.Ada.Widgets.TtkSeparator is
       Pre => pathName /= "";
       -- ****
 
+     -- ****f* TtkSeparator/Get_Widget
+     -- FUNCTION
+     -- Get the existing Ttk_Separator widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Ttk_Separator widget
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get separator widget with name .myseparator on the current Tcl interpreter
+     -- My_Separator: constant Ttk_Separator := Get_Widget(".myseparator");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Ttk_Separator;
+     -- ****
+
 private
 
    type Ttk_Separator is new Tk_Widget with null record;

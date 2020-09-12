@@ -106,6 +106,26 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       Pre => pathName /= "";
      -- ****
 
+     -- ****f* TtkNotebook/Get_Widget
+     -- FUNCTION
+     -- Get the existing Ttk_Notebook widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Ttk_Notebook widget
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get notebook widget with name .mynotebook on the current Tcl interpreter
+     -- My_Notebook: constant Ttk_Notebook := Get_Widget(".mynotebook");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Ttk_Notebook;
+     -- ****
+
      -- ****f* TtkNotebook/Add
      -- FUNCTION
      -- Add a new window to the selected notebook
