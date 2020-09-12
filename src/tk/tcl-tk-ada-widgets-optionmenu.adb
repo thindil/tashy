@@ -44,4 +44,14 @@ package body Tcl.Tk.Ada.Widgets.OptionMenu is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_OptionMenu is
+   begin
+      return New_Menu: Tk_OptionMenu do
+         New_Menu.Interp := Interp;
+         New_Menu.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
 end Tcl.Tk.Ada.Widgets.OptionMenu;

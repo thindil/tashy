@@ -46,6 +46,16 @@ package body Tcl.Tk.Ada.Widgets.TtkTreeView is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Ttk_Tree_View is
+   begin
+      return New_TreeView: Ttk_Tree_View do
+         New_TreeView.Interp := Interp;
+         New_TreeView.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
    function Children
      (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String is
    begin

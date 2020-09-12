@@ -99,6 +99,26 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => pathName /= "";
      -- ****
 
+     -- ****f* TtkTreeView/Get_Widget
+     -- FUNCTION
+     -- Get the existing Ttk_Tree_View widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Ttk_Tree_View widget
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get treeview widget with name .myview on the current Tcl interpreter
+     -- My_View: constant Ttk_Tree_View := Get_Widget(".myview");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Ttk_Tree_View;
+     -- ****
+
      -- ****f* TtkTreeView/Children
      -- FUNCTION
      -- Get children of the selected item in the selected Ttk_Tree_View

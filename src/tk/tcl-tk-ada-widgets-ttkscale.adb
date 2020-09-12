@@ -46,6 +46,16 @@ package body Tcl.Tk.Ada.Widgets.TtkScale is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Ttk_Scale is
+   begin
+      return New_Scale: Ttk_Scale do
+         New_Scale.Interp := Interp;
+         New_Scale.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
    function Get(ScaleWidget: in Ttk_Scale) return String is
    begin
       Execute_Widget_Command(ScaleWidget, "get");

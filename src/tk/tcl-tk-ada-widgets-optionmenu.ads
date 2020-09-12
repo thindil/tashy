@@ -101,6 +101,26 @@ package Tcl.Tk.Ada.Widgets.OptionMenu is
       Pre => pathName /= "" and options /= "";
       -- ****
 
+     -- ****f* OptionMenu/Get_Widget
+     -- FUNCTION
+     -- Get the existing Tk_OptionMenu widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Tk_OptionMenu widget
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get option menu widget with name .mymenu on the current Tcl interpreter
+     -- My_Menu: constant Tk_OptionMenu := Get_Widget(".mymenu");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_OptionMenu;
+     -- ****
+
 private
 
    type Tk_OptionMenu is new Tk_Widget with null record;

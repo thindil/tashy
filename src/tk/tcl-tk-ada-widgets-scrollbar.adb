@@ -46,6 +46,16 @@ package body Tcl.Tk.Ada.Widgets.Scrollbar is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_Scrollbar is
+   begin
+      return New_Scrollbar: Tk_Scrollbar do
+         New_Scrollbar.Interp := Interp;
+         New_Scrollbar.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
    procedure Activate(ScrollbarWidget: in Tk_Scrollbar; Element: in String) is
    begin
       Execute_Widget_Command(ScrollbarWidget, "activate", Element);

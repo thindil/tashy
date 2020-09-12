@@ -106,6 +106,26 @@ package Tcl.Tk.Ada.Widgets.TtkScale is
       Pre => pathName /= "";
      -- ****
 
+     -- ****f* TtkScale/Get_Widget
+     -- FUNCTION
+     -- Get the existing Ttk_Scale widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Ttk_Scale widget
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get scale widget with name .myscale on the current Tcl interpreter
+     -- My_Scale: constant Ttk_Scale := Get_Widget(".myscale");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Ttk_Scale;
+     -- ****
+
      -- ****f* TtkScale/Get (current)
      -- FUNCTION
      -- Get current value of the selected Ttk_Scale

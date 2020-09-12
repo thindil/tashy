@@ -106,6 +106,26 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
       Pre => pathName /= "";
      -- ****
 
+     -- ****f* Scrollbar/Get_Widget
+     -- FUNCTION
+     -- Get the existing Tk_Scrollbar widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Tk_Scrollbar widget
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get Scrollbar widget with name .myscroll on the current Tcl interpreter
+     -- My_Scroll: constant Tk_Scrollbar := Get_Widget(".myscroll");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_Scrollbar;
+     -- ****
+
      -- ****f* Scrollbar/Activate (procedure)
      -- FUNCTION
      -- Set the selected element as an active in the selected Tk_Scrollbar
