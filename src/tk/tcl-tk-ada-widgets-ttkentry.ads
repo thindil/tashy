@@ -73,6 +73,25 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       Pre => pathName /= "";
      -- ****
 
+     -- ****f* TtkEntry/Get_Widget
+     -- FUNCTION
+     -- Get the existing Ttk_Entry widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Ttk_Entry widget
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get entry widget with name .myentry on the current Tcl interpreter
+     -- My_Entry: constant Ttk_Entry := Get_Widget(".myentry");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Ttk_Entry;
+
      -- ****f* TtkEntry/Create (procedure)
      -- FUNCTION
      -- Creates a new Ttk_Entry in the specified interpreter.

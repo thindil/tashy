@@ -46,6 +46,16 @@ package body Tcl.Tk.Ada.Widgets.TtkEntry is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Ttk_Entry is
+   begin
+      return New_Entry: Ttk_Entry do
+         New_Entry.Interp := Interp;
+         New_Entry.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
    function BBox
      (TextEntry: in Ttk_Entry'Class; Index: in String) return String is
    begin

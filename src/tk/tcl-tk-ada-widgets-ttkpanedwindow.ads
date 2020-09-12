@@ -106,6 +106,25 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       Pre => pathName /= "";
      -- ****
 
+     -- ****f* TtkPanedWindow/Get_Widget
+     -- FUNCTION
+     -- Get the existing Ttk_PanedWindow widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Ttk_PanedWindow widget
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get panedwindow widget with name .mypaned on the current Tcl interpreter
+     -- My_Paned: constant Ttk_PanedWindow := Get_Widget(".mypaned");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Ttk_PanedWindow;
+
      -- ****f* TtkPanedWindow/Add
      -- FUNCTION
      -- Adds the Tk_Widget to the Ttk_PanedWindow.

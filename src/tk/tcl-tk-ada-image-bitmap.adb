@@ -45,4 +45,14 @@ package body Tcl.Tk.Ada.Image.Bitmap is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_Bitmap is
+   begin
+      return New_Bitmap: Tk_Bitmap do
+         New_Bitmap.Interp := Interp;
+         New_Bitmap.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
 end Tcl.Tk.Ada.Image.Bitmap;

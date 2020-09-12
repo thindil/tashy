@@ -46,6 +46,16 @@ package body Tcl.Tk.Ada.Widgets.ListBox is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_ListBox is
+   begin
+      return New_ListBox: Tk_ListBox do
+         New_ListBox.Interp := Interp;
+         New_ListBox.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
    procedure Activate(ListboxWidget: in Tk_ListBox; Index: in String) is
    begin
       Execute_Widget_Command(ListboxWidget, "activate", Index);

@@ -99,6 +99,25 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => pathName /= "";
      -- ****
 
+     -- ****f* ListBox/Get_Widget
+     -- FUNCTION
+     -- Get the existing Tk_ListBox widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Tk_ListBox widget
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get listbox widget with name .mylist on the current Tcl interpreter
+     -- My_ListBox: constant Tk_ListBox := Get_Widget(".mylist");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_ListBox;
+
      -- ****f* ListBox/Activate
      -- FUNCTION
      -- Set the active element of Tk_ListBox to the selected index.

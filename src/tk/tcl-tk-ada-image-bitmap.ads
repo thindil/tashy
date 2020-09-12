@@ -97,6 +97,25 @@ package Tcl.Tk.Ada.Image.Bitmap is
       Pre => (pathName /= "");
       -- ****
 
+     -- ****f* Bitmap/Get_Widget
+     -- FUNCTION
+     -- Get the existing Tk_Bitmap image
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the image
+     -- Interp   - Tcl interpreter on which the image exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Tk_Bitmap image
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get bitmap image with name .mybitmap on the current Tcl interpreter
+     -- My_Bitmap: constant Tk_Bitmap := Get_Widget(".mybitmap");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_Bitmap;
+
 private
 
    type Tk_Bitmap is new Tk_Widget with null record;

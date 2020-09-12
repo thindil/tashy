@@ -97,6 +97,25 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       Pre => pathName /= "";
      -- ****
 
+     -- ****f* TEntry/Get_Widget
+     -- FUNCTION
+     -- Get the existing Tk_Entry widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Tk_Entry widget
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get entry widget with name .myentry on the current Tcl interpreter
+     -- My_Entry: constant Tk_Entry := Get_Widget(".myentry");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_Entry;
+
      -- ****f* TEntry/BBox
      -- FUNCTION
      -- Get size of bounding box of the selected character in the selected
