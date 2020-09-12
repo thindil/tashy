@@ -20,6 +20,7 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
+with Tcl.Tk.Ada; use Tcl.Tk.Ada;
 with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
 
 -- ****h* TklibAda/Ctext
@@ -118,6 +119,25 @@ package Tcl.Tklib.Ada.Ctext is
       Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
      -- ****
+
+     -- ****f* Ctext/Get_Widget
+     -- FUNCTION
+     -- Get the existing Tklib_Ctext widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Tklib_Ctext widget
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get ctext widget with name .myctext on the current Tcl interpreter
+     -- My_Ctext: constant Tklib_Ctext := Get_Widget(".myctext");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tklib_Ctext;
 
      -- ****f* Ctext/Add_Highlight_Class
      -- FUNCTION

@@ -37,4 +37,14 @@ package body Tcl.Tk.Ada.Widgets.Toplevel is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_Toplevel is
+   begin
+      return New_Toplevel: Tk_Toplevel do
+         New_Toplevel.Interp := Interp;
+         New_Toplevel.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
 end Tcl.Tk.Ada.Widgets.Toplevel;

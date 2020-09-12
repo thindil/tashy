@@ -21,7 +21,6 @@
 -- covered by the GNU Public License.
 
 with Tcl.Ada; use Tcl.Ada;
-with Tcl.Tk.Ada; use Tcl.Tk.Ada;
 
 package body Tcl.Tklib.Ada.Ctext is
 
@@ -55,6 +54,16 @@ package body Tcl.Tklib.Ada.Ctext is
    begin
       Widgt := Create(pathName, options, Interp);
    end Create;
+
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tklib_Ctext is
+   begin
+      return New_Ctext: Tklib_Ctext do
+         New_Ctext.Interp := Interp;
+         New_Ctext.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
 
    procedure Add_Highlight_Class
      (CtextWidget: in Tklib_Ctext; Class, Color, Keywordlist: in String) is

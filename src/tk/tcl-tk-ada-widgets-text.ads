@@ -99,6 +99,25 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => pathName /= "";
      -- ****
 
+     -- ****f* Text/Get_Widget
+     -- FUNCTION
+     -- Get the existing Tk_Text widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Tk_Text widget
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get text widget with name .mytext on the current Tcl interpreter
+     -- My_Text: constant Tk_Text := Get_Widget(".mytext");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_Text;
+
      -- ****f* Text/BBox
      -- FUNCTION
      -- Get size of bounding box of the selected character in the selected

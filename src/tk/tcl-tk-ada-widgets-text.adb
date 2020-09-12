@@ -45,6 +45,16 @@ package body Tcl.Tk.Ada.Widgets.Text is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_Text is
+   begin
+      return New_Text: Tk_Text do
+         New_Text.Interp := Interp;
+         New_Text.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
    function BBox(TextWidget: in Tk_Text; Index: in String) return String is
    begin
       Execute_Widget_Command(TextWidget, "bbox", Index);

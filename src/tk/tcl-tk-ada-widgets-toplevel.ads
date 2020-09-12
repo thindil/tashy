@@ -92,6 +92,25 @@ package Tcl.Tk.Ada.Widgets.Toplevel is
       Pre => pathName /= "";
       -- ****
 
+     -- ****f* Toplevel/Get_Widget
+     -- FUNCTION
+     -- Get the existing Tk_Toplevel widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Tk_Toplevel widget
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get toplevel widget with name .mywindow on the current Tcl interpreter
+     -- My_Window: constant Tk_Toplevel := Get_Widget(".mywindow");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_Toplevel;
+
 private
 
    type Tk_Toplevel is new Tk_Widget with null record;

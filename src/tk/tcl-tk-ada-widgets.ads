@@ -161,7 +161,25 @@ package Tcl.Tk.Ada.Widgets is
    procedure Create
      (Widgt: out Tk_Widget; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) is abstract;
-   -- ****
+      -- ****
+
+      -- ****f* Widgets/Get_Widget
+      -- FUNCTION
+      -- Get the existing Tk_Widget. This is abstract function. Its content
+      -- depends on each child widget code.
+      -- PARAMETERS
+      -- pathName - Tk path (starts with dot) for the widget
+      -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+      --            Default value is current Tcl interpreter
+      -- RESULT
+      -- Existing Tk_Widget
+      -- HISTORY
+      -- 8.6.9 - Added
+      -- SOURCE
+   function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_Widget is abstract;
+      -- ****
 
    ---------------------------------------------
    --
