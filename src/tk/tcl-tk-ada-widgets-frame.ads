@@ -99,6 +99,25 @@ package Tcl.Tk.Ada.Widgets.Frame is
       Pre => pathName /= "";
       -- ****
 
+     -- ****f* Frame/Get_Widget
+     -- FUNCTION
+     -- Get the existing Tk_Frame widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Tk_Frame widget
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get frame widget with name .myframe on the current Tcl interpreter
+     -- My_Frame: constant Tk_Frame := Get_Widget(".myframe");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_Frame;
+
 private
 
    type Tk_Frame is new Tk_Widget with null record;

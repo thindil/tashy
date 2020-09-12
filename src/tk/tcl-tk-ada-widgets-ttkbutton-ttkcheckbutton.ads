@@ -99,6 +99,25 @@ package Tcl.Tk.Ada.Widgets.TtkButton.TtkCheckButton is
       Pre => pathName /= "";
       -- ****
 
+     -- ****f* TtkCheckButton/Get_Widget
+     -- FUNCTION
+     -- Get the existing Ttk_CheckButton widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Ttk_CheckButton widget
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get checkbutton widget with name .mycheckbutton on the current Tcl interpreter
+     -- My_Checkbutton: constant Ttk_CheckButton := Get_Widget(".mycheckbutton");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Ttk_CheckButton;
+
 private
 
    type Ttk_CheckButton is new Ttk_Button with null record;

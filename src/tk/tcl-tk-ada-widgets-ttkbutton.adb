@@ -46,6 +46,16 @@ package body Tcl.Tk.Ada.Widgets.TtkButton is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Ttk_Button is
+   begin
+      return New_Button: Ttk_Button do
+         New_Button.Interp := Interp;
+         New_Button.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
    function Invoke
      (Buttn: in Ttk_Button'Class; options: in String := "") return String is
    begin

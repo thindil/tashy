@@ -45,4 +45,14 @@ package body Tcl.Tk.Ada.Widgets.TtkButton.TtkCheckButton is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Ttk_CheckButton is
+   begin
+      return New_Button: Ttk_CheckButton do
+         New_Button.Interp := Interp;
+         New_Button.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
 end Tcl.Tk.Ada.Widgets.TtkButton.TtkCheckButton;

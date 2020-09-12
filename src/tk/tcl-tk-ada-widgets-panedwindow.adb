@@ -46,6 +46,16 @@ package body Tcl.Tk.Ada.Widgets.PanedWindow is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_PanedWindow is
+   begin
+      return New_PanedWindow: Tk_PanedWindow do
+         New_PanedWindow.Interp := Interp;
+         New_PanedWindow.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
    procedure Add
      (Paned: in Tk_PanedWindow; SubWindow: in Tk_Widget'Class;
       Options: in String := "") is

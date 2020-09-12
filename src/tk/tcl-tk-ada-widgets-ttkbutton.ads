@@ -99,6 +99,25 @@ package Tcl.Tk.Ada.Widgets.TtkButton is
       Pre => pathName /= "";
      -- ****
 
+     -- ****f* TtkButton/Get_Widget
+     -- FUNCTION
+     -- Get the existing Ttk_Button widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Ttk_Button widget
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get button widget with name .mybutton on the current Tcl interpreter
+     -- My_Button: constant Ttk_Button := Get_Widget(".mybutton");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Ttk_Button;
+
      -- ****f* TtkButton/Invoke
      -- FUNCTION
      -- Invoke the Tcl command associated with the button.
