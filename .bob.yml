@@ -126,3 +126,8 @@ version: 2.0
    description: Create a Docker images of Tashy (required argument is the library version)
    flags:
       - unixonly
+- command:
+   name: pretty
+   execute:
+      - gnatpp -P tashy.gpr
+   description: Pretty print Tashy source code
