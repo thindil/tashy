@@ -45,7 +45,7 @@ package Tcl.Tk.Ada.TtkStyle is
    -- ttk::style element create name element_type ?options?
    -- SOURCE
    procedure Element_Create
-     (Name, Element_Type : in String; Options : in String := "") with
+     (Name, Element_Type: in String; Options: in String := "") with
       Pre => Name /= "" and Element_Type /= "";
       -- ****
 
@@ -101,7 +101,7 @@ package Tcl.Tk.Ada.TtkStyle is
       -- COMMANDS
       -- ttk::style configure name options
       -- SOURCE
-   procedure Style_Configure (Name, Options : in String) with
+   procedure Style_Configure(Name, Options: in String) with
       Pre => Name /= "" and Options /= "";
       -- ****
 
@@ -121,7 +121,7 @@ package Tcl.Tk.Ada.TtkStyle is
       -- COMMANDS
       -- ttk::style layout name options
       -- SOURCE
-   procedure Style_Layout (Name, Options : in String) with
+   procedure Style_Layout(Name, Options: in String) with
       Pre => Name /= "" and Options /= "";
       -- ****
 
@@ -142,7 +142,7 @@ package Tcl.Tk.Ada.TtkStyle is
       -- COMMANDS
       -- ttk::style layout name
       -- SOURCE
-   function Style_Layout (Name : in String) return String with
+   function Style_Layout(Name: in String) return String with
       Pre => Name /= "";
       -- ****
 
@@ -169,8 +169,8 @@ package Tcl.Tk.Ada.TtkStyle is
       -- ttk::style lookup name option ?state? ?default?
       -- SOURCE
    function Style_Lookup
-     (Name, Option : in String; State : in String := "";
-      Default      : in String := "") return String with
+     (Name, Option: in String; State: in String := "";
+      Default: in String := "") return String with
       Pre => Name /= "" and Option /= "";
       -- ****
 
@@ -190,7 +190,7 @@ package Tcl.Tk.Ada.TtkStyle is
       -- COMMANDS
       -- ttk::style map name options
       -- SOURCE
-   procedure Style_Map (Name, Options : in String) with
+   procedure Style_Map(Name, Options: in String) with
       Pre => Name /= "" and Options /= "";
       -- ****
 
@@ -227,7 +227,7 @@ package Tcl.Tk.Ada.TtkStyle is
    -- COMMANDS
    -- ttk::style theme use ThemeName
    -- SOURCE
-   procedure Theme_Use (ThemeName : in String) with
+   procedure Theme_Use(ThemeName: in String) with
       Pre => ThemeName /= "";
       -- ****
 

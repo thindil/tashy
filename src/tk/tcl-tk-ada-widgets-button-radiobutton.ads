@@ -64,7 +64,6 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
       Pre => pathName /= "";
      -- ****
 
-
      -- ****f* RadioButton/Create (procedure)
      -- FUNCTION
      -- Creates a new Tk_RadioButton in the specified interpreter.

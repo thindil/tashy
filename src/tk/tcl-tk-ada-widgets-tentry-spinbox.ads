@@ -249,4 +249,4 @@ private
 
    type Tk_SpinBox is new Tk_Entry with null record;
 
-end Tcl.Tk.Ada.Widgets.TEntry.SpinBox;
+end Tcl.Tk.Ada.Widgets.Tentry.SpinBox;
