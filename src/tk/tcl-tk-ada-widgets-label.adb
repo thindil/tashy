@@ -44,4 +44,14 @@ package body Tcl.Tk.Ada.Widgets.Label is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_Label is
+   begin
+      return New_Label: Tk_Label do
+         New_Label.Interp := Interp;
+         New_Label.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
 end Tcl.Tk.Ada.Widgets.Label;

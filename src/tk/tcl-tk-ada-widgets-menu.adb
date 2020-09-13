@@ -46,6 +46,16 @@ package body Tcl.Tk.Ada.Widgets.Menu is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_Menu is
+   begin
+      return New_Menu: Tk_Menu do
+         New_Menu.Interp := Interp;
+         New_Menu.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
    procedure Activate(MenuWidget: in Tk_Menu'Class; Index: in String) is
    begin
       Execute_Widget_Command(MenuWidget, "activate", Index);

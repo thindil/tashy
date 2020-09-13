@@ -46,6 +46,16 @@ package body Tcl.Tk.Ada.Widgets.Scale is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_Scale is
+   begin
+      return New_Scale: Tk_Scale do
+         New_Scale.Interp := Interp;
+         New_Scale.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
    function Coords
      (ScaleWidget: in Tk_Scale; Value: in String := "") return String is
    begin

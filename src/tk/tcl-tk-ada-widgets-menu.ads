@@ -99,6 +99,26 @@ package Tcl.Tk.Ada.Widgets.Menu is
       Pre => pathName /= "";
      -- ****
 
+     -- ****f* Menu/Get_Widget
+     -- FUNCTION
+     -- Get the existing Tk_Menu widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Tk_Menu widget
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get menu widget with name .mymenu on the current Tcl interpreter
+     -- My_Menu: constant Tk_Menu := Get_Widget(".mymenu");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_Menu;
+     -- ****
+
      -- ****f* Menu/Activate
      -- FUNCTION
      -- Activate the selected item in the selected menu. Previously active

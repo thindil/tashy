@@ -99,6 +99,26 @@ package Tcl.Tk.Ada.Widgets.Label is
       Pre => pathName /= "";
       -- ****
 
+     -- ****f* Label/Get_Widget
+     -- FUNCTION
+     -- Get the existing Tk_Label widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Tk_Label widget
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get label widget with name .mylabel on the current Tcl interpreter
+     -- My_Label: constant Tk_Label := Get_Widget(".mylabel");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_Label;
+     -- ****
+
 private
 
    type Tk_Label is new Tk_Widget with null record;
