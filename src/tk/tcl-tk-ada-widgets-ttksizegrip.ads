@@ -124,6 +124,7 @@ package Tcl.Tk.Ada.Widgets.TtkSizeGrip is
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
       return Ttk_SizeGrip;
+     -- ****
 
 private
 

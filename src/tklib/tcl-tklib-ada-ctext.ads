@@ -138,6 +138,7 @@ package Tcl.Tklib.Ada.Ctext is
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
       return Tklib_Ctext;
+     -- ****
 
      -- ****f* Ctext/Add_Highlight_Class
      -- FUNCTION
