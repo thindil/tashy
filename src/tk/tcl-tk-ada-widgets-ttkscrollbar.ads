@@ -106,6 +106,26 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
       Pre => pathName /= "";
      -- ****
 
+     -- ****f* TtkScrollbar/Get_Widget
+     -- FUNCTION
+     -- Get the existing Ttk_Scrollbar widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Ttk_Scrollbar widget
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get Scrollbar widget with name .myscroll on the current Tcl interpreter
+     -- My_Scroll: constant Ttk_Scrollbar := Get_Widget(".myscroll");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Ttk_Scrollbar;
+     -- ****
+
      -- ****f* TtkScrollbar/Scrollbar_Delta
      -- FUNCTION
      -- Get the fraction change between current Ttk_Scrollbar setting and the

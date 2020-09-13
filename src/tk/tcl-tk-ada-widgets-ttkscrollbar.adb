@@ -47,6 +47,16 @@ package body Tcl.Tk.Ada.Widgets.TtkScrollbar is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Ttk_Scrollbar is
+   begin
+      return New_Scrollbar: Ttk_Scrollbar do
+         New_Scrollbar.Interp := Interp;
+         New_Scrollbar.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
    function Scrollbar_Delta
      (ScrollbarWidget: in Ttk_Scrollbar; DeltaX, DeltaY: in String)
       return String is

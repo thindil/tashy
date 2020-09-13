@@ -101,6 +101,25 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => pathName /= "";
      -- ****
 
+     -- ****f* Canvas/Get_Widget
+     -- FUNCTION
+     -- Get the existing Tk_Canvas widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Tk_Canvas widget
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get canvas widget with name .mycanvas on the current Tcl interpreter
+     -- My_Canvas: constant Tk_Canvas := Get_Widget(".mycanvas");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_Canvas;
+
      -- ****f* Canvas/Add_Tag
      -- FUNCTION
      -- Add tag to the selected items in the Tk_Canvas

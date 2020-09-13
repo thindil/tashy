@@ -101,6 +101,25 @@ package Tcl.Tk.Ada.Image.Photo is
       Pre => (pathName /= "");
       -- ****
 
+     -- ****f* Bitmap/Get_Widget
+     -- FUNCTION
+     -- Get the existing Tk_Photo image
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the image
+     -- Interp   - Tcl interpreter on which the image exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Tk_Photo image
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get photo image with name .myphoto on the current Tcl interpreter
+     -- My_Photo: constant Tk_Photo := Get_Widget(".myphoto");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_Photo;
+
       -- ****f* Photo/Blank
       -- FUNCTION
       -- Blank the image, make it transparent

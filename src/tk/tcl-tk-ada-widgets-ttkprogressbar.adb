@@ -45,6 +45,16 @@ package body Tcl.Tk.Ada.Widgets.TtkProgressBar is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Ttk_ProgressBar is
+   begin
+      return New_ProgressBar: Ttk_ProgressBar do
+         New_ProgressBar.Interp := Interp;
+         New_ProgressBar.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
    procedure Start(Bar: in Ttk_ProgressBar; Interval: in String := "50") is
    begin
       Execute_Widget_Command(Bar, "start", Interval);

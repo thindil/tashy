@@ -45,4 +45,14 @@ package body Tcl.Tk.Ada.Widgets.TtkLabelFrame is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Ttk_LabelFrame is
+   begin
+      return New_Frame: Ttk_LabelFrame do
+         New_Frame.Interp := Interp;
+         New_Frame.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
 end Tcl.Tk.Ada.Widgets.TtkLabelFrame;

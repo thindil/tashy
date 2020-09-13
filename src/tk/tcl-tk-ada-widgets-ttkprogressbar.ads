@@ -106,6 +106,26 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
       Pre => pathName /= "";
       -- ****
 
+     -- ****f* TtkProgressbar/Get_Widget
+     -- FUNCTION
+     -- Get the existing Ttk_Scrollbar widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Ttk_ProgressBar widget
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get progressbar widget with name .myprogress on the current Tcl interpreter
+     -- My_Progress: constant Ttk_ProgressBar := Get_Widget(".myprogress");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Ttk_ProgressBar;
+     -- ****
+
      -- ****f* TtkProgressBar/Start
      -- FUNCTION
      -- Begin autoincrement mode, call Step every Interval miliseconds

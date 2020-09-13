@@ -46,6 +46,16 @@ package body Tcl.Tk.Ada.Widgets.Canvas is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_Canvas is
+   begin
+      return New_Canvas: Tk_Canvas do
+         New_Canvas.Interp := Interp;
+         New_Canvas.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
    procedure Add_Tag
      (CanvasWidget: in Tk_Canvas; Tag, SearchSpec: in String;
       Arguments: in String := "") is

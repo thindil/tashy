@@ -47,6 +47,16 @@ package body Tcl.Tk.Ada.Image.Photo is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_Photo is
+   begin
+      return New_Photo: Tk_Photo do
+         New_Photo.Interp := Interp;
+         New_Photo.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
    procedure Blank(Image: in Tk_Photo) is
    begin
       Execute_Widget_Command(Image, "blank");

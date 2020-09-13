@@ -106,6 +106,26 @@ package Tcl.Tk.Ada.Widgets.TtkLabelFrame is
       Pre => pathName /= "";
       -- ****
 
+     -- ****f* TtkLabelFrame/Get_Widget
+     -- FUNCTION
+     -- Get the existing Ttk_Label widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Ttk_LabelFrame widget
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get frame widget with name .myframe on the current Tcl interpreter
+     -- My_Frame: constant Ttk_LabelFrame := Get_Widget(".myframe");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Ttk_LabelFrame;
+     -- ****
+
 private
 
    type Ttk_LabelFrame is new Tk_Widget with null record;
