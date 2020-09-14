@@ -119,6 +119,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
       return Tk_Canvas;
+     -- ****
 
      -- ****f* Canvas/Add_Tag
      -- FUNCTION

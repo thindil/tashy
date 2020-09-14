@@ -101,7 +101,7 @@ package Tcl.Tk.Ada.Image.Photo is
       Pre => (pathName /= "");
       -- ****
 
-     -- ****f* Bitmap/Get_Widget
+     -- ****f* Photo/Get_Widget
      -- FUNCTION
      -- Get the existing Tk_Photo image
      -- PARAMETERS
@@ -119,6 +119,7 @@ package Tcl.Tk.Ada.Image.Photo is
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
       return Tk_Photo;
+     -- ****
 
       -- ****f* Photo/Blank
       -- FUNCTION

@@ -115,6 +115,7 @@ package Tcl.Tk.Ada.Image.Bitmap is
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
       return Tk_Bitmap;
+     -- ****
 
 private
 
