@@ -6,6 +6,9 @@ of the project.
 
 ## [Unreleased]
 
+### Added
+- Function `Get_Widget` to get existing Tk widgets
+
 ### Changed
 - Updated code documentation
 
