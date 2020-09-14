@@ -124,6 +124,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
       return Tk_PanedWindow;
+     -- ****
 
      -- ****f* PanedWindow/Add
      -- FUNCTION

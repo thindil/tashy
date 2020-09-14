@@ -117,6 +117,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
       return Tk_Text;
+     -- ****
 
      -- ****f* Text/BBox
      -- FUNCTION

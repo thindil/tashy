@@ -110,6 +110,7 @@ package Tcl.Tk.Ada.Widgets.Toplevel is
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
       return Tk_Toplevel;
+     -- ****
 
 private
 
