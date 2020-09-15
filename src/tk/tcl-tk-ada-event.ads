@@ -40,8 +40,6 @@ package Tcl.Tk.Ada.Event is
    -- Interp   - Tcl interpreter on which the event should be added
    -- HISTORY
    -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Trigger virtual event MyEvent when the user press Control+Y keys on
    -- -- default Tcl interpreter
@@ -67,8 +65,6 @@ package Tcl.Tk.Ada.Event is
       -- Interpreter - Tcl interpreter on which Sequence will be removed
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Delete triggering MyEvent when user press Control+Y keys on
       -- -- My_Interpreter Tcl interpreter
@@ -92,8 +88,6 @@ package Tcl.Tk.Ada.Event is
       --             value is empty
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Generate KeyPress event on My_Main_Window widget and set the event
       -- -- x value to 10
@@ -121,8 +115,6 @@ package Tcl.Tk.Ada.Event is
       -- events
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the list of all virtual events at the current Tcl interpreter
       -- Events_List: constant String := Info;
