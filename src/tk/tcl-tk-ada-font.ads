@@ -42,8 +42,6 @@ package Tcl.Tk.Ada.Font is
    -- values. Otherwise return value of the selected attribute
    -- HISTORY
    -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the size of font with name MyFont
    -- Font_Size: constant String := Actual("MyFont", "-size");
@@ -71,8 +69,6 @@ package Tcl.Tk.Ada.Font is
       -- values. Otherwise return value of the selected attribute
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the weight of font with name MyFont on interpreter My_Interpreter
       -- Font_Weight: constant String := Actual(My_Interpreter, "MyFont", "-weight");
@@ -98,8 +94,6 @@ package Tcl.Tk.Ada.Font is
       --            value is current interpreter
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the slant of the font My_Font to roman on interpreter My_Interpreter
       -- Configure("My_Font", "-slant roman", My_Interpreter);
@@ -126,8 +120,6 @@ package Tcl.Tk.Ada.Font is
       -- values. Otherwise return value of the selected option
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the family of the font My_Font on the current interpreter
       -- Font_Family: constant String := Configure("My_Font", "-family");
@@ -151,8 +143,6 @@ package Tcl.Tk.Ada.Font is
       --            Default value is current interpreter
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Create font My_Font with size of 10pts on current interpreter
       -- Create("My_Font", "-size 10");
@@ -180,8 +170,6 @@ package Tcl.Tk.Ada.Font is
       -- name has form "fontx" where x is an integer.
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Create font with random name and slant roman on My_Interpreter interpreter
       -- FontName: constant String := Create(Options => "-slant roman", Interp => My_Interpreter);
@@ -202,8 +190,6 @@ package Tcl.Tk.Ada.Font is
       --            Default value is current interpreter
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Delete font with name My_Font on current interpreter
       -- Delete("My_Font");
@@ -225,8 +211,6 @@ package Tcl.Tk.Ada.Font is
       -- List of case-insensitives names of available fonts
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the list of all available font families
       -- Font_Families: constant String := Families;
@@ -245,8 +229,6 @@ package Tcl.Tk.Ada.Font is
    -- List of case-insensitives names of available fonts
    -- HISTORY
    -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the list of all available font families on My_Window widget's
    -- -- display
@@ -269,8 +251,6 @@ package Tcl.Tk.Ada.Font is
    -- Width in pixels of the selected text with the selected font
    -- HISTORY
    -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the width of text "text" in My_Font on the current interpreter
    -- Font_Width: constant String := Measure("My_Font", "text");
@@ -294,8 +274,6 @@ package Tcl.Tk.Ada.Font is
       -- Width in pixels of the selected text with the selected font
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the width of text "text" in My_Font on My_Window widget
       -- Font_Width: constant String := Measure("My_Font", "text", My_Window);
@@ -319,8 +297,6 @@ package Tcl.Tk.Ada.Font is
       -- Otherwise return value of the selected option
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Check if My_Font is fixed (monospace) font
       -- Is_Monospace: constant String := Metrics("MyFont", "-fixed");
@@ -345,8 +321,6 @@ package Tcl.Tk.Ada.Font is
       -- Otherwise return value of the selected option
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get all the metrics of the font My_Font in My_Window widget
       -- Font_Metrics: constant String := Metrics("My_Font", "", My_Window);
@@ -370,8 +344,6 @@ package Tcl.Tk.Ada.Font is
       -- List with names of all available fonts on the selected Tcl interpreter
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the names of the all available fonts on the current interpreter
       -- Font_Names: constant String := Names;
