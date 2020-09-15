@@ -41,8 +41,6 @@ package Tcl.Tk.Ada.Clipboard is
    --          FILE_NAME. Default value is STRING
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Add text as string to the clipboard on display where My_Main_Window widget is
    -- Append("Data to add to clipboard", My_Main_Window);
@@ -63,8 +61,6 @@ package Tcl.Tk.Ada.Clipboard is
       -- Window - Tk_Widget on which display the clipboard will be claimed
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Clear the clipboard on display where My_Main_Window widget is
       -- Clear(My_Main_Window);
@@ -87,8 +83,6 @@ package Tcl.Tk.Ada.Clipboard is
    -- The content of the selected clipboard
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the content of the clipboard in the string form on display where
    -- -- My_Main_Window is
@@ -113,8 +107,6 @@ package Tcl.Tk.Ada.Clipboard is
       --             and CLIPBOARD. Default value is PRIMARY
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Clear the PRIMARY selection on the My_Main_Window display
       -- Selection_Clear(My_Main_Window);
@@ -145,8 +137,6 @@ package Tcl.Tk.Ada.Clipboard is
       -- The contents of the selected selection
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the PRIMARY selection on My_Main_Window widget display in
       -- -- form of string
@@ -183,8 +173,6 @@ package Tcl.Tk.Ada.Clipboard is
       --             Default value is STRING
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Create a handerl for My_Main_Window widget display PRIMARY
       -- -- selection which runs Tcl puts hello command
@@ -219,8 +207,6 @@ package Tcl.Tk.Ada.Clipboard is
       -- owns the selection.
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the name of owner of PRIMARY selection on My_Main_Window
       -- -- widget display
@@ -250,8 +236,6 @@ package Tcl.Tk.Ada.Clipboard is
       --             PRIMARY and CLIPBOARD. Default value is PRIMARY
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the name of owner of PRIMARY selection to My_Main_Window
       -- -- widget
