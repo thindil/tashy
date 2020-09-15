@@ -42,8 +42,6 @@ package Tcl.Tk.Ada.Dialogs is
    -- Name of selected color or empty string if color was not selected
    -- HISTORY
    -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the name of the color from dialog created with title Color and
    -- -- with main window as a parent
@@ -64,8 +62,6 @@ package Tcl.Tk.Ada.Dialogs is
    -- Name of selected directory or empty string if directory was not selected
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the name of the selected directory which must exists and dialog
    -- -- has title Choose Directory and it parent is a main window
@@ -89,10 +85,10 @@ package Tcl.Tk.Ada.Dialogs is
    -- Buttons - Array with text to show on buttons. One element is one button
    -- RESULT
    -- Index of button which was clicked or -1 if no button was clicked.
+   -- OUTPUT
+   -- Parameter Widget as a newly created dialog
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create dialog from My_Dialog widget with title MyDialog, text My
    -- -- Dialog Text, bitmap question, default first button and buttons
@@ -117,8 +113,6 @@ package Tcl.Tk.Ada.Dialogs is
       -- Options - Tk font chooser options with values to set
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set a main window as parent and title Choose Font for the
       -- -- font chooser
@@ -144,8 +138,6 @@ package Tcl.Tk.Ada.Dialogs is
       -- available options
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Check if fontchooser dialog is visible
       -- if FontChooser_Configure("-visible") then
@@ -164,8 +156,6 @@ package Tcl.Tk.Ada.Dialogs is
    -- Hide the font chooser dialog
    -- HISTORY
    -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Hide fontchooser dialog
    -- FontChooser_Hide;
@@ -180,8 +170,6 @@ package Tcl.Tk.Ada.Dialogs is
    -- Show the font chooser dialog
    -- HISTORY
    -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Show fontchooser dialog
    -- FontChooser_Show;
@@ -201,8 +189,6 @@ package Tcl.Tk.Ada.Dialogs is
    -- Name of selected file or empty string if no file was selected
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the name of the selected file from dialog which parent is set to
    -- -- a main window, title to Open File and initial dir to current directory
@@ -223,8 +209,6 @@ package Tcl.Tk.Ada.Dialogs is
    -- Name of selected file or empty string if no file was selected
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the name of the selected file from dialog which parent is set to
    -- -- a main window, title to Save File As and confirm overwrite an
@@ -246,8 +230,6 @@ package Tcl.Tk.Ada.Dialogs is
    -- Symbolic name of the clicked button
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Show dialog with a main window as parent, text Hello, icon info and
    -- -- button Ok
