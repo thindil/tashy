@@ -37,8 +37,6 @@ package Tcl.Tk.Ada.Busy is
    -- Options - Tk options for busy command
    -- HISTORY
    -- 8.6.2 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Set the My_Main_Window widget busy
    -- Tcl.Tk.Ada.Busy.Busy(My_Main_Window);
@@ -64,8 +62,6 @@ package Tcl.Tk.Ada.Busy is
      -- Value of the selected option of the selected busy window
      -- HISTORY
      -- 8.6.3 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Get the currently set cursor for busy My_Main_Window
      -- Cursor_Name: constant String := Tcl.Tk.Ada.Busy.cget(My_Main_Window, "-cursor");
@@ -85,8 +81,6 @@ package Tcl.Tk.Ada.Busy is
       -- Options - Tk options to set to the selected Tk_Widget
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Change the busy cursor for the My_Main_Window
       -- Tcl.Tk.Ada.Busy.Configure(My_Main_Window, "-cursor watch");
@@ -109,8 +103,6 @@ package Tcl.Tk.Ada.Busy is
       -- values, otherwise return value of the selected option
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the currently set cursor for busy My_Main_Window
       -- Cursor_Name: constant String := Tcl.Tk.Ada.Busy.Configure(My_Main_Window, "-cursor");
@@ -135,8 +127,6 @@ package Tcl.Tk.Ada.Busy is
      -- specified, return only this which match the Pattern.
      -- HISTORY
      -- 8.6.3 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Get names of all busy windows
      -- Busy_Windows: constant String := Tcl.Tk.Ada.Busy.Current;
@@ -156,8 +146,6 @@ package Tcl.Tk.Ada.Busy is
    -- Window - Tk_Widget which will be enabled
    -- HISTORY
    -- 8.6.2 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Enable the widget My_Main_Window
    -- Tcl.Tk.Ada.Busy.Forget(My_Main_Window);
@@ -176,8 +164,6 @@ package Tcl.Tk.Ada.Busy is
    -- 1 if Tk_Widget is busy, otherwise 0
    -- HISTORY
    -- 8.6.3 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the status of widget My_Main_Window
    -- Busy_Status: constant String := Tcl.Tk.Ada.Busy.Status(My_Main_Window);
