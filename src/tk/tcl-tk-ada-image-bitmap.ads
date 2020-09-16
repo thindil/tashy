@@ -50,8 +50,6 @@ package Tcl.Tk.Ada.Image.Bitmap is
    -- Newly created Tk_Bitmap
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create bitmap image with name arrow-up from the code on default interpreter
    -- Arrow_Up: constant Tk_Bitmap := Create("arrow-up", "-data {#define arrowUp_width 7  #define arrowUp_height 4 static char arrowUp_bits[] = { 0x08, 0x1c, 0x3e, 0x7f };}");
@@ -79,8 +77,6 @@ package Tcl.Tk.Ada.Image.Bitmap is
       -- Newly created Tk_Bitmap as the Widgt parameter
       -- HISTORY
       -- 8.6.1 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Create bitmap image with name arrow-down from the code on default interpreter
       -- declare
