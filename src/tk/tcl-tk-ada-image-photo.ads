@@ -50,8 +50,6 @@ package Tcl.Tk.Ada.Image.Photo is
    -- Newly created Tk_Photo
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create image Logo from file mylogo.png on the current Tcl interpreter
    -- My_Logo: constant Tk_Photo := Create("Logo", "-file mylogo.png");
@@ -81,8 +79,6 @@ package Tcl.Tk.Ada.Image.Photo is
       -- Newly created Tk_Photo as parameter Widgt
       -- HISTORY
       -- 8.6.1 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Create image Paint from file mypaint.gif on the current Tcl interpreter
       -- declare
@@ -128,8 +124,6 @@ package Tcl.Tk.Ada.Image.Photo is
       -- Image - Tk_Photo to blank
       -- HISTORY
       -- 8.6.2 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Make transparent image My_Image
       -- Blank(My_Image);
@@ -149,8 +143,6 @@ package Tcl.Tk.Ada.Image.Photo is
    --           empty
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Copy image My_Image to Other_Image and shrink it
    -- Copy(My_Image, Other_Image, "-shrink");
@@ -170,8 +162,6 @@ package Tcl.Tk.Ada.Image.Photo is
    -- Image data, all if options are empty or specified option data
    -- HISTORY
    -- 8.6.2 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the data of the My_Image from (0,5) point to (10,10)
    -- ImageData: constant String := Data(My_Image, "0", "5", "10", "10");
@@ -192,8 +182,6 @@ package Tcl.Tk.Ada.Image.Photo is
    -- Three values of colors red, green, blue from 0 to 255
    -- HISTORY
    -- 8.6.2 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the color of the pixel at (1, 4) of the My_Image
    -- PixelColor: constant String := Get(My_Image, "1", "4");
@@ -214,8 +202,6 @@ package Tcl.Tk.Ada.Image.Photo is
       --           Default value is empty
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set all pixels of the My_Image to red color
       -- Put(My_Image, "red");
@@ -236,8 +222,6 @@ package Tcl.Tk.Ada.Image.Photo is
       -- Options  - Additional options for read data. Default value is empty
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Read file myimage.png and put it to the My_Image
       -- Read(My_Image, "myimage.png");
@@ -258,8 +242,6 @@ package Tcl.Tk.Ada.Image.Photo is
       -- Image - Tk_Photo to recalculate
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Redither My_Image
       -- Redither(My_Image);
@@ -280,8 +262,6 @@ package Tcl.Tk.Ada.Image.Photo is
    -- If pixel is transparent return true, otherwise false
    -- HISTORY
    -- 8.6.3 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the transparency of the pixel (5, 12) at My_Image
    -- Transparency: constant String := Transparency_Get(My_Image, "5", "12");
@@ -304,8 +284,6 @@ package Tcl.Tk.Ada.Image.Photo is
       -- HISTORY
       -- 8.6.3 - Added
       -- 8.6.8 - Fixed setting transparency
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Enable transparency for pixel (7, 12) in My_Image
       -- Transparency_Set(My_Image, "7", "12", "true");
@@ -326,8 +304,6 @@ package Tcl.Tk.Ada.Image.Photo is
       --            value is empty
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Write My_Image to the "myimage.png" file in grayscale
       -- Write(My_Image, "myimage.png", "-grayscale");
