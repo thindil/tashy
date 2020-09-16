@@ -37,8 +37,6 @@ package Tcl.Tk.Ada.Grid is
    -- Options - Option to grid action. Default value is empty
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Add My_Label widget to the grid with default options
    -- Tcl.Tk.Ada.Grid.Grid(My_Label);
@@ -58,8 +56,6 @@ package Tcl.Tk.Ada.Grid is
    -- Direction - Direction in which anchor of the grid should be set.
    -- HISTORY
    -- 8.6.2 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Set the anchor to north for My_Main_Window widget
    -- Grid_Anchor(My_Main_Window, "n");
@@ -79,8 +75,6 @@ package Tcl.Tk.Ada.Grid is
       -- A direction in which the grid anchor is set
       -- HISTORY
       -- 8.6.2 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the anchor for the My_Frame widget
       -- Anchor: constant String := Grid_Anchor(My_Frame);
@@ -109,8 +103,6 @@ package Tcl.Tk.Ada.Grid is
    -- parameters are specified, return box for selected cells.
    -- HISTORY
    -- 8.6.2 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the bounding box for the whole My_Frame widget grid
    -- Coordinates: constant String := Grid_BBox(My_Frame);
@@ -133,8 +125,6 @@ package Tcl.Tk.Ada.Grid is
       -- Options - Tk options for selected Slave
       -- HISTORY
       -- 8.6.1 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the weight of the column to 3 for My_Frame grid and My_Label widget
       -- Column_Configure(My_Frame, My_Label, "-weight 3");
@@ -156,8 +146,6 @@ package Tcl.Tk.Ada.Grid is
       -- String with column configuration options for selected Slave widget
       -- HISTORY
       -- 8.6.1 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the all column options for My_Frame grid and My_Entry widget
       -- Options: constant String := Column_Configure(My_Frame, My_Entry);
@@ -175,8 +163,6 @@ package Tcl.Tk.Ada.Grid is
    -- Options - Grid options for the slave
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Insert My_Label slave to second column
    -- Grid_Configure(My_Label, "-column 1");
@@ -195,8 +181,6 @@ package Tcl.Tk.Ada.Grid is
    -- Slave - Tk_Widget to remove
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Remove (hide) My_Label widget from UI
    -- Grid_Forget(My_Label);
@@ -216,8 +200,6 @@ package Tcl.Tk.Ada.Grid is
    -- state of the specified Slave window.
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get information about widget My_Label's grid configuration
    -- Configuration: constant String := Grid_Info(My_Label);
@@ -239,8 +221,6 @@ package Tcl.Tk.Ada.Grid is
    -- or above the selected grid, return -1
    -- HISTORY
    -- 8.6.2 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the column and row number for point X=23, Y=67 in grid My_Main_Window
    -- Location: constant String := Grid_Location(My_Main_Window, "23", "67");
@@ -261,8 +241,6 @@ package Tcl.Tk.Ada.Grid is
       --          false disable propagation.
       -- HISTORY
       -- 8.6.2 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Enable propagation for the grid My_Main_Window
       -- Grid_Propagate(My_Main_Window, "on");
@@ -284,8 +262,6 @@ package Tcl.Tk.Ada.Grid is
       -- 0 if propagation is disabled, otherwise 1
       -- HISTORY
       -- 8.6.2 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the propagation state of grid My_Main_Window
       -- Propagation: constant String := Grid_Propagate(My_Main_Window);
@@ -303,8 +279,6 @@ package Tcl.Tk.Ada.Grid is
    -- Slave - Tk_Widget to remove
    -- HISTORY
    -- 8.6.2 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Remove My_Label from grid
    -- Grid_Remove(My_Label);
@@ -323,8 +297,6 @@ package Tcl.Tk.Ada.Grid is
    -- Options - Tk options for selected Slave
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Set minimal size of My_Label widget's row in My_Main_Window grid to 20 pixels
    -- Row_Configure(My_Main_Window, My_Label, "-minsize 20");
@@ -346,8 +318,6 @@ package Tcl.Tk.Ada.Grid is
       -- String with row configuration options for selected Slave widget
       -- HISTORY
       -- 8.6.1 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get all configuration options of My_Label widget's row in My_Main_Window grid
       -- Options: constant String := Row_Configure(My_Main_Window, My_Label);
@@ -367,8 +337,6 @@ package Tcl.Tk.Ada.Grid is
    -- selected grid
    -- HISTORY
    -- 8.6.2 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the size of My_Main_Window grid
    -- Size: constant String := Grid_Size(My_Main_Window);
@@ -391,8 +359,6 @@ package Tcl.Tk.Ada.Grid is
    -- then return slaves in the selected column
    -- HISTORY
    -- 8.6.2 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the list of slaves in My_Main_Window first row
    -- Slaves: constant String := Grid_Slaves(My_Main_Window, "-row 0");
