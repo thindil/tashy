@@ -40,8 +40,6 @@ package Tcl.Tk.Ada.Option is
    --             interactive
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Add option *Button.foreground with value red on current Tcl interpreter
    -- Add(Get_Context, "*Button.foreground", "red");
@@ -61,8 +59,6 @@ package Tcl.Tk.Ada.Option is
       -- Interp - Tcl interpreter on which option's database will be cleared
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Clear the options database on My_Interpreter interpreter
       -- Clear(My_Interpreter);
@@ -83,8 +79,6 @@ package Tcl.Tk.Ada.Option is
    -- The value of the selected option or {} if no option was found
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the returnCommand value of the class Command of the window My_Window
    -- Value: constant String := Get(My_Window, "returnValue", "Command");
@@ -106,8 +100,6 @@ package Tcl.Tk.Ada.Option is
       --             is interactive
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Read the file .Xdefaults at userDefault priority on My_Interpreter interpreter
       -- Read_File(My_Interpreter, ".Xdefaults", "userDefault");
