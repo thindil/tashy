@@ -38,8 +38,6 @@ package Tcl.Tk.Ada.Image is
    -- Empty parameter Img
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Delete image My_Image
    -- Delete(My_Image);
@@ -58,8 +56,6 @@ package Tcl.Tk.Ada.Image is
    -- The selected image height in pixels
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the height of the My_Image image
    -- Image_Height: constant String := Height(My_Image);
@@ -78,8 +74,6 @@ package Tcl.Tk.Ada.Image is
    -- The selected image type
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the type of image My_Image
    -- My_Image_Type: constant String := Image_Type(My_Image);
@@ -98,8 +92,6 @@ package Tcl.Tk.Ada.Image is
    -- 0 if image is not used, otherwise 1
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Check if My_Image is in use
    -- Is_Used: constant String := Inuse(My_Image);
@@ -116,8 +108,6 @@ package Tcl.Tk.Ada.Image is
    -- List of names of all existing images or {} if no images exists
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the all existing images names
    -- Images_List: constant String := Names;
@@ -134,8 +124,6 @@ package Tcl.Tk.Ada.Image is
    -- List of types of images available
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the all available types of images
    -- Images_Types: constant String := Types;
@@ -154,8 +142,6 @@ package Tcl.Tk.Ada.Image is
    -- The selected image width in pixels
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the width of My_Image image
    -- Image_Width: constant String := Width(My_Image);
