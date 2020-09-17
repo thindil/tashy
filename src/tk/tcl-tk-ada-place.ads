@@ -37,8 +37,6 @@ package Tcl.Tk.Ada.Place is
    -- Options - Option to place action
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Add My_Entry widget at point (12, 32)
    -- Place.Place(My_Entry, "-x 12 -y 32");
@@ -56,8 +54,6 @@ package Tcl.Tk.Ada.Place is
    -- Options - Place options for the slave
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Set My_Label widget width to 20 pixels
    -- Place_Configure(My_Label, "-width 20");
@@ -76,8 +72,6 @@ package Tcl.Tk.Ada.Place is
    -- Slave - Tk_Widget to remove
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Remove (hide) My_Label widget from UI
    -- Place_Forget(My_Label);
@@ -97,8 +91,6 @@ package Tcl.Tk.Ada.Place is
    -- state of the specified Slave window.
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the place configuration of the My_Label widget
    -- Place_Options: constant String := Place_Info(My_Label);
@@ -118,8 +110,6 @@ package Tcl.Tk.Ada.Place is
    -- Master window.
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the list of slaves for the My_Main_Window
    -- Slaves: constant String := Place_Slaves(My_Main_Window)
