@@ -48,8 +48,6 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
    -- Newly created Tk_RadioButton
    -- HISTORY
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new button with pathname .mybutton and label select me
    -- My_Button: constant Tk_RadioButton := Create(".mybutton", "-text {select me}");
@@ -79,8 +77,6 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
      -- Newly created Tk_RadioButton as parameter Widgt
      -- HISTORY
      -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create radiobutton My_Button with pathname .mybutton and label click me on the current Tcl interpreter
      -- declare
@@ -126,8 +122,6 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
      -- Buttn - Tk_RadioButton to deselect
      -- HISTORY
      -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Deselect My_Radiobutton
      -- Deselect(My_Radiobutton);
@@ -144,8 +138,6 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
    -- Buttn - Tk_RadioButton to select
    -- HISTORY
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Select My_Radiobutton
    -- Tk_Select(My_Radiobutton);
@@ -162,8 +154,6 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
    -- Buttn - Tk_RadioButton to toggle
    -- HISTORY
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Toggle My_Radiobutton
    -- Toggle(My_Radiobutton);
