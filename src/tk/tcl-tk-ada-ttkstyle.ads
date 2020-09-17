@@ -36,8 +36,6 @@ package Tcl.Tk.Ada.TtkStyle is
    -- Options      - Additional options for the created element
    -- HISTORY
    -- 8.6.3 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new element with name My_Image and type of image from image named someimage
    -- Element_Create("My_Image", "image", "someimage");
@@ -54,8 +52,6 @@ package Tcl.Tk.Ada.TtkStyle is
       -- Return list of elements in the current theme
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the list of available elements
       -- Names: constant String := Element_Names;
@@ -74,8 +70,7 @@ package Tcl.Tk.Ada.TtkStyle is
    -- List of element options
    -- HISTORY
    -- 8.6.3 - Added
-   -- TODO
-   -- Replace it with higher level of binding
+   -- EXAMPLE
    -- -- Get the options for the element named Entry
    -- Options: constant String := Element_Options("Entry");
    -- COMMANDS
@@ -93,8 +88,6 @@ package Tcl.Tk.Ada.TtkStyle is
       -- Options - Options for the style
       -- HISTORY
       -- 8.6.1 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set padding for TButton to 4px in each direction
       -- Style_Configure("TButton", "-padding {4 4 4 4}");
@@ -113,8 +106,6 @@ package Tcl.Tk.Ada.TtkStyle is
       -- Options - Options for the layout
       -- HISTORY
       -- 8.6.2 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Define layout for the TButton in the current theme
       -- Style_Layout("TButton", "{Button.button -children { Button.padding -children { Button.label -side left -expand true } } }");
@@ -134,8 +125,6 @@ package Tcl.Tk.Ada.TtkStyle is
       -- String with layout setting for the selected style
       -- HISTORY
       -- 8.6.2 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the layout for the Toolbutton in the current theme
       -- Layout: constant String := Style_Layout("Toolbutton");
@@ -160,8 +149,6 @@ package Tcl.Tk.Ada.TtkStyle is
       -- found, return value of Default parameter.
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the font (Tcl name) used by the main window
       -- Font_Name: constant String := Style_Lookup(".", "-font");
@@ -182,8 +169,6 @@ package Tcl.Tk.Ada.TtkStyle is
       -- Options - Options for the widget
       -- HISTORY
       -- 8.6.2 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the background of the TPanedwindow when mouse is hovering about to black
       -- Style_Map("TPanedwindow", "-background [list hover black]");
@@ -201,8 +186,6 @@ package Tcl.Tk.Ada.TtkStyle is
       -- String with list of all available Ttk themes
       -- HISTORY
       -- 8.6.1 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the list of available themes
       -- Themes: constant String := Theme_Names;
@@ -219,8 +202,6 @@ package Tcl.Tk.Ada.TtkStyle is
    -- Name of Ttk theme to set
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Use theme clam as the current theme
    -- Theme_Use("clam");
@@ -238,8 +219,6 @@ package Tcl.Tk.Ada.TtkStyle is
       -- Name of currently used Ttk theme
       -- HISTORY
       -- 8.6.1 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the name of the current theme
       -- Current_Theme: constant String := Theme_Use;
