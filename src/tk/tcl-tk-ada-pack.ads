@@ -37,8 +37,6 @@ package Tcl.Tk.Ada.Pack is
    -- Options - Option to pack action
    -- HISTORY
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Add My_Entry widget and strech it in all directions
    -- Pack.Pack(My_Entry, "-fill both");
@@ -56,8 +54,6 @@ package Tcl.Tk.Ada.Pack is
    -- Options - Pack options for the slave
    -- HISTORY
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Put My_Label widget after .mytext widget
    -- Pack_Configure(My_Label, "-after .mytext");
@@ -76,8 +72,6 @@ package Tcl.Tk.Ada.Pack is
    -- Slave - Tk_Widget to remove
    -- HISTORY
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Remove (hide) My_Label widget from UI
    -- Pack_Forget(My_Label);
@@ -97,8 +91,6 @@ package Tcl.Tk.Ada.Pack is
    -- state of the specified Slave window.
    -- HISTORY
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the pack configuration of the My_Label widget
    -- Pack_Options: constant String := Pack_Info(My_Label);
@@ -116,8 +108,6 @@ package Tcl.Tk.Ada.Pack is
    -- State  - If true, enable propagation, false disable it
    -- HISTORY
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Enable propagation on My_Main_Window pack
    -- Pack_Propagate(My_Main_Window, "true");
@@ -136,8 +126,6 @@ package Tcl.Tk.Ada.Pack is
    -- Returns state of propagation in the specified Master window.
    -- HISTORY
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the propagation state of the My_Main_Window pack
    -- Propagation: constant String := Pack_Propagate(My_Main_Window);
@@ -157,8 +145,6 @@ package Tcl.Tk.Ada.Pack is
    -- Master window.
    -- HISTORY
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the list of slaves for the My_Main_Window pack
    -- Slaves: constant String := Pack_Slaves(My_Main_Window)
