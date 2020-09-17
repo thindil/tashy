@@ -48,8 +48,6 @@ package Tcl.Tk.Ada.Widgets.Button.CheckButton is
    -- Newly created Tk_CheckButton
    -- HISTORY
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new button with pathname .mybutton and label select me
    -- My_Button: constant Tk_CheckButton := Create(".mybutton", "-text {select me}");
@@ -79,8 +77,6 @@ package Tcl.Tk.Ada.Widgets.Button.CheckButton is
      -- Newly created Tk_CheckButton as parameter Widgt
      -- HISTORY
      -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create checkbutton My_Button with pathname .mybutton and label click me on the current Tcl interpreter
      -- declare
@@ -106,8 +102,6 @@ package Tcl.Tk.Ada.Widgets.Button.CheckButton is
      -- Buttn - Tk_CheckButton to deselect
      -- HISTORY
      -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Deselect My_Checkbutton
      -- Deselect(My_Checkbutton);
@@ -124,8 +118,6 @@ package Tcl.Tk.Ada.Widgets.Button.CheckButton is
    -- Buttn - Tk_CheckButton to select
    -- HISTORY
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Select My_Checkbutton
    -- Tk_Select(My_Checkbutton);
@@ -142,8 +134,6 @@ package Tcl.Tk.Ada.Widgets.Button.CheckButton is
    -- Buttn - Tk_CheckButton to toggle
    -- HISTORY
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Toggle My_Checkbutton
    -- Toggle(My_Checkbutton);
