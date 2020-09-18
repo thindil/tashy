@@ -50,8 +50,6 @@ package Tcl.Tk.Ada.Widgets.Frame is
    -- Newly created Tk_Frame
    -- HISTORY
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new frame with pathname .myframe
    -- My_Frame: constant Tk_Frame := Create(".myframe");
@@ -79,8 +77,6 @@ package Tcl.Tk.Ada.Widgets.Frame is
      --            Default value is null.
      -- HISTORY
      -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create frame My_Frame with pathname .myframe and with black backgroud on the current Tcl interpreter
      -- declare
