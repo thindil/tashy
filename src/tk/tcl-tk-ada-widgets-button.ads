@@ -50,8 +50,6 @@ package Tcl.Tk.Ada.Widgets.Button is
    -- Newly created Tk_Button
    -- HISTORY
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new button with pathname .mybutton and label select me
    -- My_Button: constant Tk_Button := Create(".mybutton", "-text {select me}");
@@ -81,8 +79,6 @@ package Tcl.Tk.Ada.Widgets.Button is
      -- Newly created Tk_Button as parameter Widgt
      -- HISTORY
      -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create button My_Button with pathname .mybutton and label click me on the current Tcl interpreter
      -- declare
@@ -128,8 +124,6 @@ package Tcl.Tk.Ada.Widgets.Button is
      -- Buttn - Tk_Button to flash
      -- HISTORY
      -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-     -- TODO
-     -- Replace it with higher level of binding
      -- ExAMPLE
      -- -- Flash the button My_Button
      -- Flash(My_Button);
@@ -149,8 +143,6 @@ package Tcl.Tk.Ada.Widgets.Button is
    -- Value returned by the Tcl command associated with the button
    -- HISTORY
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Invoke the Tcl command associated with My_Button
    -- Result: constant String := Invoke(My_Button);
