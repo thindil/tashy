@@ -50,8 +50,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    -- Newly created Tk_Canvas
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new canvas with pathname .mycanvas
    -- My_Canvas: constant Tk_Canvas := Create(".mycanvas");
@@ -81,8 +79,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
      -- Newly created Tk_Canvas as parameter Widgt
      -- HISTORY
      -- 8.6.1 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create canvas My_Canvas with pathname .mycanvas and with black background on the current Tcl interpreter
      -- declare
@@ -130,8 +126,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
      -- Arguments  - Arguments for the SearchSpec. Default value is empty
      -- HISTORY
      -- 8.6.3 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Add tag mytag to the all items below item taged othertag in the My_Canvas canvas
      -- Add_Tag(My_Canvas, "mytag", "below", "othertag");
@@ -160,8 +154,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- of bounding box.
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the bouding box for the whole My_Canvas canvas
       -- Bounding_Box: constant String := BBox(My_Canvas, "all");
@@ -184,8 +176,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- Command      - Tcl command which will be bound
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Bind the command exit to the tag mytag in My_Canvas at left mouse button click
       -- Bind(My_Canvas, "mytag", "<1>", "exit");
@@ -213,8 +203,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- its sequence
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the all binding associated with the mytag tag in the My_Canvas canvas
       -- Bindings: constant String := Bind(My_Canvas, "mytag");
@@ -242,8 +230,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- Canvas X coordinate for the selected screen X coordinate
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the X coordinate for screen X coordinate 14 at My_Canvas canvas
       -- X: constant String := CanvasX(My_Canvas, "14");
@@ -269,8 +255,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- Canvas Y coordinate for the selected screen Y coordinate
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the Y coordinate for screen Y coordinate 23 at My_Canvas canvas
       -- Y: constant String := CanvasX(My_Canvas, "23");
@@ -294,8 +278,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- Coordinates  - New coordinates for the item
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the coordinate for mytag item in My_Canvas canvas to (23, 56)
       -- Coords(My_Canvas, "mytag", " 23 56");
@@ -319,8 +301,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- List with coordinates of the selected items
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the coordinates of the mytag tag in My_Canvas canvas
       -- Coorditates: constant String := Coords(My_Canvas, "mytag");
@@ -343,8 +323,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- Options    - Tk options to create command
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Add button My_Button as a window to My_Canvas canvas at (0,0) point
       -- Canvas_Create(My_Canvas, "window", "0 0 -window " & Widget_Image(My_Button));
@@ -370,8 +348,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- Id of the newly created window
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Add button My_Button as a window to My_Canvas canvas at (0,0) point and get it Id
       -- Button_Id := constant Sttring := Canvas_Create(My_Canvas, "window", "0 0 -window " & Widget_Image(My_Button));
@@ -398,8 +374,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       --                Default value is empty
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Delete characters in tag mytag from first to 10th in My_Canvas canvas
       -- Dchars(My_Canvas, "mytag", "0", "9");
@@ -420,8 +394,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- TagOrId      - Tag or Id of the items to delete
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Delete item tagged "mytag" from the My_Canvas canvas
       -- Delete(My_Canvas, "mytag");
@@ -442,8 +414,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       --                TagOrId. Default value is empty
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Delete tag "mytag" from the all items in the My_Canvas canvas
       -- DTag(My_Canvas, "all", "mytag");
@@ -470,8 +440,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- List of items in the stacking order, the lowest item first
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Find items above item tagged as mytag in the My_Canvas canvas
       -- Items: constant String := Find(My_Canvas, "above", "mytag");
@@ -495,8 +463,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       --                Default value is empty
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the focus in the My_Canvas canvas to item tagged "mytag"
       -- Focus(My_Canvas, "mytag");
@@ -520,8 +486,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    -- any tag, return empty string
    -- HISTORY
    -- 8.6.3 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the list of tags associated with the item tagged "mytag" in the canvas My_Canvas
    -- Tags: constant String := Get_Tags(My_Canvas, "mytag");
@@ -546,8 +510,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       --                will be insererted
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the insertion cursor to start in the item tagged mytag in canvas My_Canvas
       -- ICursor(My_Canvas, "mytag", "0");
@@ -571,8 +533,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- Y            - A new Y coordinate
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Move first index in the mytag tagged item in My_Canvas canvas to position (15, 89)
       -- IMove(My_Canvas, "mytag", "0", "15", "89");
@@ -596,8 +556,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- Numerical index of the selected Index in the selected items
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the index of the first index in mytag tagged item in My_Canvas canvas
       -- My_Index: constant String := Index(My_Canvas, "mytag", "0");
@@ -622,8 +580,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- Item         - Text to insert to the selected elements
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Insert hello world text at 10th character to all items tagged mytag in My_Canvas canvas
       -- Insert(My_Canvas, "mytag", "9", "hello world");
@@ -647,8 +603,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- refers to more than one item, only first item is checked.
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the text from the item tagged mytag in My_Canvas canvas
       -- Text: constant String := Item_Cget(My_Canvas, "mytag", "-text");
@@ -670,8 +624,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- Options      - Options to modify with values for them.
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the text to hello world in item tagged mytag in My_Canvas canvas
       -- Item_Configure(My_Canvas, "mytag", "-text {hello world}");
@@ -699,8 +651,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- selected item
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the text of the item tagged mytag in My_Canvas canvas
       -- Text: constant String := Item_Configure(My_Canvas, "mytag", "-text");
@@ -727,8 +677,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       --                be moved. Default value is empty
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Move items tagged mytag in My_Canvas canvas
       -- Lower(My_Canvas, "mytag");
@@ -751,8 +699,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- YAmount      - Amount to add to Y coordinate of the items
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Move items tagged mytag in My_Canvas canvas by 10px in X and 14px in Y
       -- Move(My_Canvas, "mytag", "10", "14");
@@ -774,8 +720,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- YPos         - A new Y coordinate of the items
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Move all items tagged mytag in My_Canvas to point (24, 42)
       -- MoveTo(My_Canvas, "mytag", "24", "42");
@@ -799,8 +743,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- representation was selected to write to file
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Save all the My_Canvas canvas to the file mycanvas.ps
       -- Postscript(My_Canvas, "-file mycanvas.ps");
@@ -824,8 +766,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       --                be moved. Default value is empty
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Move items tagged with mytag higher in My_Canvas canvas
       -- Canvas_Raise(My_Canvas, "mytag");
@@ -852,8 +792,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- Text         - Text to replace
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Replace text in items tagged mytag between first and third character with text hello world in My_Canvas
       -- Rchars(My_Canvas, "mytag", "0", "2", "{hello world}");
@@ -879,8 +817,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- YScale       - Y factor to scale points. 1.0 mean no scaling
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Scale all items tagged mytag in My_Canvas canvas from point (34, 54) by 0.5 in both dimensions
       -- Scale(My_Canvas, "mytag", "34", "54", "0.5", "0.5");
@@ -904,8 +840,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- Index        - New index to which selection will be done in the item
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Resize selection to 10th index in item tagged mytag in My_Canvas canvas
       -- Select_Adjust(My_Canvas, "mytag", "9");
@@ -924,8 +858,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- CanvasWidget - Tk_Canvas in which selection will be cleared
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Clear selection in My_Canvas canvas
       -- Select_Clear(My_Canvas);
@@ -946,8 +878,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    -- Index        - Index of character before which the selection will be set
    -- HISTORY
    -- 8.6.3 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Set the selection anchor point at first index in item tagged mytag in My_Canvas canvas
    -- Select_From(My_Canvas, "mytag", "0");
@@ -968,8 +898,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- Id of the selected item or {} if no item selected in the CanvasWidget
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the Id of the selected item in My_Canvas canvas
       -- Item_Id: constant String := Select_Item(My_Canvas);
@@ -990,8 +918,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    -- Index        - Index of character which will be added to the selection
    -- HISTORY
    -- 8.6.3 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Set the end of the selection to 10th index in mytag tagged item in My_Canvas canvas
    -- Select_To(My_Canvas, "mytag", "9");
@@ -1015,8 +941,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- return {}
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the type of the item tagged mytag in My_Canvas canvas
       -- Item_Type: constant String := Canvas_Type(My_Canvas, "mytag");
@@ -1039,8 +963,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- fraction of the CanvasWidget which is visible.
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the horizontal fraction of the My_Canvas canvas
       -- Horizontal_Fraction: constant String := XView(My_Canvas);
@@ -1062,8 +984,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    --                and 1
    -- HISTORY
    -- 8.6.3 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Show the first half of the canvas My_Canvas
    -- Xview_Move_To(My_Canvas, "0.5");
@@ -1087,8 +1007,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- What         - Type of amount to move. Can be "units" or "pages"
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Move the view in the My_Canvas canvas by 10 units to right
       -- Xview_Scroll(My_Canvas, "10", "units");
@@ -1113,8 +1031,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- fraction of the CanvasWidget which is visible.
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the vertical fraction of the My_Canvas canvas
       -- Vertical_Fraction: constant String := YView(My_Canvas);
@@ -1136,8 +1052,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    --                and 1
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Show the first half of the canvas My_Canvas
    -- Yview_Move_To(My_Canvas, "0.5");
@@ -1161,8 +1075,6 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- What         - Type of amount to move. Can be "units" or "pages"
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Move the view in the My_Canvas canvas by 10 units to top
       -- Yview_Scroll(My_Canvas, "-10", "units");
