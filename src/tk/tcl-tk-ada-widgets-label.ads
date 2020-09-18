@@ -50,8 +50,6 @@ package Tcl.Tk.Ada.Widgets.Label is
    -- Newly created Tk_Label
    -- HISTORY
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new label with pathname .mylabel with text hello world
    -- My_Label: constant Tk_Label := Create(".mylabel", "-text {hello world}");
@@ -79,8 +77,6 @@ package Tcl.Tk.Ada.Widgets.Label is
      --            Default value is null.
      -- HISTORY
      -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create label My_Label with pathname .mylabel and with text hello world on the current Tcl interpreter
      -- declare
