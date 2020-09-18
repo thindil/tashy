@@ -50,8 +50,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    -- Newly created Tk_ListBox
    -- HISTORY
    -- 8.6.2 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new listbox with pathname .mylistbox
    -- My_Listbox: constant Tk_ListBox := Create(".mylistbox");
@@ -79,8 +77,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
      --            Default value is null.
      -- HISTORY
      -- 8.6.2 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create listbox My_Listbox with pathname .mylistbox and with black background on the current Tcl interpreter
      -- declare
@@ -127,8 +123,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
      -- Index         - Index of element to set as active
      -- HISTORY
      -- 8.6.4 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Set second element as active in My_Listbox
      -- Activate(My_Listbox, "1");
@@ -153,8 +147,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- of bounding box.
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the bounding box of My_Listbox listbox for third element
       -- Bounding_Box: constant String := BBox(My_Listbox, "2");
@@ -176,8 +168,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- that are currently selected or {} if no elements selected.
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the current seelction in My_Listbox listbox
       -- Selection: constant String := CurSelection(My_Listbox);
@@ -197,8 +187,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    --                 element will be deleted. Default value is empty
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Delete second item from My_Listbox listbox
    -- Delete(My_Listbox, "1");
@@ -224,8 +212,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- no elements are in range, return {}
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the content of the second and third element in My_Listbox listbox
       -- Elements: constant String := Get(My_Listbox, "1", "2");
@@ -249,8 +235,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- return count of numbers of the elements in the ListboxWidget
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the index of the active element in My_Listbox listbox
       -- ActiveIndex: constant String := Index(My_Listbox, "active");
@@ -271,8 +255,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- Elements      - Elements to add. Default value is empty
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Insert elements one and two elements at the end of the My_Listbox listbox
       -- Insert(My_Listbox, "end", "one two");
@@ -295,8 +277,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- Option        - Tk option to get
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the background color of the second element in My_Listbox listbox
       -- Options := constant String := Item_Cget(My_Listbox, "1", "-background");
@@ -318,8 +298,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- Options       - Options to modify.
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the background color of the third item in the My_Listbox listbox to green
       -- Item_Configure(My_Listbox, "2", "-background green");
@@ -348,8 +326,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- selected item
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the all options of the last element in the My_Listbox listbox
       -- Options: constant String := Item_Configure(My_Listbox, "end");
@@ -374,8 +350,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- Index of the nearest to Y visible element
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the index of the element at 10px in My_Listbox listbox
       -- Index := constant String := Nearest(My_Listbox, "10");
@@ -396,8 +370,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- Y             - Y coordinate of the mark to set
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the starting point for scan at point (10, 24) in My_Listbox listbox
       -- Scan_Mark(My_Listbox, "10", "24");
@@ -419,8 +391,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- Y             - Y coordinate which difference will be computed
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Adjust the view of My_Listbox listbox to point (12, 84)
       -- Scan_DragTo(My_Listbox, "12", "84");
@@ -441,8 +411,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- Index         - Index of the element to make visible
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Make visible third element in My_Listbox listbox
       -- See(My_Listbox, "2");
@@ -464,8 +432,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       --                 closest item
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the selection anchor to the active element at the My_Listbox listbox
       -- Selection_Anchor(My_Listbox, "active");
@@ -487,8 +453,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       --                 deselect only one element. Default value is empty
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Deselect first element in My_Listbox listbox
       -- Selection_Clear(My_Listbox, "0");
@@ -512,8 +476,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- 1 if the selected element is in the selection, otherwise 0
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Check if second element in My_Listbox listbox is selected
       -- Is_Selected: constant String := Selection_Includes(My_Listbox, "1");
@@ -536,8 +498,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       --                 one element. Default value is empty
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Select all elements in the My_Listbox listbox
       -- Selection_Set(My_Listbox, "0", "end");
@@ -559,8 +519,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- Amount of the elements in the ListboxWidget
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the amount of the elements in the My_Listbox listbox
       -- Elements: constant String := Size(My_Listbox);
@@ -581,8 +539,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    -- fraction of the ListboxWidget which is visible.
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the horizontal fraction of the My_Listbox listbox
    -- Horizontal_Fraction: constant String := XView(My_Listbox);
@@ -604,8 +560,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    --                 Character position starts from 0
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Adjust the view in the My_Listbox listbox to second character index
    -- XView(My_Listbox, "1");
@@ -628,8 +582,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       --                 and 1
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Show the first half of the listbox My_Listbox
       -- Xview_Move_To(My_Listbox, "0.5");
@@ -653,8 +605,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- What          - Type of amount to move. Can be "units" or "pages"
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Move the view in the My_Listbox listbox by 10 units to right
       -- Xview_Scroll(My_Listbox, "10", "units");
@@ -679,8 +629,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- fraction of the ListboxWidget which is visible.
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the vertical fraction of the My_Listbox listbox
       -- Vertical_Fraction: constant String := YView(My_Listbox);
@@ -702,8 +650,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    --                 Element position starts from 0
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Adjust the view in the My_Listbox listbox to show the first element
    -- YView(My_Listbox, "0");
@@ -726,8 +672,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       --                 and 1
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Show the first half of the listbox My_Listbox
       -- Yview_Move_To(My_Listbox, "0.5");
@@ -751,8 +695,6 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- What          - Type of amount to move. Can be "units" or "pages"
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Move the view in the My_Listbox listbox by 10 units to top
       -- Yview_Scroll(My_Listbox, "-10", "units");
