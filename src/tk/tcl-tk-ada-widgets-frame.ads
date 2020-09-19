@@ -75,6 +75,8 @@ package Tcl.Tk.Ada.Widgets.Frame is
      -- Interp   - Tcl interpreter to which the widget will be created. If null,
      --            the widget will be created in the "contextual" interpreter.
      --            Default value is null.
+     -- OUTPUT
+     -- Newly created Tk_Frame as parameter Widgt
      -- HISTORY
      -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
      -- EXAMPLE
