@@ -84,10 +84,10 @@ package Tcl.Tk.Ada.Widgets.MenuButton is
      -- Interp   - Tcl interpreter to which the widget will be created. If null,
      --            the widget will be created in the "contextual" interpreter.
      --            Default value is null.
+     -- OUTPUT
+     -- Newly created Tk_MenuButton as parameter Widgt
      -- HISTORY
      -- 8.6.1 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create menubutton My_Menu_Button with pathname .mymenubutton and label click me on the current Tcl interpreter
      -- declare
