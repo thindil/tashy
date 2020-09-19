@@ -50,8 +50,6 @@ package Tcl.Tk.Ada.Widgets.Menu is
    -- Newly created Tk_Menu
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new menu with pathname .mymenu
    -- My_Menu: constant Tk_Menu := Create(".mymenu");
@@ -77,10 +75,10 @@ package Tcl.Tk.Ada.Widgets.Menu is
      -- Interp   - Tcl interpreter to which the widget will be created. If null,
      --            the widget will be created in the "contextual" interpreter.
      --            Default value is null.
+     -- OUTPUT
+     -- Newly created Tk_Menu as parameter Widgt
      -- HISTORY
      -- 8.6.1 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create a new menu My_Menu with pathname .mymenu and with disabled tearoff option on the current Tcl interpreter
      -- declare
@@ -128,8 +126,6 @@ package Tcl.Tk.Ada.Widgets.Menu is
      -- Index      - Index of the item to activate
      -- HISTORY
      -- 8.6.4 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Activate the second element in menu My_Menu
      -- Activate(My_Menu, "1");
@@ -149,8 +145,6 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- Options    - Tk options for menu entry to add. Default value is empty
       -- HISTORY
       -- 8.6.1 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Add an element with text Quit which will be quit from the program to the My_Menu menu
       -- Add(My_Menu, "command", "-label Quit -command exit");
@@ -174,8 +168,6 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- CloneType   - Type of newly created clone menu
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Clone My_Menu to new normal menu which will have pathname .mynewmenu
       -- Clone(My_Menu, ".mynewmenu", "normal");
@@ -198,8 +190,6 @@ package Tcl.Tk.Ada.Widgets.Menu is
       --              it will be that same like StartIndex. Default is empty.
       -- HISTORY
       -- 8.6.1 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Delete second menu entry from the My_Menu menu
       -- Delete(My_Menu, "1");
@@ -224,8 +214,6 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- Current value of the selected Option in the selected menu entry
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the font used by first entry in My_Menu menu
       -- Font: constant String := Entry_Cget(My_Menu, "0", "-font");
@@ -248,8 +236,6 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- Options    - Tk options for the menu entry
       -- HISTORY
       -- 8.6.2 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the label of the third entry in My_Menu menu to hello world
       -- Entry_Configure(My_Menu, "2", "-label {hello world}");
@@ -275,8 +261,6 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- entry
       -- HISTORY
       -- 8.6.2 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the configuration options of the active menu entry in My_Menu menu
       -- Options: constant String := Entry_Configure(My_Menu, "active");
@@ -302,8 +286,6 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- to none
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the index of the last element in the My_Menu menu
       -- EntryIndex: constant String := Index(My_Menu, "end");
@@ -325,8 +307,6 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- Options    - Tk options for menu entry to add. Default value is empty
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Add an element with text Quit which will be quit from the program to the My_Menu menu as second entry
       -- Add(My_Menu, "2" ,"command", "-label Quit -command exit");
@@ -352,8 +332,6 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- Value returned by the invoked command
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Invoke the third element of the My_Menu menu
       -- Result: constant String := Invoke(My_Menu, "2");
@@ -375,8 +353,6 @@ package Tcl.Tk.Ada.Widgets.Menu is
       --              shown
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Post My_Menu menu at point (10, 87)
       -- Post(My_Menu, "10", "87");
@@ -404,8 +380,6 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- Otherwise return {}
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Post My_Menu menu at point (34, 67) and get the result of the command
       -- Result: constant String := Post(My_Menu, "34", "67");
@@ -427,8 +401,6 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- Index      - Index of cascade menu entry to show
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Show the submenu of My_Menu from the second entry
       -- PostCascade(My_Menu, "1");
@@ -449,8 +421,6 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- Type of the selected entry - command, separator or tearoff
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the type of the active entry in My_Menu menu
       -- MType: constant String := Menu_Type(My_Menu, "active");
@@ -474,8 +444,6 @@ package Tcl.Tk.Ada.Widgets.Menu is
       --              selected position.
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Show My_Menu menu at point (24, 89) on the screen
       -- Tk_Popup(My_Menu, "24", "89");
@@ -496,8 +464,6 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- MenuWidget - Tk_Menu which will be unposted
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Hide My_Menu menu
       -- Unpost(My_Menu);
@@ -519,8 +485,6 @@ package Tcl.Tk.Ada.Widgets.Menu is
    -- MenuWidget
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the X coordinate of the first element in My_Menu menu
    -- X_Position: constant String := XPosition(My_Menu, "0");
@@ -546,8 +510,6 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- MenuWidget
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the Y coordinate of the first element in My_Menu menu
       -- Y_Position: constant String := YPosition(My_Menu, "0");
