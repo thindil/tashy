@@ -57,8 +57,6 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    -- Newly created Tk_PanedWindow
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new panedwindow with pathname .mypaned and relief solid
    -- My_Paned: constant Tk_PanedWindow := Create(".mypaned", "-relief solid");
@@ -84,10 +82,10 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
      -- Interp   - Tcl interpreter to which the widget will be created. If null,
      --            the widget will be created in the "contextual" interpreter.
      --            Default value is null.
+     -- OUTPUT
+     -- Newly created Tk_PanedWindow as parameter Widgt
      -- HISTORY
      -- 8.6.1 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create panedwindow My_Paned with pathname .mypaned and black background on the current Tcl interpreter
      -- declare
@@ -136,8 +134,6 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
      --             value is empty.
      -- HISTORY
      -- 8.6.4 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Add My_Frame to My_Paned panedwindow
      -- Add(My_Paned, My_Frame);
@@ -157,8 +153,6 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    -- SubWindow - Tk_Widget which will be removed from the Tk_PanedWindow
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Remove My_Frame widget from My_Paned panedwindow
    -- Forget(My_Paned, My_Frame);
@@ -183,8 +177,6 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    -- part of the window, return {}
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Identify the My_Paned paned element at point (24, 56)
    -- Element: constant String := Identify(My_Paned, "24", "56");
@@ -208,8 +200,6 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- Current value of the selected Option for the selected Window
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the visibility of the .mypaned.myframe widget in My_Paned panedwindow
       -- Visibility: constant String := Pane_Cget(My_Paned, ".mypaned.myframe", "-hide");
@@ -234,8 +224,6 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- Options - Options names with new values for them
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the widget .mypaned.myframe sticky option to north in My_Paned panedwindow
       -- Pane_Configure(My_Paned, ".mypaned.myframe", "-sticky n");
@@ -265,8 +253,6 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- selected Options returns {}
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the height of the .mypaned.myframe widget in My_Paned panedwindow
       -- Height: constant String := Pane_Configure(My_Paned, ".mypaned.myframe", "-height");
@@ -290,8 +276,6 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- List of widgets inside of Tk_PanedWindow
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the names of all widget in the My_Paned panedwindow
       -- Children: constant String := Panes(My_Paned);
@@ -310,8 +294,6 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    -- List of coordinates (X and Y) of the most recent proxy location
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the coordinates of sash proxy in My_Paned panedwindow
    -- Coords: constant String := Proxy_Coord(My_Paned);
@@ -328,8 +310,6 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    -- Paned - Tk_PanedWindow which the proxy will be removed
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Remove the proxy from the My_Paned panedwindow
    -- Proxy_Forget(My_Paned);
@@ -348,8 +328,6 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    -- Y     - Y coordinate of new point for the proxy
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Place the My_Paned panedwindow proxy at (24, 57)
    -- Proxy_Place(My_Paned, "24", "57");
@@ -370,8 +348,6 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- Coordinates X and Y of top left corner of the selected sash
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get coordinates of the first sash in the My_Paned panedwindow
       -- Coords: constant String := Sash_Coord(My_Paned, "0");
@@ -394,8 +370,6 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- Y     - Y coordinate for compute a new position for the sash
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Move second sash in the My_Paned panedwindow by difference (22, 54) and Sash_Mark call
       -- Sash_DragTo(My_Paned, "1", "22", "54");
@@ -420,8 +394,6 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- Y     - Y coordinate a new position to mark
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the sash mark for second sash in My_Paned panewindow to (89, 34)
       -- Sash_Mark(My_Paned, "1", "89", "34");
@@ -444,8 +416,6 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- Y     - Y coordinate where the sash will be placed
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Place the first sash in My_Paned panedwindow at position (56, 32)
       -- Sash_Place(My_Paned, "0", "56", "32");
