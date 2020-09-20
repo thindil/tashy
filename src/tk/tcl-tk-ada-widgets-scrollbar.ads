@@ -57,8 +57,6 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
    -- Newly created Tk_Scrollbar
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new scrollbar with pathname .myscroll and orientation horizontal
    -- My_Scrollbar: constant Tk_Scrollbar := Create(".myscroll", "-orient horizontal");
@@ -84,10 +82,10 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
      -- Interp   - Tcl interpreter to which the widget will be created. If null,
      --            the widget will be created in the "contextual" interpreter.
      --            Default value is null.
+     -- OUTPUT
+     -- Newly created Tk_Scrollbar as parameter Widgt
      -- HISTORY
      -- 8.6.1 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create scrollbar My_Scrollbar with pathname .myscroll and relief solid on the current Tcl interpreter
      -- declare
@@ -135,8 +133,7 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
      --                   or "arrow2"
      -- HISTORY
      -- 8.6.4 - Added
-     -- TODO
-     -- Replace it with higher level of binding
+     -- EXAMPLE
      -- -- Activate "arrow1" in My_Scrollbar scrollbar
      -- Activate(My_Scrollbar, "arrow1");
      -- COMMANDS
@@ -159,8 +156,6 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
       -- {} if no element is currently active
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the active element in the My_Scrollbar scrollbar
       -- Element: constant String := Activate(My_Scrollbar);
@@ -187,8 +182,6 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
    -- scrollbar setting that corresponds to a given change in slider position.
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the fraction for horizontal scrollbar My_Scrollbar for value 10
    -- Delta: constant String := Scrollbar_Delta(My_Scrollbar, "10", "0");
@@ -213,8 +206,6 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
       -- bottom or right, middle is 0.5.
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the fraction for My_Scrollbar at point (23, 56)
       -- Scroll_Fraction: constant String := Fraction(My_Scrollbar, "23", "56");
@@ -237,8 +228,6 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
       -- associated widget.
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the visibility setting for the scrollbar My_Scrollbar
       -- Visible: constant String := Get(My_Scrollbar);
@@ -263,8 +252,6 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
    -- If the selected pixel is outside of the ScrollbarWidget, return {}
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the name of the My_Scrollbar scrollbar element at point (56, 23)
    -- Element_Name: constant String := Identify(My_Scrollbar, "56", "23");
@@ -288,8 +275,6 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
       --                   widget
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set visibility of the associated widget to My_Scrollbar scrollbar from 0 to 20%
       -- Set(My_Scrollbar, "0.0", "0.2");
