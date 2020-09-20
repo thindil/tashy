@@ -51,8 +51,6 @@ package Tcl.Tk.Ada.Widgets.OptionMenu is
    -- Newly created Tk_OptionMenu
    -- HISTORY
    -- 8.6.2 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new optionmenu with pathname .mymenu and options One Two Three and variable myvar
    -- My_Option_Menu: constant Tk_OptionMenu := Create(".mymenu", "myvar One Two Three");
@@ -79,10 +77,10 @@ package Tcl.Tk.Ada.Widgets.OptionMenu is
      -- Interp   - Tcl interpreter to which the widget will be created. If null,
      --            the widget will be created in the "contextual" interpreter.
      --            Default value is null.
+     -- OUTPUT
+     -- Newly created Tk_OptionMenu as parameter Widgt
      -- HISTORY
      -- 8.6.2 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create optionmenu My_Menu with pathname .mymenu and options One Two Three and variable myvar on the current Tcl interpreter
      -- declare
