@@ -57,8 +57,6 @@ package Tcl.Tk.Ada.Widgets.Scale is
    -- Newly created Tk_Scale
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new scale with pathname .myscale and orientation horizontal
    -- My_Scale: constant Tk_Scale := Create(".myscale", "-orient horizontal");
@@ -84,10 +82,10 @@ package Tcl.Tk.Ada.Widgets.Scale is
      -- Interp   - Tcl interpreter to which the widget will be created. If null,
      --            the widget will be created in the "contextual" interpreter.
      --            Default value is null.
+     -- OUTPUT
+     -- Newly created Tk_Scale as parameter Widgt
      -- HISTORY
      -- 8.6.1 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create scale My_Scale with pathname .myscale and label my scale on the current Tcl interpreter
      -- declare
@@ -139,8 +137,6 @@ package Tcl.Tk.Ada.Widgets.Scale is
      -- omitted then the ScaleWidget's current value is used.
      -- HISTORY
      -- 8.6.4 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Get the element at the current value of My_Scale scale
      -- Element: constant String := Coords(My_Scale);
@@ -160,8 +156,6 @@ package Tcl.Tk.Ada.Widgets.Scale is
      -- Current value of the ScaleWidget
      -- HISTORY
      -- 8.6.4 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Get the current value of the My_Scale scale
      -- Value: constant String := Get(My_Scale);
@@ -184,8 +178,6 @@ package Tcl.Tk.Ada.Widgets.Scale is
    -- Value of the ScaleWidget at the selected pixel
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the value at pixel (45, 21) in My_Scale scale
    -- Value := constant String := Get(My_Scale, "45", "21");
@@ -211,8 +203,6 @@ package Tcl.Tk.Ada.Widgets.Scale is
       -- from slider or "{}" if pixel is not in ScaleWidget
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the name of the element at pixel (56, 32) in My_Scale scale
       -- Element_Name: constant String := Identify(My_Scale, "56", "32");
@@ -232,8 +222,6 @@ package Tcl.Tk.Ada.Widgets.Scale is
       -- Value       - A new value for a ScaleWidget
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the value of the My_Scale scale to 20
       -- Set(My_Scale, "20");
