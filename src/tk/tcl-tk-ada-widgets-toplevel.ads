@@ -43,8 +43,6 @@ package Tcl.Tk.Ada.Widgets.Toplevel is
    -- Newly created Tk_Toplevel
    -- HISTORY
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new toplevel with pathname .mywindow and black background
    -- My_Window: constant Tk_Toplevel := Create(".mywindow", "-background black");
@@ -70,10 +68,10 @@ package Tcl.Tk.Ada.Widgets.Toplevel is
      -- Interp   - Tcl interpreter to which the widget will be created. If null,
      --            the widget will be created in the "contextual" interpreter.
      --            Default value is null.
+     -- OUTPUT
+     -- Newly created Tk_Toplevel as parameter Widgt
      -- HISTORY
      -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create toplevel My_Window with pathname .mywindow and width 200px on the current Tcl interpreter
      -- declare
