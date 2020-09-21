@@ -29,8 +29,6 @@ package Tcl.Tk.Ada.Widgets.Toplevel.MainWindow is
    -- Main Tk window as Tk_Toplevel widget
    -- HISTORY
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the main window at current Tcl interpreter
    -- Main_Window: constant Tk_Toplevel := Get_Main_Window(Get_Context);
@@ -47,8 +45,6 @@ package Tcl.Tk.Ada.Widgets.Toplevel.MainWindow is
    -- Script   - Tcl code which will be binded to the Tk_Widget
    -- HISTORY
    -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Close the program when the press ALT-q on My_Interpreter Tcl interpreter
    -- Bind_To_Main_Window(My_Interpreter, "<Alt-q>", "{exit}");
@@ -68,8 +64,6 @@ package Tcl.Tk.Ada.Widgets.Toplevel.MainWindow is
    -- Sequence - Name of Tk event which will be binded with the script
    -- HISTORY
    -- 8.6.8 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the script which will be run on press ALT-q on My_Interpreter Tcl interpreter
    -- Script: constant String := Bind_To_Main_Window(My_Interpreter, "<Alt-q>");
@@ -90,8 +84,6 @@ package Tcl.Tk.Ada.Widgets.Toplevel.MainWindow is
       -- Sequence - Name of Tk event to remove
       -- HISTORY
       -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Unbind left mouse click from the main window on current Tcl interpreter
       -- Unbind_From_Main_Window(Get_Context, "<1>");
@@ -114,8 +106,6 @@ package Tcl.Tk.Ada.Widgets.Toplevel.MainWindow is
       -- String with Tcl information about finished action
       -- HISTORY
       -- 8.6.1 - Moved from Tcl.Tk.Ada.Widgets
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Unbind left mouse click from the main window on current Tcl interpreter
       -- Result: constant String := Unbind_From_Main_Window(Get_Context, "<1>");
