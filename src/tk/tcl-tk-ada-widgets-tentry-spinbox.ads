@@ -57,8 +57,6 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
    -- Newly created Tk_SpinBox
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new spinbox with pathname .myspinbox and relief solid
    -- My_Spinbox: constant Tk_SpinBox := Create(".myspinbox", "-relief solid");
@@ -84,10 +82,10 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
      -- Interp   - Tcl interpreter to which the widget will be created. If null,
      --            the widget will be created in the "contextual" interpreter.
      --            Default value is null.
+     -- OUTPUT
+     -- Newly created Tk_SpinBox as parameter Widgt
      -- HISTORY
      -- 8.6.1 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create spinbox My_Spinbox with pathname .myspinbox and black background on the current Tcl interpreter
      -- declare
@@ -119,8 +117,6 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
      -- pixel is outside SpinBoxWidget
      -- HISTORY
      -- 8.6.4 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Get the name of the element of the My_Spinbox spinbox at point (43, 28)
      -- Element_Name: constant String := Identify(My_Spinbox, "43", "28");
@@ -142,8 +138,6 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
       --                 "buttonup"
       -- HISTORY
       -- 8.6.4 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Invoke button "buttonup" of My_Spinbox spinbox
       -- Invoke(My_Spinbox, "buttonup");
@@ -163,8 +157,6 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
       --                 "buttonup", "buttondown", "entry" or "none"
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set entry of the My_Spinbox spinbox as a selected element
       -- Selection_Element(My_Spinbox, "entry");
@@ -188,8 +180,6 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
       -- Name of the currently selected element in SpinBoxWidget
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the currently selected element for My_Spinbox spinbox
       -- Selected_Element: constant String := Selection_Element(My_Spinbox);
@@ -209,8 +199,6 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
    -- Value         - Value to set
    -- HISTORY
    -- 8.6.5 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Set the value of My_Spinbox spinbox to 100
    -- Set(My_Spinbox, "100");
@@ -232,8 +220,6 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
       -- The current value of the SpinBoxWidget
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the current value of My_Spinbox spinbox
       -- Value: constant String := Set(My_Spinbox);
