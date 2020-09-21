@@ -50,8 +50,6 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- Newly created Tk_Text
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new text with pathname .mytext and height of 10 characters
    -- My_Text: constant Tk_Text := Create(".text", "-height 10");
@@ -77,10 +75,10 @@ package Tcl.Tk.Ada.Widgets.Text is
      -- Interp   - Tcl interpreter to which the widget will be created. If null,
      --            the widget will be created in the "contextual" interpreter.
      --            Default value is null.
+     -- OUTPUT
+     -- Newly created Tk_Text as parameter Widgt
      -- HISTORY
      -- 8.6.1 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create text My_Text with pathname .mytext and state readonly on the current Tcl interpreter
      -- declare
@@ -132,8 +130,6 @@ package Tcl.Tk.Ada.Widgets.Text is
      -- of bounding box.
      -- HISTORY
      -- 8.6.5 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Get the bouding box for the first character in My_Text text
      -- Bounding_Box: constant String := BBox(My_Text, "1.0");
@@ -158,8 +154,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- same character, and so on.
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Check if the first character in My_Text text is that same as the last
       -- Equal: constant String := Compare(My_Text, "1.0", "==", "end");
@@ -193,8 +187,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- depends on the amount of the selected options.
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the amount of the selected item in My_Text between first and 10th character in second line
       -- Amount: constant String := Count(My_Text, "-indices", "2.0", "2.9");
@@ -216,8 +208,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- Enable     - If "true" enable debug, when "false" disable
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Enable consistency checks in My_Text text
       -- Debug(My_Text, "true");
@@ -240,8 +230,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- "on" if checks are enabled, otherwise "off"
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the state of consistency checks in My_Text text
       -- Debug_State: constant String := Debug(My_Text);
@@ -265,8 +253,6 @@ package Tcl.Tk.Ada.Widgets.Text is
    --              value is empty.
    -- HISTORY
    -- 8.6.3 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Delete the whole first line in the My_Text text
    -- Delete(My_Text, "1.0", "1.end");
@@ -302,8 +288,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- is not visible on the screen then the return value is {}.
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the information about 10th character in third line in My_Text text
       -- Info: constant String := DLineInfo(My_Text, "3.9");
@@ -334,8 +318,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- value2 index2 ..."
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the whole content of My_Text text
       -- Content: constant String := Dump(My_Text, "-all", "1.0", "end");
@@ -357,8 +339,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- "true" if redo action is possible, otherwise "false"
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Check if redo action is available for My_Text text
       -- Can_Redo: constant String := Edit_CanRedo(My_Text);
@@ -377,8 +357,6 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- "true" if undo action is possible, otherwise "false"
    -- HISTORY
    -- 8.6.5 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Check if undo action is available for My_Text text
    -- Can_Undo: constant String := Edit_CanUndo(My_Text);
@@ -397,8 +375,6 @@ package Tcl.Tk.Ada.Widgets.Text is
    --              "0", "1", "true", "false"
    -- HISTORY
    -- 8.6.5 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Set the modified flag for the My_Text text to true
    -- Edit_Modified(My_Text, "true");
@@ -418,8 +394,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- TextWidget - Tk_Text which flag Modified will be set
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- RESULT
       -- Value of the flag Modified of TextWidget
       -- EXAMPLE
@@ -443,8 +417,6 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- TextWidget - Tk_Text in which the last undone edit will be reapplied
    -- HISTORY
    -- 8.6.5 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Reapply the last undone edit to the My_Text text
    -- Edit_Redo(My_Text);
@@ -461,8 +433,6 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- TextWidget - Tk_Text which undo and redo stacks will be cleared
    -- HISTORY
    -- 8.6.5 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Clear redo and undo stacks for the My_Text text
    -- Edit_Reset(My_Text);
@@ -480,8 +450,6 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- TextWidget - Tk_Text in which the separator will be inserted
    -- HISTORY
    -- 8.6.5 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Add a separator to the My_Text text undo stack
    -- Edit_Separator(My_Text);
@@ -502,8 +470,6 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- TextWidget - Tk_Text in which the last edit action will be undoed
    -- HISTORY
    -- 8.6.5 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Undo the last edit in My_Text text
    -- Edit_Undo(My_Text);
@@ -526,8 +492,6 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- characters for each range.
    -- HISTORY
    -- 8.6.5 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the 6th character in 5th line in My_Text text
    -- Char: constant String := Get(My_Text, "5.5");
@@ -549,8 +513,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- Value of the selected Option of the selected image
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the name of the image at 6th character in second line in My_Text text
       -- Image_Name: constant String := Image_Cget(My_Text, "2.5", "-name");
@@ -574,8 +536,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- Options    - Options in "name value" pairs to set
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the name of the image at first character in first line in My_Text text
       -- Image_Configure(My_Text, "1.0", "-name myimage");
@@ -602,8 +562,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- string
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the name of Tk image which is in My_Text text at 10th character in 8th line
       -- Image_Name: constant String := Image_Configure(My_Text, "8.9", "-image");
@@ -629,8 +587,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- Unique identifier for the newly created image
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Create image named myimage from image otherimage at first character in first line in My_Text text
       -- Image_Create(My_Text, "1.0", "-image otherimage -name myimage");
@@ -652,8 +608,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- The list of all images names currently embedded into TextWidget
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the names of all images in the My_Text text
       -- Names: constant String := Image_Names(My_Text);
@@ -674,8 +628,6 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- Index of the selected item in form "line.character"
    -- HISTORY
    -- 8.6.5 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the index of the image myimage in My_Text text
    -- Image_Index: constant String := Index(My_Text, "myimage");
@@ -698,8 +650,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       --              the text to insert
       -- HISTORY
       -- 8.6.1 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- Insert hello world at the ent of the My_Text text
       -- Insert(My_Text, "end", "{hello world}");
@@ -720,8 +670,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       --              "right"
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the mark mymark gravity to left in My_Text text
       -- Mark_Gravity(My_Text, "mymark", "left");
@@ -746,8 +694,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- Possible values are "left" and "right"
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the gravity of mark mymark in My_Text text
       -- Gravity: constant String := Mark_Gravity(My_Text, "mymark");
@@ -770,8 +716,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- List of names of all existing marks in the TextWidget
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the name of the all marks in the My_Text text
       -- Marks_Names: constant String := Mark_Names(My_Text);
@@ -792,8 +736,6 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- Name of the next mark or {} if no mark was found
    -- HISTORY
    -- 8.6.5 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the next mark name after 6th character in 4th line in My_Text text
    -- Mark_Name: constant String := Mark_Next(My_Text, "4.5");
@@ -819,8 +761,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- Name of the previous mark or {} if no mark was found
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the previous mark name before last character in My_Text text
       -- Mark_Name: constant String := Mark_Previous(My_Text, "end");
@@ -847,8 +787,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       --              will be added
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the mymark mark at start of the My_Text text
       -- Mark_Set(My_Text, "mymark", "1.0");
@@ -868,8 +806,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       --              should be removed, separate they name by space
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Remove mymark mark from the My_Text text
       -- Mark_Unset(My_Text, "mymark");
@@ -890,8 +826,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       --               peer widget. Can be empty. Default value is empty
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Create a peer text with pathname .mynewpeer from My_Text text
       -- Peer_Create(My_Text, ".mynewpeer");
@@ -914,8 +848,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- peers are available. Order of the list is undefined
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the names of all peers for My_Text text
       -- Names: constant String := Peer_Names(My_Text);
@@ -935,8 +867,6 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- synchronized
    -- HISTORY
    -- 8.6.5 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Check if line height calculation for My_Text text is up to date or not
    -- Sync_Status: constant String := PendingSync(My_Text);
@@ -956,8 +886,6 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- Chars      - Characters and tags which will replace current characters
    -- HISTORY
    -- 8.6.5 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Replace first 5 characters in the first line in the My_Text text with newtex text
    -- Replace(My_Text, "1.0", "1.4", "{newtex}");
@@ -978,8 +906,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- Y          - Y coordinate of the mark to set
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the scan mark to the top left corner of My_Text text
       -- Scan_Mark(My_Text, "0", "0");
@@ -1003,8 +929,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- Y          - Y coordinate which difference will be computed
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Drag view of My_Text text to point (24, 28)
       -- Scan_DragTo(My_Text, "24", "28");
@@ -1031,8 +955,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- Index of first character matching Pattern or {} if nothing was found
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Search the My_Text text for word hello forward from the first element in the second line
       -- Result := constant String := Search(My_Text, "-forwards", "{hello}", "2.0");
@@ -1053,8 +975,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- Index      - Index of character show show
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Scroll My_Text text so 5th character in 10th line will be visible
       -- See(My_Text, "10.4");
@@ -1072,8 +992,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- TextWidget - Tk_Text which line metrics will be updated
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Update line metrics for the My_Text text
       -- Sync(My_Text);
@@ -1093,8 +1011,6 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- Command    - Tcl command to execute
    -- HISTORY
    -- 8.6.5 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Update line metrics for the My_Text text and execute commands Save
    -- Sync_Command(My_Text, "Save");
@@ -1119,8 +1035,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       --              character. Default value is empty
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Add tag mytag to the first 10 items in first line in My_Text text
       -- Tag_Add(My_Text, "mytag", "1.0", "1.9");
@@ -1143,8 +1057,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- Script     - Tcl commands which will be bound
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Execute command ShowMenu on left mouse click on the mytag tag in My_Text text
       -- Tag_Bind(My_Text, "mytag", "<1>", "ShowMenu");
@@ -1171,8 +1083,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- script associated with the selected Sequence.
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXECUTE
       -- -- Get the all binded sequences for the mytag tag in My_Text text
       -- Sequences: constant String := Tag_Bind(My_Text, "mytag");
@@ -1199,8 +1109,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- The current value of the selected option
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the Tk font name for mytag tag in My_Text text
       -- Font_Name: constant String := Tag_Cget(My_Text, "-font");
@@ -1223,8 +1131,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- Options    - Tag options with values to set
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the font to the default Tk font for mytag tag in My_Text text
       -- Tag_Configure(My_Text, "mytag", "-font TkDefaultFont");
@@ -1251,8 +1157,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- string with all options and their values.
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the names and values of all available options for mytag tag in My_Text text
       -- Options: constant String := Tag_Configure(My_Text, "mytag");
@@ -1276,8 +1180,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       --              separated by spaces
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Delete tag mytag in My_Text text
       -- Tag_Delete(My_Text, "mytag");
@@ -1300,8 +1202,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       --              lowest priority. Default value is empty.
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Move mytag tag below secondtag tag in My_Text text
       -- Tag_Lower(My_Text, "mytag", "secondtag");
@@ -1326,8 +1226,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- Otherwise return list of names of tags at the selected position
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the names of all tags for first character in 10th line in My_Text text
       -- Names: constant String := Tag_Names(My_Text, "10.0");
@@ -1354,8 +1252,6 @@ package Tcl.Tk.Ada.Widgets.Text is
      -- characters are in range, return {}
      -- HISTORY
      -- 8.6.5 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Find the range with tag mytag in first line of My_Text text
      -- Range: constant String := Tag_NextRange(My_Text, "1.0", "1.end");
@@ -1385,8 +1281,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- characters are in range, return {}
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Find the range with tag mytag in the whole My_Text text
       -- Range: constant String := Tag_PrevRange(My_Text, "end");
@@ -1411,8 +1305,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       --              first in the priority. Default value is empty
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Make mytag tag the most prioritized tag in My_Text text
       -- Tag_Raise(My_Text, "mytag");
@@ -1438,8 +1330,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- selected TagName, returns {}
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the ranges of character with mytag tag in My_Text text
       -- Ranges: Tag_Ranges(My_Text, "mytag");
@@ -1466,8 +1356,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       --              character only. Default value is empty
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Remove mytag tag from first ten characters in the first line in My_Text text
       -- Tag_Remove(My_Text, "mytag", "1.0", "1.9");
@@ -1491,8 +1379,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- Value of the selected Option of the selected window
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the align of the window from second line, third character in My_Text text
       -- Align: constant String := Window_Cget(My_Text, "2.2", "-align");
@@ -1516,8 +1402,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- Options    - Options in "name value" pairs to set
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the align to center for the window in third line and 8th character in My_Text text
       -- Window_Configure(My_Text, "3.7", "-align center");
@@ -1544,8 +1428,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- string
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the window name of the window in sixth line and first character in My_Text text
       -- Window_Name: constant String := Window_Configure(My_Text, "6.0", "-window");
@@ -1571,8 +1453,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- Unique identifier for the newly created window
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Create a new window from widget .mywindow in top left corner of the My_Text text
       -- Window_Create(My_Text, "1.0", "-window .mywindow");
@@ -1594,8 +1474,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- The list of all windows names currently embedded into TextWidget
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the names of windows in My_Text text
       -- Names: constant String := Window_Names(My_Text);
@@ -1616,8 +1494,6 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- fraction of the TextWidget which is visible.
    -- HISTORY
    -- 8.6.5 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the horizontal fraction of the My_Text text
    -- Horizontal_Fraction: constant String := XView(My_Text);
@@ -1639,8 +1515,6 @@ package Tcl.Tk.Ada.Widgets.Text is
    --              and 1
    -- HISTORY
    -- 8.6.5 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Show the first half of the text My_Text
    -- Xview_Move_To(My_Text, "0.5");
@@ -1663,8 +1537,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- What       - Type of amount to move. Can be "units" or "pages"
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Move the view in the My_Text text by 10 units to right
       -- Xview_Scroll(My_Text, "10", "units");
@@ -1688,8 +1560,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- fraction of the TextWidget which is visible.
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the vertical fraction of the My_Text text
       -- Vertical_Fraction: constant String := YView(My_Text);
@@ -1711,8 +1581,6 @@ package Tcl.Tk.Ada.Widgets.Text is
    --              and 1
    -- HISTORY
    -- 8.6.5 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Show the first half of the text My_Text
    -- Yview_Move_To(My_Text, "0.5");
@@ -1735,8 +1603,6 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- What       - Type of amount to move. Can be "units" or "pages"
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Move the view in the My_Text text by 10 units to top
       -- Yview_Scroll(My_Text, "-10", "units");
