@@ -50,8 +50,6 @@ package Tcl.Tk.Ada.Widgets.TtkButton is
    -- Newly created Ttk_Button
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new button with pathname .mybutton and text hello world
    -- My_Button: constant Ttk_Button := Create(".mybutton", "-text {hello world}");
@@ -77,10 +75,10 @@ package Tcl.Tk.Ada.Widgets.TtkButton is
      -- Interp   - Tcl interpreter to which the widget will be created. If null,
      --            the widget will be created in the "contextual" interpreter.
      --            Default value is null.
+     -- OUTPUT
+     -- Newly created Ttk_Button as parameter Widgt
      -- HISTORY
      -- 8.6.1 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create button My_Button with pathname .mybutton and width 100px on the current Tcl interpreter
      -- declare
@@ -129,8 +127,6 @@ package Tcl.Tk.Ada.Widgets.TtkButton is
      -- Value returned by the Tcl command associated with the button
      -- HISTORY
      -- 8.6.1 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Invoke the code related to My_Button
      -- Result: constant String := Invoke(My_Button);
