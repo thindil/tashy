@@ -57,8 +57,6 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox is
    -- Newly created Ttk_SpinBox
    -- HISTORY
    -- 8.6.2 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new spinbox with pathname .myspinbox with range from 1 to 100
    -- My_Spinbox: constant Ttk_SpinBox := Create(".myspinbox", "-from 1 -to 100");
@@ -84,10 +82,10 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox is
      -- Interp   - Tcl interpreter to which the widget will be created. If null,
      --            the widget will be created in the "contextual" interpreter.
      --            Default value is null.
+     -- OUTPUT
+     -- Newly created Ttk_SpinBox as parameter Widgt
      -- HISTORY
      -- 8.6.2 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create spinbox My_Spinbox with pathname .myspinbox which wraps values on the current Tcl interpreter
      -- declare
@@ -116,8 +114,6 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox is
       -- list of values for the SpinBox
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the current value of My_Spinbox spinbox
       -- Value: constant String := Current(My_Spinbox);
@@ -138,8 +134,6 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox is
    --            SpinBox which will be set as the current value
    -- HISTORY
    -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Set the current value of My_Spinbox spinbox to 1
    -- Current(My_Spinbox, "1");
@@ -160,8 +154,6 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox is
       -- Value   - A new value for the SpinBox
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the value of My_Spinbox to 2
       -- Set(My_Combobox, "2");
