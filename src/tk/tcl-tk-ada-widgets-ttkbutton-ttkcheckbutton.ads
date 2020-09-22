@@ -50,8 +50,6 @@ package Tcl.Tk.Ada.Widgets.TtkButton.TtkCheckButton is
    -- Newly created Ttk_CheckButton
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new checkbutton with pathname .mybutton and text hello world
    -- My_Button: constant Ttk_CheckButton := Create(".mybutton", "-text {hello world}");
@@ -77,10 +75,10 @@ package Tcl.Tk.Ada.Widgets.TtkButton.TtkCheckButton is
      -- Interp   - Tcl interpreter to which the widget will be created. If null,
      --            the widget will be created in the "contextual" interpreter.
      --            Default value is null.
+     -- OUTPUT
+     -- Newly created Ttk_CheckButton as parameter Widgt
      -- HISTORY
      -- 8.6.1 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create checkbutton My_Button with pathname .mybutton and selected state on the current Tcl interpreter
      -- declare
