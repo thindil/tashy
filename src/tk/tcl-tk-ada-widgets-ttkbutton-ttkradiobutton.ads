@@ -50,8 +50,6 @@ package Tcl.Tk.Ada.Widgets.TtkButton.TtkRadioButton is
    -- Newly created Ttk_RadioButton
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new radiobutton with pathname .mybutton and text hello world
    -- My_Button: constant Ttk_RadioButton := Create(".mybutton", "-text {hello world}");
@@ -77,10 +75,10 @@ package Tcl.Tk.Ada.Widgets.TtkButton.TtkRadioButton is
      -- Interp   - Tcl interpreter to which the widget will be created. If null,
      --            the widget will be created in the "contextual" interpreter.
      --            Default value is null.
+     -- OUTPUT
+     -- Newly created Ttk_RadioButton as parameter Widgt
      -- HISTORY
      -- 8.6.1 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create radiobutton My_Button with pathname .mybutton and selected state on the current Tcl interpreter
      -- declare
@@ -98,6 +96,26 @@ package Tcl.Tk.Ada.Widgets.TtkButton.TtkRadioButton is
       options: in String := ""; Interp: in Tcl_Interp := null) with
       Pre => pathName /= "";
       -- ****
+
+     -- ****f* TtkRadioButton/Get_Widget
+     -- FUNCTION
+     -- Get the existing Ttk_RadioButton widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Ttk_RadioButton widget
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get radiobutton widget with name .myradiobutton on the current Tcl interpreter
+     -- My_Radiobutton: constant Ttk_RadioButton := Get_Widget(".myradiobutton");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Ttk_RadioButton;
+     -- ****
 
 private
 
