@@ -57,8 +57,6 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
    -- Newly created Ttk_ComboBox
    -- HISTORY
    -- 8.6.2 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new combobox with pathname .mycombobox and values yes and no
    -- My_Combobox: constant Ttk_ComboBox := Create(".mycombobox", "-values [list yes no]");
@@ -84,10 +82,10 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
       -- Interp   - Tcl interpreter to which the widget will be created. If null,
       --            the widget will be created in the "contextual" interpreter.
       --            Default value is null.
+      -- OUTPUT
+      -- Newly created Ttk_ComboBox as parameter Widgt
       -- HISTORY
       -- 8.6.2 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Create combobox My_Combobox with pathname .mycombobox and width 10 characters on the current Tcl interpreter
       -- declare
@@ -116,8 +114,6 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
       -- list of values for the ComboBox
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the current value of My_Combobox combobox
       -- Value: constant String := Current(My_Combobox);
@@ -138,8 +134,6 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
    --            ComboBox which will be set as the current value
    -- HISTORY
    -- 8.6.5 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Set the current value of My_Combobox combobox to second value in list
    -- Current(My_Combobox, "1");
@@ -160,8 +154,6 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
       -- Value    - A new value for the ComboBox
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the value of My_Combobox to text my new value
       -- Set(My_Combobox, "{my new value}");
