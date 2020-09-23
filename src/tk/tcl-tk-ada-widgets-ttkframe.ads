@@ -57,8 +57,6 @@ package Tcl.Tk.Ada.Widgets.TtkFrame is
    -- Newly created Ttk_Frame
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new frame with pathname .myframe
    -- My_Frame: constant Ttk_Frame := Create(".myframe");
@@ -84,10 +82,10 @@ package Tcl.Tk.Ada.Widgets.TtkFrame is
      -- Interp   - Tcl interpreter to which the widget will be created. If null,
      --            the widget will be created in the "contextual" interpreter.
      --            Default value is null.
+     -- OUTPUT
+     -- Newly created Ttk_Frame as parameter Widgt
      -- HISTORY
      -- 8.6.1 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create frame My_Frame with pathname .myframe and with relief raised on the current Tcl interpreter
      -- declare
