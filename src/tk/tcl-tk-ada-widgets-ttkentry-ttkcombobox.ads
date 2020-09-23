@@ -104,6 +104,26 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
       Pre => pathName /= "";
       -- ****
 
+     -- ****f* TtkComboBox/Get_Widget
+     -- FUNCTION
+     -- Get the existing Ttk_ComboBox widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Ttk_ComboBox widget
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get combobox widget with name .mycombo on the current Tcl interpreter
+     -- My_ComboBox: constant Ttk_ComboBox := Get_Widget(".mycombo");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Ttk_ComboBox;
+     -- ****
+
       -- ****f* TtkComboBox/Current (function)
       -- FUNCTION
       -- Get the current value of the selected Ttk_ComboBox

@@ -104,6 +104,26 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox is
       Pre => pathName /= "";
       -- ****
 
+     -- ****f* TtkSpinBox/Get_Widget
+     -- FUNCTION
+     -- Get the existing Ttk_SpinBox widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Ttk_SpinBox widget
+     -- HISTORY
+     -- 8.6.9 - Added
+     -- EXAMPLE
+     -- -- Get spinbox widget with name .myspin on the current Tcl interpreter
+     -- My_SpinBox: constant Ttk_SpinBox := Get_Widget(".myspin");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Ttk_SpinBox;
+     -- ****
+
       -- ****f* TtkSpinBox/Current (function)
       -- FUNCTION
       -- Get the current value of the selected Ttk_SpinBox

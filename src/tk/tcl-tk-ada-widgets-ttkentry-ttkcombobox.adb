@@ -52,6 +52,16 @@ package body Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
       return Tcl.Ada.Tcl_GetResult(ComboBox.Interp);
    end Current;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Ttk_ComboBox is
+   begin
+      return New_ComboBox: Ttk_ComboBox do
+         New_ComboBox.Interp := Interp;
+         New_ComboBox.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
    procedure Current(ComboBox: in Ttk_ComboBox; NewIndex: in String) is
    begin
       Execute_Widget_Command(ComboBox, "current", NewIndex);

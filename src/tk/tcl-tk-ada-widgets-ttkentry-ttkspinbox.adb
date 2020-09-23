@@ -46,6 +46,16 @@ package body Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Ttk_SpinBox is
+   begin
+      return New_SpinBox: Ttk_SpinBox do
+         New_SpinBox.Interp := Interp;
+         New_SpinBox.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
    function Current(SpinBox: in Ttk_SpinBox) return String is
    begin
       Execute_Widget_Command(SpinBox, "current");
