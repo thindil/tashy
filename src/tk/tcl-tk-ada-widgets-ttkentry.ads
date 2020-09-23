@@ -57,8 +57,6 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
    -- Newly created Ttk_Entry
    -- HISTORY
    -- 8.6.2 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new entry with pathname .myentry and state readonly
    -- My_Entry: constant Ttk_Entry := Create(".myentry", "-state readonly");
@@ -84,10 +82,10 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
      -- Interp   - Tcl interpreter to which the widget will be created. If null,
      --            the widget will be created in the "contextual" interpreter.
      --            Default value is null.
+     -- OUTPUT
+     -- Newly created Ttk_Entry as parameter Widgt
      -- HISTORY
      -- 8.6.2 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create entry My_Entry with pathname .myentry and width 10 characters on the current Tcl interpreter
      -- declare
@@ -140,8 +138,6 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       -- of bounding box.
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the bouding box for the first character in My_Entry entry
       -- Bounding_Box: constant String := BBox(My_Entry, "0");
@@ -163,8 +159,6 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       --              character. Default is empty.
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Delete the whole text of My_Entry entry
       -- Delete(My_Entry, "0", "end");
@@ -186,8 +180,6 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       -- Returns the entry's string.
       -- HISTORY
       -- 8.6.2 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the text of My_Entry entry
       -- Text: constant String := Get(My_Entry);
@@ -207,8 +199,6 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
    --             placed
    -- HISTORY
    -- 8.6.5 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Place insertion cursor at the end of My_Entry entry
    -- ICursor(My_Entry, "end");
@@ -229,8 +219,6 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       -- Numerical index of the selected character
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the index of the last character in My_Entry entry
       -- Character_Index: constant String := Index(My_Entry, "end");
@@ -251,8 +239,6 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       -- Text      - Text to insert
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Insert hello world text at start of My_Entry entry
       -- Insert(My_Entry, "0", "{hello world}");
@@ -271,8 +257,6 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       -- TextEntry - Ttk_Entry in which the selection will be cleared
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Remove selection from My_Entry entry
       -- Selection_Clear(My_Entry);
@@ -291,8 +275,6 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
    -- "1" if any character in TextEntry is selected, otherwise "0"
    -- HISTORY
    -- 8.6.5 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Check if something is selected in My_Entry entry
    -- Check_Selection: constant String := Selection_Present(My_Entry);
@@ -311,8 +293,6 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
    -- EndIndex   - End index of character of the selection
    -- HISTORY
    -- 8.6.5 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Select the whole text of My_Entry entry
    -- Selection_Range(My_Entry, "0", "end");
@@ -333,8 +313,6 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       -- "1" if value of TextEntry is valid, otherwise "0"
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Revalidate My_Entry entry value
       -- Valid: constant String := Validate(My_Entry);
@@ -355,8 +333,6 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
    -- fraction of the TextEntry which is visible.
    -- HISTORY
    -- 8.6.5 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the horizontal fraction of the My_Entry entry
    -- Horizontal_Fraction: constant String := XView(My_Entry);
@@ -378,8 +354,6 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
    --             Character position starts from 0
    -- HISTORY
    -- 8.6.5 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Set view of My_Entry entry to second character
    -- XView(My_Entry, "1");
@@ -402,8 +376,6 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       --             and 1
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Show the first half of the entry My_Entry
       -- Xview_Move_To(My_Entry, "0.5");
@@ -425,8 +397,6 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       -- What      - Type of amount to move. Can be "units" or "pages"
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Move the view in the My_Entry entry by 10 units to right
       -- Xview_Scroll(My_Entry, "10", "units");
