@@ -57,8 +57,6 @@ package Tcl.Tk.Ada.Widgets.TtkScale is
    -- Newly created Ttk_Scale
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new horizontal scale with pathname .myscale
    -- My_Scale: constant Ttk_Scale := Create(".myscale", "-orient horizontal");
@@ -86,8 +84,8 @@ package Tcl.Tk.Ada.Widgets.TtkScale is
      --            Default value is null.
      -- HISTORY
      -- 8.6.1 - Added
-     -- TODO
-     -- Replace it with higher level of binding
+     -- OUTPUT
+     -- Newly created Ttk_Scale as parameter Widgt
      -- EXAMPLE
      -- -- Create vertical scale My_Scale with pathname .myscale on the current Tcl interpreter
      -- declare
@@ -135,8 +133,6 @@ package Tcl.Tk.Ada.Widgets.TtkScale is
      -- Current value of the ScaleWidget
      -- HISTORY
      -- 8.6.5 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Get the current value of My_Scale scale
      -- Value: constant String := Get(My_Scale);
@@ -157,8 +153,6 @@ package Tcl.Tk.Ada.Widgets.TtkScale is
    -- Value of the ScaleWidget at the selected pixel
    -- HISTORY
    -- 8.6.5 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the value of the My_Scale scale at pixel (24, 23)
    -- Value: constant String := Get(My_Scale, "24", "23");
@@ -177,8 +171,6 @@ package Tcl.Tk.Ada.Widgets.TtkScale is
       -- Value       - A new value for the ScaleWidget
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set value of My_Scale scale to 10.0
       -- Set(My_Scale, "10.0");
