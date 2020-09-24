@@ -57,8 +57,6 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
    -- Newly created Ttk_ProgressBar
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new horizontal progressbar with pathname .myprogress
    -- My_Progress: constant Ttk_ProgressBar := Create(".myprogress", "-orient horizontal");
@@ -84,10 +82,10 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
      -- Interp   - Tcl interpreter to which the widget will be created. If null,
      --            the widget will be created in the "contextual" interpreter.
      --            Default value is null.
+     -- OUTPUT
+     -- Newly created Ttk_ProgressBar as parameter Widgt
      -- HISTORY
      -- 8.6.1 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create vertical progressbar My_Progress with pathname .myprogress on the current Tcl interpreter
      -- declare
@@ -135,8 +133,6 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
      --            Default value is 50 (20 steps per second)
      -- HISTORY
      -- 8.6.6 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Start the autoincrement mode on My_Progress progressbar every 100 miliseconds
      -- Start(My_Progress, "100");
@@ -155,8 +151,6 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
    --          by 1.0. Default value is empty
    -- HISTORY
    -- 8.6.2 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Increment My_Progress progressbar by 10
    -- Step(My_Progress, "10.0");
@@ -174,8 +168,6 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
    -- Bar - Ttk_ProgressBar in which autoincrement mode will be stoped
    -- HISTORY
    -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Stop the autoincrement mode in My_Progress progressbar
    -- Stop(My_Progress);
