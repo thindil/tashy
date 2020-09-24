@@ -57,8 +57,6 @@ package Tcl.Tk.Ada.Widgets.TtkMenuButton is
    -- Newly created Ttk_MenuButton
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new menubutton with pathname .mymenubutton and menu .mymenu
    -- My_Menu_Button: constant Ttk_MenuButton := Create(".mymenubutton", "-menu .mymenu");
@@ -86,8 +84,8 @@ package Tcl.Tk.Ada.Widgets.TtkMenuButton is
      --            Default value is null.
      -- HISTORY
      -- 8.6.1 - Added
-     -- TODO
-     -- Replace it with higher level of binding
+     -- OUTPUT
+     -- Newly created Ttk_MenuButton as parameter Widgt
      -- EXAMPLE
      -- -- Create menubutton My_Menu_Button with pathname .mymenubutton and label click me on the current Tcl interpreter
      -- declare
