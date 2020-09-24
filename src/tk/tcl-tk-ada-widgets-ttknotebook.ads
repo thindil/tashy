@@ -57,8 +57,6 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
    -- Newly created Ttk_Notebook
    -- HISTORY
    -- 8.6.2 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new notebook with pathname .mynotebook
    -- My_Notebook: constant Ttk_Notebook := Create(".mynotebook");
@@ -84,10 +82,10 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
      -- Interp   - Tcl interpreter to which the widget will be created. If null,
      --            the widget will be created in the "contextual" interpreter.
      --            Default value is null.
+     -- OUTPUT
+     -- Newly created Ttk_Notebook as parameter Widgt
      -- HISTORY
      -- 8.6.2 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create notebook My_Notebook with pathname .mynotebook on the current Tcl interpreter
      -- declare
@@ -135,8 +133,6 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
      -- Options    - Tk options for added window. Default value is empty
      -- HISTORY
      -- 8.6.2 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Add a widget with pathname .myframe to the My_Notebook notebook with tab label my tab
      -- Add(My_Notebook, ".myframe", "-text {my tab}");
@@ -157,8 +153,6 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- TabId    - Id of the tab to remove
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Remove the currently selected tab in the My_Notebook notebook
       -- Forget(My_Notebook, "current");
@@ -177,8 +171,6 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- TabId    - Id of the tab to hide
       -- HISTORY
       -- 8.6.2 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Hide the second tab of My_Notebook notebook
       -- Hide(My_Notebook, "1");
@@ -201,8 +193,6 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- is present there
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the element at point (24, 82) in My_Notebook notebook
       -- Element_Name: constant String := Identify_Element(My_Notebook, "24", "82");
@@ -226,8 +216,6 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- there
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the index of the tab at point (10, 56) in My_Notebook notebook
       -- Tab_Index: constant String := Identify_Tab(Notebook, "10", "56");
@@ -250,8 +238,6 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- if TabId was "end"
       -- HISTORY
       -- 8.6.5 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the amount of the tabs in My_Notebook notebook
       -- Amount: constant String := Index(My_Notebook, "end");
@@ -276,8 +262,6 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- Options   - Additional options for inserted or moved SubWindow
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Insert My_Frame to My_Notebook notebook at second position with label my tab
       -- Insert(My_Notebook, "1", My_Frame, "-text {my tab}");
@@ -298,8 +282,6 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- TabId    - Id of the tab to select
       -- HISTORY
       -- 8.6.2 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the first tab as the currently selected tab in My_Notebook notebook
       -- Notebook_Select(My_Notebook, "0");
@@ -319,8 +301,6 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- Identifier of the selected tab in Notebook
       -- HISTORY
       -- 8.6.2 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the identifier of the selected tab in My_Notebook notebook
       -- Tab_Index: constant String := Get_Selected(My_Notebook);
@@ -340,8 +320,6 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
    -- Options  - List of options with their new values
    -- HISTORY
    -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Set the title of the second tab in My_Notebook notebook to my new tab
    -- Tab(My_Notebook, "1", "-text {my new tab}");
@@ -366,8 +344,6 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- names and values of all options of the selected tab
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the title of the last tab in My_Notebook notebook
       -- Title: constant String := Tab(My_Notebook, "end", "-text");
@@ -389,8 +365,6 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- A list of names of the windows managed by Notebook
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the names of the windows managed by My_Notebook notebook
       -- Names: constant String := Tabs(My_Notebook);
