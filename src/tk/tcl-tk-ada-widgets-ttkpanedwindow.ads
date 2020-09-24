@@ -57,8 +57,6 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    -- Newly created Ttk_PanedWindow
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new panedwindow with pathname .mypaned
    -- My_Paned: constant Ttk_PanedWindow := Create(".mypaned");
@@ -86,8 +84,8 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
      --            Default value is null.
      -- HISTORY
      -- 8.6.1 - Added
-     -- TODO
-     -- Replace it with higher level of binding
+     -- OUTPUT
+     -- Newly created Ttk_PanedWindow as parameter Widgt
      -- EXAMPLE
      -- -- Create panedwindow My_Paned with pathname .mypaned on the current Tcl interpreter
      -- declare
@@ -136,8 +134,6 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
      --             value is empty.
      -- HISTORY
      -- 8.6.1 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Add My_Frame widget to My_Paned panedwindow
      -- Add(My_Paned, My_Frame);
@@ -157,8 +153,6 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    -- SubWindow - Tk_Widget which will be removed from the Ttk_PanedWindow
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Remove My_Frame from My_Paned panedwindow
    -- Forget(My_Paned, My_Frame);
@@ -180,8 +174,6 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    -- is outside Paned
    -- HISTORY
    -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the name of the element at point (56, 32) in My_Paned panedwindow
    -- Element_Name: constant String := Identify_Element(My_Paned, "56", "32");
@@ -205,8 +197,6 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       -- is outside Paned
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Identify sash at point (43, 86) in My_Paned panedwindow
       -- Sash_Index: constant String := Identify_Sash(My_Paned, "43", "86");
@@ -230,8 +220,6 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       --             value is empty.
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Insert My_Frame at the end of the My_Paned panedwindow
       -- Insert(My_Paned, "end", My_Frame);
@@ -254,8 +242,6 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       -- Options - Options and new values for the selected widget
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the weight of first subwindow in My_Paned panedwindow to 2
       -- Pane(My_Paned, "0", "-weight 2");
@@ -280,8 +266,6 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       -- Otherwise, return list of all options with their values.
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get all available options for first subwindow in My_Paned panedwindow
       -- Options: constant String := Pane(My_Paned, "0");
@@ -303,8 +287,6 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       -- List of widgets inside of Ttk_PanedWindow
       -- HISTORY
       -- 8.6.1 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the names of all subwindows in My_Paned panedwindow
       -- Windows_Names: constant String := Panes(My_Paned);
@@ -324,8 +306,6 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    -- NewPos - New position (in pixels) of the selected sash
    -- HISTORY
    -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Set the position of the first sash in My_Paned panedwindow to 35 pixels from start
    -- SashPos(My_Paned, "0", "35");
@@ -348,8 +328,6 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       -- The current position of the selected sash.
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the current position of the second sash in My_Paned panedwindow
       -- Position: constant String := SashPos(My_Paned, "1");
