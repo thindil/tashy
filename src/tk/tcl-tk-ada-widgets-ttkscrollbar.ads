@@ -57,8 +57,6 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
    -- Newly created Ttk_Scrollbar
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new horizontal scrollbar with pathname .myscroll
    -- My_Scroll: constant Ttk_Scrollbar := Create(".myscroll", "-orient horizontal");
@@ -84,10 +82,10 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
      -- Interp   - Tcl interpreter to which the widget will be created. If null,
      --            the widget will be created in the "contextual" interpreter.
      --            Default value is null.
+     -- OUTPUT
+     -- Newly created Ttk_Scrollbar as parameter Widgt
      -- HISTORY
      -- 8.6.1 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create vertical scrollbar My_Scroll with pathname .myscroll on the current Tcl interpreter
      -- declare
@@ -141,8 +139,6 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
      -- scrollbar setting that corresponds to a given change in slider position.
      -- HISTORY
      -- 8.6.6 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Get the fractional change between current setting of horizontal My_Scroll scrollbar and value 1.0
      -- Fraction: constant String := Scrollbar_Delta(My_Scroll, "1.0", "0.0");
@@ -167,8 +163,6 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
       -- bottom or right, middle is 0.5.
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the fraction in My_Scroll scrollbar point (24, 56)
       -- Fraction_Value: constant String := Fraction(My_Scroll, "24", "56");
@@ -191,8 +185,6 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
       -- associated widget.
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the My_Scroll scrollbar setting
       -- Visible: constant String := Get(My_Scroll);
@@ -214,8 +206,6 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
    --                   widget
    -- HISTORY
    -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Set the visible fraction of associated widget with My_Scroll scrollbar to 0.0 and 0.5
    -- Set(My_Scroll, "0.0", "0.5");
