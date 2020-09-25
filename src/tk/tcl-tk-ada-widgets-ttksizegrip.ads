@@ -57,8 +57,6 @@ package Tcl.Tk.Ada.Widgets.TtkSizeGrip is
    -- Newly created Ttk_SizeGrip
    -- HISTORY
    -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new sizegrip with pathname .mygrip
    -- My_Grip: constant Ttk_SizeGrip := Create(".mygrip");
@@ -84,10 +82,10 @@ package Tcl.Tk.Ada.Widgets.TtkSizeGrip is
      -- Interp   - Tcl interpreter to which the widget will be created. If null,
      --            the widget will be created in the "contextual" interpreter.
      --            Default value is null.
+     -- OUTPUT
+     -- Newly created Ttk_Separator as parameter Widgt
      -- HISTORY
      -- 8.6.6 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create sizegrip My_Grip with pathname .mygrip on the current Tcl interpreter
      -- declare
