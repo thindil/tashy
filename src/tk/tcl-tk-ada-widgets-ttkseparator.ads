@@ -57,8 +57,6 @@ package Tcl.Tk.Ada.Widgets.TtkSeparator is
    -- Newly created Ttk_Separator
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new horizontal separator with pathname .myseparator
    -- My_Separator: constant Ttk_Separator := Create(".myseparator", "-orient horizontal");
@@ -84,10 +82,10 @@ package Tcl.Tk.Ada.Widgets.TtkSeparator is
      -- Interp   - Tcl interpreter to which the widget will be created. If null,
      --            the widget will be created in the "contextual" interpreter.
      --            Default value is null.
+     -- OUTPUT
+     -- Newly created Ttk_Separator as parameter Widgt
      -- HISTORY
      -- 8.6.1 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create vertical separator My_Separator with pathname .myseparator on the current Tcl interpreter
      -- declare
