@@ -39,8 +39,6 @@ package Tcl.Tk.Ada.Widgets.TtkWidget is
    -- found
    -- HISTORY
    -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the name of the element at point (25, 87) in My_Widget widget
    -- Element_Name: constant String := Identify_Element(My_Widget, "25", "87");
@@ -63,8 +61,6 @@ package Tcl.Tk.Ada.Widgets.TtkWidget is
       -- 1 if the selected widget is in the selected state, otherwise 0.
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Check if widget My_Widget is disabled
       -- Is_Disabled: constant String := InState(My_Widget, "disabled");
@@ -85,8 +81,6 @@ package Tcl.Tk.Ada.Widgets.TtkWidget is
       -- StateSpec - Ttk state to set
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Reenable My_Widget
       -- State(My_Widget, "!disabled");
@@ -106,8 +100,6 @@ package Tcl.Tk.Ada.Widgets.TtkWidget is
       -- List of currently enabled state flags
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the current state of My_Widget widget
       -- Current_State: constant String := State(My_Widget);
