@@ -50,8 +50,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- Newly created Ttk_Tree_View
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new treeview with pathname .myview and with columns name and amount
    -- My_View: constant Ttk_Tree_View := Create(".myview", "-columns [list name amount]");
@@ -77,10 +75,10 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
      -- Interp   - Tcl interpreter to which the widget will be created. If null,
      --            the widget will be created in the "contextual" interpreter.
      --            Default value is null.
+     -- OUTPUT
+     -- Newly created Ttk_Tree_View as parameter Widgt
      -- HISTORY
      -- 8.6.1 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create treeview My_View with pathname .myview on the current Tcl interpreter and hide columns headings
      -- declare
@@ -129,8 +127,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
      -- String with list of items which belong to the selected item
      -- HISTORY
      -- 8.6.2 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Get the names of the children of the root item in My_View treeview
      -- Children_Names: constant String := Children(My_View, "{}");
@@ -151,8 +147,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- Options        - Tk options to pass to the column
       -- HISTORY
       -- 8.6.2 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set width of column name in My_View treeview to 200 pixels
       -- Column(My_View, "name", "-width 200");
@@ -183,8 +177,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- the selected column.
       -- HISTORY
       -- 8.6.2 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the minimum width of the column name in My_View
       -- Min_Width: constant String := Column(My_View, "name", "-minwidth");
@@ -204,11 +196,8 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- Delete selected items from the tree view
       -- PARAMETERS
       -- TreeViewWidget - Ttk_Tree_View in which items will be deleted
-      -- ItemsList      - List of items to delete
-      -- HISTORY
+      -- ItemsList      - List of items to delete HISTORY
       -- 8.6.1 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Delete item with index myitem from My_View treeview
       -- Delete(My_View, "[list myitem]");
@@ -231,8 +220,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- ItemsList      - List of items to unlink
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Hide item with index I001 from My_View treeview
       -- Detach(My_View, "[list I001]");
@@ -256,8 +243,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- 0 if item don't exists in the selected TreeViewWidget, otherwise 1.
       -- HISTORY
       -- 8.6.2 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Check if item with index MyItem12 exists in My_View treeview
       -- Item_Exists: constant String := Exists(My_View, "MyItem12");
@@ -277,8 +262,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- Item           - Identifier of the item which will be set as focused
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the focus on item I001 in My_View treeview
       -- Focus(My_View, "I001");
@@ -301,8 +284,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- Identifier ot the currently focused item or empty string if none
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the currently focused item index in My_View treeview
       -- Focus_Index: constant String := Focus(My_View);
@@ -323,8 +304,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- Options        - Tk options for selected header
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Set text displayed on header of tree column to # in My_View treeview
    -- Heading(My_View, "#0", "-text {#}");
@@ -350,8 +329,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- return selected option value
       -- HISTORY
       -- 8.6.1 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- Get the text displayed on header of column name in My_View treeview
       -- Text: constant String := Heading(My_View, "name", "-text");
@@ -378,8 +355,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- Identifier of the column at the selected position
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the identifier of column at point (23, 48) in My_View treeview
       -- Identifier: constant String := Identify_Column(My_View, "23", "48");
@@ -403,8 +378,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- Identifier of the element at the selected position
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the element name at point (12, 87) in My_View treeview
       -- Element_Name: constant String := Identify_Element(My_View, "12", "87");
@@ -428,8 +401,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- Identifier of the item at the selected position
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the identifier of the item at point (76, 23) in My_View treeview
       -- Item_Index: constant String := Identify_Item(My_View, "76", "23");
@@ -454,8 +425,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- "separator", "tree" and "cell"
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the element type at point (45, 89) in My_View treeview
       -- Element_Type: constant String := Identify_Region(My_View, "45", "89");
@@ -478,8 +447,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- Numeric index of the selected item in the selected Ttk_Tree_View
       -- HISTORY
       -- 8.6.2 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the numeric idex of item with index I012 in My_View treeview
       -- Item_Index: constant String := Index(My_View, "I012");
@@ -499,8 +466,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- Options        - Tk options for the item which will be inserted
       -- HISTORY
       -- 8.6.1 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Insert a new top-level item with id myitem1 and text my item text at the end of My_View treeview
       -- Insert(My_View, "{} end -id myitem1 -text {my item text}");
@@ -523,8 +488,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- Index of newly inserted item
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
+      -- EXAMPLE
       -- -- Insert a new top-level item with text my new text at the end of My_View treeview
       -- Item_Index: constant String := Insert(My_View, "{} end -text {my new text}");
       -- COMMANDS
@@ -546,8 +510,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- Options        - Tk options to set for the selected item
       -- HISTORY
       -- 8.6.1 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the text of item I001 to new text in My_View treeview
       -- Item(My_View, "I001", "-text {new text}");
@@ -571,8 +533,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       --                  all options. Default is empty.
       -- HISTORY
       -- 8.6.1 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the text of item I001 from My_View treeview
       -- Text: constant String := Item(My_View, "I001", "-text");
@@ -599,8 +559,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- Index          - Index to which the item will be moved
       -- HISTORY
       -- 8.6.2 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Move item I001 to first row in root in My_View treeview
       -- Move(My_View, "I001", "{}", "0");
@@ -625,8 +583,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- Item is the last element of its parent
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the identifier of next item after item I001 in My_View treeview
       -- Identifier: constant String := Next(My_View, "I001");
@@ -650,8 +606,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- the top of the hiearchy
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the identifier of the parent of item I001 in My_View treeview
       -- Parent_ID := constant String := Parent(My_View, "I001");
@@ -676,8 +630,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- string if Item is the first element of its parent
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the identifier of item before item I010 in My_View treeview
       -- Identifier: constant String := Prev(My_View, "I010");
@@ -698,8 +650,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- Item           - Identifier of the item which will be visible
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Scroll the My_View treeview to item I001
       -- See(My_View, "I001");
@@ -719,8 +669,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- List of items currently selected in TreeViewWidget
       -- HISTORY
       -- 8.6.2 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the selected items from My_View treeview
       -- Selected_Items: constant String := Selection(My_View);
@@ -738,8 +686,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- Items          - Tcl list of items to set as selected
    -- HISTORY
    -- 8.6.2 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Set the selection in My_View treeview to item I001
    -- Selection_Set(My_View, "[list I001]");
@@ -759,8 +705,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- Items          - Tcl list of items to add to the selection
       -- HISTORY
       -- 8.6.2 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Add item I001 to the selection in My_View treeview
       -- Selection_Add(My_View, "[list I001]");
@@ -780,8 +724,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- Items          - Tcl list of items to remove from the selection
       -- HISTORY
       -- 8.6.2 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Remove item I001 from the selection in My_View treeview
       -- Selection_Remove(My_View, "[list I001]");
@@ -802,8 +744,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- Items          - Tcl list of items to toggle
       -- HISTORY
       -- 8.6.2 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Toggle selection state for items I001 and I010 in My_View treeview
       -- Selection_Toggle(My_View, "[list I001 I010]");
@@ -829,8 +769,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- the selected item. Otherwise return value for the selected column
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the value for column name for item I001 in My_View treeview
       -- Item_Name: constant String := Set(My_View, "I001", "name");
@@ -856,8 +794,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- Value          - A new value for the selected Column
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set name of the item I001 in My_View treeview to new name
       -- Set(My_View, "I001", "name", "{new name}");
@@ -881,8 +817,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- Items          - List of the items to which the Tag will be added
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Add tag mytag to the item I001 in My_View treeview
       -- Tag_Add(My_View, "mytag", "[list I001]");
@@ -904,8 +838,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- Script         - Tcl commands which will be bound
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Bind the tcl command MyCommand to tag mytag in My_View treeview when someone left click mouse on it
       -- Tag_Bind(My_View, "mytag", "<1>","MyCommand");
@@ -933,8 +865,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- script associated with the selected Sequence.
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
+      -- EXAMPLE
       -- -- Get the script bounded to left click mouse event on tag mytag in My_View treeview
       -- Script: constant String := Tag_Bind(My_View, "mytag", "<1>");
       -- COMMANDS
@@ -957,8 +888,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- Options        - Tag options with values to set
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Create a new tag with name mytag and text color white in My_View treeview
       -- Tag_Configure(My_View, "mytag", "-foreground white");
@@ -987,8 +916,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- string with all options and their values.
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the configuration for the tag mytag in My_View treeview
       -- Options: constant String := Tag_Configure(My_View, "mytag");
@@ -1019,8 +946,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- the selected tag.
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Check if the item I001 has the tag mytag in My_View treeview
       -- Has_Tag: constant String := Tag_Has(My_View, "mytag", "I001");
@@ -1042,8 +967,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- List of names of all available tags
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the names of all tags in My_View treeview
       -- Tags_Names: constant String := Tag_Names(My_View);
@@ -1065,8 +988,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    --                  value is empty
    -- HISTORY
    -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Remove tag mytag from the item I001 in My_View treeview
    -- Tag_Remove(My_View, "mytag", "I001");
@@ -1090,8 +1011,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- fraction of the TreeViewWidget which is visible.
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the horizontal fraction of the My_View treeview
       -- Horizontal_Fraction: constant String := XView(My_View);
@@ -1113,8 +1032,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    --                  and 1
    -- HISTORY
    -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Show the first half of the My_View treeview
    -- Xview_Move_To(My_View, "0.5");
@@ -1138,8 +1055,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- What           - Type of amount to move. Can be "units" or "pages"
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Move the view in the My_View treeview by 10 units to right
       -- Xview_Scroll(My_View, "10", "units");
@@ -1164,8 +1079,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- fraction of the TreeViewWidget which is visible.
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the vertical fraction of the My_View treeview
       -- Vertical_Fraction: constant String := YView(My_View);
@@ -1187,8 +1100,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    --                  and 1
    -- HISTORY
    -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Show the first half of the My_View treeview
    -- Yview_Move_To(My_View, "0.5");
@@ -1212,8 +1123,6 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- What           - Type of amount to move. Can be "units" or "pages"
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Move the view in the My_View treeview by 10 units to top
       -- Yview_Scroll(My_View, "-10", "units");
