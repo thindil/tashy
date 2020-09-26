@@ -40,8 +40,6 @@ package Tcl.Tk.Ada.Winfo is
    -- Selected information about selected Tk_Widget
    -- HISTORY
    -- 8.6.2 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Check if widget My_Label exists
    -- Exists: constant String := Winfo_Get(My_Label, "exists");
