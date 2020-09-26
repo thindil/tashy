@@ -60,8 +60,6 @@ package Tcl.Tk.Ada.Widgets is
    -- String with name of Tk_Widget
    -- HISTORY
    -- 8.6.0 - Imported from TASH
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the name of widget My_Widget
    -- Name: constant String := Widget_Image(My_Widget);
@@ -80,8 +78,6 @@ package Tcl.Tk.Ada.Widgets is
    -- String with concantenate name
    -- HISTORY
    -- 8.6.0 - Imported from TASH
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create name for a new widget from My_Widget name and .subwindow
    -- New_Name: constant String := My_Widget & ".subwindow";
@@ -103,8 +99,6 @@ package Tcl.Tk.Ada.Widgets is
    -- Tcl interpreter of the specified Tk_Widget
    -- HISTORY
    -- 8.6.0 - Imported from TASH
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the interpreter of My_Widget widget
    -- Interp: constant Tcl_Interp := Get_Interp(My_Widget);
@@ -133,31 +127,29 @@ package Tcl.Tk.Ada.Widgets is
    -- Newly created Tk_Widget
    -- HISTORY
    -- 8.6.0 - Imported from TASH
-   -- TODO
-   -- Replace it with higher level of binding
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Tk_Widget is abstract;
-   -- ****
+      -- ****
 
-   -- ****f* Widgets/Create (procedure)
-   -- FUNCTION
-   -- Creates a new Tk_Widget in the specified interpreter. This is abstract
-   -- function. Its content depends on each child widget code.
-   -- PARAMETERS
-   -- Widgt    - Tk_Widget which will be created
-   -- pathName - Tk path (starts with dot) for the widget
-   -- options  - Options which will be passed to the widget. Default value is
-   --            empty
-   -- Interp   - Tcl interpreter to which the widget will be created. If null,
-   --            the widget will be created in the "contextual" interpreter.
-   --            Default value is null.
-   -- HISTORY
-   -- 8.6.0 - Imported from TASH
-   -- TODO
-   -- Replace it with higher level of binding
-   -- SOURCE
+      -- ****f* Widgets/Create (procedure)
+      -- FUNCTION
+      -- Creates a new Tk_Widget in the specified interpreter. This is abstract
+      -- function. Its content depends on each child widget code.
+      -- PARAMETERS
+      -- Widgt    - Tk_Widget which will be created
+      -- pathName - Tk path (starts with dot) for the widget
+      -- options  - Options which will be passed to the widget. Default value is
+      --            empty
+      -- Interp   - Tcl interpreter to which the widget will be created. If null,
+      --            the widget will be created in the "contextual" interpreter.
+      --            Default value is null.
+      -- OUTPUT
+      -- Newly created Tk_Widget as parameter Widgt
+      -- HISTORY
+      -- 8.6.0 - Imported from TASH
+      -- SOURCE
    procedure Create
      (Widgt: out Tk_Widget; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) is abstract;
@@ -194,8 +186,6 @@ package Tcl.Tk.Ada.Widgets is
       -- Widgt - Tk_Widget to destroy
       -- HISTORY
       -- 8.6.0 - Imported from TASH
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Destroy My_Widget widget
       -- Destroy(My_Widget);
@@ -221,8 +211,6 @@ package Tcl.Tk.Ada.Widgets is
    -- Returns the current value of the specified configuration option.
    -- HISTORY
    -- 8.6.0 - Imported from TASH
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the text of My_Label widget
    -- Text: constant String := cget(My_Label, "-text");
@@ -244,8 +232,6 @@ package Tcl.Tk.Ada.Widgets is
    -- of options).
    -- HISTORY
    -- 8.6.0 - Imported from TASH
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the all available options of the My_Label widget
    -- Options: constant String := configure(My_Label);
@@ -266,8 +252,6 @@ package Tcl.Tk.Ada.Widgets is
      -- options - Options to configure.
      -- HISTORY
      -- 8.6.0 - Imported from TASH
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Configure text to hello world on My_Label widget
      -- configure(My_Label, "-text {hello world}");
@@ -297,8 +281,6 @@ package Tcl.Tk.Ada.Widgets is
       -- Script   - Tcl code which will be binded to the Tk_Widget
       -- HISTORY
       -- 8.6.0 - Imported from TASH
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Exit from the program on press CTRL-q in My_Window widget
       -- Bind(My_Window, "<Control-q>", "exit");
@@ -322,8 +304,6 @@ package Tcl.Tk.Ada.Widgets is
    -- is binded to that event.
    -- HISTORY
    -- 8.6.8 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the script associated with left click in My_Window widget
    -- Script: constant String := Bind(My_Window, "<1>");
@@ -343,8 +323,6 @@ package Tcl.Tk.Ada.Widgets is
    -- TagList - The new list of binding tags for the selected window
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Determine order of bindings for My_Button button as itself (name .button) then all
    -- Bind_Tags(My_Button, "{.button all}");
@@ -366,8 +344,6 @@ package Tcl.Tk.Ada.Widgets is
       -- List of binding tags associated with the selected window
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the order and tags themself for the My_Button widget
       -- Tags_Info: constant String := Bind_Tags(My_Button)
@@ -387,8 +363,6 @@ package Tcl.Tk.Ada.Widgets is
    -- Sequence - Name of Tk event which will be removed from the widget
    -- HISTORY
    -- 8.6.0 - Imported from TASH
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Remove left click binding for My_Window widget
    -- Unbind(My_Window, "<1>");
@@ -410,8 +384,6 @@ package Tcl.Tk.Ada.Widgets is
    -- String with Tcl information about finished action
    -- HISTORY
    -- 8.6.0 - Imported from TASH
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Remove Control-q binding from My_Frame widget and get info about finished action
    -- Result: constant String := Unbind(My_Frame, "<Control-q>");
@@ -433,8 +405,6 @@ package Tcl.Tk.Ada.Widgets is
      --          also reset screen saver state.
      -- HISTORY
      -- 8.6.7 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Ring the bell for the widget My_Window display
      -- Bell(My_Window);
@@ -454,8 +424,6 @@ package Tcl.Tk.Ada.Widgets is
       --        have it. Default value is empty
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the input focus on My_Entry widget
       -- Focus(My_Entry);
@@ -480,8 +448,6 @@ package Tcl.Tk.Ada.Widgets is
       -- no window in this application has focus (depending on the option)
       -- HISTORY
       -- 8.6.3 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the name of the currently focused widget on the default Tcl interpreter
       -- Focused_Name: constant String := Focus;
@@ -503,8 +469,6 @@ package Tcl.Tk.Ada.Widgets is
       -- Interp - Tcl interpreter in which the focus model will be set
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the focus model to follow the mouse on the default Tcl interpreter
       -- Focus_Follows_Mouse;
@@ -523,8 +487,6 @@ package Tcl.Tk.Ada.Widgets is
    -- Name of the next Tk_Widget in focus order
    -- HISTORY
    -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the name of the next widget in focus traversal order after My_Window widget
    -- Widget_Name: constant String := Focus_Next(My_Window);
@@ -545,8 +507,6 @@ package Tcl.Tk.Ada.Widgets is
    -- Name of the previous Tk_Widget in focus order
    -- HISTORY
    -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the name of the previous widget in focus traversal order before My_Button widget
    -- Widget_Name: constant String := Focus_Prev(My_Button);
@@ -570,8 +530,6 @@ package Tcl.Tk.Ada.Widgets is
    -- is set as grab window
    -- HISTORY
    -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the name of currently set as grab window widget on default Tcl interpreter
    -- Widget_Name: constant String := Grab_Current;
@@ -594,8 +552,6 @@ package Tcl.Tk.Ada.Widgets is
    -- as grab window
    -- HISTORY
    -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- Get the name of currently set as grab window widget on display where My_Label is
    -- Widget_Name: constant String := Grab_Current(My_Label);
@@ -614,8 +570,6 @@ package Tcl.Tk.Ada.Widgets is
    -- Widgt - Tk_Widget on which the grab will be released
    -- HISTORY
    -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Release the grab from My_Window widget
    -- Grab_Release(My_Window);
@@ -634,8 +588,6 @@ package Tcl.Tk.Ada.Widgets is
    --          global. Default value is empty
    -- HISTORY
    -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Set the grab to the My_Entry widget
    -- Grab_Set(My_Entry);
@@ -656,8 +608,6 @@ package Tcl.Tk.Ada.Widgets is
       -- local and "global" if the grab is global
       -- HISTORY
       -- 8.6.6 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the status of the grab for My_Window widget
       -- Status: constant String := Grab_Status(My_Window);
@@ -675,8 +625,6 @@ package Tcl.Tk.Ada.Widgets is
    -- Widgt - Tk_Widget to lower
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Move the My_Window widget at the end of stacking order
    -- Lower(My_Window);
@@ -696,8 +644,6 @@ package Tcl.Tk.Ada.Widgets is
    -- BelowThis - Tk_Widget before which Widgt will be inserted
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Move My_Window widget after My_Dialog widget in the stacking order
    -- Lower(My_Window, My_Dialog);
@@ -717,8 +663,6 @@ package Tcl.Tk.Ada.Widgets is
    -- Widgt - Tk_Widget to raise
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Raise My_Window widget at top of the stacking order
    -- Widget_Raise(My_Window);
@@ -738,8 +682,6 @@ package Tcl.Tk.Ada.Widgets is
    -- AboveThis - Tk_Widget above which Widgt will be inserted
    -- HISTORY
    -- 8.6.4 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Raise My_Window widget above My_Dialog widget in the stacking order
    -- Widget_Raise(My_Window, My_Dialog);
@@ -761,8 +703,6 @@ package Tcl.Tk.Ada.Widgets is
    -- Height - The height of current cursor location
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Set the caret to point (24, 56) and height 54 in My_Text widget
    -- Tk_Caret(My_Text, "24", "56", "54");
@@ -785,8 +725,6 @@ package Tcl.Tk.Ada.Widgets is
       -- caret and height of the Widgt
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the coordinates of the caret in My_Window widget
       -- Coordinates: constant String := Tk_Caret(My_Window);
@@ -805,8 +743,6 @@ package Tcl.Tk.Ada.Widgets is
    -- Widgt - Tk_Widget on which display inactivity timer will be reseted
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Reset the user inactivity timer for My_Window widget
    -- Tk_Inactive(My_Window);
@@ -828,8 +764,6 @@ package Tcl.Tk.Ada.Widgets is
    -- Number of miliseconds since last interaction of the user
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the inactivity time for My_Entry widget
    -- Inactive_For: constant String := Tk_Inactive(My_Entry);
@@ -850,8 +784,6 @@ package Tcl.Tk.Ada.Widgets is
    --          point of Widgt display. 1.0 means 72 dpi.
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Set scaling to 1.2 (90 dpi) for My_Window widget
    -- Tk_Scaling(My_Window, "1.2");
@@ -874,8 +806,6 @@ package Tcl.Tk.Ada.Widgets is
       -- of Widgt display
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the scaling factor for the My_Window window
       -- Scaling: constant String := Tk_Scaling(My_Window);
@@ -895,8 +825,6 @@ package Tcl.Tk.Ada.Widgets is
    -- Enabled - If "1" then enable filtering, when "0" disable it
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Enable XIM for My_Window widget
    -- Tk_Use_Input_Methods(M_Window, "true");
@@ -919,8 +847,6 @@ package Tcl.Tk.Ada.Widgets is
       -- "1" if Tk uses XIM otherwise "0"
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the state of XIM for My_Window widget
       -- XIM_Enabled: constant String := Tk_Use_Input_Methods(My_Window);
@@ -942,8 +868,6 @@ package Tcl.Tk.Ada.Widgets is
    -- Name    - Name of variable or window on which Tk_Wait should waits
    -- HISTORY
    -- 8.6.6 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Wait until Tcl variable myvariable will be modified
    -- Tk_Wait("variable", "myvariable");
@@ -964,8 +888,6 @@ package Tcl.Tk.Ada.Widgets is
       -- options - Options for the selected Tcl command
       -- HISTORY
       -- 8.6.0 - Imported from TASH
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Change background of My_Window to black
       -- Execute_Widget_Command(My_Window, "configure", "-background=black");
