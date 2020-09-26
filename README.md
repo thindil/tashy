@@ -1,6 +1,7 @@
 ## Table of Contents
 * [General information](#General-information)
 * [Build the library from sources](#Build-the-library-from-sources)
+* [Docker images](#Docker-images)
 * [Using the library in your project](#Using-the-library-in-your-project)
 * [Versioning](#Versioning)
 * [Documentation](#Documentation)
@@ -104,6 +105,22 @@ To remove all generated/compiled files type in the console:
 `scripts/clean.tcl` (on Unix) or `tclsh scripts\clean.tcl` (on Windows).
 If you have installed [Bob](https://github.com/thindil/bob) you can type:
 `bob clean`
+
+# Docker images
+
+There also are available the Docker images for the library. You can find them
+here:
+
+https://github.com/thindil?tab=packages
+
+* tashy - Linux 64-bit version of the GNAT FSF + library based on the newest
+  Ubuntu release
+* tashy-mingw64 - Windows 64-bit version of GNAT FSF + library based on the
+  newest Ubuntu release
+* tashy-arm64 - Linux ARM 64bit version of GNAT FSF + library based on the
+  Debian stable release
+* tashy-arm7 - Linux ARMv7 32bit version of GNAT FSF + library based on the
+  Debian stable release
 
 ## Using the library in your project
 
