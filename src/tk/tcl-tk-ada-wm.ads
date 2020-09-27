@@ -38,8 +38,6 @@ package Tcl.Tk.Ada.Wm is
    -- Options  - Options for selected action. Default is empty
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Set title of My_Window to My window title
    -- Wm_Set(My_Window, "title", "{My window title}");
