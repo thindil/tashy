@@ -117,16 +117,6 @@ version: 2.0
    flags:
       - windowsonly
 - command:
-   name: docker
-   execute:
-      - sudo docker build -f docker/Dockerfile.linux -t ghcr.io/thindil/tashy:$1 .
-      - sudo docker build -f docker/Dockerfile.mingw64 -t ghcr.io/thindil/tashy-mingw64:$1 .
-      - sudo docker build -f docker/Dockerfile.linuxarm64 -t ghcr.io/thindil/tashy-arm64:$1 .
-      - sudo docker build -f docker/Dockerfile.linuxarm7 -t ghcr.io/thindil/tashy-arm7:$1 .
-   description: Create a Docker images of Tashy (required argument is the library version)
-   flags:
-      - unixonly
-- command:
    name: pretty
    execute:
       - gnatpp -P tashy.gpr
