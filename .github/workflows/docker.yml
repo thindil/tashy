@@ -1,0 +1,36 @@
+name: Create Docker Images
+
+on:
+  release:
+    types: [ published ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Build Linux 64-bit image
+      run: docker image build -f docker/Dockerfile.linux -t ghcr.io/${{ github.repository }}:${{ github.event.release.tag_name }} .
+
+    - name: Build MinGW 64-bit image
+      run: docker image build -f docker/Dockerfile.mingw64 -t ghcr.io/${{ github.repository }}-mingw64:${{ github.event.release.tag_name }} .
+
+    - name: Build Linux Arm64 image
+      run: docker image build -f docker/Dockerfile.linuxarm64 -t ghcr.io/${{ github.repository }}-arm64:${{ github.event.release.tag_name }} .
+
+    - name: Build Linux Arm v7 image
+      run: docker image build -f docker/Dockerfile.linuxarm7 -t ghcr.io/${{ github.repository }}-arm7:${{ github.event.release.tag_name }} .
+
+    - name: Log in to the Github Container Registry
+      run: echo ${{ secrets.DOCKER_PASS }} | docker login ghcr.io --username=${{ github.repository_owner }} --password-stdin
+
+    - name: Upload images to the Github Container Registry
+      run: |
+        docker push ghcr.io/${{ github.repository }}:${{ github.event.release.tag_name }}
+        docker push ghcr.io/${{ github.repository }}-mingw64:${{ github.event.release.tag_name }}
+        docker push ghcr.io/${{ github.repository }}-arm64:${{ github.event.release.tag_name }}
+        docker push ghcr.io/${{ github.repository }}-arm7:${{ github.event.release.tag_name }}
