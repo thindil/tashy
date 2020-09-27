@@ -1,0 +1,28 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    container: ghcr.io/thindil/gnat:2020.1
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Installing Tcl/Tk development libraries and their dependencies
+      run: |
+        apt-get update
+        apt-get install -y tcl-dev tk-dev
+
+    - name: Build
+      run: |
+         scripts/setup.tcl --nogui
+         gprbuild -P tashy.gpr
