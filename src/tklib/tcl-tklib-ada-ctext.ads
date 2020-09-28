@@ -71,8 +71,6 @@ package Tcl.Tklib.Ada.Ctext is
    -- Newly created Tklib_Ctext
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create a new ctext with pathname .mytext and hide line map
    -- My_Ctext: constant Tklib_Ctext := Create(".mytext", "-linemap 0");
@@ -98,10 +96,10 @@ package Tcl.Tklib.Ada.Ctext is
      -- Interp   - Tcl interpreter to which the widget will be created. If null,
      --            the widget will be created in the "contextual" interpreter.
      --            Default value is null.
+     -- OUTPUT
+     -- Newly created Tklib_Ctext as parameter Widgt
      -- HISTORY
      -- 8.6.7 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Create ctext My_Ctext with pathname .mytext and show line map on the current Tcl interpreter
      -- declare
@@ -151,8 +149,6 @@ package Tcl.Tklib.Ada.Ctext is
      -- Keywordlist - List of keywords which will be included in that Class
      -- HISTORY
      -- 8.6.7 - Added
-     -- TODO
-     -- Replace it with higher level of binding
      -- EXAMPLE
      -- -- Add red highlight for some Ada keywords in class adakeywords to My_Ctext ctext
      -- Add_Highlight_Class(My_Ctext, "adakeywords", "red", "[list procedure function with and]");
@@ -175,8 +171,6 @@ package Tcl.Tklib.Ada.Ctext is
       --               highlighted
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Add blue highlight to words which starts with p in class pwords to My_Ctext ctext
       -- Add_Highlight_Class_With_Only_Char_Start(My_Ctext, "pwords", "blue", "p");
@@ -198,8 +192,6 @@ package Tcl.Tklib.Ada.Ctext is
       -- CharString  - Characters which will be highlighted
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Add white highlight to characters p w d in class pwdcolor to My_Ctext ctext
       -- Add_Highlight_Class_For_Special_Chars(My_Ctext, "pwdcolor", "white", "pwd");
@@ -222,8 +214,6 @@ package Tcl.Tklib.Ada.Ctext is
       --               will be highlighted
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Add yellow highlight to words which ends with my in class mycolor to My_Ctext ctext
       -- Add_Highlight_Class_For_Regexp(My_Ctext, "mycolor", "yellow", "[:alnum:]+my");
@@ -242,8 +232,6 @@ package Tcl.Tklib.Ada.Ctext is
       -- CtextWidget - Ctext widget to which selection will be added
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Append current selection to My_Ctext ctext
       -- Append(My_Ctext);
@@ -261,8 +249,6 @@ package Tcl.Tklib.Ada.Ctext is
    --               removed
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Remove all highlight classes from My_Ctext ctext
    -- Clear_Highlight_Classes(My_Ctext);
@@ -279,8 +265,6 @@ package Tcl.Tklib.Ada.Ctext is
    -- CtextWidget - Ctext widget on which tk_textCopy will be called
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Call tk_textCopy on My_Ctext ctext
    -- Copy(My_Ctext);
@@ -297,8 +281,6 @@ package Tcl.Tklib.Ada.Ctext is
    -- CtextWidget - Ctext widget on which tk_textCut will be called
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Call tk_textCut on My_Ctext ctext
    -- Cut(My_Ctext);
@@ -317,8 +299,6 @@ package Tcl.Tklib.Ada.Ctext is
    -- Class       - Name of the highlight class to remove
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Delete highlight class adakeywords from My_Ctext ctext
    -- Delete_Highlight_Class(My_Ctext, "adakeywords");
@@ -338,8 +318,6 @@ package Tcl.Tklib.Ada.Ctext is
       --               disabled
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Disable highlight for C comments in My_Ctext ctext
       -- Disable_Comments(My_Ctext);
@@ -357,8 +335,6 @@ package Tcl.Tklib.Ada.Ctext is
    --               enabled
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Enable highlight for C comments in My_Ctext ctext
    -- Enable_Comments(My_Ctext);
@@ -380,8 +356,6 @@ package Tcl.Tklib.Ada.Ctext is
    --               value is empty.
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Delete first three characters in first row in My_Ctext ctext
    -- Fast_Delete(My_Ctext, "1.0", "1.2");
@@ -422,8 +396,6 @@ package Tcl.Tklib.Ada.Ctext is
       -- List of all highlight classes for the CtextWidget
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the highlight classes for My_Ctext ctext
       -- Highlight_Classes: constant String := Get_Highlight_Classes(My_Ctext);
@@ -442,8 +414,6 @@ package Tcl.Tklib.Ada.Ctext is
    -- EndIndex    - The end index of highlighting text
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Highlight the first three characters in second line in My_Ctext ctext
    -- Highlight(My_Ctext, "2.0", "2.2");
@@ -462,8 +432,6 @@ package Tcl.Tklib.Ada.Ctext is
       -- CtextWidget - Ctext widget on which tk_textPaste will be called
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Call tk_textPaste on My_Ctext ctext
       -- Paste(My_Ctext);
