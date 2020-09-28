@@ -34,8 +34,6 @@ package Tcl.Tklib.Ada.GetString is
    -- Interp: Tcl interpreter to which getstring package will be added
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Init getstring package on My_Interp Tcl interpreter
    -- GetString_Init(My_Interp);
@@ -60,8 +58,6 @@ package Tcl.Tklib.Ada.GetString is
    -- 1 if the user pressed Ok button, otherwise 0
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Create dialog .mygs with text Enter text and and store entered text in mytext Tcl variable on My_Interp interpreter
    -- if Tk_Get_String(My_Interp, ".mygs", "mytext", "{Enter text}") = "1" then
