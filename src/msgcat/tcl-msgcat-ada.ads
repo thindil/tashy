@@ -34,8 +34,6 @@ package Tcl.MsgCat.Ada is
    -- Interp - Tcl interpreter to which msgcat package will be added
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Init msgcat package on My_Interp Tcl interpreter
    -- MsgCat_Init(My_Interp);
@@ -59,8 +57,6 @@ package Tcl.MsgCat.Ada is
    -- it return result string from routine mcunknown
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the translation for string hello world in My_Interp Tcl interpreter
    -- Translation: constant String := Mc(My_Interp, "{hello world}");
@@ -85,8 +81,6 @@ package Tcl.MsgCat.Ada is
       -- True if translation for the selected string exists, otherwise false
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Check if translation for string hello world exists in My_Interp interpreter
       -- Is_Translated: constant String := Mc_Exists(My_Interp, "{hello world}");
@@ -109,8 +103,6 @@ package Tcl.MsgCat.Ada is
       -- Interp  - Tcl interpreter on which the locations will be loaded
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Load translations from directory messages to My_Interp interpreter
       -- Mc_Load("messages", My_Interp);
@@ -135,8 +127,6 @@ package Tcl.MsgCat.Ada is
       -- Amount of loaded translation files
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Load translations from directory messages to My_Interp interpreter
       -- Loaded_Files: constant String := Mc_Load("messages", My_Interp);
@@ -158,8 +148,6 @@ package Tcl.MsgCat.Ada is
       -- Interp - Tcl interpreter on which locales will be cleared
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Remove all locales and their data from My_Interp interpreter
       -- Mc_LoadedLocales_Clear(My_Interp);
@@ -178,8 +166,6 @@ package Tcl.MsgCat.Ada is
    -- The list of the currently loaded locales
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the list of currently loaded locales in My_Interp Tcl interpreter
    -- Loaded_Locales: constant String := Mc_LoadedLocales_Get(My_Interp);
@@ -199,8 +185,6 @@ package Tcl.MsgCat.Ada is
    -- True if the selected Locale was loaded, otherwise false
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Check if locale pl was loaded to My_Interp Tcl interpreter
    -- Is_Loaded: constant String := Mc_LoadedLocales_Present(My_Interp, "pl");
@@ -223,8 +207,6 @@ package Tcl.MsgCat.Ada is
       -- Number of translation files loaded
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set default locale to en_US on My_Interp Tcl interpreter
       -- Mc_Locale("en_US", My_Interp);
@@ -246,8 +228,6 @@ package Tcl.MsgCat.Ada is
       -- The name of the currently set locale
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the name of default locale for My_Interp Tcl interpreter
       -- Locale_Name: constant String := Mc_Locale(My_Interp);
@@ -269,8 +249,6 @@ package Tcl.MsgCat.Ada is
    -- Length of the longest translated string for selected Strings
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Get the longest translation length for string my word and hello world in My_Interp interpreter
    -- Max_Length: constant String := Mc_Max("{my word} {hello word}", My_Interp);
@@ -292,8 +270,6 @@ package Tcl.MsgCat.Ada is
       -- List   - List of source translation source translation ... to add
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the translations hello world to helloword and my word to myword in locale en_US in My_Interp interpreter
       -- Mc_Mset(My_Interp, "en_US", "[list {hello world} {helloword} {my word} {myword}]");
@@ -318,8 +294,6 @@ package Tcl.MsgCat.Ada is
       -- Number of translations set
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the translations hello world to helloword and my word to myword in locale en_US in My_Interp interpreter
       -- Translations_Amount: constant String := Mc_Mset(My_Interp, "en_US", "[list {hello world} {helloword} {my word} {myword}]");
@@ -343,8 +317,6 @@ package Tcl.MsgCat.Ada is
       -- List with locales preferred by the user
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the list of locales for the user on My_Interp Tcl interpreter
       -- Languages_List: constant String := Mc_Preferences(My_Interp);
@@ -368,8 +340,6 @@ package Tcl.MsgCat.Ada is
    --                    is empty
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Set the translation of hello world to helloword1 in locale en_US on My_Interp interpreter
    -- Mc_Set(My_Interp, "en_US", "{hello world}", "{helloword1}");
@@ -400,8 +370,6 @@ package Tcl.MsgCat.Ada is
       -- Value of Translate_String
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the translation of hello world to helloword1 in locale en_US on My_Interp interpreter
       -- Translation: constant String := Mc_Set(My_Interp, "en_US", "{hello world}", "{helloword1}");
@@ -423,8 +391,6 @@ package Tcl.MsgCat.Ada is
       -- Interp - Tcl interpreter on which current state of mgscat will be
       --          cleared
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Clear all msgcat settings on My_Interp Tcl interpreter
       -- Mc_Forget_Package(My_Interp);
