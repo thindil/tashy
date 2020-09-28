@@ -37,8 +37,6 @@ package Tcl.Tklib.Ada.Tooltip is
    -- Interp: Tcl interpreter to which tooltip package will be added
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Init tooltip package on My_Interp Tcl interpreter
    -- Tooltip_Init(My_Interp);
@@ -57,8 +55,6 @@ package Tcl.Tklib.Ada.Tooltip is
    -- Options - Additional tooltip options
    -- HISTORY
    -- 8.6.1 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Add tooltip with text my tooltip text to the My_Label widget
    -- Add(My_Label, "my tooltip text");
@@ -81,8 +77,6 @@ package Tcl.Tklib.Ada.Tooltip is
       --           is current interpreter
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Prevent to show tooltip to all widgets which name starts from .mylabel on current interpreter
       -- Clear("^.mylabel");
@@ -103,8 +97,6 @@ package Tcl.Tklib.Ada.Tooltip is
       -- Interp    - Tcl interpreter on which tooltip delay will be set
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Set the tooltips delay to 2 seconds on current Tcl interpreter
       -- Tooltip_Delay("2000");
@@ -129,8 +121,6 @@ package Tcl.Tklib.Ada.Tooltip is
       -- showing tooltip
       -- HISTORY
       -- 8.6.7 - Added
-      -- TODO
-      -- Replace it with higher level of binding
       -- EXAMPLE
       -- -- Get the tooltip delay on current Tcl interpreter
       -- T_Delay: constant String := Tooltip_Delay;
@@ -150,8 +140,6 @@ package Tcl.Tklib.Ada.Tooltip is
    --          value is current interpreter
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Disable all tooltips on current Tcl interpreter
    -- Disable;
@@ -173,8 +161,6 @@ package Tcl.Tklib.Ada.Tooltip is
    --          value is current interpreter
    -- HISTORY
    -- 8.6.7 - Added
-   -- TODO
-   -- Replace it with higher level of binding
    -- EXAMPLE
    -- -- Enable all tooltips on current Tcl interpreter
    -- Enable;
