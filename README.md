@@ -43,16 +43,12 @@ and vice versa. Included bindings:
 
 To build you need:
 
-* compiler - GCC with enabled Ada support or (best option) GNAT from:
-
-  https://www.adacore.com/download/
-
-  It is recommended to use GNAT GPL 2019 to compile the project.
-  The project does not work with old compilers (like GCC 4.9) since it
-  lacks full support for Ada 2012.
+* compiler - GCC with enabled Ada 2012 support or GNAT GPL version from [AdaCore](https://www.adacore.com/download/).
+  You can also use one of the available Docker images from [DockerAda](https://github.com/thindil/dockerada)
+  project. This last is the recommended option because it is the best tested.
 
 * Tcl/Tk library. Should be available in every Linux distribution. For
-  Windows it is recommended to use MagicSplat version:
+  Windows it is recommended to use the MagicSplat version:
 
   https://www.magicsplat.com/tcl-installer/index.html
 
@@ -60,9 +56,13 @@ To build you need:
 
   https://www.activestate.com/products/tcl/
 
+  If you plan to use the Docker mingw64 image, you will have to build Tcl/Tk
+  by yourself or copy needed libraries there.
+
 * If you want Tklib library binding, you will be need this library too. Should
   be available in every Linux distribution. For Windows it is included in the
-  MagicSplat and ActiveState versions.
+  MagicSplat and ActiveState versions. It isn't needed to build TASHY, only to
+  use its binding.
 
 If you have all the required packages, navigate to the main directory(where
 this file is) to compile and type in the console:
