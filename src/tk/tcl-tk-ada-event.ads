@@ -29,7 +29,7 @@ with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
 package Tcl.Tk.Ada.Event is
 -- ****
 
-   -- ****f* Event/Add
+   -- ****f* Event/Event.Add
    -- FUNCTION
    -- Assiociated the selected virtual event with the selected sequence on the
    -- selected interpreter.
@@ -52,7 +52,7 @@ package Tcl.Tk.Ada.Event is
       Pre => Virtual /= "" and Sequence /= "";
       -- ****
 
-      -- ****f* Event/Delete
+      -- ****f* Event/Event.Delete
       -- FUNCTION
       -- Delete the selected Sequence from the selected Virtual event on the
       -- selected interpreter
@@ -78,7 +78,7 @@ package Tcl.Tk.Ada.Event is
       Pre => Virtual /= "";
       -- ****
 
-      -- ****f* Event/Generate
+      -- ****f* Event/Event.Generate
       -- FUNCTION
       -- Generate the selected event at the selected window
       -- PARAMETERS
@@ -101,7 +101,7 @@ package Tcl.Tk.Ada.Event is
       Pre => EventName /= "";
       -- ****
 
-      -- ****f* Event/Info
+      -- ****f* Event/Event.Info
       -- FUNCTION
       -- Get information about the virtual event(s)
       -- PARAMETERS
