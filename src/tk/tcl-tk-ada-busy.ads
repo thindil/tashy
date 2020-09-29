@@ -29,7 +29,7 @@ with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
 package Tcl.Tk.Ada.Busy is
 -- ****
 
-   -- ****f* TkBusy/Busy
+   -- ****f* TkBusy/TkBusy.Busy
    -- FUNCTION
    -- Set selected window busy
    -- PARAMETERS
@@ -52,7 +52,7 @@ package Tcl.Tk.Ada.Busy is
      Busy;
      -- ****
 
-     -- ****f* TkBusy/cget
+     -- ****f* TkBusy/TkBusy.cget
      -- FUNCTION
      -- Get value of the selected option for the selected busy window
      -- PARAMETERS
@@ -73,7 +73,7 @@ package Tcl.Tk.Ada.Busy is
       Pre => Option /= "";
       -- ****
 
-      -- ****f* TkBusy/Configure (procedure)
+      -- ****f* TkBusy/TkBusy.Configure_(procedure)
       -- FUNCTION
       -- Change configuration of the selected busy Tk_Widget
       -- PARAMETERS
@@ -86,12 +86,14 @@ package Tcl.Tk.Ada.Busy is
       -- Tcl.Tk.Ada.Busy.Configure(My_Main_Window, "-cursor watch");
       -- COMMANDS
       -- tk busy configure window option value ?option2 value2...?
+      -- SEE ALSO
+      -- TkBusy.Configure_(function)
       -- SOURCE
    procedure Configure(Window: in Tk_Widget'Class; Options: in String) with
       Pre => Options /= "";
       -- ****
 
-      -- ****f* TkBusy/Configure (function)
+      -- ****f* TkBusy/TkBusy.Configure_(function)
       -- FUNCTION
       -- Get busy configuration values for the selected busy Tk_Widget
       -- PARAMETERS
@@ -111,12 +113,14 @@ package Tcl.Tk.Ada.Busy is
       -- Options_List: constant String := Tcl.Tk.Ada.Busy.Configure(My_Main_Window);
       -- COMMANDS
       -- tk busy configure window ?option?
+      -- SEE ALSO
+      -- TkBusy.Configure_(procedure)
       -- SOURCE
    function Configure
      (Window: in Tk_Widget'Class; Option: in String := "") return String;
      -- ****
 
-     -- ****f* TkBusy/Current
+     -- ****f* TkBusy/TkBusy.Current
      -- FUNCTION
      -- Get list of Tk_Widgets names currently set as busy
      -- PARAMETERS
@@ -139,7 +143,7 @@ package Tcl.Tk.Ada.Busy is
    function Current(Pattern: in String := "") return String;
    -- ****
 
-   -- ****f* TkBusy/Forget
+   -- ****f* TkBusy/TkBusy.Forget
    -- FUNCTION
    -- Make window enabled again
    -- PARAMETERS
@@ -155,7 +159,7 @@ package Tcl.Tk.Ada.Busy is
    procedure Forget(Window: in Tk_Widget'Class);
    -- ****
 
-   -- ****f* TkBusy/Status
+   -- ****f* TkBusy/TkBusy.Status
    -- FUNCTION
    -- Get information if the selected Tk_Widget is busy or not
    -- PARAMETERS
