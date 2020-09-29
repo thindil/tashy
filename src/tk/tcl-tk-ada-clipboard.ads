@@ -29,7 +29,7 @@ with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
 package Tcl.Tk.Ada.Clipboard is
 -- ****
 
-   -- ****f* Clipboard/Append
+   -- ****f* Clipboard/Clipboard.Append
    -- FUNCTION
    -- Add the selected data to the clipboard
    -- PARAMETERS
@@ -54,7 +54,7 @@ package Tcl.Tk.Ada.Clipboard is
       Ctype in "STRING" | "FILE_NAME";
       -- ****
 
-      -- ****f* Clipboard/Clear
+      -- ****f* Clipboard/Clipboard.Clear
       -- FUNCTION
       -- Claim ownership of the clipboard and remove any previous contents.
       -- PARAMETERS
@@ -67,12 +67,12 @@ package Tcl.Tk.Ada.Clipboard is
       -- COMMANDS
       -- clipboard clear -displayof window
       -- SEE ALSO
-      -- Tcl.Tk.Ada.Clipboard.Selection_Clear
+      -- Clipboard.Selection_Clear
       -- SOURCE
    procedure Clear(Window: in Tk_Widget'Class);
    -- ****
 
-   -- ****f* Clipboard/Get
+   -- ****f* Clipboard/Clipboard.Get
    -- FUNCTION
    -- Retrieve the data from the clipboard
    -- PARAMETERS
@@ -90,7 +90,7 @@ package Tcl.Tk.Ada.Clipboard is
    -- COMMANDS
    -- clipboard get -displayof window -type ctype
    -- SEE ALSO
-   -- Tcl.Tk.Ada.Clipboard.Selection_Get
+   -- Clipboard.Selection_Get
    -- SOURCE
    function Get
      (Window: in Tk_Widget'Class; CType: in String := "STRING")
@@ -98,7 +98,7 @@ package Tcl.Tk.Ada.Clipboard is
       Pre => CType in "STRING" | "FILE_NAME";
       -- ****
 
-      -- ****f* Clipboard/Selection_Clear
+      -- ****f* Clipboard/Clipboard.Selection_Clear
       -- FUNCTION
       -- Clear the selected selection on the selected window's display
       -- PARAMETERS
@@ -115,14 +115,14 @@ package Tcl.Tk.Ada.Clipboard is
       -- COMMANDS
       -- selection clear -displayof window -selection selection
       -- SEE ALSO
-      -- Tcl.Tk.Ada.Clipboard.Clear
+      -- Clipboard.Clear
       -- SOURCE
    procedure Selection_Clear
      (Window: in Tk_Widget'Class; Selection: in String := "PRIMARY") with
       Pre => Selection in "PRIMARY" | "CLIPBOARD";
       -- ****
 
-      -- ****f* Clipboard/Selection_Get
+      -- ****f* Clipboard/Clipboard.Selection_Get
       -- FUNCTION
       -- Retrieve the data from the selected selection on the selected
       -- window's display
@@ -148,7 +148,7 @@ package Tcl.Tk.Ada.Clipboard is
       -- COMMANDS
       -- selection get -displayof window -selection selection -type stype
       -- SEE ALSO
-      -- Tcl.Tk.Ada.Clipboard.Get
+      -- Clipboard.Get
       -- SOURCE
    function Selection_Get
      (Window: in Tk_Widget'Class; Selection: in String := "PRIMARY";
@@ -157,7 +157,7 @@ package Tcl.Tk.Ada.Clipboard is
       SType in "STRING" | "FILE_NAME";
       -- ****
 
-      -- ****f* Clipboard/Selection_Handle
+      -- ****f* Clipboard/Clipboard.Selection_Handle
       -- FUNCTION
       -- Creates a handler for selection requests, such that command will be
       -- executed whenever selection is owned by the selected window
@@ -193,7 +193,7 @@ package Tcl.Tk.Ada.Clipboard is
       Format in "STRING" | "UTF8_STRING" | "ATOM" | "INTEGER";
       -- ****
 
-      -- ****f* Clipboard/Selection_Own (function)
+      -- ****f* Clipboard/Clipboard.Selection_Own_(function)
       -- FUNCTION
       -- Get the name of the window which owns the selected selection in the
       -- selected window's display
@@ -216,6 +216,8 @@ package Tcl.Tk.Ada.Clipboard is
       -- Owner_Name: constant String := Selection_Own(My_Main_Window, "CLIPBOARD");
       -- COMMANDS
       -- selection own -displayof window -selection selection
+      -- SEE ALSO
+      -- Clipboard.Selection_Own_(procedure)
       -- SOURCE
    function Selection_Own
      (Window: in Tk_Widget'Class; Selection: in String := "PRIMARY")
@@ -223,7 +225,7 @@ package Tcl.Tk.Ada.Clipboard is
       Pre => Selection in "PRIMARY" | "CLIPBOARD";
       -- ****
 
-      -- ****f* Clipboard/Selection_Own (procedure)
+      -- ****f* Clipboard/Clipboard.Selection_Own_(procedure)
       -- FUNCTION
       -- Set the Window as a new owner of the selected selection.
       -- PARAMETERS
@@ -245,6 +247,8 @@ package Tcl.Tk.Ada.Clipboard is
       -- Selection_Own(My_Main_Window, "{puts hello}", "CLIPBOARD");
       -- COMMANDS
       -- selection own -command command -selection selection window
+      -- SEE ALSO
+      -- Clipboard.Selection_Own_(function)
       -- SOURCE
    procedure Selection_Own
      (Window: in Tk_Widget'Class; Command: in String := "";
