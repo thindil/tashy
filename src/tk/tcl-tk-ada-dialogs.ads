@@ -32,7 +32,7 @@ package Tcl.Tk.Ada.Dialogs is
 
    type DialogButtons is array(Positive range <>) of Unbounded_String;
 
-   -- ****f* Dialogs/Choose_Color
+   -- ****f* Dialogs/Dialogs.Choose_Color
    -- FUNCTION
    -- Create dialog which allow the user select color.
    -- PARAMETERS
@@ -52,7 +52,7 @@ package Tcl.Tk.Ada.Dialogs is
    function Choose_Color(Options: in String := "") return String;
    -- ****
 
-   -- ****f* Dialogs/Choose_Directory
+   -- ****f* Dialogs/Dialogs.Choose_Directory
    -- FUNCTION
    -- Create dialog which allow the user select directory.
    -- PARAMETERS
@@ -72,7 +72,7 @@ package Tcl.Tk.Ada.Dialogs is
    function Choose_Directory(Options: in String := "") return String;
    -- ****
 
-   -- ****f* Dialogs/Dialog
+   -- ****f* Dialogs/Dialogs.Dialog
    -- FUNCTION
    -- Create the dialog from selected Tk_Toplevel widget
    -- PARAMETERS
@@ -106,7 +106,7 @@ package Tcl.Tk.Ada.Dialogs is
        Default <= Buttons'Length);
       -- ****
 
-      -- ****f* Dialogs/FontChooser_Configure (procedure)
+      -- ****f* Dialogs/Dialogs.FontChooser_Configure_(procedure)
       -- FUNCTION
       -- Set the selected option for the font chooser dialog
       -- PARAMETERS
@@ -120,13 +120,13 @@ package Tcl.Tk.Ada.Dialogs is
       -- COMMANDS
       -- tk fontchooser configure -option value -option value ...
       -- SEE ALSO
-      -- FontChooser_Configure (function)
+      -- Dialogs.FontChooser_Configure_(function)
       -- SOURCE
    procedure FontChooser_Configure(Options: in String) with
       Pre => Options /= "";
       -- ****
 
-      -- ****f* Dialogs/FontChooser_Configure (function)
+      -- ****f* Dialogs/Dialogs.FontChooser_Configure_(function)
       -- FUNCTION
       -- Get the selected option value or values of all options for the font
       -- chooser dialog
@@ -146,12 +146,12 @@ package Tcl.Tk.Ada.Dialogs is
       -- COMMANDS
       -- tk fontchooser configure ?-option?
       -- SEE ALSO
-      -- FontChooser_Configure (procedure)
+      -- Dialogs.FontChooser_Configure_(procedure)
       -- SOURCE
    function FontChooser_Configure(Option: in String := "") return String;
    -- ****
 
-   -- ****f* Dialogs/FontChooser_Hide
+   -- ****f* Dialogs/Dialogs.FontChooser_Hide
    -- FUNCTION
    -- Hide the font chooser dialog
    -- HISTORY
@@ -165,7 +165,7 @@ package Tcl.Tk.Ada.Dialogs is
    procedure FontChooser_Hide;
    -- ****
 
-   -- ****f* Dialogs/FontChooser_Show
+   -- ****f* Dialogs/Dialogs.FontChooser_Show
    -- FUNCTION
    -- Show the font chooser dialog
    -- HISTORY
@@ -179,7 +179,7 @@ package Tcl.Tk.Ada.Dialogs is
    procedure FontChooser_Show;
    -- ****
 
-   -- ****f* Dialogs/Get_Open_File
+   -- ****f* Dialogs/Dialogs.Get_Open_File
    -- FUNCTION
    -- Create dialog which allow the user select file to open.
    -- PARAMETERS
@@ -199,7 +199,7 @@ package Tcl.Tk.Ada.Dialogs is
    function Get_Open_File(Options: in String := "") return String;
    -- ****
 
-   -- ****f* Dialogs/Get_Save_File
+   -- ****f* Dialogs/Dialogs.Get_Save_File
    -- FUNCTION
    -- Create dialog which allow the user select file to save.
    -- PARAMETERS
@@ -220,7 +220,7 @@ package Tcl.Tk.Ada.Dialogs is
    function Get_Save_File(Options: in String := "") return String;
    -- ****
 
-   -- ****f* Dialogs/MessageBox
+   -- ****f* Dialogs/Dialogs.MessageBox
    -- FUNCTION
    -- Create message window and show it to user
    -- PARAMETERS
