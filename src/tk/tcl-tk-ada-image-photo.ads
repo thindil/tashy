@@ -36,7 +36,7 @@ package Tcl.Tk.Ada.Image.Photo is
    type Tk_Photo is new Tk_Widget with private;
    -- ****
 
-   -- ****f* Photo/Create (function)
+   -- ****f* Photo/Photo.Create_(function)
    -- FUNCTION
    -- Creates a new Tk_Photo in the specified interpreter.
    -- PARAMETERS
@@ -56,7 +56,7 @@ package Tcl.Tk.Ada.Image.Photo is
    -- COMMANDS
    -- image create photo name ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- Photo.Create_(procedure)
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
@@ -64,7 +64,7 @@ package Tcl.Tk.Ada.Image.Photo is
       Pre => (pathName /= "");
       -- ****
 
-      -- ****f* Photo/Create (procedure)
+      -- ****f* Photo/Create_(procedure)
       -- FUNCTION
       -- Creates a new Tk_Photo in the specified interpreter.
       -- PARAMETERS
@@ -89,7 +89,7 @@ package Tcl.Tk.Ada.Image.Photo is
       -- COMMANDS
       -- image create photo name ?options?
       -- SEE ALSO
-      -- Create (function)
+      -- Photo.Create_(function)
       -- SOURCE
    procedure Create
      (Widgt: out Tk_Photo; pathName: in String; options: in String := "";
@@ -97,7 +97,7 @@ package Tcl.Tk.Ada.Image.Photo is
       Pre => (pathName /= "");
       -- ****
 
-     -- ****f* Photo/Get_Widget
+     -- ****f* Photo/Photo.Get_Widget
      -- FUNCTION
      -- Get the existing Tk_Photo image
      -- PARAMETERS
@@ -117,7 +117,7 @@ package Tcl.Tk.Ada.Image.Photo is
       return Tk_Photo;
      -- ****
 
-      -- ****f* Photo/Blank
+      -- ****f* Photo/Photo.Blank
       -- FUNCTION
       -- Blank the image, make it transparent
       -- PARAMETERS
@@ -133,7 +133,7 @@ package Tcl.Tk.Ada.Image.Photo is
    procedure Blank(Image: in Tk_Photo);
    -- ****
 
-   -- ****f* Photo/Copy
+   -- ****f* Photo/Photo.Copy
    -- FUNCTION
    -- Copy one photo to another
    -- PARAMETERS
@@ -152,7 +152,7 @@ package Tcl.Tk.Ada.Image.Photo is
    procedure Copy(Source, Target: in Tk_Photo; Options: in String := "");
    -- ****
 
-   -- ****f* Photo/Data
+   -- ****f* Photo/Photo.Data
    -- FUNCTION
    -- Get the selected image data
    -- PARAMETERS
@@ -171,7 +171,7 @@ package Tcl.Tk.Ada.Image.Photo is
    function Data(Image: in Tk_Photo; Options: in String := "") return String;
    -- ****
 
-   -- ****f* Photo/Get
+   -- ****f* Photo/Photo.Get
    -- FUNCTION
    -- Get color of the selected pixel in the image
    -- PARAMETERS
@@ -192,7 +192,7 @@ package Tcl.Tk.Ada.Image.Photo is
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* Photo/Put
+      -- ****f* Photo/Photo.Put
       -- FUNCTION
       -- Set pixels in the selected Tk_Photo to specified data
       -- PARAMETERS
@@ -213,7 +213,7 @@ package Tcl.Tk.Ada.Image.Photo is
       Pre => Data /= "";
       -- ****
 
-      -- ****f* Photo/Read
+      -- ****f* Photo/Photo.Read
       -- FUNCTION
       -- Read selected file and put it data to the selected Tk_Photo
       -- PARAMETERS
@@ -235,7 +235,7 @@ package Tcl.Tk.Ada.Image.Photo is
       Pre => FileName /= "";
       -- ****
 
-      -- ****f* Photo/Redither
+      -- ****f* Photo/Photo.Redither
       -- FUNCTION
       -- Recalculate dithered image
       -- PARAMETERS
@@ -251,7 +251,7 @@ package Tcl.Tk.Ada.Image.Photo is
    procedure Redither(Image: in Tk_Photo);
    -- ****
 
-   -- ****f* Photo/Transparency_Get
+   -- ****f* Photo/Photo.Transparency_Get
    -- FUNCTION
    -- Get the selected pixel transparency in the selected image
    -- PARAMETERS
@@ -273,7 +273,7 @@ package Tcl.Tk.Ada.Image.Photo is
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* Photo/Transparency_Set
+      -- ****f* Photo/Photo.Transparency_Set
       -- FUNCTION
       -- Set transparency for the selected pixel in the selected image
       -- PARAMETERS
@@ -294,7 +294,7 @@ package Tcl.Tk.Ada.Image.Photo is
       Pre => X /= "" and Y /= "" and Enable in "true" | "false";
       -- ****
 
-      -- ****f* Photo/Write
+      -- ****f* Photo/Photo.Write
       -- FUNCTION
       -- Write image to the specified file
       -- PARAMETERS
