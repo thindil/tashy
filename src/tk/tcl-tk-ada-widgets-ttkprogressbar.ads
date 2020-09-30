@@ -104,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
       Pre => pathName /= "";
       -- ****
 
-     -- ****f* TtkProgressbar/Get_Widget
+     -- ****f* TtkProgressBar/Get_Widget
      -- FUNCTION
      -- Get the existing Ttk_Scrollbar widget
      -- PARAMETERS
