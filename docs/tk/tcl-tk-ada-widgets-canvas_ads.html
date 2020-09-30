@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.8 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.9 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -28,50 +28,54 @@
 <li>1. <a href="#robo43">Widgets/Canvas</a></li>
 <ul>
 <li>1.1. <a href="#robo74">Canvas/Tk_Canvas</a></li>
-<li>1.2. <a href="#robo141">Canvas/Add_Tag</a></li>
-<li>1.3. <a href="#robo142">Canvas/BBox</a></li>
-<li>1.4. <a href="#robo143">Canvas/Bind (function)</a></li>
-<li>1.5. <a href="#robo144">Canvas/Bind (procedure)</a></li>
-<li>1.6. <a href="#robo145">Canvas/Canvas_Create (function)</a></li>
-<li>1.7. <a href="#robo146">Canvas/Canvas_Create (procedure)</a></li>
-<li>1.8. <a href="#robo147">Canvas/Canvas_Raise</a></li>
-<li>1.9. <a href="#robo148">Canvas/Canvas_Type</a></li>
-<li>1.10. <a href="#robo149">Canvas/CanvasX</a></li>
-<li>1.11. <a href="#robo150">Canvas/CanvasY</a></li>
-<li>1.12. <a href="#robo151">Canvas/Coords (function)</a></li>
-<li>1.13. <a href="#robo152">Canvas/Coords (procedure)</a></li>
-<li>1.14. <a href="#robo153">Canvas/Create (function)</a></li>
-<li>1.15. <a href="#robo154">Canvas/Create (procedure)</a></li>
-<li>1.16. <a href="#robo155">Canvas/Dchars</a></li>
-<li>1.17. <a href="#robo156">Canvas/Delete</a></li>
-<li>1.18. <a href="#robo157">Canvas/DTag</a></li>
-<li>1.19. <a href="#robo158">Canvas/Find</a></li>
-<li>1.20. <a href="#robo159">Canvas/Focus</a></li>
-<li>1.21. <a href="#robo160">Canvas/Get_Tags</a></li>
-<li>1.22. <a href="#robo161">Canvas/ICursor</a></li>
-<li>1.23. <a href="#robo162">Canvas/IMove</a></li>
-<li>1.24. <a href="#robo163">Canvas/Index</a></li>
-<li>1.25. <a href="#robo164">Canvas/Insert</a></li>
-<li>1.26. <a href="#robo165">Canvas/Item_Cget</a></li>
-<li>1.27. <a href="#robo166">Canvas/Item_Configure (function)</a></li>
-<li>1.28. <a href="#robo167">Canvas/Item_Configure (procedure)</a></li>
-<li>1.29. <a href="#robo168">Canvas/Lower</a></li>
-<li>1.30. <a href="#robo169">Canvas/Move</a></li>
-<li>1.31. <a href="#robo170">Canvas/MoveTo</a></li>
-<li>1.32. <a href="#robo171">Canvas/Postscript</a></li>
-<li>1.33. <a href="#robo172">Canvas/Rchars</a></li>
-<li>1.34. <a href="#robo173">Canvas/Scale</a></li>
-<li>1.35. <a href="#robo174">Canvas/Select_Adjust</a></li>
-<li>1.36. <a href="#robo175">Canvas/Select_Clear</a></li>
-<li>1.37. <a href="#robo176">Canvas/Select_From</a></li>
-<li>1.38. <a href="#robo177">Canvas/Select_Item</a></li>
-<li>1.39. <a href="#robo178">Canvas/Select_To</a></li>
-<li>1.40. <a href="#robo179">Canvas/XView</a></li>
-<li>1.41. <a href="#robo180">Canvas/Xview_Move_To</a></li>
-<li>1.42. <a href="#robo181">Canvas/Xview_Scroll</a></li>
-<li>1.43. <a href="#robo182">Canvas/YView</a></li>
-<li>1.44. <a href="#robo183">Canvas/Yview_Move_To</a></li>
-<li>1.45. <a href="#robo184">Canvas/Yview_Scroll</a></li>
+<li>1.2. <a href="#robo143">Canvas/Add_Tag</a></li>
+<li>1.3. <a href="#robo144">Canvas/BBox</a></li>
+<li>1.4. <a href="#robo145">Canvas/Bind (function)</a></li>
+<li>1.5. <a href="#robo146">Canvas/Bind (procedure)</a></li>
+<li>1.6. <a href="#robo147">Canvas/Canvas_Create (function)</a></li>
+<li>1.7. <a href="#robo148">Canvas/Canvas_Create (procedure)</a></li>
+<li>1.8. <a href="#robo149">Canvas/Canvas_Raise</a></li>
+<li>1.9. <a href="#robo150">Canvas/Canvas_Type</a></li>
+<li>1.10. <a href="#robo151">Canvas/CanvasX</a></li>
+<li>1.11. <a href="#robo152">Canvas/CanvasY</a></li>
+<li>1.12. <a href="#robo153">Canvas/Coords (function)</a></li>
+<li>1.13. <a href="#robo154">Canvas/Coords (procedure)</a></li>
+<li>1.14. <a href="#robo155">Canvas/Create (function)</a></li>
+<li>1.15. <a href="#robo156">Canvas/Create (procedure)</a></li>
+<li>1.16. <a href="#robo157">Canvas/Dchars</a></li>
+<li>1.17. <a href="#robo158">Canvas/Delete</a></li>
+<li>1.18. <a href="#robo159">Canvas/DTag</a></li>
+<li>1.19. <a href="#robo160">Canvas/Find</a></li>
+<li>1.20. <a href="#robo161">Canvas/Focus</a></li>
+<li>1.21. <a href="#robo162">Canvas/Get_Tags</a></li>
+<li>1.22. <a href="#robo163">Canvas/Get_Widget</a></li>
+<li>1.23. <a href="#robo164">Canvas/ICursor</a></li>
+<li>1.24. <a href="#robo165">Canvas/IMove</a></li>
+<li>1.25. <a href="#robo166">Canvas/Index</a></li>
+<li>1.26. <a href="#robo167">Canvas/Insert</a></li>
+<li>1.27. <a href="#robo168">Canvas/Item_Cget</a></li>
+<li>1.28. <a href="#robo169">Canvas/Item_Configure (function)</a></li>
+<li>1.29. <a href="#robo170">Canvas/Item_Configure (procedure)</a></li>
+<li>1.30. <a href="#robo171">Canvas/Lower</a></li>
+<li>1.31. <a href="#robo172">Canvas/Move</a></li>
+<li>1.32. <a href="#robo173">Canvas/MoveTo</a></li>
+<li>1.33. <a href="#robo174">Canvas/Postscript</a></li>
+<li>1.34. <a href="#robo175">Canvas/Rchars</a></li>
+<li>1.35. <a href="#robo176">Canvas/Scale</a></li>
+<ul>
+<li>1.35.1. <a href="./tcl-tk-ada-widgets-scale_ads.html#robo401">Scale/Get_Widget</a></li>
+</ul>
+<li>1.36. <a href="#robo177">Canvas/Select_Adjust</a></li>
+<li>1.37. <a href="#robo178">Canvas/Select_Clear</a></li>
+<li>1.38. <a href="#robo179">Canvas/Select_From</a></li>
+<li>1.39. <a href="#robo180">Canvas/Select_Item</a></li>
+<li>1.40. <a href="#robo181">Canvas/Select_To</a></li>
+<li>1.41. <a href="#robo182">Canvas/XView</a></li>
+<li>1.42. <a href="#robo183">Canvas/Xview_Move_To</a></li>
+<li>1.43. <a href="#robo184">Canvas/Xview_Scroll</a></li>
+<li>1.44. <a href="#robo185">Canvas/YView</a></li>
+<li>1.45. <a href="#robo186">Canvas/Yview_Move_To</a></li>
+<li>1.46. <a href="#robo187">Canvas/Yview_Scroll</a></li>
 </ul>
 </ul>
 <hr />
@@ -93,7 +97,7 @@
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a>.
- Each of the derived widgets redefines the <a href="../cargv_ads.html#robo188">Create</a> subprogram
+ Each of the derived widgets redefines the <a href="../cargv_ads.html#robo191">Create</a> subprogram
  in order to create the correct type of widget.
 </pre>
 <p class="item_name">SOURCE</p>
@@ -102,11 +106,11 @@
 
 <hr />
 <a name="Canvas2fAdd5fTag"></a>
-<a name="robo141"></a><h2>Canvas/Add_Tag [ Subprograms ]</h2>
+<a name="robo143"></a><h2>Canvas/Add_Tag [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo611">Add</a> tag to the selected items in the <a href="#robo74">Tk_Canvas</a>
+<pre> <a href="../tklib/tcl-tklib-ada-tooltip_ads.html#robo571">Add</a> tag to the selected items in the <a href="#robo74">Tk_Canvas</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Add_Tag</strong>
@@ -122,14 +126,11 @@
  Arguments  - Arguments for the SearchSpec. Default value is empty
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">     <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo611">Add</a> tag mytag to the all items below item taged othertag <span class="keyword">in</span> the My_Canvas canvas</span>
+<pre class="source">     <span class="comment">-- <a href="../tklib/tcl-tklib-ada-tooltip_ads.html#robo571">Add</a> tag mytag to the all items below item taged othertag <span class="keyword">in</span> the My_Canvas canvas</span>
      <strong>Add_Tag</strong><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"mytag"</span><span class="sign">,</span> <span class="quote">"below"</span><span class="sign">,</span> <span class="quote">"othertag"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget addtag tag searchSpec ?arguments?
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
@@ -137,11 +138,11 @@
 
 <hr />
 <a name="Canvas2fBBox"></a>
-<a name="robo142"></a><h2>Canvas/BBox [ Subprograms ]</h2>
+<a name="robo144"></a><h2>Canvas/BBox [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> size of bounding box of items with the selected Tag in the
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> size of bounding box of items with the selected Tag in the
  selected <a href="#robo74">Tk_Canvas</a>
 </pre>
 <p class="item_name">SOURCE</p>
@@ -160,14 +161,11 @@
  of bounding box.
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the bouding box for the whole My_Canvas canvas</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the bouding box for the whole My_Canvas canvas</span>
       Bounding_Box<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>BBox</strong><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"all"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget bbox tagOrId ?tagOrId tagOrId ...?
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
@@ -175,11 +173,11 @@
 
 <hr />
 <a name="Canvas2fBind2028function29"></a>
-<a name="robo143"></a><h2>Canvas/Bind (function) [ Subprograms ]</h2>
+<a name="robo145"></a><h2>Canvas/Bind (function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> information about binding to selected items in the selected
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> information about binding to selected items in the selected
  canvas
 </pre>
 <p class="item_name">SOURCE</p>
@@ -199,7 +197,7 @@
  its sequence
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the all binding associated <span class="keyword">with</span> the mytag tag <span class="keyword">in</span> the My_Canvas canvas</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the all binding associated <span class="keyword">with</span> the mytag tag <span class="keyword">in</span> the My_Canvas canvas</span>
       Bindings<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Bind<span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"mytag"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
@@ -208,16 +206,13 @@
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget bind tagOrId ?sequence?
 </pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
-</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
 </pre>
 
 <hr />
 <a name="Canvas2fBind2028procedure29"></a>
-<a name="robo144"></a><h2>Canvas/Bind (procedure) [ Subprograms ]</h2>
+<a name="robo146"></a><h2>Canvas/Bind (procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -245,29 +240,26 @@
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget bind tagOrId sequence command
 </pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
-</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
 </pre>
 
 <hr />
 <a name="Canvas2fCanvas5fCreate2028function29"></a>
-<a name="robo145"></a><h2>Canvas/Canvas_Create (function) [ Subprograms ]</h2>
+<a name="robo147"></a><h2>Canvas/Canvas_Create (function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo611">Add</a> the child to the canvas
+<pre> <a href="../tklib/tcl-tklib-ada-tooltip_ads.html#robo571">Add</a> the child to the canvas
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Canvas_Create
-     <span class="sign">(</span><a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo684">Parent</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo74">Tk_Canvas</a><span class="sign">;</span> Child_Type<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span>
+     <span class="sign">(</span><a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo721">Parent</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo74">Tk_Canvas</a><span class="sign">;</span> Child_Type<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span>
       <span class="keyword">return</span> String <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Child_Type <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo684">Parent</a>     - <a href="#robo74">Tk_Canvas</a> to which child will be added
+<pre> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo721">Parent</a>     - <a href="#robo74">Tk_Canvas</a> to which child will be added
  Child_Type - <a href="./tcl-tk_ads.html#robo14">Tk</a> type of child to add
  Options    - <a href="./tcl-tk_ads.html#robo14">Tk</a> options to create command
 </pre>
@@ -275,8 +267,8 @@
 <pre> Id of the newly created window
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo611">Add</a> button My_Button as a window to My_Canvas canvas at <span class="sign">(</span>0<span class="sign">,</span>0<span class="sign">)</span> point and get it Id</span>
-      Button_Id <span class="sign">:</span><span class="sign">=</span> <span class="keyword">constant</span> Sttring <span class="sign">:</span><span class="sign">=</span> Canvas_Create<span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"window"</span><span class="sign">,</span> <span class="quote">"0 0 -window "</span> <span class="sign">&amp;</span> <a href="./tcl-tk-ada-widgets_ads.html#robo751">Widget_Image</a><span class="sign">(</span>My_Button<span class="sign">)</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">      <span class="comment">-- <a href="../tklib/tcl-tklib-ada-tooltip_ads.html#robo571">Add</a> button My_Button as a window to My_Canvas canvas at <span class="sign">(</span>0<span class="sign">,</span>0<span class="sign">)</span> point and get it Id</span>
+      Button_Id <span class="sign">:</span><span class="sign">=</span> <span class="keyword">constant</span> Sttring <span class="sign">:</span><span class="sign">=</span> Canvas_Create<span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"window"</span><span class="sign">,</span> <span class="quote">"0 0 -window "</span> <span class="sign">&amp;</span> <a href="./tcl-tk-ada-widgets_ads.html#robo789">Widget_Image</a><span class="sign">(</span>My_Button<span class="sign">)</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
 <pre> Canvas_Create (procedure)
@@ -284,35 +276,32 @@
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget create type ?options?
 </pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
-</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.6 - Added
 </pre>
 
 <hr />
 <a name="Canvas2fCanvas5fCreate2028procedure29"></a>
-<a name="robo146"></a><h2>Canvas/Canvas_Create (procedure) [ Subprograms ]</h2>
+<a name="robo148"></a><h2>Canvas/Canvas_Create (procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo611">Add</a> the child to the canvas
+<pre> <a href="../tklib/tcl-tklib-ada-tooltip_ads.html#robo571">Add</a> the child to the canvas
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Canvas_Create
-     <span class="sign">(</span><a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo684">Parent</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo74">Tk_Canvas</a><span class="sign">;</span> Child_Type<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+     <span class="sign">(</span><a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo721">Parent</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo74">Tk_Canvas</a><span class="sign">;</span> Child_Type<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
       Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Child_Type <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo684">Parent</a>     - <a href="#robo74">Tk_Canvas</a> to which child will be added
+<pre> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo721">Parent</a>     - <a href="#robo74">Tk_Canvas</a> to which child will be added
  Child_Type - <a href="./tcl-tk_ads.html#robo14">Tk</a> type of child to add
  Options    - <a href="./tcl-tk_ads.html#robo14">Tk</a> options to create command
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo611">Add</a> button My_Button as a window to My_Canvas canvas at <span class="sign">(</span>0<span class="sign">,</span>0<span class="sign">)</span> point</span>
-      Canvas_Create<span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"window"</span><span class="sign">,</span> <span class="quote">"0 0 -window "</span> <span class="sign">&amp;</span> <a href="./tcl-tk-ada-widgets_ads.html#robo751">Widget_Image</a><span class="sign">(</span>My_Button<span class="sign">)</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">      <span class="comment">-- <a href="../tklib/tcl-tklib-ada-tooltip_ads.html#robo571">Add</a> button My_Button as a window to My_Canvas canvas at <span class="sign">(</span>0<span class="sign">,</span>0<span class="sign">)</span> point</span>
+      Canvas_Create<span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"window"</span><span class="sign">,</span> <span class="quote">"0 0 -window "</span> <span class="sign">&amp;</span> <a href="./tcl-tk-ada-widgets_ads.html#robo789">Widget_Image</a><span class="sign">(</span>My_Button<span class="sign">)</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
 <pre> Canvas_Create (function)
@@ -320,20 +309,17 @@
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget create type ?options?
 </pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
-</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
 </pre>
 
 <hr />
 <a name="Canvas2fCanvas5fRaise"></a>
-<a name="robo147"></a><h2>Canvas/Canvas_Raise [ Subprograms ]</h2>
+<a name="robo149"></a><h2>Canvas/Canvas_Raise [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="#robo169">Move</a> selected item higher in the display
+<pre> <a href="#robo172">Move</a> selected item higher in the display
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Canvas_Raise</strong>
@@ -350,14 +336,11 @@
                 be moved. Default value is empty
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="#robo169">Move</a> items tagged <span class="keyword">with</span> mytag higher <span class="keyword">in</span> My_Canvas canvas</span>
+<pre class="source">      <span class="comment">-- <a href="#robo172">Move</a> items tagged <span class="keyword">with</span> mytag higher <span class="keyword">in</span> My_Canvas canvas</span>
       <strong>Canvas_Raise</strong><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"mytag"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget raise tagOrId ?aboveThis?
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
@@ -365,11 +348,11 @@
 
 <hr />
 <a name="Canvas2fCanvas5fType"></a>
-<a name="robo148"></a><h2>Canvas/Canvas_Type [ Subprograms ]</h2>
+<a name="robo150"></a><h2>Canvas/Canvas_Type [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> type of the selected item in the selected <a href="#robo74">Tk_Canvas</a>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> type of the selected item in the selected <a href="#robo74">Tk_Canvas</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Canvas_Type</strong>
@@ -386,14 +369,11 @@
  return {}
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the type of the item tagged mytag <span class="keyword">in</span> My_Canvas canvas</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the type of the item tagged mytag <span class="keyword">in</span> My_Canvas canvas</span>
       Item_Type<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Canvas_Type</strong><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"mytag"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget type tagOrId
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
@@ -401,11 +381,11 @@
 
 <hr />
 <a name="Canvas2fCanvasX"></a>
-<a name="robo149"></a><h2>Canvas/CanvasX [ Subprograms ]</h2>
+<a name="robo151"></a><h2>Canvas/CanvasX [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> canvas X coordinate for the selected screen X coordinate
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> canvas X coordinate for the selected screen X coordinate
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>CanvasX</strong>
@@ -424,14 +404,11 @@
 <pre> <a href="#robo43">Canvas</a> X coordinate for the selected screen X coordinate
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the X coordinate for screen X coordinate 14 at My_Canvas canvas</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the X coordinate for screen X coordinate 14 at My_Canvas canvas</span>
       X<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>CanvasX</strong><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"14"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget canvasx screenx ?gridspacing?
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
@@ -439,11 +416,11 @@
 
 <hr />
 <a name="Canvas2fCanvasY"></a>
-<a name="robo150"></a><h2>Canvas/CanvasY [ Subprograms ]</h2>
+<a name="robo152"></a><h2>Canvas/CanvasY [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> canvas Y coordinate for the selected screen Y coordinate
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> canvas Y coordinate for the selected screen Y coordinate
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>CanvasY</strong>
@@ -462,14 +439,11 @@
 <pre> <a href="#robo43">Canvas</a> Y coordinate for the selected screen Y coordinate
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the Y coordinate for screen Y coordinate 23 at My_Canvas canvas</span>
-      Y<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <a href="#robo149">CanvasX</a><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"23"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the Y coordinate for screen Y coordinate 23 at My_Canvas canvas</span>
+      Y<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <a href="#robo151">CanvasX</a><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"23"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget canvasy screeny ?gridspacing?
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
@@ -477,14 +451,14 @@
 
 <hr />
 <a name="Canvas2fCoords2028function29"></a>
-<a name="robo151"></a><h2>Canvas/Coords (function) [ Subprograms ]</h2>
+<a name="robo153"></a><h2>Canvas/Coords (function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> coordinates for the selected widgets inside the selected <a href="#robo74">Tk_Canvas</a>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> coordinates for the selected widgets inside the selected <a href="#robo74">Tk_Canvas</a>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo546">Coords</a>
+<pre class="source">   <span class="keyword">function</span> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo564">Coords</a>
      <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo74">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
@@ -496,17 +470,14 @@
 <pre> List with coordinates of the selected items
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the coordinates of the mytag tag <span class="keyword">in</span> My_Canvas canvas</span>
-      Coorditates<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo546">Coords</a><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"mytag"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the coordinates of the mytag tag <span class="keyword">in</span> My_Canvas canvas</span>
+      Coorditates<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo564">Coords</a><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"mytag"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo546">Coords</a> (procedure)
+<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo564">Coords</a> (procedure)
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget coords tagOrId
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
@@ -514,15 +485,15 @@
 
 <hr />
 <a name="Canvas2fCoords2028procedure29"></a>
-<a name="robo152"></a><h2>Canvas/Coords (procedure) [ Subprograms ]</h2>
+<a name="robo154"></a><h2>Canvas/Coords (procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo552">Set</a> new coordinates for the selected widget inside the selected
+<pre> <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> new coordinates for the selected widget inside the selected
  <a href="#robo74">Tk_Canvas</a>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo546">Coords</a>
+<pre class="source">   <span class="keyword">procedure</span> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo564">Coords</a>
      <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo74">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">,</span> Coordinates<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Coordinates <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
@@ -533,17 +504,14 @@
  Coordinates  - New coordinates for the item
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-scale_ads.html#robo552">Set</a> the coordinate for mytag item <span class="keyword">in</span> My_Canvas canvas to <span class="sign">(</span>23<span class="sign">,</span> 56)</span>
-      <a href="./tcl-tk-ada-widgets-scale_ads.html#robo546">Coords</a><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"mytag"</span><span class="sign">,</span> <span class="quote">" 23 56"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> the coordinate for mytag item <span class="keyword">in</span> My_Canvas canvas to <span class="sign">(</span>23<span class="sign">,</span> 56)</span>
+      <a href="./tcl-tk-ada-widgets-scale_ads.html#robo564">Coords</a><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"mytag"</span><span class="sign">,</span> <span class="quote">" 23 56"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo546">Coords</a> (function)
+<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo564">Coords</a> (function)
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget coords tagOrId x y
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
@@ -551,14 +519,14 @@
 
 <hr />
 <a name="Canvas2fCreate2028function29"></a>
-<a name="robo153"></a><h2>Canvas/Create (function) [ Subprograms ]</h2>
+<a name="robo155"></a><h2>Canvas/Create (function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Creates a new <a href="#robo74">Tk_Canvas</a> in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="../cargv_ads.html#robo188">Create</a>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="../cargv_ads.html#robo191">Create</a>
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
       Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo74">Tk_Canvas</a> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
@@ -575,17 +543,14 @@
 <pre> Newly created <a href="#robo74">Tk_Canvas</a>
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="../cargv_ads.html#robo188">Create</a> a new canvas <span class="keyword">with</span> pathname .mycanvas</span>
-   My_Canvas<span class="sign">:</span> <span class="keyword">constant</span> <a href="#robo74">Tk_Canvas</a> <span class="sign">:</span><span class="sign">=</span> <a href="../cargv_ads.html#robo188">Create</a><span class="sign">(</span><span class="quote">".mycanvas"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="comment">-- <a href="../cargv_ads.html#robo191">Create</a> a new canvas <span class="keyword">with</span> pathname .mycanvas</span>
+   My_Canvas<span class="sign">:</span> <span class="keyword">constant</span> <a href="#robo74">Tk_Canvas</a> <span class="sign">:</span><span class="sign">=</span> <a href="../cargv_ads.html#robo191">Create</a><span class="sign">(</span><span class="quote">".mycanvas"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="../cargv_ads.html#robo188">Create</a> (procedure)
+<pre> <a href="../cargv_ads.html#robo191">Create</a> (procedure)
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> canvas pathName ?options?
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.1 - Added
@@ -593,14 +558,14 @@
 
 <hr />
 <a name="Canvas2fCreate2028procedure29"></a>
-<a name="robo154"></a><h2>Canvas/Create (procedure) [ Subprograms ]</h2>
+<a name="robo156"></a><h2>Canvas/Create (procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Creates a new <a href="#robo74">Tk_Canvas</a> in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> <a href="../cargv_ads.html#robo188">Create</a>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> <a href="../cargv_ads.html#robo191">Create</a>
      <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo74">Tk_Canvas</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
       Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
@@ -618,21 +583,18 @@
 <pre> Newly created <a href="#robo74">Tk_Canvas</a> as parameter Widgt
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">     <span class="comment">-- <a href="../cargv_ads.html#robo188">Create</a> canvas My_Canvas <span class="keyword">with</span> pathname .mycanvas and <span class="keyword">with</span> black background on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+<pre class="source">     <span class="comment">-- <a href="../cargv_ads.html#robo191">Create</a> canvas My_Canvas <span class="keyword">with</span> pathname .mycanvas and <span class="keyword">with</span> black background on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
      <span class="keyword">declare</span>
         My_Canvas<span class="sign">:</span> <a href="#robo74">Tk_Canvas</a><span class="sign">;</span>
      <span class="keyword">begin</span>
-        <a href="../cargv_ads.html#robo188">Create</a><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">".mycanvas"</span><span class="sign">,</span> <span class="quote">"-background black"</span><span class="sign">)</span><span class="sign">;</span>
+        <a href="../cargv_ads.html#robo191">Create</a><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">".mycanvas"</span><span class="sign">,</span> <span class="quote">"-background black"</span><span class="sign">)</span><span class="sign">;</span>
      <span class="keyword">end</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="../cargv_ads.html#robo188">Create</a> (function)
+<pre> <a href="../cargv_ads.html#robo191">Create</a> (function)
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> canvas pathName ?options?
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.1 - Added
@@ -640,11 +602,11 @@
 
 <hr />
 <a name="Canvas2fDchars"></a>
-<a name="robo155"></a><h2>Canvas/Dchars [ Subprograms ]</h2>
+<a name="robo157"></a><h2>Canvas/Dchars [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-image_ads.html#robo264">Delete</a> characters in the selected items in the selected range
+<pre> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo702">Delete</a> characters in the selected items in the selected range
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Dchars</strong>
@@ -656,19 +618,16 @@
 <pre> CanvasWidget - <a href="#robo74">Tk_Canvas</a> in which characters will be deleted
  TagOrId      - Tag or Id of the items in which characters will be
                 deleted
- First        - <a href="./tcl-tk-ada-widgets-menu_ads.html#robo316">Index</a> or coordinates where to start deleting characters
- Last         - <a href="./tcl-tk-ada-widgets-menu_ads.html#robo316">Index</a> or coordinates where to end deleting characters.
+ First        - <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a> or coordinates where to start deleting characters
+ Last         - <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a> or coordinates where to end deleting characters.
                 Default value is empty
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-image_ads.html#robo264">Delete</a> characters <span class="keyword">in</span> tag mytag from first to 10th <span class="keyword">in</span> My_Canvas canvas</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo702">Delete</a> characters <span class="keyword">in</span> tag mytag from first to 10th <span class="keyword">in</span> My_Canvas canvas</span>
       <strong>Dchars</strong><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"mytag"</span><span class="sign">,</span> <span class="quote">"0"</span><span class="sign">,</span> <span class="quote">"9"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget dchars tagOrId first ?last?
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
@@ -676,7 +635,7 @@
 
 <hr />
 <a name="Canvas2fDelete"></a>
-<a name="robo156"></a><h2>Canvas/Delete [ Subprograms ]</h2>
+<a name="robo158"></a><h2>Canvas/Delete [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -697,20 +656,17 @@
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget delete ?tagOrId tagOrId ...?
 </pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
-</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
 </pre>
 
 <hr />
 <a name="Canvas2fDTag"></a>
-<a name="robo157"></a><h2>Canvas/DTag [ Subprograms ]</h2>
+<a name="robo159"></a><h2>Canvas/DTag [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-image_ads.html#robo264">Delete</a> selected Tag from items in the selected canvas
+<pre> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo702">Delete</a> selected Tag from items in the selected canvas
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>DTag</strong>
@@ -725,14 +681,11 @@
                 TagOrId. Default value is empty
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-image_ads.html#robo264">Delete</a> tag "mytag" from the all items <span class="keyword">in</span> the My_Canvas canvas</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo702">Delete</a> tag "mytag" from the all items <span class="keyword">in</span> the My_Canvas canvas</span>
       <strong>DTag</strong><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"all"</span><span class="sign">,</span> <span class="quote">"mytag"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget dtag tagOrId ?tagToDelete?
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
@@ -740,7 +693,7 @@
 
 <hr />
 <a name="Canvas2fFind"></a>
-<a name="robo158"></a><h2>Canvas/Find [ Subprograms ]</h2>
+<a name="robo160"></a><h2>Canvas/Find [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -754,10 +707,10 @@
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> CanvasWidget  - <a href="#robo74">Tk_Canvas</a> which will be queried for items
- SearchCommand - <a href="./tcl-tk-ada-widgets-text_ads.html#robo464">Search</a> criteria for items. It is that same as
-                 SearchSpec for <a href="#robo141">Add_Tag</a> procedure.
+ SearchCommand - <a href="./tcl-tk-ada-widgets-text_ads.html#robo482">Search</a> criteria for items. It is that same as
+                 SearchSpec for <a href="#robo143">Add_Tag</a> procedure.
  Arguments    - Arguments for SearchCommand. Must be that same as
-                 arguments for <a href="#robo141">Add_Tag</a> procedure. Default value is
+                 arguments for <a href="#robo143">Add_Tag</a> procedure. Default value is
                  empty
 </pre>
 <p class="item_name">RESULT</p>
@@ -770,20 +723,17 @@
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget find searchCommand ?arguments?
 </pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
-</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
 </pre>
 
 <hr />
 <a name="Canvas2fFocus"></a>
-<a name="robo159"></a><h2>Canvas/Focus [ Subprograms ]</h2>
+<a name="robo161"></a><h2>Canvas/Focus [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo552">Set</a> focused item in the selected canvas
+<pre> <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> focused item in the selected canvas
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Focus</strong><span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo74">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
@@ -796,14 +746,11 @@
                 Default value is empty
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-scale_ads.html#robo552">Set</a> the focus <span class="keyword">in</span> the My_Canvas canvas to item tagged "mytag"</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> the focus <span class="keyword">in</span> the My_Canvas canvas to item tagged "mytag"</span>
       <strong>Focus</strong><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"mytag"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget focus ?tagOrId?
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
@@ -811,11 +758,11 @@
 
 <hr />
 <a name="Canvas2fGet5fTags"></a>
-<a name="robo160"></a><h2>Canvas/Get_Tags [ Subprograms ]</h2>
+<a name="robo162"></a><h2>Canvas/Get_Tags [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> list of tags associated with the selected element in the selected
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> list of tags associated with the selected element in the selected
  canvas
 </pre>
 <p class="item_name">SOURCE</p>
@@ -834,31 +781,57 @@
  any tag, return empty string
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the list of tags associated <span class="keyword">with</span> the item tagged "mytag" <span class="keyword">in</span> the canvas My_Canvas</span>
+<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the list of tags associated <span class="keyword">with</span> the item tagged "mytag" <span class="keyword">in</span> the canvas My_Canvas</span>
    Tags<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Get_Tags</strong><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"mytag"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget gettags tagOrId
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
 </pre>
 
 <hr />
-<a name="Canvas2fICursor"></a>
-<a name="robo161"></a><h2>Canvas/ICursor [ Subprograms ]</h2>
+<a name="Canvas2fGet5fWidget"></a>
+<a name="robo163"></a><h2>Canvas/Get_Widget [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo552">Set</a> insertion cursor in the selected element on selected position
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the existing <a href="#robo74">Tk_Canvas</a> widget
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <strong>Get_Widget</strong>
+     <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo519">Get_Context</a><span class="sign">)</span>
+      <span class="keyword">return</span> <a href="#robo74">Tk_Canvas</a><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
+ Interp   - <a href="../tcl_ads.html#robo10">Tcl</a> interpreter on which the widget exists. Can be empty.
+            Default value is current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter
+</pre>
+<p class="item_name">RESULT</p>
+<pre> Existing <a href="#robo74">Tk_Canvas</a> widget
+</pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">     <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> canvas widget <span class="keyword">with</span> name .mycanvas on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+     My_Canvas<span class="sign">:</span> <span class="keyword">constant</span> <a href="#robo74">Tk_Canvas</a> <span class="sign">:</span><span class="sign">=</span> <strong>Get_Widget</strong><span class="sign">(</span><span class="quote">".mycanvas"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.9 - Added
+</pre>
+
+<hr />
+<a name="Canvas2fICursor"></a>
+<a name="robo164"></a><h2>Canvas/ICursor [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> insertion cursor in the selected element on selected position
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>ICursor</strong>
-     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo74">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">,</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo316">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo316">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo74">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">,</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> CanvasWidget - <a href="#robo74">Tk_Canvas</a> in which insertion cursor will be set
@@ -866,18 +839,15 @@
                 will be set. If some or all elements specified by
                 Tag or Id don't support an insertion cursor, this
                 procedure do nothing
- <a href="./tcl-tk-ada-widgets-menu_ads.html#robo316">Index</a>        - <a href="./tcl-tk-ada-widgets-menu_ads.html#robo316">Index</a> in characters before which an insertion cursor
+ <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a>        - <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a> in characters before which an insertion cursor
                 will be insererted
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-scale_ads.html#robo552">Set</a> the insertion cursor to start <span class="keyword">in</span> the item tagged mytag <span class="keyword">in</span> canvas My_Canvas</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> the insertion cursor to start <span class="keyword">in</span> the item tagged mytag <span class="keyword">in</span> canvas My_Canvas</span>
       <strong>ICursor</strong><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"mytag"</span><span class="sign">,</span> <span class="quote">"0"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget icursor tagOrId index
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
@@ -885,34 +855,31 @@
 
 <hr />
 <a name="Canvas2fIMove"></a>
-<a name="robo162"></a><h2>Canvas/IMove [ Subprograms ]</h2>
+<a name="robo165"></a><h2>Canvas/IMove [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="#robo169">Move</a> index'th coordinate of the selected items to a new location
+<pre> <a href="#robo172">Move</a> index'th coordinate of the selected items to a new location
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>IMove</strong>
-     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo74">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">,</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo316">Index</a><span class="sign">,</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo316">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo74">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">,</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a><span class="sign">,</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> CanvasWidget - <a href="#robo74">Tk_Canvas</a> in which items will be queried
  TagOrId      - Tag or Id of items which coordinates will be moved
- <a href="./tcl-tk-ada-widgets-menu_ads.html#robo316">Index</a>        - <a href="./tcl-tk-ada-widgets-menu_ads.html#robo316">Index</a> of coordinate to move. Each item interprets this
+ <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a>        - <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a> of coordinate to move. Each item interprets this
                 value independently
  X            - A new X coordinate
  Y            - A new Y coordinate
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="#robo169">Move</a> first index <span class="keyword">in</span> the mytag tagged item <span class="keyword">in</span> My_Canvas canvas to position <span class="sign">(</span>15<span class="sign">,</span> 89)</span>
+<pre class="source">      <span class="comment">-- <a href="#robo172">Move</a> first index <span class="keyword">in</span> the mytag tagged item <span class="keyword">in</span> My_Canvas canvas to position <span class="sign">(</span>15<span class="sign">,</span> 89)</span>
       <strong>IMove</strong><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"mytag"</span><span class="sign">,</span> <span class="quote">"0"</span><span class="sign">,</span> <span class="quote">"15"</span><span class="sign">,</span> <span class="quote">"89"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget imove tagOrId index x y
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
@@ -920,11 +887,11 @@
 
 <hr />
 <a name="Canvas2fIndex"></a>
-<a name="robo163"></a><h2>Canvas/Index [ Subprograms ]</h2>
+<a name="robo166"></a><h2>Canvas/Index [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> numerical index of the selected <strong>Index</strong> in the selected items
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> numerical index of the selected <strong>Index</strong> in the selected items
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Index</strong>
@@ -941,14 +908,11 @@
 <pre> Numerical index of the selected <strong>Index</strong> in the selected items
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the index of the first index <span class="keyword">in</span> mytag tagged item <span class="keyword">in</span> My_Canvas canvas</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the index of the first index <span class="keyword">in</span> mytag tagged item <span class="keyword">in</span> My_Canvas canvas</span>
       My_Index<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Index</strong><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"mytag"</span><span class="sign">,</span> <span class="quote">"0"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget index tagOrId index
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
@@ -956,7 +920,7 @@
 
 <hr />
 <a name="Canvas2fInsert"></a>
-<a name="robo164"></a><h2>Canvas/Insert [ Subprograms ]</h2>
+<a name="robo167"></a><h2>Canvas/Insert [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -983,20 +947,17 @@
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget insert tagOrId beforeThis item
 </pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
-</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
 </pre>
 
 <hr />
 <a name="Canvas2fItem5fCget"></a>
-<a name="robo165"></a><h2>Canvas/Item_Cget [ Subprograms ]</h2>
+<a name="robo168"></a><h2>Canvas/Item_Cget [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> configuration option for the selected item in the selected canvas
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> configuration option for the selected item in the selected canvas
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Item_Cget</strong>
@@ -1010,18 +971,15 @@
  <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a>       - <a href="./tcl-tk_ads.html#robo14">Tk</a> option to query
 </pre>
 <p class="item_name">RESULT</p>
-<pre> <a href="./tcl-tk-ada-busy_ads.html#robo514">Current</a> value of the selected option of the selected item. If TagOrId
+<pre> <a href="./tcl-tk-ada-widgets-ttkentry-ttkspinbox_ads.html#robo682">Current</a> value of the selected option of the selected item. If TagOrId
  refers to more than one item, only first item is checked.
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the text from the item tagged mytag <span class="keyword">in</span> My_Canvas canvas</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the text from the item tagged mytag <span class="keyword">in</span> My_Canvas canvas</span>
       <a href="./tcl-tk-ada-widgets-text_ads.html#robo54">Text</a><span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Item_Cget</strong><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"mytag"</span><span class="sign">,</span> <span class="quote">"-text"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget itemcget tagOrId option
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
@@ -1029,7 +987,7 @@
 
 <hr />
 <a name="Canvas2fItem5fConfigure2028function29"></a>
-<a name="robo166"></a><h2>Canvas/Item_Configure (function) [ Subprograms ]</h2>
+<a name="robo169"></a><h2>Canvas/Item_Configure (function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -1053,7 +1011,7 @@
  selected item
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the text of the item tagged mytag <span class="keyword">in</span> My_Canvas canvas</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the text of the item tagged mytag <span class="keyword">in</span> My_Canvas canvas</span>
       <a href="./tcl-tk-ada-widgets-text_ads.html#robo54">Text</a><span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Item_Configure<span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"mytag"</span><span class="sign">,</span> <span class="quote">"-text"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
@@ -1062,16 +1020,13 @@
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget itemconfigure tagOrId ?options?
 </pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
-</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
 </pre>
 
 <hr />
 <a name="Canvas2fItem5fConfigure2028procedure29"></a>
-<a name="robo167"></a><h2>Canvas/Item_Configure (procedure) [ Subprograms ]</h2>
+<a name="robo170"></a><h2>Canvas/Item_Configure (procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -1088,7 +1043,7 @@
  Options      - Options to modify with values for them.
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-scale_ads.html#robo552">Set</a> the text to hello world <span class="keyword">in</span> item tagged mytag <span class="keyword">in</span> My_Canvas canvas</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> the text to hello world <span class="keyword">in</span> item tagged mytag <span class="keyword">in</span> My_Canvas canvas</span>
       Item_Configure<span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"mytag"</span><span class="sign">,</span> <span class="quote">"-text {hello world}"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
@@ -1097,20 +1052,17 @@
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget itemconfigure tagOrId options
 </pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
-</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
 </pre>
 
 <hr />
 <a name="Canvas2fLower"></a>
-<a name="robo168"></a><h2>Canvas/Lower [ Subprograms ]</h2>
+<a name="robo171"></a><h2>Canvas/Lower [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="#robo169">Move</a> selected item lower in the display
+<pre> <a href="#robo172">Move</a> selected item lower in the display
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Lower</strong>
@@ -1127,14 +1079,11 @@
                 be moved. Default value is empty
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="#robo169">Move</a> items tagged mytag <span class="keyword">in</span> My_Canvas canvas</span>
+<pre class="source">      <span class="comment">-- <a href="#robo172">Move</a> items tagged mytag <span class="keyword">in</span> My_Canvas canvas</span>
       <strong>Lower</strong><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"mytag"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget lower tagOrId ?belowThis?
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
@@ -1142,7 +1091,7 @@
 
 <hr />
 <a name="Canvas2fMove"></a>
-<a name="robo169"></a><h2>Canvas/Move [ Subprograms ]</h2>
+<a name="robo172"></a><h2>Canvas/Move [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -1166,20 +1115,17 @@
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget move tagOrId xAmount yAmount
 </pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
-</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
 </pre>
 
 <hr />
 <a name="Canvas2fMoveTo"></a>
-<a name="robo170"></a><h2>Canvas/MoveTo [ Subprograms ]</h2>
+<a name="robo173"></a><h2>Canvas/MoveTo [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="#robo169">Move</a> selected items to the selected position in the selected canvas
+<pre> <a href="#robo172">Move</a> selected items to the selected position in the selected canvas
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>MoveTo</strong>
@@ -1193,14 +1139,11 @@
  YPos         - A new Y coordinate of the items
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="#robo169">Move</a> all items tagged mytag <span class="keyword">in</span> My_Canvas to point <span class="sign">(</span>24<span class="sign">,</span> 42)</span>
+<pre class="source">      <span class="comment">-- <a href="#robo172">Move</a> all items tagged mytag <span class="keyword">in</span> My_Canvas to point <span class="sign">(</span>24<span class="sign">,</span> 42)</span>
       <strong>MoveTo</strong><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"mytag"</span><span class="sign">,</span> <span class="quote">"24"</span><span class="sign">,</span> <span class="quote">"42"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget moveto tagOrId xPos yPos
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
@@ -1208,11 +1151,11 @@
 
 <hr />
 <a name="Canvas2fPostscript"></a>
-<a name="robo171"></a><h2>Canvas/Postscript [ Subprograms ]</h2>
+<a name="robo174"></a><h2>Canvas/Postscript [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-event_ads.html#robo236">Generate</a> a <strong>Postscript</strong> representation of part or all of the canvas
+<pre> Generate a <strong>Postscript</strong> representation of part or all of the canvas
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Postscript</strong>
@@ -1235,20 +1178,17 @@
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget postscript options
 </pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
-</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
 </pre>
 
 <hr />
 <a name="Canvas2fRchars"></a>
-<a name="robo172"></a><h2>Canvas/Rchars [ Subprograms ]</h2>
+<a name="robo175"></a><h2>Canvas/Rchars [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> text at selected position in the selected items. How text is
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo479">Replace</a> text at selected position in the selected items. How text is
  replaced depends on the item type
 </pre>
 <p class="item_name">SOURCE</p>
@@ -1266,14 +1206,11 @@
  <a href="./tcl-tk-ada-widgets-text_ads.html#robo54">Text</a>         - <a href="./tcl-tk-ada-widgets-text_ads.html#robo54">Text</a> to replace
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> text <span class="keyword">in</span> items tagged mytag between first and third character <span class="keyword">with</span> text hello world <span class="keyword">in</span> My_Canvas</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo479">Replace</a> text <span class="keyword">in</span> items tagged mytag between first and third character <span class="keyword">with</span> text hello world <span class="keyword">in</span> My_Canvas</span>
       <strong>Rchars</strong><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"mytag"</span><span class="sign">,</span> <span class="quote">"0"</span><span class="sign">,</span> <span class="quote">"2"</span><span class="sign">,</span> <span class="quote">"{hello world}"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget rchars tagOrId first last <a href="./tcl-tk-ada-widgets-text_ads.html#robo54">Text</a>
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
@@ -1281,7 +1218,7 @@
 
 <hr />
 <a name="Canvas2fScale"></a>
-<a name="robo173"></a><h2>Canvas/Scale [ Subprograms ]</h2>
+<a name="robo176"></a><h2>Canvas/Scale [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -1311,16 +1248,13 @@
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget scale tagOrId xOrigin yOrigin xScale yScale
 </pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
-</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
 </pre>
 
 <hr />
 <a name="Canvas2fSelect5fAdjust"></a>
-<a name="robo174"></a><h2>Canvas/Select_Adjust [ Subprograms ]</h2>
+<a name="robo177"></a><h2>Canvas/Select_Adjust [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -1328,14 +1262,14 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Select_Adjust</strong>
-     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo74">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">,</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo316">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo316">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo74">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">,</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> CanvasWidget - <a href="#robo74">Tk_Canvas</a> in which selection will be resized
  TagOrId      - Tag or Id of the item in which selection will be
                 resized
- <a href="./tcl-tk-ada-widgets-menu_ads.html#robo316">Index</a>        - New index to which selection will be done in the item
+ <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a>        - New index to which selection will be done in the item
 </pre>
 <p class="item_name">EXAMPLE</p>
 <pre class="source">      <span class="comment">-- Resize selection to 10th index <span class="keyword">in</span> item tagged mytag <span class="keyword">in</span> My_Canvas canvas</span>
@@ -1344,20 +1278,17 @@
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget select adjust tagOrId index
 </pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
-</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
 </pre>
 
 <hr />
 <a name="Canvas2fSelect5fClear"></a>
-<a name="robo175"></a><h2>Canvas/Select_Clear [ Subprograms ]</h2>
+<a name="robo178"></a><h2>Canvas/Select_Clear [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-option_ads.html#robo349">Clear</a> the selection in the selected <a href="#robo74">Tk_Canvas</a>
+<pre> <a href="./tcl-tk-ada-option_ads.html#robo359">Clear</a> the selection in the selected <a href="#robo74">Tk_Canvas</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Select_Clear</strong><span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo74">Tk_Canvas</a><span class="sign">)</span><span class="sign">;</span>
@@ -1366,14 +1297,11 @@
 <pre> CanvasWidget - <a href="#robo74">Tk_Canvas</a> in which selection will be cleared
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-option_ads.html#robo349">Clear</a> selection <span class="keyword">in</span> My_Canvas canvas</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-option_ads.html#robo359">Clear</a> selection <span class="keyword">in</span> My_Canvas canvas</span>
       <strong>Select_Clear</strong><span class="sign">(</span>My_Canvas<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget select clear
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
@@ -1381,33 +1309,30 @@
 
 <hr />
 <a name="Canvas2fSelect5fFrom"></a>
-<a name="robo176"></a><h2>Canvas/Select_From [ Subprograms ]</h2>
+<a name="robo179"></a><h2>Canvas/Select_From [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo552">Set</a> the selection anchor point for the canvas in the selected item at
+<pre> <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> the selection anchor point for the canvas in the selected item at
  selected character. This procedure does not change selection it just
- set fixed end selection for future <a href="#robo178">Select_To</a> procedure
+ set fixed end selection for future <a href="#robo181">Select_To</a> procedure
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Select_From</strong>
-     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo74">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">,</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo316">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo316">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo74">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">,</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> CanvasWidget - <a href="#robo74">Tk_Canvas</a> in which the selection will be set
  TagOrId      - Tag or Id of the item in which the selection will be set
- <a href="./tcl-tk-ada-widgets-menu_ads.html#robo316">Index</a>        - <a href="./tcl-tk-ada-widgets-menu_ads.html#robo316">Index</a> of character before which the selection will be set
+ <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a>        - <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a> of character before which the selection will be set
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-scale_ads.html#robo552">Set</a> the selection anchor point at first index <span class="keyword">in</span> item tagged mytag <span class="keyword">in</span> My_Canvas canvas</span>
+<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> the selection anchor point at first index <span class="keyword">in</span> item tagged mytag <span class="keyword">in</span> My_Canvas canvas</span>
    <strong>Select_From</strong><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"mytag"</span><span class="sign">,</span> <span class="quote">"0"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget select from tagOrId index
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
@@ -1415,11 +1340,11 @@
 
 <hr />
 <a name="Canvas2fSelect5fItem"></a>
-<a name="robo177"></a><h2>Canvas/Select_Item [ Subprograms ]</h2>
+<a name="robo180"></a><h2>Canvas/Select_Item [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> Id of the selected item in the selected canvas
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> Id of the selected item in the selected canvas
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Select_Item</strong><span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo74">Tk_Canvas</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
@@ -1431,14 +1356,11 @@
 <pre> Id of the selected item or {} if no item selected in the CanvasWidget
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the Id of the selected item <span class="keyword">in</span> My_Canvas canvas</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the Id of the selected item <span class="keyword">in</span> My_Canvas canvas</span>
       Item_Id<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Select_Item</strong><span class="sign">(</span>My_Canvas<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget select item
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
@@ -1446,33 +1368,30 @@
 
 <hr />
 <a name="Canvas2fSelect5fTo"></a>
-<a name="robo178"></a><h2>Canvas/Select_To [ Subprograms ]</h2>
+<a name="robo181"></a><h2>Canvas/Select_To [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo552">Set</a> selection end for the canvas in the selected item at the selected
- character. Starting point is set by the most recent <a href="#robo174">Select_Adjust</a> or
- <a href="#robo176">Select_From</a> procedures
+<pre> <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> selection end for the canvas in the selected item at the selected
+ character. Starting point is set by the most recent <a href="#robo177">Select_Adjust</a> or
+ <a href="#robo179">Select_From</a> procedures
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Select_To</strong>
-     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo74">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">,</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo316">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo316">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo74">Tk_Canvas</a><span class="sign">;</span> TagOrId<span class="sign">,</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> TagOrId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> CanvasWidget - <a href="#robo74">Tk_Canvas</a> in which selection will be set
  TagOrId      - Tag or Id of the item in which selection will be set
- <a href="./tcl-tk-ada-widgets-menu_ads.html#robo316">Index</a>        - <a href="./tcl-tk-ada-widgets-menu_ads.html#robo316">Index</a> of character which will be added to the selection
+ <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a>        - <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a> of character which will be added to the selection
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-scale_ads.html#robo552">Set</a> the end of the selection to 10th index <span class="keyword">in</span> mytag tagged item <span class="keyword">in</span> My_Canvas canvas</span>
+<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> the end of the selection to 10th index <span class="keyword">in</span> mytag tagged item <span class="keyword">in</span> My_Canvas canvas</span>
    <strong>Select_To</strong><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"mytag"</span><span class="sign">,</span> <span class="quote">"9"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget select to tagOrId index
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
@@ -1480,11 +1399,11 @@
 
 <hr />
 <a name="Canvas2fXView"></a>
-<a name="robo179"></a><h2>Canvas/XView [ Subprograms ]</h2>
+<a name="robo182"></a><h2>Canvas/XView [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> which horizontal fraction of the canvas is visible
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> which horizontal fraction of the canvas is visible
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>XView</strong><span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo74">Tk_Canvas</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
@@ -1498,17 +1417,14 @@
  fraction of the CanvasWidget which is visible.
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the horizontal fraction of the My_Canvas canvas</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the horizontal fraction of the My_Canvas canvas</span>
       Horizontal_Fraction<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>XView</strong><span class="sign">(</span>My_Canvas<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo182">YView</a>
+<pre> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo742">YView</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget xview
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
@@ -1516,7 +1432,7 @@
 
 <hr />
 <a name="Canvas2fXview5fMove5fTo"></a>
-<a name="robo180"></a><h2>Canvas/Xview_Move_To [ Subprograms ]</h2>
+<a name="robo183"></a><h2>Canvas/Xview_Move_To [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -1525,26 +1441,23 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Xview_Move_To</strong>
-     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo74">Tk_Canvas</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo637">Fraction</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo637">Fraction</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo74">Tk_Canvas</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo406">Fraction</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo406">Fraction</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> CanvasWidget - <a href="#robo74">Tk_Canvas</a> which view will be adjusted
- <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo637">Fraction</a>     - <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo637">Fraction</a> of the CanvasWidget to move. Must be between 0
+ <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo406">Fraction</a>     - <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo406">Fraction</a> of the CanvasWidget to move. Must be between 0
                 and 1
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="../cargv_ads.html#robo191">Show</a> the first half of the canvas My_Canvas</span>
+<pre class="source">   <span class="comment">-- <a href="../cargv_ads.html#robo194">Show</a> the first half of the canvas My_Canvas</span>
    <strong>Xview_Move_To</strong><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"0.5"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo706">Yview_Move_To</a>
+<pre> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo743">Yview_Move_To</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget xview moveto fraction
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.3 - Added
@@ -1552,7 +1465,7 @@
 
 <hr />
 <a name="Canvas2fXview5fScroll"></a>
-<a name="robo181"></a><h2>Canvas/Xview_Scroll [ Subprograms ]</h2>
+<a name="robo184"></a><h2>Canvas/Xview_Scroll [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -1570,17 +1483,14 @@
  What         - Type of amount to move. Can be "units" or "pages"
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="#robo169">Move</a> the view <span class="keyword">in</span> the My_Canvas canvas by 10 units to right</span>
+<pre class="source">      <span class="comment">-- <a href="#robo172">Move</a> the view <span class="keyword">in</span> the My_Canvas canvas by 10 units to right</span>
       <strong>Xview_Scroll</strong><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"10"</span><span class="sign">,</span> <span class="quote">"units"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo492">Yview_Scroll</a>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo510">Yview_Scroll</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget xview scroll number what
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
@@ -1588,11 +1498,11 @@
 
 <hr />
 <a name="Canvas2fYView"></a>
-<a name="robo182"></a><h2>Canvas/YView [ Subprograms ]</h2>
+<a name="robo185"></a><h2>Canvas/YView [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> which vertical fraction of the canvas is visible
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> which vertical fraction of the canvas is visible
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>YView</strong><span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo74">Tk_Canvas</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
@@ -1606,17 +1516,14 @@
  fraction of the CanvasWidget which is visible.
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the vertical fraction of the My_Canvas canvas</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the vertical fraction of the My_Canvas canvas</span>
       Vertical_Fraction<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>YView</strong><span class="sign">(</span>My_Canvas<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo487">XView</a>
+<pre> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo739">XView</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget yview
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
@@ -1624,7 +1531,7 @@
 
 <hr />
 <a name="Canvas2fYview5fMove5fTo"></a>
-<a name="robo183"></a><h2>Canvas/Yview_Move_To [ Subprograms ]</h2>
+<a name="robo186"></a><h2>Canvas/Yview_Move_To [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -1633,26 +1540,23 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Yview_Move_To</strong>
-     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo74">Tk_Canvas</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo637">Fraction</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo637">Fraction</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+     <span class="sign">(</span>CanvasWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo74">Tk_Canvas</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo406">Fraction</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo406">Fraction</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> CanvasWidget - <a href="#robo74">Tk_Canvas</a> which view will be adjusted
- <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo637">Fraction</a>     - <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo637">Fraction</a> of the CanvasWidget to move. Must be between 0
+ <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo406">Fraction</a>     - <a href="./tcl-tk-ada-widgets-scrollbar_ads.html#robo406">Fraction</a> of the CanvasWidget to move. Must be between 0
                 and 1
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="../cargv_ads.html#robo191">Show</a> the first half of the canvas My_Canvas</span>
+<pre class="source">   <span class="comment">-- <a href="../cargv_ads.html#robo194">Show</a> the first half of the canvas My_Canvas</span>
    <strong>Yview_Move_To</strong><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"0.5"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo488">Xview_Move_To</a>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo506">Xview_Move_To</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget yview moveto fraction
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
@@ -1660,7 +1564,7 @@
 
 <hr />
 <a name="Canvas2fYview5fScroll"></a>
-<a name="robo184"></a><h2>Canvas/Yview_Scroll [ Subprograms ]</h2>
+<a name="robo187"></a><h2>Canvas/Yview_Scroll [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo43">Canvas</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -1678,17 +1582,14 @@
  What         - Type of amount to move. Can be "units" or "pages"
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="#robo169">Move</a> the view <span class="keyword">in</span> the My_Canvas canvas by 10 units to top</span>
+<pre class="source">      <span class="comment">-- <a href="#robo172">Move</a> the view <span class="keyword">in</span> the My_Canvas canvas by 10 units to top</span>
       <strong>Yview_Scroll</strong><span class="sign">(</span>My_Canvas<span class="sign">,</span> <span class="quote">"-10"</span><span class="sign">,</span> <span class="quote">"units"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo489">Xview_Scroll</a>
+<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo611">Xview_Scroll</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> CanvasWidget yview scroll number what
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.4 - Added
@@ -1696,7 +1597,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-canvas.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Mon Aug 31 2020 10:08:49
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-canvas.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 30 2020 09:32:20
 </p>
 </div> <!-- footer -->
 </body>

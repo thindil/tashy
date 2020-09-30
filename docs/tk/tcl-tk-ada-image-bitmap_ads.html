@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.8 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.9 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,9 +27,10 @@
 <ul>
 <li>1. <a href="#robo5">Image/Bitmap</a></li>
 <ul>
-<li>1.1. <a href="#robo72">Bitmap/Tk_Bitmap</a></li>
-<li>1.2. <a href="#robo135">Bitmap/Create (function)</a></li>
-<li>1.3. <a href="#robo136">Bitmap/Create (procedure)</a></li>
+<li>1.1. <a href="#robo72">Bitmap/Bitmap.Tk_Bitmap</a></li>
+<li>1.2. <a href="#robo135">Bitmap/Bitmap.Create_(function)</a></li>
+<li>1.3. <a href="#robo136">Bitmap/Bitmap.Create_(procedure)</a></li>
+<li>1.4. <a href="#robo137">Bitmap/Bitmap.Get_Widget</a></li>
 </ul>
 </ul>
 <hr />
@@ -45,31 +46,31 @@
 </pre>
 
 <hr />
-<a name="Bitmap2fTk5fBitmap"></a>
-<a name="robo72"></a><h2>Bitmap/Tk_Bitmap [ Types ]</h2>
+<a name="Bitmap2fBitmap2eTk5fBitmap"></a>
+<a name="robo72"></a><h2>Bitmap/Bitmap.Tk_Bitmap [ Types ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">Bitmap</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a>.
- Each of the derived widgets redefines the <a href="../cargv_ads.html#robo188">Create</a> subprogram
+ Each of the derived widgets redefines the <a href="../cargv_ads.html#robo191">Create</a> subprogram
  in order to create the correct type of widget.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">type</span> <strong>Tk_Bitmap</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">type</span> Tk_Bitmap <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
 </pre>
 
 <hr />
-<a name="Bitmap2fCreate2028function29"></a>
-<a name="robo135"></a><h2>Bitmap/Create (function) [ Subprograms ]</h2>
+<a name="Bitmap2fBitmap2eCreate5f28function29"></a>
+<a name="robo135"></a><h2>Bitmap/Bitmap.Create_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">Bitmap</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Creates a new <a href="#robo72">Tk_Bitmap</a> in the specified interpreter.
+<pre> Creates a new Tk_Bitmap in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <a href="../cargv_ads.html#robo188">Create</a>
+<pre class="source">   <span class="keyword">function</span> <a href="../cargv_ads.html#robo191">Create</a>
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo72">Tk_Bitmap</a> <span class="keyword">with</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> Tk_Bitmap <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> <span class="sign">(</span>pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
@@ -81,38 +82,38 @@
             Default value is null.
 </pre>
 <p class="item_name">RESULT</p>
-<pre> Newly created <a href="#robo72">Tk_Bitmap</a>
+<pre> Newly created Tk_Bitmap
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="../cargv_ads.html#robo188">Create</a> bitmap image <span class="keyword">with</span> name arrow-up from the code on default interpreter</span>
-   Arrow_Up<span class="sign">:</span> <span class="keyword">constant</span> <a href="#robo72">Tk_Bitmap</a> <span class="sign">:</span><span class="sign">=</span> <a href="../cargv_ads.html#robo188">Create</a><span class="sign">(</span><span class="quote">"arrow-up"</span><span class="sign">,</span> <span class="quote">"-data {#define arrowUp_width 7  #define arrowUp_height 4 static char arrowUp_bits[] = { 0x08<span class="sign">,</span> 0x1c<span class="sign">,</span> 0x3e<span class="sign">,</span> 0x7f }<span class="sign">;</span>}"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="comment">-- <a href="../cargv_ads.html#robo191">Create</a> bitmap image <span class="keyword">with</span> name arrow-up from the code on default interpreter</span>
+   Arrow_Up<span class="sign">:</span> <span class="keyword">constant</span> Tk_Bitmap <span class="sign">:</span><span class="sign">=</span> <a href="../cargv_ads.html#robo191">Create</a><span class="sign">(</span><span class="quote">"arrow-up"</span><span class="sign">,</span> <span class="quote">"-data {#define arrowUp_width 7  #define arrowUp_height 4 static char arrowUp_bits[] = { 0x08<span class="sign">,</span> 0x1c<span class="sign">,</span> 0x3e<span class="sign">,</span> 0x7f }<span class="sign">;</span>}"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="#robo136">Bitmap.Create_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> image create bitmap name ?options?
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.1 - Added
 </pre>
 
 <hr />
-<a name="Bitmap2fCreate2028procedure29"></a>
-<a name="robo136"></a><h2>Bitmap/Create (procedure) [ Subprograms ]</h2>
+<a name="Bitmap2fBitmap2eCreate5f28procedure29"></a>
+<a name="robo136"></a><h2>Bitmap/Bitmap.Create_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">Bitmap</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Creates a new <a href="#robo72">Tk_Bitmap</a> in the specified interpreter.
+<pre> Creates a new Tk_Bitmap in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <a href="../cargv_ads.html#robo188">Create</a>
-     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo72">Tk_Bitmap</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> <a href="../cargv_ads.html#robo191">Create</a>
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> Tk_Bitmap<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
       Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> <span class="sign">(</span>pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Widgt    - <a href="#robo72">Tk_Bitmap</a> which will be created
+<pre> Widgt    - Tk_Bitmap which will be created
  pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> name of the image
  options  - Options which will be passed to the image. Default value is
             empty
@@ -121,29 +122,58 @@
             Default value is null.
 </pre>
 <p class="item_name">OUTPUT</p>
-<pre> Newly created <a href="#robo72">Tk_Bitmap</a> as the Widgt parameter
+<pre> Newly created Tk_Bitmap as the Widgt parameter
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="../cargv_ads.html#robo188">Create</a> bitmap image <span class="keyword">with</span> name arrow-down from the code on default interpreter</span>
+<pre class="source">      <span class="comment">-- <a href="../cargv_ads.html#robo191">Create</a> bitmap image <span class="keyword">with</span> name arrow-down from the code on default interpreter</span>
       <span class="keyword">declare</span>
-         Arrow_Down<span class="sign">:</span> <a href="#robo72">Tk_Bitmap</a><span class="sign">;</span>
+         Arrow_Down<span class="sign">:</span> Tk_Bitmap<span class="sign">;</span>
       <span class="keyword">begin</span>
-         <a href="../cargv_ads.html#robo188">Create</a><span class="sign">(</span>Arror_Down<span class="sign">,</span> <span class="quote">"arrow-down"</span><span class="sign">,</span> <span class="quote">"-data {#define arrowDown_width 7  #define arrowDown_height 4 static char arrowDown_bits[] = { 0x7f<span class="sign">,</span> 0x3e<span class="sign">,</span> 0x1c<span class="sign">,</span> 0x08 }<span class="sign">;</span>}"</span><span class="sign">)</span><span class="sign">;</span>
+         <a href="../cargv_ads.html#robo191">Create</a><span class="sign">(</span>Arror_Down<span class="sign">,</span> <span class="quote">"arrow-down"</span><span class="sign">,</span> <span class="quote">"-data {#define arrowDown_width 7  #define arrowDown_height 4 static char arrowDown_bits[] = { 0x7f<span class="sign">,</span> 0x3e<span class="sign">,</span> 0x1c<span class="sign">,</span> 0x08 }<span class="sign">;</span>}"</span><span class="sign">)</span><span class="sign">;</span>
       <span class="keyword">end</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="#robo135">Bitmap.Create_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> image create bitmap name ?options?
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.1 - Added
 </pre>
 
+<hr />
+<a name="Bitmap2fBitmap2eGet5fWidget"></a>
+<a name="robo137"></a><h2>Bitmap/Bitmap.Get_Widget [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">Bitmap</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the existing Tk_Bitmap image
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="./tcl-tk-ada-widgets-frame_ads.html#robo258">Get_Widget</a>
+     <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo519">Get_Context</a><span class="sign">)</span>
+      <span class="keyword">return</span> Tk_Bitmap<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the image
+ Interp   - <a href="../tcl_ads.html#robo10">Tcl</a> interpreter on which the image exists. Can be empty.
+            Default value is current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter
+</pre>
+<p class="item_name">RESULT</p>
+<pre> Existing Tk_Bitmap image
+</pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">     <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> bitmap image <span class="keyword">with</span> name .mybitmap on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+     My_Bitmap<span class="sign">:</span> <span class="keyword">constant</span> Tk_Bitmap <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada-widgets-frame_ads.html#robo258">Get_Widget</a><span class="sign">(</span><span class="quote">".mybitmap"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.9 - Added
+</pre>
+
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-image-bitmap.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Mon Aug 31 2020 10:08:49
+<p>Generated from ./src/tk/tcl-tk-ada-image-bitmap.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 30 2020 09:32:20
 </p>
 </div> <!-- footer -->
 </body>

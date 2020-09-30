@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.8 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.9 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,10 +27,10 @@
 <ul>
 <li>1. <a href="#robo20">TkAda/Event</a></li>
 <ul>
-<li>1.1. <a href="#robo234">Event/Add</a></li>
-<li>1.2. <a href="#robo235">Event/Delete</a></li>
-<li>1.3. <a href="#robo236">Event/Generate</a></li>
-<li>1.4. <a href="#robo237">Event/Info</a></li>
+<li>1.1. <a href="#robo238">Event/Event.Add</a></li>
+<li>1.2. <a href="#robo239">Event/Event.Delete</a></li>
+<li>1.3. <a href="#robo240">Event/Event.Generate</a></li>
+<li>1.4. <a href="#robo241">Event/Event.Info</a></li>
 </ul>
 </ul>
 <hr />
@@ -46,8 +46,8 @@
 </pre>
 
 <hr />
-<a name="Event2fAdd"></a>
-<a name="robo234"></a><h2>Event/Add [ Subprograms ]</h2>
+<a name="Event2fEvent2eAdd"></a>
+<a name="robo238"></a><h2>Event/Event.Add [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">Event</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -55,8 +55,8 @@
  selected interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Add</strong>
-     <span class="sign">(</span>Virtual<span class="sign">,</span> Sequence<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo501">Get_Context</a><span class="sign">)</span> <span class="keyword">with</span>
+<pre class="source">   <span class="keyword">procedure</span> <a href="../tklib/tcl-tklib-ada-tooltip_ads.html#robo571">Add</a>
+     <span class="sign">(</span>Virtual<span class="sign">,</span> Sequence<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo519">Get_Context</a><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Virtual <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Sequence <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
@@ -68,31 +68,28 @@
 <p class="item_name">EXAMPLE</p>
 <pre class="source">   <span class="comment">-- Trigger virtual event MyEvent when the user press Control+Y keys on</span>
    <span class="comment">-- default <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
-   <strong>Add</strong><span class="sign">(</span><span class="quote">"<span class="sign">&lt;&lt;</span>MyEvent<span class="sign">&gt;&gt;</span>"</span><span class="sign">,</span> <span class="quote">"<span class="sign">&lt;</span>Control-y<span class="sign">&gt;</span>"</span><span class="sign">)</span><span class="sign">;</span>
+   <a href="../tklib/tcl-tklib-ada-tooltip_ads.html#robo571">Add</a><span class="sign">(</span><span class="quote">"<span class="sign">&lt;&lt;</span>MyEvent<span class="sign">&gt;&gt;</span>"</span><span class="sign">,</span> <span class="quote">"<span class="sign">&lt;</span>Control-y<span class="sign">&gt;</span>"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> event add virtual sequence ?sequence ...?
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.6 - Added
 </pre>
 
 <hr />
-<a name="Event2fDelete"></a>
-<a name="robo235"></a><h2>Event/Delete [ Subprograms ]</h2>
+<a name="Event2fEvent2eDelete"></a>
+<a name="robo239"></a><h2>Event/Event.Delete [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">Event</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <strong>Delete</strong> the selected Sequence from the selected Virtual event on the
+<pre> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo702">Delete</a> the selected Sequence from the selected Virtual event on the
  selected interpreter
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Delete</strong>
+<pre class="source">   <span class="keyword">procedure</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo702">Delete</a>
      <span class="sign">(</span>Virtual<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Sequence<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo501">Get_Context</a><span class="sign">)</span> <span class="keyword">with</span>
+      Interp<span class="sign">:</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo519">Get_Context</a><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Virtual <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
@@ -104,30 +101,27 @@
  Interpreter - <a href="../tcl_ads.html#robo10">Tcl</a> interpreter on which Sequence will be removed
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <strong>Delete</strong> triggering MyEvent when user press Control+Y keys on</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo702">Delete</a> triggering MyEvent when user press Control+Y keys on</span>
       <span class="comment">-- My_Interpreter <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
-      <strong>Delete</strong><span class="sign">(</span><span class="quote">"<span class="sign">&lt;&lt;</span>MyEvent<span class="sign">&gt;&gt;</span>"</span><span class="sign">,</span> <span class="quote">"<span class="sign">&lt;</span>Control-y<span class="sign">&gt;</span>"</span><span class="sign">,</span> My_Interpreter<span class="sign">)</span><span class="sign">;</span>
+      <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo702">Delete</a><span class="sign">(</span><span class="quote">"<span class="sign">&lt;&lt;</span>MyEvent<span class="sign">&gt;&gt;</span>"</span><span class="sign">,</span> <span class="quote">"<span class="sign">&lt;</span>Control-y<span class="sign">&gt;</span>"</span><span class="sign">,</span> My_Interpreter<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> event delete virtual ?sequence sequence ...?
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.6 - Added
 </pre>
 
 <hr />
-<a name="Event2fGenerate"></a>
-<a name="robo236"></a><h2>Event/Generate [ Subprograms ]</h2>
+<a name="Event2fEvent2eGenerate"></a>
+<a name="robo240"></a><h2>Event/Event.Generate [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">Event</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <strong>Generate</strong> the selected event at the selected window
+<pre> Generate the selected event at the selected window
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Generate</strong>
+<pre class="source">   <span class="keyword">procedure</span> Generate
      <span class="sign">(</span>Window<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> EventName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
       Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">)</span> <span class="keyword">with</span>
       Pre =<span class="sign">&gt;</span> EventName /= ""<span class="sign">;</span>
@@ -139,31 +133,28 @@
              value is empty
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <strong>Generate</strong> KeyPress event on My_Main_Window widget and set the event</span>
+<pre class="source">      <span class="comment">-- Generate KeyPress event on My_Main_Window widget and set the event</span>
       <span class="comment">-- x value to 10</span>
-      <strong>Generate</strong><span class="sign">(</span>My_Main_Window<span class="sign">,</span> <span class="quote">"<span class="sign">&lt;</span>KeyPress<span class="sign">&gt;</span>"</span><span class="sign">,</span> <span class="quote">"-x 10"</span><span class="sign">)</span><span class="sign">;</span>
+      Generate<span class="sign">(</span>My_Main_Window<span class="sign">,</span> <span class="quote">"<span class="sign">&lt;</span>KeyPress<span class="sign">&gt;</span>"</span><span class="sign">,</span> <span class="quote">"-x 10"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> event generate window event ?option value option value ...?
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.6 - Added
 </pre>
 
 <hr />
-<a name="Event2fInfo"></a>
-<a name="robo237"></a><h2>Event/Info [ Subprograms ]</h2>
+<a name="Event2fEvent2eInfo"></a>
+<a name="robo241"></a><h2>Event/Event.Info [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo20">Event</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> information about the virtual event(s)
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> information about the virtual event(s)
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Info</strong>
-     <span class="sign">(</span>EventName<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span> Interp<span class="sign">:</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo501">Get_Context</a><span class="sign">)</span>
+<pre class="source">   <span class="keyword">function</span> Info
+     <span class="sign">(</span>EventName<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span> Interp<span class="sign">:</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo519">Get_Context</a><span class="sign">)</span>
       <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
@@ -178,17 +169,14 @@
  events
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the list of all virtual events at the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
-      Events_List<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Info</strong><span class="sign">;</span>
-      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the list of physical events associated <span class="keyword">with</span> the MyEvent</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the list of all virtual events at the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+      Events_List<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Info<span class="sign">;</span>
+      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the list of physical events associated <span class="keyword">with</span> the MyEvent</span>
       <span class="comment">-- virtual event on My_Interpreter <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
-      Events_List<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Info</strong><span class="sign">(</span><span class="quote">"<span class="sign">&lt;&lt;</span>MyEvent<span class="sign">&gt;&gt;</span>"</span><span class="sign">,</span> My_Interpreter<span class="sign">)</span><span class="sign">;</span>
+      Events_List<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Info<span class="sign">(</span><span class="quote">"<span class="sign">&lt;&lt;</span>MyEvent<span class="sign">&gt;&gt;</span>"</span><span class="sign">,</span> My_Interpreter<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> event info ?virtual?
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.6 - Added
@@ -196,7 +184,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-event.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Mon Aug 31 2020 10:08:49
+<p>Generated from ./src/tk/tcl-tk-ada-event.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 30 2020 09:32:20
 </p>
 </div> <!-- footer -->
 </body>

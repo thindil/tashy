@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.8 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.9 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,20 +27,20 @@
 <ul>
 <li>1. <a href="#robo21">TkAda/Font</a></li>
 <ul>
-<li>1.1. <a href="#robo238">Font/Actual (current interpreter)</a></li>
-<li>1.2. <a href="#robo239">Font/Actual (selected interpreter)</a></li>
-<li>1.3. <a href="#robo240">Font/Configure (function)</a></li>
-<li>1.4. <a href="#robo241">Font/Configure (procedure)</a></li>
-<li>1.5. <a href="#robo242">Font/Create (function)</a></li>
-<li>1.6. <a href="#robo243">Font/Create (procedure)</a></li>
-<li>1.7. <a href="#robo244">Font/Delete</a></li>
-<li>1.8. <a href="#robo245">Font/Families (current interpreter main window)</a></li>
-<li>1.9. <a href="#robo246">Font/Families (selected window)</a></li>
-<li>1.10. <a href="#robo247">Font/Measure (selected interpreter main window)</a></li>
-<li>1.11. <a href="#robo248">Font/Measure (selected window)</a></li>
-<li>1.12. <a href="#robo249">Font/Metrics (selected intepreter)</a></li>
-<li>1.13. <a href="#robo250">Font/Metrics (selected window)</a></li>
-<li>1.14. <a href="#robo251">Font/Names</a></li>
+<li>1.1. <a href="#robo242">Font/Font.Actual_(current_interpreter)</a></li>
+<li>1.2. <a href="#robo243">Font/Font.Actual_(selected_interpreter)</a></li>
+<li>1.3. <a href="#robo244">Font/Font.Configure_(function)</a></li>
+<li>1.4. <a href="#robo245">Font/Font.Configure_(procedure)</a></li>
+<li>1.5. <a href="#robo246">Font/Font.Create_(function)</a></li>
+<li>1.6. <a href="#robo247">Font/Font.Create_(procedure)</a></li>
+<li>1.7. <a href="#robo248">Font/Font.Delete</a></li>
+<li>1.8. <a href="#robo249">Font/Font.Families_(current_interpreter_main_window)</a></li>
+<li>1.9. <a href="#robo250">Font/Font.Families_(selected_window)</a></li>
+<li>1.10. <a href="#robo251">Font/Font.Measure_(selected_interpreter_main_window)</a></li>
+<li>1.11. <a href="#robo252">Font/Font.Measure_(selected_window)</a></li>
+<li>1.12. <a href="#robo253">Font/Font.Metrics_(selected_intepreter)</a></li>
+<li>1.13. <a href="#robo254">Font/Font.Metrics_(selected_window)</a></li>
+<li>1.14. <a href="#robo255">Font/Font.Names</a></li>
 </ul>
 </ul>
 <hr />
@@ -56,12 +56,12 @@
 </pre>
 
 <hr />
-<a name="Font2fActual2028current20interpreter29"></a>
-<a name="robo238"></a><h2>Font/Actual (current interpreter) [ Subprograms ]</h2>
+<a name="Font2fFont2eActual5f28current5finterpreter29"></a>
+<a name="robo242"></a><h2>Font/Font.Actual_(current_interpreter) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the actual attributes of the selected font in the current interpreter
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the actual attributes of the selected font in the current interpreter
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Actual
@@ -79,28 +79,28 @@
  values. Otherwise return value of the selected attribute
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the size of font <span class="keyword">with</span> name MyFont</span>
+<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the size of font <span class="keyword">with</span> name MyFont</span>
    Font_Size<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Actual<span class="sign">(</span><span class="quote">"MyFont"</span><span class="sign">,</span> <span class="quote">"-size"</span><span class="sign">)</span><span class="sign">;</span>
-   <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> all attributes of the system font</span>
+   <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> all attributes of the system font</span>
    Font_Attributes<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Actual<span class="sign">(</span><span class="quote">"system"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="#robo243">Font.Actual_(selected_interpreter)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> font actual font -displayof . ?option? ?--? ?char?
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.6 - Added
 </pre>
 
 <hr />
-<a name="Font2fActual2028selected20interpreter29"></a>
-<a name="robo239"></a><h2>Font/Actual (selected interpreter) [ Subprograms ]</h2>
+<a name="Font2fFont2eActual5f28selected5finterpreter29"></a>
+<a name="robo243"></a><h2>Font/Font.Actual_(selected_interpreter) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the actual attributes of the selected font in the current interpreter
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the actual attributes of the selected font in the current interpreter
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Actual
@@ -120,34 +120,34 @@
  values. Otherwise return value of the selected attribute
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the weight of font <span class="keyword">with</span> name MyFont on interpreter My_Interpreter</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the weight of font <span class="keyword">with</span> name MyFont on interpreter My_Interpreter</span>
       Font_Weight<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Actual<span class="sign">(</span>My_Interpreter<span class="sign">,</span> <span class="quote">"MyFont"</span><span class="sign">,</span> <span class="quote">"-weight"</span><span class="sign">)</span><span class="sign">;</span>
-      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> all attributes of the system font on interpreter Main_Tk</span>
+      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> all attributes of the system font on interpreter Main_Tk</span>
       Font_Attributes<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Actual<span class="sign">(</span>Main_Tk<span class="sign">,</span> <span class="quote">"system"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="#robo242">Font.Actual_(current_interpreter)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> font actual font -displayof . ?option? ?--? ?char?
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.6 - Added
 </pre>
 
 <hr />
-<a name="Font2fConfigure2028function29"></a>
-<a name="robo240"></a><h2>Font/Configure (function) [ Subprograms ]</h2>
+<a name="Font2fFont2eConfigure5f28function29"></a>
+<a name="robo244"></a><h2>Font/Font.Configure_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the selected options for the selected font in the selected <a href="../tcl_ads.html#robo10">Tcl</a>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the selected options for the selected font in the selected <a href="../tcl_ads.html#robo10">Tcl</a>
  interpreter
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Configure
      <span class="sign">(</span>FontName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a><span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo501">Get_Context</a><span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Interp<span class="sign">:</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo519">Get_Context</a><span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> FontName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
@@ -162,64 +162,64 @@
  values. Otherwise return value of the selected option
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the family of the font My_Font on the current interpreter</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the family of the font My_Font on the current interpreter</span>
       Font_Family<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Configure<span class="sign">(</span><span class="quote">"My_Font"</span><span class="sign">,</span> <span class="quote">"-family"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="#robo245">Font.Configure_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> font configure fontname ?option?
 </pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
-</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.6 - Added
 </pre>
 
 <hr />
-<a name="Font2fConfigure2028procedure29"></a>
-<a name="robo241"></a><h2>Font/Configure (procedure) [ Subprograms ]</h2>
+<a name="Font2fFont2eConfigure5f28procedure29"></a>
+<a name="robo245"></a><h2>Font/Font.Configure_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo552">Set</a> the selected options for the selected font in the selected <a href="../tcl_ads.html#robo10">Tcl</a>
+<pre> <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> the selected options for the selected font in the selected <a href="../tcl_ads.html#robo10">Tcl</a>
  interpreter
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Configure
-     <span class="sign">(</span>FontName<span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo501">Get_Context</a><span class="sign">)</span> <span class="keyword">with</span>
+     <span class="sign">(</span>FontName<span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo519">Get_Context</a><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> FontName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> FontName - Name of the font which options will be modified
- Options  - <a href="#robo251">Names</a> and new values for the options to set
+ Options  - Names and new values for the options to set
  Interp   - <a href="../tcl_ads.html#robo10">Tcl</a> interpreter on which the selected font is. Default
             value is current interpreter
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-scale_ads.html#robo552">Set</a> the slant of the font My_Font to roman on interpreter My_Interpreter</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> the slant of the font My_Font to roman on interpreter My_Interpreter</span>
       Configure<span class="sign">(</span><span class="quote">"My_Font"</span><span class="sign">,</span> <span class="quote">"-slant roman"</span><span class="sign">,</span> My_Interpreter<span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="#robo244">Font.Configure_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> font configure fontname option value ?option value ...?
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.6 - Added
 </pre>
 
 <hr />
-<a name="Font2fCreate2028function29"></a>
-<a name="robo242"></a><h2>Font/Create (function) [ Subprograms ]</h2>
+<a name="Font2fFont2eCreate5f28function29"></a>
+<a name="robo246"></a><h2>Font/Font.Create_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="../cargv_ads.html#robo188">Create</a> the new font with the selected name and options
+<pre> <a href="../cargv_ads.html#robo191">Create</a> the new font with the selected name and options
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <a href="../cargv_ads.html#robo188">Create</a>
-     <span class="sign">(</span>FontName<span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span> Interp<span class="sign">:</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo501">Get_Context</a><span class="sign">)</span>
+<pre class="source">   <span class="keyword">function</span> <a href="../cargv_ads.html#robo191">Create</a>
+     <span class="sign">(</span>FontName<span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span> Interp<span class="sign">:</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo519">Get_Context</a><span class="sign">)</span>
       <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
@@ -235,31 +235,31 @@
  name has form "fontx" where x is an integer.
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="../cargv_ads.html#robo188">Create</a> font <span class="keyword">with</span> random name and slant roman on My_Interpreter interpreter</span>
-      FontName<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <a href="../cargv_ads.html#robo188">Create</a><span class="sign">(</span>Options <span class="sign">=</span><span class="sign">&gt;</span> <span class="quote">"-slant roman"</span><span class="sign">,</span> Interp <span class="sign">=</span><span class="sign">&gt;</span> My_Interpreter<span class="sign">)</span><span class="sign">;</span>
+<pre class="source">      <span class="comment">-- <a href="../cargv_ads.html#robo191">Create</a> font <span class="keyword">with</span> random name and slant roman on My_Interpreter interpreter</span>
+      FontName<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <a href="../cargv_ads.html#robo191">Create</a><span class="sign">(</span>Options <span class="sign">=</span><span class="sign">&gt;</span> <span class="quote">"-slant roman"</span><span class="sign">,</span> Interp <span class="sign">=</span><span class="sign">&gt;</span> My_Interpreter<span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="#robo247">Font.Create_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> font create ?fontname? ?option value ...?
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.6 - Added
 </pre>
 
 <hr />
-<a name="Font2fCreate2028procedure29"></a>
-<a name="robo243"></a><h2>Font/Create (procedure) [ Subprograms ]</h2>
+<a name="Font2fFont2eCreate5f28procedure29"></a>
+<a name="robo247"></a><h2>Font/Font.Create_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="../cargv_ads.html#robo188">Create</a> the new font with the selected name and options
+<pre> <a href="../cargv_ads.html#robo191">Create</a> the new font with the selected name and options
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <a href="../cargv_ads.html#robo188">Create</a>
+<pre class="source">   <span class="keyword">procedure</span> <a href="../cargv_ads.html#robo191">Create</a>
      <span class="sign">(</span>FontName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo501">Get_Context</a><span class="sign">)</span> <span class="keyword">with</span>
+      Interp<span class="sign">:</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo519">Get_Context</a><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> FontName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
@@ -270,30 +270,30 @@
             Default value is current interpreter
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="../cargv_ads.html#robo188">Create</a> font My_Font <span class="keyword">with</span> size of 10pts on current interpreter</span>
-      <a href="../cargv_ads.html#robo188">Create</a><span class="sign">(</span><span class="quote">"My_Font"</span><span class="sign">,</span> <span class="quote">"-size 10"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">      <span class="comment">-- <a href="../cargv_ads.html#robo191">Create</a> font My_Font <span class="keyword">with</span> size of 10pts on current interpreter</span>
+      <a href="../cargv_ads.html#robo191">Create</a><span class="sign">(</span><span class="quote">"My_Font"</span><span class="sign">,</span> <span class="quote">"-size 10"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="#robo246">Font.Create_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> font create ?fontname? ?option value ...?
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.6 - Added
 </pre>
 
 <hr />
-<a name="Font2fDelete"></a>
-<a name="robo244"></a><h2>Font/Delete [ Subprograms ]</h2>
+<a name="Font2fFont2eDelete"></a>
+<a name="robo248"></a><h2>Font/Font.Delete [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <strong>Delete</strong> the selected font(s)
+<pre> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo702">Delete</a> the selected font(s)
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Delete</strong>
-     <span class="sign">(</span>FontName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo501">Get_Context</a><span class="sign">)</span> <span class="keyword">with</span>
+<pre class="source">   <span class="keyword">procedure</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo702">Delete</a>
+     <span class="sign">(</span>FontName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo519">Get_Context</a><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> FontName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
@@ -302,28 +302,25 @@
             Default value is current interpreter
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <strong>Delete</strong> font <span class="keyword">with</span> name My_Font on current interpreter</span>
-      <strong>Delete</strong><span class="sign">(</span><span class="quote">"My_Font"</span><span class="sign">)</span><span class="sign">;</span>
-      <span class="comment">-- <strong>Delete</strong> fonts Font1 and Font2 on My_Interpreter interpreter</span>
-      <strong>Delete</strong><span class="sign">(</span><span class="quote">"Font1 Font2"</span><span class="sign">,</span> My_Interpreter<span class="sign">)</span><span class="sign">;</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo702">Delete</a> font <span class="keyword">with</span> name My_Font on current interpreter</span>
+      <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo702">Delete</a><span class="sign">(</span><span class="quote">"My_Font"</span><span class="sign">)</span><span class="sign">;</span>
+      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo702">Delete</a> fonts Font1 and Font2 on My_Interpreter interpreter</span>
+      <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo702">Delete</a><span class="sign">(</span><span class="quote">"Font1 Font2"</span><span class="sign">,</span> My_Interpreter<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> font delete fontname ?fontname ...?
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.6 - Added
 </pre>
 
 <hr />
-<a name="Font2fFamilies2028current20interpreter20main20window29"></a>
-<a name="robo245"></a><h2>Font/Families (current interpreter main window) [ Subprograms ]</h2>
+<a name="Font2fFont2eFamilies5f28current5finterpreter5fmain5fwindow29"></a>
+<a name="robo249"></a><h2>Font/Font.Families_(current_interpreter_main_window) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> all font families names available at the current interpreter main
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> all font families names available at the current interpreter main
  window
 </pre>
 <p class="item_name">SOURCE</p>
@@ -333,26 +330,26 @@
 <pre> List of case-insensitives names of available fonts
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the list of all available font families</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the list of all available font families</span>
       Font_Families<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Families<span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="#robo250">Font.Families_(selected_window)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> font families
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.6 - Added
 </pre>
 
 <hr />
-<a name="Font2fFamilies2028selected20window29"></a>
-<a name="robo246"></a><h2>Font/Families (selected window) [ Subprograms ]</h2>
+<a name="Font2fFont2eFamilies5f28selected5fwindow29"></a>
+<a name="robo250"></a><h2>Font/Font.Families_(selected_window) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> all font families names available at the selected window
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> all font families names available at the selected window
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Families<span class="sign">(</span>Widget<span class="sign">:</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
@@ -364,31 +361,31 @@
 <pre> List of case-insensitives names of available fonts
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the list of all available font families on My_Window widget's</span>
+<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the list of all available font families on My_Window widget's</span>
    -- -- display
    -- Font_Families<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:=</span> Families<span class="sign">(</span>My_Window<span class="sign">);</span>
 </pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="#robo249">Font.Families_(current_interpreter_main_window)</a>
+</pre>
 <p class="item_name">COMMANDS</p>
 <pre> font families -displayof widget
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.6 - Added
 </pre>
 
 <hr />
-<a name="Font2fMeasure2028selected20interpreter20main20window29"></a>
-<a name="robo247"></a><h2>Font/Measure (selected interpreter main window) [ Subprograms ]</h2>
+<a name="Font2fFont2eMeasure5f28selected5finterpreter5fmain5fwindow29"></a>
+<a name="robo251"></a><h2>Font/Font.Measure_(selected_interpreter_main_window) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the width in pixels of selected text with the selected font
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the width in pixels of selected text with the selected font
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Measure
-     <span class="sign">(</span><a href="#robo21">Font</a><span class="sign">,</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo54">Text</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo501">Get_Context</a><span class="sign">)</span>
+     <span class="sign">(</span><a href="#robo21">Font</a><span class="sign">,</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo54">Text</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo519">Get_Context</a><span class="sign">)</span>
       <span class="keyword">return</span> String <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo21">Font</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo54">Text</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
@@ -399,29 +396,29 @@
           Default value is the current interpreter
 </pre>
 <p class="item_name">RESULT</p>
-<pre> <a href="./tcl-tk-ada-image_ads.html#robo270">Width</a> in pixels of the selected text with the selected font
+<pre> Width in pixels of the selected text with the selected font
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the width of text "text" <span class="keyword">in</span> My_Font on the current interpreter</span>
+<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the width of text "text" <span class="keyword">in</span> My_Font on the current interpreter</span>
    Font_Width<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Measure<span class="sign">(</span><span class="quote">"My_Font"</span><span class="sign">,</span> <span class="quote">"text"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="#robo252">Font.Measure_(selected_window)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> font measure font -displayof interp text
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.6 - Added
 </pre>
 
 <hr />
-<a name="Font2fMeasure2028selected20window29"></a>
-<a name="robo248"></a><h2>Font/Measure (selected window) [ Subprograms ]</h2>
+<a name="Font2fFont2eMeasure5f28selected5fwindow29"></a>
+<a name="robo252"></a><h2>Font/Font.Measure_(selected_window) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the width in pixels of selected text with the selected font
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the width in pixels of selected text with the selected font
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Measure
@@ -434,34 +431,34 @@
  Widget - <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> in which the <a href="./tcl-tk-ada-widgets-text_ads.html#robo54">Text</a> will be measured
 </pre>
 <p class="item_name">RESULT</p>
-<pre> <a href="./tcl-tk-ada-image_ads.html#robo270">Width</a> in pixels of the selected text with the selected font
+<pre> Width in pixels of the selected text with the selected font
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the width of text "text" <span class="keyword">in</span> My_Font on My_Window widget</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the width of text "text" <span class="keyword">in</span> My_Font on My_Window widget</span>
       Font_Width<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Measure<span class="sign">(</span><span class="quote">"My_Font"</span><span class="sign">,</span> <span class="quote">"text"</span><span class="sign">,</span> My_Window<span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="#robo251">Font.Measure_(selected_interpreter_main_window)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> font measure font -displayof interp text
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.6 - Added
 </pre>
 
 <hr />
-<a name="Font2fMetrics2028selected20intepreter29"></a>
-<a name="robo249"></a><h2>Font/Metrics (selected intepreter) [ Subprograms ]</h2>
+<a name="Font2fFont2eMetrics5f28selected5fintepreter29"></a>
+<a name="robo253"></a><h2>Font/Font.Metrics_(selected_intepreter) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the metrics of the selected font
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the metrics of the selected font
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Metrics
      <span class="sign">(</span><a href="#robo21">Font</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a><span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo501">Get_Context</a><span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Interp<span class="sign">:</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo519">Get_Context</a><span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="#robo21">Font</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
@@ -477,23 +474,23 @@
 <pre class="source">      <span class="comment">-- Check if My_Font <span class="keyword">is</span> fixed <span class="sign">(</span>monospace<span class="sign">)</span> font</span>
       Is_Monospace<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Metrics<span class="sign">(</span><span class="quote">"MyFont"</span><span class="sign">,</span> <span class="quote">"-fixed"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="#robo254">Font.Metrics_(selected_window)</a>
+</pre>
 <p class="item_name">COMMANDS</p>
 <pre> font metrics font -displayof interp ?option?
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.6 - Added
 </pre>
 
 <hr />
-<a name="Font2fMetrics2028selected20window29"></a>
-<a name="robo250"></a><h2>Font/Metrics (selected window) [ Subprograms ]</h2>
+<a name="Font2fFont2eMetrics5f28selected5fwindow29"></a>
+<a name="robo254"></a><h2>Font/Font.Metrics_(selected_window) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the metrics of the selected font
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the metrics of the selected font
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Metrics
@@ -511,30 +508,30 @@
  Otherwise return value of the selected option
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> all the metrics of the font My_Font <span class="keyword">in</span> My_Window widget</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> all the metrics of the font My_Font <span class="keyword">in</span> My_Window widget</span>
       Font_Metrics<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Metrics<span class="sign">(</span><span class="quote">"My_Font"</span><span class="sign">,</span> <span class="quote">""</span><span class="sign">,</span> My_Window<span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="#robo253">Font.Metrics_(selected_intepreter)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> font metrics font -displayof interp ?option?
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.6 - Added
 </pre>
 
 <hr />
-<a name="Font2fNames"></a>
-<a name="robo251"></a><h2>Font/Names [ Subprograms ]</h2>
+<a name="Font2fFont2eNames"></a>
+<a name="robo255"></a><h2>Font/Font.Names [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the names of the all available fonts on the selected <a href="../tcl_ads.html#robo10">Tcl</a>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the names of the all available fonts on the selected <a href="../tcl_ads.html#robo10">Tcl</a>
  interpreter
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Names</strong><span class="sign">(</span>Interp<span class="sign">:</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo501">Get_Context</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> Names<span class="sign">(</span>Interp<span class="sign">:</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo519">Get_Context</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Interp - <a href="../tcl_ads.html#robo10">Tcl</a> interpreter on which the font will be queried. Can be
@@ -544,14 +541,11 @@
 <pre> List with names of all available fonts on the selected <a href="../tcl_ads.html#robo10">Tcl</a> interpreter
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the names of the all available fonts on the current interpreter</span>
-      Font_Names<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Names</strong><span class="sign">;</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the names of the all available fonts on the current interpreter</span>
+      Font_Names<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Names<span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> font names
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.6 - Added
@@ -559,7 +553,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-font.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Mon Aug 31 2020 10:08:49
+<p>Generated from ./src/tk/tcl-tk-ada-font.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 30 2020 09:32:20
 </p>
 </div> <!-- footer -->
 </body>

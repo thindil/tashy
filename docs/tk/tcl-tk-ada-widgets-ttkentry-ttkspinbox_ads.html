@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.8 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.9 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -28,11 +28,12 @@
 <li>1. <a href="#robo41">TtkEntry/TtkSpinBox</a></li>
 <ul>
 <li>1.1. <a href="#robo119">TtkSpinBox/Ttk_SpinBox</a></li>
-<li>1.2. <a href="#robo645">TtkSpinBox/Create (function)</a></li>
-<li>1.3. <a href="#robo646">TtkSpinBox/Create (procedure)</a></li>
-<li>1.4. <a href="#robo647">TtkSpinBox/Current</a></li>
-<li>1.5. <a href="#robo648">TtkSpinBox/Current (function)</a></li>
-<li>1.6. <a href="#robo649">TtkSpinBox/Set</a></li>
+<li>1.2. <a href="#robo680">TtkSpinBox/Create (function)</a></li>
+<li>1.3. <a href="#robo681">TtkSpinBox/Create (procedure)</a></li>
+<li>1.4. <a href="#robo682">TtkSpinBox/Current</a></li>
+<li>1.5. <a href="#robo683">TtkSpinBox/Current (function)</a></li>
+<li>1.6. <a href="#robo684">TtkSpinBox/Get_Widget</a></li>
+<li>1.7. <a href="#robo685">TtkSpinBox/Set</a></li>
 </ul>
 </ul>
 <hr />
@@ -54,7 +55,7 @@
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo41">TtkSpinBox</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a>.
- Each of the derived widgets redefines the <a href="../cargv_ads.html#robo188">Create</a> subprogram
+ Each of the derived widgets redefines the <a href="../cargv_ads.html#robo191">Create</a> subprogram
  in order to create the correct type of widget.
 </pre>
 <p class="item_name">SOURCE</p>
@@ -63,14 +64,14 @@
 
 <hr />
 <a name="TtkSpinBox2fCreate2028function29"></a>
-<a name="robo645"></a><h2>TtkSpinBox/Create (function) [ Subprograms ]</h2>
+<a name="robo680"></a><h2>TtkSpinBox/Create (function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo41">TtkSpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Creates a new <a href="#robo119">Ttk_SpinBox</a> in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="../cargv_ads.html#robo188">Create</a>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="../cargv_ads.html#robo191">Create</a>
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
       Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo119">Ttk_SpinBox</a> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
@@ -87,17 +88,14 @@
 <pre> Newly created <a href="#robo119">Ttk_SpinBox</a>
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="../cargv_ads.html#robo188">Create</a> a new spinbox <span class="keyword">with</span> pathname .myspinbox <span class="keyword">with</span> range from 1 to 100</span>
-   My_Spinbox<span class="sign">:</span> <span class="keyword">constant</span> <a href="#robo119">Ttk_SpinBox</a> <span class="sign">:</span><span class="sign">=</span> <a href="../cargv_ads.html#robo188">Create</a><span class="sign">(</span><span class="quote">".myspinbox"</span><span class="sign">,</span> <span class="quote">"-from 1 -to 100"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="comment">-- <a href="../cargv_ads.html#robo191">Create</a> a new spinbox <span class="keyword">with</span> pathname .myspinbox <span class="keyword">with</span> range from 1 to 100</span>
+   My_Spinbox<span class="sign">:</span> <span class="keyword">constant</span> <a href="#robo119">Ttk_SpinBox</a> <span class="sign">:</span><span class="sign">=</span> <a href="../cargv_ads.html#robo191">Create</a><span class="sign">(</span><span class="quote">".myspinbox"</span><span class="sign">,</span> <span class="quote">"-from 1 -to 100"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="../cargv_ads.html#robo188">Create</a> (procedure)
+<pre> <a href="../cargv_ads.html#robo191">Create</a> (procedure)
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ttk::spinbox pathName ?options?
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.2 - Added
@@ -105,14 +103,14 @@
 
 <hr />
 <a name="TtkSpinBox2fCreate2028procedure29"></a>
-<a name="robo646"></a><h2>TtkSpinBox/Create (procedure) [ Subprograms ]</h2>
+<a name="robo681"></a><h2>TtkSpinBox/Create (procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo41">TtkSpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Creates a new <a href="#robo119">Ttk_SpinBox</a> in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> <a href="../cargv_ads.html#robo188">Create</a>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> <a href="../cargv_ads.html#robo191">Create</a>
      <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo119">Ttk_SpinBox</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
       Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
@@ -126,22 +124,22 @@
             the widget will be created in the "contextual" interpreter.
             Default value is null.
 </pre>
+<p class="item_name">OUTPUT</p>
+<pre> Newly created <a href="#robo119">Ttk_SpinBox</a> as parameter Widgt
+</pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">     <span class="comment">-- <a href="../cargv_ads.html#robo188">Create</a> spinbox My_Spinbox <span class="keyword">with</span> pathname .myspinbox which wraps values on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+<pre class="source">     <span class="comment">-- <a href="../cargv_ads.html#robo191">Create</a> spinbox My_Spinbox <span class="keyword">with</span> pathname .myspinbox which wraps values on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
      <span class="keyword">declare</span>
         My_Spinbox<span class="sign">:</span> <a href="#robo119">Ttk_SpinBox</a><span class="sign">;</span>
      <span class="keyword">begin</span>
-        <a href="../cargv_ads.html#robo188">Create</a><span class="sign">(</span>My_Spinbox<span class="sign">,</span> <span class="quote">".myspinbox"</span><span class="sign">,</span> <span class="quote">"-wrap true"</span><span class="sign">)</span><span class="sign">;</span>
+        <a href="../cargv_ads.html#robo191">Create</a><span class="sign">(</span>My_Spinbox<span class="sign">,</span> <span class="quote">".myspinbox"</span><span class="sign">,</span> <span class="quote">"-wrap true"</span><span class="sign">)</span><span class="sign">;</span>
      <span class="keyword">end</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="../cargv_ads.html#robo188">Create</a> (function)
+<pre> <a href="../cargv_ads.html#robo191">Create</a> (function)
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ttk::spinbox pathName ?options?
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.2 - Added
@@ -149,11 +147,11 @@
 
 <hr />
 <a name="TtkSpinBox2fCurrent"></a>
-<a name="robo647"></a><h2>TtkSpinBox/Current [ Subprograms ]</h2>
+<a name="robo682"></a><h2>TtkSpinBox/Current [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo41">TtkSpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-scale_ads.html#robo552">Set</a> the current value for the selected <a href="#robo119">Ttk_SpinBox</a>
+<pre> <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> the current value for the selected <a href="#robo119">Ttk_SpinBox</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> <strong>Current</strong><span class="sign">(</span><a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo16">SpinBox</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo119">Ttk_SpinBox</a><span class="sign">;</span> NewIndex<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
@@ -165,17 +163,14 @@
             <a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo16">SpinBox</a> which will be set as the current value
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-scale_ads.html#robo552">Set</a> the current value of My_Spinbox spinbox to 1</span>
+<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> the current value of My_Spinbox spinbox to 1</span>
    <strong>Current</strong><span class="sign">(</span>My_Spinbox<span class="sign">,</span> <span class="quote">"1"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <strong>Current</strong> (function), <a href="./tcl-tk-ada-widgets-scale_ads.html#robo552">Set</a>
+<pre> <strong>Current</strong> (function), <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> <a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo16">SpinBox</a> current newIndex
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.6 - Added
@@ -183,14 +178,14 @@
 
 <hr />
 <a name="TtkSpinBox2fCurrent2028function29"></a>
-<a name="robo648"></a><h2>TtkSpinBox/Current (function) [ Subprograms ]</h2>
+<a name="robo683"></a><h2>TtkSpinBox/Current (function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo41">TtkSpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the current value of the selected <a href="#robo119">Ttk_SpinBox</a>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the current value of the selected <a href="#robo119">Ttk_SpinBox</a>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <a href="./tcl-tk-ada-busy_ads.html#robo514">Current</a><span class="sign">(</span><a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo16">SpinBox</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo119">Ttk_SpinBox</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> <a href="#robo682">Current</a><span class="sign">(</span><a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo16">SpinBox</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo119">Ttk_SpinBox</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> <a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo16">SpinBox</a> - <a href="#robo119">Ttk_SpinBox</a> which the current value will be queried
@@ -200,25 +195,51 @@
  list of values for the <a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo16">SpinBox</a>
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkentry_ads.html#robo577">Get</a> the current value of My_Spinbox spinbox</span>
-      Value<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada-busy_ads.html#robo514">Current</a><span class="sign">(</span>My_Spinbox<span class="sign">)</span><span class="sign">;</span>
+<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the current value of My_Spinbox spinbox</span>
+      Value<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <a href="#robo682">Current</a><span class="sign">(</span>My_Spinbox<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="./tcl-tk-ada-busy_ads.html#robo514">Current</a> (procedure)
+<pre> <a href="#robo682">Current</a> (procedure)
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> <a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo16">SpinBox</a> current
-</pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.6 - Added
 </pre>
 
 <hr />
+<a name="TtkSpinBox2fGet5fWidget"></a>
+<a name="robo684"></a><h2>TtkSpinBox/Get_Widget [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo41">TtkSpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the existing <a href="#robo119">Ttk_SpinBox</a> widget
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <strong>Get_Widget</strong>
+     <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo519">Get_Context</a><span class="sign">)</span>
+      <span class="keyword">return</span> <a href="#robo119">Ttk_SpinBox</a><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
+ Interp   - <a href="../tcl_ads.html#robo10">Tcl</a> interpreter on which the widget exists. Can be empty.
+            Default value is current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter
+</pre>
+<p class="item_name">RESULT</p>
+<pre> Existing <a href="#robo119">Ttk_SpinBox</a> widget
+</pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">     <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> spinbox widget <span class="keyword">with</span> name .myspin on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+     My_SpinBox<span class="sign">:</span> <span class="keyword">constant</span> <a href="#robo119">Ttk_SpinBox</a> <span class="sign">:</span><span class="sign">=</span> <strong>Get_Widget</strong><span class="sign">(</span><span class="quote">".myspin"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.9 - Added
+</pre>
+
+<hr />
 <a name="TtkSpinBox2fSet"></a>
-<a name="robo649"></a><h2>TtkSpinBox/Set [ Subprograms ]</h2>
+<a name="robo685"></a><h2>TtkSpinBox/Set [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo41">TtkSpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -238,16 +259,13 @@
 <p class="item_name">COMMANDS</p>
 <pre> <a href="./tcl-tk-ada-widgets-tentry-spinbox_ads.html#robo16">SpinBox</a> set value
 </pre>
-<p class="item_name">TODO</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo461">Replace</a> it with higher level of binding
-</pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.6 - Added
 </pre>
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-ttkentry-ttkspinbox.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Mon Aug 31 2020 10:08:49
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-ttkentry-ttkspinbox.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 30 2020 09:32:20
 </p>
 </div> <!-- footer -->
 </body>
