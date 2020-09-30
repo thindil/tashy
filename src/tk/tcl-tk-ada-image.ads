@@ -29,7 +29,7 @@ with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
 package Tcl.Tk.Ada.Image is
 -- ****
 
-   -- ****f* Image/Delete
+   -- ****f* Image/Image.Delete
    -- FUNCTION
    -- Delete the selected image widget
    -- PARAMETERS
@@ -47,7 +47,7 @@ package Tcl.Tk.Ada.Image is
    procedure Delete(Img: in out Tk_Widget'Class);
    -- ****
 
-   -- ****f* Image/Height
+   -- ****f* Image/Image.Height
    -- FUNCTION
    -- Get the selected image height
    -- PARAMETERS
@@ -65,7 +65,7 @@ package Tcl.Tk.Ada.Image is
    function Height(Img: in Tk_Widget'Class) return String;
    -- ****
 
-   -- ****f* Image/Image_Type
+   -- ****f* Image/Image.Image_Type
    -- FUNCTION
    -- Get type of the selected image
    -- PARAMETERS
@@ -83,7 +83,7 @@ package Tcl.Tk.Ada.Image is
    function Image_Type(Img: in Tk_Widget'Class) return String;
    -- ****
 
-   -- ****f* Image/Inuse
+   -- ****f* Image/Image.Inuse
    -- FUNCTION
    -- Check if the selected image is used by any widget
    -- PARAMETERS
@@ -101,7 +101,7 @@ package Tcl.Tk.Ada.Image is
    function Inuse(Img: in Tk_Widget'Class) return String;
    -- ****
 
-   -- ****f* Image/Names
+   -- ****f* Image/Image.Names
    -- FUNCTION
    -- Get names of all existing images
    -- RESULT
@@ -117,7 +117,7 @@ package Tcl.Tk.Ada.Image is
    function Names return String;
    -- ****
 
-   -- ****f* Image/Types
+   -- ****f* Image/Image.Types
    -- FUNCTION
    -- Get types of images available
    -- RESULT
@@ -133,7 +133,7 @@ package Tcl.Tk.Ada.Image is
    function Types return String;
    -- ****
 
-   -- ****f* Image/Width
+   -- ****f* Image/Image.Width
    -- FUNCTION
    -- Get the selected image width
    -- PARAMETERS
