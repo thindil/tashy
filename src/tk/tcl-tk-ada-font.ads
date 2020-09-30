@@ -29,7 +29,7 @@ with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
 package Tcl.Tk.Ada.Font is
 -- ****
 
-   -- ****f* Font/Actual (current interpreter)
+   -- ****f* Font/Font.Actual_(current_interpreter)
    -- FUNCTION
    -- Get the actual attributes of the selected font in the current interpreter
    -- PARAMETERS
@@ -49,13 +49,15 @@ package Tcl.Tk.Ada.Font is
    -- Font_Attributes: constant String := Actual("system");
    -- COMMANDS
    -- font actual font -displayof . ?option? ?--? ?char?
+   -- SEE ALSO
+   -- Font.Actual_(selected_interpreter)
    -- SOURCE
    function Actual
      (FontDescription: in String; Options: in String := "") return String with
       Pre => FontDescription /= "";
       -- ****
 
-      -- ****f* Font/Actual (selected interpreter)
+      -- ****f* Font/Font.Actual_(selected_interpreter)
       -- FUNCTION
       -- Get the actual attributes of the selected font in the current interpreter
       -- PARAMETERS
@@ -76,6 +78,8 @@ package Tcl.Tk.Ada.Font is
       -- Font_Attributes: constant String := Actual(Main_Tk, "system");
       -- COMMANDS
       -- font actual font -displayof . ?option? ?--? ?char?
+      -- SEE ALSO
+      -- Font.Actual_(current_interpreter)
       -- SOURCE
    function Actual
      (Interp: in Tcl_Interp; FontDescription: in String;
@@ -83,7 +87,7 @@ package Tcl.Tk.Ada.Font is
       Pre => FontDescription /= "";
       -- ****
 
-      -- ****f* Font/Configure (procedure)
+      -- ****f* Font/Font.Configure_(procedure)
       -- FUNCTION
       -- Set the selected options for the selected font in the selected Tcl
       -- interpreter
@@ -99,13 +103,15 @@ package Tcl.Tk.Ada.Font is
       -- Configure("My_Font", "-slant roman", My_Interpreter);
       -- COMMANDS
       -- font configure fontname option value ?option value ...?
+      -- SEE ALSO
+      -- Font.Configure_(function)
       -- SOURCE
    procedure Configure
      (FontName, Options: in String; Interp: Tcl_Interp := Get_Context) with
       Pre => FontName /= "" and Options /= "";
       -- ****
 
-      -- ****f* Font/Configure (function)
+      -- ****f* Font/Font.Configure_(function)
       -- FUNCTION
       -- Get the selected options for the selected font in the selected Tcl
       -- interpreter
@@ -125,6 +131,8 @@ package Tcl.Tk.Ada.Font is
       -- Font_Family: constant String := Configure("My_Font", "-family");
       -- COMMANDS
       -- font configure fontname ?option?
+      -- SEE ALSO
+      -- Font.Configure_(procedure)
       -- SOURCE
    function Configure
      (FontName: in String; Option: in String := "";
@@ -132,7 +140,7 @@ package Tcl.Tk.Ada.Font is
       Pre => FontName /= "";
       -- ****
 
-      -- ****f* Font/Create (procedure)
+      -- ****f* Font/Font.Create_(procedure)
       -- FUNCTION
       -- Create the new font with the selected name and options
       -- PARAMETERS
@@ -148,6 +156,8 @@ package Tcl.Tk.Ada.Font is
       -- Create("My_Font", "-size 10");
       -- COMMANDS
       -- font create ?fontname? ?option value ...?
+      -- SEE ALSO
+      -- Font.Create_(function)
       -- SOURCE
    procedure Create
      (FontName: in String; Options: in String := "";
@@ -155,7 +165,7 @@ package Tcl.Tk.Ada.Font is
       Pre => FontName /= "";
       -- ****
 
-      -- ****f* Font/Create (function)
+      -- ****f* Font/Font.Create_(function)
       -- FUNCTION
       -- Create the new font with the selected name and options
       -- PARAMETERS
@@ -175,13 +185,15 @@ package Tcl.Tk.Ada.Font is
       -- FontName: constant String := Create(Options => "-slant roman", Interp => My_Interpreter);
       -- COMMANDS
       -- font create ?fontname? ?option value ...?
+      -- SEE ALSO
+      -- Font.Create_(procedure)
       -- SOURCE
    function Create
      (FontName, Options: in String := ""; Interp: Tcl_Interp := Get_Context)
       return String;
       -- ****
 
-      -- ****f* Font/Delete
+      -- ****f* Font/Font.Delete
       -- FUNCTION
       -- Delete the selected font(s)
       -- PARAMETERS
@@ -203,7 +215,7 @@ package Tcl.Tk.Ada.Font is
       Pre => FontName /= "";
       -- ****
 
-      -- ****f* Font/Families (current interpreter main window)
+      -- ****f* Font/Font.Families_(current_interpreter_main_window)
       -- FUNCTION
       -- Get all font families names available at the current interpreter main
       -- window
@@ -216,11 +228,13 @@ package Tcl.Tk.Ada.Font is
       -- Font_Families: constant String := Families;
       -- COMMANDS
       -- font families
+      -- SEE ALSO
+      -- Font.Families_(selected_window)
       -- SOURCE
    function Families return String;
    -- ****
 
-   -- ****f* Font/Families (selected window)
+   -- ****f* Font/Font.Families_(selected_window)
    -- FUNCTION
    -- Get all font families names available at the selected window
    -- PARAMETERS
@@ -235,11 +249,13 @@ package Tcl.Tk.Ada.Font is
    -- Font_Families: constant String := Families(My_Window);
    -- COMMANDS
    -- font families -displayof widget
+   -- SEE ALSO
+   -- Font.Families_(current_interpreter_main_window)
    -- SOURCE
    function Families(Widget: Tk_Widget'Class) return String;
    -- ****
 
-   -- ****f* Font/Measure (selected interpreter main window)
+   -- ****f* Font/Font.Measure_(selected_interpreter_main_window)
    -- FUNCTION
    -- Get the width in pixels of selected text with the selected font
    -- PARAMETERS
@@ -256,6 +272,8 @@ package Tcl.Tk.Ada.Font is
    -- Font_Width: constant String := Measure("My_Font", "text");
    -- COMMANDS
    -- font measure font -displayof interp text
+   -- SEE ALSO
+   -- Font.Measure_(selected_window)
    -- SOURCE
    function Measure
      (Font, Text: in String; Interp: Tcl_Interp := Get_Context)
@@ -263,7 +281,7 @@ package Tcl.Tk.Ada.Font is
       Pre => Font /= "" and Text /= "";
       -- ****
 
-      -- ****f* Font/Measure (selected window)
+      -- ****f* Font/Font.Measure_(selected_window)
       -- FUNCTION
       -- Get the width in pixels of selected text with the selected font
       -- PARAMETERS
@@ -279,13 +297,15 @@ package Tcl.Tk.Ada.Font is
       -- Font_Width: constant String := Measure("My_Font", "text", My_Window);
       -- COMMANDS
       -- font measure font -displayof interp text
+      -- SEE ALSO
+      -- Font.Measure_(selected_interpreter_main_window)
       -- SOURCE
    function Measure
      (Font, Text: in String; Widget: Tk_Widget'Class) return String with
       Pre => Font /= "" and Text /= "";
       -- ****
 
-      -- ****f* Font/Metrics (selected intepreter)
+      -- ****f* Font/Font.Metrics_(selected_intepreter)
       -- FUNCTION
       -- Get the metrics of the selected font
       -- PARAMETERS
@@ -302,6 +322,8 @@ package Tcl.Tk.Ada.Font is
       -- Is_Monospace: constant String := Metrics("MyFont", "-fixed");
       -- COMMANDS
       -- font metrics font -displayof interp ?option?
+      -- SEE ALSO
+      -- Font.Metrics_(selected_window)
       -- SOURCE
    function Metrics
      (Font: in String; Option: in String := "";
@@ -309,7 +331,7 @@ package Tcl.Tk.Ada.Font is
       Pre => Font /= "";
       -- ****
 
-      -- ****f* Font/Metrics (selected window)
+      -- ****f* Font/Font.Metrics_(selected_window)
       -- FUNCTION
       -- Get the metrics of the selected font
       -- PARAMETERS
@@ -326,6 +348,8 @@ package Tcl.Tk.Ada.Font is
       -- Font_Metrics: constant String := Metrics("My_Font", "", My_Window);
       -- COMMANDS
       -- font metrics font -displayof interp ?option?
+      -- SEE ALSO
+      -- Font.Metrics_(selected_intepreter)
       -- SOURCE
    function Metrics
      (Font: in String; Option: in String := ""; Widget: Tk_Widget'Class)
@@ -333,7 +357,7 @@ package Tcl.Tk.Ada.Font is
       Pre => Font /= "";
       -- ****
 
-      -- ****f* Font/Names
+      -- ****f* Font/Font.Names
       -- FUNCTION
       -- Get the names of the all available fonts on the selected Tcl
       -- interpreter
