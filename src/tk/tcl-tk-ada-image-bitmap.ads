@@ -27,7 +27,7 @@
 package Tcl.Tk.Ada.Image.Bitmap is
 -- ****
 
-   -- ****t* Bitmap/Tk_Bitmap
+   -- ****t* Bitmap/Bitmap.Tk_Bitmap
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -36,7 +36,7 @@ package Tcl.Tk.Ada.Image.Bitmap is
    type Tk_Bitmap is new Tk_Widget with private;
    -- ****
 
-   -- ****f* Bitmap/Create (function)
+   -- ****f* Bitmap/Bitmap.Create_(function)
    -- FUNCTION
    -- Creates a new Tk_Bitmap in the specified interpreter.
    -- PARAMETERS
@@ -55,6 +55,8 @@ package Tcl.Tk.Ada.Image.Bitmap is
    -- Arrow_Up: constant Tk_Bitmap := Create("arrow-up", "-data {#define arrowUp_width 7  #define arrowUp_height 4 static char arrowUp_bits[] = { 0x08, 0x1c, 0x3e, 0x7f };}");
    -- COMMANDS
    -- image create bitmap name ?options?
+   -- SEE ALSO
+   -- Bitmap.Create_(procedure)
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
@@ -62,7 +64,7 @@ package Tcl.Tk.Ada.Image.Bitmap is
       Pre => (pathName /= "");
       -- ****
 
-      -- ****f* Bitmap/Create (procedure)
+      -- ****f* Bitmap/Bitmap.Create_(procedure)
       -- FUNCTION
       -- Creates a new Tk_Bitmap in the specified interpreter.
       -- PARAMETERS
@@ -86,6 +88,8 @@ package Tcl.Tk.Ada.Image.Bitmap is
       -- end;
       -- COMMANDS
       -- image create bitmap name ?options?
+      -- SEE ALSO
+      -- Bitmap.Create_(function)
       -- SOURCE
    procedure Create
      (Widgt: out Tk_Bitmap; pathName: in String; options: in String := "";
@@ -93,7 +97,7 @@ package Tcl.Tk.Ada.Image.Bitmap is
       Pre => (pathName /= "");
       -- ****
 
-     -- ****f* Bitmap/Get_Widget
+     -- ****f* Bitmap/Bitmap.Get_Widget
      -- FUNCTION
      -- Get the existing Tk_Bitmap image
      -- PARAMETERS
