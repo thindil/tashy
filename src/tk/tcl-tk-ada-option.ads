@@ -29,7 +29,7 @@ with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
 package Tcl.Tk.Ada.Option is
 -- ****
 
-   -- ****f* Option/Add
+   -- ****f* Option/Option.Add
    -- FUNCTION
    -- Add a new option to the database
    -- PARAMETERS
@@ -52,7 +52,7 @@ package Tcl.Tk.Ada.Option is
       Pre => Pattern /= "" and Value /= "";
       -- ****
 
-      -- ****f* Option/Clear
+      -- ****f* Option/Option.Clear
       -- FUNCTION
       -- Clear option's database
       -- PARAMETERS
@@ -68,7 +68,7 @@ package Tcl.Tk.Ada.Option is
    procedure Clear(Interp: in Tcl_Interp);
    -- ****
 
-   -- ****f* Option/Get
+   -- ****f* Option/Option.Get
    -- FUNCTION
    -- Get the value of the selected option
    -- PARAMETERS
@@ -90,7 +90,7 @@ package Tcl.Tk.Ada.Option is
       Pre => Name /= "" and Class /= "";
       -- ****
 
-      -- ****f* Option/Read_File
+      -- ****f* Option/Option.Read_File
       -- FUNCTION
       -- Read file and add all the options from it to the options database
       -- PARAMETERS
