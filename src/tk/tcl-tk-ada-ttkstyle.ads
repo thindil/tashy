@@ -27,7 +27,7 @@
 package Tcl.Tk.Ada.TtkStyle is
 -- ****
 
-   -- ****f* TtkStyle/Element_Create
+   -- ****f* TtkStyle/TtkStyle.Element_Create
    -- FUNCTION
    -- Creates a new element in the current theme of the selected type
    -- PARAMETERS
@@ -47,7 +47,7 @@ package Tcl.Tk.Ada.TtkStyle is
       Pre => Name /= "" and Element_Type /= "";
       -- ****
 
-      -- ****f* TtkStyle/Element_Names
+      -- ****f* TtkStyle/TtkStyle.Element_Names
       -- FUNCTION
       -- Return list of elements in the current theme
       -- HISTORY
@@ -61,7 +61,7 @@ package Tcl.Tk.Ada.TtkStyle is
    function Element_Names return String;
    -- ****
 
-   -- ****f* TtkStyle/Element_Options
+   -- ****f* TtkStyle/TtkStyle.Element_Options
    -- FUNCTION
    -- Get options set for the selected element in current theme
    -- PARAMETERS
@@ -80,7 +80,7 @@ package Tcl.Tk.Ada.TtkStyle is
       Pre => Element /= "";
       -- ****
 
-      -- ****f* TtkStyle/Style_Configure
+      -- ****f* TtkStyle/TtkStyle.Style_Configure
       -- FUNCTION
       -- Configure selected or create new Ttk style
       -- PARAMETERS
@@ -98,7 +98,7 @@ package Tcl.Tk.Ada.TtkStyle is
       Pre => Name /= "" and Options /= "";
       -- ****
 
-      -- ****f* TtkStyle/Style_Layout (procedure)
+      -- ****f* TtkStyle/TtkStyle.Style_Layout_(procedure)
       -- FUNCTION
       -- Define widget layout style for the selected style
       -- PARAMETERS
@@ -111,12 +111,14 @@ package Tcl.Tk.Ada.TtkStyle is
       -- Style_Layout("TButton", "{Button.button -children { Button.padding -children { Button.label -side left -expand true } } }");
       -- COMMANDS
       -- ttk::style layout name options
+      -- SEE ALSO
+      -- TtkStyle.Style_Layout_(function)
       -- SOURCE
    procedure Style_Layout(Name, Options: in String) with
       Pre => Name /= "" and Options /= "";
       -- ****
 
-      -- ****f* TtkStyle/Style_Layout (function)
+      -- ****f* TtkStyle/TtkStyle.Style_Layout_(function)
       -- FUNCTION
       -- Get widget layout for the selected style
       -- PARAMETERS
@@ -130,12 +132,14 @@ package Tcl.Tk.Ada.TtkStyle is
       -- Layout: constant String := Style_Layout("Toolbutton");
       -- COMMANDS
       -- ttk::style layout name
+      -- SEE ALSO
+      -- TtkStyle.Style_Layout_(procedure)
       -- SOURCE
    function Style_Layout(Name: in String) return String with
       Pre => Name /= "";
       -- ****
 
-      -- ****f* TtkStyle/Style_Lookup
+      -- ****f* TtkStyle/TtkStyle.Style_Lookup
       -- FUNCTION
       -- Get value of the selected option in the selected style
       -- PARAMETERS
@@ -161,7 +165,7 @@ package Tcl.Tk.Ada.TtkStyle is
       Pre => Name /= "" and Option /= "";
       -- ****
 
-      -- ****f* TtkStyle/Style_Map
+      -- ****f* TtkStyle/TtkStyle.Style_Map
       -- FUNCTION
       -- Define widget style dynamic map for the selected style
       -- PARAMETERS
@@ -179,7 +183,7 @@ package Tcl.Tk.Ada.TtkStyle is
       Pre => Name /= "" and Options /= "";
       -- ****
 
-      -- ****f* TtkStyle/Theme_Names
+      -- ****f* TtkStyle/TtkStyle.Theme_Names
       -- FUNCTION
       -- Get list of all available Ttk themes
       -- RESULT
@@ -195,7 +199,7 @@ package Tcl.Tk.Ada.TtkStyle is
    function Theme_Names return String;
    -- ****
 
-   -- ****f* TtkStyle/Theme_Use (procedure)
+   -- ****f* TtkStyle/TtkStyle.Theme_Use_(procedure)
    -- FUNCTION
    -- Set new Ttk theme and redraw all widgets
    -- PARAMETERS
@@ -207,12 +211,14 @@ package Tcl.Tk.Ada.TtkStyle is
    -- Theme_Use("clam");
    -- COMMANDS
    -- ttk::style theme use ThemeName
+   -- SEE ALSO
+   -- TtkStyle.Theme_Use_(function)
    -- SOURCE
    procedure Theme_Use(ThemeName: in String) with
       Pre => ThemeName /= "";
       -- ****
 
-      -- ****f* TtkStyle/Theme_Use (function)
+      -- ****f* TtkStyle/TtkStyle.Theme_Use_(function)
       -- FUNCTION
       -- Get currently used Ttk theme
       -- RESULT
@@ -224,6 +230,8 @@ package Tcl.Tk.Ada.TtkStyle is
       -- Current_Theme: constant String := Theme_Use;
       -- COMMANDS
       -- ttk::style theme use
+      -- SEE ALSO
+      -- TtkStyle.Theme_Use_(procedure)
       -- SOURCE
    function Theme_Use return String;
    -- ****
