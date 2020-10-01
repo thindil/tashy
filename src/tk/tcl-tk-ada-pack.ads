@@ -29,7 +29,7 @@ with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
 package Tcl.Tk.Ada.Pack is
 -- ****
 
-   -- ****f* TkPack/Pack
+   -- ****f* TkPack/TkPack.Pack
    -- FUNCTION
    -- Pack selected widget with selected options
    -- PARAMETERS
@@ -46,7 +46,7 @@ package Tcl.Tk.Ada.Pack is
    procedure Pack(Slave: in Tk_Widget'Class; Options: in String := "");
    -- ****
 
-   -- ****f* TkPack/Pack_Configure
+   -- ****f* TkPack/TkPack.Pack_Configure
    -- FUNCTION
    -- Tells the packer how to configure the specified Slave window.
    -- PARAMETERS
@@ -64,7 +64,7 @@ package Tcl.Tk.Ada.Pack is
      (Slave: in Tk_Widget'Class; Options: in String := "");
    -- ****
 
-   -- ****f* TkPack/Pack_Forget
+   -- ****f* TkPack/TkPack.Pack_Forget
    -- FUNCTION
    -- Removes the Slave window from the packing list for its master
    -- and unmaps their windows.
@@ -81,7 +81,7 @@ package Tcl.Tk.Ada.Pack is
    procedure Pack_Forget(Slave: in Tk_Widget'Class);
    -- ****
 
-   -- ****f* TkPack/Pack_Info
+   -- ****f* TkPack/TkPack.Pack_Info
    -- FUNCTION
    -- Get pack options of the selected widget
    -- PARAMETERS
@@ -100,7 +100,7 @@ package Tcl.Tk.Ada.Pack is
    function Pack_Info(Slave: in Tk_Widget'Class) return String;
    -- ****
 
-   -- ****f* TkPack/Pack_Propagate (procedure)
+   -- ****f* TkPack/TkPack.Pack_Propagate_(procedure)
    -- FUNCTION
    -- Enables or disables propagation for the specified Master window.
    -- PARAMETERS
@@ -113,11 +113,13 @@ package Tcl.Tk.Ada.Pack is
    -- Pack_Propagate(My_Main_Window, "true");
    -- COMMANDS
    -- pack propagate master boolean
+   -- SEE ALSO
+   -- TkPack.Pack_Propagate_(function)
    -- SOURCE
    procedure Pack_Propagate(Master: in Tk_Widget'Class; State: in Boolean);
    -- ****
 
-   -- ****f* TkPack/Pack_Propagate (function)
+   -- ****f* TkPack/TkPack.Pack_Propagate_(function)
    -- FUNCTION
    -- Get propagation state of selected widget
    -- PARAMETERS
@@ -131,11 +133,13 @@ package Tcl.Tk.Ada.Pack is
    -- Propagation: constant String := Pack_Propagate(My_Main_Window);
    -- COMMANDS
    -- pack propagate master
+   -- SEE ALSO
+   -- TkPack.Pack_Propagate_(procedure)
    -- SOURCE
    function Pack_Propagate(Master: in Tk_Widget'Class) return Boolean;
    -- ****
 
-   -- ****f* TkPack/Pack_Slaves
+   -- ****f* TkPack/TkPack.Pack_Slaves
    -- FUNCTION
    -- Get list of slaves widget of selected widget
    -- PARAMETERS
