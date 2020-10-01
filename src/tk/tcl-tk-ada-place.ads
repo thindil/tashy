@@ -29,7 +29,7 @@ with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
 package Tcl.Tk.Ada.Place is
 -- ****
 
-   -- ****f* TkPlace/Place
+   -- ****f* TkPlace/TkPlace.Place
    -- FUNCTION
    -- Place selected widget with selected options
    -- PARAMETERS
@@ -46,7 +46,7 @@ package Tcl.Tk.Ada.Place is
    procedure Place(Slave: in Tk_Widget'Class; Options: in String := "");
    -- ****
 
-   -- ****f* TkPlace/Place_Configure
+   -- ****f* TkPlace/TkPlace.Place_Configure
    -- FUNCTION
    -- Tells the packer how to configure the specified Slave window.
    -- PARAMETERS
@@ -64,7 +64,7 @@ package Tcl.Tk.Ada.Place is
      (Slave: in Tk_Widget'Class; Options: in String := "");
    -- ****
 
-   -- ****f* TkPlace/Place_Forget
+   -- ****f* TkPlace/TkPlace.Place_Forget
    -- FUNCTION
    -- Removes the Slave window from the packing list for its master
    -- and unmaps their windows.
@@ -81,7 +81,7 @@ package Tcl.Tk.Ada.Place is
    procedure Place_Forget(Slave: in Tk_Widget'Class);
    -- ****
 
-   -- ****f* TkPlace/Place_Info
+   -- ****f* TkPlace/TkPlace.Place_Info
    -- FUNCTION
    -- Get place options of the selected widget
    -- PARAMETERS
@@ -100,7 +100,7 @@ package Tcl.Tk.Ada.Place is
    function Place_Info(Slave: in Tk_Widget'Class) return String;
    -- ****
 
-   -- ****f* TkPlace/Place_Slaves
+   -- ****f* TkPlace/TkPlace.Place_Slaves
    -- FUNCTION
    -- Get list of slaves widget of selected widget
    -- PARAMETERS
