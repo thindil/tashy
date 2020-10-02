@@ -27,7 +27,7 @@
 package Tcl.Tk.Ada.Widgets.Canvas is
 -- ****
 
-   -- ****t* Canvas/Tk_Canvas
+   -- ****t* Canvas/Canvas.Tk_Canvas
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -36,7 +36,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    type Tk_Canvas is new Tk_Widget with private;
    -- ****
 
-   -- ****f* Canvas/Create (function)
+   -- ****f* Canvas/Canvas.Create_(function)
    -- FUNCTION
    -- Creates a new Tk_Canvas in the specified interpreter.
    -- PARAMETERS
@@ -56,7 +56,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    -- COMMANDS
    -- canvas pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- Canvas.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -64,7 +64,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => pathName /= "";
       -- ****
 
-     -- ****f* Canvas/Create (procedure)
+     -- ****f* Canvas/Canvas.Create_(procedure)
      -- FUNCTION
      -- Creates a new Tk_Canvas in the specified interpreter.
      -- PARAMETERS
@@ -89,7 +89,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
      -- COMMANDS
      -- canvas pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- Canvas.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Canvas; pathName: in String; options: in String := "";
@@ -97,7 +97,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* Canvas/Get_Widget
+     -- ****f* Canvas/Canvas.Get_Widget
      -- FUNCTION
      -- Get the existing Tk_Canvas widget
      -- PARAMETERS
@@ -117,7 +117,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       return Tk_Canvas;
      -- ****
 
-     -- ****f* Canvas/Add_Tag
+     -- ****f* Canvas/Canvas.Add_Tag
      -- FUNCTION
      -- Add tag to the selected items in the Tk_Canvas
      -- PARAMETERS
@@ -140,7 +140,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
           "overlapping" | "withtag";
       -- ****
 
-      -- ****f* Canvas/BBox
+      -- ****f* Canvas/Canvas.BBox
       -- FUNCTION
       -- Get size of bounding box of items with the selected Tag in the
       -- selected Tk_Canvas
@@ -165,7 +165,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "";
       -- ****
 
-      -- ****f* Canvas/Bind (procedure)
+      -- ****f* Canvas/Canvas.Bind_(procedure)
       -- FUNCTION
       -- Bind the selected command to the selected item in the selected canvas
       -- with the selected sequence
@@ -182,14 +182,14 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- COMMANDS
       -- CanvasWidget bind tagOrId sequence command
       -- SEE ALSO
-      -- Bind (function)
+      -- Canvas.Bind_(function)
       -- SOURCE
    procedure Bind
      (CanvasWidget: in Tk_Canvas; TagOrId, Sequence, Command: in String) with
       Pre => TagOrId /= "" and Sequence /= "" and Command /= "";
       -- ****
 
-      -- ****f* Canvas/Bind (function)
+      -- ****f* Canvas/Canvas.Bind_(function)
       -- FUNCTION
       -- Get information about binding to selected items in the selected
       -- canvas
@@ -209,7 +209,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- COMMANDS
       -- CanvasWidget bind tagOrId ?sequence?
       -- SEE ALSO
-      -- Bind (procedure)
+      -- Canvas.Bind_(procedure)
       -- SOURCE
    function Bind
      (CanvasWidget: in Tk_Canvas; TagOrId: in String;
@@ -217,7 +217,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "";
       -- ****
 
-      -- ****f* Canvas/CanvasX
+      -- ****f* Canvas/Canvas.CanvasX
       -- FUNCTION
       -- Get canvas X coordinate for the selected screen X coordinate
       -- PARAMETERS
@@ -242,7 +242,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => ScreenX /= "";
       -- ****
 
-      -- ****f* Canvas/CanvasY
+      -- ****f* Canvas/Canvas.CanvasY
       -- FUNCTION
       -- Get canvas Y coordinate for the selected screen Y coordinate
       -- PARAMETERS
@@ -267,7 +267,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => ScreenY /= "";
       -- ****
 
-      -- ****f* Canvas/Coords (procedure)
+      -- ****f* Canvas/Canvas.Coords_(procedure)
       -- FUNCTION
       -- Set new coordinates for the selected widget inside the selected
       -- Tk_Canvas
@@ -284,14 +284,14 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- COMMANDS
       -- CanvasWidget coords tagOrId x y
       -- SEE ALSO
-      -- Coords (function)
+      -- Canvas.Coords_(function)
       -- SOURCE
    procedure Coords
      (CanvasWidget: in Tk_Canvas; TagOrId, Coordinates: in String) with
       Pre => TagOrId /= "" and Coordinates /= "";
       -- ****
 
-      -- ****f* Canvas/Coords (function)
+      -- ****f* Canvas/Canvas.Coords_(function)
       -- FUNCTION
       -- Get coordinates for the selected widgets inside the selected Tk_Canvas
       -- PARAMETERS
@@ -307,14 +307,14 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- COMMANDS
       -- CanvasWidget coords tagOrId
       -- SEE ALSO
-      -- Coords (procedure)
+      -- Canvas.Coords_(procedure)
       -- SOURCE
    function Coords
      (CanvasWidget: in Tk_Canvas; TagOrId: in String) return String with
       Pre => TagOrId /= "";
       -- ****
 
-      -- ****f* Canvas/Canvas_Create (procedure)
+      -- ****f* Canvas/Canvas.Canvas_Create_(procedure)
       -- FUNCTION
       -- Add the child to the canvas
       -- PARAMETERS
@@ -329,7 +329,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- COMMANDS
       -- CanvasWidget create type ?options?
       -- SEE ALSO
-      -- Canvas_Create (function)
+      -- Canvas.Canvas_Create_(function)
       -- SOURCE
    procedure Canvas_Create
      (Parent: in Tk_Canvas; Child_Type: in String;
@@ -337,7 +337,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => Child_Type /= "";
       -- ****
 
-      -- ****f* Canvas/Canvas_Create (function)
+      -- ****f* Canvas/Canvas.Canvas_Create_(function)
       -- FUNCTION
       -- Add the child to the canvas
       -- PARAMETERS
@@ -354,7 +354,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- COMMANDS
       -- CanvasWidget create type ?options?
       -- SEE ALSO
-      -- Canvas_Create (procedure)
+      -- Canvas.Canvas_Create_(procedure)
       -- SOURCE
    function Canvas_Create
      (Parent: in Tk_Canvas; Child_Type: in String; Options: in String := "")
@@ -362,7 +362,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => Child_Type /= "";
       -- ****
 
-      -- ****f* Canvas/Dchars
+      -- ****f* Canvas/Canvas.Dchars
       -- FUNCTION
       -- Delete characters in the selected items in the selected range
       -- PARAMETERS
@@ -386,7 +386,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "" and First /= "";
       -- ****
 
-      -- ****f* Canvas/Delete
+      -- ****f* Canvas/Canvas.Delete
       -- FUNCTION
       -- Delete selected items from the selected canvas
       -- PARAMETERS
@@ -404,7 +404,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "";
       -- ****
 
-      -- ****f* Canvas/DTag
+      -- ****f* Canvas/Canvas.DTag
       -- FUNCTION
       -- Delete selected Tag from items in the selected canvas
       -- PARAMETERS
@@ -426,7 +426,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "";
       -- ****
 
-      -- ****f* Canvas/Find
+      -- ****f* Canvas/Canvas.Find
       -- FUNCTION
       -- Find items in the selected canvas
       -- PARAMETERS
@@ -452,7 +452,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => SearchCommand /= "";
       -- ****
 
-      -- ****f* Canvas/Focus
+      -- ****f* Canvas/Canvas.Focus
       -- FUNCTION
       -- Set focused item in the selected canvas
       -- PARAMETERS
@@ -472,7 +472,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    procedure Focus(CanvasWidget: in Tk_Canvas; TagOrId: in String := "");
    -- ****
 
-   -- ****f* Canvas/Get_Tags
+   -- ****f* Canvas/Canvas.Get_Tags
    -- FUNCTION
    -- Get list of tags associated with the selected element in the selected
    -- canvas
@@ -497,7 +497,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "";
       -- ****
 
-      -- ****f* Canvas/ICursor
+      -- ****f* Canvas/Canvas.ICursor
       -- FUNCTION
       -- Set insertion cursor in the selected element on selected position
       -- PARAMETERS
@@ -521,7 +521,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "" and Index /= "";
       -- ****
 
-      -- ****f* Canvas/IMove
+      -- ****f* Canvas/Canvas.IMove
       -- FUNCTION
       -- Move index'th coordinate of the selected items to a new location
       -- PARAMETERS
@@ -544,7 +544,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "" and Index /= "" and X /= "" and Y /= "";
       -- ****
 
-      -- ****f* Canvas/Index
+      -- ****f* Canvas/Canvas.Index
       -- FUNCTION
       -- Get numerical index of the selected Index in the selected items
       -- PARAMETERS
@@ -567,7 +567,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "" and Index /= "";
       -- ****
 
-      -- ****f* Canvas/Insert
+      -- ****f* Canvas/Canvas.Insert
       -- FUNCTION
       -- Insert item in the elements in the selected canvas
       -- PARAMETERS
@@ -591,7 +591,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "" and BeforeThis /= "" and Item /= "";
       -- ****
 
-      -- ****f* Canvas/Item_Cget
+      -- ****f* Canvas/Canvas.Item_Cget
       -- FUNCTION
       -- Get configuration option for the selected item in the selected canvas
       -- PARAMETERS
@@ -615,7 +615,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "" and Option /= "";
       -- ****
 
-      -- ****f* Canvas/Item_Configure (procedure)
+      -- ****f* Canvas/Canvas.Item_Configure_(procedure)
       -- FUNCTION
       -- Modify the configuration options of the selected item
       -- PARAMETERS
@@ -630,14 +630,14 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- COMMANDS
       -- CanvasWidget itemconfigure tagOrId options
       -- SEE ALSO
-      -- Item_Configure (function)
+      -- Canvas.Item_Configure_(function)
       -- SOURCE
    procedure Item_Configure
      (CanvasWidget: in Tk_Canvas; TagOrId, Options: in String) with
       Pre => TagOrId /= "" and Options /= "";
       -- ****
 
-      -- ****f* Canvas/Item_Configure (function)
+      -- ****f* Canvas/Canvas.Item_Configure_(function)
       -- FUNCTION
       -- Queries or modifies the configuration options of the selected item
       -- PARAMETERS
@@ -657,7 +657,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- COMMANDS
       -- CanvasWidget itemconfigure tagOrId ?options?
       -- SEE ALSO
-      -- Item_Configure (procedure)
+      -- Canvas.Item_Configure_(procedure)
       -- SOURCE
    function Item_Configure
      (CanvasWidget: in Tk_Canvas; TagOrId: in String; Options: in String := "")
@@ -665,7 +665,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "";
       -- ****
 
-      -- ****f* Canvas/Lower
+      -- ****f* Canvas/Canvas.Lower
       -- FUNCTION
       -- Move selected item lower in the display
       -- PARAMETERS
@@ -689,7 +689,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "";
       -- ****
 
-      -- ****f* Canvas/Move
+      -- ****f* Canvas/Canvas.Move
       -- FUNCTION
       -- Move selected items in the canvas coodinate space
       -- PARAMETERS
@@ -710,7 +710,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "" and XAmount /= "" and YAmount /= "";
       -- ****
 
-      -- ****f* Canvas/MoveTo
+      -- ****f* Canvas/Canvas.MoveTo
       -- FUNCTION
       -- Move selected items to the selected position in the selected canvas
       -- PARAMETERS
@@ -731,7 +731,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => XPos /= "" and YPos /= "";
       -- ****
 
-      -- ****f* Canvas/Postscript
+      -- ****f* Canvas/Canvas.Postscript
       -- FUNCTION
       -- Generate a Postscript representation of part or all of the canvas
       -- PARAMETERS
@@ -754,7 +754,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => Options /= "";
       -- ****
 
-      -- ****f* Canvas/Canvas_Raise
+      -- ****f* Canvas/Canvas.Canvas_Raise
       -- FUNCTION
       -- Move selected item higher in the display
       -- PARAMETERS
@@ -778,7 +778,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "";
       -- ****
 
-      -- ****f* Canvas/Rchars
+      -- ****f* Canvas/Canvas.Rchars
       -- FUNCTION
       -- Replace text at selected position in the selected items. How text is
       -- replaced depends on the item type
@@ -803,7 +803,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "" and First /= "" and Last /= "" and Text /= "";
       -- ****
 
-      -- ****f* Canvas/Scale
+      -- ****f* Canvas/Canvas.Scale
       -- FUNCTION
       -- Rescale coordinates of the selected items in canvas coordinate space.
       -- Each point is scaled by distance between XOrgin and XScale and YOrgin
@@ -830,7 +830,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       XScale /= "" and YScale /= "";
       -- ****
 
-      -- ****f* Canvas/Select_Adjust
+      -- ****f* Canvas/Canvas.Select_Adjust
       -- FUNCTION
       -- Resize current selection in the item in canvas to the selected index
       -- PARAMETERS
@@ -851,7 +851,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "" and Index /= "";
       -- ****
 
-      -- ****f* Canvas/Select_Clear
+      -- ****f* Canvas/Canvas.Select_Clear
       -- FUNCTION
       -- Clear the selection in the selected Tk_Canvas
       -- PARAMETERS
@@ -867,7 +867,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    procedure Select_Clear(CanvasWidget: in Tk_Canvas);
    -- ****
 
-   -- ****f* Canvas/Select_From
+   -- ****f* Canvas/Canvas.Select_From
    -- FUNCTION
    -- Set the selection anchor point for the canvas in the selected item at
    -- selected character. This procedure does not change selection it just
@@ -889,7 +889,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "" and Index /= "";
       -- ****
 
-      -- ****f* Canvas/Select_Item
+      -- ****f* Canvas/Canvas.Select_Item
       -- FUNCTION
       -- Get Id of the selected item in the selected canvas
       -- PARAMETERS
@@ -907,7 +907,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    function Select_Item(CanvasWidget: in Tk_Canvas) return String;
    -- ****
 
-   -- ****f* Canvas/Select_To
+   -- ****f* Canvas/Canvas.Select_To
    -- FUNCTION
    -- Set selection end for the canvas in the selected item at the selected
    -- character. Starting point is set by the most recent Select_Adjust or
@@ -929,7 +929,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "" and Index /= "";
       -- ****
 
-      -- ****f* Canvas/Canvas_Type
+      -- ****f* Canvas/Canvas.Canvas_Type
       -- FUNCTION
       -- Get type of the selected item in the selected Tk_Canvas
       -- PARAMETERS
@@ -952,7 +952,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       Pre => TagOrId /= "";
       -- ****
 
-      -- ****f* Canvas/XView
+      -- ****f* Canvas/Canvas.XView
       -- FUNCTION
       -- Get which horizontal fraction of the canvas is visible
       -- PARAMETERS
@@ -969,12 +969,12 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- COMMANDS
       -- CanvasWidget xview
       -- SEE ALSO
-      -- YView
+      -- Canvas.YView
       -- SOURCE
    function XView(CanvasWidget: in Tk_Canvas) return String;
    -- ****
 
-   -- ****f* Canvas/Xview_Move_To
+   -- ****f* Canvas/Canvas.Xview_Move_To
    -- FUNCTION
    -- Adjusts the view in the window so that fraction of the total width of
    -- the Tk_Canvas is off-screen to the left.
@@ -990,14 +990,14 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    -- COMMANDS
    -- CanvasWidget xview moveto fraction
    -- SEE ALSO
-   -- Yview_Move_To
+   -- Canvas.Yview_Move_To
    -- SOURCE
    procedure Xview_Move_To
      (CanvasWidget: in Tk_Canvas; Fraction: in String) with
       Pre => Fraction /= "";
       -- ****
 
-      -- ****f* Canvas/Xview_Scroll
+      -- ****f* Canvas/Canvas.Xview_Scroll
       -- FUNCTION
       -- Shift the view in the window on left or right according to Number and
       -- What.
@@ -1013,14 +1013,14 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- COMMANDS
       -- CanvasWidget xview scroll number what
       -- SEE ALSO
-      -- Yview_Scroll
+      -- Canvas.Yview_Scroll
       -- SOURCE
    procedure Xview_Scroll
      (CanvasWidget: in Tk_Canvas; Number, What: in String) with
       Pre => Number /= "" and (What = "units" or What = "pages");
       -- ****
 
-      -- ****f* Canvas/YView
+      -- ****f* Canvas/Canvas.YView
       -- FUNCTION
       -- Get which vertical fraction of the canvas is visible
       -- PARAMETERS
@@ -1037,12 +1037,12 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- COMMANDS
       -- CanvasWidget yview
       -- SEE ALSO
-      -- XView
+      -- Canvas.XView
       -- SOURCE
    function YView(CanvasWidget: in Tk_Canvas) return String;
    -- ****
 
-   -- ****f* Canvas/Yview_Move_To
+   -- ****f* Canvas/Canvas.Yview_Move_To
    -- FUNCTION
    -- Adjusts the view in the window so that fraction of the total height of
    -- the Tk_Canvas is off-screen to the top.
@@ -1058,14 +1058,14 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    -- COMMANDS
    -- CanvasWidget yview moveto fraction
    -- SEE ALSO
-   -- Xview_Move_To
+   -- Canvas.Xview_Move_To
    -- SOURCE
    procedure Yview_Move_To
      (CanvasWidget: in Tk_Canvas; Fraction: in String) with
       Pre => Fraction /= "";
       -- ****
 
-      -- ****f* Canvas/Yview_Scroll
+      -- ****f* Canvas/Canvas.Yview_Scroll
       -- FUNCTION
       -- Shift the view in the window on top or bottom according to Number and
       -- What.
@@ -1081,7 +1081,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- COMMANDS
       -- CanvasWidget yview scroll number what
       -- SEE ALSO
-      -- Xview_Scroll
+      -- Canvas.Xview_Scroll
       -- SOURCE
    procedure Yview_Scroll
      (CanvasWidget: in Tk_Canvas; Number, What: in String) with
