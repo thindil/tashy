@@ -27,7 +27,7 @@
 package Tcl.Tk.Ada.Widgets.Button is
 -- ****
 
-   -- ****t* Button/Tk_Button
+   -- ****t* Button/Button.Tk_Button
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -36,7 +36,7 @@ package Tcl.Tk.Ada.Widgets.Button is
    type Tk_Button is new Tk_Widget with private;
    -- ****
 
-   -- ****f* Button/Create (function)
+   -- ****f* Button/Button.Create_(function)
    -- FUNCTION
    -- Creates a new Tk_Button in the specified interpreter.
    -- PARAMETERS
@@ -56,7 +56,7 @@ package Tcl.Tk.Ada.Widgets.Button is
    -- COMMANDS
    -- button pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- Button.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -64,7 +64,7 @@ package Tcl.Tk.Ada.Widgets.Button is
       Pre => pathName /= "";
       -- ****
 
-     -- ****f* Button/Create (procedure)
+     -- ****f* Button/Button.Create_(procedure)
      -- FUNCTION
      -- Creates a new Tk_Button in the specified interpreter.
      -- PARAMETERS
@@ -89,7 +89,7 @@ package Tcl.Tk.Ada.Widgets.Button is
      -- COMMANDS
      -- button pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- Button.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Button; pathName: in String; options: in String := "";
@@ -97,7 +97,7 @@ package Tcl.Tk.Ada.Widgets.Button is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* Button/Get_Widget
+     -- ****f* Button/Button.Get_Widget
      -- FUNCTION
      -- Get the existing Tk_Button widget
      -- PARAMETERS
@@ -117,7 +117,7 @@ package Tcl.Tk.Ada.Widgets.Button is
       return Tk_Button;
      -- ****
 
-     -- ****f* Button/Flash
+     -- ****f* Button/Button.Flash
      -- FUNCTION
      -- Flash the button.
      -- PARAMETERS
@@ -133,7 +133,7 @@ package Tcl.Tk.Ada.Widgets.Button is
    procedure Flash(Buttn: in Tk_Button);
    -- ****
 
-   -- ****f* Button/Invoke
+   -- ****f* Button/Button.Invoke
    -- FUNCTION
    -- Invoke the Tcl command associated with the button.
    -- PARAMETERS
