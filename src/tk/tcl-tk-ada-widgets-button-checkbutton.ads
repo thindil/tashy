@@ -27,14 +27,14 @@
 package Tcl.Tk.Ada.Widgets.Button.CheckButton is
 -- ****
 
-   -- ****t* CheckButton/Tk_CheckButton
+   -- ****t* CheckButton/CheckButton.Tk_CheckButton
    -- FUNCTION
    -- This is a type derived from Tk_Button.
    -- SOURCE
    type Tk_CheckButton is new Tk_Button with private;
    -- ****
 
-   -- ****f* CheckButton/Create (function)
+   -- ****f* CheckButton/CheckButton.Create_(function)
    -- FUNCTION
    -- Creates a new Tk_CheckButton in the specified interpreter.
    -- PARAMETERS
@@ -54,7 +54,7 @@ package Tcl.Tk.Ada.Widgets.Button.CheckButton is
    -- COMMANDS
    -- checkbutton pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- CheckButton.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -62,7 +62,7 @@ package Tcl.Tk.Ada.Widgets.Button.CheckButton is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* CheckButton/Create (procedure)
+     -- ****f* CheckButton/CheckButton.Create_(procedure)
      -- FUNCTION
      -- Creates a new Tk_CheckButton in the specified interpreter.
      -- PARAMETERS
@@ -87,7 +87,7 @@ package Tcl.Tk.Ada.Widgets.Button.CheckButton is
      -- COMMANDS
      -- checkbutton pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- CheckButton.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_CheckButton; pathName: in String; options: in String := "";
@@ -95,7 +95,7 @@ package Tcl.Tk.Ada.Widgets.Button.CheckButton is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* CheckButton/Deselect
+     -- ****f* CheckButton/CheckButton.Deselect
      -- FUNCTION
      -- Deselect the button.
      -- PARAMETERS
@@ -111,7 +111,7 @@ package Tcl.Tk.Ada.Widgets.Button.CheckButton is
    procedure Deselect(Buttn: in Tk_CheckButton);
    -- ****
 
-   -- ****f* CheckButton/Tk_Select
+   -- ****f* CheckButton/CheckButton.Tk_Select
    -- FUNCTION
    -- Select the button.
    -- PARAMETERS
@@ -127,7 +127,7 @@ package Tcl.Tk.Ada.Widgets.Button.CheckButton is
    procedure Tk_Select(Buttn: in Tk_CheckButton);
    -- ****
 
-   -- ****f* CheckButton/Toggle
+   -- ****f* CheckButton/CheckButton.Toggle
    -- FUNCTION
    -- Toggle the button.
    -- PARAMETERS
