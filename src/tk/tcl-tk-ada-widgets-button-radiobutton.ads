@@ -27,14 +27,14 @@
 package Tcl.Tk.Ada.Widgets.Button.RadioButton is
 -- ****
 
-   -- ****t* RadioButton/Tk_RadioButton
+   -- ****t* RadioButton/RadioButton.Tk_RadioButton
    -- FUNCTION
    -- This is a type derived from Tk_Button.
    -- SOURCE
    type Tk_RadioButton is new Tk_Button with private;
    -- ****
 
-   -- ****f* RadioButton/Create (function)
+   -- ****f* RadioButton/RadioButton.Create_(function)
    -- FUNCTION
    -- Creates a new Tk_RadioButton in the specified interpreter.
    -- PARAMETERS
@@ -54,7 +54,7 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
    -- COMMANDS
    -- radiobutton pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- RadioButton.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -62,7 +62,7 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* RadioButton/Create (procedure)
+     -- ****f* RadioButton/RadioButton.Create_(procedure)
      -- FUNCTION
      -- Creates a new Tk_RadioButton in the specified interpreter.
      -- PARAMETERS
@@ -87,7 +87,7 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
      -- COMMANDS
      -- radiobutton pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- RadioButton.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_RadioButton; pathName: in String; options: in String := "";
@@ -95,7 +95,7 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* RadioButton/Get_Widget
+     -- ****f* RadioButton/RadioButton.Get_Widget
      -- FUNCTION
      -- Get the existing Tk_RadioButton widget
      -- PARAMETERS
@@ -115,7 +115,7 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
       return Tk_RadioButton;
      -- ****
 
-     -- ****f* RadioButton/Deselect
+     -- ****f* RadioButton/RadioButton.Deselect
      -- FUNCTION
      -- Deselect the button.
      -- PARAMETERS
@@ -131,7 +131,7 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
    procedure Deselect(Buttn: in Tk_RadioButton);
    -- ****
 
-   -- ****f* RadioButton/Tk_Select
+   -- ****f* RadioButton/RadioButton.Tk_Select
    -- FUNCTION
    -- Select the button.
    -- PARAMETERS
@@ -147,7 +147,7 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
    procedure Tk_Select(Buttn: in Tk_RadioButton);
    -- ****
 
-   -- ****f* RadioButton/Toggle
+   -- ****f* RadioButton/RadioButton.Toggle
    -- FUNCTION
    -- Toggle the button.
    -- PARAMETERS
