@@ -27,7 +27,7 @@
 package Tcl.Tk.Ada.Widgets.ListBox is
 -- ****
 
-   -- ****t* ListBox/Tk_ListBox
+   -- ****t* ListBox/ListBox.Tk_ListBox
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -36,7 +36,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    type Tk_ListBox is new Tk_Widget with private;
    -- ****
 
-   -- ****f* ListBox/Create (function)
+   -- ****f* ListBox/ListBox.Create_(function)
    -- FUNCTION
    -- Creates a new Tk_ListBox in the specified interpreter.
    -- PARAMETERS
@@ -56,7 +56,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    -- COMMANDS
    -- listbox pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- ListBox.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -64,7 +64,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* ListBox/Create (procedure)
+     -- ****f* ListBox/ListBox.Create_(procedure)
      -- FUNCTION
      -- Creates a new Tk_ListBox in the specified interpreter.
      -- PARAMETERS
@@ -89,7 +89,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
      -- COMMANDS
      -- listbox pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- ListBox.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_ListBox; pathName: in String; options: in String := "";
@@ -97,7 +97,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* ListBox/Get_Widget
+     -- ****f* ListBox/ListBox.Get_Widget
      -- FUNCTION
      -- Get the existing Tk_ListBox widget
      -- PARAMETERS
@@ -117,7 +117,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       return Tk_ListBox;
      -- ****
 
-     -- ****f* ListBox/Activate
+     -- ****f* ListBox/ListBox.Activate
      -- FUNCTION
      -- Set the active element of Tk_ListBox to the selected index.
      -- PARAMETERS
@@ -135,7 +135,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* ListBox/BBox
+      -- ****f* ListBox/ListBox.BBox
       -- FUNCTION
       -- Get size of bounding box of the selected item text in the selected
       -- Tk_ListBox
@@ -160,7 +160,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* ListBox/CurSelection
+      -- ****f* ListBox/ListBox.CurSelection
       -- FUNCTION
       -- Get the current selected items in the selected Tk_ListBox
       -- PARAMETERS
@@ -179,7 +179,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    function CurSelection(ListboxWidget: in Tk_ListBox) return String;
    -- ****
 
-   -- ****f* ListBox/Delete
+   -- ****f* ListBox/ListBox.Delete
    -- FUNCTION
    -- Delete the selected elements from the selected Tk_ListBox
    -- PARAMETERS
@@ -201,7 +201,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => First /= "";
       -- ****
 
-      -- ****f* ListBox/Get
+      -- ****f* ListBox/ListBox.Get
       -- FUNCTION
       -- Get the content of the selected elements in the selected Tk_ListBox
       -- PARAMETERS
@@ -226,7 +226,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => First /= "";
       -- ****
 
-      -- ****f* ListBox/Index
+      -- ****f* ListBox/ListBox.Index
       -- FUNCTION
       -- Get the index for the selected element in the selected Tk_ListBox
       -- PARAMETERS
@@ -248,7 +248,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* ListBox/Insert
+      -- ****f* ListBox/ListBox.Insert
       -- FUNCTION
       -- Insert zero or more elements to the selected Tk_ListBox
       -- PARAMETERS
@@ -269,7 +269,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* ListBox/Item_Cget
+      -- ****f* ListBox/ListBox.Item_Cget
       -- FUNCTION
       -- Get the selected option of the selected item in the selected Tk_ListBox
       -- PARAMETERS
@@ -291,7 +291,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => Index /= "" and Option /= "";
       -- ****
 
-      -- ****f* ListBox/Item_Configure (procedure)
+      -- ****f* ListBox/ListBox.Item_Configure_(procedure)
       -- FUNCTION
       -- Modifies the configuration options of the selected item
       -- PARAMETERS
@@ -306,14 +306,14 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- COMMANDS
       -- ListBoxWidget itemconfigure index options
       -- SEE ALSO
-      -- Item_Configure (function)
+      -- ListBox.Item_Configure_(function)
       -- SOURCE
    procedure Item_Configure
      (ListBoxWidget: in Tk_ListBox; Index, Options: in String) with
       Pre => Index /= "" and Options /= "";
       -- ****
 
-      -- ****f* ListBox/Item_Configure (function)
+      -- ****f* ListBox/ListBox.Item_Configure_(function)
       -- FUNCTION
       -- Queries or modifies the configuration options of the selected item
       -- PARAMETERS
@@ -334,7 +334,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- COMMANDS
       -- ListBoxWidget itemconfigure index ?options?
       -- SEE ALSO
-      -- Item_Configure (procedure)
+      -- ListBox.Item_Configure_(procedure)
       -- SOURCE
    function Item_Configure
      (ListBoxWidget: in Tk_ListBox; Index: in String; Options: in String := "")
@@ -342,7 +342,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* ListBox/Nearest
+      -- ****f* ListBox/ListBox.Nearest
       -- FUNCTION
       -- Get nearest element to the selected point in the selected Tk_ListBox
       -- PARAMETERS
@@ -363,7 +363,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => Y /= "";
       -- ****
 
-      -- ****f* ListBox/Scan_Mark
+      -- ****f* ListBox/ListBox.Scan_Mark
       -- FUNCTION
       -- Sets starting position for scan in the selected Tk_ListBox
       -- PARAMETERS
@@ -382,7 +382,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* ListBox/Scan_DragTo
+      -- ****f* ListBox/ListBox.Scan_DragTo
       -- FUNCTION
       -- Computes the difference between its X and Y arguments and the X and Y
       -- arguments to the last Scan_Mark procedure for the Tk_ListBox. It then
@@ -403,7 +403,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* ListBox/See
+      -- ****f* ListBox/ListBox.See
       -- FUNCTION
       -- Make the selected element of the selected Tk_ListBox visible. If the
       -- element is visible, this procedure do nothing.
@@ -423,7 +423,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* ListBox/Selection_Anchor
+      -- ****f* ListBox/ListBox.Selection_Anchor
       -- FUNCTION
       -- Set the selection anchor to the selected element in the selected
       -- Tk_ListBox
@@ -445,7 +445,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* ListBox/Selection_Clear
+      -- ****f* ListBox/ListBox.Selection_Clear
       -- FUNCTION
       -- Deselect elements in the Tk_ListBox between First and Last indexes
       -- PARAMETERS
@@ -467,7 +467,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => First /= "";
       -- ****
 
-      -- ****f* ListBox/Selection_Includes
+      -- ****f* ListBox/ListBox.Selection_Includes
       -- FUNCTION
       -- Check if the selected element is in the selection in the selected
       -- Tk_ListBox
@@ -489,7 +489,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* ListBox/Selection_Set
+      -- ****f* ListBox/ListBox.Selection_Set
       -- FUNCTION
       -- Add the selected elements to the Tk_ListBox selection
       -- PARAMETERS
@@ -512,7 +512,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       Pre => First /= "";
       -- ****
 
-      -- ****f* ListBox/Size
+      -- ****f* ListBox/ListBox.Size
       -- FUNCTION
       -- Get amount of the elements in the selected Tk_ListBox
       -- PARAMETERS
@@ -530,7 +530,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    function Size(ListboxWidget: in Tk_ListBox) return String;
    -- ****
 
-   -- ****f* ListBox/XView (function)
+   -- ****f* ListBox/ListBox.XView_(function)
    -- FUNCTION
    -- Get which horizontal fraction of the Tk_ListBox is visible
    -- PARAMETERS
@@ -547,12 +547,13 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    -- COMMANDS
    -- ListboxWidget xview
    -- SEE ALSO
-   -- YView (function), XView (procedure), YView (procedure)
+   -- ListBox.YView_(function), ListBox.XView_(procedure),
+   -- ListBox.YView_(procedure)
    -- SOURCE
    function XView(ListboxWidget: in Tk_ListBox) return String;
    -- ****
 
-   -- ****f* ListBox/XView (procedure)
+   -- ****f* ListBox/ListBox.XView_(procedure)
    -- FUNCTION
    -- Adjusts the view in the window so that the character position given by
    -- index is displayed at the left edge of the window
@@ -568,13 +569,14 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    -- COMMANDS
    -- ListboxWidget xview index
    -- SEE ALSO
-   -- YView (function), XView (function), YView (procedure)
+   -- ListBox.YView_(function), ListBox.XView_(function),
+   -- ListBox.YView_(procedure)
    -- SOURCE
    procedure XView(ListboxWidget: in Tk_ListBox; Index: in String) with
       Pre => Index /= "";
       -- ****
 
-      -- ****f* ListBox/Xview_Move_To
+      -- ****f* ListBox/ListBox.Xview_Move_To
       -- FUNCTION
       -- Adjusts the view in the window so that fraction of the total width of
       -- the Tk_ListBox is off-screen to the left.
@@ -590,14 +592,14 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- COMMANDS
       -- ListboxWidget xview moveto fraction
       -- SEE ALSO
-      -- Yview_Move_To
+      -- ListBox.Yview_Move_To
       -- SOURCE
    procedure Xview_Move_To
      (ListboxWidget: in Tk_ListBox; Fraction: in String) with
       Pre => Fraction /= "";
       -- ****
 
-      -- ****f* ListBox/Xview_Scroll
+      -- ****f* ListBox/ListBox.Xview_Scroll
       -- FUNCTION
       -- Shift the view in the window on left or right according to Number and
       -- What.
@@ -613,14 +615,14 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- COMMANDS
       -- ListboxWidget xview scroll number what
       -- SEE ALSO
-      -- Yview_Scroll
+      -- ListBox.Yview_Scroll
       -- SOURCE
    procedure Xview_Scroll
      (ListboxWidget: in Tk_ListBox; Number, What: in String) with
       Pre => Number /= "" and (What = "units" or What = "pages");
       -- ****
 
-      -- ****f* ListBox/YView (function)
+      -- ****f* ListBox/ListBox.YView_(function)
       -- FUNCTION
       -- Get which vertical fraction of the Tk_ListBox is visible
       -- PARAMETERS
@@ -637,12 +639,13 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- COMMANDS
       -- ListboxWidget yview
       -- SEE ALSO
-      -- YView (procedure), XView (function), XView (procedure)
+      -- ListBox.YView_(procedure), ListBox.XView_(function),
+      -- ListBox.XView_(procedure)
       -- SOURCE
    function YView(ListboxWidget: in Tk_ListBox) return String;
    -- ****
 
-   -- ****f* ListBox/YView (procedure)
+   -- ****f* ListBox/ListBox.YView_(procedure)
    -- FUNCTION
    -- Adjusts the view in the window so that the element given by index is
    -- displayed at the top edge of the window
@@ -658,13 +661,14 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    -- COMMANDS
    -- ListboxWidget yview index
    -- SEE ALSO
-   -- XView (procedure), XView (function), YView (procedure)
+   -- ListBox.XView_(procedure), ListBox.XView_(function),
+   -- ListBox.YView_(procedure)
    -- SOURCE
    procedure YView(ListboxWidget: in Tk_ListBox; Index: in String) with
       Pre => Index /= "";
       -- ****
 
-      -- ****f* ListBox/Yview_Move_To
+      -- ****f* ListBox/ListBox.Yview_Move_To
       -- FUNCTION
       -- Adjusts the view in the window so that fraction of the total height of
       -- the Tk_ListBox is off-screen to the top.
@@ -680,14 +684,14 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- COMMANDS
       -- ListboxWidget yview moveto fraction
       -- SEE ALSO
-      -- Xview_Move_To
+      -- ListBox.Xview_Move_To
       -- SOURCE
    procedure Yview_Move_To
      (ListboxWidget: in Tk_ListBox; Fraction: in String) with
       Pre => Fraction /= "";
       -- ****
 
-      -- ****f* ListBox/Yview_Scroll
+      -- ****f* ListBox/ListBox.Yview_Scroll
       -- FUNCTION
       -- Shift the view in the window on up or down according to Number and
       -- What.
@@ -703,7 +707,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- COMMANDS
       -- ListboxWidget yview scroll number what
       -- SEE ALSO
-      -- Xview_Scroll
+      -- ListBox.Xview_Scroll
       -- SOURCE
    procedure Yview_Scroll
      (ListboxWidget: in Tk_ListBox; Number, What: in String) with
