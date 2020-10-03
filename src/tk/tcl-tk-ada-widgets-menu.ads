@@ -27,7 +27,7 @@
 package Tcl.Tk.Ada.Widgets.Menu is
 -- ****
 
-   -- ****t* Menu/Tk_Menu
+   -- ****t* Menu/Menu.Tk_Menu
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -36,7 +36,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
    type Tk_Menu is new Tk_Widget with private;
    -- ****
 
-   -- ****f* Menu/Create (function)
+   -- ****f* Menu/Menu.Create_(function)
    -- FUNCTION
    -- Creates a new Tk_Menu in the specified interpreter.
    -- PARAMETERS
@@ -56,7 +56,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
    -- COMMANDS
    -- menu pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- Menu.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -64,7 +64,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* Menu/Create (procedure)
+     -- ****f* Menu/Menu.Create_(procedure)
      -- FUNCTION
      -- Creates a new Tk_Menu in the specified interpreter.
      -- PARAMETERS
@@ -89,7 +89,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
      -- COMMANDS
      -- menu pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- Menu.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Menu; pathName: in String; options: in String := "";
@@ -97,7 +97,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* Menu/Get_Widget
+     -- ****f* Menu/Menu.Get_Widget
      -- FUNCTION
      -- Get the existing Tk_Menu widget
      -- PARAMETERS
@@ -117,7 +117,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       return Tk_Menu;
      -- ****
 
-     -- ****f* Menu/Activate
+     -- ****f* Menu/Menu.Activate
      -- FUNCTION
      -- Activate the selected item in the selected menu. Previously active
      -- is deactivated.
@@ -136,7 +136,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* Menu/AddMenu
+      -- ****f* Menu/Menu.AddMenu
       -- FUNCTION
       -- Add element to the menu.
       -- PARAMETERS
@@ -159,7 +159,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       Pre => EntryType /= "";
       -- ****
 
-      -- ****f* Menu/Clone
+      -- ****f* Menu/Menu.Clone
       -- FUNCTION
       -- Make a clone of the selected menu
       -- PARAMETERS
@@ -180,7 +180,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       CloneType in "normal" | "menubar" | "tearoff" | "";
       -- ****
 
-      -- ****f* Menu/Delete
+      -- ****f* Menu/Menu.Delete
       -- FUNCTION
       -- Delete elements from the menu.
       -- PARAMETERS
@@ -202,7 +202,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       Pre => StartIndex /= "";
       -- ****
 
-      -- ****f* Menu/Entry_Cget
+      -- ****f* Menu/Menu.Entry_Cget
       -- FUNCTION
       -- Get current value of the selected option of the selected entry in the
       -- selected Tk_Menu
@@ -220,14 +220,14 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- COMMANDS
       -- MenuWidget entrycget index option
       -- SEE ALSO
-      -- Entry_Configure (function)
+      -- Menu.Entry_Configure_(function)
       -- SOURCE
    function Entry_Cget
      (MenuWidget: in Tk_Menu; Index, Option: in String) return String with
       Pre => Index /= "" and Option /= "";
       -- ****
 
-      -- ****f* Menu/Entry_Configure (procedure)
+      -- ****f* Menu/Menu.Entry_Configure_(procedure)
       -- FUNCTION
       -- Configure selected menu entry
       -- PARAMETERS
@@ -242,14 +242,14 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- COMMANDS
       -- MenuWidget entryconfigure index options
       -- SEE ALSO
-      -- Entry_Configure (function)
+      -- Menu.Entry_Configure_(function)
       -- SOURCE
    procedure Entry_Configure
      (MenuWidget: in Tk_Menu; Index, Options: in String) with
       Pre => Index /= "" and Options /= "";
       -- ****
 
-      -- ****f* Menu/Entry_Configure (function)
+      -- ****f* Menu/Menu.Entry_Configure_(function)
       -- FUNCTION
       -- Get configuration of the selected menu entry
       -- PARAMETERS
@@ -267,14 +267,14 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- COMMANDS
       -- MenuWidget entryconfigure index
       -- SEE ALSO
-      -- Entry_Configure (procedure), Entry_Cget
+      -- Menu.Entry_Configure_(procedure), Menu.Entry_Cget
       -- SOURCE
    function Entry_Configure
      (MenuWidget: in Tk_Menu; Index: in String) return String with
       Pre => Index /= "";
       -- ****
 
-      -- ****f* Menu/Index
+      -- ****f* Menu/Menu.Index
       -- FUNCTION
       -- Get the numerical index of the selected menu entry in the selected
       -- menu
@@ -296,7 +296,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* Menu/Insert
+      -- ****f* Menu/Menu.Insert
       -- FUNCTION
       -- Add the selected menu entry before other selected entry.
       -- PARAMETERS
@@ -313,7 +313,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- COMMANDS
       -- MenuWidget insert index EntryType ?options?
       -- SEE ALSO
-      -- AddMenu
+      -- Menu.AddMenu
       -- SOURCE
    procedure Insert
      (MenuWidget: in Tk_Menu'Class; Index, EntryType: in String;
@@ -321,7 +321,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       Pre => Index /= "" and EntryType /= "";
       -- ****
 
-      -- ****f* Menu/Invoke
+      -- ****f* Menu/Menu.Invoke
       -- FUNCTION
       -- Invoke command associated with the selected menu entry in the selected
       -- menu
@@ -342,7 +342,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* Menu/Post (procedure)
+      -- ****f* Menu/Menu.Post_(procedure)
       -- FUNCTION
       -- Display the selected menu at the selected coordinates
       -- PARAMETERS
@@ -359,13 +359,13 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- COMMANDS
       -- MenuWidget post x y
       -- SEE ALSO
-      -- Post (function)
+      -- Menu.Post_(function)
       -- SOURCE
    procedure Post(MenuWidget: in Tk_Menu; X, Y: in String) with
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* Menu/Post (function)
+      -- ****f* Menu/Menu.Post_(function)
       -- FUNCTION
       -- Display the selected menu at the selected coordinates
       -- PARAMETERS
@@ -386,13 +386,13 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- COMMANDS
       -- MenuWidget post x y
       -- SEE ALSO
-      -- Post (procedure)
+      -- Menu.Post_(procedure)
       -- SOURCE
    function Post(MenuWidget: in Tk_Menu; X, Y: in String) return String with
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* Menu/PostCascade
+      -- ****f* Menu/Menu.PostCascade
       -- FUNCTION
       -- Show submenu associated with the cascade entry with the selected
       -- index. Unpost previously posted submenu
@@ -411,7 +411,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* Menu/Menu_Type
+      -- ****f* Menu/Menu.Menu_Type
       -- FUNCTION
       -- Get type of the selected entry in the selected Tk_Menu
       -- PARAMETERS
@@ -432,7 +432,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* Menu/Tk_Popup
+      -- ****f* Menu/Menu.Tk_Popup
       -- FUNCTION
       -- Post the selected menu at the selected screen position
       -- PARAMETERS
@@ -455,7 +455,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* Menu/Unpost
+      -- ****f* Menu/Menu.Unpost
       -- FUNCTION
       -- Unmap the selected menu so it is no longer displayed. This procedure
       -- don't work on Windows and MacOS as those platforms have their own way
@@ -473,7 +473,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
    procedure Unpost(MenuWidget: in Tk_Menu);
    -- ****
 
-   -- ****f* Menu/XPosition
+   -- ****f* Menu/Menu.XPosition
    -- FUNCTION
    -- Get X coordinate of the leftmost pixel of the selected menu entry in
    -- the selected Tk_Menu
@@ -491,14 +491,14 @@ package Tcl.Tk.Ada.Widgets.Menu is
    -- COMMANDS
    -- MenuWidget xposition index
    -- SEE ALSO
-   -- YPosition
+   -- Menu.YPosition
    -- SOURCE
    function XPosition
      (MenuWidget: in Tk_Menu; Index: in String) return String with
       Pre => Index /= "";
       -- ****
 
-      -- ****f* Menu/YPosition
+      -- ****f* Menu/Menu.YPosition
       -- FUNCTION
       -- Get Y coordinate of the topmost pixel of the selected menu entry in
       -- the selected Tk_Menu
@@ -516,7 +516,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- COMMANDS
       -- MenuWidget yposition index
       -- SEE ALSO
-      -- XPosition
+      -- Menu.XPosition
       -- SOURCE
    function YPosition
      (MenuWidget: in Tk_Menu; Index: in String) return String with
