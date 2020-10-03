@@ -27,7 +27,7 @@
 package Tcl.Tk.Ada.Widgets.Message is
 -- ****
 
-   -- ****t* Message/Tk_Message
+   -- ****t* Message/Message.Tk_Message
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -36,7 +36,7 @@ package Tcl.Tk.Ada.Widgets.Message is
    type Tk_Message is new Tk_Widget with private;
    -- ****
 
-   -- ****f* Message/Create (function)
+   -- ****f* Message/Message.Create_(function)
    -- FUNCTION
    -- Creates a new Tk_Message in the specified interpreter.
    -- PARAMETERS
@@ -56,7 +56,7 @@ package Tcl.Tk.Ada.Widgets.Message is
    -- COMMANDS
    -- message pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- Message.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -64,7 +64,7 @@ package Tcl.Tk.Ada.Widgets.Message is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* Message/Create (procedure)
+     -- ****f* Message/Message.Create_(procedure)
      -- FUNCTION
      -- Creates a new Tk_Message in the specified interpreter.
      -- PARAMETERS
@@ -89,7 +89,7 @@ package Tcl.Tk.Ada.Widgets.Message is
      -- COMMANDS
      -- message pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- Message.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Message; pathName: in String; options: in String := "";
@@ -97,7 +97,7 @@ package Tcl.Tk.Ada.Widgets.Message is
       Pre => pathName /= "";
       -- ****
 
-     -- ****f* Message/Get_Widget
+     -- ****f* Message/Message.Get_Widget
      -- FUNCTION
      -- Get the existing Tk_Message widget
      -- PARAMETERS
