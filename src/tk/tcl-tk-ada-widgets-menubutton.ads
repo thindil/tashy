@@ -34,7 +34,7 @@
 package Tcl.Tk.Ada.Widgets.MenuButton is
 -- ****
 
-   -- ****t* MenuButton/Tk_MenuButton
+   -- ****t* MenuButton/MenuButton.Tk_MenuButton
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -43,7 +43,7 @@ package Tcl.Tk.Ada.Widgets.MenuButton is
    type Tk_MenuButton is new Tk_Widget with private;
    -- ****
 
-   -- ****f* MenuButton/Create (function)
+   -- ****f* MenuButton/MenuButton.Create_(function)
    -- FUNCTION
    -- Creates a new Tk_MenuButton in the specified interpreter.
    -- PARAMETERS
@@ -63,7 +63,7 @@ package Tcl.Tk.Ada.Widgets.MenuButton is
    -- COMMANDS
    -- menubutton pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- MenuButton.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -71,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.MenuButton is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* MenuButton/Create (procedure)
+     -- ****f* MenuButton/MenuButton.Create_(procedure)
      -- FUNCTION
      -- Creates a new Tk_MenuButton in the specified interpreter.
      -- PARAMETERS
@@ -96,7 +96,7 @@ package Tcl.Tk.Ada.Widgets.MenuButton is
      -- COMMANDS
      -- menubutton pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- MenuButton.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_MenuButton; pathName: in String; options: in String := "";
@@ -104,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.MenuButton is
       Pre => pathName /= "";
       -- ****
 
-     -- ****f* MenuButton/Get_Widget
+     -- ****f* MenuButton/MenuButton.Get_Widget
      -- FUNCTION
      -- Get the existing Tk_MenuButton widget
      -- PARAMETERS
