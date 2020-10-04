@@ -27,7 +27,7 @@
 package Tcl.Tk.Ada.Widgets.OptionMenu is
 -- ****
 
-   -- ****t* OptionMenu/Tk_OptionMenu
+   -- ****t* OptionMenu/OptionMenu.Tk_OptionMenu
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -36,7 +36,7 @@ package Tcl.Tk.Ada.Widgets.OptionMenu is
    type Tk_OptionMenu is new Tk_Widget with private;
    -- ****
 
-   -- ****f* OptionMenu/Create (function)
+   -- ****f* OptionMenu/OptionMenu.Create_(function)
    -- FUNCTION
    -- Creates a new Tk_OptionMenu in the specified interpreter.
    -- PARAMETERS
@@ -57,7 +57,7 @@ package Tcl.Tk.Ada.Widgets.OptionMenu is
    -- COMMANDS
    -- tk_optionMenu pathName options
    -- SEE ALSO
-   -- Create (procedure)
+   -- OptionMenu.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName, options: in String; Interp: in Tcl_Interp := null)
@@ -65,7 +65,7 @@ package Tcl.Tk.Ada.Widgets.OptionMenu is
       Pre => pathName /= "" and options /= "";
      -- ****
 
-     -- ****f* OptionMenu/Create (procedure)
+     -- ****f* OptionMenu/OptionMenu.Create_(procedure)
      -- FUNCTION
      -- Creates a new Tk_OptionMenu in the specified interpreter.
      -- PARAMETERS
@@ -91,7 +91,7 @@ package Tcl.Tk.Ada.Widgets.OptionMenu is
      -- COMMANDS
      -- tk_optionMenu pathName options
      -- SEE ALSO
-     -- Create (function)
+     -- OptionMenu.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_OptionMenu; pathName, options: in String;
@@ -99,7 +99,7 @@ package Tcl.Tk.Ada.Widgets.OptionMenu is
       Pre => pathName /= "" and options /= "";
       -- ****
 
-     -- ****f* OptionMenu/Get_Widget
+     -- ****f* OptionMenu/OptionMenu.Get_Widget
      -- FUNCTION
      -- Get the existing Tk_OptionMenu widget
      -- PARAMETERS
