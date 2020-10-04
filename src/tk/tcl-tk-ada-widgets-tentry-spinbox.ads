@@ -34,7 +34,7 @@
 package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
 -- ****
 
-   -- ****t* SpinBox/Tk_SpinBox
+   -- ****t* SpinBox/SpinBox.Tk_SpinBox
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -43,7 +43,7 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
    type Tk_SpinBox is new Tk_Entry with private;
    -- ****
 
-   -- ****f* SpinBox/Create (function)
+   -- ****f* SpinBox/SpinBox.Create_(function)
    -- FUNCTION
    -- Creates a new Tk_SpinBox in the specified interpreter.
    -- PARAMETERS
@@ -63,7 +63,7 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
    -- COMMANDS
    -- spinbox pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- SpinBox.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -71,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* SpinBox/Create (procedure)
+     -- ****f* SpinBox/SpinBox.Create_(procedure)
      -- FUNCTION
      -- Creates a new Tk_SpinBox in the specified interpreter.
      -- PARAMETERS
@@ -96,7 +96,7 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
      -- COMMANDS
      -- spinbox pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- SpinBox.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_SpinBox; pathName: in String; options: in String := "";
@@ -104,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* SpinBox/Identify
+     -- ****f* SpinBox/SpinBox.Identify
      -- FUNCTION
      -- Get the name of the Tk_SpinBox element at the selected coordinates
      -- PARAMETERS
@@ -128,7 +128,7 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* SpinBox/Invoke
+      -- ****f* SpinBox/SpinBox.Invoke
       -- FUNCTION
       -- Invoke the selected button of the selected Tk_SpinBox
       -- PARAMETERS
@@ -148,7 +148,7 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
       Pre => Element in "buttondown" | "buttonup";
       -- ****
 
-      -- ****f* SpinBox/Selection_Element (procedure)
+      -- ****f* SpinBox/SpinBox.Selection_Element_(procedure)
       -- FUNCTION
       -- Set the element of Tk_SpinBox as the selected element
       -- PARAMETERS
@@ -163,14 +163,14 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
       -- COMMANDS
       -- SpinBoxWidget selection element element
       -- SEE ALSO
-      -- Selection_Element (function)
+      -- SpinBox.Selection_Element_(function)
       -- SOURCE
    procedure Selection_Element
      (SpinBoxWidget: in Tk_SpinBox; Element: in String) with
       Pre => Element in "buttondown" | "buttonup" | "entry" | "none";
       -- ****
 
-      -- ****f* SpinBox/Selection_Element (function)
+      -- ****f* SpinBox/SpinBox.Selection_Element_(function)
       -- FUNCTION
       -- Get the currently selected element of the selected Tk_SpinBox
       -- PARAMETERS
@@ -186,12 +186,12 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
       -- COMMANDS
       -- SpinBoxWidget selection element
       -- SEE ALSO
-      -- Selection_Element (procdure)
+      -- SpinBox.Selection_Element_(procdure)
       -- SOURCE
    function Selection_Element(SpinBoxWidget: in Tk_SpinBox) return String;
    -- ****
 
-   -- ****f* SpinBox/Set (procedure)
+   -- ****f* SpinBox/SpinBox.Set_(procedure)
    -- FUNCTION
    -- Set the selected String as a new value for the selected Tk_SpinBox
    -- PARAMETERS
@@ -205,13 +205,13 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
    -- COMMANDS
    -- SpinBoxWidget set value
    -- SEE ALSO
-   -- Set (function)
+   -- SpinBox.Set_(function)
    -- SOURCE
    procedure Set(SpinBoxWidget: in Tk_SpinBox; Value: in String) with
       Pre => Value /= "";
       -- ****
 
-      -- ****f* SpinBox/Set (function)
+      -- ****f* SpinBox/SpinBox.Set_(function)
       -- FUNCTION
       -- Get the value for the selected Tk_SpinBox
       -- PARAMETERS
@@ -226,7 +226,7 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
       -- COMMANDS
       -- SpinBoxWidget set
       -- SEE ALSO
-      -- Set (procedure)
+      -- SpinBox.Set_(procedure)
       -- SOURCE
    function Set(SpinBoxWidget: in Tk_SpinBox) return String;
    -- ****
