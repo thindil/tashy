@@ -34,7 +34,7 @@
 package Tcl.Tk.Ada.Widgets.Scrollbar is
 -- ****
 
-   -- ****t* Scrollbar/Tk_Scrollbar
+   -- ****t* Scrollbar/Scrollbar.Tk_Scrollbar
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -43,7 +43,7 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
    type Tk_Scrollbar is new Tk_Widget with private;
    -- ****
 
-   -- ****f* Scrollbar/Create (function)
+   -- ****f* Scrollbar/Scrollbar.Create_(function)
    -- FUNCTION
    -- Creates a new Tk_Scrollbar in the specified interpreter.
    -- PARAMETERS
@@ -63,7 +63,7 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
    -- COMMANDS
    -- scrollbar pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- Scrollbar.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -71,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* Scrollbar/Create (procedure)
+     -- ****f* Scrollbar/Scrollbar.Create_(procedure)
      -- FUNCTION
      -- Creates a new Tk_Scrollbar in the specified interpreter.
      -- PARAMETERS
@@ -96,7 +96,7 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
      -- COMMANDS
      -- scrollbar pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- Scrollbar.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Scrollbar; pathName: in String; options: in String := "";
@@ -104,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* Scrollbar/Get_Widget
+     -- ****f* Scrollbar/Scrollbar.Get_Widget
      -- FUNCTION
      -- Get the existing Tk_Scrollbar widget
      -- PARAMETERS
@@ -124,7 +124,7 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
       return Tk_Scrollbar;
      -- ****
 
-     -- ****f* Scrollbar/Activate (procedure)
+     -- ****f* Scrollbar/Scrollbar.Activate_(procedure)
      -- FUNCTION
      -- Set the selected element as an active in the selected Tk_Scrollbar
      -- PARAMETERS
@@ -139,14 +139,14 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
      -- COMMANDS
      -- ScrollbarWidget activate element
      -- SEE ALSO
-     -- Activate (function)
+     -- Scrollbar.Activate_(function)
      -- SOURCE
    procedure Activate
      (ScrollbarWidget: in Tk_Scrollbar; Element: in String) with
       Pre => Element in "arrow1" | "slider" | "arrow2";
       -- ****
 
-      -- ****f* Scrollbar/Activate (function)
+      -- ****f* Scrollbar/Scrollbar.Activate_(function)
       -- FUNCTION
       -- Get an active element of the selected Tk_Scrollbar
       -- PARAMETERS
@@ -160,14 +160,14 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
       -- -- Get the active element in the My_Scrollbar scrollbar
       -- Element: constant String := Activate(My_Scrollbar);
       -- COMMANDS
-     -- ScrollbarWidget activate
-     -- SEE ALSO
-     -- Activate (procedure)
+      -- ScrollbarWidget activate
+      -- SEE ALSO
+      -- Scrollbar.Activate_(procedure)
       -- SOURCE
    function Activate(ScrollbarWidget: in Tk_Scrollbar) return String;
    -- ****
 
-   -- ****f* Scrollbar/Scrollbar_Delta
+   -- ****f* Scrollbar/Scrollbar.Scrollbar_Delta
    -- FUNCTION
    -- Get the fraction change between current Tk_Scrollbar setting and the
    -- selected value
@@ -194,7 +194,7 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
       Pre => DeltaX /= "" and DeltaY /= "";
       -- ****
 
-      -- ****f* Scrollbar/Fraction
+      -- ****f* Scrollbar/Scrollbar.Fraction
       -- FUNCTION
       -- Get the fraction of the selected Tk_Scrollbar at the selected pixel
       -- PARAMETERS
@@ -217,7 +217,7 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* Scrollbar/Get
+      -- ****f* Scrollbar/Scrollbar.Get
       -- FUNCTION
       -- Get the Tk_Scrollbar setting for which part of associated widget is
       -- currently visible
@@ -234,12 +234,12 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
       -- COMMANDS
       -- ScrollbarWidget get
       -- SEE ALSO
-      -- Set
+      -- Scrollbar.Set
       -- SOURCE
    function Get(ScrollbarWidget: in Tk_Scrollbar) return String;
    -- ****
 
-   -- ****f* Scrollbar/Identify
+   -- ****f* Scrollbar/Scrollbar.Identify
    -- FUNCTION
    -- Get the name of the Tk_Scrollbar element at the selected pixel
    -- PARAMETERS
@@ -263,7 +263,7 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* Scrollbar/Set
+      -- ****f* Scrollbar/Scrollbar.Set
       -- FUNCTION
       -- Set the Tk_Scrollbar setting for which part of associated widget is
       -- currently visible
@@ -281,7 +281,7 @@ package Tcl.Tk.Ada.Widgets.Scrollbar is
       -- COMMANDS
       -- ScrollbarWidget set first last
       -- SEE ALSO
-      -- Get
+      -- Scrollbar.Get
       -- SOURCE
    procedure Set(ScrollbarWidget: in Tk_Scrollbar; First, Last: in String) with
       Pre => First /= "" and Last /= "";
