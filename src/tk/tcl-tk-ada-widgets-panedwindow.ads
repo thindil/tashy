@@ -34,7 +34,7 @@
 package Tcl.Tk.Ada.Widgets.PanedWindow is
 -- ****
 
-   -- ****t* PanedWindow/Tk_Paned_Window
+   -- ****t* PanedWindow/PanedWindow.Tk_Paned_Window
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -43,7 +43,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    type Tk_PanedWindow is new Tk_Widget with private;
    -- ****
 
-   -- ****f* PanedWindow/Create (function)
+   -- ****f* PanedWindow/PanedWindow.Create_(function)
    -- FUNCTION
    -- Creates a new Tk_PanedWindow in the specified interpreter.
    -- PARAMETERS
@@ -63,7 +63,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    -- COMMANDS
    -- panedwindow pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- PanedWindow.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -71,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* PanedWindow/Create (procedure)
+     -- ****f* PanedWindow/PanedWindow.Create_(procedure)
      -- FUNCTION
      -- Creates a new Tk_PanedWindow in the specified interpreter.
      -- PARAMETERS
@@ -96,7 +96,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
      -- COMMANDS
      -- panedwindow pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- PanedWindow.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_PanedWindow; pathName: in String; options: in String := "";
@@ -104,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* PanedWindow/Get_Widget
+     -- ****f* PanedWindow/PanedWindow.Get_Widget
      -- FUNCTION
      -- Get the existing Tk_PanedWindow widget
      -- PARAMETERS
@@ -124,7 +124,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       return Tk_PanedWindow;
      -- ****
 
-     -- ****f* PanedWindow/Add
+     -- ****f* PanedWindow/PanedWindow.Add
      -- FUNCTION
      -- Adds the Tk_Widget to the Tk_PanedWindow.
      -- PARAMETERS
@@ -145,7 +145,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       Options: in String := "");
    -- ****
 
-   -- ****f* PanedWindow/Forget
+   -- ****f* PanedWindow/PanedWindow.Forget
    -- FUNCTION
    -- Remove the Tk_Widget from the Tk_PanedWindow
    -- PARAMETERS
@@ -162,7 +162,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    procedure Forget(Paned: in Tk_PanedWindow; SubWindow: in Tk_Widget'Class);
    -- ****
 
-   -- ****f* PanedWindow/Identify
+   -- ****f* PanedWindow/PanedWindow.Identify
    -- FUNCTION
    -- Identify Tk_PanedWindow component at the selected point in window
    -- coordinates
@@ -188,7 +188,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f*  PanedWindow/Pane_Cget
+      -- ****f*  PanedWindow/PanedWindow.Pane_Cget
       -- FUNCTION
       -- Get value of the selected option of the selected window in the
       -- selected Tk_PanedWindow
@@ -206,14 +206,14 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- COMMANDS
       -- Paned panecget window option
       -- SEE ALSO
-      -- Pane_Configure (function)
+      -- PanedWindow.Pane_Configure_(function)
       -- SOURCE
    function Pane_Cget
      (Paned: in Tk_PanedWindow; Window, Option: in String) return String with
       Pre => Window /= "" and Option /= "";
       -- ****
 
-      -- ****f* PanedWindow/Pane_Configure (procedure)
+      -- ****f* PanedWindow/PanedWindow.Pane_Configure_(procedure)
       -- FUNCTION
       -- Modify the selected options of the selected window in the selected
       -- Tk_PanedWindow
@@ -230,14 +230,14 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- COMMANDS
       -- Paned paneconfigure window options
       -- SEE ALSO
-      -- Pane_Configure (function)
+      -- PanedWindow.Pane_Configure_(function)
       -- SOURCE
    procedure Pane_Configure
      (Paned: in Tk_PanedWindow; Window, Options: in String) with
       Pre => Window /= "" and Options /= "";
       -- ****
 
-      -- ****f* PanedWindow/Pane_Configure (function)
+      -- ****f* PanedWindow/PanedWindow.Pane_Configure_(function)
       -- FUNCTION
       -- Modify or query the selected options of the selected window in the
       -- selected Tk_PanedWindow
@@ -259,7 +259,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- COMMANDS
       -- Paned paneconfigure window ?options?
       -- SEE ALSO
-      -- Pane_Configure (procedure), Pane_Cget
+      -- PanedWindow.Pane_Configure_(procedure), PanedWindow.Pane_Cget
       -- SOURCE
    function Pane_Configure
      (Paned: in Tk_PanedWindow; Window: in String; Options: in String := "")
@@ -267,7 +267,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       Pre => Window /= "";
       -- ****
 
-      -- ****f* PanedWindow/Panes
+      -- ****f* PanedWindow/PanedWindow.Panes
       -- FUNCTION
       -- Get list of names of all widgets managed by the Tk_PanedWindow
       -- PARAMETERS
@@ -285,7 +285,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    function Panes(Paned: in Tk_PanedWindow) return String;
    -- ****
 
-   -- ****f* PanedWindow/Proxy_Coord
+   -- ****f* PanedWindow/PanedWindow.Proxy_Coord
    -- FUNCTION
    -- Get coordinates of current positon of sash proxy
    -- PARAMETERS
@@ -303,7 +303,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    function Proxy_Coord(Paned: in Tk_PanedWindow) return String;
    -- ****
 
-   -- ****f* PanedWindow/Proxy_Forget
+   -- ****f* PanedWindow/PanedWindow.Proxy_Forget
    -- FUNCTION
    -- Remove the proxy from the display
    -- PARAMETERS
@@ -319,7 +319,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    procedure Proxy_Forget(Paned: in Tk_PanedWindow);
    -- ****
 
-   -- ****f* PanedWindow/Proxy_Place
+   -- ****f* PanedWindow/PanedWindow.Proxy_Place
    -- FUNCTION
    -- Place the proxy at the given x and y coordinates
    -- PARAMETERS
@@ -338,7 +338,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* PanedWindow/Sash_Coord
+      -- ****f* PanedWindow/PanedWindow.Sash_Coord
       -- FUNCTION
       -- Get coordinates of the selected sash in the selected Tk_PanedWindow
       -- PARAMETERS
@@ -359,7 +359,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* PanedWindow/Sash_DragTo
+      -- ****f* PanedWindow/PanedWindow.Sash_DragTo
       -- FUNCTION
       -- Move the selected sash by difference between given coordinates and
       -- last Sash_Mark procedure call
@@ -376,13 +376,13 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- COMMANDS
       -- Paned sash dragto index x y
       -- SEE ALSO
-      -- Sash_Mark
+      -- PanedWindow.Sash_Mark
       -- SOURCE
    procedure Sash_DragTo(Paned: in Tk_PanedWindow; Index, X, Y: in String) with
       Pre => Index /= "" and X /= "" and Y /= "";
       -- ****
 
-      -- ****f* PanedWindow/Sash_Mark
+      -- ****f* PanedWindow/PanedWindow.Sash_Mark
       -- FUNCTION
       -- Set position which will be later used to move sash with procedure
       -- Sash_DragTo
@@ -400,13 +400,13 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- COMMANDS
       -- Paned sash mark index x y
       -- SEE ALSO
-      -- Sash_DragTo
+      -- PanedWindow.Sash_DragTo
       -- SOURCE
    procedure Sash_Mark(Paned: in Tk_PanedWindow; Index, X, Y: in String) with
       Pre => Index /= "" and X /= "" and Y /= "";
       -- ****
 
-      -- ****f* PanedWindow/Sash_Place
+      -- ****f* PanedWindow/PanedWindow.Sash_Place
       -- FUNCTION
       -- Place the selected sash at the selected coordinates
       -- PARAMETERS
