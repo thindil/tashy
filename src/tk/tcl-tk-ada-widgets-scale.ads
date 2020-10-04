@@ -34,7 +34,7 @@
 package Tcl.Tk.Ada.Widgets.Scale is
 -- ****
 
-   -- ****t* TkScale/Tk_Scale
+   -- ****t* TkScale/TkScale.Tk_Scale
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -43,7 +43,7 @@ package Tcl.Tk.Ada.Widgets.Scale is
    type Tk_Scale is new Tk_Widget with private;
    -- ****
 
-   -- ****f* TkScale/Create (function)
+   -- ****f* TkScale/TkScale.Create_(function)
    -- FUNCTION
    -- Creates a new Tk_Scale in the specified interpreter.
    -- PARAMETERS
@@ -63,7 +63,7 @@ package Tcl.Tk.Ada.Widgets.Scale is
    -- COMMANDS
    -- scale pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- TkScale.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -71,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.Scale is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* TkScale/Create (procedure)
+     -- ****f* TkScale/TkScale.Create_(procedure)
      -- FUNCTION
      -- Creates a new Tk_Scale in the specified interpreter.
      -- PARAMETERS
@@ -96,7 +96,7 @@ package Tcl.Tk.Ada.Widgets.Scale is
      -- COMMANDS
      -- scale pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- TkScale.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Scale; pathName: in String; options: in String := "";
@@ -104,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.Scale is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* Scale/Get_Widget
+     -- ****f* Scale/TkScale.Get_Widget
      -- FUNCTION
      -- Get the existing Tk_Scale widget
      -- PARAMETERS
@@ -124,7 +124,7 @@ package Tcl.Tk.Ada.Widgets.Scale is
       return Tk_Scale;
      -- ****
 
-     -- ****f* TkScale/Coords
+     -- ****f* TkScale/TkScale.Coords
      -- FUNCTION
      -- Get the elements which the x and y coordinates of the point
      -- along the centerline of the trough that corresponds to Value
@@ -147,7 +147,7 @@ package Tcl.Tk.Ada.Widgets.Scale is
      (ScaleWidget: in Tk_Scale; Value: in String := "") return String;
      -- ****
 
-     -- ****f* TkScale/Get (current value)
+     -- ****f* TkScale/TkScale.Get_(current_value)
      -- FUNCTION
      -- Get current value of the Tk_Scale
      -- PARAMETERS
@@ -162,12 +162,12 @@ package Tcl.Tk.Ada.Widgets.Scale is
      -- COMMANDS
      -- ScaleWidget get
      -- SEE ALSO
-     -- Get (at selected pixel)
+     -- TkScale.Get_(at_selected_pixel)
      -- SOURCE
    function Get(ScaleWidget: in Tk_Scale) return String;
    -- ****
 
-   -- ****f* TkScale/Get (at selected pixel)
+   -- ****f* TkScale/TkScale.Get_(at_selected_pixel)
    -- FUNCTION
    -- Get value of the Tk_Scale at selected widget
    -- PARAMETERS
@@ -184,13 +184,13 @@ package Tcl.Tk.Ada.Widgets.Scale is
    -- COMMANDS
    -- ScaleWidget get x y
    -- SEE ALSO
-   -- Get (current value)
+   -- TkScale.Get_(current_value)
    -- SOURCE
    function Get(ScaleWidget: in Tk_Scale; X, Y: in String) return String with
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* TkScale/Identify
+      -- ****f* TkScale/TkScale.Identify
       -- FUNCTION
       -- Get which part of the Tk_Scale lies under the specified coordinates
       -- PARAMETERS
@@ -214,7 +214,7 @@ package Tcl.Tk.Ada.Widgets.Scale is
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* TkScale/Set
+      -- ****f* TkScale/TkScale.Set
       -- FUNCTION
       -- Set the selected Tk_Scale to a new value
       -- PARAMETERS
