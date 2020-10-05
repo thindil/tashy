@@ -27,7 +27,7 @@
 package Tcl.Tk.Ada.Widgets.Text is
 -- ****
 
-   -- ****t* Text/Tk_Text
+   -- ****t* Text/Text.Tk_Text
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -36,7 +36,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    type Tk_Text is new Tk_Widget with private;
    -- ****
 
-   -- ****f* Text/Create (function)
+   -- ****f* Text/Text.Create_(function)
    -- FUNCTION
    -- Creates a new Tk_Text in the specified interpreter.
    -- PARAMETERS
@@ -56,7 +56,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- COMMANDS
    -- text pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- Text.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -64,7 +64,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* Text/Create (procedure)
+     -- ****f* Text/Text.Create_(procedure)
      -- FUNCTION
      -- Creates a new Tk_Text in the specified interpreter.
      -- PARAMETERS
@@ -89,7 +89,7 @@ package Tcl.Tk.Ada.Widgets.Text is
      -- COMMANDS
      -- text pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- Text.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Text; pathName: in String; options: in String := "";
@@ -97,7 +97,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* Text/Get_Widget
+     -- ****f* Text/Text.Get_Widget
      -- FUNCTION
      -- Get the existing Tk_Text widget
      -- PARAMETERS
@@ -117,7 +117,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       return Tk_Text;
      -- ****
 
-     -- ****f* Text/BBox
+     -- ****f* Text/Text.BBox
      -- FUNCTION
      -- Get size of bounding box of the selected character in the selected
      -- Tk_Text
@@ -140,7 +140,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* Text/Compare
+      -- ****f* Text/Text.Compare
       -- FUNCTION
       -- Compare two indexes of a characters in the selected Tk_Text
       -- PARAMETERS
@@ -166,7 +166,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Index2 /= "";
       -- ****
 
-      -- ****f* Text/Count
+      -- ****f* Text/Text.Count
       -- FUNCTION
       -- Count the selected items in the selected Tk_Text between selected
       -- indexes
@@ -199,7 +199,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => Options /= "" and Index1 /= "" and Index2 /= "";
       -- ****
 
-      -- ****f* Text/Debug (procedure)
+      -- ****f* Text/Text.Debug_(procedure)
       -- FUNCTION
       -- Enable or disable internal consistency checks on B-tree code
       -- associated with the selected Tk_Text
@@ -214,13 +214,13 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- COMMANDS
       -- TextWidget debug boolean
       -- SEE ALSO
-      -- Debug (function)
+      -- Text.Debug_(function)
       -- SOURCE
    procedure Debug(TextWidget: in Tk_Text; Enable: in String) with
       Pre => Enable in "true" | "false";
       -- ****
 
-      -- ****f* Text/Debug (function)
+      -- ****f* Text/Text.Debug_(function)
       -- FUNCTION
       -- Get the current state of internal consistency checks on B-tree code
       -- associated with the selected Tk_Text
@@ -236,12 +236,12 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- COMMANDS
       -- TextWidget debug
       -- SEE ALSO
-      -- Debug (function)
+      -- Text.Debug_(function)
       -- SOURCE
    function Debug(TextWidget: in Tk_Text) return String;
    -- ****
 
-   -- ****f* Text/Delete
+   -- ****f* Text/Text.Delete
    -- FUNCTION
    -- Delete text from the selected Tk_Text
    -- PARAMETERS
@@ -265,7 +265,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => StartIndex /= "";
       -- ****
 
-      -- ****f* Text/DLineInfo
+      -- ****f* Text/Text.DLineInfo
       -- FUNCTION
       -- Get information about the selected displayed line in the selected
       -- Tk_Text
@@ -299,7 +299,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* Text/Dump
+      -- ****f* Text/Text.Dump
       -- FUNCTION
       -- Get the content (text but also information about marks, images,
       -- widgets, etc) of the selected Tk_Text
@@ -330,7 +330,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => Index1 /= "";
       -- ****
 
-      -- ****f* Text/Edit_CanRedo
+      -- ****f* Text/Text.Edit_CanRedo
       -- FUNCTION
       -- Check if redo action is possible or not
       -- PARAMETERS
@@ -348,7 +348,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    function Edit_CanRedo(TextWidget: in Tk_Text) return String;
    -- ****
 
-   -- ****f* Text/Edit_CanUndo
+   -- ****f* Text/Text.Edit_CanUndo
    -- FUNCTION
    -- Check if undo action is possible or not
    -- PARAMETERS
@@ -366,7 +366,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    function Edit_CanUndo(TextWidget: in Tk_Text) return String;
    -- ****
 
-   -- ****f* Text/Edit_Modified (procedure)
+   -- ****f* Text/Text.Edit_Modified_(procedure)
    -- FUNCTION
    -- Set flag Modified for the selected Tk_Text on the selected value
    -- PARAMETERS
@@ -381,13 +381,13 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- COMMANDS
    -- TextWidget edit modified value
    -- SEE ALSO
-   -- Edit_Modified (function)
+   -- Text.Edit_Modified_(function)
    -- SOURCE
    procedure Edit_Modified(TextWidget: in Tk_Text; Value: in String) with
       Pre => Value in "0" | "1" | "true" | "false";
       -- ****
 
-      -- ****f* Text/Edit_Modified (function)
+      -- ****f* Text/Text.Edit_Modified_(function)
       -- FUNCTION
       -- Get the flag Modified for the selected Tk_Text
       -- PARAMETERS
@@ -402,12 +402,12 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- COMMANDS
       -- TextWidget edit modified
       -- SEE ALSO
-      -- Edit_Modified (procedure)
+      -- Text.Edit_Modified_(procedure)
       -- SOURCE
    function Edit_Modified(TextWidget: in Tk_Text) return String;
    -- ****
 
-   -- ****f* Text/Edit_Redo
+   -- ****f* Text/Text.Edit_Redo
    -- FUNCTION
    -- When the -undo option of Tk_Text is true, reapplies the last undone edits
    -- provided no other edits were done since then. Generates an error when
@@ -426,7 +426,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    procedure Edit_Redo(TextWidget: in Tk_Text);
    -- ****
 
-   -- ****f* Text/Edit_Reset
+   -- ****f* Text/Text.Edit_Reset
    -- FUNCTION
    -- Clears the selected Tk_Text undo and redo stacks
    -- PARAMETERS
@@ -442,7 +442,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    procedure Edit_Reset(TextWidget: in Tk_Text);
    -- ****
 
-   -- ****f* Text/Edit_Separator
+   -- ****f* Text/Text.Edit_Separator
    -- FUNCTION
    -- Inserts a separator (boundary) on the undo stack. Does nothing when the
    -- -undo option is false
@@ -459,7 +459,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    procedure Edit_Separator(TextWidget: in Tk_Text);
    -- ****
 
-   -- ****f* Text/Edit_Undo
+   -- ****f* Text/Text.Edit_Undo
    -- FUNCTION
    -- Undoes the last edit action when the -undo option is true. An edit
    -- action is defined as all the insert and delete commands that are
@@ -479,7 +479,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    procedure Edit_Undo(TextWidget: in Tk_Text);
    -- ****
 
-   -- ****f* Text/Get
+   -- ****f* Text/Text.Get
    -- FUNCTION
    -- Get the selected characters from the selected Tk_Text
    -- PARAMETERS
@@ -502,7 +502,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => Options /= "";
       -- ****
 
-      -- ****f* Text/Image_Cget
+      -- ****f* Text/Text.Image_Cget
       -- FUNCTION
       -- Get the selected option for the selected image in the selected Tk_Text
       -- PARAMETERS
@@ -519,14 +519,14 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- COMMANDS
       -- TextWidget image cget index option
       -- SEE ALSO
-      -- Image_Configure (function)
+      -- Text.Image_Configure_(function)
       -- SOURCE
    function Image_Cget
      (TextWidget: in Tk_Text; Index, Option: in String) return String with
       Pre => Index /= "" and Option /= "";
       -- ****
 
-      -- ****f* Text/Image_Configure (procedure)
+      -- ****f* Text/Text.Image_Configure_(procedure)
       -- FUNCTION
       -- Configure the selected options of the selected image in the selected
       -- Tk_Text
@@ -542,14 +542,14 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- COMMANDS
       -- TextWidget image configure index options
       -- SEE ALSO
-      -- Image_Configure (function)
+      -- Text.Image_Configure_(function)
       -- SOURCE
    procedure Image_Configure
      (TextWidget: in Tk_Text; Index, Options: in String) with
       Pre => Index /= "" and Options /= "";
       -- ****
 
-      -- ****f* Text/Image_Configure (function)
+      -- ****f* Text/Text.Image_Configure_(function)
       -- FUNCTION
       -- Get the selected options of the selected image in the selected Tk_Text
       -- PARAMETERS
@@ -568,7 +568,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- COMMANDS
       -- TextWidget image configure index ?options?
       -- SEE ALSO
-      -- Image_Configure(procedure), Image_Cget
+      -- Text.Image_Configure_(procedure), Text.Image_Cget
       -- SOURCE
    function Image_Configure
      (TextWidget: in Tk_Text; Index: in String; Option: in String := "")
@@ -576,7 +576,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* Text/Image_Create
+      -- ****f* Text/Text.Image_Create
       -- FUNCTION
       -- Create a new image inside Tk_Text at the selected index
       -- PARAMETERS
@@ -599,7 +599,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* Text/Image_Names
+      -- ****f* Text/Text.Image_Names
       -- FUNCTION
       -- Get the names of the all images which are embedded in the Tk_Text
       -- PARAMETERS
@@ -617,7 +617,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    function Image_Names(TextWidget: in Tk_Text) return String;
    -- ****
 
-   -- ****f* Text/Index
+   -- ****f* Text/Text.Index
    -- FUNCTION
    -- Get index of the selected item
    -- PARAMETERS
@@ -639,7 +639,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => TextIndex /= "";
       -- ****
 
-      -- ****f* Text/Insert
+      -- ****f* Text/Text.Insert
       -- FUNCTION
       -- Insert text into text widget at selected index
       -- PARAMETERS
@@ -660,7 +660,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => Index /= "" and Text /= "";
       -- ****
 
-      -- ****f* Text/Mark_Gravity (procedure)
+      -- ****f* Text/Text.Mark_Gravity_(procedure)
       -- FUNCTION
       -- Set to which adjacent character the selected mark is attached
       -- PARAMETERS
@@ -676,14 +676,14 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- COMMANDS
       -- TextWidget mark gravity markName direction
       -- SEE ALSO
-      -- Mark_Gravity (function)
+      -- Text.Mark_Gravity_(function)
       -- SOURCE
    procedure Mark_Gravity
      (TextWidget: in Tk_Text; MarkName, Direction: in String) with
       Pre => MarkName /= "" and Direction in "left" | "right";
       -- ****
 
-      -- ****f* Text/Mark_Gravity (function)
+      -- ****f* Text/Text.Mark_Gravity_(function)
       -- FUNCTION
       -- Get the gravity of the selected mark in the selected Tk_Text
       -- PARAMETERS
@@ -700,14 +700,14 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- COMMANDS
       -- TextWidget mark gravity markName
       -- SEE ALSO
-      -- Mark_Gravity (procedure)
+      -- Text.Mark_Gravity_(procedure)
       -- SOURCE
    function Mark_Gravity
      (TextWidget: in Tk_Text; MarkName: in String) return String with
       Pre => MarkName /= "";
       -- ****
 
-      -- ****f* Text/Mark_Names
+      -- ****f* Text/Text.Mark_Names
       -- FUNCTION
       -- Get names of all marks that are currently set
       -- PARAMETERS
@@ -725,7 +725,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    function Mark_Names(TextWidget: in Tk_Text) return String;
    -- ****
 
-   -- ****f* Text/Mark_Next
+   -- ****f* Text/Text.Mark_Next
    -- FUNCTION
    -- Get next mark at or after the selected index in the selected Tk_Text
    -- PARAMETERS
@@ -742,14 +742,14 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- COMMANDS
    -- TextWidget mark next index
    -- SEE ALSO
-   -- Mark_Previous
+   -- Text.Mark_Previous
    -- SOURCE
    function Mark_Next
      (TextWidget: in Tk_Text; Index: in String) return String with
       Pre => Index /= "";
       -- ****
 
-      -- ****f* Text/Mark_Previous
+      -- ****f* Text/Text.Mark_Previous
       -- FUNCTION
       -- Get previous mark at or before the selected index in the selected
       -- Tk_Text
@@ -767,14 +767,14 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- COMMANDS
       -- TextWidget mark previous index
       -- SEE ALSO
-      -- Mark_Next
+      -- Text.Mark_Next
       -- SOURCE
    function Mark_Previous
      (TextWidget: in Tk_Text; Index: in String) return String with
       Pre => Index /= "";
       -- ****
 
-      -- ****f* Text/Mark_Set
+      -- ****f* Text/Text.Mark_Set
       -- FUNCTION
       -- Set the selected mark before the character at the selected index in
       -- the selected Tk_Text.
@@ -797,7 +797,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => MarkName /= "" and Index /= "";
       -- ****
 
-      -- ****f* Text/Mark_Unset
+      -- ****f* Text/Text.Mark_Unset
       -- FUNCTION
       -- Remove the selected mark(s) from the selected Tk_Text
       -- PARAMETERS
@@ -816,7 +816,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => MarkName /= "";
       -- ****
 
-      -- ****f* Text/Peer_Create
+      -- ****f* Text/Text.Peer_Create
       -- FUNCTION
       -- Create a new peer text widget with the selected name and options
       -- PARAMETERS
@@ -838,7 +838,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => NewPathName /= "";
       -- ****
 
-      -- ****f* Text/Peer_Names
+      -- ****f* Text/Text.Peer_Names
       -- FUNCTION
       -- Get the list of names of all peers widgets for the selected Tk_Text
       -- PARAMETERS
@@ -857,7 +857,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    function Peer_Names(TextWidget: in Tk_Text) return String;
    -- ****
 
-   -- ****f* Text/PendingSync
+   -- ****f* Text/Text.PendingSync
    -- FUNCTION
    -- Check if line heights calculation is up to date or not
    -- PARAMETERS
@@ -876,7 +876,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    function PendingSync(TextWidget: in Tk_Text) return String;
    -- ****
 
-   -- ****f* Text/Replace
+   -- ****f* Text/Text.Replace
    -- FUNCTION
    -- Replace range of characters with new characters and tags
    -- PARAMETERS
@@ -897,7 +897,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => Index1 /= "" and Index2 /= "" and Chars /= "";
       -- ****
 
-      -- ****f* Text/Scan_Mark
+      -- ****f* Text/Text.Scan_Mark
       -- FUNCTION
       -- Sets starting position for scan in the selected Tk_Text
       -- PARAMETERS
@@ -912,13 +912,13 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- COMMANDS
       -- TextWidget scan mark x y
       -- SEE ALSO
-      -- Scan_DragTo
+      -- Text.Scan_DragTo
       -- SOURCE
    procedure Scan_Mark(TextWidget: in Tk_Text; X, Y: in String) with
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* Text/Scan_DragTo
+      -- ****f* Text/Text.Scan_DragTo
       -- FUNCTION
       -- Computes the difference between its X argument and the X argument to
       -- the last Scan_Mark procedure for the Tk_Entry. It then adjusts the
@@ -935,13 +935,13 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- COMMANDS
       -- TextWidget scan dragto x y
       -- SEE ALSO
-      -- Scan_Mark
+      -- Text.Scan_Mark
       -- SOURCE
    procedure Scan_DragTo(TextWidget: in Tk_Text; X, Y: in String) with
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* Text/Search
+      -- ****f* Text/Text.Search
       -- FUNCTION
       -- Search for the selected pattern in the selected Tk_Text
       -- PARAMETERS
@@ -967,7 +967,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => Pattern /= "" and Index /= "";
       -- ****
 
-      -- ****f* Text/See
+      -- ****f* Text/Text.See
       -- FUNCTION
       -- Made the selected character visible (scroll Tk_Text to it if needed)
       -- PARAMETERS
@@ -985,7 +985,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* Text/Sync
+      -- ****f* Text/Text.Sync
       -- FUNCTION
       -- Update line metrics by computing lines heights
       -- PARAMETERS
@@ -998,12 +998,12 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- COMMANDS
       -- TextWidget sync
       -- SEE ALSO
-      -- Sync_Command
+      -- Text.Sync_Command
       -- SOURCE
    procedure Sync(TextWidget: in Tk_Text);
    -- ****
 
-   -- ****f* Text/Sync_Command
+   -- ****f* Text/Text.Sync_Command
    -- FUNCTION
    -- Execute the selected Tcl command once all lines heights are up to date
    -- PARAMETERS
@@ -1017,13 +1017,13 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- COMMANDS
    -- TextWidget sync -command command sync -command command
    -- SEE ALSO
-   -- Sync
+   -- Text.Sync
    -- SOURCE
    procedure Sync_Command(TextWidget: in Tk_Text; Command: in String) with
       Pre => Command /= "";
       -- ****
 
-      -- ****f* Text/Tag_Add
+      -- ****f* Text/Text.Tag_Add
       -- FUNCTION
       -- Add the selected tag to the text in Tk_Text
       -- PARAMETERS
@@ -1047,7 +1047,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => TagName /= "" and StartIndex /= "";
       -- ****
 
-      -- ****f* Text/Tag_Bind (procedure)
+      -- ****f* Text/Text.Tag_Bind_(procedure)
       -- FUNCTION
       -- Bind the selected script to the selected sequence on the selected tag
       -- PARAMETERS
@@ -1063,14 +1063,14 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- COMMANDS
       -- TextWidget tag bind tagName sequence script
       -- SEE ALSO
-      -- Tag_Bind (function)
+      -- Text.Tag_Bind_(function)
       -- SOURCE
    procedure Tag_Bind
      (TextWidget: in Tk_Text; TagName, Sequence, Script: in String) with
       Pre => TagName /= "" and Sequence /= "" and Script /= "";
       -- ****
 
-      -- ****f* Text/Tag_Bind (function)
+      -- ****f* Text/Text.Tag_Bind_(function)
       -- FUNCTION
       -- Get scrips bounded to the selected tag in the selected Tk_Text
       -- PARAMETERS
@@ -1089,7 +1089,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- COMMANDS
       -- TextWidget tag bind tagName ?sequence?
       -- SEE ALSO
-      -- Tag_Bind (procedure)
+      -- Text.Tag_Bind_(procedure)
       -- SOURCE
    function Tag_Bind
      (TextWidget: in Tk_Text; TagName: in String; Sequence: in String := "")
@@ -1097,7 +1097,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => TagName /= "";
       -- ****
 
-      -- ****f* Text/Tag_Cget
+      -- ****f* Text/Text.Tag_Cget
       -- FUNCTION
       -- Get the current value of the selected option of the selected tag in
       -- the selected Tk_Text
@@ -1115,14 +1115,14 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- COMMANDS
       -- TextWidget tag cget tagName option
       -- SEE ALSO
-      -- Tag_Configure (function)
+      -- Text.Tag_Configure_(function)
       -- SOURCE
    function Tag_Cget
      (TextWidget: in Tk_Text; TagName, Option: in String) return String with
       Pre => TagName /= "" and Option /= "";
       -- ****
 
-      -- ****f* Text/Tag_Configure (procedure)
+      -- ****f* Text/Text.Tag_Configure_(procedure)
       -- FUNCTION
       -- Configure the selected tag in the selected Tk_Text widget
       -- PARAMETERS
@@ -1137,14 +1137,14 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- COMMANDS
       -- TextWidget tag configure tagName options
       -- SEE ALSO
-      -- Tag_Configure (function)
+      -- Text.Tag_Configure_(function)
       -- SOURCE
    procedure Tag_Configure
      (TextWidget: in Tk_Text; TagName, Options: in String) with
       Pre => TagName /= "" and Options /= "";
       -- ****
 
-      -- ****f* Text/Tag_Configure (function)
+      -- ****f* Text/Text.Tag_Configure_(function)
       -- FUNCTION
       -- Get configuration of the selected tag in the selected Tk_Text widget
       -- PARAMETERS
@@ -1163,7 +1163,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- COMMANDS
       -- TextWidget tag configure tagName ?option?
       -- SEE ALSO
-      -- Tag_Cget, Tag_Configure (procedure)
+      -- Text.Tag_Cget, Text.Tag_Configure_(procedure)
       -- SOURCE
    function Tag_Configure
      (TextWidget: in Tk_Text; TagName: in String; Option: in String := "")
@@ -1171,7 +1171,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => TagName /= "";
       -- ****
 
-      -- ****f* Text/Tag_Delete
+      -- ****f* Text/Text.Tag_Delete
       -- FUNCTION
       -- Delete the selected tag(s) from the selected Tk_Text
       -- PARAMETERS
@@ -1190,7 +1190,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => TagName /= "";
       -- ****
 
-      -- ****f* Text/Tag_Lower
+      -- ****f* Text/Text.Tag_Lower
       -- FUNCTION
       -- Lower the priority of the selected tag
       -- PARAMETERS
@@ -1214,7 +1214,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => TagName /= "";
       -- ****
 
-      -- ****f* Text/Tag_Names
+      -- ****f* Text/Text.Tag_Names
       -- FUNCTION
       -- Get the names of tags in the selected Tk_Text
       -- PARAMETERS
@@ -1236,7 +1236,7 @@ package Tcl.Tk.Ada.Widgets.Text is
      (TextWidget: in Tk_Text; Index: in String := "") return String;
      -- ****
 
-     -- ****f* Text/Tag_NextRange
+     -- ****f* Text/Text.Tag_NextRange
      -- FUNCTION
      -- Get the characters with the selected tag name found in the selected
      -- range in the selected Tk_Text
@@ -1264,7 +1264,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => TagName /= "" and Index1 /= "";
       -- ****
 
-      -- ****f* Text/Tag_PrevRange
+      -- ****f* Text/Text.Tag_PrevRange
       -- FUNCTION
       -- Get the characters with the selected tag name found in the selected
       -- range in the selected Tk_Text. Search is done in the reverse direction.
@@ -1293,7 +1293,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => TagName /= "" and Index1 /= "";
       -- ****
 
-      -- ****f* Text/Tag_Raise
+      -- ****f* Text/Text.Tag_Raise
       -- FUNCTION
       -- Raise the priority of the selected tag
       -- PARAMETERS
@@ -1317,7 +1317,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => TagName /= "";
       -- ****
 
-      -- ****f* Text/Tag_Ranges
+      -- ****f* Text/Text.Tag_Ranges
       -- FUNCTION
       -- Get the ranges of text that have been tagged with the selected tag
       -- PARAMETERS
@@ -1341,7 +1341,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => TagName /= "";
       -- ****
 
-      -- ****f* Text/Tag_Remove
+      -- ****f* Text/Text.Tag_Remove
       -- FUNCTION
       -- Remove the selected tag from the selected characters in the selected
       -- Tk_Text
@@ -1368,7 +1368,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => TagName /= "" and Index1 /= "";
       -- ****
 
-      -- ****f* Text/Window_Cget
+      -- ****f* Text/Text.Window_Cget
       -- FUNCTION
       -- Get the selected option for the selected window in the selected Tk_Text
       -- PARAMETERS
@@ -1385,14 +1385,14 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- COMMANDS
       -- TextWidget window cget index option
       -- SEE ALSO
-      -- Window_Configure (function)
+      -- Text.Window_Configure_(function)
       -- SOURCE
    function Window_Cget
      (TextWidget: in Tk_Text; Index, Option: in String) return String with
       Pre => Index /= "" and Option /= "";
       -- ****
 
-      -- ****f* Text/Window_Configure (procedure)
+      -- ****f* Text/Text.Window_Configure_(procedure)
       -- FUNCTION
       -- Configure the selected options of the selected window in the selected
       -- Tk_Text
@@ -1408,14 +1408,14 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- COMMANDS
       -- TextWidget window configure index options
       -- SEE ALSO
-      -- Window_Configure (function)
+      -- Text.Window_Configure_(function)
       -- SOURCE
    procedure Window_Configure
      (TextWidget: in Tk_Text; Index, Options: in String) with
       Pre => Index /= "" and Options /= "";
       -- ****
 
-      -- ****f* Text/Window_Configure (function)
+      -- ****f* Text/Text.Window_Configure_(function)
       -- FUNCTION
       -- Get the selected options of the selected window in the selected Tk_Text
       -- PARAMETERS
@@ -1434,7 +1434,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- COMMANDS
       -- TextWidget window configure index ?option?
       -- SEE ALSO
-      -- Window_Cget, Window_Configure (procedure)
+      -- Text.Window_Cget, Text.Window_Configure_(procedure)
       -- SOURCE
    function Window_Configure
      (TextWidget: in Tk_Text; Index: in String; Option: in String := "")
@@ -1442,7 +1442,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* Text/Window_Create
+      -- ****f* Text/Text.Window_Create
       -- FUNCTION
       -- Create a new window inside Tk_Text at the selected index
       -- PARAMETERS
@@ -1465,7 +1465,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* Text/Window_Names
+      -- ****f* Text/Text.Window_Names
       -- FUNCTION
       -- Get the names of the all windows which are embedded in the Tk_Text
       -- PARAMETERS
@@ -1483,7 +1483,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    function Window_Names(TextWidget: in Tk_Text) return String;
    -- ****
 
-   -- ****f* Text/XView
+   -- ****f* Text/Text.XView
    -- FUNCTION
    -- Get which horizontal fraction of the Tk_Text is visible
    -- PARAMETERS
@@ -1500,12 +1500,12 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- COMMANDS
    -- TextWidget xview
    -- SEE ALSO
-   -- YView
+   -- Text.YView
    -- SOURCE
    function XView(TextWidget: in Tk_Text) return String;
    -- ****
 
-   -- ****f* Text/Xview_Move_To
+   -- ****f* Text/Text.Xview_Move_To
    -- FUNCTION
    -- Adjusts the view in the window so that fraction of the total width of
    -- the Tk_Text is off-screen to the left.
@@ -1521,13 +1521,13 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- COMMANDS
    -- TextWidget xview moveto fraction
    -- SEE ALSO
-   -- Yview_Move_To
+   -- Text.Yview_Move_To
    -- SOURCE
    procedure Xview_Move_To(TextWidget: in Tk_Text; Fraction: in String) with
       Pre => Fraction /= "";
       -- ****
 
-      -- ****f* Text/Xview_Scroll
+      -- ****f* Text/Text.Xview_Scroll
       -- FUNCTION
       -- Shift the view in the window on left or right according to Number and
       -- What.
@@ -1543,13 +1543,13 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- COMMANDS
       -- TextWidget xview scroll number what
       -- SEE ALSO
-      -- Yview_Scroll
+      -- Text.Yview_Scroll
       -- SOURCE
    procedure Xview_Scroll(TextWidget: in Tk_Text; Number, What: in String) with
       Pre => Number /= "" and (What = "units" or What = "pages");
       -- ****
 
-      -- ****f* Text/YView
+      -- ****f* Text/Text.YView
       -- FUNCTION
       -- Get which vertical fraction of the Tk_Text is visible
       -- PARAMETERS
@@ -1566,12 +1566,12 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- COMMANDS
       -- TextWidget yview
       -- SEE ALSO
-      -- XView
+      -- Text.XView
       -- SOURCE
    function YView(TextWidget: in Tk_Text) return String;
    -- ****
 
-   -- ****f* Text/Yview_Move_To
+   -- ****f* Text/Text.Yview_Move_To
    -- FUNCTION
    -- Adjusts the view in the window so that fraction of the total height of
    -- the Tk_Text is off-screen to the top.
@@ -1587,13 +1587,13 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- COMMANDS
    -- TextWidget yview moveto fraction
    -- SEE ALSO
-   -- Xview_Move_To
+   -- Text.Xview_Move_To
    -- SOURCE
    procedure Yview_Move_To(TextWidget: in Tk_Text; Fraction: in String) with
       Pre => Fraction /= "";
       -- ****
 
-      -- ****f* Text/Yview_Scroll
+      -- ****f* Text/Text.Yview_Scroll
       -- FUNCTION
       -- Shift the view in the window on top or bottom according to Number and
       -- What.
@@ -1609,7 +1609,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- COMMANDS
       -- TextWidget yview scroll number what
       -- SEE ALSO
-      -- Xview_Scroll
+      -- Text.Xview_Scroll
       -- SOURCE
    procedure Yview_Scroll(TextWidget: in Tk_Text; Number, What: in String) with
       Pre => Number /= "" and (What = "units" or What = "pages");
