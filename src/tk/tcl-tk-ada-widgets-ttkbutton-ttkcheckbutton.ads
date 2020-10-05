@@ -27,7 +27,7 @@
 package Tcl.Tk.Ada.Widgets.TtkButton.TtkCheckButton is
 -- ****
 
-   -- ****t* TtkCheckButton/Ttk_CheckButton
+   -- ****t* TtkCheckButton/TtkCheckButton.Ttk_CheckButton
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -36,7 +36,7 @@ package Tcl.Tk.Ada.Widgets.TtkButton.TtkCheckButton is
    type Ttk_CheckButton is new Ttk_Button with private;
    -- ****
 
-   -- ****f* TtkCheckButton/Create (function)
+   -- ****f* TtkCheckButton/TtkCheckButton.Create_(function)
    -- FUNCTION
    -- Creates a new Ttk_CheckButton in the specified interpreter.
    -- PARAMETERS
@@ -56,7 +56,7 @@ package Tcl.Tk.Ada.Widgets.TtkButton.TtkCheckButton is
    -- COMMANDS
    -- ttk::checkbutton pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- TtkCheckButton.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -64,7 +64,7 @@ package Tcl.Tk.Ada.Widgets.TtkButton.TtkCheckButton is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* TtkCheckButton/Create (procedure)
+     -- ****f* TtkCheckButton/TtkCheckButton.Create_(procedure)
      -- FUNCTION
      -- Creates a new Ttk_CheckButton in the specified interpreter.
      -- PARAMETERS
@@ -89,7 +89,7 @@ package Tcl.Tk.Ada.Widgets.TtkButton.TtkCheckButton is
      -- COMMANDS
      -- ttk::checkbutton pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- TtkCheckButton.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_CheckButton; pathName: in String;
@@ -97,7 +97,7 @@ package Tcl.Tk.Ada.Widgets.TtkButton.TtkCheckButton is
       Pre => pathName /= "";
       -- ****
 
-     -- ****f* TtkCheckButton/Get_Widget
+     -- ****f* TtkCheckButton/TtkCheckButton.Get_Widget
      -- FUNCTION
      -- Get the existing Ttk_CheckButton widget
      -- PARAMETERS
