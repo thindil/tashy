@@ -20,7 +20,7 @@
 package Tcl.Tk.Ada.Widgets.Toplevel.MainWindow is
 -- ****
 
-   -- ****f* MainWindow/Get_Main_Window
+   -- ****f* MainWindow/MainWindow.Get_Main_Window
    -- FUNCTION
    -- Get main window of the specified interpreter
    -- PARAMETERS
@@ -36,7 +36,7 @@ package Tcl.Tk.Ada.Widgets.Toplevel.MainWindow is
    function Get_Main_Window(Interp: in Tcl_Interp) return Tk_Toplevel;
    -- ****
 
-   -- ****f* MainWindow/Bind_To_Main_Window (procedure)
+   -- ****f* MainWindow/MainWindow.Bind_To_Main_Window_(procedure)
    -- FUNCTION
    -- Associates Tcl script Script with the event Sequence in the main window.
    -- PARAMETERS
@@ -56,7 +56,7 @@ package Tcl.Tk.Ada.Widgets.Toplevel.MainWindow is
       Pre => Sequence /= "" and Script /= "";
       -- ****
 
-   -- ****f* MainWindow/Bind_To_Main_Window (function)
+   -- ****f* MainWindow/MainWindow.Bind_To_Main_Window_(function)
    -- FUNCTION
    -- Get the associated Tcl script Script with the event Sequence in the main window.
    -- PARAMETERS
@@ -75,7 +75,7 @@ package Tcl.Tk.Ada.Widgets.Toplevel.MainWindow is
       Pre => Sequence /= "";
       -- ****
 
-      -- ****f* MainWindow/Unbind_From_Main_Window (procedure)
+      -- ****f* MainWindow/MainWindow.Unbind_From_Main_Window_(procedure)
       -- FUNCTION
       -- Disassociates the binding from the event Sequence in the main window.
       -- PARAMETERS
@@ -95,7 +95,7 @@ package Tcl.Tk.Ada.Widgets.Toplevel.MainWindow is
       Pre => Sequence /= "";
       -- ****
 
-      -- ****f* MainWindow/Unbind_From_Main_Window (function)
+      -- ****f* MainWindow/MainWindow.Unbind_From_Main_Window_(function)
       -- FUNCTION
       -- Disassociates the binding from the event Sequence in the main window.
       -- PARAMETERS
