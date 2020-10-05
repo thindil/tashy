@@ -20,7 +20,7 @@
 package Tcl.Tk.Ada.Widgets.Toplevel is
 -- ****
 
-   -- ****t* Toplevel/Tk_Toplevel
+   -- ****t* Toplevel/Toplevel.Tk_Toplevel
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -29,7 +29,7 @@ package Tcl.Tk.Ada.Widgets.Toplevel is
    type Tk_Toplevel is new Tk_Widget with private;
    -- ****
 
-   -- ****f* Toplevel/Create (function)
+   -- ****f* Toplevel/Toplevel.Create_(function)
    -- FUNCTION
    -- Creates a new Tk_Toplevel in the specified interpreter.
    -- PARAMETERS
@@ -49,7 +49,7 @@ package Tcl.Tk.Ada.Widgets.Toplevel is
    -- COMMANDS
    -- toplevel pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- Toplevel.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -57,7 +57,7 @@ package Tcl.Tk.Ada.Widgets.Toplevel is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* Toplevel/Create (procedure)
+     -- ****f* Toplevel/Toplevel.Create_(procedure)
      -- FUNCTION
      -- Creates a new Tk_Toplevel in the specified interpreter.
      -- PARAMETERS
@@ -82,7 +82,7 @@ package Tcl.Tk.Ada.Widgets.Toplevel is
      -- COMMANDS
      -- toplevel pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- Toplevel.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Toplevel; pathName: in String; options: in String := "";
@@ -90,7 +90,7 @@ package Tcl.Tk.Ada.Widgets.Toplevel is
       Pre => pathName /= "";
       -- ****
 
-     -- ****f* Toplevel/Get_Widget
+     -- ****f* Toplevel/Toplevel.Get_Widget
      -- FUNCTION
      -- Get the existing Tk_Toplevel widget
      -- PARAMETERS
