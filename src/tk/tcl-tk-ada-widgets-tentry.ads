@@ -27,7 +27,7 @@
 package Tcl.Tk.Ada.Widgets.TEntry is
 -- ****
 
-   -- ****t* TEntry/Tk_Entry
+   -- ****t* TEntry/TEntry.Tk_Entry
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -36,7 +36,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
    type Tk_Entry is new Tk_Widget with private;
    -- ****
 
-   -- ****f* TEntry/Create (function)
+   -- ****f* TEntry/TEntry.Create_(function)
    -- Creates a new Tk_Entry in the specified interpreter.
    -- PARAMETERS
    -- pathName - Tk path (starts with dot) for the widget
@@ -55,7 +55,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
    -- COMMANDS
    -- entry pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- TEntry.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -63,7 +63,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* TEntry/Create (procedure)
+     -- ****f* TEntry/TEntry.Create_(procedure)
      -- Creates a new Tk_Entry in the specified interpreter.
      -- PARAMETERS
      -- Widgt    - Tk_Entry which will be created
@@ -87,7 +87,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
      -- COMMANDS
      -- entry pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- TEntry.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Entry; pathName: in String; options: in String := "";
@@ -95,7 +95,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* TEntry/Get_Widget
+     -- ****f* TEntry/TEntry.Get_Widget
      -- FUNCTION
      -- Get the existing Tk_Entry widget
      -- PARAMETERS
@@ -115,7 +115,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       return Tk_Entry;
      -- ****
 
-     -- ****f* TEntry/BBox
+     -- ****f* TEntry/TEntry.BBox
      -- FUNCTION
      -- Get size of bounding box of the selected character in the selected
      -- Tk_Entry
@@ -140,7 +140,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* TEntry/Delete
+      -- ****f* TEntry/TEntry.Delete
       -- FUNCTION
       -- Delete part of text from the selected entry
       -- PARAMETERS
@@ -162,7 +162,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       Pre => FirstIndex /= "";
       -- ****
 
-      -- ****f* TEntry/Get
+      -- ****f* TEntry/TEntry.Get
       -- FUNCTION
       -- Get entry's text.
       -- PARAMETERS
@@ -180,7 +180,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
    function Get(Widgt: in Tk_Entry'Class) return String;
    -- ****
 
-   -- ****f* TEntry/ICursor
+   -- ****f* TEntry/TEntry.ICursor
    -- FUNCTION
    -- Place insertion cursor in the selected Tk_Entry just before the
    -- selected character
@@ -200,7 +200,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* TEntry/Entry_Index
+      -- ****f* TEntry/TEntry.Entry_Index
       -- FUNCTION
       -- Get numerical index of character from the selected Index
       -- PARAMETERS
@@ -221,7 +221,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* TEntry/Insert
+      -- ****f* TEntry/TEntry.Insert
       -- FUNCTION
       -- Insert text at selected index to the selected Tk_Entry
       -- PARAMETERS
@@ -241,7 +241,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       Pre => Index /= "" and Text /= "";
       -- ****
 
-      -- ****f* TEntry/Scan_Mark
+      -- ****f* TEntry/TEntry.Scan_Mark
       -- FUNCTION
       -- Sets starting position for scan in the selected Tk_Entry
       -- PARAMETERS
@@ -259,7 +259,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       Pre => X /= "";
       -- ****
 
-      -- ****f* TEntry/Scan_DragTo
+      -- ****f* TEntry/TEntry.Scan_DragTo
       -- FUNCTION
       -- Computes the difference between its X argument and the X argument to
       -- the last Scan_Mark procedure for the Tk_Entry. It then adjusts the
@@ -279,7 +279,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       Pre => X /= "";
       -- ****
 
-      -- ****f* TEntry/Selection_Adjust
+      -- ****f* TEntry/TEntry.Selection_Adjust
       -- FUNCTION
       -- Add characters to the Tk_Entry selection. If nothing is selected,
       -- create a new selection from the beginning to the selected by Index
@@ -301,7 +301,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* TEntry/Selection_Clear
+      -- ****f* TEntry/TEntry.Selection_Clear
       -- FUNCTION
       -- Remove the selection from the selected Tk_Entry
       -- PARAMETERS
@@ -317,7 +317,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
    procedure Selection_Clear(TextEntry: in Tk_Entry'Class);
    -- ****
 
-   -- ****f* TEntry/Selection_From
+   -- ****f* TEntry/TEntry.Selection_From
    -- FUNCTION
    -- Set the selection anchor at the selected character in the selected
    -- Tk_Entry. Does not change the selection
@@ -338,7 +338,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* TEntry/Selection_Present
+      -- ****f* TEntry/TEntry.Selection_Present
       -- FUNCTION
       -- Check if any character is selected in the selected Tk_Entry
       -- PARAMETERS
@@ -356,7 +356,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
    function Selection_Present(TextEntry: in Tk_Entry'Class) return String;
    -- ****
 
-   -- ****f* TEntry/Selection_Range
+   -- ****f* TEntry/TEntry.Selection_Range
    -- FUNCTION
    -- Set the characters selection in the selected Tk_Entry
    -- PARAMETERS
@@ -376,7 +376,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       Pre => StartIndex /= "" and EndIndex /= "";
       -- ****
 
-      -- ****f* TEntry/Selection_To
+      -- ****f* TEntry/TEntry.Selection_To
       -- FUNCTION
       -- Set selection in the selected Tk_Entry
       -- PARAMETERS
@@ -397,7 +397,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* TEntry/Validate
+      -- ****f* TEntry/TEntry.Validate
       -- FUNCTION
       -- Force the Tk_Entry to revalidate its value
       -- PARAMETERS
@@ -415,7 +415,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
    function Validate(TextEntry: in Tk_Entry'Class) return String;
    -- ****
 
-   -- ****f* TEntry/XView (function)
+   -- ****f* TEntry/TEntry.XView_(function)
    -- FUNCTION
    -- Get which horizontal fraction of the Tk_Entry is visible
    -- PARAMETERS
@@ -432,12 +432,12 @@ package Tcl.Tk.Ada.Widgets.TEntry is
    -- COMMANDS
    -- TextEntry xview
    -- SEE ALSO
-   -- XView (procedure)
+   -- TEntry.XView_(procedure)
    -- SOURCE
    function XView(TextEntry: in Tk_Entry'Class) return String;
    -- ****
 
-   -- ****f* TEntry/XView (procedure)
+   -- ****f* TEntry/TEntry.XView_(procedure)
    -- FUNCTION
    -- Adjusts the view in the window so that the character position given by
    -- index is displayed at the left edge of the window
@@ -453,13 +453,13 @@ package Tcl.Tk.Ada.Widgets.TEntry is
    -- COMMANDS
    -- TextEntry xview index
    -- SEE ALSO
-   -- XView (function)
+   -- TEntry.XView_(function)
    -- SOURCE
    procedure XView(TextEntry: in Tk_Entry'Class; Index: in String) with
       Pre => Index /= "";
       -- ****
 
-      -- ****f* TEntry/Xview_Move_To
+      -- ****f* TEntry/TEntry.Xview_Move_To
       -- FUNCTION
       -- Adjusts the view in the window so that fraction of the total width of
       -- the Tk_Entry is off-screen to the left.
@@ -480,7 +480,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
       Pre => Fraction /= "";
       -- ****
 
-      -- ****f* TEntry/Xview_Scroll
+      -- ****f* TEntry/TEntry.Xview_Scroll
       -- FUNCTION
       -- Shift the view in the window on left or right according to Number and
       -- What.
