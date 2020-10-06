@@ -34,7 +34,7 @@
 package Tcl.Tk.Ada.Widgets.TtkEntry is
 -- ****
 
-   -- ****t* TtkEntry/Ttk_Entry
+   -- ****t* TtkEntry/TtkEntry.Ttk_Entry
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -43,7 +43,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
    type Ttk_Entry is new Tk_Widget with private;
    -- ****
 
-   -- ****f* TtkEntry/Create (function)
+   -- ****f* TtkEntry/TtkEntry.Create_(function)
    -- FUNCTION
    -- Creates a new Ttk_Entry in the specified interpreter.
    -- PARAMETERS
@@ -63,7 +63,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
    -- COMMANDS
    -- ttk::entry pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- TtkEntry.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -71,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* TtkEntry/Create (procedure)
+     -- ****f* TtkEntry/TtkEntry.Create_(procedure)
      -- FUNCTION
      -- Creates a new Ttk_Entry in the specified interpreter.
      -- PARAMETERS
@@ -96,7 +96,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
      -- COMMANDS
      -- ttk::entry pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- TtkEntry.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_Entry; pathName: in String; options: in String := "";
@@ -104,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       Pre => pathName /= "";
       -- ****
 
-     -- ****f* TtkEntry/Get_Widget
+     -- ****f* TtkEntry/TtkEntry.Get_Widget
      -- FUNCTION
      -- Get the existing Ttk_Entry widget
      -- PARAMETERS
@@ -124,7 +124,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       return Ttk_Entry;
      -- ****
 
-      -- ****f* TtkEntry/BBox
+      -- ****f* TtkEntry/TtkEntry.BBox
       -- FUNCTION
       -- Get size of bounding box of the selected character in the selected
       -- Ttk_Entry
@@ -149,7 +149,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* TtkEntry/Delete
+      -- ****f* TtkEntry/TtkEntry.Delete
       -- FUNCTION
       -- Delete part of text from the selected entry
       -- PARAMETERS
@@ -171,7 +171,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       Pre => FirstIndex /= "";
       -- ****
 
-      -- ****f* TtkEntry/Get
+      -- ****f* TtkEntry/TtkEntry.Get
       -- FUNCTION
       -- Get entry's text.
       -- PARAMETERS
@@ -189,7 +189,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
    function Get(Widgt: in Ttk_Entry) return String;
    -- ****
 
-   -- ****f* TtkEntry/ICursor
+   -- ****f* TtkEntry/TtkEntry.ICursor
    -- FUNCTION
    -- Place insertion cursor in the selected Ttk_Entry just before the
    -- selected character
@@ -209,7 +209,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* TtkEntry/Index
+      -- ****f* TtkEntry/TtkEntry.Index
       -- FUNCTION
       -- Get numerical index of character from the selected Index
       -- PARAMETERS
@@ -230,7 +230,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       Pre => Index /= "";
       -- ****
 
-      -- ****f* TtkEntry/Insert
+      -- ****f* TtkEntry/TtkEntry.Insert
       -- FUNCTION
       -- Insert text at selected index to the selected Ttk_Entry
       -- PARAMETERS
@@ -250,7 +250,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       Pre => Index /= "" and Text /= "";
       -- ****
 
-      -- ****f* TtkEntry/Selection_Clear
+      -- ****f* TtkEntry/TtkEntry.Selection_Clear
       -- FUNCTION
       -- Remove the selection from the selected Ttk_Entry
       -- PARAMETERS
@@ -266,7 +266,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
    procedure Selection_Clear(TextEntry: in Ttk_Entry'Class);
    -- ****
 
-   -- ****f* TtkEntry/Selection_Present
+   -- ****f* TtkEntry/TtkEntry.Selection_Present
    -- FUNCTION
    -- Check if any character is selected in the selected Ttk_Entry
    -- PARAMETERS
@@ -284,7 +284,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
    function Selection_Present(TextEntry: in Ttk_Entry'Class) return String;
    -- ****
 
-   -- ****f* TtkEntry/Selection_Range
+   -- ****f* TtkEntry/TtkEntry.Selection_Range
    -- FUNCTION
    -- Set the characters selection in the selected Ttk_Entry
    -- PARAMETERS
@@ -304,7 +304,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       Pre => StartIndex /= "" and EndIndex /= "";
       -- ****
 
-      -- ****f* TtkEntry/Validate
+      -- ****f* TtkEntry/TtkEntry.Validate
       -- FUNCTION
       -- Force the Ttk_Entry to revalidate its value
       -- PARAMETERS
@@ -322,7 +322,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
    function Validate(TextEntry: in Ttk_Entry'Class) return String;
    -- ****
 
-   -- ****f* TtkEntry/XView (function)
+   -- ****f* TtkEntry/TtkEntry.XView_(function)
    -- FUNCTION
    -- Get which horizontal fraction of the Ttk_Entry is visible
    -- PARAMETERS
@@ -339,12 +339,12 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
    -- COMMANDS
    -- TextEntry xview
    -- SEE ALSO
-   -- XView (procedure)
+   -- TtkEntry.XView_(procedure)
    -- SOURCE
    function XView(TextEntry: in Ttk_Entry'Class) return String;
    -- ****
 
-   -- ****f* TtkEntry/XView (procedure)
+   -- ****f* TtkEntry/TtkEntry.XView_(procedure)
    -- FUNCTION
    -- Adjusts the view in the window so that the character position given by
    -- index is displayed at the left edge of the window
@@ -360,13 +360,13 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
    -- COMMANDS
    -- TextEntry xview index
    -- SEE ALSO
-   -- XView (function)
+   -- TtkEntry.XView_(function)
    -- SOURCE
    procedure XView(TextEntry: in Ttk_Entry'Class; Index: in String) with
       Pre => Index /= "";
       -- ****
 
-      -- ****f* TtkEntry/Xview_Move_To
+      -- ****f* TtkEntry/TtkEntry.Xview_Move_To
       -- FUNCTION
       -- Adjusts the view in the window so that fraction of the total width of
       -- the Ttk_Entry is off-screen to the left.
@@ -387,7 +387,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       Pre => Fraction /= "";
       -- ****
 
-      -- ****f* TtkEntry/Xview_Scroll
+      -- ****f* TtkEntry/TtkEntry.Xview_Scroll
       -- FUNCTION
       -- Shift the view in the window on left or right according to Number and
       -- What.
