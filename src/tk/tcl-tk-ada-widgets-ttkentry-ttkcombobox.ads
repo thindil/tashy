@@ -34,7 +34,7 @@
 package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
 -- ****
 
-   -- ****t* TtkComboBox/Ttk_ComboBox
+   -- ****t* TtkComboBox/TtkComboBox.Ttk_ComboBox
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -43,7 +43,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
    type Ttk_ComboBox is new Ttk_Entry with private;
    -- ****
 
-   -- ****f* TtkComboBox/Create (function)
+   -- ****f* TtkComboBox/TtkComboBox.Create_(function)
    -- FUNCTION
    -- Creates a new Ttk_ComboBox in the specified interpreter.
    -- PARAMETERS
@@ -63,7 +63,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
    -- COMMANDS
    -- ttk::combobox pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- TtkComboBox.Create_(procedure)
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
@@ -71,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
       Pre => pathName /= "";
       -- ****
 
-      -- ****f* TtkComboBox/Create (procedure)
+      -- ****f* TtkComboBox/TtkComboBox.Create_(procedure)
       -- FUNCTION
       -- Creates a new Ttk_ComboBox in the specified interpreter.
       -- PARAMETERS
@@ -96,7 +96,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
       -- COMMANDS
       -- ttk::combobox pathName ?options?
       -- SEE ALSO
-      -- Create (function)
+      -- TtkComboBox.Create_(function)
       -- SOURCE
    procedure Create
      (Widgt: out Ttk_ComboBox; pathName: in String; options: in String := "";
@@ -104,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
       Pre => pathName /= "";
       -- ****
 
-     -- ****f* TtkComboBox/Get_Widget
+     -- ****f* TtkComboBox/TtkComboBox.Get_Widget
      -- FUNCTION
      -- Get the existing Ttk_ComboBox widget
      -- PARAMETERS
@@ -124,7 +124,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
       return Ttk_ComboBox;
      -- ****
 
-      -- ****f* TtkComboBox/Current (function)
+      -- ****f* TtkComboBox/TtkComboBox.Current_(function)
       -- FUNCTION
       -- Get the current value of the selected Ttk_ComboBox
       -- PARAMETERS
@@ -140,12 +140,12 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
       -- COMMANDS
       -- ComboBox current
       -- SEE ALSO
-      -- Current (procedure)
+      -- TtkComboBox.Current_(procedure)
       -- SOURCE
    function Current(ComboBox: in Ttk_ComboBox) return String;
    -- ****
 
-   -- ****f* TtkComboBox/Current (procedure)
+   -- ****f* TtkComboBox/TtkComboBox.Current_(procedure)
    -- FUNCTION
    -- Set the current value for the selected Ttk_ComboBox
    -- PARAMETERS
@@ -160,13 +160,13 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
    -- COMMANDS
    -- ComboBox current newIndex
    -- SEE ALSO
-   -- Current (function), Set
+   -- TtkComboBox.Current_(function), Set
    -- SOURCE
    procedure Current(ComboBox: in Ttk_ComboBox; NewIndex: in String) with
       Pre => NewIndex /= "";
       -- ****
 
-      -- ****f* TtkComboBox/Set
+      -- ****f* TtkComboBox/TtkComboBox.Set
       -- FUNCTION
       -- Set the value of the selected Ttk_ComboBox
       -- PARAMETERS
