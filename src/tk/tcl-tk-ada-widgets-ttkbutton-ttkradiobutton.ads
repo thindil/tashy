@@ -27,7 +27,7 @@
 package Tcl.Tk.Ada.Widgets.TtkButton.TtkRadioButton is
 -- ****
 
-   -- ****t* TtkRadioButton/Ttk_RadioButton
+   -- ****t* TtkRadioButton/TtkRadioButton.Ttk_RadioButton
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -36,7 +36,7 @@ package Tcl.Tk.Ada.Widgets.TtkButton.TtkRadioButton is
    type Ttk_RadioButton is new Ttk_Button with private;
    -- ****
 
-   -- ****f* TtkRadioButton/Create (function)
+   -- ****f* TtkRadioButton/TtkRadioButton.Create_(function)
    -- FUNCTION
    -- Creates a new Ttk_RadioButton in the specified interpreter.
    -- PARAMETERS
@@ -56,7 +56,7 @@ package Tcl.Tk.Ada.Widgets.TtkButton.TtkRadioButton is
    -- COMMANDS
    -- ttk::radiobutton pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- TtkRadioButton.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -64,7 +64,7 @@ package Tcl.Tk.Ada.Widgets.TtkButton.TtkRadioButton is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* TtkRadioButton/Create (procedure)
+     -- ****f* TtkRadioButton/TtkRadioButton.Create_(procedure)
      -- FUNCTION
      -- Creates a new Ttk_RadioButton in the specified interpreter.
      -- PARAMETERS
@@ -89,7 +89,7 @@ package Tcl.Tk.Ada.Widgets.TtkButton.TtkRadioButton is
      -- COMMANDS
      -- ttk::radiobutton pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- TtkRadioButton.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_RadioButton; pathName: in String;
@@ -97,7 +97,7 @@ package Tcl.Tk.Ada.Widgets.TtkButton.TtkRadioButton is
       Pre => pathName /= "";
       -- ****
 
-     -- ****f* TtkRadioButton/Get_Widget
+     -- ****f* TtkRadioButton/TtkRadioButton.Get_Widget
      -- FUNCTION
      -- Get the existing Ttk_RadioButton widget
      -- PARAMETERS
