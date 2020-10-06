@@ -34,7 +34,7 @@
 package Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox is
 -- ****
 
-   -- ****t* TtkSpinBox/Ttk_SpinBox
+   -- ****t* TtkSpinBox/TtkSpinBox.Ttk_SpinBox
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -43,7 +43,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox is
    type Ttk_SpinBox is new Ttk_Entry with private;
    -- ****
 
-   -- ****f* TtkSpinBox/Create (function)
+   -- ****f* TtkSpinBox/TtkSpinBox.Create_(function)
    -- FUNCTION
    -- Creates a new Ttk_SpinBox in the specified interpreter.
    -- PARAMETERS
@@ -63,7 +63,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox is
    -- COMMANDS
    -- ttk::spinbox pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- TtkSpinBox.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -71,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* TtkSpinBox/Create (procedure)
+     -- ****f* TtkSpinBox/TtkSpinBox.Create_(procedure)
      -- FUNCTION
      -- Creates a new Ttk_SpinBox in the specified interpreter.
      -- PARAMETERS
@@ -96,7 +96,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox is
      -- COMMANDS
      -- ttk::spinbox pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- TtkSpinBox.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_SpinBox; pathName: in String; options: in String := "";
@@ -104,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox is
       Pre => pathName /= "";
       -- ****
 
-     -- ****f* TtkSpinBox/Get_Widget
+     -- ****f* TtkSpinBox/TtkSpinBox.Get_Widget
      -- FUNCTION
      -- Get the existing Ttk_SpinBox widget
      -- PARAMETERS
@@ -124,7 +124,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox is
       return Ttk_SpinBox;
      -- ****
 
-      -- ****f* TtkSpinBox/Current (function)
+      -- ****f* TtkSpinBox/TtkSpinBox.Current_(function)
       -- FUNCTION
       -- Get the current value of the selected Ttk_SpinBox
       -- PARAMETERS
@@ -140,12 +140,12 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox is
       -- COMMANDS
       -- SpinBox current
       -- SEE ALSO
-      -- Current (procedure)
+      -- TtkSpinBox.Current_(procedure)
       -- SOURCE
    function Current(SpinBox: in Ttk_SpinBox) return String;
    -- ****
 
-   -- ****f* TtkSpinBox/Current
+   -- ****f* TtkSpinBox/TtkSpinBox.Current_(procedure)
    -- FUNCTION
    -- Set the current value for the selected Ttk_SpinBox
    -- PARAMETERS
@@ -160,13 +160,13 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkSpinBox is
    -- COMMANDS
    -- SpinBox current newIndex
    -- SEE ALSO
-   -- Current (function), Set
+   -- TtkSpinBox.Current_(function), Set
    -- SOURCE
    procedure Current(SpinBox: in Ttk_SpinBox; NewIndex: in String) with
       Pre => NewIndex /= "";
       -- ****
 
-      -- ****f* TtkSpinBox/Set
+      -- ****f* TtkSpinBox/TtkSpinBox.Set
       -- FUNCTION
       -- Set the value of the selected Ttk_SpinBox
       -- PARAMETERS
