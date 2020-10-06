@@ -27,7 +27,7 @@
 package Tcl.Tk.Ada.Widgets.TtkButton is
 -- ****
 
-   -- ****t* TtkButton/Ttk_Button
+   -- ****t* TtkButton/TtkButton.Ttk_Button
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -36,7 +36,7 @@ package Tcl.Tk.Ada.Widgets.TtkButton is
    type Ttk_Button is new Tk_Widget with private;
    -- ****
 
-   -- ****f* TtkButton/Create (function)
+   -- ****f* TtkButton/TtkButton.Create_(function)
    -- FUNCTION
    -- Creates a new Ttk_Button in the specified interpreter.
    -- PARAMETERS
@@ -56,7 +56,7 @@ package Tcl.Tk.Ada.Widgets.TtkButton is
    -- COMMANDS
    -- ttk::button pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- TtkButton.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -64,7 +64,7 @@ package Tcl.Tk.Ada.Widgets.TtkButton is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* TtkButton/Create (procedure)
+     -- ****f* TtkButton/TtkButton.Create_(procedure)
      -- FUNCTION
      -- Creates a new Ttk_Button in the specified interpreter.
      -- PARAMETERS
@@ -89,7 +89,7 @@ package Tcl.Tk.Ada.Widgets.TtkButton is
      -- COMMANDS
      -- ttk::button pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- TtkButton.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_Button; pathName: in String; options: in String := "";
@@ -97,7 +97,7 @@ package Tcl.Tk.Ada.Widgets.TtkButton is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* TtkButton/Get_Widget
+     -- ****f* TtkButton/TtkButton.Get_Widget
      -- FUNCTION
      -- Get the existing Ttk_Button widget
      -- PARAMETERS
@@ -117,7 +117,7 @@ package Tcl.Tk.Ada.Widgets.TtkButton is
       return Ttk_Button;
      -- ****
 
-     -- ****f* TtkButton/Invoke
+     -- ****f* TtkButton/TtkButton.Invoke
      -- FUNCTION
      -- Invoke the Tcl command associated with the button.
      -- PARAMETERS
