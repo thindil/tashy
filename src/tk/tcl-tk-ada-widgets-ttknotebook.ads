@@ -34,7 +34,7 @@
 package Tcl.Tk.Ada.Widgets.TtkNotebook is
 -- ****
 
-   -- ****t* TtkNotebook/Ttk_Notebook
+   -- ****t* TtkNotebook/TtkNotebook.Ttk_Notebook
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -43,7 +43,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
    type Ttk_Notebook is new Tk_Widget with private;
    -- ****
 
-   -- ****f* TtkNotebook/Create (function)
+   -- ****f* TtkNotebook/TtkNotebook.Create_(function)
    -- FUNCTION
    -- Creates a new Ttk_Notebook in the specified interpreter.
    -- PARAMETERS
@@ -63,7 +63,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
    -- COMMANDS
    -- ttk::notebook pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- TtkNotebook.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -71,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* TtkNotebook/Create (procedure)
+     -- ****f* TtkNotebook/TtkNotebook.Create_(procedure)
      -- FUNCTION
      -- Creates a new Ttk_Notebook in the specified interpreter.
      -- PARAMETERS
@@ -96,7 +96,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
      -- COMMANDS
      -- ttk::notebook pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- TtkNotebook.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_Notebook; pathName: in String; options: in String := "";
@@ -104,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* TtkNotebook/Get_Widget
+     -- ****f* TtkNotebook/TtkNotebook.Get_Widget
      -- FUNCTION
      -- Get the existing Ttk_Notebook widget
      -- PARAMETERS
@@ -124,7 +124,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       return Ttk_Notebook;
      -- ****
 
-     -- ****f* TtkNotebook/Add
+     -- ****f* TtkNotebook/TtkNotebook.Add
      -- FUNCTION
      -- Add a new window to the selected notebook
      -- PARAMETERS
@@ -145,7 +145,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       Pre => WindowName /= "";
       -- ****
 
-      -- ****f* TtkNotebook/Forget
+      -- ****f* TtkNotebook/TtkNotebook.Forget
       -- FUNCTION
       -- Remove the selected tab and unmap the associated window
       -- PARAMETERS
@@ -163,7 +163,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       Pre => TabId /= "";
       -- ****
 
-      -- ****f* TtkNotebook/Hide
+      -- ****f* TtkNotebook/TtkNotebook.Hide
       -- FUNCTION
       -- Hide selected tab. Hidden tab can be restored with Add procedure
       -- PARAMETERS
@@ -181,7 +181,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       Pre => TabId /= "";
       -- ****
 
-      -- ****f* TtkNotebook/Identify_Element
+      -- ****f* TtkNotebook/TtkNotebook.Identify_Element
       -- FUNCTION
       -- Get the name of the element at the specific location
       -- PARAMETERS
@@ -204,7 +204,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* TtkNotebook/Identify_Tab
+      -- ****f* TtkNotebook/TtkNotebook.Identify_Tab
       -- FUNCTION
       -- Get the index of the tab at the specific location
       -- PARAMETERS
@@ -227,7 +227,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* TtkNotebook/Index
+      -- ****f* TtkNotebook/TtkNotebook.Index
       -- FUNCTION
       -- Get numeric index of the selected tab
       -- PARAMETERS
@@ -249,7 +249,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       Pre => TabId /= "";
       -- ****
 
-      -- ****f* TtkNotebook/Insert
+      -- ****f* TtkNotebook/TtkNotebook.Insert
       -- FUNCTION
       -- Insert the selected window at the selected position in the selected
       -- Ttk_Notebook. If window is in the selected Ttk_Notebook, move it to
@@ -274,7 +274,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       Pre => Pos /= "" and Options /= "";
       -- ****
 
-      -- ****f* TtkNotebook/Notebook_Select
+      -- ****f* TtkNotebook/TtkNotebook.Notebook_Select
       -- FUNCTION
       -- Set selected tab as a currently selected in the Ttk_Notebook
       -- PARAMETERS
@@ -292,7 +292,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       Pre => TabId /= "";
       -- ****
 
-      -- ****f* TtkNotebook/Get_Selected
+      -- ****f* TtkNotebook/TtkNotebook.Get_Selected
       -- FUNCTION
       -- Get selected tab indentifier in the selected Ttk_Notebook
       -- PARAMETERS
@@ -310,7 +310,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
    function Get_Selected(Notebook: in Ttk_Notebook) return String;
    -- ****
 
-   -- ****f* TtkNotebook/Tab (procedure)
+   -- ****f* TtkNotebook/TtkNotebook.Tab_(procedure)
    -- FUNCTION
    -- Set a new values for the selected options of the selected tab in the
    -- selected Ttk_Notebook
@@ -325,12 +325,14 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
    -- Tab(My_Notebook, "1", "-text {my new tab}");
    -- COMMANDS
    -- Notebook tab tabid ?options?
+   -- SEE ALSO
+   -- TtkNotebook.Tab_(function)
    -- SOURCE
    procedure Tab(Notebook: in Ttk_Notebook; TabId, Options: in String) with
       Pre => TabId /= "" and Options /= "";
       -- ****
 
-      -- ****f* TtkNotebook/Tab
+      -- ****f* TtkNotebook/TtkNotebook.Tab_(function)
       -- FUNCTION
       -- Get the value of the options of the selected tab in the selected
       -- Ttk_Notebook
@@ -349,6 +351,8 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- Title: constant String := Tab(My_Notebook, "end", "-text");
       -- COMMANDS
       -- Notebook tab tabid
+      -- SEE ALSO
+      -- TtkNotebook.Tab_(procedure)
       -- SOURCE
    function Tab
      (Notebook: in Ttk_Notebook; TabId: in String; Option: in String := "")
@@ -356,7 +360,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       Pre => TabId /= "";
       -- ****
 
-      -- ****f* TtkNotebook/Tabs
+      -- ****f* TtkNotebook/TtkNotebook.Tabs
       -- FUNCTION
       -- Get the list of windows names managed by Ttk_Notebook
       -- PARAMETERS
