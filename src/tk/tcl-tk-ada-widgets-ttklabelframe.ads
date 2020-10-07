@@ -34,7 +34,7 @@
 package Tcl.Tk.Ada.Widgets.TtkLabelFrame is
 -- ****
 
-   -- ****t* TtkLabelFrame/Ttk_LabelFrame
+   -- ****t* TtkLabelFrame/TtkLabelFrame.Ttk_LabelFrame
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -43,7 +43,7 @@ package Tcl.Tk.Ada.Widgets.TtkLabelFrame is
    type Ttk_LabelFrame is new Tk_Widget with private;
    -- ****
 
-   -- ****f* TtkLabelFrame/Create (function)
+   -- ****f* TtkLabelFrame/TtkLabelFrame.Create_(function)
    -- FUNCTION
    -- Creates a new Ttk_LabelFrame in the specified interpreter.
    -- PARAMETERS
@@ -63,7 +63,7 @@ package Tcl.Tk.Ada.Widgets.TtkLabelFrame is
    -- COMMANDS
    -- ttk::labelframe pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- TtkLabelFrame.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -71,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.TtkLabelFrame is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* TtkLabelFrame/Create (procedure)
+     -- ****f* TtkLabelFrame/TtkLabelFrame.Create_(procedure)
      -- FUNCTION
      -- Creates a new Ttk_LabelFrame in the specified interpreter.
      -- PARAMETERS
@@ -96,7 +96,7 @@ package Tcl.Tk.Ada.Widgets.TtkLabelFrame is
      -- COMMANDS
      -- ttk::labelframe pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- TtkLabelFrame.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_LabelFrame; pathName: in String; options: in String := "";
@@ -104,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.TtkLabelFrame is
       Pre => pathName /= "";
       -- ****
 
-     -- ****f* TtkLabelFrame/Get_Widget
+     -- ****f* TtkLabelFrame/TtkLabelFrame.Get_Widget
      -- FUNCTION
      -- Get the existing Ttk_Label widget
      -- PARAMETERS
