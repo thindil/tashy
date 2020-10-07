@@ -27,7 +27,7 @@
 package Tcl.Tk.Ada.Widgets.TtkLabel is
 -- ****
 
-   -- ****t* TtkLabel/Ttk_Label
+   -- ****t* TtkLabel/TtkLabel.Ttk_Label
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -36,7 +36,7 @@ package Tcl.Tk.Ada.Widgets.TtkLabel is
    type Ttk_Label is new Tk_Widget with private;
    -- ****
 
-   -- ****f* TtkLabel/Create (function)
+   -- ****f* TtkLabel/TtkLabel.Create_(function)
    -- FUNCTION
    -- Creates a new Ttk_Label in the specified interpreter.
    -- PARAMETERS
@@ -56,7 +56,7 @@ package Tcl.Tk.Ada.Widgets.TtkLabel is
    -- COMMANDS
    -- ttk::label pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- TtkLabel.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -64,7 +64,7 @@ package Tcl.Tk.Ada.Widgets.TtkLabel is
       Pre => pathName /= "";
       -- ****
 
-     -- ****f* TtkLabel/Create (procedure)
+     -- ****f* TtkLabel/TtkLabel.Create_(procedure)
      -- FUNCTION
      -- Creates a new Ttk_Label in the specified interpreter.
      -- PARAMETERS
@@ -89,7 +89,7 @@ package Tcl.Tk.Ada.Widgets.TtkLabel is
      -- COMMANDS
      -- ttk::label pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- TtkLabel.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_Label; pathName: in String; options: in String := "";
@@ -97,7 +97,7 @@ package Tcl.Tk.Ada.Widgets.TtkLabel is
       Pre => pathName /= "";
       -- ****
 
-     -- ****f* TtkLabel/Get_Widget
+     -- ****f* TtkLabel/TtkLabel.Get_Widget
      -- FUNCTION
      -- Get the existing Ttk_Label widget
      -- PARAMETERS
