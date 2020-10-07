@@ -34,7 +34,7 @@
 package Tcl.Tk.Ada.Widgets.TtkFrame is
 -- ****
 
-   -- ****t* TtkFrame/Ttk_Frame
+   -- ****t* TtkFrame/TtkFrame.Ttk_Frame
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -43,7 +43,7 @@ package Tcl.Tk.Ada.Widgets.TtkFrame is
    type Ttk_Frame is new Tk_Widget with private;
    -- ****
 
-   -- ****f* TtkFrame/Create (function)
+   -- ****f* TtkFrame/TtkFrame.Create_(function)
    -- FUNCTION
    -- Creates a new Ttk_Frame in the specified interpreter.
    -- PARAMETERS
@@ -63,7 +63,7 @@ package Tcl.Tk.Ada.Widgets.TtkFrame is
    -- COMMANDS
    -- ttk::frame pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- TtkFrame.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -71,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.TtkFrame is
       Pre => pathName /= "";
       -- ****
 
-     -- ****f* TtkFrame/Create (procedure)
+     -- ****f* TtkFrame/TtkFrame.Create_(procedure)
      -- FUNCTION
      -- Creates a new Ttk_Frame in the specified interpreter.
      -- PARAMETERS
@@ -96,7 +96,7 @@ package Tcl.Tk.Ada.Widgets.TtkFrame is
      -- COMMANDS
      -- ttk::frame pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- TtkFrame.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_Frame; pathName: in String; options: in String := "";
@@ -104,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.TtkFrame is
       Pre => pathName /= "";
       -- ****
 
-     -- ****f* TtkFrame/Get_Widget
+     -- ****f* TtkFrame/TtkFrame.Get_Widget
      -- FUNCTION
      -- Get the existing Ttk_Frame widget
      -- PARAMETERS
