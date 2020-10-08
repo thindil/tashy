@@ -34,7 +34,7 @@
 package Tcl.Tk.Ada.Widgets.TtkScale is
 -- ****
 
-   -- ****t* TtkScale/Ttk_Scale
+   -- ****t* TtkScale/TtkScale.Ttk_Scale
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -43,7 +43,7 @@ package Tcl.Tk.Ada.Widgets.TtkScale is
    type Ttk_Scale is new Tk_Widget with private;
    -- ****
 
-   -- ****f* TtkScale/Create (function)
+   -- ****f* TtkScale/TtkScale.Create_(function)
    -- FUNCTION
    -- Creates a new Ttk_Scale in the specified interpreter.
    -- PARAMETERS
@@ -63,7 +63,7 @@ package Tcl.Tk.Ada.Widgets.TtkScale is
    -- COMMANDS
    -- ttk::scale pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- TtkScale.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -71,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.TtkScale is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* TtkScale/Create (procedure)
+     -- ****f* TtkScale/TtkScale.Create_(procedure)
      -- FUNCTION
      -- Creates a new Ttk_Scale in the specified interpreter.
      -- PARAMETERS
@@ -96,7 +96,7 @@ package Tcl.Tk.Ada.Widgets.TtkScale is
      -- COMMANDS
      -- ttk::scale pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- TtkScale.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_Scale; pathName: in String; options: in String := "";
@@ -104,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.TtkScale is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* TtkScale/Get_Widget
+     -- ****f* TtkScale/TtkScale.Get_Widget
      -- FUNCTION
      -- Get the existing Ttk_Scale widget
      -- PARAMETERS
@@ -124,7 +124,7 @@ package Tcl.Tk.Ada.Widgets.TtkScale is
       return Ttk_Scale;
      -- ****
 
-     -- ****f* TtkScale/Get (current)
+     -- ****f* TtkScale/TtkScale.Get_(current)
      -- FUNCTION
      -- Get current value of the selected Ttk_Scale
      -- PARAMETERS
@@ -138,11 +138,13 @@ package Tcl.Tk.Ada.Widgets.TtkScale is
      -- Value: constant String := Get(My_Scale);
      -- COMMANDS
      -- ScaleWidget get
+     -- SEE ALSO
+     -- TtkScale.Get_(at_pixel)
      -- SOURCE
    function Get(ScaleWidget: in Ttk_Scale) return String;
    -- ****
 
-   -- ****f* TtkScale/Get (at pixel)
+   -- ****f* TtkScale/TtkScale.Get_(at_pixel)
    -- FUNCTION
    -- Get the value of the selected Ttk_Scale at the selected pixel
    -- PARAMETERS
@@ -158,12 +160,14 @@ package Tcl.Tk.Ada.Widgets.TtkScale is
    -- Value: constant String := Get(My_Scale, "24", "23");
    -- COMMANDS
    -- ScaleWidget get x y
+   -- SEE ALSO
+   -- TtkScale.Get_(current)
    -- SOURCE
    function Get(ScaleWidget: in Ttk_Scale; X, Y: in String) return String with
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* TtkScale/Set
+      -- ****f* TtkScale/TtkScale.Set
       -- FUNCTION
       -- Set a new value for the selected Ttk_Scale
       -- PARAMETERS
