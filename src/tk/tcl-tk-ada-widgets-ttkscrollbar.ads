@@ -34,7 +34,7 @@
 package Tcl.Tk.Ada.Widgets.TtkScrollbar is
 -- ****
 
-   -- ****t* TtkScrollbar/Ttk_Scrollbar
+   -- ****t* TtkScrollbar/TtkScrollbar.Ttk_Scrollbar
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -43,7 +43,7 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
    type Ttk_Scrollbar is new Tk_Widget with private;
    -- ****
 
-   -- ****f* TtkScrollbar/Create (function)
+   -- ****f* TtkScrollbar/TtkScrollbar.Create_(function)
    -- FUNCTION
    -- Creates a new Ttk_Scrollbar in the specified interpreter.
    -- PARAMETERS
@@ -63,7 +63,7 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
    -- COMMANDS
    -- ttk::scrollbar pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- TtkScrollbar.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -71,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* TtkScrollbar/Create (procedure)
+     -- ****f* TtkScrollbar/TtkScrollbar.Create_(procedure)
      -- FUNCTION
      -- Creates a new Ttk_Scrollbar in the specified interpreter.
      -- PARAMETERS
@@ -96,7 +96,7 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
      -- COMMANDS
      -- ttk::scrollbar pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- TtkScrollbar.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_Scrollbar; pathName: in String; options: in String := "";
@@ -104,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* TtkScrollbar/Get_Widget
+     -- ****f* TtkScrollbar/TtkScrollbar.Get_Widget
      -- FUNCTION
      -- Get the existing Ttk_Scrollbar widget
      -- PARAMETERS
@@ -124,7 +124,7 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
       return Ttk_Scrollbar;
      -- ****
 
-     -- ****f* TtkScrollbar/Scrollbar_Delta
+     -- ****f* TtkScrollbar/TtkScrollbar.Scrollbar_Delta
      -- FUNCTION
      -- Get the fraction change between current Ttk_Scrollbar setting and the
      -- selected value
@@ -151,7 +151,7 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
       Pre => DeltaX /= "" and DeltaY /= "";
       -- ****
 
-      -- ****f* TtkScrollbar/Fraction
+      -- ****f* TtkScrollbar/TtkScrollbar.Fraction
       -- FUNCTION
       -- Get the fraction of the selected Ttk_Scrollbar at the selected pixel
       -- PARAMETERS
@@ -174,7 +174,7 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* TtkScrollbar/Get
+      -- ****f* TtkScrollbar/TtkScrollbar.Get
       -- FUNCTION
       -- Get the Ttk_Scrollbar setting for which part of associated widget is
       -- currently visible
@@ -194,7 +194,7 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
    function Get(ScrollbarWidget: in Ttk_Scrollbar) return String;
    -- ****
 
-   -- ****f* TtkScrollbar/Set
+   -- ****f* TtkScrollbar/TtkScrollbar.Set
    -- FUNCTION
    -- Set the Ttk_Scrollbar setting for which part of associated widget is
    -- currently visible
