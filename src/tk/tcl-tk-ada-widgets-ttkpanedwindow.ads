@@ -34,7 +34,7 @@
 package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
 -- ****
 
-   -- ****t* TtkPanedWindow/Ttk_PanedWindow
+   -- ****t* TtkPanedWindow/TtkPanedWindow.Ttk_PanedWindow
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -43,7 +43,7 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    type Ttk_PanedWindow is new Tk_Widget with private;
    -- ****
 
-   -- ****f* TtkPanedWindow/Create (function)
+   -- ****f* TtkPanedWindow/TtkPanedWindow.Create_(function)
    -- FUNCTION
    -- Creates a new Ttk_PanedWindow in the specified interpreter.
    -- PARAMETERS
@@ -63,7 +63,7 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    -- COMMANDS
    -- ttk::panedwindow pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- TtkPanedWindow.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -71,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* TtkPanedWindow/Create (procedure)
+     -- ****f* TtkPanedWindow/TtkPanedWindow.Create_(procedure)
      -- FUNCTION
      -- Creates a new Ttk_PanedWindow in the specified interpreter.
      -- PARAMETERS
@@ -96,7 +96,7 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
      -- COMMANDS
      -- ttk::panedwindow pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- TtkPanedWindow.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_PanedWindow; pathName: in String;
@@ -104,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* TtkPanedWindow/Get_Widget
+     -- ****f* TtkPanedWindow/TtkPanedWindow.Get_Widget
      -- FUNCTION
      -- Get the existing Ttk_PanedWindow widget
      -- PARAMETERS
@@ -124,7 +124,7 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       return Ttk_PanedWindow;
      -- ****
 
-     -- ****f* TtkPanedWindow/Add
+     -- ****f* TtkPanedWindow/TtkPanedWindow.Add
      -- FUNCTION
      -- Adds the Tk_Widget to the Ttk_PanedWindow.
      -- PARAMETERS
@@ -145,7 +145,7 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       Options: in String := "");
    -- ****
 
-   -- ****f* TtkPanedWindow/Forget
+   -- ****f* TtkPanedWindow/TtkPanedWindow.Forget
    -- FUNCTION
    -- Remove the Tk_Widget from the Ttk_PanedWindow
    -- PARAMETERS
@@ -162,7 +162,7 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    procedure Forget(Paned: in Ttk_PanedWindow; SubWindow: in Tk_Widget'Class);
    -- ****
 
-   -- ****f* TtkPanedWindow/Identify_Element
+   -- ****f* TtkPanedWindow/TtkPanedWindow.Identify_Element
    -- FUNCTION
    -- Get the name of the paned element at the selected point
    -- PARAMETERS
@@ -185,7 +185,7 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* TtkPanedWindow/Identify_Sash
+      -- ****f* TtkPanedWindow/TtkPanedWindow.Identify_Sash
       -- FUNCTION
       -- Get the index of the paned sash at the selected point
       -- PARAMETERS
@@ -208,7 +208,7 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* TtkPanedWindow/Insert
+      -- ****f* TtkPanedWindow/TtkPanedWindow.Insert
       -- FUNCTION
       -- Insert the selected Tk_Widget in the selected Ttk_PanedWindow on the
       -- selected position
@@ -232,7 +232,7 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       Pre => Position /= "";
       -- ****
 
-      -- ****f* TtkPanedWindow/Pane (procedure)
+      -- ****f* TtkPanedWindow/TtkPanedWindow.Pane_(procedure)
       -- FUNCTION
       -- Set the selected options of the selected widget in the selected
       -- Ttk_PanedWindow
@@ -247,12 +247,14 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       -- Pane(My_Paned, "0", "-weight 2");
       -- COMMANDS
       -- Paned pane index ?options?
+      -- SEE ALSO
+      -- TtkPanedWindow.Pane_(function)
       -- SOURCE
    procedure Pane(Paned: in Ttk_PanedWindow; Index, Options: in String) with
       Pre => Index /= "" and Options /= "";
       -- ****
 
-      -- ****f* TtkPanedWindow/Pane (function)
+      -- ****f* TtkPanedWindow/TtkPanedWindow.Pane_(function)
       -- FUNCTION
       -- Get the selected options values of the selected widget in the
       -- selected Ttk_PanedWindow
@@ -271,6 +273,8 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       -- Options: constant String := Pane(My_Paned, "0");
       -- COMMANDS
       -- Paned pane pane ?option?
+      -- SEE ALSO
+      -- TtkPanedWindow.Pane_(procedure)
       -- SOURCE
    function Pane
      (Paned: in Ttk_PanedWindow; Index: in String; Option: in String := "")
@@ -296,7 +300,7 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    function Panes(Paned: in Ttk_PanedWindow) return String;
    -- ****
 
-   -- ****f* TtkPanedWindow/SashPos (procedure)
+   -- ****f* TtkPanedWindow/TtkPanedWindow.SashPos_(procedure)
    -- FUNCTION
    -- Set position of the selected sash in the selected Ttk_PanedWindow to new
    -- position
@@ -311,12 +315,14 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    -- SashPos(My_Paned, "0", "35");
    -- COMMANDS
    -- Paned sashpos index newpos
+   -- SEE ALSO
+   -- TtkPanedWindow.SashPos_(function)
    -- SOURCE
    procedure SashPos(Paned: in Ttk_PanedWindow; Index, NewPos: in String) with
       Pre => Index /= "" and NewPos /= "";
       -- ****
 
-      -- ****f* TtkPanedWindow/SashPos
+      -- ****f* TtkPanedWindow/TtkPanedWindow.SashPos_(function)
       -- FUNCTION
       -- Get the current position of the selected sash in the selected
       -- Ttk_PanedWindow
@@ -333,6 +339,8 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       -- Position: constant String := SashPos(My_Paned, "1");
       -- COMMANDS
       -- Paned sashpos index
+      -- SEE ALSO
+      -- TtkPanedWindow.SashPos_(procedure)
       -- SOURCE
    function SashPos
      (Paned: in Ttk_PanedWindow; Index: in String) return String with
