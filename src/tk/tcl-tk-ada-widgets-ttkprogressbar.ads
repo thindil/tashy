@@ -34,7 +34,7 @@
 package Tcl.Tk.Ada.Widgets.TtkProgressBar is
 -- ****
 
-   -- ****t* TtkProgressBar/Ttk_ProgressBar
+   -- ****t* TtkProgressBar/TtkProgressBar.Ttk_ProgressBar
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -43,7 +43,7 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
    type Ttk_ProgressBar is new Tk_Widget with private;
    -- ****
 
-   -- ****f* TtkProgressBar/Create (function)
+   -- ****f* TtkProgressBar/TtkProgressBar.Create_(function)
    -- FUNCTION
    -- Creates a new Ttk_ProgressBar in the specified interpreter.
    -- PARAMETERS
@@ -63,7 +63,7 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
    -- COMMANDS
    -- ttk::progressbar pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- TtkProgressBar.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -71,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* TtkProgressBar/Create (procedure)
+     -- ****f* TtkProgressBar/TtkProgressBar.Create_(procedure)
      -- FUNCTION
      -- Creates a new Ttk_ProgressBar in the specified interpreter.
      -- PARAMETERS
@@ -96,7 +96,7 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
      -- COMMANDS
      -- ttk::progressbar pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- TtkProgressBar.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_ProgressBar; pathName: in String;
@@ -104,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
       Pre => pathName /= "";
       -- ****
 
-     -- ****f* TtkProgressBar/Get_Widget
+     -- ****f* TtkProgressBar/TtkProgressBar.Get_Widget
      -- FUNCTION
      -- Get the existing Ttk_Scrollbar widget
      -- PARAMETERS
@@ -124,7 +124,7 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
       return Ttk_ProgressBar;
      -- ****
 
-     -- ****f* TtkProgressBar/Start
+     -- ****f* TtkProgressBar/TtkProgressBar.Start
      -- FUNCTION
      -- Begin autoincrement mode, call Step every Interval miliseconds
      -- PARAMETERS
@@ -142,7 +142,7 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
    procedure Start(Bar: in Ttk_ProgressBar; Interval: in String := "50");
    -- ****
 
-   -- ****f* TtkProgressBar/Step
+   -- ****f* TtkProgressBar/TtkProgressBar.Step
    -- FUNCTION
    -- Increment value of the Ttk_ProgressBar by amount
    -- PARAMETERS
@@ -160,7 +160,7 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
    procedure Step(Bar: in Ttk_ProgressBar; Amount: in String := "");
    -- ****
 
-   -- ****f* TtkProgressBar/Stop
+   -- ****f* TtkProgressBar/TtkProgressBar.Stop
    -- FUNCTION
    -- Stop autoincrement mode: cancels any recurring timer events in the
    -- selected Ttk_ProgressBar
