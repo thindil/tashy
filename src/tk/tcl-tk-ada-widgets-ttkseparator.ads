@@ -34,7 +34,7 @@
 package Tcl.Tk.Ada.Widgets.TtkSeparator is
 -- ****
 
-   -- ****t* TtkSeparator/Ttk_Separator
+   -- ****t* TtkSeparator/TtkSeparator.Ttk_Separator
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -43,7 +43,7 @@ package Tcl.Tk.Ada.Widgets.TtkSeparator is
    type Ttk_Separator is new Tk_Widget with private;
    -- ****
 
-   -- ****f* TtkSeparator/Create (function)
+   -- ****f* TtkSeparator/TtkSeparator.Create_(function)
    -- FUNCTION
    -- Creates a new Ttk_Separator in the specified interpreter.
    -- PARAMETERS
@@ -63,7 +63,7 @@ package Tcl.Tk.Ada.Widgets.TtkSeparator is
    -- COMMANDS
    -- ttk::separator pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- TtkSeparator.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -71,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.TtkSeparator is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* TtkSeparator/Create (procedure)
+     -- ****f* TtkSeparator/TtkSeparator.Create_(procedure)
      -- FUNCTION
      -- Creates a new Ttk_Separator in the specified interpreter.
      -- PARAMETERS
@@ -96,7 +96,7 @@ package Tcl.Tk.Ada.Widgets.TtkSeparator is
      -- COMMANDS
      -- ttk::separator pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- TtkSeparator.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_Separator; pathName: in String; options: in String := "";
@@ -104,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.TtkSeparator is
       Pre => pathName /= "";
       -- ****
 
-     -- ****f* TtkSeparator/Get_Widget
+     -- ****f* TtkSeparator/TtkSeparator.Get_Widget
      -- FUNCTION
      -- Get the existing Ttk_Separator widget
      -- PARAMETERS
