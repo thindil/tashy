@@ -34,7 +34,7 @@
 package Tcl.Tk.Ada.Widgets.TtkSizeGrip is
 -- ****
 
-   -- ****t* TtkSizeGrip/Ttk_SizeGrip
+   -- ****t* TtkSizeGrip/TtkSizeGrip.Ttk_SizeGrip
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -43,7 +43,7 @@ package Tcl.Tk.Ada.Widgets.TtkSizeGrip is
    type Ttk_SizeGrip is new Tk_Widget with private;
    -- ****
 
-   -- ****f* TtkSizeGrip/Create (function)
+   -- ****f* TtkSizeGrip/TtkSizeGrip.Create_(function)
    -- FUNCTION
    -- Creates a new Ttk_SizeGrip in the specified interpreter.
    -- PARAMETERS
@@ -63,7 +63,7 @@ package Tcl.Tk.Ada.Widgets.TtkSizeGrip is
    -- COMMANDS
    -- ttk::sizegrip pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- TtkSizeGrip.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -71,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.TtkSizeGrip is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* TtkSizeGrip/Create (procedure)
+     -- ****f* TtkSizeGrip/TtkSizeGrip.Create_(procedure)
      -- FUNCTION
      -- Creates a new Ttk_SizeGrip in the specified interpreter.
      -- PARAMETERS
@@ -96,7 +96,7 @@ package Tcl.Tk.Ada.Widgets.TtkSizeGrip is
      -- COMMANDS
      -- ttk::sizegrip pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- TtkSizeGrip.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_SizeGrip; pathName: in String; options: in String := "";
@@ -104,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.TtkSizeGrip is
       Pre => pathName /= "";
       -- ****
 
-     -- ****f* TtkSizeGrip/Get_Widget
+     -- ****f* TtkSizeGrip/TtkSizeGrip.Get_Widget
      -- FUNCTION
      -- Get the existing Ttk_SizeGrip widget
      -- PARAMETERS
