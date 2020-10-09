@@ -27,7 +27,7 @@
 package Tcl.Tk.Ada.Widgets is
 -- ****
 
-   -- ****t* Widgets/Tk_Widget
+   -- ****t* Widgets/Widgets.Tk_Widget
    -- FUNCTION
    -- The Tk_Widget data type, parent of all objects displayed on the screen.
    --
@@ -51,7 +51,7 @@ package Tcl.Tk.Ada.Widgets is
    --
    ---------------------------------------------
 
-   -- ****f* Widgets/Widget_Image
+   -- ****f* Widgets/Widgets.Widget_Image
    -- FUNCTION
    -- Returns the string name of Win.
    -- PARAMETERS
@@ -67,7 +67,7 @@ package Tcl.Tk.Ada.Widgets is
    function Widget_Image(Win: in Tk_Widget'Class) return String;
    -- ****
 
-   -- ****f* Widgets/"&"
+   -- ****f* Widgets/Widgets."&"
    -- FUNCTION
    -- Concatenates and returns the string names of Left and Right.
    -- Does not insert the separating dot.
@@ -90,7 +90,7 @@ package Tcl.Tk.Ada.Widgets is
 
    pragma Inline(Widget_Image, "&");
 
-   -- ****f* Widgets/Get_Interp
+   -- ****f* Widgets/Widgets.Get_Interp
    -- FUNCTION
    -- Gets the interpreter of the specified Tk_Widget.
    -- PARAMETERS
@@ -112,7 +112,7 @@ package Tcl.Tk.Ada.Widgets is
    --
    ---------------------------------------------
 
-   -- ****f* Widgets/Create (function)
+   -- ****f* Widgets/Widgets.Create_(function)
    -- FUNCTION
    -- Creates a new Tk_Widget in the specified interpreter. This is abstract
    -- function. Its content depends on each child widget code.
@@ -127,13 +127,15 @@ package Tcl.Tk.Ada.Widgets is
    -- Newly created Tk_Widget
    -- HISTORY
    -- 8.6.0 - Imported from TASH
+   -- SEE ALSO
+   -- Widgets.Create_(procedure)
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) return Tk_Widget is abstract;
       -- ****
 
-      -- ****f* Widgets/Create (procedure)
+      -- ****f* Widgets/Widgets.Create_(procedure)
       -- FUNCTION
       -- Creates a new Tk_Widget in the specified interpreter. This is abstract
       -- function. Its content depends on each child widget code.
@@ -149,13 +151,15 @@ package Tcl.Tk.Ada.Widgets is
       -- Newly created Tk_Widget as parameter Widgt
       -- HISTORY
       -- 8.6.0 - Imported from TASH
+      -- SEE ALSO
+      -- Widgets.Create_(function)
       -- SOURCE
    procedure Create
      (Widgt: out Tk_Widget; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := null) is abstract;
       -- ****
 
-      -- ****f* Widgets/Get_Widget
+      -- ****f* Widgets/Widgets.Get_Widget
       -- FUNCTION
       -- Get the existing Tk_Widget. This is abstract function. Its content
       -- depends on each child widget code.
@@ -179,7 +183,7 @@ package Tcl.Tk.Ada.Widgets is
    --
    ---------------------------------------------
 
-      -- ****f* Widgets/Destroy
+      -- ****f* Widgets/Widgets.Destroy
       -- FUNCTION
       -- Destroys a Tk_Widget.
       -- PARAMETERS
@@ -201,7 +205,7 @@ package Tcl.Tk.Ada.Widgets is
    --
    ---------------------------------------------
 
-   -- ****f* Widgets/cget
+   -- ****f* Widgets/Widgets.cget
    -- FUNCTION
    -- Get the current value of the specified option for specified widget
    -- PARAMETERS
@@ -220,7 +224,7 @@ package Tcl.Tk.Ada.Widgets is
    function cget(Widgt: in Tk_Widget'Class; option: in String) return String;
    -- ****
 
-   -- ****f* Widgets/configure (function)
+   -- ****f* Widgets/Widgets.configure_(function)
    -- FUNCTION
    -- Queries the configuration options.
    -- PARAMETERS
@@ -238,13 +242,13 @@ package Tcl.Tk.Ada.Widgets is
    -- COMMANDS
    -- Widgt configure ?options?
    -- SEE ALSO
-   -- cget, configure (procedure)
+   -- Widgets.cget, Widgets.configure_(procedure)
    -- SOURCE
    function configure
      (Widgt: in Tk_Widget'Class; options: in String := "") return String;
      -- ****
 
-     -- ****f* Widgets/configure (procedure)
+     -- ****f* Widgets/Widgets.configure_(procedure)
      -- FUNCTION
      -- Queries or modifies the configuration options.
      -- PARAMETERS
@@ -258,7 +262,7 @@ package Tcl.Tk.Ada.Widgets is
      -- COMMANDS
      -- Widgt configure options
      -- SEE ALSO
-     -- cget, configure (function)
+     -- Widgets.cget, Widgets.configure_(function)
      -- SOURCE
    procedure configure(Widgt: in Tk_Widget'Class; options: in String) with
       Pre => options /= "";
@@ -272,7 +276,7 @@ package Tcl.Tk.Ada.Widgets is
       --
       ---------------------------------------------
 
-      -- ****f* Widgets/Bind (procedure)
+      -- ****f* Widgets/Widgets.Bind_(procedure)
       -- FUNCTION
       -- Associates Tcl script Script with the event Sequence.
       -- PARAMETERS
@@ -287,13 +291,13 @@ package Tcl.Tk.Ada.Widgets is
       -- COMMANDS
       -- bind Widgt sequence script
       -- SEE ALSO
-      -- Bind (function)
+      -- Widgets.Bind_(function)
       -- SOURCE
    procedure Bind
      (Widgt: in Tk_Widget'Class; Sequence: in String; Script: in String);
    -- ****
 
-   -- ****f* Widgets/Bind (function)
+   -- ****f* Widgets/Widgets.Bind_(function)
    -- FUNCTION
    -- Get the associated Tcl script Script with the event Sequence.
    -- PARAMETERS
@@ -310,12 +314,12 @@ package Tcl.Tk.Ada.Widgets is
    -- COMMANDS
    -- bind Widgt sequence
    -- SEE ALSO
-   -- Bind (procedure)
+   -- Widgets.Bind_(procedure)
    -- SOURCE
    function Bind(Widgt: in Tk_Widget'Class; Sequence: in String) return String;
    -- ****
 
-   -- ****f* Widgets/Bind_Tags (procedure)
+   -- ****f* Widgets/Widgets.Bind_Tags_(procedure)
    -- FUNCTION
    -- Set binding tags for the selected window
    -- PARAMETERS
@@ -329,13 +333,13 @@ package Tcl.Tk.Ada.Widgets is
    -- COMMANDS
    -- bindtags Widgt taglist
    -- SEE ALSO
-   -- Bind_Tags (function)
+   -- Widgets.Bind_Tags_(function)
    -- SOURCE
    procedure Bind_Tags(Widgt: in Tk_Widget'Class; TagList: in String) with
       Pre => TagList /= "";
       -- ****
 
-      -- ****f* Widgets/Bind_Tags (function)
+      -- ****f* Widgets/Widgets.Bind_Tags_(function)
       -- FUNCTION
       -- Get binding tags for the selected window
       -- PARAMETERS
@@ -350,12 +354,12 @@ package Tcl.Tk.Ada.Widgets is
       -- COMMANDS
       -- bindtags Widgt
       -- SEE ALSO
-      -- Bind_Tags (procedure)
+      -- Widgets.Bind_Tags_(procedure)
       -- SOURCE
    function Bind_Tags(Widgt: in Tk_Widget'Class) return String;
    -- ****
 
-   -- ****f* Widgets/Unbind (procedure)
+   -- ****f* Widgets/Widgets.Unbind_(procedure)
    -- FUNCTION
    -- Disassociates the binding from the event Sequence.
    -- PARAMETERS
@@ -369,12 +373,12 @@ package Tcl.Tk.Ada.Widgets is
    -- COMMANDS
    -- bind Widgt sequence {}
    -- SEE ALSO
-   -- Unbind (function)
+   -- Widgets.Unbind_(function)
    -- SOURCE
    procedure Unbind(Widgt: in Tk_Widget'Class; Sequence: in String);
    -- ****
 
-   -- ****f* Widgets/Unbind (function)
+   -- ****f* Widgets/Widgets.Unbind_(function)
    -- FUNCTION
    -- Disassociates the binding from the event Sequence.
    -- PARAMETERS
@@ -390,13 +394,13 @@ package Tcl.Tk.Ada.Widgets is
    -- COMMANDS
    -- bind Widgt sequence {}
    -- SEE ALSO
-   -- Unbind (procedure)
+   -- Widgets.Unbind_(procedure)
    -- SOURCE
    function Unbind
      (Widgt: in Tk_Widget'Class; Sequence: in String) return String;
      -- ****
 
-     -- ****f* Widgets/Bell
+     -- ****f* Widgets/Widgets.Bell
      -- FUNCTION
      -- Rings the bell on the selected Widget display
      -- PARAMETERS
@@ -415,7 +419,7 @@ package Tcl.Tk.Ada.Widgets is
       Pre => Option in "" | "-nice";
       -- ****
 
-      -- ****f* Widgets/Focus (procedure)
+      -- ****f* Widgets/Widgets.Focus_(procedure)
       -- FUNCTION
       -- Set input focus on the selected Tk_Widget with the selected option
       -- PARAMETERS
@@ -430,13 +434,13 @@ package Tcl.Tk.Ada.Widgets is
       -- COMMANDS
       -- focus Widgt
       -- SEE ALSO
-      -- Focus (function)
+      -- Widgets.Focus_(function)
       -- SOURCE
    procedure Focus(Widgt: in Tk_Widget'Class; Option: in String := "") with
       Pre => Option in "" | "-force";
       -- ****
 
-      -- ****f* Widgets/Focus (function)
+      -- ****f* Widgets/Widgets.Focus_(function)
       -- FUNCTION
       -- Get input focus Tk widget name in the selected Tcl interpreter
       -- PARAMETERS
@@ -454,14 +458,14 @@ package Tcl.Tk.Ada.Widgets is
       -- COMMANDS
       -- focus
       -- SEE ALSO
-      -- Focus (procedure)
+      -- Widgets.Focus_(procedure)
       -- SOURCE
    function Focus
      (Interp: in Tcl_Interp := Get_Context; Option: in String := "")
       return String;
       -- ****
 
-      -- ****f* Widgets/Focus_Follows_Mouse
+      -- ****f* Widgets/Widgets.Focus_Follows_Mouse
       -- FUNCTION
       -- Set focus model to follow the mouse movement in the selected Tcl
       -- interpreter
@@ -478,7 +482,7 @@ package Tcl.Tk.Ada.Widgets is
    procedure Focus_Follows_Mouse(Interp: Tcl_Interp := Get_Context);
    -- ****
 
-   -- ****f* Widgets/Focus_Next
+   -- ****f* Widgets/Widgets.Focus_Next
    -- FUNCTION
    -- Get the next Widget in focus order after the selected Widget
    -- PARAMETERS
@@ -493,12 +497,12 @@ package Tcl.Tk.Ada.Widgets is
    -- COMMANDS
    -- tk_focusNext Widgt
    -- SEE ALSO
-   -- Focus_Prev
+   -- Widgets.Focus_Prev
    -- SOURCE
    function Focus_Next(Widgt: in Tk_Widget'Class) return String;
    -- ****
 
-   -- ****f* Widgets/Focus_Prev
+   -- ****f* Widgets/Widgets.Focus_Prev
    -- FUNCTION
    -- Get the previous Widget in focus order after the selected Widget
    -- PARAMETERS
@@ -513,12 +517,12 @@ package Tcl.Tk.Ada.Widgets is
    -- COMMANDS
    -- tk_focusPrev Widgt
    -- SEE ALSO
-   -- Focus_Next
+   -- Widgets.Focus_Next
    -- SOURCE
    function Focus_Prev(Widgt: in Tk_Widget'Class) return String;
    -- ****
 
-   -- ****f* Widgets/Grab_Current (selected interpreter)
+   -- ****f* Widgets/Widgets.Grab_Current_(selected_interpreter)
    -- FUNCTION
    -- Get the name of the currently set as grab window on the selected Tcl
    -- interpreter
@@ -536,12 +540,12 @@ package Tcl.Tk.Ada.Widgets is
    -- COMMANDS
    -- grab current
    -- SEE ALSO
-   -- Grab_Current (selected window)
+   -- Widgets.Grab_Current_(selected_window)
    -- SOURCE
    function Grab_Current(Interp: Tcl_Interp := Get_Context) return String;
    -- ****
 
-   -- ****f* Widgets/Grab_Current (selected window)
+   -- ****f* Widgets/Widgets.Grab_Current_(selected_window)
    -- FUNCTION
    -- Get the name of the currently set as grab window on the display where the
    -- selected window is
@@ -558,12 +562,12 @@ package Tcl.Tk.Ada.Widgets is
    -- COMMANDS
    -- grab current Widgt
    -- SEE ALSO
-   -- Grab_Current (selected interpreter)
+   -- Widgets.Grab_Current_(selected_interpreter)
    -- SOURCE
    function Grab_Current(Widgt: in Tk_Widget'Class) return String;
    -- ****
 
-   -- ****f* Widgets/Grab_Release
+   -- ****f* Widgets/Widgets.Grab_Release
    -- FUNCTION
    -- Release the grab on the selected Widget
    -- PARAMETERS
@@ -579,7 +583,7 @@ package Tcl.Tk.Ada.Widgets is
    procedure Grab_Release(Widgt: in Tk_Widget'Class);
    -- ****
 
-   -- ****f* Widgets/Grab_Set
+   -- ****f* Widgets/Widgets.Grab_Set
    -- FUNCTION
    -- Set the grab to the selected widget
    -- PARAMETERS
@@ -598,7 +602,7 @@ package Tcl.Tk.Ada.Widgets is
       Pre => Global in "" | "-global";
       -- ****
 
-      -- ****f* Widgets/Grab_Status
+      -- ****f* Widgets/Widgets.Grab_Status
       -- FUNCTION
       -- Get the status of the grab for the selected widget
       -- PARAMETERS
@@ -617,7 +621,7 @@ package Tcl.Tk.Ada.Widgets is
    function Grab_Status(Widgt: in Tk_Widget'Class) return String;
    -- ****
 
-   -- ****f* Widgets/Lower
+   -- ****f* Widgets/Widgets.Lower
    -- FUNCTION
    -- Lowers the selected Tk_Widget below of all its siblings in the stacking
    -- order
@@ -631,12 +635,12 @@ package Tcl.Tk.Ada.Widgets is
    -- COMMANDS
    -- lower Widgt
    -- SEE ALSO
-   -- Lower (below selected widget)
+   -- Widgets.Lower_(below_selected_widget)
    -- SOURCE
    procedure Lower(Widgt: in Tk_Widget'Class);
    -- ****
 
-   -- ****f* Widgets/Lower (below selected widget)
+   -- ****f* Widgets/Widgets.Lower_(below_selected_widget)
    -- FUNCTION
    -- Insert the Tk_Widget below the selected widget in the stacking order
    -- PARAMETERS
@@ -650,12 +654,12 @@ package Tcl.Tk.Ada.Widgets is
    -- COMMANDS
    -- lower Widgt BelowThis
    -- SEE ALSO
-   -- Lower
+   -- Widgets.Lower
    -- SOURCE
    procedure Lower(Widgt, BelowThis: in Tk_Widget'Class);
    -- ****
 
-   -- ****f* Widgets/Raise
+   -- ****f* Widgets/Widgets.Raise
    -- FUNCTION
    -- Raisess the selected Tk_Widget below of all its siblings in the stacking
    -- order
@@ -669,12 +673,12 @@ package Tcl.Tk.Ada.Widgets is
    -- COMMANDS
    -- raise Widgt
    -- SEE ALSO
-   -- Raise (above selected widget)
+   -- Widgets.Raise_(above_selected_widget)
    -- SOURCE
    procedure Widget_Raise(Widgt: in Tk_Widget'Class);
    -- ****
 
-   -- ****f* Widgets/Raise (above selected widget)
+   -- ****f* Widgets/Widgets.Raise_(above_selected_widget)
    -- FUNCTION
    -- Insert the Tk_Widget above the selected widget in the stacking order
    -- PARAMETERS
@@ -688,12 +692,12 @@ package Tcl.Tk.Ada.Widgets is
    -- COMMANDS
    -- raise Widgt AboveThis
    -- SEE ALSO
-   -- Raise
+   -- Widgets.Raise
    -- SOURCE
    procedure Widget_Raise(Widgt, AboveThis: in Tk_Widget'Class);
    -- ****
 
-   -- ****f* Widgets/Tk_Caret (procedure)
+   -- ****f* Widgets/Widgets.Tk_Caret_(procedure)
    -- FUNCTION
    -- Set the caret location in the selected window
    -- PARAMETERS
@@ -709,13 +713,13 @@ package Tcl.Tk.Ada.Widgets is
    -- COMMANDS
    -- tk caret Widgt x y height
    -- SEE ALSO
-   -- Tk_Caret (function)
+   -- Widgets.Tk_Caret_(function)
    -- SOURCE
    procedure Tk_Caret(Widgt: in Tk_Widget'Class; X, Y, Height: in String) with
       Pre => X /= "" and Y /= "" and Height /= "";
       -- ****
 
-      -- ****f* Widgets/Tk_Caret
+      -- ****f* Widgets/Widgets.Tk_Caret_(function)
       -- FUNCTION
       -- Get the caret location in the selected window
       -- PARAMETERS
@@ -731,12 +735,12 @@ package Tcl.Tk.Ada.Widgets is
       -- COMMANDS
       -- tk caret Widgt
       -- SEE ALSO
-      -- Tk_Caret (procedure)
+      -- Widgets.Tk_Caret_(procedure)
       -- SOURCE
    function Tk_Caret(Widgt: in Tk_Widget'Class) return String;
    -- ****
 
-   -- ****f* Widgets/Tk_Inactive (procedure)
+   -- ****f* Widgets/Widgets.Tk_Inactive_(procedure)
    -- FUNCTION
    -- Reset the user inactivity timer
    -- PARAMETERS
@@ -749,12 +753,12 @@ package Tcl.Tk.Ada.Widgets is
    -- COMMANDS
    -- tk inactive -displayof Widgt reset
    -- SEE ALSO
-   -- Tk_Inactive (function)
+   -- Widgets.Tk_Inactive_(function)
    -- SOURCE
    procedure Tk_Inactive(Widgt: in Tk_Widget'Class);
    -- ****
 
-   -- ****f* Widgets/Tk_Inactive (function)
+   -- ****f* Widgets/Widgets.Tk_Inactive_(function)
    -- FUNCTION
    -- Get the number of miliseconds since last interaction of the user on the
    -- selected display
@@ -770,12 +774,12 @@ package Tcl.Tk.Ada.Widgets is
    -- COMMANDS
    -- tk inactive -displayof Widgt
    -- SEE ALSO
-   -- Tk_Inactive (procedure)
+   -- Widgets.Tk_Inactive_(procedure)
    -- SOURCE
    function Tk_Inactive(Widgt: in Tk_Widget'Class) return String;
    -- ****
 
-   -- ****f* Widgets/Tk_Scaling (procedure)
+   -- ****f* Widgets/Widgets.Tk_Scaling_(procedure)
    -- FUNCTION
    -- Set the scaling factor for the selected display
    -- PARAMETERS
@@ -790,13 +794,13 @@ package Tcl.Tk.Ada.Widgets is
    -- COMMANDS
    -- tk scaling -displayof Widgt number
    -- SEE ALSO
-   -- Tk_Scaling (function)
+   -- Widgets.Tk_Scaling_(function)
    -- SOURCE
    procedure Tk_Scaling(Widgt: in Tk_Widget'Class; Number: in String) with
       Pre => Number /= "";
       -- ****
 
-      -- ****f* Widgets/Tk_Scaling (function)
+      -- ****f* Widgets/Widgets.Tk_Scaling_(function)
       -- FUNCTION
       -- Get the scaling factor of the selected display
       -- PARAMETERS
@@ -812,12 +816,12 @@ package Tcl.Tk.Ada.Widgets is
       -- COMMANDS
       -- tk scaling -displayof Widgt
       -- SEE ALSO
-      -- Tk_Scaling (procedure)
+      -- Widgets.Tk_Scaling_(procedure)
       -- SOURCE
    function Tk_Scaling(Widgt: in Tk_Widget'Class) return String;
    -- ****
 
-   -- ****f* Widgets/Tk_Use_Input_Methods (procedure)
+   -- ****f* Widgets/Widgets.Tk_Use_Input_Methods_(procedure)
    -- FUNCTION
    -- Set Tk to use XIM (X Input Methods) for filtering events
    -- PARAMETERS
@@ -831,14 +835,14 @@ package Tcl.Tk.Ada.Widgets is
    -- COMMANDS
    -- tk useinputmethods -displayof window enabled
    -- SEE ALSO
-   -- Tk_Use_Input_Methods (function)
+   -- Widgets.Tk_Use_Input_Methods_(function)
    -- SOURCE
    procedure Tk_Use_Input_Methods
      (Widgt: in Tk_Widget'Class; Enabled: in String) with
       Pre => Enabled in "1" | "0";
       -- ****
 
-      -- ****f* Widgets/Tk_Use_Input_Methods (function)
+      -- ****f* Widgets/Widgets.Tk_Use_Input_Methods_(function)
       -- FUNCTION
       -- Get if Tk uses XIM (X Input Methods) for filtering events
       -- PARAMETERS
@@ -853,12 +857,12 @@ package Tcl.Tk.Ada.Widgets is
       -- COMMANDS
       -- tk useinputmethods -displayof window
       -- SEE ALSO
-      -- Tk_Use_Input_Methods (procedure)
+      -- Widgets.Tk_Use_Input_Methods_(procedure)
       -- SOURCE
    function Tk_Use_Input_Methods(Widgt: in Tk_Widget'Class) return String;
    -- ****
 
-   -- ****f* Widgets/Tk_Wait
+   -- ****f* Widgets/Widgets.Tk_Wait
    -- FUNCTION
    -- Wait until the selected thing to happen
    -- PARAMETERS
@@ -878,7 +882,7 @@ package Tcl.Tk.Ada.Widgets is
       Pre => WaitFor in "variable" | "visibility" | "window" and Name /= "";
       -- ****
 
-      -- ****f* Widgets/Execute_Widget_Command
+      -- ****f* Widgets/Widgets.Execute_Widget_Command
       -- FUNCTION
       -- Execute selected Tcl command in the selected widget. Generally, you
       -- should not use this procedure outside library, unless here are no
