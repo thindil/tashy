@@ -27,7 +27,7 @@
 package Tcl.Tk.Ada.Widgets.TtkTreeView is
 -- ****
 
-   -- ****t* TtkTreeView/Ttk_Tree_View
+   -- ****t* TtkTreeView/TtkTreeView.Ttk_Tree_View
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -36,7 +36,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    type Ttk_Tree_View is new Tk_Widget with private;
    -- ****
 
-   -- ****f* TtkTreeView/Create (function)
+   -- ****f* TtkTreeView/TtkTreeView.Create_(function)
    -- FUNCTION
    -- Creates a new Ttk_Tree_View in the specified interpreter.
    -- PARAMETERS
@@ -56,7 +56,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- COMMANDS
    -- ttk::treeview pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- TtkTreeView.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -64,7 +64,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* TtkTreeView/Create (procedure)
+     -- ****f* TtkTreeView/TtkTreeView.Create_(procedure)
      -- FUNCTION
      -- Creates a new Ttk_Tree_View in the specified interpreter.
      -- PARAMETERS
@@ -89,7 +89,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
      -- COMMANDS
      -- ttk::treeview pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- TtkTreeView.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_Tree_View; pathName: in String; options: in String := "";
@@ -97,7 +97,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* TtkTreeView/Get_Widget
+     -- ****f* TtkTreeView/TtkTreeView.Get_Widget
      -- FUNCTION
      -- Get the existing Ttk_Tree_View widget
      -- PARAMETERS
@@ -117,7 +117,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       return Ttk_Tree_View;
      -- ****
 
-     -- ****f* TtkTreeView/Children
+     -- ****f* TtkTreeView/TtkTreeView.Children
      -- FUNCTION
      -- Get children of the selected item in the selected Ttk_Tree_View
      -- PARAMETERS
@@ -138,7 +138,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Item /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Column (procedure)
+      -- ****f* TtkTreeView/TtkTreeView.Column_(procedure)
       -- FUNCTION
       -- Modify options of the selected column in the selected Ttk_Tree_View
       -- PARAMETERS
@@ -153,7 +153,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- COMMANDS
       -- TreeViewWidget column col ?options?
       -- SEE ALSO
-      -- Column (function)
+      -- TtkTreeView.Column_(function)
       -- SOURCE
    procedure Column
      (TreeViewWidget: in Ttk_Tree_View; Col: in String;
@@ -161,7 +161,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Col /= "" and Options /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Column (function)
+      -- ****f* TtkTreeView/TtkTreeView.Column_(function)
       -- FUNCTION
       -- Get value or values of options of the selected column in the selected
       -- Ttk_Tree_View
@@ -183,7 +183,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- COMMANDS
       -- TreeViewWidget column col ?option?
       -- SEE ALSO
-      -- Column (procedure)
+      -- TtkTreeView.Column_(procedure)
       -- SOURCE
    function Column
      (TreeViewWidget: in Ttk_Tree_View; Col: in String;
@@ -191,7 +191,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Col /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Delete
+      -- ****f* TtkTreeView/TtkTreeView.Delete
       -- FUNCTION
       -- Delete selected items from the tree view
       -- PARAMETERS
@@ -204,14 +204,14 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- COMMANDS
       -- TreeViewWidget delete itemList
       -- SEE ALSO
-      -- Detach
+      -- TtkTreeView.Detach
       -- SOURCE
    procedure Delete
      (TreeViewWidget: in Ttk_Tree_View; ItemsList: in String) with
       Pre => ItemsList /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Detach
+      -- ****f* TtkTreeView/TtkTreeView.Detach
       -- FUNCTION
       -- Unlink the selected items from the tree view. They are still present
       -- and can be reinserted with procedure Move
@@ -226,14 +226,14 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- COMMANDS
       -- TreeViewWidget detach itemList
       -- SEE ALSO
-      -- Delete
+      -- TtkTreeView.Delete
       -- SOURCE
    procedure Detach
      (TreeViewWidget: in Ttk_Tree_View; ItemsList: in String) with
       Pre => ItemsList /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Exists
+      -- ****f* TtkTreeView/TtkTreeView.Exists
       -- FUNCTION
       -- Check if selected item is presented in the selected Ttk_Tree_View
       -- PARAMETERS
@@ -254,7 +254,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Item /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Focus (procedure)
+      -- ****f* TtkTreeView/TtkTreeView.Focus_(procedure)
       -- FUNCTION
       -- Set focus item in the selected Ttk_Tree_View
       -- PARAMETERS
@@ -268,13 +268,13 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- COMMANDS
       -- TreeViewWidget focus item
       -- SEE ALSO
-      -- Focus (function)
+      -- TtkTreeView.Focus_(function)
       -- SOURCE
    procedure Focus(TreeViewWidget: in Ttk_Tree_View; Item: in String) with
       Pre => Item /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Focus (function)
+      -- ****f* TtkTreeView/TtkTreeView.Focus_(function)
       -- FUNCTION
       -- Get currently focused item in the selected Ttk_Tree_View
       -- PARAMETERS
@@ -290,12 +290,12 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- COMMANDS
       -- TreeViewWidget focus
       -- SEE ALSO
-      -- Focus (procedure)
+      -- TtkTreeView.Focus_(procedure)
       -- SOURCE
    function Focus(TreeViewWidget: in Ttk_Tree_View) return String;
    -- ****
 
-   -- ****f* TtkTreeView/Heading (procedure)
+   -- ****f* TtkTreeView/TtkTreeView.Heading_(procedure)
    -- FUNCTION
    -- Configure selected column header
    -- PARAMETERS
@@ -310,14 +310,14 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- COMMANDS
    -- TreeViewWidget heading column options
    -- SEE ALSO
-   -- Heading (function)
+   -- TtkTreeView.Heading_(function)
    -- SOURCE
    procedure Heading
      (TreeViewWidget: in Ttk_Tree_View; Column, Options: in String) with
       Pre => Column /= "" and Options /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Heading (function)
+      -- ****f* TtkTreeView/TtkTreeView.Heading_(function)
       -- FUNCTION
       -- Get configuration of selected column header
       -- PARAMETERS
@@ -335,7 +335,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- COMMANDS
       -- TreeViewWidget heading column ?option?
       -- SEE ALSO
-      -- Heading (procedure)
+      -- TtkTreeView.Heading_(procedure)
       -- SOURCE
    function Heading
      (TreeViewWidget: in Ttk_Tree_View; Column: in String;
@@ -343,7 +343,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Column /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Identify_Column
+      -- ****f* TtkTreeView/TtkTreeView.Identify_Column
       -- FUNCTION
       -- Get the identifier of the column of the selected Ttk_Tree_View at the
       -- selected position
@@ -366,7 +366,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Identify_Element
+      -- ****f* TtkTreeView/TtkTreeView.Identify_Element
       -- FUNCTION
       -- Get the identifier of the element of the selected Ttk_Tree_View at the
       -- selected position
@@ -389,7 +389,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Identify_Item
+      -- ****f* TtkTreeView/TtkTreeView.Identify_Item
       -- FUNCTION
       -- Get the identifier of the item of the selected Ttk_Tree_View at the
       -- selected position
@@ -412,7 +412,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Identify_Region
+      -- ****f* TtkTreeView/TtkTreeView.Identify_Region
       -- FUNCTION
       -- Get the type of the element of the selected Ttk_Tree_View at the
       -- selected position
@@ -436,7 +436,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Index
+      -- ****f* TtkTreeView/TtkTreeView.Index
       -- FUNCTION
       -- Get index of selected item in the selected Ttk_Tree_View
       -- PARAMETERS
@@ -458,7 +458,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Item /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Insert (procedure)
+      -- ****f* TtkTreeView/TtkTreeView.Insert_(procedure)
       -- FUNCTION
       -- Insert new item to tree view
       -- PARAMETERS
@@ -472,13 +472,13 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- COMMANDS
       -- TreeViewWidget insert options
       -- SEE ALSO
-      -- Insert (function)
+      -- TtkTreeView.Insert_(function)
       -- SOURCE
    procedure Insert(TreeViewWidget: in Ttk_Tree_View; Options: in String) with
       Pre => Options /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Insert (function)
+      -- ****f* TtkTreeView/TtkTreeView.Insert_(function)
       -- FUNCTION
       -- Insert new item to tree view
       -- PARAMETERS
@@ -494,14 +494,14 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- COMMANDS
       -- TreeViewWidget insert options
       -- SEE ALSO
-      -- Insert (procedure)
+      -- TtkTreeView.Insert_(procedure)
       -- SOURCE
    function Insert
      (TreeViewWidget: in Ttk_Tree_View; Options: in String) return String with
       Pre => Options /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Item (procedure)
+      -- ****f* TtkTreeView/TtkTreeView.Item_(procedure)
       -- FUNCTION
       -- Modify options of selected item in tree view
       -- PARAMETERS
@@ -516,14 +516,14 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- COMMANDS
       -- TreeViewWidget item item options
       -- SEE ALSO
-      -- Item (function)
+      -- TtkTreeView.Item_(function)
       -- SOURCE
    procedure Item
      (TreeViewWidget: in Ttk_Tree_View; Item, Options: in String) with
       Pre => Item /= "" and Options /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Item (function)
+      -- ****f* TtkTreeView/TtkTreeView.Item_(function)
       -- FUNCTION
       -- Get options of the selected item in tree view
       -- PARAMETERS
@@ -539,7 +539,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- COMMANDS
       -- TreeViewWidget item item ?options?
       -- SEE ALSO
-      -- Item (procedure)
+      -- TtkTreeView.Item_(procedure)
       -- SOURCE
    function Item
      (TreeViewWidget: in Ttk_Tree_View; Item: in String;
@@ -547,7 +547,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Item /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Move
+      -- ****f* TtkTreeView/TtkTreeView.Move
       -- FUNCTION
       -- Move selected item to selected parent and on selected index in the
       -- selected Ttk_Tree_View
@@ -570,7 +570,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Item /= "" and Parent /= "" and Index /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Next
+      -- ****f* TtkTreeView/TtkTreeView.Next
       -- FUNCTION
       -- Get identifier of next sibling of the item in the selected
       -- Ttk_Tree_View
@@ -594,7 +594,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Item /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Parent
+      -- ****f* TtkTreeView/TtkTreeView.Parent
       -- FUNCTION
       -- Get ID of the parent of item
       -- PARAMETERS
@@ -617,7 +617,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Item /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Prev
+      -- ****f* TtkTreeView/TtkTreeView.Prev
       -- FUNCTION
       -- Get identifier of previous sibling of the item in the selected
       -- Ttk_Tree_View
@@ -641,7 +641,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Item /= "";
       -- ****
 
-      -- ****f* TtkTreeView/See
+      -- ****f* TtkTreeView/TtkTreeView.See
       -- FUNCTION
       -- Make the selected item visible (scroll Ttk_Tree_View and open its
       -- ancestor if needed)
@@ -660,7 +660,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Item /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Selection
+      -- ****f* TtkTreeView/TtkTreeView.Selection
       -- FUNCTION
       -- Get selected items from the selected Ttk_Tree_View
       -- PARAMETERS
@@ -678,7 +678,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    function Selection(TreeViewWidget: in Ttk_Tree_View) return String;
    -- ****
 
-   -- ****f* TtkTreeView/Selection_Set
+   -- ****f* TtkTreeView/TtkTreeView.Selection_Set
    -- FUNCTION
    -- Set new selection for the selected Ttk_Tree_View
    -- PARAMETERS
@@ -697,7 +697,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Items /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Selection_Add
+      -- ****f* TtkTreeView/TtkTreeView.Selection_Add
       -- FUNCTION
       -- Add new items to the selection in the selected Ttk_Tree_View
       -- PARAMETERS
@@ -716,7 +716,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Items /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Selection_Remove
+      -- ****f* TtkTreeView/TtkTreeView.Selection_Remove
       -- FUNCTION
       -- Remove selected items from the selection of the selected Ttk_Tree_View
       -- PARAMETERS
@@ -735,7 +735,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Items /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Selection_Toggle
+      -- ****f* TtkTreeView/TtkTreeView.Selection_Toggle
       -- FUNCTION
       -- Toggle selection state for selected items in the selected Ttk_Tree_View
       -- PARAMETERS
@@ -755,7 +755,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Items /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Set (function)
+      -- ****f* TtkTreeView/TtkTreeView.Set_(function)
       -- FUNCTION
       -- Get the value(s) of the selected item in the selected Ttk_Tree_View
       -- PARAMETERS
@@ -775,7 +775,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- COMMANDS
       -- TreeViewWidget set item ?column?
       -- SEE ALSO
-      -- Set (procedure)
+      -- TtkTreeView.Set_(procedure)
       -- SOURCE
    function Set
      (TreeViewWidget: in Ttk_Tree_View; Item: in String;
@@ -783,7 +783,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Item /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Set (procedure)
+      -- ****f* TtkTreeView/TtkTreeView.Set_(procedure)
       -- FUNCTION
       -- Set the value of the selected column of the selected item in the
       -- selected Ttk_Tree_View
@@ -800,14 +800,14 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- COMMANDS
       -- TreeViewWidget set item column value
       -- SEE ALSO
-      -- Set (function)
+      -- TtkTreeView.Set_(function)
       -- SOURCE
    procedure Set
      (TreeViewWidget: in Ttk_Tree_View; Item, Column, Value: in String) with
       Pre => Item /= "" and Column /= "" and Value /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Tag_Add
+      -- ****f* TtkTreeView/TtkTreeView.Tag_Add
       -- FUNCTION
       -- Add the selected tag to the selected items in the selected
       -- Ttk_Tree_View
@@ -828,7 +828,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Tag /= "" and Items /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Tag_Bind (procedure)
+      -- ****f* TtkTreeView/TtkTreeView.Tag_Bind_(procedure)
       -- FUNCTION
       -- Bind the selected script to the selected sequence on the selected tag
       -- PARAMETERS
@@ -844,7 +844,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- COMMANDS
       -- TreeViewWidget tag bind tagName sequence script
       -- SEE ALSO
-      -- Tag_Bind (function)
+      -- TtkTreeView.Tag_Bind_(function)
       -- SOURCE
    procedure Tag_Bind
      (TreeViewWidget: in Ttk_Tree_View;
@@ -852,7 +852,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => TagName /= "" and Sequence /= "" and Script /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Tag_Bind (function)
+      -- ****f* TtkTreeView/TtkTreeView.Tag_Bind_(function)
       -- FUNCTION
       -- Get scrips bounded to the selected tag in the selected Ttk_Tree_View
       -- PARAMETERS
@@ -871,7 +871,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- COMMANDS
       -- TreeViewWidget tag bind tagName ?sequence?
       -- SEE ALSO
-      -- Tag_Bind (procedure)
+      -- TtkTreeView.Tag_Bind_(procedure)
       -- SOURCE
    function Tag_Bind
      (TreeViewWidget: in Ttk_Tree_View; TagName: in String;
@@ -879,7 +879,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => TagName /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Tag_Configure (procedure)
+      -- ****f* TtkTreeView/TtkTreeView.Tag_Configure_(procedure)
       -- FUNCTION
       -- Configure the selected tag in the selected Ttk_Tree_View widget
       -- PARAMETERS
@@ -894,14 +894,14 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- COMMANDS
       -- TreeViewWidget tag configure tagName options
       -- SEE ALSO
-      -- Tag_Configure (function)
+      -- TtkTreeView.Tag_Configure_(function)
       -- SOURCE
    procedure Tag_Configure
      (TreeViewWidget: in Ttk_Tree_View; TagName, Options: in String) with
       Pre => TagName /= "" and Options /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Tag_Configure (function)
+      -- ****f* TtkTreeView/TtkTreeView.Tag_Configure_(function)
       -- FUNCTION
       -- Get configuration of the selected tag in the selected Ttk_Tree_View
       -- widget
@@ -922,7 +922,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- COMMANDS
       -- TreeViewWidget tag configure tagName ?option?
       -- SEE ALSO
-      -- Tag_Configure (procedure)
+      -- TtkTreeView.Tag_Configure_(procedure)
       -- SOURCE
    function Tag_Configure
      (TreeViewWidget: in Ttk_Tree_View; TagName: in String;
@@ -930,7 +930,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => TagName /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Tag_Has
+      -- ****f* TtkTreeView/TtkTreeView.Tag_Has
       -- FUNCTION
       -- Get if the selected item has the selected tag or list of items with
       -- the tag
@@ -958,7 +958,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => TagName /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Tag_Names
+      -- ****f* TtkTreeView/TtkTreeView.Tag_Names
       -- FUNCTION
       -- Get the names of the all available tags in the selected Ttk_Tree_View
       -- PARAMETERS
@@ -976,7 +976,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    function Tag_Names(TreeViewWidget: in Ttk_Tree_View) return String;
    -- ****
 
-   -- ****f* TtkTreeView/Tag_Remove
+   -- ****f* TtkTreeView/TtkTreeView.Tag_Remove
    -- FUNCTION
    -- Remove the selected tag from the selected items in the selected
    -- Ttk_Tree_View
@@ -1000,7 +1000,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       Pre => Tag /= "";
       -- ****
 
-      -- ****f* TtkTreeView/XView
+      -- ****f* TtkTreeView/TtkTreeView.XView
       -- FUNCTION
       -- Get which horizontal fraction of the Ttk_Tree_View is visible
       -- PARAMETERS
@@ -1017,12 +1017,12 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- COMMANDS
       -- TreeViewWidget xview
       -- SEE ALSO
-      -- YView
+      -- TtkTreeView.YView
       -- SOURCE
    function XView(TreeViewWidget: in Ttk_Tree_View) return String;
    -- ****
 
-   -- ****f* TtkTreeView/Xview_Move_To
+   -- ****f* TtkTreeView/TtkTreeView.Xview_Move_To
    -- FUNCTION
    -- Adjusts the view in the window so that fraction of the total width of
    -- the Ttk_Tree_View is off-screen to the left.
@@ -1038,14 +1038,14 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- COMMANDS
    -- TreeViewWidget xview moveto fraction
    -- SEE ALSO
-   -- Yview_Move_To
+   -- TtkTreeView.Yview_Move_To
    -- SOURCE
    procedure Xview_Move_To
      (TreeViewWidget: in Ttk_Tree_View; Fraction: in String) with
       Pre => Fraction /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Xview_Scroll
+      -- ****f* TtkTreeView/TtkTreeView.Xview_Scroll
       -- FUNCTION
       -- Shift the view in the window on left or right according to Number and
       -- What.
@@ -1061,14 +1061,14 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- COMMANDS
       -- TreeViewWidget xview scroll number what
       -- SEE ALSO
-      -- Yview_Scroll
+      -- TtkTreeView.Yview_Scroll
       -- SOURCE
    procedure Xview_Scroll
      (TreeViewWidget: in Ttk_Tree_View; Number, What: in String) with
       Pre => Number /= "" and (What = "units" or What = "pages");
       -- ****
 
-      -- ****f* TtkTreeView/YView
+      -- ****f* TtkTreeView/TtkTreeView.YView
       -- FUNCTION
       -- Get which vertical fraction of the Ttk_Tree_View is visible
       -- PARAMETERS
@@ -1085,12 +1085,12 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- COMMANDS
       -- TreeViewWidget yview
       -- SEE ALSO
-      -- XView
+      -- TtkTreeView.XView
       -- SOURCE
    function YView(TreeViewWidget: in Ttk_Tree_View) return String;
    -- ****
 
-   -- ****f* TtkTreeView/Yview_Move_To
+   -- ****f* TtkTreeView/TtkTreeView.Yview_Move_To
    -- FUNCTION
    -- Adjusts the view in the window so that fraction of the total height of
    -- the Ttk_Tree_View is off-screen to the top.
@@ -1106,14 +1106,14 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- COMMANDS
    -- TreeViewWidget yview moveto fraction
    -- SEE ALSO
-   -- Xview_Move_To
+   -- TtkTreeView.Xview_Move_To
    -- SOURCE
    procedure Yview_Move_To
      (TreeViewWidget: in Ttk_Tree_View; Fraction: in String) with
       Pre => Fraction /= "";
       -- ****
 
-      -- ****f* TtkTreeView/Yview_Scroll
+      -- ****f* TtkTreeView/TtkTreeView.Yview_Scroll
       -- FUNCTION
       -- Shift the view in the window on top or bottom according to Number and
       -- What.
@@ -1129,7 +1129,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- COMMANDS
       -- TreeViewWidget yview scroll number what
       -- SEE ALSO
-      -- Xview_Scroll
+      -- TtkTreeView.Xview_Scroll
       -- SOURCE
    procedure Yview_Scroll
      (TreeViewWidget: in Ttk_Tree_View; Number, What: in String) with
