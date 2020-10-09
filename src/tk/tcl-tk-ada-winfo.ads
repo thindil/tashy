@@ -29,7 +29,7 @@ with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
 package Tcl.Tk.Ada.Winfo is
 -- ****
 
-   -- ****f* Winfo/Winfo_Get
+   -- ****f* Winfo/Winfo.Winfo_Get
    -- FUNCTION
    -- Get selected information about selected window
    -- PARAMETERS
