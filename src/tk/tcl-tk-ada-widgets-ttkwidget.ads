@@ -27,7 +27,7 @@
 package Tcl.Tk.Ada.Widgets.TtkWidget is
 -- ****
 
-   -- ****f* TtkWidget/Identify_Element
+   -- ****f* TtkWidget/TtkWidget.Identify_Element
    -- FUNCTION
    -- Get the name of the element at the selected coordinate
    -- PARAMETERS
@@ -50,7 +50,7 @@ package Tcl.Tk.Ada.Widgets.TtkWidget is
       Pre => X /= "" and Y /= "";
       -- ****
 
-      -- ****f* TtkWidget/InState
+      -- ****f* TtkWidget/TtkWidget.InState
       -- FUNCTION
       -- Check if the selected Ttk widget is in the selected state
       -- PARAMETERS
@@ -73,7 +73,7 @@ package Tcl.Tk.Ada.Widgets.TtkWidget is
       Pre => StateSpec /= "";
       -- ****
 
-      -- ****f* TtkWidget/State (procedure)
+      -- ****f* TtkWidget/TtkWidget.State_(procedure)
       -- FUNCTION
       -- Set the selected widget to the new state
       -- PARAMETERS
@@ -86,12 +86,14 @@ package Tcl.Tk.Ada.Widgets.TtkWidget is
       -- State(My_Widget, "!disabled");
       -- COMMANDS
       -- Widget state stateSpec
+      -- SEE ALSO
+      -- TtkWidget.State_(function)
       -- SOURCE
    procedure State(Widget: in Tk_Widget'Class; StateSpec: in String) with
       Pre => StateSpec /= "";
       -- ****
 
-      -- ****f* TtkWidget/State (function)
+      -- ****f* TtkWidget/TtkWidget.State_(function)
       -- FUNCTION
       -- Get the current state of the selected widget
       -- PARAMETERS
@@ -105,6 +107,8 @@ package Tcl.Tk.Ada.Widgets.TtkWidget is
       -- Current_State: constant String := State(My_Widget);
       -- COMMANDS
       -- Widget state
+      -- SEE ALSO
+      -- TtkWidget.State_(procedure)
       -- SOURCE
    function State(Widget: in Tk_Widget'Class) return String;
    -- ****
