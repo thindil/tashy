@@ -29,7 +29,7 @@ with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
 package Tcl.Tk.Ada.Wm is
 -- ****
 
-   -- ****f* Wm/Wm_Set
+   -- ****f* Wm/Wm.Wm_Set
    -- FUNCTION
    -- Communicate with the window manager
    -- PARAMETERS
