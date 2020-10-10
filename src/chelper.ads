@@ -27,28 +27,28 @@ package CHelper is
 
    package C renames Interfaces.C;
 
-   -- ****t* CHelper/Int_Ptr
+   -- ****t* CHelper/CHelper.Int_Ptr
    -- FUNCTION
    -- int *
    -- SOURCE
    type Int_Ptr is access all C.int;
    -- ****
 
-   -- ****t* CHelper/Int_Ptr_Ptr
+   -- ****t* CHelper/CHelper.Int_Ptr_Ptr
    -- FUNCTION
    -- int **
    -- SOURCE
    type Int_Ptr_Ptr is access all Int_Ptr;
    -- ****
 
-   -- ****t* CHelper/Long_Ptr
+   -- ****t* CHelper/CHelper.Long_Ptr
    -- FUNCTION
    -- long *
    -- SOURCE
    type Long_Ptr is access all C.long;
    -- ****
 
-   -- ****t* CHelper/Double_Ptr
+   -- ****t* CHelper/CHelper.Double_Ptr
    -- FUNCTION
    -- double *
    -- SOURCE
