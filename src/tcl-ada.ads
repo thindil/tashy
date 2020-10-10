@@ -232,7 +232,7 @@ package Tcl.Ada is
 
    end Generic_CloseHandler;
 
-   -- ****h* Ada/Generic_Command
+   -- ****h* Ada/Ada.Generic_Command
    -- FUNCTION
    -- Generic package to add new commands to Tcl
    -- SOURCE
@@ -244,7 +244,7 @@ package Tcl.Ada is
       pragma Assert(ClientData'Size <= System.Address'Size,
          "ClientData too big");
 
-      -- ****t* Generic_Command/Tcl_CmdProc
+      -- ****t* Generic_Command/Generic_Command.Tcl_CmdProc
       -- FUNCTION
       -- Generic function for Tcl command
       -- PARAMETERS
@@ -262,7 +262,7 @@ package Tcl.Ada is
       pragma Convention(C, Tcl_CmdProc);
       -- ****
 
-      -- ****t* Generic_Command/Tcl_CmdDeleteProc
+      -- ****t* Generic_Command/Generic_Command.Tcl_CmdDeleteProc
       -- FUNCTION
       -- Generic procedure which will be executed before command is deleted
       -- PARAMETERS
@@ -272,7 +272,7 @@ package Tcl.Ada is
       pragma Convention(C, Tcl_CmdDeleteProc);
       -- ****
 
-      -- ****f* Generic_Command/Tcl_CreateCommand
+      -- ****f* Generic_Command/Generic_Command.Tcl_CreateCommand
       -- FUNCTION
       -- Create new Tcl command
       -- PARAMETERS
@@ -353,7 +353,7 @@ package Tcl.Ada is
 
    end Generic_EventQueueAndNotifier;
 
-   -- ****h* Ada/Generic_ExitHandler
+   -- ****h* Ada/Ada.Generic_ExitHandler
    -- FUNCTION
    -- Generic packaged to add exit handlers to Tcl
    -- SOURCE
@@ -365,7 +365,7 @@ package Tcl.Ada is
       pragma Assert(ClientData'Size <= System.Address'Size,
          "ClientData too big");
 
-      -- ****t* Generic_ExitHandler/Tcl_ExitProc
+      -- ****t* Generic_ExitHandler/Generic_ExitHandler.Tcl_ExitProc
       -- FUNCTION
       -- Generic procedure for exit handlers
       -- PARAMETERS
@@ -375,7 +375,7 @@ package Tcl.Ada is
       pragma Convention(C, Tcl_ExitProc);
       -- ****
 
-      -- ****f* Generic_ExitHandler/Tcl_CreateExitHandler
+      -- ****f* Generic_ExitHandler/Generic_ExitHandler.Tcl_CreateExitHandler
       -- FUNCTION
       -- Set the selected procedure as a standard procedure called on Tcl exit
       -- command
@@ -388,7 +388,7 @@ package Tcl.Ada is
       pragma Import(C, Tcl_CreateExitHandler, "Tcl_CreateExitHandler");
       -- ****
 
-      -- ****f* Generic_ExitHandler/Tcl_CreateThreadExitHandler
+      -- ****f* Generic_ExitHandler/Generic_ExitHandler.Tcl_CreateThreadExitHandler
       -- FUNCTION
       -- Set the selected procedure as a standart procedure called on exit
       -- from a Tcl thread
@@ -402,7 +402,7 @@ package Tcl.Ada is
          "Tcl_CreateThreadExitHandler");
       -- ****
 
-      -- ****f* Generic_ExitHandler/Tcl_DeleteExitHandler
+      -- ****f* Generic_ExitHandler/Generic_ExitHandler.Tcl_DeleteExitHandler
       -- FUNCTION
       -- Delete previously set procedure as exit handler
       -- PARAMETERS
@@ -414,7 +414,7 @@ package Tcl.Ada is
       pragma Import(C, Tcl_DeleteExitHandler, "Tcl_DeleteExitHandler");
       -- ****
 
-      -- ****f* Generic_ExitHandler/Tcl_DeleteThreadExitHandler
+      -- ****f* Generic_ExitHandler/Generic_ExitHandler.Tcl_DeleteThreadExitHandler
       -- FUNCTION
       -- Delete previously set procedure used on exit from Tcl thread
       -- PARAMETERS
@@ -580,7 +580,7 @@ package Tcl.Ada is
 
    end Generic_ObjCommand;
 
-   -- ****h* Ada/Generic_PkgRequire
+   -- ****h* Ada/Ada.Generic_PkgRequire
    -- FUNCTION
    -- Generic package to manipulate Tcl packages
    -- SOURCE
@@ -592,7 +592,7 @@ package Tcl.Ada is
       pragma Assert(ClientData'Size <= System.Address'Size,
          "ClientData too big");
 
-      -- ****f* Generic_PkgRequire/Tcl_PkgPresentEx
+      -- ****f* Generic_PkgRequire/Generic_PkgRequire.Tcl_PkgPresentEx
       -- FUNCTION
       -- Load selected Tcl package if it is not loaded yet.
       -- PARAMETERS
@@ -627,7 +627,7 @@ package Tcl.Ada is
          return String;
       -- ****
 
-      -- ****f* Generic_PkgRequire/Tcl_PkgProvideEx
+      -- ****f* Generic_PkgRequire/Generic_PkgRequire.Tcl_PkgProvideEx
       -- FUNCTION
       -- Check if selected Tcl package is loaded into Tcl interpreter
       -- interp  - Tcl interpreter to check
@@ -651,7 +651,7 @@ package Tcl.Ada is
          data: in ClientData);
       -- ****
 
-      -- ****f* Generic_PkgRequire/Tcl_PkgRequireEx
+      -- ****f* Generic_PkgRequire/Generic_PkgRequire.Tcl_PkgRequireEx
       -- FUNCTION
       -- Load selected Tcl package into selected Tcl interpreter
       -- PARAMETERS
@@ -1038,7 +1038,7 @@ package Tcl.Ada is
 
    function Tcl_ErrnoMsg(err: in C.int) return String;
 
-   -- ****f* Ada/Tcl_Eval
+   -- ****f* Ada/Ada.Tcl_Eval
    -- FUNCTION
    -- Execute (evaluate) Tcl statement in the selected Tcl interpreter
    -- PARAMETERS
@@ -1055,7 +1055,7 @@ package Tcl.Ada is
    procedure Tcl_Eval(interp: not null Tcl_Interp; strng: in String);
    -- ****
 
-   -- ****f* Ada/Tcl_EvalFile
+   -- ****f* Ada/Ada.Tcl_EvalFile
    -- FUNCTION
    -- Execute (evaluate) Tcl script from the selected file
    -- PARAMETERS
@@ -1131,7 +1131,7 @@ package Tcl.Ada is
 
    function Tcl_GetStringResult(interp: not null Tcl_Interp) return String;
 
-   -- ****f* Ada/Tcl_GetVar
+   -- ****f* Ada/Ada.Tcl_GetVar
    -- FUNCTION
    -- Get value of selected variable
    -- PARAMETERS
@@ -1225,7 +1225,7 @@ package Tcl.Ada is
 
    procedure Tcl_SetResult(interp: not null Tcl_Interp; str: in String);
 
-   -- ****f* Ada/Tcl_SetVar
+   -- ****f* Ada/Ada.Tcl_SetVar
    -- FUNCTION
    -- Set value for the selected variable
    -- PARAMETERS
@@ -1284,7 +1284,7 @@ package Tcl.Ada is
 
    procedure Tcl_UnlinkVar(interp: not null Tcl_Interp; varName: in String);
 
-   -- ****f* Ada/Tcl_UnsetVar
+   -- ****f* Ada/Ada.Tcl_UnsetVar
    -- FUNCTION
    -- Unset the selected variable
    -- PARAMETERS
