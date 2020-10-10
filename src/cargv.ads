@@ -28,14 +28,14 @@ package CArgv is
 
    package C renames Interfaces.C;
 
-   -- ****t* CArgv/CNatural
+   -- ****t* CArgv/CArgv.CNatural
    -- FUNCTION
    -- Used as natural integer type in C bindings
    -- SOURCE
    subtype CNatural is C.int range 0 .. C.int'Last;
    -- ****
 
-   -- ****t* CArgv/Vector
+   -- ****t* CArgv/CArgv.Vector
    -- FUNCTION
    -- This is a C-style "argv" vector.
    -- SOURCE
@@ -46,7 +46,7 @@ package CArgv is
       Element => C.Strings.chars_ptr, Element_Array => Vector,
       Default_Terminator => C.Strings.Null_Ptr);
 
-   -- ****t* CArgv/Chars_Ptr_Ptr
+   -- ****t* CArgv/CArgv.Chars_Ptr_Ptr
    -- FUNCTION
    -- This is C char **
    -- SOURCE
@@ -60,7 +60,7 @@ package CArgv is
    --
    ---------------------------------------------------------------------
 
-   -- ****f* CArgv/Create
+   -- ****f* CArgv/CArgv.Create
    -- FUNCTION
    -- Create returns the command line arguments from Ada.Command_Line
    -- and converts them to a C-style, null-terminated argument vector.
@@ -68,14 +68,14 @@ package CArgv is
    procedure Create(Argc: out CNatural; Argv: out Chars_Ptr_Ptr);
    -- ****
 
-   -- ****f* CArgv/Show
+   -- ****f* CArgv/CArgv.Show
    -- FUNCTION
    -- Prints Argc and Argv to standard out.
    -- SOURCE
    procedure Show(Argc: in CNatural; Argv: in Chars_Ptr_Ptr);
    -- ****
 
-   -- ****f* CArgv/Free
+   -- ****f* CArgv/CArgv.Free
    -- FUNCTION
    -- Free all space used by Argv.
    -- SOURCE
@@ -101,7 +101,7 @@ package CArgv is
    --
    ---------------------------------------------------------------------
 
-   -- ****f* CArgv/Arg
+   -- ****f* CArgv/CArgv.Arg
    -- FUNCTION
    -- Returns the Nth argument from Argv.
    -- SOURCE
@@ -115,21 +115,21 @@ package CArgv is
    --
    ---------------------------------------------------------------------
 
-   -- ****f* CArgv/Empty
+   -- ****f* CArgv/CArgv.Empty
    -- FUNCTION
    -- An empty Chars_Ptr_Ptr, used for constructors.
    -- SOURCE
    function Empty return Chars_Ptr_Ptr;
    -- ****
 
-   -- ****f* CArgv/"&"
+   -- ****f* CArgv/CArgv."&"
    -- FUNCTION
    -- Construct a Chars_Ptr_Ptr using concat operation.
    -- SOURCE
    function "&"(Argv: Chars_Ptr_Ptr; Arg: String) return Chars_Ptr_Ptr;
    -- ****
 
-   -- ****f* CArgv/Argc
+   -- ****f* CArgv/CArgv.Argc
    -- FUNCTION
    -- Returns the number of arguments in a Chars_Ptr_Ptr.
    -- SOURCE
