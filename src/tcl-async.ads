@@ -37,14 +37,14 @@
 package Tcl.Async is
 -- ****
 
-   -- ****f* Async/Register
+   -- ****f* Async/Async.Register
    -- FUNCTION
    -- Must be called before any other subprogram in the package.
    -- SOURCE
    procedure Register(Interp: Tcl_Interp);
    -- ****
 
-   -- ****f* Async/Set (variable)
+   -- ****f* Async/Async.Set_(variable)
    -- FUNCTION
    -- Called to set the named Tcl variable in the global scope to the
    -- given value.
@@ -54,7 +54,7 @@ package Tcl.Async is
    procedure Set(Tcl_Variable: String; Value: String);
    -- ****
 
-   -- ****f* Async/Set (array)
+   -- ****f* Async/Async.Set_(array)
    -- FUNCTION
    --  Called to set the indexed element of the named Tcl array in
    --  the global scope to the given value.
