@@ -27,7 +27,7 @@
 package Tcl.MsgCat.Ada is
 -- ****
 
-   -- ****f* MsgCatAda/MsgCat_Init
+   -- ****f* MsgCatAda/MsgCatAda.MsgCat_Init
    -- FUNCTION
    -- Load package msgcat. Raise Program_Error if package can't be loaded
    -- PARAMETERS
@@ -43,7 +43,7 @@ package Tcl.MsgCat.Ada is
    procedure MsgCat_Init(Interp: in Tcl_Interp);
    -- ****
 
-   -- ****f* MsgCatAda/Mc
+   -- ****f* MsgCatAda/MsgCatAda.Mc
    -- FUNCTION
    -- Get the translation for the selected string
    -- PARAMETERS
@@ -69,7 +69,7 @@ package Tcl.MsgCat.Ada is
       Pre => Src_String /= "";
       -- ****
 
-      -- ****f* MsgCatAda/Mc_Exists
+      -- ****f* MsgCatAda/MsgCatAda.Mc_Exists
       -- FUNCTION
       -- Check it translation for the selected string exists
       -- PARAMETERS
@@ -93,7 +93,7 @@ package Tcl.MsgCat.Ada is
       Pre => Src_String /= "";
       -- ****
 
-      -- ****f* MsgCatAda/Mc_Load (procedure)
+      -- ****f* MsgCatAda/MsgCatAda.Mc_Load_(procedure)
       -- FUNCTION
       -- Load the translations for the currently set locale from the selected
       -- directory
@@ -109,13 +109,13 @@ package Tcl.MsgCat.Ada is
       -- COMMANDS
       -- ::msgcat::mcload dirname
       -- SEE ALSO
-      -- Mc_Load (function)
+      -- MsgCatAda.Mc_Load_(function)
       -- SOURCE
    procedure Mc_Load(DirName: in String; Interp: in Tcl_Interp) with
       Pre => DirName /= "";
       -- ****
 
-      -- ****f* MsgCatAda/Mc_Load (function)
+      -- ****f* MsgCatAda/MsgCatAda.Mc_Load_(function)
       -- FUNCTION
       -- Load the translations for the currently set locale from the selected
       -- directory
@@ -133,14 +133,14 @@ package Tcl.MsgCat.Ada is
       -- COMMANDS
       -- ::msgcat::mcload dirname
       -- SEE ALSO
-      -- Mc_Load (procedure)
+      -- MsgCatAda.Mc_Load_(procedure)
       -- SOURCE
    function Mc_Load
      (DirName: in String; Interp: in Tcl_Interp) return String with
       Pre => DirName /= "";
       -- ****
 
-      -- ****f* MsgCatAda/Mc_LoadedLocales_Clear
+      -- ****f* MsgCatAda/MsgCatAda.Mc_LoadedLocales_Clear
       -- FUNCTION
       -- Remove locales and their data, which are not in the current
       -- preferences list
@@ -157,7 +157,7 @@ package Tcl.MsgCat.Ada is
    procedure Mc_LoadedLocales_Clear(Interp: in Tcl_Interp);
    -- ****
 
-   -- ****f* MsgCatAda/Mc_LoadedLocales_Get
+   -- ****f* MsgCatAda/MsgCatAda.Mc_LoadedLocales_Get
    -- FUNCTION
    -- Get the list of the currently loaded locales
    -- PARAMETERS
@@ -175,7 +175,7 @@ package Tcl.MsgCat.Ada is
    function Mc_LoadedLocales_Get(Interp: in Tcl_Interp) return String;
    -- ****
 
-   -- ****f* MsgCatAda/Mc_LoadedLocales_Present
+   -- ****f* MsgCatAda/MsgCatAda.Mc_LoadedLocales_Present
    -- FUNCTION
    -- Check if the selected locale was loaded in the selected interpreter
    -- PARAMETERS
@@ -196,7 +196,7 @@ package Tcl.MsgCat.Ada is
       Pre => Locale /= "";
       -- ****
 
-      -- ****f* MsgCatAda/Mc_Locale (procedure)
+      -- ****f* MsgCatAda/MsgCatAda.Mc_Locale_(procedure)
       -- FUNCTION
       -- Set the new default locale for the selected interpreter
       -- PARAMETERS
@@ -213,13 +213,13 @@ package Tcl.MsgCat.Ada is
       -- COMMANDS
       -- ::msgcat::mclocale newlocale
       -- SEE ALSO
-      -- Mc_Locale (function)
+      -- MsgCatAda.Mc_Locale_(function)
       -- SOURCE
    procedure Mc_Locale(NewLocale: in String; Interp: in Tcl_Interp) with
       Pre => NewLocale /= "";
       -- ****
 
-      -- ****f* MsgCatAda/Mc_Locale (function)
+      -- ****f* MsgCatAda/MsgCatAda.Mc_Locale_(function)
       -- FUNCTION
       -- Get the default locale for the selected interpreter
       -- PARAMETERS
@@ -234,12 +234,12 @@ package Tcl.MsgCat.Ada is
       -- COMMANDS
       -- ::msgcat::mclocale
       -- SEE ALSO
-      -- Mc_Locale (procedure)
+      -- MsgCatAda.Mc_Locale_(procedure)
       -- SOURCE
    function Mc_Locale(Interp: in Tcl_Interp) return String;
    -- ****
 
-   -- ****f* MsgCatAda/Mc_Max
+   -- ****f* MsgCatAda/MsgCatAda.Mc_Max
    -- FUNCTION
    -- Get the longest translated string for selected values.
    -- PARAMETERS
@@ -260,7 +260,7 @@ package Tcl.MsgCat.Ada is
       Pre => Strings /= "";
       -- ****
 
-      -- ****f* MsgCatAda/Mc_Mset (procedure)
+      -- ****f* MsgCatAda/MsgCatAda.Mc_Mset_(procedure)
       -- FUNCTION
       -- Set the translations for the multiple source strings for the selected
       -- locale in the selected interpreter
@@ -276,13 +276,13 @@ package Tcl.MsgCat.Ada is
       -- COMMANDS
       -- ::msgcat::mcmset locale list
       -- SEE ALSO
-      -- Mc_Mset (function)
+      -- MsgCatAda.Mc_Mset_(function)
       -- SOURCE
    procedure Mc_Mset(Interp: in Tcl_Interp; Locale, List: in String) with
       Pre => Locale /= "" and List /= "";
       -- ****
 
-      -- ****f* MsgCatAda/Mc_Mset (function)
+      -- ****f* MsgCatAda/MsgCatAda.Mc_Mset_(function)
       -- FUNCTION
       -- Set the translations for the multiple source strings for the selected
       -- locale in the selected interpreter
@@ -300,14 +300,14 @@ package Tcl.MsgCat.Ada is
       -- COMMANDS
       -- ::msgcat::mcmset locale list
       -- SEE ALSO
-      -- Mc_Mset (function)
+      -- MsgCatAda.Mc_Mset_(function)
       -- SOURCE
    function Mc_Mset
      (Interp: in Tcl_Interp; Locale, List: in String) return String with
       Pre => Locale /= "" and List /= "";
       -- ****
 
-      -- ****f* MsgCatAda/Mc_Preferences
+      -- ****f* MsgCatAda/MsgCatAda.Mc_Preferences
       -- FUNCTION
       -- Get the list with locales preferred by the user, based on the user's
       -- language specification
@@ -326,7 +326,7 @@ package Tcl.MsgCat.Ada is
    function Mc_Preferences(Interp: in Tcl_Interp) return String;
    -- ****
 
-   -- ****f* MsgCatAda/Mc_Set (procedure)
+   -- ****f* MsgCatAda/MsgCatAda.Mc_Set_(procedure)
    -- FUNCTION
    -- Set the translation for the selected string for the selected locale in
    -- the selected interpreter
@@ -346,7 +346,7 @@ package Tcl.MsgCat.Ada is
    -- COMMANDS
    -- ::msgcat::mcset locale src-string ?translate-string?
    -- SEE ALSO
-   -- Mc_Set (function)
+   -- MsgCatAda.Mc_Set_(function)
    -- SOURCE
    procedure Mc_Set
      (Interp: in Tcl_Interp; Locale, Src_String: in String;
@@ -354,7 +354,7 @@ package Tcl.MsgCat.Ada is
       Pre => Locale /= "" and Src_String /= "";
       -- ****
 
-      -- ****f* MsgCatAda/Mc_Set (function)
+      -- ****f* MsgCatAda/MsgCatAda.Mc_Set_(function)
       -- FUNCTION
       -- Set the translation for the selected string for the selected locale in
       -- the selected interpreter
@@ -376,7 +376,7 @@ package Tcl.MsgCat.Ada is
       -- COMMANDS
       -- ::msgcat::mcset locale src-string ?translate-string?
       -- SEE ALSO
-      -- Mc_Set (procedure)
+      -- MsgCatAda.Mc_Set_(procedure)
       -- SOURCE
    function Mc_Set
      (Interp: in Tcl_Interp; Locale, Src_String: in String;
@@ -384,7 +384,7 @@ package Tcl.MsgCat.Ada is
       Pre => Locale /= "" and Src_String /= "";
       -- ****
 
-      -- ****f* MsgCatAda/Mc_Forget_Package
+      -- ****f* MsgCatAda/MsgCatAda.Mc_Forget_Package
       -- FUNCTION
       -- Clear all msgcat settings and translations at the selected interpreter
       -- PARAMETERS
