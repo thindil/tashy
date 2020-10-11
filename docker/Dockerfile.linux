@@ -1,4 +1,4 @@
-FROM ghcr.io/thindil/gnat:2020.1
+FROM ghcr.io/thindil/gnat
 COPY . /app
 ENV TZ=Europe/Berlin
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
