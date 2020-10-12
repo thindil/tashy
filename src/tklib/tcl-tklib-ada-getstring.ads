@@ -27,7 +27,7 @@
 package Tcl.Tklib.Ada.GetString is
 -- ****
 
-   -- ****f* GetString/GetString_Init
+   -- ****f* GetString/GetString.GetString_Init
    -- FUNCTION
    -- Load package GetString. Raise Program_Error if package can't be loaded
    -- PARAMETERS
@@ -43,7 +43,7 @@ package Tcl.Tklib.Ada.GetString is
    procedure GetString_Init(Interp: in Tcl_Interp);
    -- ****
 
-   -- ****f* GetString/Tk_Get_String
+   -- ****f* GetString/GetString.Tk_Get_String
    -- FUNCTION
    -- Create a dialog which prompts the user with text to input a text string.
    -- PARAMETERS
