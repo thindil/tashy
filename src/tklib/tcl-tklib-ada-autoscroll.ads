@@ -29,7 +29,7 @@ with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
 package Tcl.Tklib.Ada.Autoscroll is
 -- ****
 
-   -- ****f* Autoscroll/Autoscroll_Init
+   -- ****f* Autoscroll/Autoscroll.Autoscroll_Init
    -- FUNCTION
    -- Load package autoscroll. Raise Program_Error if package can't be loaded
    -- PARAMETERS
@@ -45,7 +45,7 @@ package Tcl.Tklib.Ada.Autoscroll is
    procedure Autoscroll_Init(Interp: in Tcl_Interp);
    -- ****
 
-   -- ****f* Autoscroll/Autoscroll
+   -- ****f* Autoscroll/Autoscroll.Autoscroll
    -- FUNCTION
    -- Set autohide for the selected scroll
    -- PARAMETERS
@@ -61,7 +61,7 @@ package Tcl.Tklib.Ada.Autoscroll is
    procedure Autoscroll(Scroll: in Tk_Widget'Class);
    -- ****
 
-   -- ****f* Autoscroll/Wrap
+   -- ****f* Autoscroll/Autoscroll.Wrap
    -- FUNCTION
    -- Arranges for all scrollbars created after to be automatically mapped and
    -- unmapped as needed.
@@ -78,7 +78,7 @@ package Tcl.Tklib.Ada.Autoscroll is
    procedure Wrap(Interp: in Tcl_Interp);
    -- ****
 
-   -- ****f* Autoscroll/Unautoscroll
+   -- ****f* Autoscroll/Autoscroll.Unautoscroll
    -- FUNCTION
    -- Return the selected scroll to its original static state
    -- PARAMETERS
@@ -94,7 +94,7 @@ package Tcl.Tklib.Ada.Autoscroll is
    procedure Unautoscroll(Scroll: in Tk_Widget'Class);
    -- ****
 
-   -- ****f* Autoscroll/Unwrap
+   -- ****f* Autoscroll/Autoscroll.Unwrap
    -- FUNCTION
    -- Turns off the automatic autoscrolling of all new scrollbars. Does not
    -- effect existing scrollbars
