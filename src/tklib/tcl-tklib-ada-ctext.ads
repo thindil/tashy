@@ -30,7 +30,7 @@ with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
 package Tcl.Tklib.Ada.Ctext is
 -- ****
 
-   -- ****f* Ctext/Ctext_Init
+   -- ****f* Ctext/Ctext.Ctext_Init
    -- FUNCTION
    -- Load package Ctext. Raise Program_Error if package can't be loaded
    -- PARAMETERS
@@ -48,7 +48,7 @@ package Tcl.Tklib.Ada.Ctext is
    procedure Ctext_Init(Interp: in Tcl_Interp);
    -- ****
 
-   -- ****t* Ctext/Tklib_Ctext
+   -- ****t* Ctext/Ctext.Tklib_Ctext
    -- FUNCTION
    -- This is a non-abstract type derived directly from Tk_Widget.
    -- Each of the derived widgets redefines the Create subprogram
@@ -57,7 +57,7 @@ package Tcl.Tklib.Ada.Ctext is
    type Tklib_Ctext is new Tk_Widget with private;
    -- ****
 
-   -- ****f* Ctext/Create (function)
+   -- ****f* Ctext/Ctext.Create_(function)
    -- FUNCTION
    -- Creates a new Tklib_Ctext in the specified interpreter.
    -- PARAMETERS
@@ -77,7 +77,7 @@ package Tcl.Tklib.Ada.Ctext is
    -- COMMANDS
    -- ctext pathName ?options?
    -- SEE ALSO
-   -- Create (procedure)
+   -- Ctext.Create_(procedure)
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
@@ -85,7 +85,7 @@ package Tcl.Tklib.Ada.Ctext is
       Pre => pathName /= "";
       -- ****
 
-     -- ****f* Ctext/Create (procedure)
+     -- ****f* Ctext/Ctext.Create_(procedure)
      -- FUNCTION
      -- Creates a new Tklib_Ctext in the specified interpreter.
      -- PARAMETERS
@@ -110,7 +110,7 @@ package Tcl.Tklib.Ada.Ctext is
      -- COMMANDS
      -- ctext pathName ?options?
      -- SEE ALSO
-     -- Create (function)
+     -- Ctext.Create_(function)
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tklib_Ctext; pathName: in String; options: in String := "";
@@ -118,7 +118,7 @@ package Tcl.Tklib.Ada.Ctext is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* Ctext/Get_Widget
+     -- ****f* Ctext/Ctext.Get_Widget
      -- FUNCTION
      -- Get the existing Tklib_Ctext widget
      -- PARAMETERS
@@ -138,7 +138,7 @@ package Tcl.Tklib.Ada.Ctext is
       return Tklib_Ctext;
      -- ****
 
-     -- ****f* Ctext/Add_Highlight_Class
+     -- ****f* Ctext/Ctext.Add_Highlight_Class
      -- FUNCTION
      -- Add highlighting class to the selected Ctext widget
      -- PARAMETERS
@@ -160,7 +160,7 @@ package Tcl.Tklib.Ada.Ctext is
       Pre => Class /= "" and Color /= "" and Keywordlist /= "";
       -- ****
 
-      -- ****f* Ctext/Add_Highlight_Class_With_Only_Char_Start
+      -- ****f* Ctext/Ctext.Add_Highlight_Class_With_Only_Char_Start
       -- FUNCTION
       -- Add highlighting class to the selected Ctext widget.
       -- CtextWidget - Ctext widget to which a new highlighting Class will be
@@ -182,7 +182,7 @@ package Tcl.Tklib.Ada.Ctext is
       Pre => Class /= "" and Color /= "" and Char /= "";
       -- ****
 
-      -- ****f* Ctext/Add_Highlight_Class_For_Special_Chars
+      -- ****f* Ctext/Ctext.Add_Highlight_Class_For_Special_Chars
       -- FUNCTION
       -- Add highlighting class to the selected Ctext widget.
       -- CtextWidget - Ctext widget to which a new highlighting Class will be
@@ -203,7 +203,7 @@ package Tcl.Tklib.Ada.Ctext is
       Pre => Class /= "" and Color /= "" and CharString /= "";
       -- ****
 
-      -- ****f* Ctext/Add_Highlight_Class_For_Regexp
+      -- ****f* Ctext/Ctext.Add_Highlight_Class_For_Regexp
       -- FUNCTION
       -- Add highlighting class to the selected Ctext widget.
       -- CtextWidget - Ctext widget to which a new highlighting Class will be
@@ -225,7 +225,7 @@ package Tcl.Tklib.Ada.Ctext is
       Pre => Class /= "" and Color /= "" and Pattern /= "";
       -- ****
 
-      -- ****f* Ctext/Append
+      -- ****f* Ctext/Ctext.Append
       -- FUNCTION
       -- Append the current selection to the clipboard
       -- PARAMETERS
@@ -241,7 +241,7 @@ package Tcl.Tklib.Ada.Ctext is
    procedure Append(CtextWidget: in Tklib_Ctext);
    -- ****
 
-   -- ****f* Ctext/Clear_Highlight_Classes
+   -- ****f* Ctext/Ctext.Clear_Highlight_Classes
    -- FUNCTION
    -- Remove all highlight classes from the widget
    -- PARAMETERS
@@ -258,7 +258,7 @@ package Tcl.Tklib.Ada.Ctext is
    procedure Clear_Highlight_Classes(CtextWidget: in Tklib_Ctext);
    -- ****
 
-   -- ****f* Ctext/Copy
+   -- ****f* Ctext/Ctext.Copy
    -- FUNCTION
    -- Call tk_textCopy for the Ctext widget
    -- PARAMETERS
@@ -274,7 +274,7 @@ package Tcl.Tklib.Ada.Ctext is
    procedure Copy(CtextWidget: in Tklib_Ctext);
    -- ****
 
-   -- ****f* Ctext/Cut
+   -- ****f* Ctext/Ctext.Cut
    -- FUNCTION
    -- Call tk_textCut for the Ctext widget.
    -- PARAMETERS
@@ -290,7 +290,7 @@ package Tcl.Tklib.Ada.Ctext is
    procedure Cut(CtextWidget: in Tklib_Ctext);
    -- ****
 
-   -- ****f* Ctext/Delete_Highlight_Class
+   -- ****f* Ctext/Ctext.Delete_Highlight_Class
    -- FUNCTION
    -- Delete the selected highlight class from the widget
    -- PARAMETERS
@@ -310,7 +310,7 @@ package Tcl.Tklib.Ada.Ctext is
       Pre => Class /= "";
       -- ****
 
-      -- ****f* Ctext/Disable_Comments
+      -- ****f* Ctext/Ctext.Disable_Comments
       -- FUNCTION
       -- Disable C comment highlighting on the selected ctext widget
       -- PARAMETERS
@@ -327,7 +327,7 @@ package Tcl.Tklib.Ada.Ctext is
    procedure Disable_Comments(CtextWidget: in Tklib_Ctext);
    -- ****
 
-   -- ****f* Ctext/Enable_Comments
+   -- ****f* Ctext/Ctext.Enable_Comments
    -- FUNCTION
    -- Enable C comment highlighting on the selected ctext widget
    -- PARAMETERS
@@ -344,7 +344,7 @@ package Tcl.Tklib.Ada.Ctext is
    procedure Enable_Comments(CtextWidget: in Tklib_Ctext);
    -- ****
 
-   -- ****f* Ctext/Fast_Delete
+   -- ****f* Ctext/Ctext.Fast_Delete
    -- FUNCTION
    -- Delete text range without updating the highlighting
    -- PARAMETERS
@@ -368,7 +368,7 @@ package Tcl.Tklib.Ada.Ctext is
       Pre => Index1 /= "";
       -- ****
 
-      -- ****f* Ctext/Fast_Insert
+      -- ****f* Ctext/Ctext.Fast_Insert
       -- FUNCTION
       -- Insert the text to Ctext widget without updating the highlighting
       -- PARAMETERS
@@ -387,7 +387,7 @@ package Tcl.Tklib.Ada.Ctext is
       Pre => Index /= "" and Text /= "";
       -- ****
 
-      -- ****f* Ctext/Get_Highlight_Classes
+      -- ****f* Ctext/Ctext.Get_Highlight_Classes
       -- FUNCTION
       -- Get the list of all highlight classes for the widget
       -- PARAMETERS
@@ -405,7 +405,7 @@ package Tcl.Tklib.Ada.Ctext is
    function Get_Highlight_Classes(CtextWidget: in Tklib_Ctext) return String;
    -- ****
 
-   -- ****f* Ctext/Highlight
+   -- ****f* Ctext/Ctext.Highlight
    -- FUNCTION
    -- Highlight the text between the selected indexes
    -- PARAMETERS
@@ -425,7 +425,7 @@ package Tcl.Tklib.Ada.Ctext is
       Pre => StartIndex /= "" and EndIndex /= "";
       -- ****
 
-      -- ****f* Ctext/Paste
+      -- ****f* Ctext/Ctext.Paste
       -- FUNCTION
       -- Call tk_textPaste for the Ctext widget
       -- PARAMETERS
