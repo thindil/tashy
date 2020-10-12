@@ -30,7 +30,7 @@ with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
 package Tcl.Tklib.Ada.Tooltip is
 -- ****
 
-   -- ****f* Tooltip/Tooltip_Init
+   -- ****f* Tooltip/Tooltip.Tooltip_Init
    -- FUNCTION
    -- Load package Tooltip. Raise Program_Error if package can't be loaded
    -- PARAMETERS
@@ -46,7 +46,7 @@ package Tcl.Tklib.Ada.Tooltip is
    procedure Tooltip_Init(Interp: in Tcl_Interp);
    -- ****
 
-   -- ****f* Tooltip/Add
+   -- ****f* Tooltip/Tooltip.Add
    -- FUNCTION
    -- Add the tooltip to selected Tk_Widget
    -- PARAMETERS
@@ -67,7 +67,7 @@ package Tcl.Tklib.Ada.Tooltip is
       Pre => Message /= "";
       -- ****
 
-      -- ****f* Tooltip/Clear
+      -- ****f* Tooltip/Tooltip.Clear
       -- FUNCTION
       -- Prevent the selected widgets from showing tooltips
       -- PARAMETERS
@@ -88,7 +88,7 @@ package Tcl.Tklib.Ada.Tooltip is
       Pre => Pattern /= "";
       -- ****
 
-      -- ****f* Tooltip/Tooltip_Delay (procedure)
+      -- ****f* Tooltip/Tooltip.Tooltip_Delay_(procedure)
       -- FUNCTION
       -- Set delay between show tooltip and moment when the pointer enters a
       -- widget
@@ -103,14 +103,14 @@ package Tcl.Tklib.Ada.Tooltip is
       -- COMMANDS
       -- :tooltip::tooltip delay milisecs
       -- SEE ALSO
-      -- Tooltip_Delay (function)
+      -- Tooltip.Tooltip_Delay_(function)
       -- SOURCE
    procedure Tooltip_Delay
      (Milisecs: in String; Interp: in Tcl_Interp := Get_Context) with
       Pre => Milisecs /= "";
       -- ****
 
-      -- ****f* Tooltip/Tooltip_Delay (function)
+      -- ****f* Tooltip/Tooltip.Tooltip_Delay_(function)
       -- FUNCTION
       -- Get the delay between show tooltip and moment when the pointer enters
       -- a widget
@@ -127,12 +127,12 @@ package Tcl.Tklib.Ada.Tooltip is
       -- COMMANDS
       -- :tooltip::tooltip delay
       -- SEE ALSO
-      -- Tooltip_Delay (procedure)
+      -- Tooltip.Tooltip_Delay_(procedure)
       -- SOURCE
    function Tooltip_Delay(Interp: in Tcl_Interp := Get_Context) return String;
    -- ****
 
-   -- ****f* Tooltip/Disable
+   -- ****f* Tooltip/Tooltip.Disable
    -- FUNCTION
    -- Disable all tooptips on the selected Tcl interpreter
    -- PARAMETERS
@@ -147,13 +147,13 @@ package Tcl.Tklib.Ada.Tooltip is
    -- :tooltip::tooltip disable
    -- :tooltip::tooltip off
    -- SEE ALSO
-   -- Enable
+   -- Tooltip.Enable
    -- SOURCE
    procedure Disable(Interp: in Tcl_Interp := Get_Context);
    procedure Off(Interp: in Tcl_Interp := Get_Context) renames Disable;
    -- ****
 
-   -- ****f* Tooltip/Enable
+   -- ****f* Tooltip/Tooltip.Enable
    -- FUNCTION
    -- Enable all tooptips on the selected Tcl interpreter
    -- PARAMETERS
@@ -168,13 +168,13 @@ package Tcl.Tklib.Ada.Tooltip is
    -- :tooltip::tooltip enable
    -- :tooltip::tooltip on
    -- SEE ALSO
-   -- Enable
+   -- Tooltip.Enable
    -- SOURCE
    procedure Enable(Interp: in Tcl_Interp := Get_Context);
    procedure On(Interp: in Tcl_Interp := Get_Context) renames Enable;
    -- ****
 
-   -- ****f* Tooltip/Fade
+   -- ****f* Tooltip/Tooltip.Fade
    -- FUNCTION
    -- Enable of disable fading of tooltips
    -- PARAMETERS
