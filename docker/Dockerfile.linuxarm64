@@ -2,7 +2,7 @@ FROM ghcr.io/thindil/gnat-arm64
 COPY . /app
 ENV TZ=Europe/Berlin
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
- && apt-get update && apt-get install -y \
+ && apt-get update && apt-get dist-upgrade -y && apt-get install -y \
  tcl-dev:arm64 \
  tk-dev:arm64 \
  gcc-aarch64-linux-gnu \

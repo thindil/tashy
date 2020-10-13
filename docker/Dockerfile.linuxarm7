@@ -2,7 +2,7 @@ FROM ghcr.io/thindil/gnat-arm7
 COPY . /app
 ENV TZ=Europe/Berlin
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
- && apt-get update && apt-get install -y \
+ && apt-get update && apt-get dist-upgrade -y && apt-get install -y \
  tcl-dev:armhf \
  tk-dev:armhf \
  gcc-arm-linux-gnueabihf \
