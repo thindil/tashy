@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 Tag **BREAKING:** means that change breaks compatibility with earlier version
 of the project.
 
-## [Unreleased]
+## [8.6.10] - 2020-10-13
 
 ### Changed
 - Updated code documentation
