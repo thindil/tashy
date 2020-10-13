@@ -232,7 +232,7 @@ package Tcl.Ada is
 
    end Generic_CloseHandler;
 
-   -- ****h* Ada/Ada.Generic_Command
+   -- ****h* Ada/Generic_Command
    -- FUNCTION
    -- Generic package to add new commands to Tcl
    -- SOURCE
@@ -353,7 +353,7 @@ package Tcl.Ada is
 
    end Generic_EventQueueAndNotifier;
 
-   -- ****h* Ada/Ada.Generic_ExitHandler
+   -- ****h* Ada/Generic_ExitHandler
    -- FUNCTION
    -- Generic packaged to add exit handlers to Tcl
    -- SOURCE
@@ -580,7 +580,7 @@ package Tcl.Ada is
 
    end Generic_ObjCommand;
 
-   -- ****h* Ada/Ada.Generic_PkgRequire
+   -- ****h* Ada/Generic_PkgRequire
    -- FUNCTION
    -- Generic package to manipulate Tcl packages
    -- SOURCE
