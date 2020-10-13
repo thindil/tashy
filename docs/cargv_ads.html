@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.9 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.10 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="./toc_index.html#top">Table of Contents</a>
@@ -27,16 +27,16 @@
 <ul>
 <li>1. <a href="#robo8">Tashy/CArgv</a></li>
 <ul>
-<li>1.1. <a href="#robo75">CArgv/Chars_Ptr_Ptr</a></li>
-<li>1.2. <a href="#robo76">CArgv/CNatural</a></li>
-<li>1.3. <a href="#robo77">CArgv/Vector</a></li>
-<li>1.4. <a href="#robo188">CArgv/"&amp;"</a></li>
-<li>1.5. <a href="#robo189">CArgv/Arg</a></li>
-<li>1.6. <a href="#robo190">CArgv/Argc</a></li>
-<li>1.7. <a href="#robo191">CArgv/Create</a></li>
-<li>1.8. <a href="#robo192">CArgv/Empty</a></li>
-<li>1.9. <a href="#robo193">CArgv/Free</a></li>
-<li>1.10. <a href="#robo194">CArgv/Show</a></li>
+<li>1.1. <a href="#robo75">CArgv/CArgv.Chars_Ptr_Ptr</a></li>
+<li>1.2. <a href="#robo76">CArgv/CArgv.CNatural</a></li>
+<li>1.3. <a href="#robo77">CArgv/CArgv.Vector</a></li>
+<li>1.4. <a href="#robo188">CArgv/CArgv."&amp;"</a></li>
+<li>1.5. <a href="#robo189">CArgv/CArgv.Arg</a></li>
+<li>1.6. <a href="#robo190">CArgv/CArgv.Argc</a></li>
+<li>1.7. <a href="#robo191">CArgv/CArgv.Create</a></li>
+<li>1.8. <a href="#robo192">CArgv/CArgv.Empty</a></li>
+<li>1.9. <a href="#robo193">CArgv/CArgv.Free</a></li>
+<li>1.10. <a href="#robo194">CArgv/CArgv.Show</a></li>
 </ul>
 </ul>
 <hr />
@@ -45,7 +45,7 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre>  This package provides the data type <a href="#robo75">Chars_Ptr_Ptr</a> which corresponds
+<pre>  This package provides the data type Chars_Ptr_Ptr which corresponds
   to the char** of C and subprograms for creating and manipulating
   arrays of C strings.
 </pre>
@@ -54,129 +54,129 @@
 </pre>
 
 <hr />
-<a name="CArgv2fChars5fPtr5fPtr"></a>
-<a name="robo75"></a><h2>CArgv/Chars_Ptr_Ptr [ Types ]</h2>
+<a name="CArgv2fCArgv2eChars5fPtr5fPtr"></a>
+<a name="robo75"></a><h2>CArgv/CArgv.Chars_Ptr_Ptr [ Types ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo8">CArgv</a> ] [ <a href="./robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> This is C char **
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">subtype</span> <strong>Chars_Ptr_Ptr</strong> <span class="keyword">is</span> Argv_Pointer<span class="sign">.</span>Pointer<span class="sign">;</span>
+<pre class="source">   <span class="keyword">subtype</span> Chars_Ptr_Ptr <span class="keyword">is</span> Argv_Pointer<span class="sign">.</span>Pointer<span class="sign">;</span>
 </pre>
 
 <hr />
-<a name="CArgv2fCNatural"></a>
-<a name="robo76"></a><h2>CArgv/CNatural [ Types ]</h2>
+<a name="CArgv2fCArgv2eCNatural"></a>
+<a name="robo76"></a><h2>CArgv/CArgv.CNatural [ Types ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo8">CArgv</a> ] [ <a href="./robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Used as natural integer type in C bindings
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">subtype</span> <strong>CNatural</strong> <span class="keyword">is</span> C<span class="sign">.</span>int <span class="keyword">range</span> 0 <span class="sign">.</span><span class="sign">.</span> C<span class="sign">.</span>int<span class="keyword">'Last</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">subtype</span> CNatural <span class="keyword">is</span> C<span class="sign">.</span>int <span class="keyword">range</span> 0 <span class="sign">.</span><span class="sign">.</span> C<span class="sign">.</span>int<span class="keyword">'Last</span><span class="sign">;</span>
 </pre>
 
 <hr />
-<a name="CArgv2fVector"></a>
-<a name="robo77"></a><h2>CArgv/Vector [ Types ]</h2>
+<a name="CArgv2fCArgv2eVector"></a>
+<a name="robo77"></a><h2>CArgv/CArgv.Vector [ Types ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo8">CArgv</a> ] [ <a href="./robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> This is a C-style "argv" vector.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">type</span> <strong>Vector</strong> <span class="keyword">is</span> <span class="keyword">array</span><span class="sign">(</span><a href="#robo76">CNatural</a> <span class="keyword">range</span> <span class="sign">&lt;</span><span class="sign">&gt;</span><span class="sign">)</span> <span class="keyword">of</span> <span class="keyword">aliased</span> C<span class="sign">.</span>Strings<span class="sign">.</span>chars_ptr<span class="sign">;</span>
+<pre class="source">   <span class="keyword">type</span> Vector <span class="keyword">is</span> <span class="keyword">array</span><span class="sign">(</span>CNatural <span class="keyword">range</span> <span class="sign">&lt;</span><span class="sign">&gt;</span><span class="sign">)</span> <span class="keyword">of</span> <span class="keyword">aliased</span> C<span class="sign">.</span>Strings<span class="sign">.</span>chars_ptr<span class="sign">;</span>
 </pre>
 
 <hr />
-<a name="CArgv2f222622"></a>
-<a name="robo188"></a><h2>CArgv/"&amp;" [ Subprograms ]</h2>
+<a name="CArgv2fCArgv2e222622"></a>
+<a name="robo188"></a><h2>CArgv/CArgv."&amp;" [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo8">CArgv</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Construct a <a href="#robo75">Chars_Ptr_Ptr</a> using concat operation.
+<pre> Construct a Chars_Ptr_Ptr using concat operation.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <span class="quote">"&amp<span class="sign">;</span>"</span><span class="sign">(</span>Argv<span class="sign">:</span> <a href="#robo75">Chars_Ptr_Ptr</a><span class="sign">;</span> <a href="#robo189">Arg</a><span class="sign">:</span> String<span class="sign">)</span> <span class="keyword">return</span> <a href="#robo75">Chars_Ptr_Ptr</a><span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> <span class="quote">"&amp<span class="sign">;</span>"</span><span class="sign">(</span>Argv<span class="sign">:</span> Chars_Ptr_Ptr<span class="sign">;</span> Arg<span class="sign">:</span> String<span class="sign">)</span> <span class="keyword">return</span> Chars_Ptr_Ptr<span class="sign">;</span>
 </pre>
 
 <hr />
-<a name="CArgv2fArg"></a>
-<a name="robo189"></a><h2>CArgv/Arg [ Subprograms ]</h2>
+<a name="CArgv2fCArgv2eArg"></a>
+<a name="robo189"></a><h2>CArgv/CArgv.Arg [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo8">CArgv</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Returns the Nth argument from Argv.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Arg</strong><span class="sign">(</span>Argv<span class="sign">:</span> <a href="#robo75">Chars_Ptr_Ptr</a><span class="sign">;</span> N<span class="sign">:</span> <a href="#robo76">CNatural</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> Arg<span class="sign">(</span>Argv<span class="sign">:</span> Chars_Ptr_Ptr<span class="sign">;</span> N<span class="sign">:</span> CNatural<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 
 <hr />
-<a name="CArgv2fArgc"></a>
-<a name="robo190"></a><h2>CArgv/Argc [ Subprograms ]</h2>
+<a name="CArgv2fCArgv2eArgc"></a>
+<a name="robo190"></a><h2>CArgv/CArgv.Argc [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo8">CArgv</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Returns the number of arguments in a <a href="#robo75">Chars_Ptr_Ptr</a>.
+<pre> Returns the number of arguments in a Chars_Ptr_Ptr.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Argc</strong><span class="sign">(</span>Argv<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo75">Chars_Ptr_Ptr</a><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo76">CNatural</a><span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> Argc<span class="sign">(</span>Argv<span class="sign">:</span> <span class="keyword">in</span> Chars_Ptr_Ptr<span class="sign">)</span> <span class="keyword">return</span> CNatural<span class="sign">;</span>
 </pre>
 
 <hr />
-<a name="CArgv2fCreate"></a>
-<a name="robo191"></a><h2>CArgv/Create [ Subprograms ]</h2>
+<a name="CArgv2fCArgv2eCreate"></a>
+<a name="robo191"></a><h2>CArgv/CArgv.Create [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo8">CArgv</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <strong>Create</strong> returns the command line arguments from <a href="./tcl-ada_ads.html#robo11">Ada</a>.Command_Line
+<pre> Create returns the command line arguments from <a href="./tcl-ada_ads.html#robo11">Ada</a>.Command_Line
  and converts them to a C-style, null-terminated argument vector.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Create</strong><span class="sign">(</span><a href="#robo190">Argc</a><span class="sign">:</span> <span class="keyword">out</span> <a href="#robo76">CNatural</a><span class="sign">;</span> Argv<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo75">Chars_Ptr_Ptr</a><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> Create<span class="sign">(</span>Argc<span class="sign">:</span> <span class="keyword">out</span> CNatural<span class="sign">;</span> Argv<span class="sign">:</span> <span class="keyword">out</span> Chars_Ptr_Ptr<span class="sign">)</span><span class="sign">;</span>
 </pre>
 
 <hr />
-<a name="CArgv2fEmpty"></a>
-<a name="robo192"></a><h2>CArgv/Empty [ Subprograms ]</h2>
+<a name="CArgv2fCArgv2eEmpty"></a>
+<a name="robo192"></a><h2>CArgv/CArgv.Empty [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo8">CArgv</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> An empty <a href="#robo75">Chars_Ptr_Ptr</a>, used for constructors.
+<pre> An empty Chars_Ptr_Ptr, used for constructors.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Empty</strong> <span class="keyword">return</span> <a href="#robo75">Chars_Ptr_Ptr</a><span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> Empty <span class="keyword">return</span> Chars_Ptr_Ptr<span class="sign">;</span>
 </pre>
 
 <hr />
-<a name="CArgv2fFree"></a>
-<a name="robo193"></a><h2>CArgv/Free [ Subprograms ]</h2>
+<a name="CArgv2fCArgv2eFree"></a>
+<a name="robo193"></a><h2>CArgv/CArgv.Free [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo8">CArgv</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <strong>Free</strong> all space used by Argv.
+<pre> Free all space used by Argv.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Free</strong><span class="sign">(</span>Argv<span class="sign">:</span> <span class="keyword">in</span> <span class="keyword">out</span> <a href="#robo75">Chars_Ptr_Ptr</a><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> Free<span class="sign">(</span>Argv<span class="sign">:</span> <span class="keyword">in</span> <span class="keyword">out</span> Chars_Ptr_Ptr<span class="sign">)</span><span class="sign">;</span>
 </pre>
 
 <hr />
-<a name="CArgv2fShow"></a>
-<a name="robo194"></a><h2>CArgv/Show [ Subprograms ]</h2>
+<a name="CArgv2fCArgv2eShow"></a>
+<a name="robo194"></a><h2>CArgv/CArgv.Show [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo8">CArgv</a> ] [ <a href="./robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Prints <a href="#robo190">Argc</a> and Argv to standard out.
+<pre> Prints Argc and Argv to standard out.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Show</strong><span class="sign">(</span><a href="#robo190">Argc</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo76">CNatural</a><span class="sign">;</span> Argv<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo75">Chars_Ptr_Ptr</a><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> Show<span class="sign">(</span>Argc<span class="sign">:</span> <span class="keyword">in</span> CNatural<span class="sign">;</span> Argv<span class="sign">:</span> <span class="keyword">in</span> Chars_Ptr_Ptr<span class="sign">)</span><span class="sign">;</span>
 </pre>
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/cargv.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 30 2020 09:32:20
+<p>Generated from ./src/cargv.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Oct 13 2020 07:44:18
 </p>
 </div> <!-- footer -->
 </body>

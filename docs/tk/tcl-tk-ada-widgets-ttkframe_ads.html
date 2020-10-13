@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.9 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.10 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,10 +27,10 @@
 <ul>
 <li>1. <a href="#robo59">Widgets/TtkFrame</a></li>
 <ul>
-<li>1.1. <a href="#robo107">TtkFrame/Ttk_Frame</a></li>
-<li>1.2. <a href="#robo612">TtkFrame/Create (function)</a></li>
-<li>1.3. <a href="#robo613">TtkFrame/Create (procedure)</a></li>
-<li>1.4. <a href="#robo614">TtkFrame/Get_Widget</a></li>
+<li>1.1. <a href="#robo107">TtkFrame/TtkFrame.Ttk_Frame</a></li>
+<li>1.2. <a href="#robo612">TtkFrame/TtkFrame.Create_(function)</a></li>
+<li>1.3. <a href="#robo613">TtkFrame/TtkFrame.Create_(procedure)</a></li>
+<li>1.4. <a href="#robo614">TtkFrame/TtkFrame.Get_Widget</a></li>
 </ul>
 </ul>
 <hr />
@@ -46,31 +46,31 @@
 </pre>
 
 <hr />
-<a name="TtkFrame2fTtk5fFrame"></a>
-<a name="robo107"></a><h2>TtkFrame/Ttk_Frame [ Types ]</h2>
+<a name="TtkFrame2fTtkFrame2eTtk5fFrame"></a>
+<a name="robo107"></a><h2>TtkFrame/TtkFrame.Ttk_Frame [ Types ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkFrame</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a>.
- Each of the derived widgets redefines the <a href="../cargv_ads.html#robo191">Create</a> subprogram
+<pre> This is a non-abstract type derived directly from Tk_Widget.
+ Each of the derived widgets redefines the Create subprogram
  in order to create the correct type of widget.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">type</span> <strong>Ttk_Frame</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">type</span> Ttk_Frame <span class="keyword">is</span> <span class="keyword">new</span> Tk_Widget <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
 </pre>
 
 <hr />
-<a name="TtkFrame2fCreate2028function29"></a>
-<a name="robo612"></a><h2>TtkFrame/Create (function) [ Subprograms ]</h2>
+<a name="TtkFrame2fTtkFrame2eCreate5f28function29"></a>
+<a name="robo612"></a><h2>TtkFrame/TtkFrame.Create_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkFrame</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Creates a new <a href="#robo107">Ttk_Frame</a> in the specified interpreter.
+<pre> Creates a new Ttk_Frame in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="../cargv_ads.html#robo191">Create</a>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> Create
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo107">Ttk_Frame</a> <span class="keyword">with</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> Ttk_Frame <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
@@ -82,14 +82,14 @@
             Default value is null.
 </pre>
 <p class="item_name">RESULT</p>
-<pre> Newly created <a href="#robo107">Ttk_Frame</a>
+<pre> Newly created Ttk_Frame
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="../cargv_ads.html#robo191">Create</a> a new frame <span class="keyword">with</span> pathname .myframe</span>
-   My_Frame<span class="sign">:</span> <span class="keyword">constant</span> <a href="#robo107">Ttk_Frame</a> <span class="sign">:</span><span class="sign">=</span> <a href="../cargv_ads.html#robo191">Create</a><span class="sign">(</span><span class="quote">".myframe"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="comment">-- Create a new frame <span class="keyword">with</span> pathname .myframe</span>
+   My_Frame<span class="sign">:</span> <span class="keyword">constant</span> Ttk_Frame <span class="sign">:</span><span class="sign">=</span> Create<span class="sign">(</span><span class="quote">".myframe"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="../cargv_ads.html#robo191">Create</a> (procedure)
+<pre> <a href="#robo613">TtkFrame.Create_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ttk::frame pathName ?options?
@@ -99,21 +99,21 @@
 </pre>
 
 <hr />
-<a name="TtkFrame2fCreate2028procedure29"></a>
-<a name="robo613"></a><h2>TtkFrame/Create (procedure) [ Subprograms ]</h2>
+<a name="TtkFrame2fTtkFrame2eCreate5f28procedure29"></a>
+<a name="robo613"></a><h2>TtkFrame/TtkFrame.Create_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkFrame</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Creates a new <a href="#robo107">Ttk_Frame</a> in the specified interpreter.
+<pre> Creates a new Ttk_Frame in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> <a href="../cargv_ads.html#robo191">Create</a>
-     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo107">Ttk_Frame</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> Create
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> Ttk_Frame<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
       Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Widgt    - <a href="#robo107">Ttk_Frame</a> which will be created
+<pre> Widgt    - Ttk_Frame which will be created
  pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
  options  - Options which will be passed to the widget. Default value is
             empty
@@ -122,18 +122,18 @@
             Default value is null.
 </pre>
 <p class="item_name">OUTPUT</p>
-<pre> Newly created <a href="#robo107">Ttk_Frame</a> as parameter Widgt
+<pre> Newly created Ttk_Frame as parameter Widgt
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">     <span class="comment">-- <a href="../cargv_ads.html#robo191">Create</a> frame My_Frame <span class="keyword">with</span> pathname .myframe and <span class="keyword">with</span> relief raised on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+<pre class="source">     <span class="comment">-- Create frame My_Frame <span class="keyword">with</span> pathname .myframe and <span class="keyword">with</span> relief raised on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
      <span class="keyword">declare</span>
-        My_Frame<span class="sign">:</span> <a href="#robo107">Ttk_Frame</a><span class="sign">;</span>
+        My_Frame<span class="sign">:</span> Ttk_Frame<span class="sign">;</span>
      <span class="keyword">begin</span>
-        <a href="../cargv_ads.html#robo191">Create</a><span class="sign">(</span>My_Frame<span class="sign">,</span> <span class="quote">".myframe"</span><span class="sign">,</span> <span class="quote">"-relief raised"</span><span class="sign">)</span><span class="sign">;</span>
+        Create<span class="sign">(</span>My_Frame<span class="sign">,</span> <span class="quote">".myframe"</span><span class="sign">,</span> <span class="quote">"-relief raised"</span><span class="sign">)</span><span class="sign">;</span>
      <span class="keyword">end</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="../cargv_ads.html#robo191">Create</a> (function)
+<pre> <a href="#robo612">TtkFrame.Create_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ttk::frame pathName ?options?
@@ -143,17 +143,17 @@
 </pre>
 
 <hr />
-<a name="TtkFrame2fGet5fWidget"></a>
-<a name="robo614"></a><h2>TtkFrame/Get_Widget [ Subprograms ]</h2>
+<a name="TtkFrame2fTtkFrame2eGet5fWidget"></a>
+<a name="robo614"></a><h2>TtkFrame/TtkFrame.Get_Widget [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo59">TtkFrame</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the existing <a href="#robo107">Ttk_Frame</a> widget
+<pre> Get the existing Ttk_Frame widget
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <strong>Get_Widget</strong>
-     <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo519">Get_Context</a><span class="sign">)</span>
-      <span class="keyword">return</span> <a href="#robo107">Ttk_Frame</a><span class="sign">;</span>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> Get_Widget
+     <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Get_Context<span class="sign">)</span>
+      <span class="keyword">return</span> Ttk_Frame<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
@@ -161,11 +161,11 @@
             Default value is current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter
 </pre>
 <p class="item_name">RESULT</p>
-<pre> Existing <a href="#robo107">Ttk_Frame</a> widget
+<pre> Existing Ttk_Frame widget
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">     <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> frame widget <span class="keyword">with</span> name .myframe on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
-     My_Frame<span class="sign">:</span> <span class="keyword">constant</span> <a href="#robo107">Ttk_Frame</a> <span class="sign">:</span><span class="sign">=</span> <strong>Get_Widget</strong><span class="sign">(</span><span class="quote">".myframe"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">     <span class="comment">-- Get frame widget <span class="keyword">with</span> name .myframe on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+     My_Frame<span class="sign">:</span> <span class="keyword">constant</span> Ttk_Frame <span class="sign">:</span><span class="sign">=</span> Get_Widget<span class="sign">(</span><span class="quote">".myframe"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.9 - Added
@@ -173,7 +173,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-ttkframe.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 30 2020 09:32:20
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-ttkframe.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Oct 13 2020 07:44:18
 </p>
 </div> <!-- footer -->
 </body>

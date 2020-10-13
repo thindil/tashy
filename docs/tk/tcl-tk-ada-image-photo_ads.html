@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.9 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.10 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -61,12 +61,12 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo6">Photo</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a>.
- Each of the derived widgets redefines the <a href="../cargv_ads.html#robo191">Create</a> subprogram
+<pre> This is a non-abstract type derived directly from Tk_Widget.
+ Each of the derived widgets redefines the Create subprogram
  in order to create the correct type of widget.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">type</span> <strong>Tk_Photo</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">type</span> <strong>Tk_Photo</strong> <span class="keyword">is</span> <span class="keyword">new</span> Tk_Widget <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
 </pre>
 
 <hr />
@@ -78,7 +78,7 @@
 <pre> Creates a new <a href="#robo95">Tk_Photo</a> in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <a href="../cargv_ads.html#robo191">Create</a>
+<pre class="source">   <span class="keyword">procedure</span> Create
      <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo95">Tk_Photo</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
       Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> <span class="sign">(</span>pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
@@ -96,11 +96,11 @@
 <pre> Newly created <a href="#robo95">Tk_Photo</a> as parameter Widgt
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="../cargv_ads.html#robo191">Create</a> image Paint from file mypaint.gif on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+<pre class="source">      <span class="comment">-- Create image Paint from file mypaint.gif on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
       <span class="keyword">declare</span>
          My_Paint<span class="sign">:</span> <a href="#robo95">Tk_Photo</a><span class="sign">;</span>
       <span class="keyword">begin</span>
-         <a href="../cargv_ads.html#robo191">Create</a><span class="sign">(</span>My_Paint<span class="sign">,</span> <span class="quote">"Paint"</span><span class="sign">,</span> <span class="quote">"-file mypaint.gif"</span><span class="sign">)</span><span class="sign">;</span>
+         Create<span class="sign">(</span>My_Paint<span class="sign">,</span> <span class="quote">"Paint"</span><span class="sign">,</span> <span class="quote">"-file mypaint.gif"</span><span class="sign">)</span><span class="sign">;</span>
       <span class="keyword">end</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
@@ -144,10 +144,10 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo6">Photo</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="../tklib/tcl-tklib-ada-ctext_ads.html#robo214">Copy</a> one photo to another
+<pre> Copy one photo to another
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <a href="../tklib/tcl-tklib-ada-ctext_ads.html#robo214">Copy</a><span class="sign">(</span>Source<span class="sign">,</span> Target<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo95">Tk_Photo</a><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> Copy<span class="sign">(</span>Source<span class="sign">,</span> Target<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo95">Tk_Photo</a><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Source  - <a href="#robo95">Tk_Photo</a> which will be used as source
@@ -156,8 +156,8 @@
            empty
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="../tklib/tcl-tklib-ada-ctext_ads.html#robo214">Copy</a> image My_Image to Other_Image and shrink it</span>
-   <a href="../tklib/tcl-tklib-ada-ctext_ads.html#robo214">Copy</a><span class="sign">(</span>My_Image<span class="sign">,</span> Other_Image<span class="sign">,</span> <span class="quote">"-shrink"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="comment">-- Copy image My_Image to Other_Image and shrink it</span>
+   Copy<span class="sign">(</span>My_Image<span class="sign">,</span> Other_Image<span class="sign">,</span> <span class="quote">"-shrink"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> target copy source ?option value(s) ...?
@@ -175,7 +175,7 @@
 <pre> Creates a new <a href="#robo95">Tk_Photo</a> in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <a href="../cargv_ads.html#robo191">Create</a>
+<pre class="source">   <span class="keyword">function</span> Create
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
       Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo95">Tk_Photo</a> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> <span class="sign">(</span>pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
@@ -192,8 +192,8 @@
 <pre> Newly created <a href="#robo95">Tk_Photo</a>
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="../cargv_ads.html#robo191">Create</a> image Logo from file mylogo.png on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
-   My_Logo<span class="sign">:</span> <span class="keyword">constant</span> <a href="#robo95">Tk_Photo</a> <span class="sign">:</span><span class="sign">=</span> <a href="../cargv_ads.html#robo191">Create</a><span class="sign">(</span><span class="quote">"Logo"</span><span class="sign">,</span> <span class="quote">"-file mylogo.png"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="comment">-- Create image Logo from file mylogo.png on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+   My_Logo<span class="sign">:</span> <span class="keyword">constant</span> <a href="#robo95">Tk_Photo</a> <span class="sign">:</span><span class="sign">=</span> Create<span class="sign">(</span><span class="quote">"Logo"</span><span class="sign">,</span> <span class="quote">"-file mylogo.png"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
 <pre> <a href="#robo6">Photo</a>.<a href="#robo382">Create_(procedure)</a>
@@ -211,7 +211,7 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo6">Photo</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the selected image data
+<pre> Get the selected image data
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Data<span class="sign">(</span><a href="./tcl-tk-ada-image_ads.html#robo22">Image</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo95">Tk_Photo</a><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
@@ -224,7 +224,7 @@
 <pre> <a href="./tcl-tk-ada-image_ads.html#robo22">Image</a> data, all if options are empty or specified option data
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the data of the My_Image from <span class="sign">(</span>0<span class="sign">,</span>5<span class="sign">)</span> point to <span class="sign">(</span>10<span class="sign">,</span>10)</span>
+<pre class="source">   <span class="comment">-- Get the data of the My_Image from <span class="sign">(</span>0<span class="sign">,</span>5<span class="sign">)</span> point to <span class="sign">(</span>10<span class="sign">,</span>10)</span>
    ImageData<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Data<span class="sign">(</span>My_Image<span class="sign">,</span> <span class="quote">"0"</span><span class="sign">,</span> <span class="quote">"5"</span><span class="sign">,</span> <span class="quote">"10"</span><span class="sign">,</span> <span class="quote">"10"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
@@ -240,10 +240,10 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo6">Photo</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> color of the selected pixel in the image
+<pre> Get color of the selected pixel in the image
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a><span class="sign">(</span><a href="./tcl-tk-ada-image_ads.html#robo22">Image</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo95">Tk_Photo</a><span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+<pre class="source">   <span class="keyword">function</span> Get<span class="sign">(</span><a href="./tcl-tk-ada-image_ads.html#robo22">Image</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo95">Tk_Photo</a><span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
@@ -255,8 +255,8 @@
 <pre> Three values of colors red, green, blue from 0 to 255
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the color of the pixel at <span class="sign">(</span>1<span class="sign">,</span> 4<span class="sign">)</span> of the My_Image</span>
-   PixelColor<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a><span class="sign">(</span>My_Image<span class="sign">,</span> <span class="quote">"1"</span><span class="sign">,</span> <span class="quote">"4"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="comment">-- Get the color of the pixel at <span class="sign">(</span>1<span class="sign">,</span> 4<span class="sign">)</span> of the My_Image</span>
+   PixelColor<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Get<span class="sign">(</span>My_Image<span class="sign">,</span> <span class="quote">"1"</span><span class="sign">,</span> <span class="quote">"4"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> imageName get x y
@@ -271,11 +271,11 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo6">Photo</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the existing <a href="#robo95">Tk_Photo</a> image
+<pre> Get the existing <a href="#robo95">Tk_Photo</a> image
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="./tcl-tk-ada-widgets-frame_ads.html#robo258">Get_Widget</a>
-     <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo519">Get_Context</a><span class="sign">)</span>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> Get_Widget
+     <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Get_Context<span class="sign">)</span>
       <span class="keyword">return</span> <a href="#robo95">Tk_Photo</a><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
@@ -287,8 +287,8 @@
 <pre> Existing <a href="#robo95">Tk_Photo</a> image
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">     <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> photo image <span class="keyword">with</span> name .myphoto on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
-     My_Photo<span class="sign">:</span> <span class="keyword">constant</span> <a href="#robo95">Tk_Photo</a> <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada-widgets-frame_ads.html#robo258">Get_Widget</a><span class="sign">(</span><span class="quote">".myphoto"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">     <span class="comment">-- Get photo image <span class="keyword">with</span> name .myphoto on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+     My_Photo<span class="sign">:</span> <span class="keyword">constant</span> <a href="#robo95">Tk_Photo</a> <span class="sign">:</span><span class="sign">=</span> Get_Widget<span class="sign">(</span><span class="quote">".myphoto"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.9 - Added
@@ -300,7 +300,7 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo6">Photo</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> pixels in the selected <a href="#robo95">Tk_Photo</a> to specified data
+<pre> Set pixels in the selected <a href="#robo95">Tk_Photo</a> to specified data
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Put
@@ -314,7 +314,7 @@
            Default value is empty
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> all pixels of the My_Image to red color</span>
+<pre class="source">      <span class="comment">-- Set all pixels of the My_Image to red color</span>
       Put<span class="sign">(</span>My_Image<span class="sign">,</span> <span class="quote">"red"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
@@ -386,7 +386,7 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo6">Photo</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the selected pixel transparency in the selected image
+<pre> Get the selected pixel transparency in the selected image
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Transparency_Get
@@ -402,7 +402,7 @@
 <pre> If pixel is transparent return true, otherwise false
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the transparency of the pixel <span class="sign">(</span>5<span class="sign">,</span> 12<span class="sign">)</span> at My_Image</span>
+<pre class="source">   <span class="comment">-- Get the transparency of the pixel <span class="sign">(</span>5<span class="sign">,</span> 12<span class="sign">)</span> at My_Image</span>
    Transparency<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Transparency_Get<span class="sign">(</span>My_Image<span class="sign">,</span> <span class="quote">"5"</span><span class="sign">,</span> <span class="quote">"12"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
@@ -418,20 +418,20 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo6">Photo</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> transparency for the selected pixel in the selected image
+<pre> Set transparency for the selected pixel in the selected image
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> Transparency_Set<span class="sign">(</span><a href="./tcl-tk-ada-image_ads.html#robo22">Image</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo95">Tk_Photo</a><span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">,</span> <a href="../tklib/tcl-tklib-ada-tooltip_ads.html#robo574">Enable</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> <a href="../tklib/tcl-tklib-ada-tooltip_ads.html#robo574">Enable</a> <span class="keyword">in</span> <span class="quote">"true"</span> <span class="sign">|</span> <span class="quote">"false"</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> Transparency_Set<span class="sign">(</span><a href="./tcl-tk-ada-image_ads.html#robo22">Image</a><span class="sign">:</span> <span class="keyword">in</span> <a href="#robo95">Tk_Photo</a><span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">,</span> Enable<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Enable <span class="keyword">in</span> <span class="quote">"true"</span> <span class="sign">|</span> <span class="quote">"false"</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> <a href="./tcl-tk-ada-image_ads.html#robo22">Image</a>  - <a href="#robo95">Tk_Photo</a> in which pixel transparency will be set
  X      - X coordinate of the pixel which transparency will be set
  Y      - Y coordinate of the pixel which transparency will be set
- <a href="../tklib/tcl-tklib-ada-tooltip_ads.html#robo574">Enable</a> - If true, enable transparency, otherwise disable it
+ Enable - If true, enable transparency, otherwise disable it
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="../tklib/tcl-tklib-ada-tooltip_ads.html#robo574">Enable</a> transparency for pixel <span class="sign">(</span>7<span class="sign">,</span> 12<span class="sign">)</span> <span class="keyword">in</span> My_Image</span>
+<pre class="source">      <span class="comment">-- Enable transparency for pixel <span class="sign">(</span>7<span class="sign">,</span> 12<span class="sign">)</span> <span class="keyword">in</span> My_Image</span>
       Transparency_Set<span class="sign">(</span>My_Image<span class="sign">,</span> <span class="quote">"7"</span><span class="sign">,</span> <span class="quote">"12"</span><span class="sign">,</span> <span class="quote">"true"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
@@ -474,7 +474,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-image-photo.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 30 2020 09:32:20
+<p>Generated from ./src/tk/tcl-tk-ada-image-photo.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Oct 13 2020 07:44:18
 </p>
 </div> <!-- footer -->
 </body>

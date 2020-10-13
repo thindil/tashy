@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.9 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.10 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,13 +27,13 @@
 <ul>
 <li>1. <a href="#robo65">Widgets/TtkProgressBar</a></li>
 <ul>
-<li>1.1. <a href="#robo113">TtkProgressBar/Ttk_ProgressBar</a></li>
-<li>1.2. <a href="#robo652">TtkProgressBar/Create (function)</a></li>
-<li>1.3. <a href="#robo653">TtkProgressBar/Create (procedure)</a></li>
-<li>1.4. <a href="#robo654">TtkProgressBar/Get_Widget</a></li>
-<li>1.5. <a href="#robo655">TtkProgressBar/Start</a></li>
-<li>1.6. <a href="#robo656">TtkProgressBar/Step</a></li>
-<li>1.7. <a href="#robo657">TtkProgressBar/Stop</a></li>
+<li>1.1. <a href="#robo113">TtkProgressBar/TtkProgressBar.Ttk_ProgressBar</a></li>
+<li>1.2. <a href="#robo652">TtkProgressBar/TtkProgressBar.Create_(function)</a></li>
+<li>1.3. <a href="#robo653">TtkProgressBar/TtkProgressBar.Create_(procedure)</a></li>
+<li>1.4. <a href="#robo654">TtkProgressBar/TtkProgressBar.Get_Widget</a></li>
+<li>1.5. <a href="#robo655">TtkProgressBar/TtkProgressBar.Start</a></li>
+<li>1.6. <a href="#robo656">TtkProgressBar/TtkProgressBar.Step</a></li>
+<li>1.7. <a href="#robo657">TtkProgressBar/TtkProgressBar.Stop</a></li>
 </ul>
 </ul>
 <hr />
@@ -49,31 +49,31 @@
 </pre>
 
 <hr />
-<a name="TtkProgressBar2fTtk5fProgressBar"></a>
-<a name="robo113"></a><h2>TtkProgressBar/Ttk_ProgressBar [ Types ]</h2>
+<a name="TtkProgressBar2fTtkProgressBar2eTtk5fProgressBar"></a>
+<a name="robo113"></a><h2>TtkProgressBar/TtkProgressBar.Ttk_ProgressBar [ Types ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo65">TtkProgressBar</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a>.
- Each of the derived widgets redefines the <a href="../cargv_ads.html#robo191">Create</a> subprogram
+<pre> This is a non-abstract type derived directly from Tk_Widget.
+ Each of the derived widgets redefines the Create subprogram
  in order to create the correct type of widget.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">type</span> <strong>Ttk_ProgressBar</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">type</span> Ttk_ProgressBar <span class="keyword">is</span> <span class="keyword">new</span> Tk_Widget <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
 </pre>
 
 <hr />
-<a name="TtkProgressBar2fCreate2028function29"></a>
-<a name="robo652"></a><h2>TtkProgressBar/Create (function) [ Subprograms ]</h2>
+<a name="TtkProgressBar2fTtkProgressBar2eCreate5f28function29"></a>
+<a name="robo652"></a><h2>TtkProgressBar/TtkProgressBar.Create_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo65">TtkProgressBar</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Creates a new <a href="#robo113">Ttk_ProgressBar</a> in the specified interpreter.
+<pre> Creates a new Ttk_ProgressBar in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="../cargv_ads.html#robo191">Create</a>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> Create
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo113">Ttk_ProgressBar</a> <span class="keyword">with</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> Ttk_ProgressBar <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
@@ -85,14 +85,14 @@
             Default value is null.
 </pre>
 <p class="item_name">RESULT</p>
-<pre> Newly created <a href="#robo113">Ttk_ProgressBar</a>
+<pre> Newly created Ttk_ProgressBar
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="../cargv_ads.html#robo191">Create</a> a new horizontal progressbar <span class="keyword">with</span> pathname .myprogress</span>
-   My_Progress<span class="sign">:</span> <span class="keyword">constant</span> <a href="#robo113">Ttk_ProgressBar</a> <span class="sign">:</span><span class="sign">=</span> <a href="../cargv_ads.html#robo191">Create</a><span class="sign">(</span><span class="quote">".myprogress"</span><span class="sign">,</span> <span class="quote">"-orient horizontal"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="comment">-- Create a new horizontal progressbar <span class="keyword">with</span> pathname .myprogress</span>
+   My_Progress<span class="sign">:</span> <span class="keyword">constant</span> Ttk_ProgressBar <span class="sign">:</span><span class="sign">=</span> Create<span class="sign">(</span><span class="quote">".myprogress"</span><span class="sign">,</span> <span class="quote">"-orient horizontal"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="../cargv_ads.html#robo191">Create</a> (procedure)
+<pre> <a href="#robo653">TtkProgressBar.Create_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ttk::progressbar pathName ?options?
@@ -102,21 +102,21 @@
 </pre>
 
 <hr />
-<a name="TtkProgressBar2fCreate2028procedure29"></a>
-<a name="robo653"></a><h2>TtkProgressBar/Create (procedure) [ Subprograms ]</h2>
+<a name="TtkProgressBar2fTtkProgressBar2eCreate5f28procedure29"></a>
+<a name="robo653"></a><h2>TtkProgressBar/TtkProgressBar.Create_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo65">TtkProgressBar</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Creates a new <a href="#robo113">Ttk_ProgressBar</a> in the specified interpreter.
+<pre> Creates a new Ttk_ProgressBar in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> <a href="../cargv_ads.html#robo191">Create</a>
-     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo113">Ttk_ProgressBar</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> Create
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> Ttk_ProgressBar<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
       options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Widgt    - <a href="#robo113">Ttk_ProgressBar</a> which will be created
+<pre> Widgt    - Ttk_ProgressBar which will be created
  pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
  options  - Options which will be passed to the widget. Default value is
             empty
@@ -125,18 +125,18 @@
             Default value is null.
 </pre>
 <p class="item_name">OUTPUT</p>
-<pre> Newly created <a href="#robo113">Ttk_ProgressBar</a> as parameter Widgt
+<pre> Newly created Ttk_ProgressBar as parameter Widgt
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">     <span class="comment">-- <a href="../cargv_ads.html#robo191">Create</a> vertical progressbar My_Progress <span class="keyword">with</span> pathname .myprogress on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+<pre class="source">     <span class="comment">-- Create vertical progressbar My_Progress <span class="keyword">with</span> pathname .myprogress on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
      <span class="keyword">declare</span>
-        My_Progress<span class="sign">:</span> <a href="#robo113">Ttk_ProgressBar</a><span class="sign">;</span>
+        My_Progress<span class="sign">:</span> Ttk_ProgressBar<span class="sign">;</span>
      <span class="keyword">begin</span>
-        <a href="../cargv_ads.html#robo191">Create</a><span class="sign">(</span>My_Progress<span class="sign">,</span> <span class="quote">".myprogress"</span><span class="sign">,</span> <span class="quote">"-orient vertical"</span><span class="sign">)</span><span class="sign">;</span>
+        Create<span class="sign">(</span>My_Progress<span class="sign">,</span> <span class="quote">".myprogress"</span><span class="sign">,</span> <span class="quote">"-orient vertical"</span><span class="sign">)</span><span class="sign">;</span>
      <span class="keyword">end</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="../cargv_ads.html#robo191">Create</a> (function)
+<pre> <a href="#robo652">TtkProgressBar.Create_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ttk::progressbar pathName ?options?
@@ -146,17 +146,17 @@
 </pre>
 
 <hr />
-<a name="TtkProgressBar2fGet5fWidget"></a>
-<a name="robo654"></a><h2>TtkProgressBar/Get_Widget [ Subprograms ]</h2>
+<a name="TtkProgressBar2fTtkProgressBar2eGet5fWidget"></a>
+<a name="robo654"></a><h2>TtkProgressBar/TtkProgressBar.Get_Widget [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo65">TtkProgressBar</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the existing <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo116">Ttk_Scrollbar</a> widget
+<pre> Get the existing Ttk_Scrollbar widget
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <strong>Get_Widget</strong>
-     <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo519">Get_Context</a><span class="sign">)</span>
-      <span class="keyword">return</span> <a href="#robo113">Ttk_ProgressBar</a><span class="sign">;</span>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> Get_Widget
+     <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Get_Context<span class="sign">)</span>
+      <span class="keyword">return</span> Ttk_ProgressBar<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
@@ -164,35 +164,35 @@
             Default value is current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter
 </pre>
 <p class="item_name">RESULT</p>
-<pre> Existing <a href="#robo113">Ttk_ProgressBar</a> widget
+<pre> Existing Ttk_ProgressBar widget
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">     <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> progressbar widget <span class="keyword">with</span> name .myprogress on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
-     My_Progress<span class="sign">:</span> <span class="keyword">constant</span> <a href="#robo113">Ttk_ProgressBar</a> <span class="sign">:</span><span class="sign">=</span> <strong>Get_Widget</strong><span class="sign">(</span><span class="quote">".myprogress"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">     <span class="comment">-- Get progressbar widget <span class="keyword">with</span> name .myprogress on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+     My_Progress<span class="sign">:</span> <span class="keyword">constant</span> Ttk_ProgressBar <span class="sign">:</span><span class="sign">=</span> Get_Widget<span class="sign">(</span><span class="quote">".myprogress"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.9 - Added
 </pre>
 
 <hr />
-<a name="TtkProgressBar2fStart"></a>
-<a name="robo655"></a><h2>TtkProgressBar/Start [ Subprograms ]</h2>
+<a name="TtkProgressBar2fTtkProgressBar2eStart"></a>
+<a name="robo655"></a><h2>TtkProgressBar/TtkProgressBar.Start [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo65">TtkProgressBar</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Begin autoincrement mode, call <a href="#robo656">Step</a> every Interval miliseconds
+<pre> Begin autoincrement mode, call Step every Interval miliseconds
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Start</strong><span class="sign">(</span>Bar<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo113">Ttk_ProgressBar</a><span class="sign">;</span> Interval<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">"50"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> Start<span class="sign">(</span>Bar<span class="sign">:</span> <span class="keyword">in</span> Ttk_ProgressBar<span class="sign">;</span> Interval<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">"50"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Bar      - <a href="#robo113">Ttk_ProgressBar</a> in which autoincrement mode will be started
- Interval - Amount of miliseconds in which <a href="#robo656">Step</a> should be called.
+<pre> Bar      - Ttk_ProgressBar in which autoincrement mode will be started
+ Interval - Amount of miliseconds in which Step should be called.
             Default value is 50 (20 steps per second)
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">     <span class="comment">-- <strong>Start</strong> the autoincrement mode on My_Progress progressbar every 100 miliseconds</span>
-     <strong>Start</strong><span class="sign">(</span>My_Progress<span class="sign">,</span> <span class="quote">"100"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">     <span class="comment">-- Start the autoincrement mode on My_Progress progressbar every 100 miliseconds</span>
+     Start<span class="sign">(</span>My_Progress<span class="sign">,</span> <span class="quote">"100"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> Bar start ?interval?
@@ -202,24 +202,24 @@
 </pre>
 
 <hr />
-<a name="TtkProgressBar2fStep"></a>
-<a name="robo656"></a><h2>TtkProgressBar/Step [ Subprograms ]</h2>
+<a name="TtkProgressBar2fTtkProgressBar2eStep"></a>
+<a name="robo656"></a><h2>TtkProgressBar/TtkProgressBar.Step [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo65">TtkProgressBar</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Increment value of the <a href="#robo113">Ttk_ProgressBar</a> by amount
+<pre> Increment value of the Ttk_ProgressBar by amount
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Step</strong><span class="sign">(</span>Bar<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo113">Ttk_ProgressBar</a><span class="sign">;</span> Amount<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> Step<span class="sign">(</span>Bar<span class="sign">:</span> <span class="keyword">in</span> Ttk_ProgressBar<span class="sign">;</span> Amount<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Bar    - <a href="#robo113">Ttk_ProgressBar</a> which value will be modified
+<pre> Bar    - Ttk_ProgressBar which value will be modified
  Amount - Amount to incremement. If empty, then value is incremented
           by 1.0. Default value is empty
 </pre>
 <p class="item_name">EXAMPLE</p>
 <pre class="source">   <span class="comment">-- Increment My_Progress progressbar by 10</span>
-   <strong>Step</strong><span class="sign">(</span>My_Progress<span class="sign">,</span> <span class="quote">"10.0"</span><span class="sign">)</span><span class="sign">;</span>
+   Step<span class="sign">(</span>My_Progress<span class="sign">,</span> <span class="quote">"10.0"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> Bar step ?amount?
@@ -229,23 +229,23 @@
 </pre>
 
 <hr />
-<a name="TtkProgressBar2fStop"></a>
-<a name="robo657"></a><h2>TtkProgressBar/Stop [ Subprograms ]</h2>
+<a name="TtkProgressBar2fTtkProgressBar2eStop"></a>
+<a name="robo657"></a><h2>TtkProgressBar/TtkProgressBar.Stop [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo65">TtkProgressBar</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <strong>Stop</strong> autoincrement mode: cancels any recurring timer events in the
- selected <a href="#robo113">Ttk_ProgressBar</a>
+<pre> Stop autoincrement mode: cancels any recurring timer events in the
+ selected Ttk_ProgressBar
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Stop</strong><span class="sign">(</span>Bar<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo113">Ttk_ProgressBar</a><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> Stop<span class="sign">(</span>Bar<span class="sign">:</span> <span class="keyword">in</span> Ttk_ProgressBar<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Bar - <a href="#robo113">Ttk_ProgressBar</a> in which autoincrement mode will be stoped
+<pre> Bar - Ttk_ProgressBar in which autoincrement mode will be stoped
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <strong>Stop</strong> the autoincrement mode <span class="keyword">in</span> My_Progress progressbar</span>
-   <strong>Stop</strong><span class="sign">(</span>My_Progress<span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="comment">-- Stop the autoincrement mode <span class="keyword">in</span> My_Progress progressbar</span>
+   Stop<span class="sign">(</span>My_Progress<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> Bar stop
@@ -256,7 +256,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-ttkprogressbar.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 30 2020 09:32:20
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-ttkprogressbar.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Oct 13 2020 07:44:18
 </p>
 </div> <!-- footer -->
 </body>

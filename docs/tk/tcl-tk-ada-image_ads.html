@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.9 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.10 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -78,20 +78,20 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo22">Image</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo702">Delete</a> the selected image widget
+<pre> Delete the selected image widget
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo702">Delete</a><span class="sign">(</span>Img<span class="sign">:</span> <span class="keyword">in</span> <span class="keyword">out</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">);</span>
+<pre class="source">   <span class="keyword">procedure</span> Delete<span class="sign">(</span>Img<span class="sign">:</span> <span class="keyword">in</span> <span class="keyword">out</span> Tk_Widget<span class="keyword">'Class</span><span class="sign">);</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Img - <a href="#robo22">Image</a> to delete
 </pre>
 <p class="item_name">OUTPUT</p>
-<pre> <a href="../cargv_ads.html#robo192">Empty</a> parameter Img
+<pre> Empty parameter Img
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo702">Delete</a> image My_Image</span>
-   <a href="./tcl-tk-ada-widgets-ttktreeview_ads.html#robo702">Delete</a><span class="sign">(</span>My_Image<span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="comment">-- Delete image My_Image</span>
+   Delete<span class="sign">(</span>My_Image<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> image delete img
@@ -106,10 +106,10 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo22">Image</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the selected image height
+<pre> Get the selected image height
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> Height<span class="sign">(</span>Img<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> Height<span class="sign">(</span>Img<span class="sign">:</span> <span class="keyword">in</span> Tk_Widget<span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Img - <a href="#robo22">Image</a> to query
@@ -118,7 +118,7 @@
 <pre> The selected image height in pixels
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the height of the My_Image image</span>
+<pre class="source">   <span class="comment">-- Get the height of the My_Image image</span>
    Image_Height<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Height<span class="sign">(</span>My_Image<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
@@ -134,10 +134,10 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo22">Image</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> type of the selected image
+<pre> Get type of the selected image
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> Image_Type<span class="sign">(</span>Img<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> Image_Type<span class="sign">(</span>Img<span class="sign">:</span> <span class="keyword">in</span> Tk_Widget<span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Img - <a href="#robo22">Image</a> which type will be queried
@@ -146,7 +146,7 @@
 <pre> The selected image type
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the type of image My_Image</span>
+<pre class="source">   <span class="comment">-- Get the type of image My_Image</span>
    My_Image_Type<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Image_Type<span class="sign">(</span>My_Image<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
@@ -165,7 +165,7 @@
 <pre> Check if the selected image is used by any widget
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> Inuse<span class="sign">(</span>Img<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> Inuse<span class="sign">(</span>Img<span class="sign">:</span> <span class="keyword">in</span> Tk_Widget<span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Img - <a href="#robo22">Image</a> to check
@@ -190,7 +190,7 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo22">Image</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> names of all existing images
+<pre> Get names of all existing images
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Names <span class="keyword">return</span> String<span class="sign">;</span>
@@ -199,7 +199,7 @@
 <pre> List of names of all existing images or {} if no images exists
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the all existing images names</span>
+<pre class="source">   <span class="comment">-- Get the all existing images names</span>
    Images_List<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Names<span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
@@ -215,7 +215,7 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo22">Image</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> types of images available
+<pre> Get types of images available
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Types <span class="keyword">return</span> String<span class="sign">;</span>
@@ -224,7 +224,7 @@
 <pre> List of types of images available
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the all available types of images</span>
+<pre class="source">   <span class="comment">-- Get the all available types of images</span>
    Images_Types<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Types<span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
@@ -240,10 +240,10 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo22">Image</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the selected image width
+<pre> Get the selected image width
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> Width<span class="sign">(</span>Img<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> Width<span class="sign">(</span>Img<span class="sign">:</span> <span class="keyword">in</span> Tk_Widget<span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Img - <a href="#robo22">Image</a> to query
@@ -252,7 +252,7 @@
 <pre> The selected image width in pixels
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the width of My_Image image</span>
+<pre class="source">   <span class="comment">-- Get the width of My_Image image</span>
    Image_Width<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Width<span class="sign">(</span>My_Image<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
@@ -264,7 +264,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-image.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 30 2020 09:32:20
+<p>Generated from ./src/tk/tcl-tk-ada-image.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Oct 13 2020 07:44:18
 </p>
 </div> <!-- footer -->
 </body>

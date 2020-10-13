@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.9 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.10 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,8 +27,8 @@
 <ul>
 <li>1. <a href="#robo35">TklibAda/GetString</a></li>
 <ul>
-<li>1.1. <a href="#robo267">GetString/GetString_Init</a></li>
-<li>1.2. <a href="#robo268">GetString/Tk_Get_String</a></li>
+<li>1.1. <a href="#robo267">GetString/GetString.GetString_Init</a></li>
+<li>1.2. <a href="#robo268">GetString/GetString.Tk_Get_String</a></li>
 </ul>
 </ul>
 <hr />
@@ -44,22 +44,22 @@
 </pre>
 
 <hr />
-<a name="GetString2fGetString5fInit"></a>
-<a name="robo267"></a><h2>GetString/GetString_Init [ Subprograms ]</h2>
+<a name="GetString2fGetString2eGetString5fInit"></a>
+<a name="robo267"></a><h2>GetString/GetString.GetString_Init [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo35">GetString</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Load package <a href="#robo35">GetString</a>. <a href="../tk/tcl-tk-ada-widgets_ads.html#robo776">Raise</a> Program_Error if package can't be loaded
+<pre> Load package <a href="#robo35">GetString</a>. Raise Program_Error if package can't be loaded
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>GetString_Init</strong><span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> GetString_Init<span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Interp: <a href="../tcl_ads.html#robo10">Tcl</a> interpreter to which getstring package will be added
 </pre>
 <p class="item_name">EXAMPLE</p>
 <pre class="source">   <span class="comment">-- Init getstring package on My_Interp <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
-   <strong>GetString_Init</strong><span class="sign">(</span>My_Interp<span class="sign">)</span><span class="sign">;</span>
+   GetString_Init<span class="sign">(</span>My_Interp<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> package require getstring
@@ -69,15 +69,15 @@
 </pre>
 
 <hr />
-<a name="GetString2fTk5fGet5fString"></a>
-<a name="robo268"></a><h2>GetString/Tk_Get_String [ Subprograms ]</h2>
+<a name="GetString2fGetString2eTk5fGet5fString"></a>
+<a name="robo268"></a><h2>GetString/GetString.Tk_Get_String [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo35">GetString</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="../cargv_ads.html#robo191">Create</a> a dialog which prompts the user with text to input a text string.
+<pre> Create a dialog which prompts the user with text to input a text string.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Tk_Get_String</strong>
+<pre class="source">   <span class="keyword">function</span> Tk_Get_String
      <span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> DialogName<span class="sign">,</span> Variable<span class="sign">,</span> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo54">Text</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
       Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> DialogName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Variable <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo54">Text</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
@@ -95,9 +95,9 @@
 <pre> 1 if the user pressed Ok button, otherwise 0
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="../cargv_ads.html#robo191">Create</a> dialog .mygs <span class="keyword">with</span> text Enter text and and store entered text <span class="keyword">in</span> mytext <a href="../tcl_ads.html#robo10">Tcl</a> variable on My_Interp interpreter</span>
-   <span class="keyword">if</span> <strong>Tk_Get_String</strong><span class="sign">(</span>My_Interp<span class="sign">,</span> <span class="quote">".mygs"</span><span class="sign">,</span> <span class="quote">"mytext"</span><span class="sign">,</span> <span class="quote">"{Enter text}"</span><span class="sign">)</span> <span class="sign">=</span> <span class="quote">"1"</span> <span class="keyword">then</span>
-      <a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span>Text_IO<span class="sign">.</span>Put_Line<span class="sign">(</span><span class="quote">"Entered text<span class="sign">:</span> "</span> <span class="sign">&amp;</span> <a href="../tcl-ada_ads.html#robo124">Tcl_GetVar</a><span class="sign">(</span>My_Interp<span class="sign">,</span> <span class="quote">"mytext"</span><span class="sign">)</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="comment">-- Create dialog .mygs <span class="keyword">with</span> text Enter text and and store entered text <span class="keyword">in</span> mytext <a href="../tcl_ads.html#robo10">Tcl</a> variable on My_Interp interpreter</span>
+   <span class="keyword">if</span> Tk_Get_String<span class="sign">(</span>My_Interp<span class="sign">,</span> <span class="quote">".mygs"</span><span class="sign">,</span> <span class="quote">"mytext"</span><span class="sign">,</span> <span class="quote">"{Enter text}"</span><span class="sign">)</span> <span class="sign">=</span> <span class="quote">"1"</span> <span class="keyword">then</span>
+      <a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span>Text_IO<span class="sign">.</span>Put_Line<span class="sign">(</span><span class="quote">"Entered text<span class="sign">:</span> "</span> <span class="sign">&amp;</span> Tcl_GetVar<span class="sign">(</span>My_Interp<span class="sign">,</span> <span class="quote">"mytext"</span><span class="sign">)</span><span class="sign">)</span><span class="sign">;</span>
    <span class="keyword">end</span> <span class="keyword">if</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
@@ -109,7 +109,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tklib/tcl-tklib-ada-getstring.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 30 2020 09:32:20
+<p>Generated from ./src/tklib/tcl-tklib-ada-getstring.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Oct 13 2020 07:44:18
 </p>
 </div> <!-- footer -->
 </body>

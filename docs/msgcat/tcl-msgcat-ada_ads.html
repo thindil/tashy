@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.9 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.10 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,23 +27,23 @@
 <ul>
 <li>1. <a href="#robo7">MsgCat/MsgCatAda</a></li>
 <ul>
-<li>1.1. <a href="#robo341">MsgCatAda/Mc</a></li>
-<li>1.2. <a href="#robo342">MsgCatAda/Mc_Exists</a></li>
-<li>1.3. <a href="#robo343">MsgCatAda/Mc_Forget_Package</a></li>
-<li>1.4. <a href="#robo344">MsgCatAda/Mc_Load (function)</a></li>
-<li>1.5. <a href="#robo345">MsgCatAda/Mc_Load (procedure)</a></li>
-<li>1.6. <a href="#robo346">MsgCatAda/Mc_LoadedLocales_Clear</a></li>
-<li>1.7. <a href="#robo347">MsgCatAda/Mc_LoadedLocales_Get</a></li>
-<li>1.8. <a href="#robo348">MsgCatAda/Mc_LoadedLocales_Present</a></li>
-<li>1.9. <a href="#robo349">MsgCatAda/Mc_Locale (function)</a></li>
-<li>1.10. <a href="#robo350">MsgCatAda/Mc_Locale (procedure)</a></li>
-<li>1.11. <a href="#robo351">MsgCatAda/Mc_Max</a></li>
-<li>1.12. <a href="#robo352">MsgCatAda/Mc_Mset (function)</a></li>
-<li>1.13. <a href="#robo353">MsgCatAda/Mc_Mset (procedure)</a></li>
-<li>1.14. <a href="#robo354">MsgCatAda/Mc_Preferences</a></li>
-<li>1.15. <a href="#robo355">MsgCatAda/Mc_Set (function)</a></li>
-<li>1.16. <a href="#robo356">MsgCatAda/Mc_Set (procedure)</a></li>
-<li>1.17. <a href="#robo357">MsgCatAda/MsgCat_Init</a></li>
+<li>1.1. <a href="#robo341">MsgCatAda/MsgCatAda.Mc</a></li>
+<li>1.2. <a href="#robo342">MsgCatAda/MsgCatAda.Mc_Exists</a></li>
+<li>1.3. <a href="#robo343">MsgCatAda/MsgCatAda.Mc_Forget_Package</a></li>
+<li>1.4. <a href="#robo344">MsgCatAda/MsgCatAda.Mc_Load_(function)</a></li>
+<li>1.5. <a href="#robo345">MsgCatAda/MsgCatAda.Mc_Load_(procedure)</a></li>
+<li>1.6. <a href="#robo346">MsgCatAda/MsgCatAda.Mc_LoadedLocales_Clear</a></li>
+<li>1.7. <a href="#robo347">MsgCatAda/MsgCatAda.Mc_LoadedLocales_Get</a></li>
+<li>1.8. <a href="#robo348">MsgCatAda/MsgCatAda.Mc_LoadedLocales_Present</a></li>
+<li>1.9. <a href="#robo349">MsgCatAda/MsgCatAda.Mc_Locale_(function)</a></li>
+<li>1.10. <a href="#robo350">MsgCatAda/MsgCatAda.Mc_Locale_(procedure)</a></li>
+<li>1.11. <a href="#robo351">MsgCatAda/MsgCatAda.Mc_Max</a></li>
+<li>1.12. <a href="#robo352">MsgCatAda/MsgCatAda.Mc_Mset_(function)</a></li>
+<li>1.13. <a href="#robo353">MsgCatAda/MsgCatAda.Mc_Mset_(procedure)</a></li>
+<li>1.14. <a href="#robo354">MsgCatAda/MsgCatAda.Mc_Preferences</a></li>
+<li>1.15. <a href="#robo355">MsgCatAda/MsgCatAda.Mc_Set_(function)</a></li>
+<li>1.16. <a href="#robo356">MsgCatAda/MsgCatAda.Mc_Set_(procedure)</a></li>
+<li>1.17. <a href="#robo357">MsgCatAda/MsgCatAda.MsgCat_Init</a></li>
 </ul>
 </ul>
 <hr />
@@ -59,15 +59,15 @@
 </pre>
 
 <hr />
-<a name="MsgCatAda2fMc"></a>
-<a name="robo341"></a><h2>MsgCatAda/Mc [ Subprograms ]</h2>
+<a name="MsgCatAda2fMsgCatAda2eMc"></a>
+<a name="robo341"></a><h2>MsgCatAda/MsgCatAda.Mc [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the translation for the selected string
+<pre> Get the translation for the selected string
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Mc</strong>
+<pre class="source">   <span class="keyword">function</span> Mc
      <span class="sign">(</span>Interp<span class="sign">:</span> Tcl_Interp<span class="sign">;</span> Src_String<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Arguments<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span>
       <span class="keyword">return</span> String <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Src_String <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
@@ -84,8 +84,8 @@
  it return result string from routine mcunknown
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the translation for string hello world <span class="keyword">in</span> My_Interp <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
-   Translation<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Mc</strong><span class="sign">(</span>My_Interp<span class="sign">,</span> <span class="quote">"{hello world}"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="comment">-- Get the translation for string hello world <span class="keyword">in</span> My_Interp <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+   Translation<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Mc<span class="sign">(</span>My_Interp<span class="sign">,</span> <span class="quote">"{hello world}"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ::msgcat::mc src-string ?arguments?
@@ -95,15 +95,15 @@
 </pre>
 
 <hr />
-<a name="MsgCatAda2fMc5fExists"></a>
-<a name="robo342"></a><h2>MsgCatAda/Mc_Exists [ Subprograms ]</h2>
+<a name="MsgCatAda2fMsgCatAda2eMc5fExists"></a>
+<a name="robo342"></a><h2>MsgCatAda/MsgCatAda.Mc_Exists [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Check it translation for the selected string exists
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Mc_Exists</strong>
+<pre class="source">   <span class="keyword">function</span> Mc_Exists
      <span class="sign">(</span>Interp<span class="sign">:</span> Tcl_Interp<span class="sign">;</span> Src_String<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span>
       <span class="keyword">return</span> String <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Src_String <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
@@ -118,7 +118,7 @@
 </pre>
 <p class="item_name">EXAMPLE</p>
 <pre class="source">      <span class="comment">-- Check if translation for string hello world exists <span class="keyword">in</span> My_Interp interpreter</span>
-      Is_Translated<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Mc_Exists</strong><span class="sign">(</span>My_Interp<span class="sign">,</span> <span class="quote">"{hello world}"</span><span class="sign">)</span><span class="sign">;</span>
+      Is_Translated<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Mc_Exists<span class="sign">(</span>My_Interp<span class="sign">,</span> <span class="quote">"{hello world}"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ::msgcat::mcexists ?options? src-string
@@ -128,15 +128,15 @@
 </pre>
 
 <hr />
-<a name="MsgCatAda2fMc5fForget5fPackage"></a>
-<a name="robo343"></a><h2>MsgCatAda/Mc_Forget_Package [ Subprograms ]</h2>
+<a name="MsgCatAda2fMsgCatAda2eMc5fForget5fPackage"></a>
+<a name="robo343"></a><h2>MsgCatAda/MsgCatAda.Mc_Forget_Package [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="../tk/tcl-tk-ada-option_ads.html#robo359">Clear</a> all msgcat settings and translations at the selected interpreter
+<pre> Clear all msgcat settings and translations at the selected interpreter
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Mc_Forget_Package</strong><span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> Mc_Forget_Package<span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Interp - <a href="../tcl_ads.html#robo10">Tcl</a> interpreter on which current state of mgscat will be
@@ -144,16 +144,16 @@
  8.6.7 - Added
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="../tk/tcl-tk-ada-option_ads.html#robo359">Clear</a> all msgcat settings on My_Interp <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
-      <strong>Mc_Forget_Package</strong><span class="sign">(</span>My_Interp<span class="sign">)</span><span class="sign">;</span>
+<pre class="source">      <span class="comment">-- Clear all msgcat settings on My_Interp <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+      Mc_Forget_Package<span class="sign">(</span>My_Interp<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ::msgcat::mcforgetpackage
 </pre>
 
 <hr />
-<a name="MsgCatAda2fMc5fLoad2028function29"></a>
-<a name="robo344"></a><h2>MsgCatAda/Mc_Load (function) [ Subprograms ]</h2>
+<a name="MsgCatAda2fMsgCatAda2eMc5fLoad5f28function29"></a>
+<a name="robo344"></a><h2>MsgCatAda/MsgCatAda.Mc_Load_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -178,7 +178,7 @@
       Loaded_Files<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Mc_Load<span class="sign">(</span><span class="quote">"messages"</span><span class="sign">,</span> My_Interp<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> Mc_Load (procedure)
+<pre> <a href="#robo345">MsgCatAda.Mc_Load_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ::msgcat::mcload dirname
@@ -188,8 +188,8 @@
 </pre>
 
 <hr />
-<a name="MsgCatAda2fMc5fLoad2028procedure29"></a>
-<a name="robo345"></a><h2>MsgCatAda/Mc_Load (procedure) [ Subprograms ]</h2>
+<a name="MsgCatAda2fMsgCatAda2eMc5fLoad5f28procedure29"></a>
+<a name="robo345"></a><h2>MsgCatAda/MsgCatAda.Mc_Load_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -210,7 +210,7 @@
       Mc_Load<span class="sign">(</span><span class="quote">"messages"</span><span class="sign">,</span> My_Interp<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> Mc_Load (function)
+<pre> <a href="#robo344">MsgCatAda.Mc_Load_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ::msgcat::mcload dirname
@@ -220,8 +220,8 @@
 </pre>
 
 <hr />
-<a name="MsgCatAda2fMc5fLoadedLocales5fClear"></a>
-<a name="robo346"></a><h2>MsgCatAda/Mc_LoadedLocales_Clear [ Subprograms ]</h2>
+<a name="MsgCatAda2fMsgCatAda2eMc5fLoadedLocales5fClear"></a>
+<a name="robo346"></a><h2>MsgCatAda/MsgCatAda.Mc_LoadedLocales_Clear [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -229,14 +229,14 @@
  preferences list
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Mc_LoadedLocales_Clear</strong><span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> Mc_LoadedLocales_Clear<span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Interp - <a href="../tcl_ads.html#robo10">Tcl</a> interpreter on which locales will be cleared
 </pre>
 <p class="item_name">EXAMPLE</p>
 <pre class="source">      <span class="comment">-- Remove all locales and their data from My_Interp interpreter</span>
-      <strong>Mc_LoadedLocales_Clear</strong><span class="sign">(</span>My_Interp<span class="sign">)</span><span class="sign">;</span>
+      Mc_LoadedLocales_Clear<span class="sign">(</span>My_Interp<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ::msgcat:mcloadedlocales clear
@@ -246,15 +246,15 @@
 </pre>
 
 <hr />
-<a name="MsgCatAda2fMc5fLoadedLocales5fGet"></a>
-<a name="robo347"></a><h2>MsgCatAda/Mc_LoadedLocales_Get [ Subprograms ]</h2>
+<a name="MsgCatAda2fMsgCatAda2eMc5fLoadedLocales5fGet"></a>
+<a name="robo347"></a><h2>MsgCatAda/MsgCatAda.Mc_LoadedLocales_Get [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the list of the currently loaded locales
+<pre> Get the list of the currently loaded locales
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Mc_LoadedLocales_Get</strong><span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> Mc_LoadedLocales_Get<span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Interp - <a href="../tcl_ads.html#robo10">Tcl</a> interpreter on which the loaded locales will be queried
@@ -263,8 +263,8 @@
 <pre> The list of the currently loaded locales
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the list of currently loaded locales <span class="keyword">in</span> My_Interp <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
-   Loaded_Locales<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Mc_LoadedLocales_Get</strong><span class="sign">(</span>My_Interp<span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="comment">-- Get the list of currently loaded locales <span class="keyword">in</span> My_Interp <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+   Loaded_Locales<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Mc_LoadedLocales_Get<span class="sign">(</span>My_Interp<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ::msgcat:mcloadedlocales get
@@ -274,15 +274,15 @@
 </pre>
 
 <hr />
-<a name="MsgCatAda2fMc5fLoadedLocales5fPresent"></a>
-<a name="robo348"></a><h2>MsgCatAda/Mc_LoadedLocales_Present [ Subprograms ]</h2>
+<a name="MsgCatAda2fMsgCatAda2eMc5fLoadedLocales5fPresent"></a>
+<a name="robo348"></a><h2>MsgCatAda/MsgCatAda.Mc_LoadedLocales_Present [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Check if the selected locale was loaded in the selected interpreter
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Mc_LoadedLocales_Present</strong>
+<pre class="source">   <span class="keyword">function</span> Mc_LoadedLocales_Present
      <span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">;</span> Locale<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Locale <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
@@ -295,7 +295,7 @@
 </pre>
 <p class="item_name">EXAMPLE</p>
 <pre class="source">   <span class="comment">-- Check if locale pl was loaded to My_Interp <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
-   Is_Loaded<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Mc_LoadedLocales_Present</strong><span class="sign">(</span>My_Interp<span class="sign">,</span> <span class="quote">"pl"</span><span class="sign">)</span><span class="sign">;</span>
+   Is_Loaded<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Mc_LoadedLocales_Present<span class="sign">(</span>My_Interp<span class="sign">,</span> <span class="quote">"pl"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ::msgcat:mcloadedlocales present locale
@@ -305,12 +305,12 @@
 </pre>
 
 <hr />
-<a name="MsgCatAda2fMc5fLocale2028function29"></a>
-<a name="robo349"></a><h2>MsgCatAda/Mc_Locale (function) [ Subprograms ]</h2>
+<a name="MsgCatAda2fMsgCatAda2eMc5fLocale5f28function29"></a>
+<a name="robo349"></a><h2>MsgCatAda/MsgCatAda.Mc_Locale_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the default locale for the selected interpreter
+<pre> Get the default locale for the selected interpreter
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Mc_Locale<span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
@@ -322,11 +322,11 @@
 <pre> The name of the currently set locale
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the name of default locale for My_Interp <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+<pre class="source">      <span class="comment">-- Get the name of default locale for My_Interp <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
       Locale_Name<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Mc_Locale<span class="sign">(</span>My_Interp<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> Mc_Locale (procedure)
+<pre> <a href="#robo350">MsgCatAda.Mc_Locale_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ::msgcat::mclocale
@@ -336,12 +336,12 @@
 </pre>
 
 <hr />
-<a name="MsgCatAda2fMc5fLocale2028procedure29"></a>
-<a name="robo350"></a><h2>MsgCatAda/Mc_Locale (procedure) [ Subprograms ]</h2>
+<a name="MsgCatAda2fMsgCatAda2eMc5fLocale5f28procedure29"></a>
+<a name="robo350"></a><h2>MsgCatAda/MsgCatAda.Mc_Locale_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="../tk/tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> the new default locale for the selected interpreter
+<pre> Set the new default locale for the selected interpreter
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Mc_Locale<span class="sign">(</span>NewLocale<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">)</span> <span class="keyword">with</span>
@@ -356,11 +356,11 @@
 <pre> Number of translation files loaded
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="../tk/tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> default locale to en_US on My_Interp <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+<pre class="source">      <span class="comment">-- Set default locale to en_US on My_Interp <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
       Mc_Locale<span class="sign">(</span><span class="quote">"en_US"</span><span class="sign">,</span> My_Interp<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> Mc_Locale (function)
+<pre> <a href="#robo349">MsgCatAda.Mc_Locale_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ::msgcat::mclocale newlocale
@@ -370,15 +370,15 @@
 </pre>
 
 <hr />
-<a name="MsgCatAda2fMc5fMax"></a>
-<a name="robo351"></a><h2>MsgCatAda/Mc_Max [ Subprograms ]</h2>
+<a name="MsgCatAda2fMsgCatAda2eMc5fMax"></a>
+<a name="robo351"></a><h2>MsgCatAda/MsgCatAda.Mc_Max [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the longest translated string for selected values.
+<pre> Get the longest translated string for selected values.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Mc_Max</strong>
+<pre class="source">   <span class="keyword">function</span> Mc_Max
      <span class="sign">(</span>Strings<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Strings <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
@@ -390,8 +390,8 @@
 <pre> Length of the longest translated string for selected Strings
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the longest translation length for string my word and hello world <span class="keyword">in</span> My_Interp interpreter</span>
-   Max_Length<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Mc_Max</strong><span class="sign">(</span><span class="quote">"{my word} {hello word}"</span><span class="sign">,</span> My_Interp<span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="comment">-- Get the longest translation length for string my word and hello world <span class="keyword">in</span> My_Interp interpreter</span>
+   Max_Length<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Mc_Max<span class="sign">(</span><span class="quote">"{my word} {hello word}"</span><span class="sign">,</span> My_Interp<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ::msgcat::mcmax strings
@@ -401,12 +401,12 @@
 </pre>
 
 <hr />
-<a name="MsgCatAda2fMc5fMset2028function29"></a>
-<a name="robo352"></a><h2>MsgCatAda/Mc_Mset (function) [ Subprograms ]</h2>
+<a name="MsgCatAda2fMsgCatAda2eMc5fMset5f28function29"></a>
+<a name="robo352"></a><h2>MsgCatAda/MsgCatAda.Mc_Mset_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="../tk/tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> the translations for the multiple source strings for the selected
+<pre> Set the translations for the multiple source strings for the selected
  locale in the selected interpreter
 </pre>
 <p class="item_name">SOURCE</p>
@@ -423,11 +423,11 @@
 <pre> Number of translations set
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="../tk/tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> the translations hello world to helloword and my word to myword <span class="keyword">in</span> locale en_US <span class="keyword">in</span> My_Interp interpreter</span>
+<pre class="source">      <span class="comment">-- Set the translations hello world to helloword and my word to myword <span class="keyword">in</span> locale en_US <span class="keyword">in</span> My_Interp interpreter</span>
       Translations_Amount<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Mc_Mset<span class="sign">(</span>My_Interp<span class="sign">,</span> <span class="quote">"en_US"</span><span class="sign">,</span> <span class="quote">"[list {hello world} {helloword} {my word} {myword}]"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> Mc_Mset (function)
+<pre> <strong>MsgCatAda.Mc_Mset_(function)</strong>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ::msgcat::mcmset locale list
@@ -437,12 +437,12 @@
 </pre>
 
 <hr />
-<a name="MsgCatAda2fMc5fMset2028procedure29"></a>
-<a name="robo353"></a><h2>MsgCatAda/Mc_Mset (procedure) [ Subprograms ]</h2>
+<a name="MsgCatAda2fMsgCatAda2eMc5fMset5f28procedure29"></a>
+<a name="robo353"></a><h2>MsgCatAda/MsgCatAda.Mc_Mset_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="../tk/tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> the translations for the multiple source strings for the selected
+<pre> Set the translations for the multiple source strings for the selected
  locale in the selected interpreter
 </pre>
 <p class="item_name">SOURCE</p>
@@ -455,11 +455,11 @@
  List   - List of source translation source translation ... to add
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="../tk/tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> the translations hello world to helloword and my word to myword <span class="keyword">in</span> locale en_US <span class="keyword">in</span> My_Interp interpreter</span>
+<pre class="source">      <span class="comment">-- Set the translations hello world to helloword and my word to myword <span class="keyword">in</span> locale en_US <span class="keyword">in</span> My_Interp interpreter</span>
       Mc_Mset<span class="sign">(</span>My_Interp<span class="sign">,</span> <span class="quote">"en_US"</span><span class="sign">,</span> <span class="quote">"[list {hello world} {helloword} {my word} {myword}]"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> Mc_Mset (function)
+<pre> <a href="#robo352">MsgCatAda.Mc_Mset_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ::msgcat::mcmset locale list
@@ -469,16 +469,16 @@
 </pre>
 
 <hr />
-<a name="MsgCatAda2fMc5fPreferences"></a>
-<a name="robo354"></a><h2>MsgCatAda/Mc_Preferences [ Subprograms ]</h2>
+<a name="MsgCatAda2fMsgCatAda2eMc5fPreferences"></a>
+<a name="robo354"></a><h2>MsgCatAda/MsgCatAda.Mc_Preferences [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the list with locales preferred by the user, based on the user's
+<pre> Get the list with locales preferred by the user, based on the user's
  language specification
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Mc_Preferences</strong><span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> Mc_Preferences<span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Interp - <a href="../tcl_ads.html#robo10">Tcl</a> interpreter on which locales will be get
@@ -487,8 +487,8 @@
 <pre> List with locales preferred by the user
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the list of locales for the user on My_Interp <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
-      Languages_List<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Mc_Preferences</strong><span class="sign">(</span>My_Interp<span class="sign">)</span><span class="sign">;</span>
+<pre class="source">      <span class="comment">-- Get the list of locales for the user on My_Interp <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+      Languages_List<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Mc_Preferences<span class="sign">(</span>My_Interp<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ::msgcat::mcpreferences
@@ -498,12 +498,12 @@
 </pre>
 
 <hr />
-<a name="MsgCatAda2fMc5fSet2028function29"></a>
-<a name="robo355"></a><h2>MsgCatAda/Mc_Set (function) [ Subprograms ]</h2>
+<a name="MsgCatAda2fMsgCatAda2eMc5fSet5f28function29"></a>
+<a name="robo355"></a><h2>MsgCatAda/MsgCatAda.Mc_Set_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="../tk/tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> the translation for the selected string for the selected locale in
+<pre> Set the translation for the selected string for the selected locale in
  the selected interpreter
 </pre>
 <p class="item_name">SOURCE</p>
@@ -525,11 +525,11 @@
 <pre> Value of Translate_String
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="../tk/tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> the translation of hello world to helloword1 <span class="keyword">in</span> locale en_US on My_Interp interpreter</span>
+<pre class="source">      <span class="comment">-- Set the translation of hello world to helloword1 <span class="keyword">in</span> locale en_US on My_Interp interpreter</span>
       Translation<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Mc_Set<span class="sign">(</span>My_Interp<span class="sign">,</span> <span class="quote">"en_US"</span><span class="sign">,</span> <span class="quote">"{hello world}"</span><span class="sign">,</span> <span class="quote">"{helloword1}"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> Mc_Set (procedure)
+<pre> <a href="#robo356">MsgCatAda.Mc_Set_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ::msgcat::mcset locale src-string ?translate-string?
@@ -539,12 +539,12 @@
 </pre>
 
 <hr />
-<a name="MsgCatAda2fMc5fSet2028procedure29"></a>
-<a name="robo356"></a><h2>MsgCatAda/Mc_Set (procedure) [ Subprograms ]</h2>
+<a name="MsgCatAda2fMsgCatAda2eMc5fSet5f28procedure29"></a>
+<a name="robo356"></a><h2>MsgCatAda/MsgCatAda.Mc_Set_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="../tk/tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> the translation for the selected string for the selected locale in
+<pre> Set the translation for the selected string for the selected locale in
  the selected interpreter
 </pre>
 <p class="item_name">SOURCE</p>
@@ -563,11 +563,11 @@
                     is empty
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="../tk/tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> the translation of hello world to helloword1 <span class="keyword">in</span> locale en_US on My_Interp interpreter</span>
+<pre class="source">   <span class="comment">-- Set the translation of hello world to helloword1 <span class="keyword">in</span> locale en_US on My_Interp interpreter</span>
    Mc_Set<span class="sign">(</span>My_Interp<span class="sign">,</span> <span class="quote">"en_US"</span><span class="sign">,</span> <span class="quote">"{hello world}"</span><span class="sign">,</span> <span class="quote">"{helloword1}"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> Mc_Set (function)
+<pre> <a href="#robo355">MsgCatAda.Mc_Set_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ::msgcat::mcset locale src-string ?translate-string?
@@ -577,22 +577,22 @@
 </pre>
 
 <hr />
-<a name="MsgCatAda2fMsgCat5fInit"></a>
-<a name="robo357"></a><h2>MsgCatAda/MsgCat_Init [ Subprograms ]</h2>
+<a name="MsgCatAda2fMsgCatAda2eMsgCat5fInit"></a>
+<a name="robo357"></a><h2>MsgCatAda/MsgCatAda.MsgCat_Init [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Load package msgcat. <a href="../tk/tcl-tk-ada-widgets_ads.html#robo776">Raise</a> Program_Error if package can't be loaded
+<pre> Load package msgcat. Raise Program_Error if package can't be loaded
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>MsgCat_Init</strong><span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> MsgCat_Init<span class="sign">(</span>Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Interp - <a href="../tcl_ads.html#robo10">Tcl</a> interpreter to which msgcat package will be added
 </pre>
 <p class="item_name">EXAMPLE</p>
 <pre class="source">   <span class="comment">-- Init msgcat package on My_Interp <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
-   <strong>MsgCat_Init</strong><span class="sign">(</span>My_Interp<span class="sign">)</span><span class="sign">;</span>
+   MsgCat_Init<span class="sign">(</span>My_Interp<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> package require msgcat
@@ -603,7 +603,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/msgcat/tcl-msgcat-ada.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 30 2020 09:32:20
+<p>Generated from ./src/msgcat/tcl-msgcat-ada.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Oct 13 2020 07:44:18
 </p>
 </div> <!-- footer -->
 </body>

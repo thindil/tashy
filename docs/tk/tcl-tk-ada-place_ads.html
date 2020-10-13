@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.9 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.10 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,11 +27,11 @@
 <ul>
 <li>1. <a href="#robo27">TkAda/TkPlace</a></li>
 <ul>
-<li>1.1. <a href="#robo559">TkPlace/Place</a></li>
-<li>1.2. <a href="#robo560">TkPlace/Place_Configure</a></li>
-<li>1.3. <a href="#robo561">TkPlace/Place_Forget</a></li>
-<li>1.4. <a href="#robo562">TkPlace/Place_Info</a></li>
-<li>1.5. <a href="#robo563">TkPlace/Place_Slaves</a></li>
+<li>1.1. <a href="#robo558">TkPlace/TkPlace.Place</a></li>
+<li>1.2. <a href="#robo559">TkPlace/TkPlace.Place_Configure</a></li>
+<li>1.3. <a href="#robo560">TkPlace/TkPlace.Place_Forget</a></li>
+<li>1.4. <a href="#robo561">TkPlace/TkPlace.Place_Info</a></li>
+<li>1.5. <a href="#robo562">TkPlace/TkPlace.Place_Slaves</a></li>
 </ul>
 </ul>
 <hr />
@@ -40,30 +40,30 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./tcl-tk-ada_ads.html#robo17">TkAda</a> ] [ <a href="../robo_packages.html#robo_top_of_doc">Packages</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo14">Tk</a> command <a href="#robo559">Place</a>
+<pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo14">Tk</a> command Place
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><a href="#robo559">Place</a> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span>Place <span class="keyword">is</span>
 </pre>
 
 <hr />
-<a name="TkPlace2fPlace"></a>
-<a name="robo559"></a><h2>TkPlace/Place [ Subprograms ]</h2>
+<a name="TkPlace2fTkPlace2ePlace"></a>
+<a name="robo558"></a><h2>TkPlace/TkPlace.Place [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo27">TkPlace</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <strong>Place</strong> selected widget with selected options
+<pre> Place selected widget with selected options
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Place</strong><span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">);</span>
+<pre class="source">   <span class="keyword">procedure</span> Place<span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> Tk_Widget<span class="keyword">'Class</span><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">);</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Slave   - <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> to place
+<pre> Slave   - Tk_Widget to place
  Options - <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a> to place action
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="../tklib/tcl-tklib-ada-tooltip_ads.html#robo571">Add</a> My_Entry widget at point <span class="sign">(</span>12<span class="sign">,</span> 32)</span>
-   <strong>Place</strong><span class="sign">.</span><strong>Place</strong><span class="sign">(</span>My_Entry<span class="sign">,</span> <span class="quote">"-x 12 -y 32"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="comment">-- Add My_Entry widget at point <span class="sign">(</span>12<span class="sign">,</span> 32)</span>
+   Place<span class="sign">.</span>Place<span class="sign">(</span>My_Entry<span class="sign">,</span> <span class="quote">"-x 12 -y 32"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> place slave ?options?
@@ -73,24 +73,24 @@
 </pre>
 
 <hr />
-<a name="TkPlace2fPlace5fConfigure"></a>
-<a name="robo560"></a><h2>TkPlace/Place_Configure [ Subprograms ]</h2>
+<a name="TkPlace2fTkPlace2ePlace5fConfigure"></a>
+<a name="robo559"></a><h2>TkPlace/TkPlace.Place_Configure [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo27">TkPlace</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Tells the packer how to configure the specified Slave window.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Place_Configure</strong>
-     <span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">);</span>
+<pre class="source">   <span class="keyword">procedure</span> Place_Configure
+     <span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> Tk_Widget<span class="keyword">'Class</span><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">);</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Slave   - <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> to configure
- Options - <a href="#robo559">Place</a> options for the slave
+<pre> Slave   - Tk_Widget to configure
+ Options - Place options for the slave
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> My_Label widget width to 20 pixels</span>
-   <strong>Place_Configure</strong><span class="sign">(</span>My_Label<span class="sign">,</span> <span class="quote">"-width 20"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="comment">-- Set My_Label widget width to 20 pixels</span>
+   Place_Configure<span class="sign">(</span>My_Label<span class="sign">,</span> <span class="quote">"-width 20"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> place configure slave ?options?
@@ -100,8 +100,8 @@
 </pre>
 
 <hr />
-<a name="TkPlace2fPlace5fForget"></a>
-<a name="robo561"></a><h2>TkPlace/Place_Forget [ Subprograms ]</h2>
+<a name="TkPlace2fTkPlace2ePlace5fForget"></a>
+<a name="robo560"></a><h2>TkPlace/TkPlace.Place_Forget [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo27">TkPlace</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -109,14 +109,14 @@
  and unmaps their windows.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Place_Forget</strong><span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">);</span>
+<pre class="source">   <span class="keyword">procedure</span> Place_Forget<span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> Tk_Widget<span class="keyword">'Class</span><span class="sign">);</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Slave - <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> to remove
+<pre> Slave - Tk_Widget to remove
 </pre>
 <p class="item_name">EXAMPLE</p>
 <pre class="source">   <span class="comment">-- Remove <span class="sign">(</span>hide<span class="sign">)</span> My_Label widget from UI</span>
-   <strong>Place_Forget</strong><span class="sign">(</span>My_Label<span class="sign">)</span><span class="sign">;</span>
+   Place_Forget<span class="sign">(</span>My_Label<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> place forget slave
@@ -126,26 +126,26 @@
 </pre>
 
 <hr />
-<a name="TkPlace2fPlace5fInfo"></a>
-<a name="robo562"></a><h2>TkPlace/Place_Info [ Subprograms ]</h2>
+<a name="TkPlace2fTkPlace2ePlace5fInfo"></a>
+<a name="robo561"></a><h2>TkPlace/TkPlace.Place_Info [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo27">TkPlace</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> place options of the selected widget
+<pre> Get place options of the selected widget
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Place_Info</strong><span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> Place_Info<span class="sign">(</span>Slave<span class="sign">:</span> <span class="keyword">in</span> Tk_Widget<span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Slave - <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> to query
+<pre> Slave - Tk_Widget to query
 </pre>
 <p class="item_name">RESULT</p>
 <pre> String with list whose elements are the current configuration
  state of the specified Slave window.
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the place configuration of the My_Label widget</span>
-   Place_Options<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Place_Info</strong><span class="sign">(</span>My_Label<span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="comment">-- Get the place configuration of the My_Label widget</span>
+   Place_Options<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Place_Info<span class="sign">(</span>My_Label<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> place info slave
@@ -155,26 +155,26 @@
 </pre>
 
 <hr />
-<a name="TkPlace2fPlace5fSlaves"></a>
-<a name="robo563"></a><h2>TkPlace/Place_Slaves [ Subprograms ]</h2>
+<a name="TkPlace2fTkPlace2ePlace5fSlaves"></a>
+<a name="robo562"></a><h2>TkPlace/TkPlace.Place_Slaves [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo27">TkPlace</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> list of slaves widget of selected widget
+<pre> Get list of slaves widget of selected widget
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Place_Slaves</strong><span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> Place_Slaves<span class="sign">(</span>Master<span class="sign">:</span> <span class="keyword">in</span> Tk_Widget<span class="keyword">'Class</span><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Master - <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> which will be queried for slaves
+<pre> Master - Tk_Widget which will be queried for slaves
 </pre>
 <p class="item_name">RESULT</p>
 <pre> Returns a list of slaves in the packing order of the specified
  Master window.
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the list of slaves for the My_Main_Window</span>
-   Slaves<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Place_Slaves</strong><span class="sign">(</span>My_Main_Window<span class="sign">)</span>
+<pre class="source">   <span class="comment">-- Get the list of slaves for the My_Main_Window</span>
+   Slaves<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Place_Slaves<span class="sign">(</span>My_Main_Window<span class="sign">)</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> place slaves master
@@ -185,7 +185,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-place.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 30 2020 09:32:20
+<p>Generated from ./src/tk/tcl-tk-ada-place.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Oct 13 2020 07:44:18
 </p>
 </div> <!-- footer -->
 </body>

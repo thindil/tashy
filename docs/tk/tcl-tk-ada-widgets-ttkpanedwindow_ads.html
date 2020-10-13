@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.9 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.10 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,20 +27,20 @@
 <ul>
 <li>1. <a href="#robo64">Widgets/TtkPanedWindow</a></li>
 <ul>
-<li>1.1. <a href="#robo112">TtkPanedWindow/Ttk_PanedWindow</a></li>
-<li>1.2. <a href="#robo639">TtkPanedWindow/Add</a></li>
-<li>1.3. <a href="#robo640">TtkPanedWindow/Create (function)</a></li>
-<li>1.4. <a href="#robo641">TtkPanedWindow/Create (procedure)</a></li>
-<li>1.5. <a href="#robo642">TtkPanedWindow/Forget</a></li>
-<li>1.6. <a href="#robo643">TtkPanedWindow/Get_Widget</a></li>
-<li>1.7. <a href="#robo644">TtkPanedWindow/Identify_Element</a></li>
-<li>1.8. <a href="#robo645">TtkPanedWindow/Identify_Sash</a></li>
-<li>1.9. <a href="#robo646">TtkPanedWindow/Insert</a></li>
-<li>1.10. <a href="#robo647">TtkPanedWindow/Pane (function)</a></li>
-<li>1.11. <a href="#robo648">TtkPanedWindow/Pane (procedure)</a></li>
-<li>1.12. <a href="#robo649">TtkPanedWindow/Panes</a></li>
-<li>1.13. <a href="#robo650">TtkPanedWindow/SashPos</a></li>
-<li>1.14. <a href="#robo651">TtkPanedWindow/SashPos (procedure)</a></li>
+<li>1.1. <a href="#robo112">TtkPanedWindow/TtkPanedWindow.Ttk_PanedWindow</a></li>
+<li>1.2. <a href="#robo639">TtkPanedWindow/Panes</a></li>
+<li>1.3. <a href="#robo640">TtkPanedWindow/TtkPanedWindow.Add</a></li>
+<li>1.4. <a href="#robo641">TtkPanedWindow/TtkPanedWindow.Create_(function)</a></li>
+<li>1.5. <a href="#robo642">TtkPanedWindow/TtkPanedWindow.Create_(procedure)</a></li>
+<li>1.6. <a href="#robo643">TtkPanedWindow/TtkPanedWindow.Forget</a></li>
+<li>1.7. <a href="#robo644">TtkPanedWindow/TtkPanedWindow.Get_Widget</a></li>
+<li>1.8. <a href="#robo645">TtkPanedWindow/TtkPanedWindow.Identify_Element</a></li>
+<li>1.9. <a href="#robo646">TtkPanedWindow/TtkPanedWindow.Identify_Sash</a></li>
+<li>1.10. <a href="#robo647">TtkPanedWindow/TtkPanedWindow.Insert</a></li>
+<li>1.11. <a href="#robo648">TtkPanedWindow/TtkPanedWindow.Pane_(function)</a></li>
+<li>1.12. <a href="#robo649">TtkPanedWindow/TtkPanedWindow.Pane_(procedure)</a></li>
+<li>1.13. <a href="#robo650">TtkPanedWindow/TtkPanedWindow.SashPos_(function)</a></li>
+<li>1.14. <a href="#robo651">TtkPanedWindow/TtkPanedWindow.SashPos_(procedure)</a></li>
 </ul>
 </ul>
 <hr />
@@ -56,370 +56,38 @@
 </pre>
 
 <hr />
-<a name="TtkPanedWindow2fTtk5fPanedWindow"></a>
-<a name="robo112"></a><h2>TtkPanedWindow/Ttk_PanedWindow [ Types ]</h2>
+<a name="TtkPanedWindow2fTtkPanedWindow2eTtk5fPanedWindow"></a>
+<a name="robo112"></a><h2>TtkPanedWindow/TtkPanedWindow.Ttk_PanedWindow [ Types ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a>.
- Each of the derived widgets redefines the <a href="../cargv_ads.html#robo191">Create</a> subprogram
+<pre> This is a non-abstract type derived directly from Tk_Widget.
+ Each of the derived widgets redefines the Create subprogram
  in order to create the correct type of widget.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">type</span> <strong>Ttk_PanedWindow</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
-</pre>
-
-<hr />
-<a name="TtkPanedWindow2fAdd"></a>
-<a name="robo639"></a><h2>TtkPanedWindow/Add [ Subprograms ]</h2>
-
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
-<p class="item_name">FUNCTION</p>
-<pre> Adds the <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> to the <a href="#robo112">Ttk_PanedWindow</a>.
-</pre>
-<p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Add</strong>
-     <span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo112">Ttk_PanedWindow</a><span class="sign">;</span> SubWindow<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span>
-      Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">);</span>
-</pre>
-<p class="item_name">PARAMETERS</p>
-<pre> Paned     - <a href="#robo112">Ttk_PanedWindow</a> to which SubWindow will be added
- SubWindow - <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> which will be added to the <a href="#robo112">Ttk_PanedWindow</a>
- Options   - <a href="./tcl-tk_ads.html#robo14">Tk</a> options which will be passed to the command. Default
-             value is empty.
-</pre>
-<p class="item_name">EXAMPLE</p>
-<pre class="source">     <span class="comment">-- <strong>Add</strong> My_Frame widget to My_Paned panedwindow</span>
-     <strong>Add</strong><span class="sign">(</span>My_Paned<span class="sign">,</span> My_Frame<span class="sign">)</span><span class="sign">;</span>
-</pre>
-<p class="item_name">COMMANDS</p>
-<pre> Paned add subwindow ?options?
-</pre>
-<p class="item_name">HISTORY</p>
-<pre> 8.6.1 - Added
-</pre>
-
-<hr />
-<a name="TtkPanedWindow2fCreate2028function29"></a>
-<a name="robo640"></a><h2>TtkPanedWindow/Create (function) [ Subprograms ]</h2>
-
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
-<p class="item_name">FUNCTION</p>
-<pre> Creates a new <a href="#robo112">Ttk_PanedWindow</a> in the specified interpreter.
-</pre>
-<p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="../cargv_ads.html#robo191">Create</a>
-     <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo112">Ttk_PanedWindow</a> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-</pre>
-<p class="item_name">PARAMETERS</p>
-<pre> pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
- options  - Options which will be passed to the widget. Default value is
-            empty
- Interp   - <a href="../tcl_ads.html#robo10">Tcl</a> interpreter to which the widget will be created. If null,
-            the widget will be created in the "contextual" interpreter.
-            Default value is null.
-</pre>
-<p class="item_name">RESULT</p>
-<pre> Newly created <a href="#robo112">Ttk_PanedWindow</a>
-</pre>
-<p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="../cargv_ads.html#robo191">Create</a> a new panedwindow <span class="keyword">with</span> pathname .mypaned</span>
-   My_Paned<span class="sign">:</span> <span class="keyword">constant</span> <a href="#robo112">Ttk_PanedWindow</a> <span class="sign">:</span><span class="sign">=</span> <a href="../cargv_ads.html#robo191">Create</a><span class="sign">(</span><span class="quote">".mypaned"</span><span class="sign">)</span><span class="sign">;</span>
-</pre>
-<p class="item_name">SEE ALSO</p>
-<pre> <a href="../cargv_ads.html#robo191">Create</a> (procedure)
-</pre>
-<p class="item_name">COMMANDS</p>
-<pre> ttk::panedwindow pathName ?options?
-</pre>
-<p class="item_name">HISTORY</p>
-<pre> 8.6.1 - Added
-</pre>
-
-<hr />
-<a name="TtkPanedWindow2fCreate2028procedure29"></a>
-<a name="robo641"></a><h2>TtkPanedWindow/Create (procedure) [ Subprograms ]</h2>
-
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
-<p class="item_name">FUNCTION</p>
-<pre> Creates a new <a href="#robo112">Ttk_PanedWindow</a> in the specified interpreter.
-</pre>
-<p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> <a href="../cargv_ads.html#robo191">Create</a>
-     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo112">Ttk_PanedWindow</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
-      options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-</pre>
-<p class="item_name">PARAMETERS</p>
-<pre> Widgt    - <a href="#robo112">Ttk_PanedWindow</a> which will be created
- pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
- options  - Options which will be passed to the widget. Default value is
-            empty
- Interp   - <a href="../tcl_ads.html#robo10">Tcl</a> interpreter to which the widget will be created. If null,
-            the widget will be created in the "contextual" interpreter.
-            Default value is null.
-</pre>
-<p class="item_name">OUTPUT</p>
-<pre> Newly created <a href="#robo112">Ttk_PanedWindow</a> as parameter Widgt
-</pre>
-<p class="item_name">EXAMPLE</p>
-<pre class="source">     <span class="comment">-- <a href="../cargv_ads.html#robo191">Create</a> panedwindow My_Paned <span class="keyword">with</span> pathname .mypaned on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
-     <span class="keyword">declare</span>
-        My_Paned<span class="sign">:</span> <a href="#robo112">Ttk_PanedWindow</a><span class="sign">;</span>
-     <span class="keyword">begin</span>
-        <a href="../cargv_ads.html#robo191">Create</a><span class="sign">(</span>My_Paned<span class="sign">,</span> <span class="quote">".mypaned"</span><span class="sign">)</span><span class="sign">;</span>
-     <span class="keyword">end</span><span class="sign">;</span>
-</pre>
-<p class="item_name">SEE ALSO</p>
-<pre> <a href="../cargv_ads.html#robo191">Create</a> (function)
-</pre>
-<p class="item_name">COMMANDS</p>
-<pre> ttk::panedwindow pathName ?options?
-</pre>
-<p class="item_name">HISTORY</p>
-<pre> 8.6.1 - Added
-</pre>
-
-<hr />
-<a name="TtkPanedWindow2fForget"></a>
-<a name="robo642"></a><h2>TtkPanedWindow/Forget [ Subprograms ]</h2>
-
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
-<p class="item_name">FUNCTION</p>
-<pre> Remove the <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> from the <a href="#robo112">Ttk_PanedWindow</a>
-</pre>
-<p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Forget</strong><span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo112">Ttk_PanedWindow</a><span class="sign">;</span> SubWindow<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">);</span>
-</pre>
-<p class="item_name">PARAMETERS</p>
-<pre> Paned     - <a href="#robo112">Ttk_PanedWindow</a> from which SubWindow will be removed
- SubWindow - <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> which will be removed from the <a href="#robo112">Ttk_PanedWindow</a>
-</pre>
-<p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- Remove My_Frame from My_Paned panedwindow</span>
-   <strong>Forget</strong><span class="sign">(</span>My_Paned<span class="sign">,</span> My_Frame<span class="sign">)</span><span class="sign">;</span>
-</pre>
-<p class="item_name">COMMANDS</p>
-<pre> Paned forget subwindow
-</pre>
-<p class="item_name">HISTORY</p>
-<pre> 8.6.1 - Added
-</pre>
-
-<hr />
-<a name="TtkPanedWindow2fGet5fWidget"></a>
-<a name="robo643"></a><h2>TtkPanedWindow/Get_Widget [ Subprograms ]</h2>
-
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
-<p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the existing <a href="#robo112">Ttk_PanedWindow</a> widget
-</pre>
-<p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <strong>Get_Widget</strong>
-     <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo519">Get_Context</a><span class="sign">)</span>
-      <span class="keyword">return</span> <a href="#robo112">Ttk_PanedWindow</a><span class="sign">;</span>
-</pre>
-<p class="item_name">PARAMETERS</p>
-<pre> pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
- Interp   - <a href="../tcl_ads.html#robo10">Tcl</a> interpreter on which the widget exists. Can be empty.
-            Default value is current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter
-</pre>
-<p class="item_name">RESULT</p>
-<pre> Existing <a href="#robo112">Ttk_PanedWindow</a> widget
-</pre>
-<p class="item_name">EXAMPLE</p>
-<pre class="source">     <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> panedwindow widget <span class="keyword">with</span> name .mypaned on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
-     My_Paned<span class="sign">:</span> <span class="keyword">constant</span> <a href="#robo112">Ttk_PanedWindow</a> <span class="sign">:</span><span class="sign">=</span> <strong>Get_Widget</strong><span class="sign">(</span><span class="quote">".mypaned"</span><span class="sign">)</span><span class="sign">;</span>
-</pre>
-<p class="item_name">HISTORY</p>
-<pre> 8.6.9 - Added
-</pre>
-
-<hr />
-<a name="TtkPanedWindow2fIdentify5fElement"></a>
-<a name="robo644"></a><h2>TtkPanedWindow/Identify_Element [ Subprograms ]</h2>
-
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
-<p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the name of the paned element at the selected point
-</pre>
-<p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Identify_Element</strong>
-     <span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo112">Ttk_PanedWindow</a><span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-</pre>
-<p class="item_name">PARAMETERS</p>
-<pre> Paned - <a href="#robo112">Ttk_PanedWindow</a> which will be queried for elements
- X     - X coordinate of the point to check
- Y     - Y coordinate of the point to check
-</pre>
-<p class="item_name">RESULT</p>
-<pre> Name of the element at the selected point of {} if no element or point
- is outside Paned
-</pre>
-<p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the name of the element at point <span class="sign">(</span>56<span class="sign">,</span> 32<span class="sign">)</span> <span class="keyword">in</span> My_Paned panedwindow</span>
-   Element_Name<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Identify_Element</strong><span class="sign">(</span>My_Paned<span class="sign">,</span> <span class="quote">"56"</span><span class="sign">,</span> <span class="quote">"32"</span><span class="sign">)</span><span class="sign">;</span>
-</pre>
-<p class="item_name">COMMANDS</p>
-<pre> Paned identify element x y
-</pre>
-<p class="item_name">HISTORY</p>
-<pre> 8.6.6 - Added
-</pre>
-
-<hr />
-<a name="TtkPanedWindow2fIdentify5fSash"></a>
-<a name="robo645"></a><h2>TtkPanedWindow/Identify_Sash [ Subprograms ]</h2>
-
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
-<p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the index of the paned sash at the selected point
-</pre>
-<p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Identify_Sash</strong>
-     <span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo112">Ttk_PanedWindow</a><span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-</pre>
-<p class="item_name">PARAMETERS</p>
-<pre> Paned - <a href="#robo112">Ttk_PanedWindow</a> which will be queried for sash
- X     - X coordinate of the point to check
- Y     - Y coordinate of the point to check
-</pre>
-<p class="item_name">RESULT</p>
-<pre> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a> of the sash at the selected point of {} if no sash or point
- is outside Paned
-</pre>
-<p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo370">Identify</a> sash at point <span class="sign">(</span>43<span class="sign">,</span> 86<span class="sign">)</span> <span class="keyword">in</span> My_Paned panedwindow</span>
-      Sash_Index<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Identify_Sash</strong><span class="sign">(</span>My_Paned<span class="sign">,</span> <span class="quote">"43"</span><span class="sign">,</span> <span class="quote">"86"</span><span class="sign">)</span><span class="sign">;</span>
-</pre>
-<p class="item_name">COMMANDS</p>
-<pre> Paned identify sash x y
-</pre>
-<p class="item_name">HISTORY</p>
-<pre> 8.6.6 - Added
-</pre>
-
-<hr />
-<a name="TtkPanedWindow2fInsert"></a>
-<a name="robo646"></a><h2>TtkPanedWindow/Insert [ Subprograms ]</h2>
-
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
-<p class="item_name">FUNCTION</p>
-<pre> <strong>Insert</strong> the selected <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> in the selected <a href="#robo112">Ttk_PanedWindow</a> on the
- selected position
-</pre>
-<p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Insert</strong>
-     <span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo112">Ttk_PanedWindow</a><span class="sign">;</span> Position<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
-      SubWindow<span class="sign">:</span> <span class="keyword">in</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a><span class="keyword">'Class</span><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">)</span> <span class="keyword">with</span>
-      Pre =<span class="sign">&gt;</span> Position /= ""<span class="sign">;</span>
-</pre>
-<p class="item_name">PARAMETERS</p>
-<pre> Paned     - <a href="#robo112">Ttk_PanedWindow</a> in which SubWindow will be inserted
- Position  - Position on which SubWindow will be inserted
- SubWindow - <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> to insert to the <a href="#robo112">Ttk_PanedWindow</a>
- Options   - <a href="./tcl-tk_ads.html#robo14">Tk</a> options which will be passed to the command. Default
-             value is empty.
-</pre>
-<p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <strong>Insert</strong> My_Frame at the end of the My_Paned panedwindow</span>
-      <strong>Insert</strong><span class="sign">(</span>My_Paned<span class="sign">,</span> <span class="quote">"end"</span><span class="sign">,</span> My_Frame<span class="sign">)</span><span class="sign">;</span>
-</pre>
-<p class="item_name">COMMANDS</p>
-<pre> Paned insert pos subwindow ?options?
-</pre>
-<p class="item_name">HISTORY</p>
-<pre> 8.6.3 - Added
-</pre>
-
-<hr />
-<a name="TtkPanedWindow2fPane2028function29"></a>
-<a name="robo647"></a><h2>TtkPanedWindow/Pane (function) [ Subprograms ]</h2>
-
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
-<p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the selected options values of the selected widget in the
- selected <a href="#robo112">Ttk_PanedWindow</a>
-</pre>
-<p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> Pane
-     <span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo112">Ttk_PanedWindow</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a><span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span>
-      <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-</pre>
-<p class="item_name">PARAMETERS</p>
-<pre> Paned  - <a href="#robo112">Ttk_PanedWindow</a> in which widget's options will be queried
- <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a>  - Numeric index or name of widget which options will be get
- <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a> - Name of the option to get. Can be empty. Default value is
-          empty
-</pre>
-<p class="item_name">RESULT</p>
-<pre> If <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a> is specified, then return value of the selected option.
- Otherwise, return list of all options with their values.
-</pre>
-<p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> all available options for first subwindow <span class="keyword">in</span> My_Paned panedwindow</span>
-      Options<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Pane<span class="sign">(</span>My_Paned<span class="sign">,</span> <span class="quote">"0"</span><span class="sign">)</span><span class="sign">;</span>
-</pre>
-<p class="item_name">COMMANDS</p>
-<pre> Paned pane pane ?option?
-</pre>
-<p class="item_name">HISTORY</p>
-<pre> 8.6.6 - Added
-</pre>
-
-<hr />
-<a name="TtkPanedWindow2fPane2028procedure29"></a>
-<a name="robo648"></a><h2>TtkPanedWindow/Pane (procedure) [ Subprograms ]</h2>
-
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
-<p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> the selected options of the selected widget in the selected
- <a href="#robo112">Ttk_PanedWindow</a>
-</pre>
-<p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> Pane<span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo112">Ttk_PanedWindow</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a><span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-</pre>
-<p class="item_name">PARAMETERS</p>
-<pre> Paned   - <a href="#robo112">Ttk_PanedWindow</a> in which widget's options will be set
- <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a>   - Numeric index or name of widget which options will be set
- Options - Options and new values for the selected widget
-</pre>
-<p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> the weight of first subwindow <span class="keyword">in</span> My_Paned panedwindow to 2</span>
-      Pane<span class="sign">(</span>My_Paned<span class="sign">,</span> <span class="quote">"0"</span><span class="sign">,</span> <span class="quote">"-weight 2"</span><span class="sign">)</span><span class="sign">;</span>
-</pre>
-<p class="item_name">COMMANDS</p>
-<pre> Paned pane index ?options?
-</pre>
-<p class="item_name">HISTORY</p>
-<pre> 8.6.6 - Added
+<pre class="source">   <span class="keyword">type</span> Ttk_PanedWindow <span class="keyword">is</span> <span class="keyword">new</span> Tk_Widget <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
 </pre>
 
 <hr />
 <a name="TtkPanedWindow2fPanes"></a>
-<a name="robo649"></a><h2>TtkPanedWindow/Panes [ Subprograms ]</h2>
+<a name="robo639"></a><h2>TtkPanedWindow/Panes [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> list of names of all widgets managed by the <a href="#robo112">Ttk_PanedWindow</a>
+<pre> Get list of names of all widgets managed by the Ttk_PanedWindow
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Panes</strong><span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo112">Ttk_PanedWindow</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> <strong>Panes</strong><span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Ttk_PanedWindow<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Paned - <a href="#robo112">Ttk_PanedWindow</a> which will be queried for widgets
+<pre> Paned - Ttk_PanedWindow which will be queried for widgets
 </pre>
 <p class="item_name">RESULT</p>
-<pre> List of widgets inside of <a href="#robo112">Ttk_PanedWindow</a>
+<pre> List of widgets inside of Ttk_PanedWindow
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the names of all subwindows <span class="keyword">in</span> My_Paned panedwindow</span>
+<pre class="source">      <span class="comment">-- Get the names of all subwindows <span class="keyword">in</span> My_Paned panedwindow</span>
       Windows_Names<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Panes</strong><span class="sign">(</span>My_Paned<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
@@ -430,30 +98,371 @@
 </pre>
 
 <hr />
-<a name="TtkPanedWindow2fSashPos"></a>
-<a name="robo650"></a><h2>TtkPanedWindow/SashPos [ Subprograms ]</h2>
+<a name="TtkPanedWindow2fTtkPanedWindow2eAdd"></a>
+<a name="robo640"></a><h2>TtkPanedWindow/TtkPanedWindow.Add [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the current position of the selected sash in the selected
- <a href="#robo112">Ttk_PanedWindow</a>
+<pre> Adds the Tk_Widget to the Ttk_PanedWindow.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>SashPos</strong>
-     <span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo112">Ttk_PanedWindow</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> Add
+     <span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Ttk_PanedWindow<span class="sign">;</span> SubWindow<span class="sign">:</span> <span class="keyword">in</span> Tk_Widget<span class="keyword">'Class</span><span class="sign">;</span>
+      Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">);</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Paned  - <a href="#robo112">Ttk_PanedWindow</a> in which the position of the sash will be
+<pre> Paned     - Ttk_PanedWindow to which SubWindow will be added
+ SubWindow - Tk_Widget which will be added to the Ttk_PanedWindow
+ Options   - <a href="./tcl-tk_ads.html#robo14">Tk</a> options which will be passed to the command. Default
+             value is empty.
+</pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">     <span class="comment">-- Add My_Frame widget to My_Paned panedwindow</span>
+     Add<span class="sign">(</span>My_Paned<span class="sign">,</span> My_Frame<span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> Paned add subwindow ?options?
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.1 - Added
+</pre>
+
+<hr />
+<a name="TtkPanedWindow2fTtkPanedWindow2eCreate5f28function29"></a>
+<a name="robo641"></a><h2>TtkPanedWindow/TtkPanedWindow.Create_(function) [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Creates a new Ttk_PanedWindow in the specified interpreter.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> Create
+     <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> Ttk_PanedWindow <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
+ options  - Options which will be passed to the widget. Default value is
+            empty
+ Interp   - <a href="../tcl_ads.html#robo10">Tcl</a> interpreter to which the widget will be created. If null,
+            the widget will be created in the "contextual" interpreter.
+            Default value is null.
+</pre>
+<p class="item_name">RESULT</p>
+<pre> Newly created Ttk_PanedWindow
+</pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">   <span class="comment">-- Create a new panedwindow <span class="keyword">with</span> pathname .mypaned</span>
+   My_Paned<span class="sign">:</span> <span class="keyword">constant</span> Ttk_PanedWindow <span class="sign">:</span><span class="sign">=</span> Create<span class="sign">(</span><span class="quote">".mypaned"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="#robo642">TtkPanedWindow.Create_(procedure)</a>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> ttk::panedwindow pathName ?options?
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.1 - Added
+</pre>
+
+<hr />
+<a name="TtkPanedWindow2fTtkPanedWindow2eCreate5f28procedure29"></a>
+<a name="robo642"></a><h2>TtkPanedWindow/TtkPanedWindow.Create_(procedure) [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Creates a new Ttk_PanedWindow in the specified interpreter.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> Create
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> Ttk_PanedWindow<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+      options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Widgt    - Ttk_PanedWindow which will be created
+ pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
+ options  - Options which will be passed to the widget. Default value is
+            empty
+ Interp   - <a href="../tcl_ads.html#robo10">Tcl</a> interpreter to which the widget will be created. If null,
+            the widget will be created in the "contextual" interpreter.
+            Default value is null.
+</pre>
+<p class="item_name">OUTPUT</p>
+<pre> Newly created Ttk_PanedWindow as parameter Widgt
+</pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">     <span class="comment">-- Create panedwindow My_Paned <span class="keyword">with</span> pathname .mypaned on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+     <span class="keyword">declare</span>
+        My_Paned<span class="sign">:</span> Ttk_PanedWindow<span class="sign">;</span>
+     <span class="keyword">begin</span>
+        Create<span class="sign">(</span>My_Paned<span class="sign">,</span> <span class="quote">".mypaned"</span><span class="sign">)</span><span class="sign">;</span>
+     <span class="keyword">end</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="#robo641">TtkPanedWindow.Create_(function)</a>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> ttk::panedwindow pathName ?options?
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.1 - Added
+</pre>
+
+<hr />
+<a name="TtkPanedWindow2fTtkPanedWindow2eForget"></a>
+<a name="robo643"></a><h2>TtkPanedWindow/TtkPanedWindow.Forget [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Remove the Tk_Widget from the Ttk_PanedWindow
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> Forget<span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Ttk_PanedWindow<span class="sign">;</span> SubWindow<span class="sign">:</span> <span class="keyword">in</span> Tk_Widget<span class="keyword">'Class</span><span class="sign">);</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Paned     - Ttk_PanedWindow from which SubWindow will be removed
+ SubWindow - Tk_Widget which will be removed from the Ttk_PanedWindow
+</pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">   <span class="comment">-- Remove My_Frame from My_Paned panedwindow</span>
+   Forget<span class="sign">(</span>My_Paned<span class="sign">,</span> My_Frame<span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> Paned forget subwindow
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.1 - Added
+</pre>
+
+<hr />
+<a name="TtkPanedWindow2fTtkPanedWindow2eGet5fWidget"></a>
+<a name="robo644"></a><h2>TtkPanedWindow/TtkPanedWindow.Get_Widget [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Get the existing Ttk_PanedWindow widget
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> Get_Widget
+     <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Get_Context<span class="sign">)</span>
+      <span class="keyword">return</span> Ttk_PanedWindow<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
+ Interp   - <a href="../tcl_ads.html#robo10">Tcl</a> interpreter on which the widget exists. Can be empty.
+            Default value is current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter
+</pre>
+<p class="item_name">RESULT</p>
+<pre> Existing Ttk_PanedWindow widget
+</pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">     <span class="comment">-- Get panedwindow widget <span class="keyword">with</span> name .mypaned on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+     My_Paned<span class="sign">:</span> <span class="keyword">constant</span> Ttk_PanedWindow <span class="sign">:</span><span class="sign">=</span> Get_Widget<span class="sign">(</span><span class="quote">".mypaned"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.9 - Added
+</pre>
+
+<hr />
+<a name="TtkPanedWindow2fTtkPanedWindow2eIdentify5fElement"></a>
+<a name="robo645"></a><h2>TtkPanedWindow/TtkPanedWindow.Identify_Element [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Get the name of the paned element at the selected point
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> Identify_Element
+     <span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Ttk_PanedWindow<span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Paned - Ttk_PanedWindow which will be queried for elements
+ X     - X coordinate of the point to check
+ Y     - Y coordinate of the point to check
+</pre>
+<p class="item_name">RESULT</p>
+<pre> Name of the element at the selected point of {} if no element or point
+ is outside Paned
+</pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">   <span class="comment">-- Get the name of the element at point <span class="sign">(</span>56<span class="sign">,</span> 32<span class="sign">)</span> <span class="keyword">in</span> My_Paned panedwindow</span>
+   Element_Name<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Identify_Element<span class="sign">(</span>My_Paned<span class="sign">,</span> <span class="quote">"56"</span><span class="sign">,</span> <span class="quote">"32"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> Paned identify element x y
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.6 - Added
+</pre>
+
+<hr />
+<a name="TtkPanedWindow2fTtkPanedWindow2eIdentify5fSash"></a>
+<a name="robo646"></a><h2>TtkPanedWindow/TtkPanedWindow.Identify_Sash [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Get the index of the paned sash at the selected point
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> Identify_Sash
+     <span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Ttk_PanedWindow<span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Paned - Ttk_PanedWindow which will be queried for sash
+ X     - X coordinate of the point to check
+ Y     - Y coordinate of the point to check
+</pre>
+<p class="item_name">RESULT</p>
+<pre> Index of the sash at the selected point of {} if no sash or point
+ is outside Paned
+</pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">      <span class="comment">-- Identify sash at point <span class="sign">(</span>43<span class="sign">,</span> 86<span class="sign">)</span> <span class="keyword">in</span> My_Paned panedwindow</span>
+      Sash_Index<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Identify_Sash<span class="sign">(</span>My_Paned<span class="sign">,</span> <span class="quote">"43"</span><span class="sign">,</span> <span class="quote">"86"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> Paned identify sash x y
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.6 - Added
+</pre>
+
+<hr />
+<a name="TtkPanedWindow2fTtkPanedWindow2eInsert"></a>
+<a name="robo647"></a><h2>TtkPanedWindow/TtkPanedWindow.Insert [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Insert the selected Tk_Widget in the selected Ttk_PanedWindow on the
+ selected position
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> Insert
+     <span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Ttk_PanedWindow<span class="sign">;</span> Position<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
+      SubWindow<span class="sign">:</span> <span class="keyword">in</span> Tk_Widget<span class="keyword">'Class</span><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">)</span> <span class="keyword">with</span>
+      Pre =<span class="sign">&gt;</span> Position /= ""<span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Paned     - Ttk_PanedWindow in which SubWindow will be inserted
+ Position  - Position on which SubWindow will be inserted
+ SubWindow - Tk_Widget to insert to the Ttk_PanedWindow
+ Options   - <a href="./tcl-tk_ads.html#robo14">Tk</a> options which will be passed to the command. Default
+             value is empty.
+</pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">      <span class="comment">-- Insert My_Frame at the end of the My_Paned panedwindow</span>
+      Insert<span class="sign">(</span>My_Paned<span class="sign">,</span> <span class="quote">"end"</span><span class="sign">,</span> My_Frame<span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> Paned insert pos subwindow ?options?
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.3 - Added
+</pre>
+
+<hr />
+<a name="TtkPanedWindow2fTtkPanedWindow2ePane5f28function29"></a>
+<a name="robo648"></a><h2>TtkPanedWindow/TtkPanedWindow.Pane_(function) [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Get the selected options values of the selected widget in the
+ selected Ttk_PanedWindow
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> Pane
+     <span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Ttk_PanedWindow<span class="sign">;</span> Index<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a><span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span>
+      <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> Index <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Paned  - Ttk_PanedWindow in which widget's options will be queried
+ Index  - Numeric index or name of widget which options will be get
+ <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a> - Name of the option to get. Can be empty. Default value is
+          empty
+</pre>
+<p class="item_name">RESULT</p>
+<pre> If <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a> is specified, then return value of the selected option.
+ Otherwise, return list of all options with their values.
+</pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">      <span class="comment">-- Get all available options for first subwindow <span class="keyword">in</span> My_Paned panedwindow</span>
+      Options<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Pane<span class="sign">(</span>My_Paned<span class="sign">,</span> <span class="quote">"0"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="#robo649">TtkPanedWindow.Pane_(procedure)</a>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> Paned pane pane ?option?
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.6 - Added
+</pre>
+
+<hr />
+<a name="TtkPanedWindow2fTtkPanedWindow2ePane5f28procedure29"></a>
+<a name="robo649"></a><h2>TtkPanedWindow/TtkPanedWindow.Pane_(procedure) [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Set the selected options of the selected widget in the selected
+ Ttk_PanedWindow
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">procedure</span> Pane<span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Ttk_PanedWindow<span class="sign">;</span> Index<span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> Index <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Paned   - Ttk_PanedWindow in which widget's options will be set
+ Index   - Numeric index or name of widget which options will be set
+ Options - Options and new values for the selected widget
+</pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">      <span class="comment">-- Set the weight of first subwindow <span class="keyword">in</span> My_Paned panedwindow to 2</span>
+      Pane<span class="sign">(</span>My_Paned<span class="sign">,</span> <span class="quote">"0"</span><span class="sign">,</span> <span class="quote">"-weight 2"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="#robo648">TtkPanedWindow.Pane_(function)</a>
+</pre>
+<p class="item_name">COMMANDS</p>
+<pre> Paned pane index ?options?
+</pre>
+<p class="item_name">HISTORY</p>
+<pre> 8.6.6 - Added
+</pre>
+
+<hr />
+<a name="TtkPanedWindow2fTtkPanedWindow2eSashPos5f28function29"></a>
+<a name="robo650"></a><h2>TtkPanedWindow/TtkPanedWindow.SashPos_(function) [ Subprograms ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre> Get the current position of the selected sash in the selected
+ Ttk_PanedWindow
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">function</span> SashPos
+     <span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Ttk_PanedWindow<span class="sign">;</span> Index<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> Index <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+</pre>
+<p class="item_name">PARAMETERS</p>
+<pre> Paned  - Ttk_PanedWindow in which the position of the sash will be
           taken
- <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a>  - <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a> of the sash to query for position
+ Index  - Index of the sash to query for position
 </pre>
 <p class="item_name">RESULT</p>
 <pre> The current position of the selected sash.
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the current position of the second sash <span class="keyword">in</span> My_Paned panedwindow</span>
-      Position<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>SashPos</strong><span class="sign">(</span>My_Paned<span class="sign">,</span> <span class="quote">"1"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">      <span class="comment">-- Get the current position of the second sash <span class="keyword">in</span> My_Paned panedwindow</span>
+      Position<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> SashPos<span class="sign">(</span>My_Paned<span class="sign">,</span> <span class="quote">"1"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="#robo651">TtkPanedWindow.SashPos_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> Paned sashpos index
@@ -463,26 +472,29 @@
 </pre>
 
 <hr />
-<a name="TtkPanedWindow2fSashPos2028procedure29"></a>
-<a name="robo651"></a><h2>TtkPanedWindow/SashPos (procedure) [ Subprograms ]</h2>
+<a name="TtkPanedWindow2fTtkPanedWindow2eSashPos5f28procedure29"></a>
+<a name="robo651"></a><h2>TtkPanedWindow/TtkPanedWindow.SashPos_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> position of the selected sash in the selected <a href="#robo112">Ttk_PanedWindow</a> to new
+<pre> Set position of the selected sash in the selected Ttk_PanedWindow to new
  position
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <a href="#robo650">SashPos</a><span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo112">Ttk_PanedWindow</a><span class="sign">;</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a><span class="sign">,</span> NewPos<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> NewPos <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">procedure</span> SashPos<span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Ttk_PanedWindow<span class="sign">;</span> Index<span class="sign">,</span> NewPos<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+      Pre <span class="sign">=</span><span class="sign">&gt;</span> Index <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> NewPos <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Paned  - <a href="#robo112">Ttk_PanedWindow</a> in which the selected sash will be moved
- <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a>  - <a href="./tcl-tk-ada-widgets-menu_ads.html#robo324">Index</a> of the sash to move
+<pre> Paned  - Ttk_PanedWindow in which the selected sash will be moved
+ Index  - Index of the sash to move
  NewPos - New position (in pixels) of the selected sash
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> the position of the first sash <span class="keyword">in</span> My_Paned panedwindow to 35 pixels from start</span>
-   <a href="#robo650">SashPos</a><span class="sign">(</span>My_Paned<span class="sign">,</span> <span class="quote">"0"</span><span class="sign">,</span> <span class="quote">"35"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="comment">-- Set the position of the first sash <span class="keyword">in</span> My_Paned panedwindow to 35 pixels from start</span>
+   SashPos<span class="sign">(</span>My_Paned<span class="sign">,</span> <span class="quote">"0"</span><span class="sign">,</span> <span class="quote">"35"</span><span class="sign">)</span><span class="sign">;</span>
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre> <a href="#robo650">TtkPanedWindow.SashPos_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> Paned sashpos index newpos
@@ -493,7 +505,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-ttkpanedwindow.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 30 2020 09:32:20
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-ttkpanedwindow.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Oct 13 2020 07:44:18
 </p>
 </div> <!-- footer -->
 </body>

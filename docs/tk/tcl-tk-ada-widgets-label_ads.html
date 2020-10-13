@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.9 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.10 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,10 +27,10 @@
 <ul>
 <li>1. <a href="#robo45">Widgets/Label</a></li>
 <ul>
-<li>1.1. <a href="#robo88">Label/Tk_Label</a></li>
-<li>1.2. <a href="#robo276">Label/Create (function)</a></li>
-<li>1.3. <a href="#robo277">Label/Create (procedure)</a></li>
-<li>1.4. <a href="#robo278">Label/Get_Widget</a></li>
+<li>1.1. <a href="#robo88">Label/Label.Tk_Label</a></li>
+<li>1.2. <a href="#robo276">Label/Label.Create_(function)</a></li>
+<li>1.3. <a href="#robo277">Label/Label.Create_(procedure)</a></li>
+<li>1.4. <a href="#robo278">Label/Label.Get_Widget</a></li>
 </ul>
 </ul>
 <hr />
@@ -46,31 +46,31 @@
 </pre>
 
 <hr />
-<a name="Label2fTk5fLabel"></a>
-<a name="robo88"></a><h2>Label/Tk_Label [ Types ]</h2>
+<a name="Label2fLabel2eTk5fLabel"></a>
+<a name="robo88"></a><h2>Label/Label.Tk_Label [ Types ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo45">Label</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a>.
- Each of the derived widgets redefines the <a href="../cargv_ads.html#robo191">Create</a> subprogram
+<pre> This is a non-abstract type derived directly from Tk_Widget.
+ Each of the derived widgets redefines the Create subprogram
  in order to create the correct type of widget.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">type</span> <strong>Tk_Label</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">type</span> Tk_Label <span class="keyword">is</span> <span class="keyword">new</span> Tk_Widget <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
 </pre>
 
 <hr />
-<a name="Label2fCreate2028function29"></a>
-<a name="robo276"></a><h2>Label/Create (function) [ Subprograms ]</h2>
+<a name="Label2fLabel2eCreate5f28function29"></a>
+<a name="robo276"></a><h2>Label/Label.Create_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo45">Label</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Creates a new <a href="#robo88">Tk_Label</a> in the specified interpreter.
+<pre> Creates a new Tk_Label in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="../cargv_ads.html#robo191">Create</a>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> Create
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo88">Tk_Label</a> <span class="keyword">with</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> Tk_Label <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
@@ -82,14 +82,14 @@
             Default value is null.
 </pre>
 <p class="item_name">RESULT</p>
-<pre> Newly created <a href="#robo88">Tk_Label</a>
+<pre> Newly created Tk_Label
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="../cargv_ads.html#robo191">Create</a> a new label <span class="keyword">with</span> pathname .mylabel <span class="keyword">with</span> text hello world</span>
-   My_Label<span class="sign">:</span> <span class="keyword">constant</span> <a href="#robo88">Tk_Label</a> <span class="sign">:</span><span class="sign">=</span> <a href="../cargv_ads.html#robo191">Create</a><span class="sign">(</span><span class="quote">".mylabel"</span><span class="sign">,</span> <span class="quote">"-text {hello world}"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="comment">-- Create a new label <span class="keyword">with</span> pathname .mylabel <span class="keyword">with</span> text hello world</span>
+   My_Label<span class="sign">:</span> <span class="keyword">constant</span> Tk_Label <span class="sign">:</span><span class="sign">=</span> Create<span class="sign">(</span><span class="quote">".mylabel"</span><span class="sign">,</span> <span class="quote">"-text {hello world}"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="../cargv_ads.html#robo191">Create</a> (procedure)
+<pre> <a href="#robo277">Label.Create_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> label pathName ?options?
@@ -99,21 +99,21 @@
 </pre>
 
 <hr />
-<a name="Label2fCreate2028procedure29"></a>
-<a name="robo277"></a><h2>Label/Create (procedure) [ Subprograms ]</h2>
+<a name="Label2fLabel2eCreate5f28procedure29"></a>
+<a name="robo277"></a><h2>Label/Label.Create_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo45">Label</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Creates a new <a href="#robo88">Tk_Label</a> in the specified interpreter.
+<pre> Creates a new Tk_Label in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> <a href="../cargv_ads.html#robo191">Create</a>
-     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo88">Tk_Label</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> Create
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> Tk_Label<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
       Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Widgt    - <a href="#robo88">Tk_Label</a> which will be created
+<pre> Widgt    - Tk_Label which will be created
  pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
  options  - Options which will be passed to the widget. Default value is
             empty
@@ -122,18 +122,18 @@
             Default value is null.
 </pre>
 <p class="item_name">OUTPUT</p>
-<pre> Newly created <a href="#robo88">Tk_Label</a> as parameter Widgt
+<pre> Newly created Tk_Label as parameter Widgt
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">     <span class="comment">-- <a href="../cargv_ads.html#robo191">Create</a> label My_Label <span class="keyword">with</span> pathname .mylabel and <span class="keyword">with</span> text hello world on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+<pre class="source">     <span class="comment">-- Create label My_Label <span class="keyword">with</span> pathname .mylabel and <span class="keyword">with</span> text hello world on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
      <span class="keyword">declare</span>
-        My_Label<span class="sign">:</span> <a href="#robo88">Tk_Label</a><span class="sign">;</span>
+        My_Label<span class="sign">:</span> Tk_Label<span class="sign">;</span>
      <span class="keyword">begin</span>
-        <a href="../cargv_ads.html#robo191">Create</a><span class="sign">(</span>My_Label<span class="sign">,</span> <span class="quote">".mylabel"</span><span class="sign">,</span> <span class="quote">"-text {hello world}"</span><span class="sign">)</span><span class="sign">;</span>
+        Create<span class="sign">(</span>My_Label<span class="sign">,</span> <span class="quote">".mylabel"</span><span class="sign">,</span> <span class="quote">"-text {hello world}"</span><span class="sign">)</span><span class="sign">;</span>
      <span class="keyword">end</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="../cargv_ads.html#robo191">Create</a> (function)
+<pre> <a href="#robo276">Label.Create_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> label pathName ?options?
@@ -143,17 +143,17 @@
 </pre>
 
 <hr />
-<a name="Label2fGet5fWidget"></a>
-<a name="robo278"></a><h2>Label/Get_Widget [ Subprograms ]</h2>
+<a name="Label2fLabel2eGet5fWidget"></a>
+<a name="robo278"></a><h2>Label/Label.Get_Widget [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo45">Label</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the existing <a href="#robo88">Tk_Label</a> widget
+<pre> Get the existing Tk_Label widget
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <strong>Get_Widget</strong>
-     <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada_ads.html#robo519">Get_Context</a><span class="sign">)</span>
-      <span class="keyword">return</span> <a href="#robo88">Tk_Label</a><span class="sign">;</span>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> Get_Widget
+     <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Get_Context<span class="sign">)</span>
+      <span class="keyword">return</span> Tk_Label<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
@@ -161,11 +161,11 @@
             Default value is current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter
 </pre>
 <p class="item_name">RESULT</p>
-<pre> Existing <a href="#robo88">Tk_Label</a> widget
+<pre> Existing Tk_Label widget
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">     <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> label widget <span class="keyword">with</span> name .mylabel on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
-     My_Label<span class="sign">:</span> <span class="keyword">constant</span> <a href="#robo88">Tk_Label</a> <span class="sign">:</span><span class="sign">=</span> <strong>Get_Widget</strong><span class="sign">(</span><span class="quote">".mylabel"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">     <span class="comment">-- Get label widget <span class="keyword">with</span> name .mylabel on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+     My_Label<span class="sign">:</span> <span class="keyword">constant</span> Tk_Label <span class="sign">:</span><span class="sign">=</span> Get_Widget<span class="sign">(</span><span class="quote">".mylabel"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">HISTORY</p>
 <pre> 8.6.9 - Added
@@ -173,7 +173,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-label.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 30 2020 09:32:20
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-label.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Oct 13 2020 07:44:18
 </p>
 </div> <!-- footer -->
 </body>

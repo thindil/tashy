@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.9 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.10 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,15 +27,15 @@
 <ul>
 <li>1. <a href="#robo16">TEntry/SpinBox</a></li>
 <ul>
-<li>1.1. <a href="#robo98">SpinBox/Tk_SpinBox</a></li>
-<li>1.2. <a href="#robo412">SpinBox/Create (function)</a></li>
-<li>1.3. <a href="#robo413">SpinBox/Create (procedure)</a></li>
-<li>1.4. <a href="#robo414">SpinBox/Identify</a></li>
-<li>1.5. <a href="#robo415">SpinBox/Invoke</a></li>
-<li>1.6. <a href="#robo416">SpinBox/Selection_Element (function)</a></li>
-<li>1.7. <a href="#robo417">SpinBox/Selection_Element (procedure)</a></li>
-<li>1.8. <a href="#robo418">SpinBox/Set (function)</a></li>
-<li>1.9. <a href="#robo419">SpinBox/Set (procedure)</a></li>
+<li>1.1. <a href="#robo98">SpinBox/SpinBox.Tk_SpinBox</a></li>
+<li>1.2. <a href="#robo411">SpinBox/SpinBox.Create_(function)</a></li>
+<li>1.3. <a href="#robo412">SpinBox/SpinBox.Create_(procedure)</a></li>
+<li>1.4. <a href="#robo413">SpinBox/SpinBox.Identify</a></li>
+<li>1.5. <a href="#robo414">SpinBox/SpinBox.Invoke</a></li>
+<li>1.6. <a href="#robo415">SpinBox/SpinBox.Selection_Element_(function)</a></li>
+<li>1.7. <a href="#robo416">SpinBox/SpinBox.Selection_Element_(procedure)</a></li>
+<li>1.8. <a href="#robo417">SpinBox/SpinBox.Set_(function)</a></li>
+<li>1.9. <a href="#robo418">SpinBox/SpinBox.Set_(procedure)</a></li>
 </ul>
 </ul>
 <hr />
@@ -51,31 +51,31 @@
 </pre>
 
 <hr />
-<a name="SpinBox2fTk5fSpinBox"></a>
-<a name="robo98"></a><h2>SpinBox/Tk_SpinBox [ Types ]</h2>
+<a name="SpinBox2fSpinBox2eTk5fSpinBox"></a>
+<a name="robo98"></a><h2>SpinBox/SpinBox.Tk_SpinBox [ Types ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">SpinBox</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> This is a non-abstract type derived directly from <a href="./tcl-tk-ada-widgets_ads.html#robo121">Tk_Widget</a>.
- Each of the derived widgets redefines the <a href="../cargv_ads.html#robo191">Create</a> subprogram
+<pre> This is a non-abstract type derived directly from Tk_Widget.
+ Each of the derived widgets redefines the Create subprogram
  in order to create the correct type of widget.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">type</span> <strong>Tk_SpinBox</strong> <span class="keyword">is</span> <span class="keyword">new</span> <a href="./tcl-tk-ada-widgets-tentry_ads.html#robo99">Tk_Entry</a> <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">type</span> Tk_SpinBox <span class="keyword">is</span> <span class="keyword">new</span> Tk_Entry <span class="keyword">with</span> <span class="keyword">private</span><span class="sign">;</span>
 </pre>
 
 <hr />
-<a name="SpinBox2fCreate2028function29"></a>
-<a name="robo412"></a><h2>SpinBox/Create (function) [ Subprograms ]</h2>
+<a name="SpinBox2fSpinBox2eCreate5f28function29"></a>
+<a name="robo411"></a><h2>SpinBox/SpinBox.Create_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">SpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Creates a new <a href="#robo98">Tk_SpinBox</a> in the specified interpreter.
+<pre> Creates a new Tk_SpinBox in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="../cargv_ads.html#robo191">Create</a>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> Create
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> <a href="#robo98">Tk_SpinBox</a> <span class="keyword">with</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> Tk_SpinBox <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
@@ -87,14 +87,14 @@
             Default value is null.
 </pre>
 <p class="item_name">RESULT</p>
-<pre> Newly created <a href="#robo98">Tk_SpinBox</a>
+<pre> Newly created Tk_SpinBox
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="../cargv_ads.html#robo191">Create</a> a new spinbox <span class="keyword">with</span> pathname .myspinbox and relief solid</span>
-   My_Spinbox<span class="sign">:</span> <span class="keyword">constant</span> <a href="#robo98">Tk_SpinBox</a> <span class="sign">:</span><span class="sign">=</span> <a href="../cargv_ads.html#robo191">Create</a><span class="sign">(</span><span class="quote">".myspinbox"</span><span class="sign">,</span> <span class="quote">"-relief solid"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="comment">-- Create a new spinbox <span class="keyword">with</span> pathname .myspinbox and relief solid</span>
+   My_Spinbox<span class="sign">:</span> <span class="keyword">constant</span> Tk_SpinBox <span class="sign">:</span><span class="sign">=</span> Create<span class="sign">(</span><span class="quote">".myspinbox"</span><span class="sign">,</span> <span class="quote">"-relief solid"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="../cargv_ads.html#robo191">Create</a> (procedure)
+<pre> <a href="#robo412">SpinBox.Create_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> spinbox pathName ?options?
@@ -104,21 +104,21 @@
 </pre>
 
 <hr />
-<a name="SpinBox2fCreate2028procedure29"></a>
-<a name="robo413"></a><h2>SpinBox/Create (procedure) [ Subprograms ]</h2>
+<a name="SpinBox2fSpinBox2eCreate5f28procedure29"></a>
+<a name="robo412"></a><h2>SpinBox/SpinBox.Create_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">SpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> Creates a new <a href="#robo98">Tk_SpinBox</a> in the specified interpreter.
+<pre> Creates a new Tk_SpinBox in the specified interpreter.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> <a href="../cargv_ads.html#robo191">Create</a>
-     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> <a href="#robo98">Tk_SpinBox</a><span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> Create
+     <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> Tk_SpinBox<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
       Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> Widgt    - <a href="#robo98">Tk_SpinBox</a> which will be created
+<pre> Widgt    - Tk_SpinBox which will be created
  pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
  options  - Options which will be passed to the widget. Default value is
             empty
@@ -127,18 +127,18 @@
             Default value is null.
 </pre>
 <p class="item_name">OUTPUT</p>
-<pre> Newly created <a href="#robo98">Tk_SpinBox</a> as parameter Widgt
+<pre> Newly created Tk_SpinBox as parameter Widgt
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">     <span class="comment">-- <a href="../cargv_ads.html#robo191">Create</a> spinbox My_Spinbox <span class="keyword">with</span> pathname .myspinbox and black background on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
+<pre class="source">     <span class="comment">-- Create spinbox My_Spinbox <span class="keyword">with</span> pathname .myspinbox and black background on the current <a href="../tcl_ads.html#robo10">Tcl</a> interpreter</span>
      <span class="keyword">declare</span>
-        My_Spinbox<span class="sign">:</span> <a href="#robo98">Tk_SpinBox</a><span class="sign">;</span>
+        My_Spinbox<span class="sign">:</span> Tk_SpinBox<span class="sign">;</span>
      <span class="keyword">begin</span>
-        <a href="../cargv_ads.html#robo191">Create</a><span class="sign">(</span>My_Spinbox<span class="sign">,</span> <span class="quote">".myspinbox"</span><span class="sign">,</span> <span class="quote">"-background black"</span><span class="sign">)</span><span class="sign">;</span>
+        Create<span class="sign">(</span>My_Spinbox<span class="sign">,</span> <span class="quote">".myspinbox"</span><span class="sign">,</span> <span class="quote">"-background black"</span><span class="sign">)</span><span class="sign">;</span>
      <span class="keyword">end</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="../cargv_ads.html#robo191">Create</a> (function)
+<pre> <a href="#robo411">SpinBox.Create_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> spinbox pathName ?options?
@@ -148,20 +148,20 @@
 </pre>
 
 <hr />
-<a name="SpinBox2fIdentify"></a>
-<a name="robo414"></a><h2>SpinBox/Identify [ Subprograms ]</h2>
+<a name="SpinBox2fSpinBox2eIdentify"></a>
+<a name="robo413"></a><h2>SpinBox/SpinBox.Identify [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">SpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the name of the <a href="#robo98">Tk_SpinBox</a> element at the selected coordinates
+<pre> Get the name of the Tk_SpinBox element at the selected coordinates
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <strong>Identify</strong>
-     <span class="sign">(</span>SpinBoxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo98">Tk_SpinBox</a><span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
+<pre class="source">   <span class="keyword">function</span> Identify
+     <span class="sign">(</span>SpinBoxWidget<span class="sign">:</span> <span class="keyword">in</span> Tk_SpinBox<span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> SpinBoxWidget - <a href="#robo98">Tk_SpinBox</a> which will be queried for the name of the
+<pre> SpinBoxWidget - Tk_SpinBox which will be queried for the name of the
                  element
  X             - X coordinate of the pixel which will be check
  Y             - Y coordinate of the pixel which will be check
@@ -171,8 +171,8 @@
  pixel is outside SpinBoxWidget
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">     <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the name of the element of the My_Spinbox spinbox at point <span class="sign">(</span>43<span class="sign">,</span> 28)</span>
-     Element_Name<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <strong>Identify</strong><span class="sign">(</span>My_Spinbox<span class="sign">,</span> <span class="quote">"43"</span><span class="sign">,</span> <span class="quote">"28"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">     <span class="comment">-- Get the name of the element of the My_Spinbox spinbox at point <span class="sign">(</span>43<span class="sign">,</span> 28)</span>
+     Element_Name<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Identify<span class="sign">(</span>My_Spinbox<span class="sign">,</span> <span class="quote">"43"</span><span class="sign">,</span> <span class="quote">"28"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> SpinBoxWidget identify x y
@@ -182,26 +182,26 @@
 </pre>
 
 <hr />
-<a name="SpinBox2fInvoke"></a>
-<a name="robo415"></a><h2>SpinBox/Invoke [ Subprograms ]</h2>
+<a name="SpinBox2fSpinBox2eInvoke"></a>
+<a name="robo414"></a><h2>SpinBox/SpinBox.Invoke [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">SpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <strong>Invoke</strong> the selected button of the selected <a href="#robo98">Tk_SpinBox</a>
+<pre> Invoke the selected button of the selected Tk_SpinBox
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <strong>Invoke</strong><span class="sign">(</span>SpinBoxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo98">Tk_SpinBox</a><span class="sign">;</span> Element<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+<pre class="source">   <span class="keyword">procedure</span> Invoke<span class="sign">(</span>SpinBoxWidget<span class="sign">:</span> <span class="keyword">in</span> Tk_SpinBox<span class="sign">;</span> Element<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Element <span class="keyword">in</span> <span class="quote">"buttondown"</span> <span class="sign">|</span> <span class="quote">"buttonup"</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> SpinBoxWidget - <a href="#robo98">Tk_SpinBox</a> in which the selected button will be
+<pre> SpinBoxWidget - Tk_SpinBox in which the selected button will be
                  invoked
  Element       - Name of the selected button. Can be "buttondown" or
                  "buttonup"
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <strong>Invoke</strong> button "buttonup" of My_Spinbox spinbox</span>
-      <strong>Invoke</strong><span class="sign">(</span>My_Spinbox<span class="sign">,</span> <span class="quote">"buttonup"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">      <span class="comment">-- Invoke button "buttonup" of My_Spinbox spinbox</span>
+      Invoke<span class="sign">(</span>My_Spinbox<span class="sign">,</span> <span class="quote">"buttonup"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> SpinBoxWidget invoke element
@@ -211,29 +211,29 @@
 </pre>
 
 <hr />
-<a name="SpinBox2fSelection5fElement2028function29"></a>
-<a name="robo416"></a><h2>SpinBox/Selection_Element (function) [ Subprograms ]</h2>
+<a name="SpinBox2fSpinBox2eSelection5fElement5f28function29"></a>
+<a name="robo415"></a><h2>SpinBox/SpinBox.Selection_Element_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">SpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the currently selected element of the selected <a href="#robo98">Tk_SpinBox</a>
+<pre> Get the currently selected element of the selected Tk_SpinBox
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> Selection_Element<span class="sign">(</span>SpinBoxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo98">Tk_SpinBox</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> Selection_Element<span class="sign">(</span>SpinBoxWidget<span class="sign">:</span> <span class="keyword">in</span> Tk_SpinBox<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> SpinBoxWidget - <a href="#robo98">Tk_SpinBox</a> which will be queried for the selected
+<pre> SpinBoxWidget - Tk_SpinBox which will be queried for the selected
                  element
 </pre>
 <p class="item_name">RESULT</p>
 <pre> Name of the currently selected element in SpinBoxWidget
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the currently selected element for My_Spinbox spinbox</span>
+<pre class="source">      <span class="comment">-- Get the currently selected element for My_Spinbox spinbox</span>
       Selected_Element<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Selection_Element<span class="sign">(</span>My_Spinbox<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> Selection_Element (procdure)
+<pre> <a href="#robo16">SpinBox</a>.Selection_Element_(procdure)
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> SpinBoxWidget selection element
@@ -243,29 +243,29 @@
 </pre>
 
 <hr />
-<a name="SpinBox2fSelection5fElement2028procedure29"></a>
-<a name="robo417"></a><h2>SpinBox/Selection_Element (procedure) [ Subprograms ]</h2>
+<a name="SpinBox2fSpinBox2eSelection5fElement5f28procedure29"></a>
+<a name="robo416"></a><h2>SpinBox/SpinBox.Selection_Element_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">SpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> the element of <a href="#robo98">Tk_SpinBox</a> as the selected element
+<pre> Set the element of Tk_SpinBox as the selected element
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Selection_Element
-     <span class="sign">(</span>SpinBoxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo98">Tk_SpinBox</a><span class="sign">;</span> Element<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+     <span class="sign">(</span>SpinBoxWidget<span class="sign">:</span> <span class="keyword">in</span> Tk_SpinBox<span class="sign">;</span> Element<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Element <span class="keyword">in</span> <span class="quote">"buttondown"</span> <span class="sign">|</span> <span class="quote">"buttonup"</span> <span class="sign">|</span> <span class="quote">"entry"</span> <span class="sign">|</span> <span class="quote">"none"</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> SpinBoxWidget - <a href="#robo98">Tk_SpinBox</a> in which element will be selected
+<pre> SpinBoxWidget - Tk_SpinBox in which element will be selected
  Element       - Name of the element to select. Possible values are
                  "buttonup", "buttondown", "entry" or "none"
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> entry of the My_Spinbox spinbox as a selected element</span>
+<pre class="source">      <span class="comment">-- Set entry of the My_Spinbox spinbox as a selected element</span>
       Selection_Element<span class="sign">(</span>My_Spinbox<span class="sign">,</span> <span class="quote">"entry"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> Selection_Element (function)
+<pre> <a href="#robo415">SpinBox.Selection_Element_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> SpinBoxWidget selection element element
@@ -275,28 +275,28 @@
 </pre>
 
 <hr />
-<a name="SpinBox2fSet2028function29"></a>
-<a name="robo418"></a><h2>SpinBox/Set (function) [ Subprograms ]</h2>
+<a name="SpinBox2fSpinBox2eSet5f28function29"></a>
+<a name="robo417"></a><h2>SpinBox/SpinBox.Set_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">SpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the value for the selected <a href="#robo98">Tk_SpinBox</a>
+<pre> Get the value for the selected Tk_SpinBox
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a><span class="sign">(</span>SpinBoxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo98">Tk_SpinBox</a><span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> Set<span class="sign">(</span>SpinBoxWidget<span class="sign">:</span> <span class="keyword">in</span> Tk_SpinBox<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> SpinBoxWidget - <a href="#robo98">Tk_SpinBox</a> which value will be set
+<pre> SpinBoxWidget - Tk_SpinBox which value will be set
 </pre>
 <p class="item_name">RESULT</p>
 <pre> The current value of the SpinBoxWidget
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- <a href="./tcl-tk-ada-widgets-text_ads.html#robo460">Get</a> the current value of My_Spinbox spinbox</span>
-      Value<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a><span class="sign">(</span>My_Spinbox<span class="sign">)</span><span class="sign">;</span>
+<pre class="source">      <span class="comment">-- Get the current value of My_Spinbox spinbox</span>
+      Value<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Set<span class="sign">(</span>My_Spinbox<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> (procedure)
+<pre> <a href="#robo418">SpinBox.Set_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> SpinBoxWidget set
@@ -306,27 +306,27 @@
 </pre>
 
 <hr />
-<a name="SpinBox2fSet2028procedure29"></a>
-<a name="robo419"></a><h2>SpinBox/Set (procedure) [ Subprograms ]</h2>
+<a name="SpinBox2fSpinBox2eSet5f28procedure29"></a>
+<a name="robo418"></a><h2>SpinBox/SpinBox.Set_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo16">SpinBox</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> the selected String as a new value for the selected <a href="#robo98">Tk_SpinBox</a>
+<pre> Set the selected String as a new value for the selected Tk_SpinBox
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">procedure</span> <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a><span class="sign">(</span>SpinBoxWidget<span class="sign">:</span> <span class="keyword">in</span> <a href="#robo98">Tk_SpinBox</a><span class="sign">;</span> Value<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
+<pre class="source">   <span class="keyword">procedure</span> Set<span class="sign">(</span>SpinBoxWidget<span class="sign">:</span> <span class="keyword">in</span> Tk_SpinBox<span class="sign">;</span> Value<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
       Pre <span class="sign">=</span><span class="sign">&gt;</span> Value <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
-<pre> SpinBoxWidget - <a href="#robo98">Tk_SpinBox</a> which value will be set
+<pre> SpinBoxWidget - Tk_SpinBox which value will be set
  Value         - Value to set
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="comment">-- <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> the value of My_Spinbox spinbox to 100</span>
-   <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a><span class="sign">(</span>My_Spinbox<span class="sign">,</span> <span class="quote">"100"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">   <span class="comment">-- Set the value of My_Spinbox spinbox to 100</span>
+   Set<span class="sign">(</span>My_Spinbox<span class="sign">,</span> <span class="quote">"100"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="./tcl-tk-ada-widgets-ttkscrollbar_ads.html#robo673">Set</a> (function)
+<pre> <a href="#robo417">SpinBox.Set_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> SpinBoxWidget set value
@@ -337,7 +337,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-tentry-spinbox.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 30 2020 09:32:20
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-tentry-spinbox.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Tue Oct 13 2020 07:44:18
 </p>
 </div> <!-- footer -->
 </body>
