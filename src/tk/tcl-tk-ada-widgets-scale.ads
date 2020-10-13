@@ -104,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.Scale is
       Pre => pathName /= "";
      -- ****
 
-     -- ****f* Scale/TkScale.Get_Widget
+     -- ****f* TkScale/TkScale.Get_Widget
      -- FUNCTION
      -- Get the existing Tk_Scale widget
      -- PARAMETERS
