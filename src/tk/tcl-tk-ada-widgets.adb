@@ -201,12 +201,12 @@ package body Tcl.Tk.Ada.Widgets is
 
    procedure Widget_Raise(Widgt: in Tk_Widget'Class) is
    begin
-      Tcl_Eval(Widgt.Interp, "raise");
+      Tcl_Eval(Widgt.Interp, "raise " & Widgt);
    end Widget_Raise;
 
    procedure Widget_Raise(Widgt, AboveThis: in Tk_Widget'Class) is
    begin
-      Tcl_Eval(Widgt.Interp, "raise " & Widget_Image(AboveThis));
+      Tcl_Eval(Widgt.Interp, "raise " & " " & Widgt & " " & AboveThis);
    end Widget_Raise;
 
    procedure Tk_Caret(Widgt: in Tk_Widget'Class; X, Y, Height: in String) is
