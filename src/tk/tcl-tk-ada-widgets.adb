@@ -194,9 +194,7 @@ package body Tcl.Tk.Ada.Widgets is
 
    procedure Lower(Widgt, BelowThis: in Tk_Widget'Class) is
    begin
-      Tcl_Eval
-        (Widgt.Interp,
-         "lower " & Widget_Image(Widgt) & Widget_Image(BelowThis));
+      Tcl_Eval(Widgt.Interp, "lower " & Widgt & " " & BelowThis);
    end Lower;
 
    procedure Widget_Raise(Widgt: in Tk_Widget'Class) is
