@@ -8,6 +8,7 @@ of the project.
 
 ### Fixed
 - Raising Tk\_Widgets commands (Tcl.Tk.Ada.Widgets.Widget\_Raise)
+- Lowering Tk\_Widgets below another selected (Tcl.Tk.Ada.Widgets.Lower)
 
 ## [8.6.10] - 2020-10-13
 
