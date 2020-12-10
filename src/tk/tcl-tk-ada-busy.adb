@@ -26,31 +26,25 @@ package body Tcl.Tk.Ada.Busy is
 
    procedure Busy(Window: in Tk_Widget'Class; Options: in String := "") is
    begin
-      Tcl_Eval
-        (Window.Interp, "tk busy " & Widget_Image(Window) & " " & Options);
+      Tcl_Eval(Window.Interp, "tk busy " & Window & " " & Options);
    end Busy;
 
    function cget
      (Window: in Tk_Widget'Class; Option: in String) return String is
    begin
-      Tcl_Eval
-        (Window.Interp, "tk busy cget " & Widget_Image(Window) & " " & Option);
+      Tcl_Eval(Window.Interp, "tk busy cget " & Window & " " & Option);
       return Tcl.Ada.Tcl_GetResult(Window.Interp);
    end cget;
 
    procedure Configure(Window: in Tk_Widget'Class; Options: in String) is
    begin
-      Tcl_Eval
-        (Window.Interp,
-         "tk busy configure " & Widget_Image(Window) & " " & Options);
+      Tcl_Eval(Window.Interp, "tk busy configure " & Window & " " & Options);
    end Configure;
 
    function Configure
      (Window: in Tk_Widget'Class; Option: in String := "") return String is
    begin
-      Tcl_Eval
-        (Window.Interp,
-         "tk busy configure " & Widget_Image(Window) & " " & Option);
+      Tcl_Eval(Window.Interp, "tk busy configure " & Window & " " & Option);
       return Tcl.Ada.Tcl_GetResult(Window.Interp);
    end Configure;
 
@@ -62,12 +56,12 @@ package body Tcl.Tk.Ada.Busy is
 
    procedure Forget(Window: in Tk_Widget'Class) is
    begin
-      Tcl_Eval(Window.Interp, "tk busy forget " & Widget_Image(Window));
+      Tcl_Eval(Window.Interp, "tk busy forget " & Window);
    end Forget;
 
    function Status(Window: in Tk_Widget'Class) return String is
    begin
-      Tcl_Eval(Window.Interp, "tk busy status " & Widget_Image(Window));
+      Tcl_Eval(Window.Interp, "tk busy status " & Window);
       return Tcl.Ada.Tcl_GetResult(Window.Interp);
    end Status;
 

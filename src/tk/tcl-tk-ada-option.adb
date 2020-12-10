@@ -41,8 +41,7 @@ package body Tcl.Tk.Ada.Option is
      (Window: in Tk_Widget'Class; Name, Class: in String) return String is
    begin
       Tcl.Ada.Tcl_Eval
-        (Window.Interp,
-         "option get " & Widget_Image(Window) & " " & Name & " " & Class);
+        (Window.Interp, "option get " & Window & " " & Name & " " & Class);
       return Tcl.Ada.Tcl_GetResult(Window.Interp);
    end Get;
 

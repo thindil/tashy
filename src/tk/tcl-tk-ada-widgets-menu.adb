@@ -152,8 +152,7 @@ package body Tcl.Tk.Ada.Widgets.Menu is
    begin
       Tcl_Eval
         (MenuWidget.Interp,
-         "tk_popup " & Widget_Image(MenuWidget) & " " & X & " " & Y & " " &
-         MenuEntry);
+         "tk_popup " & MenuWidget & " " & X & " " & Y & " " & MenuEntry);
    end Tk_Popup;
 
    procedure Unpost(MenuWidget: in Tk_Menu) is

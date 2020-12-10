@@ -47,8 +47,8 @@ package body Tcl.Tk.Ada.Dialogs is
       end loop;
       Tcl_Eval
         (Get_Context,
-         "tk_dialog " & Widget_Image(Widget) & " """ & Title & """ """ & Text &
-         """ " & Bitmap & Integer'Image(Default) & To_String(ButtonsString));
+         "tk_dialog " & Widget & " """ & Title & """ """ & Text & """ " &
+         Bitmap & Integer'Image(Default) & To_String(ButtonsString));
       return Integer'Value(Tcl_GetResult(Get_Context));
    end Dialog;
 
