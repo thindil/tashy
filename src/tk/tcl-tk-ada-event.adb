@@ -43,7 +43,7 @@ package body Tcl.Tk.Ada.Event is
    begin
       Tcl_Eval
         (Window.Interp,
-         "event generate " & Widget_Image(Window) & " " & EventName & " " &
+         "event generate " & Window & " " & EventName & " " &
          Options);
    end Generate;
 

@@ -64,8 +64,7 @@ package body Tcl.Tk.Ada.Image.Photo is
 
    procedure Copy(Source, Target: in Tk_Photo; Options: in String := "") is
    begin
-      Execute_Widget_Command
-        (Target, "copy", Widget_Image(Source) & " " & Options);
+      Execute_Widget_Command(Target, "copy", Source & " " & Options);
    end Copy;
 
    function Data(Image: in Tk_Photo; Options: in String := "") return String is

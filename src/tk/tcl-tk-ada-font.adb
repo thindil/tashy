@@ -81,8 +81,7 @@ package body Tcl.Tk.Ada.Font is
 
    function Families(Widget: Tk_Widget'Class) return String is
    begin
-      Tcl_Eval
-        (Widget.Interp, "font families -displayof " & Widget_Image(Widget));
+      Tcl_Eval(Widget.Interp, "font families -displayof " & Widget);
       return Tcl.Ada.Tcl_GetResult(Widget.Interp);
    end Families;
 
@@ -99,8 +98,7 @@ package body Tcl.Tk.Ada.Font is
    begin
       Tcl_Eval
         (Widget.Interp,
-         "font measure " & Font & " -displayof " & Widget_Image(Widget) & " " &
-         Text);
+         "font measure " & Font & " -displayof " & Widget & " " & Text);
       return Tcl.Ada.Tcl_GetResult(Widget.Interp);
    end Measure;
 
@@ -118,8 +116,7 @@ package body Tcl.Tk.Ada.Font is
    begin
       Tcl_Eval
         (Widget.Interp,
-         "font metrics " & Font & " -displayof " & Widget_Image(Widget) & " " &
-         Option);
+         "font metrics " & Font & " -displayof " & Widget & " " & Option);
       return Tcl.Ada.Tcl_GetResult(Widget.Interp);
    end Metrics;
 
