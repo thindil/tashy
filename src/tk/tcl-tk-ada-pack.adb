@@ -26,25 +26,23 @@ package body Tcl.Tk.Ada.Pack is
 
    procedure Pack(Slave: in Tk_Widget'Class; Options: in String := "") is
    begin --  Pack
-      Tcl_Eval(Slave.Interp, "pack " & Widget_Image(Slave) & " " & Options);
+      Tcl_Eval(Slave.Interp, "pack " & Slave & " " & Options);
    end Pack;
 
    procedure Pack_Configure
      (Slave: in Tk_Widget'Class; Options: in String := "") is
    begin --  Pack_Configure
-      Tcl_Eval
-        (Slave.Interp,
-         "pack configure " & Widget_Image(Slave) & " " & Options);
+      Tcl_Eval(Slave.Interp, "pack configure " & Slave & " " & Options);
    end Pack_Configure;
 
    procedure Pack_Forget(Slave: in Tk_Widget'Class) is
    begin --  Pack_Forget
-      Tcl_Eval(Slave.Interp, "pack forget " & Widget_Image(Slave));
+      Tcl_Eval(Slave.Interp, "pack forget " & Slave);
    end Pack_Forget;
 
    function Pack_Info(Slave: in Tk_Widget'Class) return String is
    begin --  Pack_Info
-      Tcl_Eval(Slave.Interp, "pack info " & Widget_Image(Slave));
+      Tcl_Eval(Slave.Interp, "pack info " & Slave);
       return Tcl.Ada.Tcl_GetResult(Slave.Interp);
    end Pack_Info;
 
@@ -52,19 +50,18 @@ package body Tcl.Tk.Ada.Pack is
    begin --  Pack_Propagate
       Tcl_Eval
         (Master.Interp,
-         "pack propagate " & Widget_Image(Master) & " " &
-         Integer'Image(Boolean'Pos(State)));
+         "pack propagate " & Master & " " & Integer'Image(Boolean'Pos(State)));
    end Pack_Propagate;
 
    function Pack_Propagate(Master: in Tk_Widget'Class) return Boolean is
    begin --  Pack_Propagate
-      Tcl_Eval(Master.Interp, "pack propagate " & Widget_Image(Master));
+      Tcl_Eval(Master.Interp, "pack propagate " & Master);
       return Integer'Value(Tcl.Ada.Tcl_GetResult(Master.Interp)) = 1;
    end Pack_Propagate;
 
    function Pack_Slaves(Master: in Tk_Widget'Class) return String is
    begin --  Pack_Slaves
-      Tcl_Eval(Master.Interp, "pack slaves " & Widget_Image(Master));
+      Tcl_Eval(Master.Interp, "pack slaves " & Master);
       return Tcl.Ada.Tcl_GetResult(Master.Interp);
    end Pack_Slaves;
 

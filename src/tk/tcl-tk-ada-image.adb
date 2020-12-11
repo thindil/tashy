@@ -26,25 +26,25 @@ package body Tcl.Tk.Ada.Image is
 
    procedure Delete(Img: in out Tk_Widget'Class) is
    begin
-      Tcl_Eval(Img.Interp, "image delete " & Widget_Image(Img));
+      Tcl_Eval(Img.Interp, "image delete " & Img);
       C.Strings.Free(Img.Name);
    end Delete;
 
    function Height(Img: in Tk_Widget'Class) return String is
    begin
-      Tcl_Eval(Img.Interp, "image height " & Widget_Image(Img));
+      Tcl_Eval(Img.Interp, "image height " & Img);
       return Tcl_GetResult(Img.Interp);
    end Height;
 
    function Image_Type(Img: in Tk_Widget'Class) return String is
    begin
-      Tcl_Eval(Img.Interp, "image type " & Widget_Image(Img));
+      Tcl_Eval(Img.Interp, "image type " & Img);
       return Tcl_GetResult(Img.Interp);
    end Image_Type;
 
    function Inuse(Img: in Tk_Widget'Class) return String is
    begin
-      Tcl_Eval(Img.Interp, "image inuse " & Widget_Image(Img));
+      Tcl_Eval(Img.Interp, "image inuse " & Img);
       return Tcl_GetResult(Img.Interp);
    end Inuse;
 
@@ -63,7 +63,7 @@ package body Tcl.Tk.Ada.Image is
 
    function Width(Img: in Tk_Widget'Class) return String is
    begin
-      Tcl_Eval(Img.Interp, "image width " & Widget_Image(Img));
+      Tcl_Eval(Img.Interp, "image width " & Img);
       return Tcl_GetResult(Img.Interp);
    end Width;
 
