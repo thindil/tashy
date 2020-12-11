@@ -30,14 +30,13 @@ package body Tcl.Tk.Ada.Clipboard is
    begin
       Tcl_Eval
         (Window.Interp,
-         "clipboard append -displayof " & Widget_Image(Window) & " -format " &
-         Format & " -type " & CType & " " & Data);
+         "clipboard append -displayof " & Window & " -format " & Format &
+         " -type " & CType & " " & Data);
    end Append;
 
    procedure Clear(Window: in Tk_Widget'Class) is
    begin
-      Tcl_Eval
-        (Window.Interp, "clipboard clear -displayof " & Widget_Image(Window));
+      Tcl_Eval(Window.Interp, "clipboard clear -displayof " & Window);
    end Clear;
 
    function Get
@@ -46,8 +45,7 @@ package body Tcl.Tk.Ada.Clipboard is
    begin
       Tcl_Eval
         (Window.Interp,
-         "clipboard get -displayof " & Widget_Image(Window) & " -type " &
-         CType);
+         "clipboard get -displayof " & Window & " -type " & CType);
       return Tcl.Ada.Tcl_GetResult(Window.Interp);
    end Get;
 
@@ -56,8 +54,7 @@ package body Tcl.Tk.Ada.Clipboard is
    begin
       Tcl_Eval
         (Window.Interp,
-         "selection clear -displayof " & Widget_Image(Window) &
-         " -selection " & Selection);
+         "selection clear -displayof " & Window & " -selection " & Selection);
    end Selection_Clear;
 
    function Selection_Get
@@ -66,8 +63,8 @@ package body Tcl.Tk.Ada.Clipboard is
    begin
       Tcl_Eval
         (Window.Interp,
-         "selection get -displayof " & Widget_Image(Window) & " -selection " &
-         Selection & " -type " & SType);
+         "selection get -displayof " & Window & " -selection " & Selection &
+         " -type " & SType);
       return Tcl.Ada.Tcl_GetResult(Window.Interp);
    end Selection_Get;
 
@@ -79,7 +76,7 @@ package body Tcl.Tk.Ada.Clipboard is
       Tcl_Eval
         (Window.Interp,
          "selection handle -selection " & Selection & " -type " & SType &
-         " -format " & Format & " " & Widget_Image(Window) & " " & Command);
+         " -format " & Format & " " & Window & " " & Command);
    end Selection_Handle;
 
    function Selection_Own
@@ -88,8 +85,7 @@ package body Tcl.Tk.Ada.Clipboard is
    begin
       Tcl_Eval
         (Window.Interp,
-         "selection own -displayof " & Widget_Image(Window) & " -selection " &
-         Selection);
+         "selection own -displayof " & Window & " -selection " & Selection);
       return Tcl.Ada.Tcl_GetResult(Window.Interp);
    end Selection_Own;
 
@@ -100,7 +96,7 @@ package body Tcl.Tk.Ada.Clipboard is
       Tcl_Eval
         (Window.Interp,
          "selection own " & Command & " -selection " & Selection & " " &
-         Widget_Image(Window));
+         Window);
    end Selection_Own;
 
 end Tcl.Tk.Ada.Clipboard;

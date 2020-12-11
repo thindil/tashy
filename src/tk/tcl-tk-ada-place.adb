@@ -26,31 +26,29 @@ package body Tcl.Tk.Ada.Place is
 
    procedure Place(Slave: in Tk_Widget'Class; Options: in String := "") is
    begin
-      Tcl_Eval(Slave.Interp, "place " & Widget_Image(Slave) & " " & Options);
+      Tcl_Eval(Slave.Interp, "place " & Slave & " " & Options);
    end Place;
 
    procedure Place_Configure
      (Slave: in Tk_Widget'Class; Options: in String := "") is
    begin
-      Tcl_Eval
-        (Slave.Interp,
-         "place configure " & Widget_Image(Slave) & " " & Options);
+      Tcl_Eval(Slave.Interp, "place configure " & Slave & " " & Options);
    end Place_Configure;
 
    procedure Place_Forget(Slave: in Tk_Widget'Class) is
    begin
-      Tcl_Eval(Slave.Interp, "place forget " & Widget_Image(Slave));
+      Tcl_Eval(Slave.Interp, "place forget " & Slave);
    end Place_Forget;
 
    function Place_Info(Slave: in Tk_Widget'Class) return String is
    begin
-      Tcl_Eval(Slave.Interp, "place info " & Widget_Image(Slave));
+      Tcl_Eval(Slave.Interp, "place info " & Slave);
       return Tcl.Ada.Tcl_GetResult(Slave.Interp);
    end Place_Info;
 
    function Place_Slaves(Master: in Tk_Widget'Class) return String is
    begin
-      Tcl_Eval(Master.Interp, "place slaves " & Widget_Image(Master));
+      Tcl_Eval(Master.Interp, "place slaves " & Master);
       return Tcl.Ada.Tcl_GetResult(Master.Interp);
    end Place_Slaves;
 
