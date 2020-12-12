@@ -26,9 +26,7 @@ package body Tcl.Tk.Ada.Wm is
      (Widgt: in Tk_Widget'Class; Action: in String;
       Options: in String := "") is
    begin
-      Tcl_Eval
-        (Widgt.Interp,
-         "wm " & Action & " " & Widget_Image(Widgt) & " " & Options);
+      Tcl_Eval(Widgt.Interp, "wm " & Action & " " & Widgt & " " & Options);
    end Wm_Set;
 
 end Tcl.Tk.Ada.Wm;

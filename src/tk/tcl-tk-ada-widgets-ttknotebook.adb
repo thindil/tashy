@@ -98,8 +98,7 @@ package body Tcl.Tk.Ada.Widgets.TtkNotebook is
       Options: in String) is
    begin
       Execute_Widget_Command
-        (Notebook, "insert",
-         Pos & " " & Widget_Image(SubWindow) & " " & Options);
+        (Notebook, "insert", Pos & " " & SubWindow & " " & Options);
    end Insert;
 
    procedure Notebook_Select(Notebook: in Ttk_Notebook; TabId: in String) is

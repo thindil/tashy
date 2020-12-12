@@ -60,8 +60,7 @@ package body Tcl.Tk.Ada.Widgets.PanedWindow is
      (Paned: in Tk_PanedWindow; SubWindow: in Tk_Widget'Class;
       Options: in String := "") is
    begin
-      Execute_Widget_Command
-        (Paned, "add", Widget_Image(SubWindow) & " " & Options);
+      Execute_Widget_Command(Paned, "add", SubWindow & " " & Options);
    end Add;
 
    procedure Forget(Paned: in Tk_PanedWindow; SubWindow: in Tk_Widget'Class) is
