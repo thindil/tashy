@@ -6,6 +6,9 @@ of the project.
 
 ## [Unreleased]
 
+### Changed
+- Replaced using Widget_Image in code on just Widget in many subprograms
+
 ### Fixed
 - Raising Tk\_Widgets commands (Tcl.Tk.Ada.Widgets.Widget\_Raise)
 - Lowering Tk\_Widgets below another selected (Tcl.Tk.Ada.Widgets.Lower)
