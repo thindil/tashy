@@ -325,7 +325,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.3 - Added
       -- EXAMPLE
       -- -- Add button My_Button as a window to My_Canvas canvas at (0,0) point
-      -- Canvas_Create(My_Canvas, "window", "0 0 -window " & Widget_Image(My_Button));
+      -- Canvas_Create(My_Canvas, "window", "0 0 -window " & My_Button);
       -- COMMANDS
       -- CanvasWidget create type ?options?
       -- SEE ALSO
@@ -350,7 +350,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- 8.6.6 - Added
       -- EXAMPLE
       -- -- Add button My_Button as a window to My_Canvas canvas at (0,0) point and get it Id
-      -- Button_Id := constant Sttring := Canvas_Create(My_Canvas, "window", "0 0 -window " & Widget_Image(My_Button));
+      -- Button_Id := constant Sttring := Canvas_Create(My_Canvas, "window", "0 0 -window " & My_Button);
       -- COMMANDS
       -- CanvasWidget create type ?options?
       -- SEE ALSO

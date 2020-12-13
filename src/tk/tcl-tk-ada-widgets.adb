@@ -59,7 +59,7 @@ package body Tcl.Tk.Ada.Widgets is
 
    procedure Destroy(Widgt: in out Tk_Widget'Class) is
    begin --  Destroy
-      Tcl_Eval(Widgt.Interp, "destroy " & Widget_Image(Widgt));
+      Tcl_Eval(Widgt.Interp, "destroy " & Widgt);
       C.Strings.Free(Widgt.Name);
    end Destroy;
 
@@ -84,54 +84,47 @@ package body Tcl.Tk.Ada.Widgets is
    procedure Bind
      (Widgt: in Tk_Widget'Class; Sequence: in String; Script: in String) is
    begin --  Bind
-      Tcl_Eval
-        (Widgt.Interp,
-         "bind " & Widget_Image(Widgt) & " " & Sequence & " " & Script);
+      Tcl_Eval(Widgt.Interp, "bind " & Widgt & " " & Sequence & " " & Script);
    end Bind;
 
    function Bind
      (Widgt: in Tk_Widget'Class; Sequence: in String) return String is
    begin
-      Tcl_Eval(Widgt.Interp, "bind " & Widget_Image(Widgt) & " " & Sequence);
+      Tcl_Eval(Widgt.Interp, "bind " & Widgt & " " & Sequence);
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end Bind;
 
    procedure Bind_Tags(Widgt: in Tk_Widget'Class; TagList: in String) is
    begin
-      Tcl_Eval
-        (Widgt.Interp, "bindtags " & Widget_Image(Widgt) & " " & TagList);
+      Tcl_Eval(Widgt.Interp, "bindtags " & Widgt & " " & TagList);
    end Bind_Tags;
 
    function Bind_Tags(Widgt: in Tk_Widget'Class) return String is
    begin
-      Tcl_Eval(Widgt.Interp, "bindtags " & Widget_Image(Widgt));
+      Tcl_Eval(Widgt.Interp, "bindtags " & Widgt);
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end Bind_Tags;
 
    procedure Unbind(Widgt: in Tk_Widget'Class; Sequence: in String) is
    begin --  Unbind
-      Tcl_Eval
-        (Widgt.Interp, "bind " & Widget_Image(Widgt) & " " & Sequence & " {}");
+      Tcl_Eval(Widgt.Interp, "bind " & Widgt & " " & Sequence & " {}");
    end Unbind;
 
    function Unbind
      (Widgt: in Tk_Widget'Class; Sequence: in String) return String is
    begin --  Unbind
-      Tcl_Eval
-        (Widgt.Interp, "bind " & Widget_Image(Widgt) & " " & Sequence & " {}");
+      Tcl_Eval(Widgt.Interp, "bind " & Widgt & " " & Sequence & " {}");
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end Unbind;
 
    procedure Bell(Widgt: in Tk_Widget'Class; Option: in String := "") is
    begin
-      Tcl_Eval
-        (Widgt.Interp,
-         "bell -displayof " & Widget_Image(Widgt) & " " & Option);
+      Tcl_Eval(Widgt.Interp, "bell -displayof " & Widgt & " " & Option);
    end Bell;
 
    procedure Focus(Widgt: in Tk_Widget'Class; Option: in String := "") is
    begin
-      Tcl_Eval(Widgt.Interp, "focus " & Option & " " & Widget_Image(Widgt));
+      Tcl_Eval(Widgt.Interp, "focus " & Option & " " & Widgt);
    end Focus;
 
    function Focus
@@ -149,13 +142,13 @@ package body Tcl.Tk.Ada.Widgets is
 
    function Focus_Next(Widgt: in Tk_Widget'Class) return String is
    begin
-      Tcl_Eval(Widgt.Interp, "tk_focusNext " & Widget_Image(Widgt));
+      Tcl_Eval(Widgt.Interp, "tk_focusNext " & Widgt);
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end Focus_Next;
 
    function Focus_Prev(Widgt: in Tk_Widget'Class) return String is
    begin
-      Tcl_Eval(Widgt.Interp, "tk_focusPrev " & Widget_Image(Widgt));
+      Tcl_Eval(Widgt.Interp, "tk_focusPrev " & Widgt);
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end Focus_Prev;
 
@@ -167,29 +160,29 @@ package body Tcl.Tk.Ada.Widgets is
 
    function Grab_Current(Widgt: in Tk_Widget'Class) return String is
    begin
-      Tcl_Eval(Widgt.Interp, "grab current " & Widget_Image(Widgt));
+      Tcl_Eval(Widgt.Interp, "grab current " & Widgt);
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end Grab_Current;
 
    procedure Grab_Release(Widgt: in Tk_Widget'Class) is
    begin
-      Tcl_Eval(Widgt.Interp, "grab release " & Widget_Image(Widgt));
+      Tcl_Eval(Widgt.Interp, "grab release " & Widgt);
    end Grab_Release;
 
    procedure Grab_Set(Widgt: in Tk_Widget'Class; Global: in String := "") is
    begin
-      Tcl_Eval(Widgt.Interp, "grab set " & Global & " " & Widget_Image(Widgt));
+      Tcl_Eval(Widgt.Interp, "grab set " & Global & " " & Widgt);
    end Grab_Set;
 
    function Grab_Status(Widgt: in Tk_Widget'Class) return String is
    begin
-      Tcl_Eval(Widgt.Interp, "grab status " & Widget_Image(Widgt));
+      Tcl_Eval(Widgt.Interp, "grab status " & Widgt);
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end Grab_Status;
 
    procedure Lower(Widgt: in Tk_Widget'Class) is
    begin
-      Tcl_Eval(Widgt.Interp, "lower " & Widget_Image(Widgt));
+      Tcl_Eval(Widgt.Interp, "lower " & Widgt);
    end Lower;
 
    procedure Lower(Widgt, BelowThis: in Tk_Widget'Class) is
@@ -211,39 +204,34 @@ package body Tcl.Tk.Ada.Widgets is
    begin
       Tcl_Eval
         (Widgt.Interp,
-         "tk caret " & Widget_Image(Widgt) & " -x " & X & " -y" & Y &
-         " -height " & Height);
+         "tk caret " & Widgt & " -x " & X & " -y" & Y & " -height " & Height);
    end Tk_Caret;
 
    function Tk_Caret(Widgt: in Tk_Widget'Class) return String is
    begin
-      Tcl_Eval(Widgt.Interp, "tk caret " & Widget_Image(Widgt));
+      Tcl_Eval(Widgt.Interp, "tk caret " & Widgt);
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end Tk_Caret;
 
    procedure Tk_Inactive(Widgt: in Tk_Widget'Class) is
    begin
-      Tcl_Eval
-        (Widgt.Interp,
-         "tk inactive -display " & Widget_Image(Widgt) & " reset");
+      Tcl_Eval(Widgt.Interp, "tk inactive -display " & Widgt & " reset");
    end Tk_Inactive;
 
    function Tk_Inactive(Widgt: in Tk_Widget'Class) return String is
    begin
-      Tcl_Eval(Widgt.Interp, "tk inactive -display " & Widget_Image(Widgt));
+      Tcl_Eval(Widgt.Interp, "tk inactive -display " & Widgt);
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end Tk_Inactive;
 
    procedure Tk_Scaling(Widgt: in Tk_Widget'Class; Number: in String) is
    begin
-      Tcl_Eval
-        (Widgt.Interp,
-         "tk scaling -display " & Widget_Image(Widgt) & " " & Number);
+      Tcl_Eval(Widgt.Interp, "tk scaling -display " & Widgt & " " & Number);
    end Tk_Scaling;
 
    function Tk_Scaling(Widgt: in Tk_Widget'Class) return String is
    begin
-      Tcl_Eval(Widgt.Interp, "tk scaling -display " & Widget_Image(Widgt));
+      Tcl_Eval(Widgt.Interp, "tk scaling -display " & Widgt);
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end Tk_Scaling;
 
@@ -251,14 +239,12 @@ package body Tcl.Tk.Ada.Widgets is
      (Widgt: in Tk_Widget'Class; Enabled: in String) is
    begin
       Tcl_Eval
-        (Widgt.Interp,
-         "tk useinputmethods -display " & Widget_Image(Widgt) & " " & Enabled);
+        (Widgt.Interp, "tk useinputmethods -display " & Widgt & " " & Enabled);
    end Tk_Use_Input_Methods;
 
    function Tk_Use_Input_Methods(Widgt: in Tk_Widget'Class) return String is
    begin
-      Tcl_Eval
-        (Widgt.Interp, "tk useinputmethods -display " & Widget_Image(Widgt));
+      Tcl_Eval(Widgt.Interp, "tk useinputmethods -display " & Widgt);
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end Tk_Use_Input_Methods;
 
@@ -271,8 +257,7 @@ package body Tcl.Tk.Ada.Widgets is
      (Widgt: in Tk_Widget'Class; command: in String;
       options: in String := "") is
    begin --  Execute_Widget_Command
-      Tcl_Eval
-        (Widgt.Interp, Widget_Image(Widgt) & " " & command & " " & options);
+      Tcl_Eval(Widgt.Interp, Widgt & " " & command & " " & options);
    end Execute_Widget_Command;
 
 end Tcl.Tk.Ada.Widgets;

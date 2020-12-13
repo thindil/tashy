@@ -28,9 +28,7 @@ package body Tcl.Tk.Ada.Winfo is
      (Widgt: in Tk_Widget'Class; Info: in String; Options: in String := "")
       return String is
    begin
-      Tcl_Eval
-        (Widgt.Interp,
-         "winfo " & Info & " " & Widget_Image(Widgt) & " " & Options);
+      Tcl_Eval(Widgt.Interp, "winfo " & Info & " " & Widgt & " " & Options);
       return Tcl.Ada.Tcl_GetResult(Widgt.Interp);
    end Winfo_Get;
 
