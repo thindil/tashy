@@ -121,3 +121,9 @@ version: 2.0
    execute:
       - gnatpp -P tashy.gpr
    description: Pretty print Tashy source code
+- command:
+   name: push
+   execute:
+      - fossil push
+      - fossil git export
+   description: Update remove Fossil repository and its Git mirror
