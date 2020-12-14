@@ -8,6 +8,7 @@ of the project.
 
 ### Changed
 - Replaced using Widget_Image in code on just Widget in many subprograms
+- Updated README.md
 
 ### Fixed
 - Raising Tk\_Widgets commands (Tcl.Tk.Ada.Widgets.Widget\_Raise)
