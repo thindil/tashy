@@ -8,22 +8,22 @@ file on Github: **please don't send pull requests here**. All will be
 automatically closed. Any code propositions should go to the [Fossil](https://www.laeran.pl/repositories/tashy)
 repository.
 
-TASHY is the Ada 2012 binding to Tcl/Tk. It allow to use Tcl code in Ada code
+TASHY is the Ada 2012 binding to Tcl/Tk. It allows using Tcl code in Ada code
 and vice versa. Included bindings:
 
-* Tcl - It is the base binding. Allow use Tcl scripts in the Ada code.
+* Tcl: It is the base binding. Allow use Tcl scripts in the Ada code.
   This binding should be complete but have lack of the code documentation. If
   you find that something is missing, please [open a ticket](https://www.laeran.pl/repositories/tashy/tktnew) with it.
-* Tk - Requires Tcl binding. Allows use Tk GUI in the Ada code. At this
-  moment it is a low level binding - mostly works like standard Tcl/Tk
+* Tk: Requires Tcl binding. Allows use Tk GUI in the Ada code. At this
+  moment it is a low level binding: mostly works like standard Tcl/Tk
   commands. You can use any Tk command/widget by `Tcl_Eval` or
   `Execute_Widget_Command` procedures. If you find that something is
   missing, please [open a ticket](https://www.laeran.pl/repositories/tashy/tktnew) with it.
-* Tklib - Requires Tcl and Tk bindings. Allows use additional packages for
+* Tklib: Requires Tcl and Tk bindings. Allows use additional packages for
   Tk GUI in the Ada code. At this moment it is a low level binding only to
   tooltip, getstring, autoscroll and ctext packages. If you want binding to
   any other package from this library, feel free to [open a ticket](https://www.laeran.pl/repositories/tashy/tktnew) with it.
-* Msgcat - Requires Tcl binding. Allows create multi-language text messages.
-  At this moment it is a low level binding to msgcat commands - mostly works
+* Msgcat: Requires Tcl binding. Allows creating multi-language text messages.
+  At this moment it is a low level binding to msgcat commands: mostly works
   like standard Tcl commands. If you want binding to any other command from
   this package, please [open a ticket](https://www.laeran.pl/repositories/tashy/tktnew) with it.
