@@ -1,18 +1,11 @@
-version: 2.0
+version: 3.0
 - command:
    name: setup
    execute:
-      - scripts/setup.tcl
+      - wish scripts/setup.tcl
    description: Open configuration UI
    flags:
-      - unixonly
-- command:
-   name: setup
-   execute:
-      - wish scripts\setup.tcl
-   description: Open configuration UI
-   flags:
-      - windowsonly
+      - unixpath
 - command:
    name: autosetup
    execute:
@@ -60,17 +53,10 @@ version: 2.0
 - command:
    name: clean
    execute:
-      - scripts/clean.tcl
+      - tclsh scripts/clean.tcl
    description: Clear compilation of the library.
    flags:
-      - unixonly
-- command:
-   name: clean
-   execute:
-      - tclsh scripts\clean.tcl
-   description: Clear compilation of the library.
-   flags:
-      - windowsonly
+      - unixpath
 - command:
    name: builddemos
    execute:
@@ -86,17 +72,10 @@ version: 2.0
 - command:
    name: docs
    execute:
-      - scripts/generatedocs.tcl
+      - tclsh scripts/generatedocs.tcl
    description: Generate code documentation (default dark theme)
    flags:
-      - unixonly
-- command:
-   name: docs
-   execute:
-      - tclsh scripts\generatedocs.tcl
-   description: Generate code documentation (default dark theme)
-   flags:
-      - windowsonly
+      - unixpath
 - command:
    name: uninstall
    execute:
@@ -105,17 +84,10 @@ version: 2.0
 - command:
    name: docslight
    execute:
-      - scripts/generatedocs.tcl scripts/robodocada.rc docs scripts/robodoclight.css
+      - tclsh scripts/generatedocs.tcl scripts/robodocada.rc docs scripts/robodoclight.css
    description: Generate code documentation (with light theme)
    flags:
-      - unixonly
-- command:
-   name: docslight
-   execute:
-      - tclsh scripts\generatedocs.tcl scripts\robodocada.rc docs scripts\robodoclight.css
-   description: Generate code documentation (with light theme)
-   flags:
-      - windowsonly
+      - unixpath
 - command:
    name: pretty
    execute:
