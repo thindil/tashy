@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 Tag **BREAKING:** means that change breaks compatibility with earlier version
 of the project.
 
-## [Unreleased]
+## [8.6.11] - 2020-12-18
 
 ### Changed
 - Replaced using Widget_Image in code on just Widget in many subprograms
@@ -15,6 +15,7 @@ of the project.
 ### Fixed
 - Raising Tk\_Widgets commands (Tcl.Tk.Ada.Widgets.Widget\_Raise)
 - Lowering Tk\_Widgets below another selected (Tcl.Tk.Ada.Widgets.Lower)
+- Typos and grammar in README.md
 
 ## [8.6.10] - 2020-10-13
 
