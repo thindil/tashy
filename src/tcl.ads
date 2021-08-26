@@ -100,35 +100,35 @@ package Tcl is
    --  access is deprecated, so not supported here.
 
    type Tcl_Interp_Rec(<>) is private;
-   type Tcl_Interp is access all Tcl_Interp_Rec;
+   type Tcl_Interp is access Tcl_Interp_Rec;
    pragma Convention(C, Tcl_Interp);
 
    type Tcl_AsyncHandler_Rec(<>) is private;
-   type Tcl_AsyncHandler is access all Tcl_AsyncHandler_Rec;
+   type Tcl_AsyncHandler is access Tcl_AsyncHandler_Rec;
    pragma Convention(C, Tcl_AsyncHandler);
 
    type Tcl_Channel_Rec(<>) is private;
-   type Tcl_Channel is access all Tcl_Channel_Rec;
+   type Tcl_Channel is access Tcl_Channel_Rec;
    pragma Convention(C, Tcl_Channel);
 
    type Tcl_Command_Rec(<>) is private;
-   type Tcl_Command is access all Tcl_Command_Rec;
+   type Tcl_Command is access Tcl_Command_Rec;
    pragma Convention(C, Tcl_Command);
 
    type Tcl_Condition_Rec(<>) is private;
-   type Tcl_Condition is access all Tcl_Condition_Rec;
+   type Tcl_Condition is access Tcl_Condition_Rec;
    pragma Convention(C, Tcl_Condition);
 
    type Tcl_EncodingState_Rec(<>) is private;
-   type Tcl_EncodingState is access all Tcl_EncodingState_Rec;
+   type Tcl_EncodingState is access Tcl_EncodingState_Rec;
    pragma Convention(C, Tcl_EncodingState);
 
    type Tcl_Encoding_Rec(<>) is private;
-   type Tcl_Encoding is access all Tcl_Encoding_Rec;
+   type Tcl_Encoding is access Tcl_Encoding_Rec;
    pragma Convention(C, Tcl_Encoding);
 
    type Tcl_Event_Rec;
-   type Tcl_Event is access all Tcl_Event_Rec;
+   type Tcl_Event is access Tcl_Event_Rec;
    pragma Convention(C, Tcl_Event);
 
    type Tcl_EventProc is access function
@@ -144,43 +144,43 @@ package Tcl is
    pragma Convention(C, Tcl_Event_Rec);
 
    type Tcl_Mutex_Rec(<>) is private;
-   type Tcl_Mutex is access all Tcl_Mutex_Rec;
+   type Tcl_Mutex is access Tcl_Mutex_Rec;
    pragma Convention(C, Tcl_Mutex);
 
    type Tcl_Pid_Rec(<>) is private;
-   type Tcl_Pid is access all Tcl_Pid_Rec;
+   type Tcl_Pid is access Tcl_Pid_Rec;
    pragma Convention(C, Tcl_Pid);
 
    type Tcl_RegExp_Rec(<>) is private;
-   type Tcl_RegExp is access all Tcl_RegExp_Rec;
+   type Tcl_RegExp is access Tcl_RegExp_Rec;
    pragma Convention(C, Tcl_RegExp);
 
    type Tcl_ThreadDataKey_Rec(<>) is private;
-   type Tcl_ThreadDataKey is access all Tcl_ThreadDataKey_Rec;
+   type Tcl_ThreadDataKey is access Tcl_ThreadDataKey_Rec;
    pragma Convention(C, Tcl_ThreadDataKey);
 
    type Tcl_ThreadId_Rec(<>) is private;
-   type Tcl_ThreadId is access all Tcl_ThreadId_Rec;
+   type Tcl_ThreadId is access Tcl_ThreadId_Rec;
    pragma Convention(C, Tcl_ThreadId);
 
    type Tcl_TimerToken_Rec(<>) is private;
-   type Tcl_TimerToken is access all Tcl_TimerToken_Rec;
+   type Tcl_TimerToken is access Tcl_TimerToken_Rec;
    pragma Convention(C, Tcl_TimerToken);
 
    type Tcl_Trace_Rec(<>) is private;
-   type Tcl_Trace is access all Tcl_Trace_Rec;
+   type Tcl_Trace is access Tcl_Trace_Rec;
    pragma Convention(C, Tcl_Trace);
 
    type Tcl_Var_Rec(<>) is private;
-   type Tcl_Var is access all Tcl_Var_Rec;
+   type Tcl_Var is access Tcl_Var_Rec;
    pragma Convention(C, Tcl_Var);
 
    type Tcl_ChannelTypeVersion_Rec(<>) is private;
-   type Tcl_ChannelTypeVersion is access all Tcl_ChannelTypeVersion_Rec;
+   type Tcl_ChannelTypeVersion is access Tcl_ChannelTypeVersion_Rec;
    pragma Convention(C, Tcl_ChannelTypeVersion);
 
    type Tcl_LoadHandle_Rec(<>) is private;
-   type Tcl_LoadHandle is access all Tcl_LoadHandle_Rec;
+   type Tcl_LoadHandle is access Tcl_LoadHandle_Rec;
    pragma Convention(C, Tcl_LoadHandle);
 
    --
@@ -276,7 +276,7 @@ package Tcl is
    end record;
    pragma Convention(C, Tcl_RegExpInfo_Rec);
 
-   type Tcl_RegExpInfo is access all Tcl_RegExpInfo_Rec;
+   type Tcl_RegExpInfo is access Tcl_RegExpInfo_Rec;
    pragma Convention(C, Tcl_RegExpInfo);
 
    --
@@ -285,11 +285,11 @@ package Tcl is
    --
 
    type Tcl_OldStat_Rec(<>) is private;
-   type stat is access all Tcl_OldStat_Rec;
+   type stat is access Tcl_OldStat_Rec;
    pragma Convention(C, stat);
 
    type Tcl_StatBuf_Rec(<>) is private;
-   type Tcl_StatBuf is access all Tcl_StatBuf_Rec;
+   type Tcl_StatBuf is access Tcl_StatBuf_Rec;
    pragma Convention(C, Tcl_StatBuf);
 
    --
@@ -348,7 +348,7 @@ package Tcl is
       --  Wide (min. 64-bit) integer value.
    end record;
    pragma Convention(C, Tcl_Value_Rec);
-   type Tcl_Value is access all Tcl_Value_Rec;
+   type Tcl_Value is access Tcl_Value_Rec;
    pragma Convention(C, Tcl_Value);
 
    --
@@ -539,7 +539,7 @@ package Tcl is
       --  failure.
    end record;
    pragma Convention(C, Tcl_ObjType_Rec);
-   type Tcl_ObjType is access all Tcl_ObjType_Rec;
+   type Tcl_ObjType is access Tcl_ObjType_Rec;
    pragma Convention(C, Tcl_ObjType);
 
    --
@@ -556,7 +556,7 @@ package Tcl is
       internalRep: C.double;  -- @todo make precise rep for C union
    end record;
    pragma Convention(C, Tcl_Obj_Rec);
-   type Tcl_Obj is access all Tcl_Obj_Rec;
+   type Tcl_Obj is access Tcl_Obj_Rec;
    pragma Convention(C, Tcl_Obj);
 
    type Tcl_Obj_Array is array(CNatural range <>) of aliased Tcl_Obj;
@@ -583,7 +583,7 @@ package Tcl is
    --
 
    type Tcl_SavedResult_Rec is private;
-   type Tcl_SavedResult is access all Tcl_SavedResult_Rec;
+   type Tcl_SavedResult is access Tcl_SavedResult_Rec;
    pragma Convention(C, Tcl_SavedResult);
 
    --
@@ -593,7 +593,7 @@ package Tcl is
    --
 
    type Tcl_Namespace_Rec;
-   type Tcl_Namespace is access all Tcl_Namespace_Rec;
+   type Tcl_Namespace is access Tcl_Namespace_Rec;
    pragma Convention(C, Tcl_Namespace);
 
    type Tcl_Namespace_Rec is record
@@ -641,7 +641,7 @@ package Tcl is
    --
 
    type Tcl_CallFrame_Rec is private;
-   type Tcl_CallFrame is access all Tcl_CallFrame_Rec;
+   type Tcl_CallFrame is access Tcl_CallFrame_Rec;
    pragma Convention(C, Tcl_CallFrame);
 
    --
@@ -686,7 +686,7 @@ package Tcl is
       --  use Tcl_RenameCommand to do that.
    end record;
    pragma Convention(C, Tcl_CmdInfo_Rec);
-   type Tcl_CmdInfo is access all Tcl_CmdInfo_Rec;
+   type Tcl_CmdInfo is access Tcl_CmdInfo_Rec;
    pragma Convention(C, Tcl_CmdInfo);
 
    --
@@ -697,7 +697,7 @@ package Tcl is
    --  For Tash -- use Tcl_DStringValue
 
    type Tcl_DString_Rec is private;
-   type Tcl_DString is access all Tcl_DString_Rec;
+   type Tcl_DString is access Tcl_DString_Rec;
    pragma Convention(C, Tcl_DString);
 
    function Tcl_DStringLength(dsPtr: not null Tcl_DString) return C.int;
@@ -823,26 +823,26 @@ package Tcl is
    --
 
    type Tcl_HashEntry_Rec(<>) is private;
-   type Tcl_HashEntry is access all Tcl_HashEntry_Rec;
+   type Tcl_HashEntry is access Tcl_HashEntry_Rec;
    pragma Convention(C, Tcl_HashEntry);
 
    type Tcl_HashEntry_Array is
      array(CNatural range <>) of aliased Tcl_HashEntry;
    pragma Convention(C, Tcl_HashEntry_Array);
 
-   type Tcl_HashEntry_Ptr is access all Tcl_HashEntry;
+   type Tcl_HashEntry_Ptr is access Tcl_HashEntry;
    pragma Convention(C, Tcl_HashEntry_Ptr);
 
    type Tcl_HashKeyType_Rec(<>) is private;
-   type Tcl_HashKeyType is access all Tcl_HashKeyType_Rec;
+   type Tcl_HashKeyType is access Tcl_HashKeyType_Rec;
    pragma Convention(C, Tcl_HashKeyType);
 
    type Tcl_HashSearch_Rec is private;
-   type Tcl_HashSearch is access all Tcl_HashSearch_Rec;
+   type Tcl_HashSearch is access Tcl_HashSearch_Rec;
    pragma Convention(C, Tcl_HashSearch);
 
    type Tcl_HashTable_Rec is private;
-   type Tcl_HashTable is access all Tcl_HashTable_Rec;
+   type Tcl_HashTable is access Tcl_HashTable_Rec;
    pragma Convention(C, Tcl_HashTable);
 
    --
@@ -933,7 +933,7 @@ package Tcl is
       --  Microseconds.
    end record;
    pragma Convention(C, Tcl_Time_Rec);
-   type Tcl_Time is access all Tcl_Time_Rec;
+   type Tcl_Time is access Tcl_Time_Rec;
    pragma Convention(C, Tcl_Time);
 
    type Tcl_SetTimerProc is access procedure(timePtr: in Tcl_Time);
@@ -1131,7 +1131,7 @@ package Tcl is
       truncateProc: Tcl_DriverTruncateProc;
    end record;
    pragma Convention(C, Tcl_ChannelType_Rec);
-   type Tcl_ChannelType is access all Tcl_ChannelType_Rec;
+   type Tcl_ChannelType is access Tcl_ChannelType_Rec;
    pragma Convention(C, Tcl_ChannelType);
 
    --
@@ -1170,7 +1170,7 @@ package Tcl is
       serviceModeHookProc: Tcl_ServiceModeHookProc;
    end record;
    pragma Convention(C, Tcl_NotifierProcs_Rec);
-   type Tcl_NotifierProcs is access all Tcl_NotifierProcs_Rec;
+   type Tcl_NotifierProcs is access Tcl_NotifierProcs_Rec;
    pragma Convention(C, Tcl_NotifierProcs);
 
    --
@@ -1204,7 +1204,7 @@ package Tcl is
       --  negative.  Must be 1 or 2.
    end record;
    pragma Convention(C, Tcl_EncodingType_Rec);
-   type Tcl_EncodingType is access all Tcl_EncodingType_Rec;
+   type Tcl_EncodingType is access Tcl_EncodingType_Rec;
    pragma Convention(C, Tcl_EncodingType);
 
    --
@@ -1450,7 +1450,7 @@ package Tcl is
       --  allocated for very large commands that don't fit here.
    end record;
    pragma Convention(C, Tcl_Parse_Rec);
-   type Tcl_Parse is access all Tcl_Parse_Rec;
+   type Tcl_Parse is access Tcl_Parse_Rec;
    pragma Convention(C, Tcl_Parse);
 
    --

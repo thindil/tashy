@@ -50,51 +50,51 @@ package Tcl.Tk is
    --
 
    type Tk_BindingTable_Rec(<>) is private;
-   type Tk_BindingTable is access all Tk_BindingTable_Rec;
+   type Tk_BindingTable is access Tk_BindingTable_Rec;
    pragma Convention(C, Tk_BindingTable);
 
    type Tk_Canvas_Rec(<>) is private;
-   type Tk_Canvas is access all Tk_Canvas_Rec;
+   type Tk_Canvas is access Tk_Canvas_Rec;
    pragma Convention(C, Tk_Canvas);
 
    type Tk_Cursor_Rec(<>) is private;
-   type Tk_Cursor is access all Tk_Cursor_Rec;
+   type Tk_Cursor is access Tk_Cursor_Rec;
    pragma Convention(C, Tk_Cursor);
 
    type Tk_ErrorHandler_Rec(<>) is private;
-   type Tk_ErrorHandler is access all Tk_ErrorHandler_Rec;
+   type Tk_ErrorHandler is access Tk_ErrorHandler_Rec;
    pragma Convention(C, Tk_ErrorHandler);
 
    type Tk_Font_Rec(<>) is private;
-   type Tk_Font is access all Tk_Font_Rec;
+   type Tk_Font is access Tk_Font_Rec;
    pragma Convention(C, Tk_Font);
 
    type Tk_Image_Rec(<>) is private;
-   type Tk_Image is access all Tk_Image_Rec;
+   type Tk_Image is access Tk_Image_Rec;
    pragma Convention(C, Tk_Image);
 
    type Tk_ImageMaster_Rec(<>) is private;
-   type Tk_ImageMaster is access all Tk_ImageMaster_Rec;
+   type Tk_ImageMaster is access Tk_ImageMaster_Rec;
    pragma Convention(C, Tk_ImageMaster);
 
    type Tk_OptionTable_Rec(<>) is private;
-   type Tk_OptionTable is access all Tk_OptionTable_Rec;
+   type Tk_OptionTable is access Tk_OptionTable_Rec;
    pragma Convention(C, Tk_OptionTable);
 
    type Tk_PostscriptInfo_Rec(<>) is private;
-   type Tk_PostscriptInfo is access all Tk_PostscriptInfo_Rec;
+   type Tk_PostscriptInfo is access Tk_PostscriptInfo_Rec;
    pragma Convention(C, Tk_PostscriptInfo);
 
    type Tk_TextLayout_Rec(<>) is private;
-   type Tk_TextLayout is access all Tk_TextLayout_Rec;
+   type Tk_TextLayout is access Tk_TextLayout_Rec;
    pragma Convention(C, Tk_TextLayout);
 
    type Tk_Window_Rec(<>) is private;
-   type Tk_Window is access all Tk_Window_Rec;
+   type Tk_Window is access Tk_Window_Rec;
    pragma Convention(C, Tk_Window);
 
    type Tk_3DBorder_Rec(<>) is private;
-   type Tk_3DBorder is access all Tk_3DBorder_Rec;
+   type Tk_3DBorder is access Tk_3DBorder_Rec;
    pragma Convention(C, Tk_3DBorder);
 
    --
@@ -162,7 +162,7 @@ package Tcl.Tk is
       --  all options that were changed.
    end record;
    pragma Convention(C, Tk_OptionSpec_Rec);
-   type Tk_OptionSpec is access all Tk_OptionSpec_Rec;
+   type Tk_OptionSpec is access Tk_OptionSpec_Rec;
    pragma Convention(C, Tk_OptionSpec);
 
    --
@@ -195,11 +195,11 @@ package Tcl.Tk is
    --  So TASH doesn't make them visible.
 
    type Tk_SavedOption_Rec(<>) is private;
-   type Tk_SavedOption is access all Tk_SavedOption_Rec;
+   type Tk_SavedOption is access Tk_SavedOption_Rec;
    pragma Convention(C, Tk_SavedOption);
 
    type Tk_SavedOptions_Rec(<>) is private;
-   type Tk_SavedOptions is access all Tk_SavedOptions_Rec;
+   type Tk_SavedOptions is access Tk_SavedOptions_Rec;
    pragma Convention(C, Tk_SavedOptions);
 
    --
@@ -238,7 +238,7 @@ package Tcl.Tk is
       --  parseProc and printProc.
    end record;
    pragma Convention(C, Tk_CustomOption_Rec);
-   type Tk_CustomOption is access all Tk_CustomOption_Rec;
+   type Tk_CustomOption is access Tk_CustomOption_Rec;
    pragma Convention(C, Tk_CustomOption);
 
    --
@@ -291,7 +291,7 @@ package Tcl.Tk is
       --  irrelevant.
    end record;
    pragma Convention(C, Tk_ConfigSpec_Rec);
-   type Tk_ConfigSpec is access all Tk_ConfigSpec_Rec;
+   type Tk_ConfigSpec is access Tk_ConfigSpec_Rec;
    pragma Convention(C, Tk_ConfigSpec);
 
    type Tk_ConfigSpec_Array is
@@ -332,7 +332,7 @@ package Tcl.Tk is
    --
 
    type Tk_ArgvInfo_Rec(<>) is private;                       -- @todo
-   type Tk_ArgvInfo is access all Tk_ArgvInfo_Rec;
+   type Tk_ArgvInfo is access Tk_ArgvInfo_Rec;
    pragma Convention(C, Tk_ArgvInfo);
 
    --
@@ -449,7 +449,7 @@ package Tcl.Tk is
       --  the other line.
    end record;
    pragma Convention(C, Tk_FontMetrics_Rec);
-   type Tk_FontMetrics is access all Tk_FontMetrics_Rec;
+   type Tk_FontMetrics is access Tk_FontMetrics_Rec;
    pragma Convention(C, Tk_FontMetrics);
 
    --
@@ -494,7 +494,7 @@ package Tcl.Tk is
       --  doesn't care when slaves are lost.
    end record;
    pragma Convention(C, Tk_GeomMgr_Rec);
-   type Tk_GeomMgr is access all Tk_GeomMgr_Rec;
+   type Tk_GeomMgr is access Tk_GeomMgr_Rec;
    pragma Convention(C, Tk_GeomMgr);
 
    --
@@ -529,11 +529,11 @@ package Tcl.Tk is
    --
 
    type XVirtualEvent_Rec(<>) is private;
-   type XVirtualEvent is access all XVirtualEvent_Rec;
+   type XVirtualEvent is access XVirtualEvent_Rec;
    pragma Convention(C, XVirtualEvent);
 
    type XActivateDeactivateEvent_Rec(<>) is private;
-   type XActivateDeactivateEvent is access all XActivateDeactivateEvent_Rec;
+   type XActivateDeactivateEvent is access XActivateDeactivateEvent_Rec;
    pragma Convention(C, XActivateDeactivateEvent);
 
    subtype XActivateEvent is XActivateDeactivateEvent;
@@ -580,7 +580,7 @@ package Tcl.Tk is
    --  TASH: this is retained but probably useless.
 
    type Tk_FakeWin_Rec(<>) is private;
-   type Tk_FakeWin is access all Tk_FakeWin_Rec;
+   type Tk_FakeWin is access Tk_FakeWin_Rec;
    pragma Convention(C, Tk_FakeWin);
 
    --
@@ -679,7 +679,7 @@ package Tcl.Tk is
       postscriptProc: System.Address;  --  @todo make exact type
    end record;
    pragma Convention(C, Tk_SmoothMethod_Rec);
-   type Tk_SmoothMethod is access all Tk_SmoothMethod_Rec;
+   type Tk_SmoothMethod is access Tk_SmoothMethod_Rec;
    pragma Convention(C, Tk_SmoothMethod);
 
    --
@@ -695,11 +695,11 @@ package Tcl.Tk is
    pragma Convention(C, StaticTagSpace_Type);
 
    type Tk_Item_Rec;
-   type Tk_Item is access all Tk_Item_Rec;
+   type Tk_Item is access Tk_Item_Rec;
    pragma Convention(C, Tk_Item);
 
    type Tk_ItemType_Rec;
-   type Tk_ItemType is access all Tk_ItemType_Rec;
+   type Tk_ItemType is access Tk_ItemType_Rec;
    pragma Convention(C, Tk_ItemType);
 
    type Tk_Item_Rec is record
@@ -951,7 +951,7 @@ package Tcl.Tk is
       --  focusItemPtr. Read-only to items.
    end record;
    pragma Convention(C, Tk_CanvasTextInfo_Rec);
-   type Tk_CanvasTextInfo is access all Tk_CanvasTextInfo_Rec;
+   type Tk_CanvasTextInfo is access Tk_CanvasTextInfo_Rec;
    pragma Convention(C, Tk_CanvasTextInfo);
 
    --
@@ -966,7 +966,7 @@ package Tcl.Tk is
       key: C.char_array(0 .. Sizeof_Char_Star - 1);
    end record;
    pragma Convention(C, Tk_Dash_Rec);
-   type Tk_Dash is access all Tk_Dash_Rec;
+   type Tk_Dash is access Tk_Dash_Rec;
    pragma Convention(C, Tk_Dash);
 
    type Tk_TSOffset_Rec is record
@@ -975,7 +975,7 @@ package Tcl.Tk is
       yoffset: C.int;   --  y offset
    end record;
    pragma Convention(C, Tk_TSOffset_Rec);
-   type Tk_TSOffset is access all Tk_TSOffset_Rec;
+   type Tk_TSOffset is access Tk_TSOffset_Rec;
    pragma Convention(C, Tk_TSOffset);
 
    --
@@ -992,7 +992,7 @@ package Tcl.Tk is
    TK_OFFSET_BOTTOM: constant := 128;
 
    type Tk_Outline_Rec(<>) is private;
-   type Tk_Outline is access all Tk_Outline_Rec;
+   type Tk_Outline is access Tk_Outline_Rec;
    pragma Convention(C, Tk_Outline);
 
    --
@@ -1039,7 +1039,7 @@ package Tcl.Tk is
    --
 
    type Tk_ImageType_Rec(<>) is private;                  -- @todo
-   type Tk_ImageType is access all Tk_ImageType_Rec;
+   type Tk_ImageType is access Tk_ImageType_Rec;
    pragma Convention(C, Tk_ImageType);
 
    --
@@ -1056,7 +1056,7 @@ package Tcl.Tk is
    --
 
    type Tk_PhotoHandle_Rec(<>) is private;                  -- @todo
-   type Tk_PhotoHandle is access all Tk_PhotoHandle_Rec;
+   type Tk_PhotoHandle is access Tk_PhotoHandle_Rec;
    pragma Convention(C, Tk_PhotoHandle);
 
    --
@@ -1081,7 +1081,7 @@ package Tcl.Tk is
       --  components of the pixel and the pixel as a whole.
    end record;
    pragma Convention(C, Tk_PhotoImageBlock_Rec);
-   type Tk_PhotoImageBlock is access all Tk_PhotoImageBlock_Rec;
+   type Tk_PhotoImageBlock is access Tk_PhotoImageBlock_Rec;
    pragma Convention(C, Tk_PhotoImageBlock);
 
    --
@@ -1093,7 +1093,7 @@ package Tcl.Tk is
    --  features!
 
    type Tk_PhotoImageFormat_Rec(<>) is private;               -- @todo
-   type Tk_PhotoImageFormat is access all Tk_PhotoImageFormat_Rec;
+   type Tk_PhotoImageFormat is access Tk_PhotoImageFormat_Rec;
    pragma Convention(C, Tk_PhotoImageFormat);
 
    type Tk_ImageFileMatchProc is access function
