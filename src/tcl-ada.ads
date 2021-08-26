@@ -58,7 +58,7 @@ package Tcl.Ada is
 
    Tcl_Error_Exception: exception;
 
-   procedure Assert(Interp: not null Tcl_Interp; Return_Code: in C.int);
+   procedure Assert(Interp: Tcl_Interp; Return_Code: in C.int);
    --  Raises Tcl_Error_Exception if Return_Code = TCL_ERROR
 
    --------------------------------------------------------------------
@@ -75,7 +75,7 @@ package Tcl.Ada is
          "ClientData too big");
 
       type Tcl_InterpDeleteProc is access procedure
-        (Data: in ClientData; Interp: in Tcl_Interp);
+        (Data: in ClientData; Interp: in Tcl_Interp := Null_Interp);
       pragma Convention(C, Tcl_InterpDeleteProc);
 
       function Tcl_GetAssocData
@@ -131,16 +131,16 @@ package Tcl.Ada is
          "ClientData too big");
 
       type Tcl_InterpDeleteProc is access procedure
-        (data: in ClientData; interp: in Tcl_Interp);
+        (data: in ClientData; interp: in Tcl_Interp := Null_Interp);
       pragma Convention(C, Tcl_InterpDeleteProc);
 
       procedure Tcl_CallWhenDeleted
-        (interp: not null Tcl_Interp; proc: not null Tcl_InterpDeleteProc;
+        (interp: Tcl_Interp; proc: Tcl_InterpDeleteProc;
          data: in ClientData);
       pragma Import(C, Tcl_CallWhenDeleted, "Tcl_CallWhenDeleted");
 
       procedure Tcl_DontCallWhenDeleted
-        (interp: not null Tcl_Interp; proc: not null Tcl_InterpDeleteProc;
+        (interp: Tcl_Interp; proc: Tcl_InterpDeleteProc;
          data: in ClientData);
       pragma Import(C, Tcl_DontCallWhenDeleted, "Tcl_DontCallWhenDeleted");
 
@@ -287,13 +287,13 @@ package Tcl.Ada is
       -- Newly created Tcl_Command or null if command wasn't created.
       -- SOURCE
       function Tcl_CreateCommand
-        (interp: not null Tcl_Interp; cmdName: in C.Strings.chars_ptr;
+        (interp: Tcl_Interp; cmdName: in C.Strings.chars_ptr;
          proc: not null Tcl_CmdProc; data: in ClientData;
          deleteProc: in Tcl_CmdDeleteProc) return Tcl_Command;
       pragma Import(C, Tcl_CreateCommand, "Tcl_CreateCommand");
 
       function Tcl_CreateCommand
-        (interp: not null Tcl_Interp; cmdName: in String;
+        (interp: Tcl_Interp; cmdName: in String;
          proc: not null Tcl_CmdProc; data: in ClientData;
          deleteProc: in Tcl_CmdDeleteProc) return Tcl_Command;
       -- ****
@@ -455,17 +455,17 @@ package Tcl.Ada is
          "ClientData too big");
 
       function Tcl_GetOpenFile
-        (interp: not null Tcl_Interp; str: in C.Strings.chars_ptr;
+        (interp: Tcl_Interp; str: in C.Strings.chars_ptr;
          forWriting: in C.int; checkUsage: in C.int; fileptr: in ClientData)
          return C.int;
       pragma Import(C, Tcl_GetOpenFile, "Tcl_GetOpenFile");
 
       function Tcl_GetOpenFile
-        (interp: not null Tcl_Interp; str: in String; forWriting: in C.int;
+        (interp: Tcl_Interp; str: in String; forWriting: in C.int;
          checkUsage: in C.int; fileptr: in ClientData) return C.int;
 
       procedure Tcl_GetOpenFile
-        (interp: not null Tcl_Interp; str: in String; forWriting: in C.int;
+        (interp: Tcl_Interp; str: in String; forWriting: in C.int;
          checkUsage: in C.int; fileptr: in ClientData);
 
    end Generic_GetOpenFile;
@@ -540,13 +540,13 @@ package Tcl.Ada is
       pragma Convention(C, Tcl_MathProc);
 
       procedure Tcl_CreateMathFunc
-        (interp: not null Tcl_Interp; name: in C.Strings.chars_ptr;
+        (interp: Tcl_Interp; name: in C.Strings.chars_ptr;
          numArgs: in C.int; argTypes: in Tcl_ValueType;
          proc: not null Tcl_MathProc; data: in ClientData);
       pragma Import(C, Tcl_CreateMathFunc, "Tcl_CreateMathFunc");
 
       procedure Tcl_CreateMathFunc
-        (interp: not null Tcl_Interp; name: in String; numArgs: in C.int;
+        (interp: Tcl_Interp; name: in String; numArgs: in C.int;
          argTypes: in Tcl_ValueType; proc: not null Tcl_MathProc;
          data: in ClientData);
 
@@ -568,13 +568,13 @@ package Tcl.Ada is
       pragma Convention(C, Tcl_CmdDeleteProc);
 
       function Tcl_CreateObjCommand
-        (interp: not null Tcl_Interp; cmdName: in C.Strings.chars_ptr;
+        (interp: Tcl_Interp; cmdName: in C.Strings.chars_ptr;
          proc: not null Tcl_ObjCmdProc; data: in ClientData;
          deleteProc: in Tcl_CmdDeleteProc) return Tcl_Command;
       pragma Import(C, Tcl_CreateObjCommand, "Tcl_CreateObjCommand");
 
       function Tcl_CreateObjCommand
-        (interp: not null Tcl_Interp; cmdName: in String;
+        (interp: Tcl_Interp; cmdName: in String;
          proc: not null Tcl_ObjCmdProc; data: in ClientData;
          deleteProc: in Tcl_CmdDeleteProc) return Tcl_Command;
 
@@ -608,7 +608,7 @@ package Tcl.Ada is
       -- return empty string
       -- SOURCE
       function Tcl_PkgPresentEx
-        (interp: not null Tcl_Interp;
+        (interp: Tcl_Interp;
          name: in C.Strings.chars_ptr;
          version: in C.Strings.chars_ptr;
          exact: in C.int;
@@ -618,7 +618,7 @@ package Tcl.Ada is
       pragma Import(C, Tcl_PkgPresentEx, "Tcl_PkgPresentEx");
 
       function Tcl_PkgPresentEx
-        (interp: not null Tcl_Interp;
+        (interp: Tcl_Interp;
          name: in String;
          version: in String;
          exact: in C.int;
@@ -638,16 +638,16 @@ package Tcl.Ada is
       -- Returns TCL_OK if package is loaded, otherwise TCL_ERROR
       -- SOURCE
       function Tcl_PkgProvideEx
-        (interp: not null Tcl_Interp; name: in C.Strings.chars_ptr;
+        (interp: Tcl_Interp; name: in C.Strings.chars_ptr;
          version: in C.Strings.chars_ptr; data: in ClientData) return C.int;
       pragma Import(C, Tcl_PkgProvideEx, "Tcl_PkgProvideEx");
 
       function Tcl_PkgProvideEx
-        (interp: not null Tcl_Interp; name: in String; version: in String;
+        (interp: Tcl_Interp; name: in String; version: in String;
          data: in ClientData) return C.int;
 
       procedure Tcl_PkgProvideEx
-        (interp: not null Tcl_Interp; name: in String; version: in String;
+        (interp: Tcl_Interp; name: in String; version: in String;
          data: in ClientData);
       -- ****
 
@@ -667,7 +667,7 @@ package Tcl.Ada is
       -- return empty string
       -- SOURCE
       function Tcl_PkgRequireEx
-        (interp: not null Tcl_Interp;
+        (interp: Tcl_Interp;
          name: in C.Strings.chars_ptr;
          version: in C.Strings.chars_ptr;
          exact: in C.int;
@@ -677,7 +677,7 @@ package Tcl.Ada is
       pragma Import(C, Tcl_PkgRequireEx, "Tcl_PkgRequireEx");
 
       function Tcl_PkgRequireEx
-        (interp: not null Tcl_Interp;
+        (interp: Tcl_Interp;
          name: in String;
          version: in String;
          exact: in C.int;
@@ -697,7 +697,7 @@ package Tcl.Ada is
 
       --  XXX outdated?
       function Tcl_StackChannel
-        (interp: not null Tcl_Interp; typePtr: not null Tcl_ChannelType;
+        (interp: Tcl_Interp; typePtr: not null Tcl_ChannelType;
          instancedata: in ClientData; mask: in C.int;
          prevChan: not null Tcl_Channel) return Tcl_Channel;
       pragma Import(C, Tcl_StackChannel, "Tcl_StackChannel");
@@ -721,13 +721,13 @@ package Tcl.Ada is
       pragma Import(C, Tcl_MakeTcpClientChannel, "Tcl_MakeTcpClientChannel");
 
       function Tcl_OpenTcpServer
-        (interp: not null Tcl_Interp; port: in C.int;
+        (interp: Tcl_Interp; port: in C.int;
          host: in C.Strings.chars_ptr; acceptProc: not null Tcl_TcpAcceptProc;
          callbackdata: in ClientData) return Tcl_Channel;
       pragma Import(C, Tcl_OpenTcpServer, "Tcl_OpenTcpServer");
 
       function Tcl_OpenTcpServer
-        (interp: not null Tcl_Interp; port: in C.int; host: in String;
+        (interp: Tcl_Interp; port: in C.int; host: in String;
          acceptProc: not null Tcl_TcpAcceptProc; callbackdata: in ClientData)
          return Tcl_Channel;
 
@@ -765,7 +765,7 @@ package Tcl.Ada is
       pragma Convention(C, Tcl_CmdTraceProc);
 
       function Tcl_CreateTrace
-        (interp: not null Tcl_Interp; level: in C.int;
+        (interp: Tcl_Interp; level: in C.int;
          proc: not null Tcl_CmdTraceProc; data: in ClientData)
          return Tcl_Trace;
       pragma Import(C, Tcl_CreateTrace, "Tcl_CreateTrace");
@@ -786,76 +786,76 @@ package Tcl.Ada is
       pragma Convention(C, Tcl_VarTraceProc);
 
       function Tcl_TraceVar
-        (interp: not null Tcl_Interp; varName: in C.Strings.chars_ptr;
+        (interp: Tcl_Interp; varName: in C.Strings.chars_ptr;
          flags: in C.int; proc: not null Tcl_VarTraceProc; data: in ClientData)
          return C.int;
       pragma Import(C, Tcl_TraceVar, "Tcl_TraceVar");
 
       function Tcl_TraceVar
-        (interp: not null Tcl_Interp; varName: in String; flags: in C.int;
+        (interp: Tcl_Interp; varName: in String; flags: in C.int;
          proc: not null Tcl_VarTraceProc; data: in ClientData) return C.int;
 
       procedure Tcl_TraceVar
-        (interp: not null Tcl_Interp; varName: in String; flags: in C.int;
+        (interp: Tcl_Interp; varName: in String; flags: in C.int;
          proc: not null Tcl_VarTraceProc; data: in ClientData);
 
       function Tcl_TraceVar2
-        (interp: not null Tcl_Interp; part1: in C.Strings.chars_ptr;
+        (interp: Tcl_Interp; part1: in C.Strings.chars_ptr;
          part2: in C.Strings.chars_ptr; flags: in C.int;
          proc: not null Tcl_VarTraceProc; data: in ClientData) return C.int;
       pragma Import(C, Tcl_TraceVar2, "Tcl_TraceVar2");
 
       function Tcl_TraceVar2
-        (interp: not null Tcl_Interp; part1: in String; part2: in String;
+        (interp: Tcl_Interp; part1: in String; part2: in String;
          flags: in C.int; proc: not null Tcl_VarTraceProc; data: in ClientData)
          return C.int;
 
       procedure Tcl_TraceVar2
-        (interp: not null Tcl_Interp; part1: in String; part2: in String;
+        (interp: Tcl_Interp; part1: in String; part2: in String;
          flags: in C.int; proc: not null Tcl_VarTraceProc;
          data: in ClientData);
 
       procedure Tcl_UntraceVar
-        (interp: not null Tcl_Interp; varName: in C.Strings.chars_ptr;
+        (interp: Tcl_Interp; varName: in C.Strings.chars_ptr;
          flags: in C.int; proc: not null Tcl_VarTraceProc;
          data: in ClientData);
       pragma Import(C, Tcl_UntraceVar, "Tcl_UntraceVar");
 
       procedure Tcl_UntraceVar
-        (interp: not null Tcl_Interp; varName: in String; flags: in C.int;
+        (interp: Tcl_Interp; varName: in String; flags: in C.int;
          proc: not null Tcl_VarTraceProc; data: in ClientData);
 
       procedure Tcl_UntraceVar2
-        (interp: not null Tcl_Interp; part1: in C.Strings.chars_ptr;
+        (interp: Tcl_Interp; part1: in C.Strings.chars_ptr;
          part2: in C.Strings.chars_ptr; flags: in C.int;
          proc: not null Tcl_VarTraceProc; data: in ClientData);
       pragma Import(C, Tcl_UntraceVar2, "Tcl_UntraceVar2");
 
       procedure Tcl_UntraceVar2
-        (interp: not null Tcl_Interp; part1: in String; part2: in String;
+        (interp: Tcl_Interp; part1: in String; part2: in String;
          flags: in C.int; proc: not null Tcl_VarTraceProc;
          data: in ClientData);
 
       function Tcl_VarTraceInfo
-        (interp: not null Tcl_Interp; varName: in C.Strings.chars_ptr;
+        (interp: Tcl_Interp; varName: in C.Strings.chars_ptr;
          flags: in C.int; procPtr: not null Tcl_VarTraceProc;
          prevclientdata: in ClientData) return ClientData;
       pragma Import(C, Tcl_VarTraceInfo, "Tcl_VarTraceInfo");
 
       function Tcl_VarTraceInfo
-        (interp: not null Tcl_Interp; varName: in String; flags: in C.int;
+        (interp: Tcl_Interp; varName: in String; flags: in C.int;
          procPtr: not null Tcl_VarTraceProc; prevclientdata: in ClientData)
          return ClientData;
 
       function Tcl_VarTraceInfo2
-        (interp: not null Tcl_Interp; part1: in C.Strings.chars_ptr;
+        (interp: Tcl_Interp; part1: in C.Strings.chars_ptr;
          part2: in C.Strings.chars_ptr; flags: in C.int;
          procPtr: not null Tcl_VarTraceProc; prevclientdata: in ClientData)
          return ClientData;
       pragma Import(C, Tcl_VarTraceInfo2, "Tcl_VarTraceInfo2");
 
       function Tcl_VarTraceInfo2
-        (interp: not null Tcl_Interp; part1: in String; part2: in String;
+        (interp: Tcl_Interp; part1: in String; part2: in String;
          flags: in C.int; procPtr: not null Tcl_VarTraceProc;
          prevclientdata: in ClientData) return ClientData;
 
@@ -917,11 +917,11 @@ package Tcl.Ada is
       return Tcl_Obj;
 
    function Tcl_GetBoolean
-     (interp: not null Tcl_Interp; str: in String;
+     (interp: Tcl_Interp; str: in String;
       boolPtr: not null access C.int) return C.int;
 
    procedure Tcl_GetBoolean
-     (interp: not null Tcl_Interp; str: in String;
+     (interp: Tcl_Interp; str: in String;
       boolPtr: not null access C.int);
 
    function Tcl_GetByteArrayFromObj
@@ -931,29 +931,29 @@ package Tcl.Ada is
       return String;
 
    function Tcl_GetDouble
-     (interp: not null Tcl_Interp; str: in String;
+     (interp: Tcl_Interp; str: in String;
       doublePtr: not null access C.double) return C.int;
 
    procedure Tcl_GetDouble
-     (interp: not null Tcl_Interp; str: in String;
+     (interp: Tcl_Interp; str: in String;
       doublePtr: not null access C.double);
 
    function Tcl_GetIndexFromObj
-     (interp: not null Tcl_Interp; objPtr: not null Tcl_Obj;
+     (interp: Tcl_Interp; objPtr: not null Tcl_Obj;
       tablePtr: in CArgv.Chars_Ptr_Ptr; msg: in String; flags: in C.int;
       indexPtr: not null access C.int) return C.int;
 
    procedure Tcl_GetIndexFromObj
-     (interp: not null Tcl_Interp; objPtr: not null Tcl_Obj;
+     (interp: Tcl_Interp; objPtr: not null Tcl_Obj;
       tablePtr: in CArgv.Chars_Ptr_Ptr; msg: in String; flags: in C.int;
       indexPtr: not null access C.int);
 
    function Tcl_GetInt
-     (interp: not null Tcl_Interp; str: in String;
+     (interp: Tcl_Interp; str: in String;
       intPtr: not null access C.int) return C.int;
 
    procedure Tcl_GetInt
-     (interp: not null Tcl_Interp; str: in String;
+     (interp: Tcl_Interp; str: in String;
       intPtr: not null access C.int);
 
    function Tcl_GetObjType(typeName: in String) return Tcl_ObjType;
@@ -981,15 +981,15 @@ package Tcl.Ada is
    procedure Tcl_SetStringObj
      (objPtr: not null Tcl_Obj; bytes: in String; length: in C.int);
 
-   procedure Tcl_AddErrorInfo(interp: not null Tcl_Interp; message: in String);
+   procedure Tcl_AddErrorInfo(interp: Tcl_Interp; message: in String);
 
    procedure Tcl_AddObjErrorInfo
-     (interp: not null Tcl_Interp; message: in String; length: in C.int);
+     (interp: Tcl_Interp; message: in String; length: in C.int);
 
-   procedure Tcl_AppendElement(interp: not null Tcl_Interp; strng: in String);
+   procedure Tcl_AppendElement(interp: Tcl_Interp; strng: in String);
 
    procedure Tcl_AppendResult
-     (interp: not null Tcl_Interp; String1: in String := "";
+     (interp: Tcl_Interp; String1: in String := "";
       String2: in String := ""; String3: in String := "";
       String4: in String := ""; String5: in String := "";
       String6: in String := ""; String7: in String := "";
@@ -1014,17 +1014,17 @@ package Tcl.Ada is
       return C.int;
 
    function Tcl_CreateAlias
-     (slave: not null Tcl_Interp; slaveCmd: in String;
-      target: not null Tcl_Interp; targetCmd: in String; argc: in C.int;
+     (slave: Tcl_Interp; slaveCmd: in String;
+      target: Tcl_Interp; targetCmd: in String; argc: in C.int;
       argv: in CArgv.Chars_Ptr_Ptr) return C.int;
 
    function Tcl_CreateAliasObj
-     (slave: not null Tcl_Interp; slaveCmd: in String;
-      target: not null Tcl_Interp; targetCmd: in String; objc: in C.int;
+     (slave: Tcl_Interp; slaveCmd: in String;
+      target: Tcl_Interp; targetCmd: in String; objc: in C.int;
       objv: in Tcl_Obj_Array) return C.int;
 
    function Tcl_CreateSlave
-     (interp: not null Tcl_Interp; slaveName: in String; isSafe: in C.int)
+     (interp: Tcl_Interp; slaveName: in String; isSafe: in C.int)
       return Tcl_Interp;
 
    function Tcl_DStringAppend
@@ -1050,9 +1050,9 @@ package Tcl.Ada is
    -- selected statement
    -- SOURCE
    function Tcl_Eval
-     (interp: not null Tcl_Interp; strng: in String) return C.int;
+     (interp: Tcl_Interp; strng: in String) return C.int;
 
-   procedure Tcl_Eval(interp: not null Tcl_Interp; strng: in String);
+   procedure Tcl_Eval(interp: Tcl_Interp; strng: in String);
    -- ****
 
    -- ****f* Ada/Ada.Tcl_EvalFile
@@ -1067,53 +1067,53 @@ package Tcl.Ada is
    -- selected script
    -- SOURCE
    function Tcl_EvalFile
-     (interp: not null Tcl_Interp; fileName: in String) return C.int;
+     (interp: Tcl_Interp; fileName: in String) return C.int;
 
-   procedure Tcl_EvalFile(interp: not null Tcl_Interp; fileName: in String);
+   procedure Tcl_EvalFile(interp: Tcl_Interp; fileName: in String);
    -- ****
 
    function Tcl_ExposeCommand
-     (interp: not null Tcl_Interp; hiddenCmdToken: in String;
+     (interp: Tcl_Interp; hiddenCmdToken: in String;
       cmdName: in String) return C.int;
 
    procedure Tcl_ExposeCommand
-     (interp: not null Tcl_Interp; hiddenCmdToken: in String;
+     (interp: Tcl_Interp; hiddenCmdToken: in String;
       cmdName: in String);
 
    function Tcl_ExprBoolean
-     (interp: not null Tcl_Interp; str: in String) return Boolean;
+     (interp: Tcl_Interp; str: in String) return Boolean;
 
    function Tcl_ExprDouble
-     (interp: not null Tcl_Interp; str: in String) return C.double;
+     (interp: Tcl_Interp; str: in String) return C.double;
 
    function Tcl_ExprLong
-     (interp: not null Tcl_Interp; str: in String) return C.long;
+     (interp: Tcl_Interp; str: in String) return C.long;
 
    function Tcl_ExprString
-     (interp: not null Tcl_Interp; strng: in String) return String;
+     (interp: Tcl_Interp; strng: in String) return String;
 
    procedure Tcl_FindExecutable(argv0: in String);
 
    function Tcl_GetAlias
-     (interp: not null Tcl_Interp; slaveCmd: in String;
+     (interp: Tcl_Interp; slaveCmd: in String;
       targetInterpPtr: not null access Tcl_Interp;
       targetCmdPtr: in CArgv.Chars_Ptr_Ptr; argcPtr: not null access C.int;
       argvPtr: not null access CArgv.Chars_Ptr_Ptr) return C.int;
 
    procedure Tcl_GetAlias
-     (interp: not null Tcl_Interp; slaveCmd: in String;
+     (interp: Tcl_Interp; slaveCmd: in String;
       targetInterpPtr: not null access Tcl_Interp;
       targetCmdPtr: in CArgv.Chars_Ptr_Ptr; argcPtr: not null access C.int;
       argvPtr: not null access CArgv.Chars_Ptr_Ptr);
 
    function Tcl_GetAliasObj
-     (interp: not null Tcl_Interp; slaveCmd: in String;
+     (interp: Tcl_Interp; slaveCmd: in String;
       targetInterpPtr: not null access Tcl_Interp;
       targetCmdPtr: in CArgv.Chars_Ptr_Ptr; objcPtr: not null access C.int;
       objv: in Tcl_Obj_Array) return C.int;
 
    procedure Tcl_GetAliasObj
-     (interp: not null Tcl_Interp; slaveCmd: in String;
+     (interp: Tcl_Interp; slaveCmd: in String;
       targetInterpPtr: not null access Tcl_Interp;
       targetCmdPtr: in CArgv.Chars_Ptr_Ptr; objcPtr: not null access C.int;
       objv: in Tcl_Obj_Array);
@@ -1124,12 +1124,12 @@ package Tcl.Ada is
 
    function Tcl_GetPathType(path: in String) return Tcl_PathType;
 
-   function Tcl_GetResult(interp: not null Tcl_Interp) return String;
+   function Tcl_GetResult(interp: Tcl_Interp := Null_Interp) return String;
 
    function Tcl_GetSlave
-     (interp: not null Tcl_Interp; slaveName: in String) return Tcl_Interp;
+     (interp: Tcl_Interp; slaveName: in String) return Tcl_Interp;
 
-   function Tcl_GetStringResult(interp: not null Tcl_Interp) return String;
+   function Tcl_GetStringResult(interp: Tcl_Interp := Null_Interp) return String;
 
    -- ****f* Ada/Ada.Tcl_GetVar
    -- FUNCTION
@@ -1142,25 +1142,25 @@ package Tcl.Ada is
    -- String with value of selected variable
    -- SOURCE
    function Tcl_GetVar
-     (interp: not null Tcl_Interp; varName: in String;
+     (interp: Tcl_Interp; varName: in String;
       flags: in C.int := TCL_GLOBAL_ONLY) return String;
    -- ****
 
    function Tcl_GetVar2
-     (interp: not null Tcl_Interp; part1: in String; part2: in String;
+     (interp: Tcl_Interp; part1: in String; part2: in String;
       flags: in C.int := TCL_GLOBAL_ONLY) return String;
 
    function Tcl_GlobalEval
-     (interp: not null Tcl_Interp; command: in String) return C.int;
+     (interp: Tcl_Interp; command: in String) return C.int;
 
-   procedure Tcl_GlobalEval(interp: not null Tcl_Interp; command: in String);
+   procedure Tcl_GlobalEval(interp: Tcl_Interp; command: in String);
 
    function Tcl_HideCommand
-     (interp: not null Tcl_Interp; cmdName: in String;
+     (interp: Tcl_Interp; cmdName: in String;
       hiddenCmdToken: in String) return C.int;
 
    procedure Tcl_HideCommand
-     (interp: not null Tcl_Interp; cmdName: in String;
+     (interp: Tcl_Interp; cmdName: in String;
       hiddenCmdToken: in String);
 
    function Tcl_JoinPath
@@ -1168,47 +1168,47 @@ package Tcl.Ada is
       resultPtr: not null Tcl_DString) return String;
 
    function Tcl_LinkVar
-     (interp: not null Tcl_Interp; varName: in String; addr: in System.Address;
+     (interp: Tcl_Interp; varName: in String; addr: in System.Address;
       typ: in C.int) return C.int;
 
    procedure Tcl_LinkVar
-     (interp: not null Tcl_Interp; varName: in String; addr: in System.Address;
+     (interp: Tcl_Interp; varName: in String; addr: in System.Address;
       typ: in C.int);
 
    function Tcl_Merge
      (argc: in C.int; argv: in CArgv.Chars_Ptr_Ptr) return String;
 
    procedure Tcl_PrintDouble
-     (interp: not null Tcl_Interp; value: in C.double; dst: in String);
+     (interp: Tcl_Interp; value: in C.double; dst: in String);
 
    function Tcl_PutEnv(strng: in String) return C.int;
 
-   function Tcl_PosixError(interp: not null Tcl_Interp) return String;
+   function Tcl_PosixError(interp: Tcl_Interp := Null_Interp) return String;
 
    function Tcl_RecordAndEval
-     (interp: not null Tcl_Interp; cmd: in String; flags: in C.int) return C
+     (interp: Tcl_Interp; cmd: in String; flags: in C.int) return C
      .int;
 
    procedure Tcl_RecordAndEval
-     (interp: not null Tcl_Interp; cmd: in String; flags: in C.int);
+     (interp: Tcl_Interp; cmd: in String; flags: in C.int);
 
    function Tcl_RegExpCompile
-     (interp: not null Tcl_Interp; strng: in String) return Tcl_RegExp;
+     (interp: Tcl_Interp; strng: in String) return Tcl_RegExp;
 
    function Tcl_RegExpExec
-     (interp: not null Tcl_Interp; regexp: not null Tcl_RegExp; str: in String;
+     (interp: Tcl_Interp; regexp: not null Tcl_RegExp; str: in String;
       start: in String) return C.int;
 
    procedure Tcl_RegExpExec
-     (interp: not null Tcl_Interp; regexp: not null Tcl_RegExp; str: in String;
+     (interp: Tcl_Interp; regexp: not null Tcl_RegExp; str: in String;
       start: in String);
 
    function Tcl_RegExpMatch
-     (interp: not null Tcl_Interp; str: in String; pattern: in String) return C
+     (interp: Tcl_Interp; str: in String; pattern: in String) return C
      .int;
 
    procedure Tcl_RegExpMatch
-     (interp: not null Tcl_Interp; str: in String; pattern: in String);
+     (interp: Tcl_Interp; str: in String; pattern: in String);
 
    function Tcl_ScanElement
      (str: in String; flagPtr: access C.int) return C.int;
@@ -1217,13 +1217,13 @@ package Tcl.Ada is
      (str: in String; length: in C.int; flagPtr: access C.int) return C.int;
 
    procedure Tcl_SetErrorCode
-     (interp: not null Tcl_Interp; String1: in String := "";
+     (interp: Tcl_Interp; String1: in String := "";
       String2: in String := ""; String3: in String := "";
       String4: in String := ""; String5: in String := "";
       String6: in String := ""; String7: in String := "";
       String8: in String := ""; String9: in String := "");
 
-   procedure Tcl_SetResult(interp: not null Tcl_Interp; str: in String);
+   procedure Tcl_SetResult(interp: Tcl_Interp; str: in String);
 
    -- ****f* Ada/Ada.Tcl_SetVar
    -- FUNCTION
@@ -1237,20 +1237,20 @@ package Tcl.Ada is
    -- If variable cannot be set, return empty string.
    -- SOURCE
    function Tcl_SetVar
-     (interp: not null Tcl_Interp; varName: in String; newValue: in String;
+     (interp: Tcl_Interp; varName: in String; newValue: in String;
       flags: in C.int := TCL_GLOBAL_ONLY) return String;
 
    procedure Tcl_SetVar
-     (interp: not null Tcl_Interp; varName: in String; newValue: in String;
+     (interp: Tcl_Interp; varName: in String; newValue: in String;
       flags: in C.int := TCL_GLOBAL_ONLY);
    -- ****
 
    function Tcl_SetVar2
-     (interp: not null Tcl_Interp; part1: in String; part2: in String;
+     (interp: Tcl_Interp; part1: in String; part2: in String;
       newValue: in String; flags: in C.int := TCL_GLOBAL_ONLY) return String;
 
    procedure Tcl_SetVar2
-     (interp: not null Tcl_Interp; part1: in String; part2: in String;
+     (interp: Tcl_Interp; part1: in String; part2: in String;
       newValue: in String; flags: in C.int := TCL_GLOBAL_ONLY);
 
    function Tcl_SignalId(sig: in C.int) return String;
@@ -1258,12 +1258,12 @@ package Tcl.Ada is
    function Tcl_SignalMsg(sig: in C.int) return String;
 
    function Tcl_SplitList
-     (interp: not null Tcl_Interp; listStr: in String;
+     (interp: Tcl_Interp; listStr: in String;
       argcPtr: not null access C.int;
       argvPtr: not null access CArgv.Chars_Ptr_Ptr) return C.int;
 
    procedure Tcl_SplitList
-     (interp: not null Tcl_Interp; listStr: in String;
+     (interp: Tcl_Interp; listStr: in String;
       argcPtr: not null access C.int;
       argvPtr: not null access CArgv.Chars_Ptr_Ptr);
 
@@ -1272,7 +1272,7 @@ package Tcl.Ada is
       argvPtr: not null access CArgv.Chars_Ptr_Ptr);
 
    procedure Tcl_StaticPackage
-     (interp: not null Tcl_Interp; pkgName: in String;
+     (interp: Tcl_Interp; pkgName: in String;
       initProc: not null Tcl_PackageInitProc;
       safeInitProc: Tcl_PackageInitProc);    -- can be null
 
@@ -1282,7 +1282,7 @@ package Tcl.Ada is
      (chan: not null Tcl_Channel; str: in String; len: in C.int;
       atHead: in C.int) return C.int;
 
-   procedure Tcl_UnlinkVar(interp: not null Tcl_Interp; varName: in String);
+   procedure Tcl_UnlinkVar(interp: Tcl_Interp; varName: in String);
 
    -- ****f* Ada/Ada.Tcl_UnsetVar
    -- FUNCTION
@@ -1295,57 +1295,57 @@ package Tcl.Ada is
    -- If variable cannot be removed, return TCL_ERROR.
    -- SOURCE
    function Tcl_UnsetVar
-     (interp: not null Tcl_Interp; varName: in String;
+     (interp: Tcl_Interp; varName: in String;
       flags: in C.int := TCL_GLOBAL_ONLY) return C.int;
 
    procedure Tcl_UnsetVar
-     (interp: not null Tcl_Interp; varName: in String;
+     (interp: Tcl_Interp; varName: in String;
       flags: in C.int := TCL_GLOBAL_ONLY);
    -- ****
 
    function Tcl_UnsetVar2
-     (interp: not null Tcl_Interp; part1: in String; part2: in String;
+     (interp: Tcl_Interp; part1: in String; part2: in String;
       flags: in C.int := TCL_GLOBAL_ONLY) return C.int;
 
    procedure Tcl_UnsetVar2
-     (interp: not null Tcl_Interp; part1: in String; part2: in String;
+     (interp: Tcl_Interp; part1: in String; part2: in String;
       flags: in C.int := TCL_GLOBAL_ONLY);
 
    procedure Tcl_UpdateLinkedVar
-     (interp: not null Tcl_Interp; varName: in String);
+     (interp: Tcl_Interp; varName: in String);
 
    function Tcl_UpVar
-     (interp: not null Tcl_Interp; frameName: in String; varName: in String;
+     (interp: Tcl_Interp; frameName: in String; varName: in String;
       localName: in String; flags: in C.int) return C.int;
 
    procedure Tcl_UpVar
-     (interp: not null Tcl_Interp; frameName: in String; varName: in String;
+     (interp: Tcl_Interp; frameName: in String; varName: in String;
       localName: in String; flags: in C.int);
 
    function Tcl_UpVar2
-     (interp: not null Tcl_Interp; frameName: in String; part1: in String;
+     (interp: Tcl_Interp; frameName: in String; part1: in String;
       part2: in String; localName: in String; flags: in C.int) return C.int;
 
    procedure Tcl_UpVar2
-     (interp: not null Tcl_Interp; frameName: in String; part1: in String;
+     (interp: Tcl_Interp; frameName: in String; part1: in String;
       part2: in String; localName: in String; flags: in C.int);
 
    function Tcl_VarEval
-     (interp: not null Tcl_Interp; String1: in String := "";
+     (interp: Tcl_Interp; String1: in String := "";
       String2: in String := ""; String3: in String := "";
       String4: in String := ""; String5: in String := "";
       String6: in String := ""; String7: in String := "";
       String8: in String := ""; String9: in String := "") return C.int;
 
    procedure Tcl_VarEval
-     (interp: not null Tcl_Interp; String1: in String := "";
+     (interp: Tcl_Interp; String1: in String := "";
       String2: in String := ""; String3: in String := "";
       String4: in String := ""; String5: in String := "";
       String6: in String := ""; String7: in String := "";
       String8: in String := ""; String9: in String := "");
 
    procedure Tcl_WrongNumArgs
-     (interp: not null Tcl_Interp; objc: in C.int; objv: in Tcl_Obj_Array;
+     (interp: Tcl_Interp; objc: in C.int; objv: in Tcl_Obj_Array;
       message: in String);
 
    function Tcl_DumpActiveMemory(fileName: in String) return C.int;
@@ -1353,19 +1353,19 @@ package Tcl.Ada is
    procedure Tcl_ValidateAllMemory(file: in String; line: in C.int);
 
    function Tcl_ParseVar
-     (interp: not null Tcl_Interp; str: in String;
+     (interp: Tcl_Interp; str: in String;
       termPtr: in CArgv.Chars_Ptr_Ptr) return String;
 
    function Tcl_EvalEx
-     (interp: not null Tcl_Interp; script: in String; numBytes: in C.int;
+     (interp: Tcl_Interp; script: in String; numBytes: in C.int;
       flags: in C.int) return C.int;
 
    procedure Tcl_EvalEx
-     (interp: not null Tcl_Interp; script: in String; numBytes: in C.int;
+     (interp: Tcl_Interp; script: in String; numBytes: in C.int;
       flags: in C.int);
 
    function Tcl_ExternalToUtf
-     (interp: not null Tcl_Interp;
+     (interp: Tcl_Interp;
       encoding: not null Tcl_Encoding;
       src: in String;
       srcLen: in C.int;
@@ -1382,7 +1382,7 @@ package Tcl.Ada is
       return C.int;
 
    procedure Tcl_ExternalToUtf
-     (interp: not null Tcl_Interp;
+     (interp: Tcl_Interp;
       encoding: not null Tcl_Encoding;
       src: in String;
       srcLen: in C.int;
@@ -1401,34 +1401,34 @@ package Tcl.Ada is
       dsPtr: not null Tcl_DString) return String;
 
    function Tcl_GetEncoding
-     (interp: not null Tcl_Interp; name: in String) return Tcl_Encoding;
+     (interp: Tcl_Interp; name: in String) return Tcl_Encoding;
 
    function Tcl_GetEncodingName(encoding: not null Tcl_Encoding) return String;
 
    function Tcl_GetIndexFromObjStruct
-     (interp: not null Tcl_Interp; objPtr: not null Tcl_Obj;
+     (interp: Tcl_Interp; objPtr: not null Tcl_Obj;
       tablePtr: in CArgv.Chars_Ptr_Ptr; offset: in C.int; msg: in String;
       flags: in C.int; indexPtr: not null access C.int) return C.int;
 
    procedure Tcl_GetIndexFromObjStruct
-     (interp: not null Tcl_Interp; objPtr: not null Tcl_Obj;
+     (interp: Tcl_Interp; objPtr: not null Tcl_Obj;
       tablePtr: in CArgv.Chars_Ptr_Ptr; offset: in C.int; msg: in String;
       flags: in C.int; indexPtr: not null access C.int);
 
    function Tcl_GetVar2Ex
-     (interp: not null Tcl_Interp; part1: in String; part2: in String;
+     (interp: Tcl_Interp; part1: in String; part2: in String;
       flags: in C.int := TCL_GLOBAL_ONLY) return Tcl_Obj;
 
    function Tcl_NumUtfChars(src: in String; len: in C.int) return C.int;
 
    function Tcl_SetSystemEncoding
-     (interp: not null Tcl_Interp; name: in String) return C.int;
+     (interp: Tcl_Interp; name: in String) return C.int;
 
    procedure Tcl_SetSystemEncoding
-     (interp: not null Tcl_Interp; name: in String);
+     (interp: Tcl_Interp; name: in String);
 
    function Tcl_SetVar2Ex
-     (interp: not null Tcl_Interp; part1: in String; part2: in String;
+     (interp: Tcl_Interp; part1: in String; part2: in String;
       newValuePtr: not null Tcl_Obj; flags: in C.int := TCL_GLOBAL_ONLY)
       return Tcl_Obj;
 
@@ -1456,7 +1456,7 @@ package Tcl.Ada is
    function Tcl_UtfPrev(src: in String; start: in String) return String;
 
    function Tcl_UtfToExternal
-     (interp: not null Tcl_Interp;
+     (interp: Tcl_Interp;
       encoding: not null Tcl_Encoding;
       src: in String;
       srcLen: in C.int;
@@ -1473,7 +1473,7 @@ package Tcl.Ada is
       return C.int;
 
    procedure Tcl_UtfToExternal
-     (interp: not null Tcl_Interp;
+     (interp: Tcl_Interp;
       encoding: not null Tcl_Encoding;
       src: in String;
       srcLen: in C.int;
@@ -1515,51 +1515,51 @@ package Tcl.Ada is
       return String;
 
    procedure Tcl_LogCommandInfo
-     (interp: not null Tcl_Interp; script: in String; command: in String;
+     (interp: Tcl_Interp; script: in String; command: in String;
       length: in C.int);
 
    function Tcl_ParseBraces
-     (interp: not null Tcl_Interp; strng: in String; numBytes: in C.int;
+     (interp: Tcl_Interp; strng: in String; numBytes: in C.int;
       parsePtr: not null Tcl_Parse; append: in C.int;
       termPtr: in CArgv.Chars_Ptr_Ptr) return C.int;
 
    procedure Tcl_ParseBraces
-     (interp: not null Tcl_Interp; strng: in String; numBytes: in C.int;
+     (interp: Tcl_Interp; strng: in String; numBytes: in C.int;
       parsePtr: not null Tcl_Parse; append: in C.int;
       termPtr: in CArgv.Chars_Ptr_Ptr);
 
    function Tcl_ParseCommand
-     (interp: not null Tcl_Interp; strng: in String; numBytes: in C.int;
+     (interp: Tcl_Interp; strng: in String; numBytes: in C.int;
       nested: in C.int; parsePtr: not null Tcl_Parse) return C.int;
 
    procedure Tcl_ParseCommand
-     (interp: not null Tcl_Interp; strng: in String; numBytes: in C.int;
+     (interp: Tcl_Interp; strng: in String; numBytes: in C.int;
       nested: in C.int; parsePtr: not null Tcl_Parse);
 
    function Tcl_ParseExpr
-     (interp: not null Tcl_Interp; strng: in String; numBytes: in C.int;
+     (interp: Tcl_Interp; strng: in String; numBytes: in C.int;
       parsePtr: not null Tcl_Parse) return C.int;
 
    procedure Tcl_ParseExpr
-     (interp: not null Tcl_Interp; strng: in String; numBytes: in C.int;
+     (interp: Tcl_Interp; strng: in String; numBytes: in C.int;
       parsePtr: not null Tcl_Parse);
 
    function Tcl_ParseQuotedString
-     (interp: not null Tcl_Interp; strng: in String; numBytes: in C.int;
+     (interp: Tcl_Interp; strng: in String; numBytes: in C.int;
       parsePtr: not null Tcl_Parse; append: in C.int;
       termPtr: in CArgv.Chars_Ptr_Ptr) return C.int;
 
    procedure Tcl_ParseQuotedString
-     (interp: not null Tcl_Interp; strng: in String; numBytes: in C.int;
+     (interp: Tcl_Interp; strng: in String; numBytes: in C.int;
       parsePtr: not null Tcl_Parse; append: in C.int;
       termPtr: in CArgv.Chars_Ptr_Ptr);
 
    function Tcl_ParseVarName
-     (interp: not null Tcl_Interp; strng: in String; numBytes: in C.int;
+     (interp: Tcl_Interp; strng: in String; numBytes: in C.int;
       parsePtr: not null Tcl_Parse; append: in C.int) return C.int;
 
    procedure Tcl_ParseVarName
-     (interp: not null Tcl_Interp; strng: in String; numBytes: in C.int;
+     (interp: Tcl_Interp; strng: in String; numBytes: in C.int;
       parsePtr: not null Tcl_Parse; append: in C.int);
 
    function Tcl_Chdir(dirName: in String) return C.int;

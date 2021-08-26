@@ -41,7 +41,7 @@ package Tcl.Async is
    -- FUNCTION
    -- Must be called before any other subprogram in the package.
    -- SOURCE
-   procedure Register(Interp: Tcl_Interp);
+   procedure Register(Interp: Tcl_Interp := Null_Interp);
    -- ****
 
    -- ****f* Async/Async.Set_(variable)

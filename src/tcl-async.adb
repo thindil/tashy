@@ -94,7 +94,7 @@ package body Tcl.Async is
       return Interfaces.C.int;
    pragma Convention(C, Async_Proc);
 
-   procedure Register(Interp: Tcl_Interp) is
+   procedure Register(Interp: Tcl_Interp := Null_Interp) is
       pragma Assert(Async_Handler = null);
    begin
       --  We don't use any client data.
@@ -147,7 +147,7 @@ package body Tcl.Async is
          Ada_Id := GNAT.Threads.Register_Thread;
       end;
 
-      if Interpreter = null then
+      if Interpreter = Null_Interp then
          Interpreter := Default_Interpreter;
       end if;
 

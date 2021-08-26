@@ -164,7 +164,7 @@ package body Tcl is
    pragma Import(C, AppendResult, "Tcl_AppendResult");
 
    procedure Tcl_AppendResult
-     (interp: not null Tcl_Interp;
+     (interp: Tcl_Interp;
       String1: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
       String2: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
       String3: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
@@ -195,7 +195,7 @@ package body Tcl is
    pragma Import(C, SetErrorCode, "Tcl_SetErrorCode");
 
    procedure Tcl_SetErrorCode
-     (interp: not null Tcl_Interp;
+     (interp: Tcl_Interp;
       String1: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
       String2: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
       String3: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
@@ -226,7 +226,7 @@ package body Tcl is
    pragma Import(C, VarEval, "Tcl_VarEval");
 
    function Tcl_VarEval
-     (interp: not null Tcl_Interp;
+     (interp: Tcl_Interp;
       String1: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
       String2: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
       String3: in C.Strings.chars_ptr := C.Strings.Null_Ptr;
