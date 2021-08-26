@@ -67,7 +67,7 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Tk_SpinBox with
+      Interp: in Tcl_Interp := Null_Interp) return Tk_SpinBox with
       Pre => pathName /= "";
      -- ****
 
@@ -100,7 +100,7 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_SpinBox; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) with
+      Interp: in Tcl_Interp := Null_Interp) with
       Pre => pathName /= "";
      -- ****
 

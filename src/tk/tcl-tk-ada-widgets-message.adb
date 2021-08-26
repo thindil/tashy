@@ -24,10 +24,10 @@ package body Tcl.Tk.Ada.Widgets.Message is
 
    function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Tk_Message is
+      Interp: in Tcl_Interp := Null_Interp) return Tk_Message is
       The_Widget: Tk_Message;
    begin
-      if Interp = null then
+      if Interp = Null_Interp then
          The_Widget.Interp := Context;
       else
          The_Widget.Interp := Interp;
@@ -39,7 +39,7 @@ package body Tcl.Tk.Ada.Widgets.Message is
 
    procedure Create
      (Widgt: out Tk_Message; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) is
+      Interp: in Tcl_Interp := Null_Interp) is
    begin
       Widgt := Create(pathName, options, Interp);
    end Create;

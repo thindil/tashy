@@ -67,7 +67,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Ttk_ComboBox with
+      Interp: in Tcl_Interp := Null_Interp) return Ttk_ComboBox with
       Pre => pathName /= "";
       -- ****
 
@@ -100,7 +100,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
       -- SOURCE
    procedure Create
      (Widgt: out Ttk_ComboBox; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) with
+      Interp: in Tcl_Interp := Null_Interp) with
       Pre => pathName /= "";
       -- ****
 

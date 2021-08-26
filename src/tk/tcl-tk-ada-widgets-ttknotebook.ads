@@ -67,7 +67,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Ttk_Notebook with
+      Interp: in Tcl_Interp := Null_Interp) return Ttk_Notebook with
       Pre => pathName /= "";
      -- ****
 
@@ -100,7 +100,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_Notebook; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) with
+      Interp: in Tcl_Interp := Null_Interp) with
       Pre => pathName /= "";
      -- ****
 

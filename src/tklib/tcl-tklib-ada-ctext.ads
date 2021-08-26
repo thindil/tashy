@@ -81,7 +81,7 @@ package Tcl.Tklib.Ada.Ctext is
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Tklib_Ctext with
+      Interp: in Tcl_Interp := Null_Interp) return Tklib_Ctext with
       Pre => pathName /= "";
       -- ****
 
@@ -114,7 +114,7 @@ package Tcl.Tklib.Ada.Ctext is
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tklib_Ctext; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) with
+      Interp: in Tcl_Interp := Null_Interp) with
       Pre => pathName /= "";
      -- ****
 

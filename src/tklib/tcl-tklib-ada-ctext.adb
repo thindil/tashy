@@ -35,10 +35,10 @@ package body Tcl.Tklib.Ada.Ctext is
 
    function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Tklib_Ctext is
+      Interp: in Tcl_Interp := Null_Interp) return Tklib_Ctext is
       The_Widget: Tklib_Ctext;
    begin
-      if Interp = null then
+      if Interp = Null_Interp then
          The_Widget.Interp := Get_Context;
       else
          The_Widget.Interp := Interp;
@@ -50,7 +50,7 @@ package body Tcl.Tklib.Ada.Ctext is
 
    procedure Create
      (Widgt: out Tklib_Ctext; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) is
+      Interp: in Tcl_Interp := Null_Interp) is
    begin
       Widgt := Create(pathName, options, Interp);
    end Create;

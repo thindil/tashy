@@ -60,7 +60,7 @@ package Tcl.Tk.Ada.Widgets.TtkLabel is
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Ttk_Label with
+      Interp: in Tcl_Interp := Null_Interp) return Ttk_Label with
       Pre => pathName /= "";
       -- ****
 
@@ -93,7 +93,7 @@ package Tcl.Tk.Ada.Widgets.TtkLabel is
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_Label; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) with
+      Interp: in Tcl_Interp := Null_Interp) with
       Pre => pathName /= "";
       -- ****
 

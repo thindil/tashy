@@ -60,7 +60,7 @@ package Tcl.Tk.Ada.Widgets.OptionMenu is
    -- OptionMenu.Create_(procedure)
    -- SOURCE
    overriding function Create
-     (pathName, options: in String; Interp: in Tcl_Interp := null)
+     (pathName, options: in String; Interp: in Tcl_Interp := Null_Interp)
       return Tk_OptionMenu with
       Pre => pathName /= "" and options /= "";
      -- ****
@@ -95,7 +95,7 @@ package Tcl.Tk.Ada.Widgets.OptionMenu is
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_OptionMenu; pathName, options: in String;
-      Interp: in Tcl_Interp := null) with
+      Interp: in Tcl_Interp := Null_Interp) with
       Pre => pathName /= "" and options /= "";
       -- ****
 

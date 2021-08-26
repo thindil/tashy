@@ -26,10 +26,10 @@ package body Tcl.Tk.Ada.Widgets.TtkPanedWindow is
 
    function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Ttk_PanedWindow is
+      Interp: in Tcl_Interp := Null_Interp) return Ttk_PanedWindow is
       The_Widget: Ttk_PanedWindow;
    begin
-      if Interp = null then
+      if Interp = Null_Interp then
          The_Widget.Interp := Context;
       else
          The_Widget.Interp := Interp;
@@ -42,7 +42,7 @@ package body Tcl.Tk.Ada.Widgets.TtkPanedWindow is
 
    procedure Create
      (Widgt: out Ttk_PanedWindow; pathName: in String;
-      options: in String := ""; Interp: in Tcl_Interp := null) is
+      options: in String := ""; Interp: in Tcl_Interp := Null_Interp) is
    begin
       Widgt := Create(pathName, options, Interp);
    end Create;

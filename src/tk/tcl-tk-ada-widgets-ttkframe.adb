@@ -24,10 +24,10 @@ package body Tcl.Tk.Ada.Widgets.TtkFrame is
 
    function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Ttk_Frame is
+      Interp: in Tcl_Interp := Null_Interp) return Ttk_Frame is
       The_Widget: Ttk_Frame;
    begin
-      if Interp = null then
+      if Interp = Null_Interp then
          The_Widget.Interp := Context;
       else
          The_Widget.Interp := Interp;
@@ -39,7 +39,7 @@ package body Tcl.Tk.Ada.Widgets.TtkFrame is
 
    procedure Create
      (Widgt: out Ttk_Frame; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) is
+      Interp: in Tcl_Interp := Null_Interp) is
    begin
       Widgt := Create(pathName, options, Interp);
    end Create;

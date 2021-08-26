@@ -23,11 +23,11 @@
 package body Tcl.Tk.Ada.Widgets.OptionMenu is
 
    function Create
-     (pathName, options: in String; Interp: in Tcl_Interp := null)
+     (pathName, options: in String; Interp: in Tcl_Interp := Null_Interp)
       return Tk_OptionMenu is
       The_Widget: Tk_OptionMenu;
    begin
-      if Interp = null then
+      if Interp = Null_Interp then
          The_Widget.Interp := Context;
       else
          The_Widget.Interp := Interp;
@@ -39,7 +39,7 @@ package body Tcl.Tk.Ada.Widgets.OptionMenu is
 
    procedure Create
      (Widgt: out Tk_OptionMenu; pathName, options: in String;
-      Interp: in Tcl_Interp := null) is
+      Interp: in Tcl_Interp := Null_Interp) is
    begin
       Widgt := Create(pathName, options, Interp);
    end Create;

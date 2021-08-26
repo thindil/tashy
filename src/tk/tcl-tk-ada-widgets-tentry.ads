@@ -59,7 +59,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Tk_Entry with
+      Interp: in Tcl_Interp := Null_Interp) return Tk_Entry with
       Pre => pathName /= "";
      -- ****
 
@@ -91,7 +91,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Entry; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) with
+      Interp: in Tcl_Interp := Null_Interp) with
       Pre => pathName /= "";
      -- ****
 

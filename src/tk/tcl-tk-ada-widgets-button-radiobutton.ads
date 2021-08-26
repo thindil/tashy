@@ -58,7 +58,7 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Tk_RadioButton with
+      Interp: in Tcl_Interp := Null_Interp) return Tk_RadioButton with
       Pre => pathName /= "";
      -- ****
 
@@ -91,7 +91,7 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_RadioButton; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) with
+      Interp: in Tcl_Interp := Null_Interp) with
       Pre => pathName /= "";
      -- ****
 

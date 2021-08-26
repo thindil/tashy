@@ -132,7 +132,7 @@ package Tcl.Tk.Ada.Widgets is
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Tk_Widget is abstract;
+      Interp: in Tcl_Interp := Null_Interp) return Tk_Widget is abstract;
       -- ****
 
       -- ****f* Widgets/Widgets.Create_(procedure)
@@ -156,7 +156,7 @@ package Tcl.Tk.Ada.Widgets is
       -- SOURCE
    procedure Create
      (Widgt: out Tk_Widget; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) is abstract;
+      Interp: in Tcl_Interp := Null_Interp) is abstract;
       -- ****
 
       -- ****f* Widgets/Widgets.Get_Widget

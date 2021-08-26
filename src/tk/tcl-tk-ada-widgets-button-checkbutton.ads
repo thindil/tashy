@@ -58,7 +58,7 @@ package Tcl.Tk.Ada.Widgets.Button.CheckButton is
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Tk_CheckButton with
+      Interp: in Tcl_Interp := Null_Interp) return Tk_CheckButton with
       Pre => pathName /= "";
      -- ****
 
@@ -91,7 +91,7 @@ package Tcl.Tk.Ada.Widgets.Button.CheckButton is
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_CheckButton; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) with
+      Interp: in Tcl_Interp := Null_Interp) with
       Pre => pathName /= "";
      -- ****
 

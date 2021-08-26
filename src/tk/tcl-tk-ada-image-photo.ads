@@ -60,7 +60,7 @@ package Tcl.Tk.Ada.Image.Photo is
    -- SOURCE
    function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Tk_Photo with
+      Interp: in Tcl_Interp := Null_Interp) return Tk_Photo with
       Pre => (pathName /= "");
       -- ****
 
@@ -93,7 +93,7 @@ package Tcl.Tk.Ada.Image.Photo is
       -- SOURCE
    procedure Create
      (Widgt: out Tk_Photo; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) with
+      Interp: in Tcl_Interp := Null_Interp) with
       Pre => (pathName /= "");
       -- ****
 

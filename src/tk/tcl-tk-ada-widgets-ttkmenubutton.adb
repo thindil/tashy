@@ -24,10 +24,10 @@ package body Tcl.Tk.Ada.Widgets.TtkMenuButton is
 
    function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Ttk_MenuButton is
+      Interp: in Tcl_Interp := Null_Interp) return Ttk_MenuButton is
       The_Widget: Ttk_MenuButton;
    begin
-      if Interp = null then
+      if Interp = Null_Interp then
          The_Widget.Interp := Context;
       else
          The_Widget.Interp := Interp;
@@ -40,7 +40,7 @@ package body Tcl.Tk.Ada.Widgets.TtkMenuButton is
 
    procedure Create
      (Widgt: out Ttk_MenuButton; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) is
+      Interp: in Tcl_Interp := Null_Interp) is
    begin
       Widgt := Create(pathName, options, Interp);
    end Create;

@@ -17,10 +17,10 @@ package body Tcl.Tk.Ada.Widgets.Toplevel is
 
    function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Tk_Toplevel is
+      Interp: in Tcl_Interp := Null_Interp) return Tk_Toplevel is
       The_Widget: Tk_Toplevel;
    begin
-      if Interp = null then
+      if Interp = Null_Interp then
          The_Widget.Interp := Context;
       else
          The_Widget.Interp := Interp;
@@ -32,7 +32,7 @@ package body Tcl.Tk.Ada.Widgets.Toplevel is
 
    procedure Create
      (Widgt: out Tk_Toplevel; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) is
+      Interp: in Tcl_Interp := Null_Interp) is
    begin
       Widgt := Create(pathName, options, Interp);
    end Create;

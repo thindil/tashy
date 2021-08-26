@@ -67,7 +67,7 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Ttk_ProgressBar with
+      Interp: in Tcl_Interp := Null_Interp) return Ttk_ProgressBar with
       Pre => pathName /= "";
      -- ****
 
@@ -100,7 +100,7 @@ package Tcl.Tk.Ada.Widgets.TtkProgressBar is
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_ProgressBar; pathName: in String;
-      options: in String := ""; Interp: in Tcl_Interp := null) with
+      options: in String := ""; Interp: in Tcl_Interp := Null_Interp) with
       Pre => pathName /= "";
       -- ****
 

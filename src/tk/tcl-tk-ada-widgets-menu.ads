@@ -60,7 +60,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Tk_Menu with
+      Interp: in Tcl_Interp := Null_Interp) return Tk_Menu with
       Pre => pathName /= "";
      -- ****
 
@@ -93,7 +93,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Menu; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) with
+      Interp: in Tcl_Interp := Null_Interp) with
       Pre => pathName /= "";
      -- ****
 

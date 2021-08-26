@@ -26,10 +26,10 @@ package body Tcl.Tk.Ada.Widgets.TtkButton is
 
    function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Ttk_Button is
+      Interp: in Tcl_Interp := Null_Interp) return Ttk_Button is
       The_Widget: Ttk_Button;
    begin
-      if Interp = null then
+      if Interp = Null_Interp then
          The_Widget.Interp := Context;
       else
          The_Widget.Interp := Interp;
@@ -41,7 +41,7 @@ package body Tcl.Tk.Ada.Widgets.TtkButton is
 
    procedure Create
      (Widgt: out Ttk_Button; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) is
+      Interp: in Tcl_Interp := Null_Interp) is
    begin
       Widgt := Create(pathName, options, Interp);
    end Create;

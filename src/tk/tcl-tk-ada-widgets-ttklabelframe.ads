@@ -67,7 +67,7 @@ package Tcl.Tk.Ada.Widgets.TtkLabelFrame is
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) return Ttk_LabelFrame with
+      Interp: in Tcl_Interp := Null_Interp) return Ttk_LabelFrame with
       Pre => pathName /= "";
      -- ****
 
@@ -100,7 +100,7 @@ package Tcl.Tk.Ada.Widgets.TtkLabelFrame is
      -- SOURCE
    overriding procedure Create
      (Widgt: out Ttk_LabelFrame; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := null) with
+      Interp: in Tcl_Interp := Null_Interp) with
       Pre => pathName /= "";
       -- ****
 
