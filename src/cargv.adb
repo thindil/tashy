@@ -112,4 +112,15 @@ package body CArgv is
       return CNatural(Argv_Pointer.Virtual_Length(Argv));
    end Argc;
 
+   function Arguments_To_Array(Argv: Chars_Ptr_Ptr) return Arguments_Array is
+   begin
+      return Result: Arguments_Array(1 .. Positive(Argc(Argv))) do
+         for I in Result'Range loop
+            Result(I) :=
+              Ada.Strings.Unbounded.To_Unbounded_String
+                (Arg(Argv, CNatural(I - 1)));
+         end loop;
+      end return;
+   end Arguments_To_Array;
+
 end CArgv;

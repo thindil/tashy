@@ -4,6 +4,7 @@
 --              Ada.Command_Line.
 --
 --  Copyright (c) 1995-2000 Terry J. Westley
+--  Copyright (c) 2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 --  See the file "license.htm" for information on usage and
 --  redistribution of this file, and for a DISCLAIMER OF ALL WARRANTIES.
@@ -16,6 +17,7 @@
 
 with Interfaces.C.Pointers;
 with Interfaces.C.Strings;
+with Ada.Strings.Unbounded;
 
 -- ****h* Tashy/CArgv
 -- FUNCTION
@@ -42,9 +44,9 @@ package CArgv is
    type Vector is array(CNatural range <>) of aliased C.Strings.chars_ptr;
    -- ****
 
-   package Argv_Pointer is new C.Pointers(Index => CNatural,
-      Element => C.Strings.chars_ptr, Element_Array => Vector,
-      Default_Terminator => C.Strings.Null_Ptr);
+   package Argv_Pointer is new C.Pointers
+     (Index => CNatural, Element => C.Strings.chars_ptr,
+      Element_Array => Vector, Default_Terminator => C.Strings.Null_Ptr);
 
    -- ****t* CArgv/CArgv.Chars_Ptr_Ptr
    -- FUNCTION
@@ -146,5 +148,15 @@ package CArgv is
    --       Tcl.Tcl_Concat (CArgv.Argc (Argv), Argv);
    --       CArgv.Free (Argv);
    --    end;
+
+   type Arguments_Array is
+     array(Positive range <>) of Ada.Strings.Unbounded.Unbounded_String;
+
+     -- ****f* CArgv/CArgv.Arguments_To_Array
+     -- FUNCTION
+     -- Convert Arguments list to the array of Unbounded_Strings
+     -- SOURCE
+   function Arguments_To_Array(Argv: Chars_Ptr_Ptr) return Arguments_Array;
+   -- ****
 
 end CArgv;
