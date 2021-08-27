@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 Tag **BREAKING:** means that change breaks compatibility with earlier version
 of the project.
 
+## [Unreleased]
+
+### Added
+- Constant Null_Interp
+
+### Changed
+- **BREAKING:** Type Tcl_Interp to System.Address. In the most cases it
+  should'nt not break anything.
+
 ## [8.6.11] - 2020-12-18
 
 ### Changed
