@@ -4,7 +4,7 @@ exec wish "$0" ${1+"$@"}
 
 # Copyright (C) 1997-2000 Terry J. Westley
 # Copyright (C) Simon Wright <simon@pushface.org>
-# Copyright (C) 2019-2020 Bartek Jasicki <thindil@laeran.pl>
+# Copyright (C) 2019-2021 Bartek Jasicki <thindil@laeran.pl>
 
 # This package is free software; you can redistribute it and/or
 # modify it under terms of the GNU General Public License as
@@ -342,7 +342,7 @@ proc Set_Macros {platform os} {
       setvar TK_VERSION        "$tk_version"        {Tk version}
       setvar TK_LIBRARY        "$libtk"             {Tk library}
       setvar CARGS             "-O2"                {C compiler switches}
-      setvar AARGS             "-O2 -gnatafoE -gnatwaL" \
+      setvar AARGS             "-O2 -gnatafo -gnatwaL" \
          {Ada compiler switches}
       setvar BARGS             "-E"                 {gnatbind switches}
       setvar EXE               "$exec_suffix"       {suffix for executable files}
