@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021: Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- Tashy is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -27,7 +27,9 @@ with Tcl.Tk.Ada.Widgets.Toplevel; use Tcl.Tk.Ada.Widgets.Toplevel;
 -- FUNCTION
 -- Provides code for manipulate Tk dialogs widgets
 -- SOURCE
-package Tcl.Tk.Ada.Dialogs is
+package Tcl.Tk.Ada.Dialogs with
+   SPARK_Mode
+is
 -- ****
 
    type DialogButtons is array(Positive range <>) of Unbounded_String;
@@ -72,9 +74,10 @@ package Tcl.Tk.Ada.Dialogs is
    function Choose_Directory(Options: in String := "") return String;
    -- ****
 
-   -- ****f* Dialogs/Dialogs.Dialog
+   -- ****f* Dialogs/Dialogs.Dialog_(function)
    -- FUNCTION
-   -- Create the dialog from selected Tk_Toplevel widget
+   -- Create the dialog from selected Tk_Toplevel widget. This function is not
+   -- allowed in SPARK. use Dialogs.Dialog_(procedure) instead.
    -- PARAMETERS
    -- Widget  - Tk_Toplevel widget which will be used as the dialog.
    -- Title   - Title of the dialog
@@ -97,10 +100,50 @@ package Tcl.Tk.Ada.Dialogs is
    -- Response: constant String := Dialog(My_Dialog, "MyDialog", "{My Dialog Text}", "question", 0, Buttons);
    -- COMMANDS
    -- tk_dialog window title text bitmap default string string
+   -- SEE ALSO
+   -- Dialogs.Dialog_(procedure)
    -- SOURCE
    function Dialog
      (Widget: in out Tk_Toplevel; Title, Text, Bitmap: in String;
       Default: in Integer; Buttons: in DialogButtons) return Integer with
+      SPARK_Mode => Off,
+      Pre =>
+      (Title /= "" and Text /= "" and Bitmap /= "" and
+       Default <= Buttons'Length);
+      -- ****
+
+      -- ****f* Dialogs/Dialogs.Dialog_(procedure)
+      -- FUNCTION
+      -- Create the dialog from selected Tk_Toplevel widget.
+      -- PARAMETERS
+      -- Widget  - Tk_Toplevel widget which will be used as the dialog.
+      -- Title   - Title of the dialog
+      -- Text    - Text to display in the dialog
+      -- Bitmap  - Tk bitmap name to show in dialog
+      -- Default - Default button in dialog. Buttons counts from 0. If less than
+      --           0 no button will be set as default.
+      -- Buttons - Array with text to show on buttons. One element is one button
+      -- OUTPUT
+      -- Parameter Widget as a newly created dialog and ButtonPressed as a Index
+      -- of the buton which was clicked or -1 if no button was clicked
+      -- HISTORY
+      -- 8.6.12 - Added
+      -- EXAMPLE
+      -- -- Create dialog from My_Dialog widget with title MyDialog, text My
+      -- -- Dialog Text, bitmap question, default first button and buttons
+      -- -- Yes and No
+      -- Buttons: constant DialogButtons := array(To_Unbounded_String("Yes"), To_Unbounded_String("No"));
+      -- Result: Integer;
+      -- Dialog(My_Dialog, "MyDialog", "{My Dialog Text}", "question", 0, Buttons, Result);
+      -- COMMANDS
+      -- tk_dialog window title text bitmap default string string
+      -- SEE ALSO
+      -- Dialogs.Dialog_(function)
+      -- SOURCE
+   procedure Dialog
+     (Widget: in out Tk_Toplevel; Title, Text, Bitmap: in String;
+      Default: in Integer; Buttons: in DialogButtons;
+      ButtonPressed: out Integer) with
       Pre =>
       (Title /= "" and Text /= "" and Bitmap /= "" and
        Default <= Buttons'Length);

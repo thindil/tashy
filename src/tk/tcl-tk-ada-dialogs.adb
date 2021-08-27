@@ -52,6 +52,14 @@ package body Tcl.Tk.Ada.Dialogs is
       return Integer'Value(Tcl_GetResult(Get_Context));
    end Dialog;
 
+   procedure Dialog
+     (Widget: in out Tk_Toplevel; Title, Text, Bitmap: in String;
+      Default: in Integer; Buttons: in DialogButtons;
+      ButtonPressed: out Integer) is
+   begin
+      ButtonPressed := Dialog(Widget, Title, Text, Bitmap, Default, Buttons);
+   end Dialog;
+
    procedure FontChooser_Configure(Options: in String) is
    begin
       Tcl_Eval(Get_Context, "tk_fontchooser " & Options);
