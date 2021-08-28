@@ -1,4 +1,4 @@
--- Copyright (c) 2020-2021: Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- Tashy is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -32,7 +32,14 @@ package Tcl.Tk.Ada.Dialogs with
 is
 -- ****
 
+   -- ****t* Dialogs/Dialogs.DialogButtons
+   -- FUNCTION
+   -- Array used to set buttons in dialogs
+   -- HISTORY
+   -- 8.6.1 - Added
+   -- SOURCE
    type DialogButtons is array(Positive range <>) of Unbounded_String;
+   -- ****
 
    -- ****f* Dialogs/Dialogs.Choose_Color
    -- FUNCTION
