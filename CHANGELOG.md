@@ -13,6 +13,7 @@ of the project.
 ### Changed
 - **BREAKING:** Type Tcl_Interp to System.Address. In the most cases it
   should'nt not break anything.
+- Updated code documentation
 
 ## [8.6.11] - 2020-12-18
 
