@@ -8,6 +8,7 @@ of the project.
 
 ### Added
 - Constant Null_Interp
+- Procedure `Dialog` to `Dialogs` package
 
 ### Changed
 - **BREAKING:** Type Tcl_Interp to System.Address. In the most cases it
