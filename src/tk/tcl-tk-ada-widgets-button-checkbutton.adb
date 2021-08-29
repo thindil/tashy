@@ -44,6 +44,16 @@ package body Tcl.Tk.Ada.Widgets.Button.CheckButton is
       Widgt := Create(pathName, options, Interp);
    end Create;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_CheckButton is
+   begin
+      return New_Button: Tk_CheckButton do
+         New_Button.Interp := Interp;
+         New_Button.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
    procedure Deselect(Buttn: in Tk_CheckButton) is
    begin --  Deselect
       Execute_Widget_Command(Buttn, "deselect");
