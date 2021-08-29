@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- Tashy is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -24,7 +24,9 @@
 -- FUNCTION
 -- Provides code for manipulate Tk command ttk::style
 -- SOURCE
-package Tcl.Tk.Ada.TtkStyle is
+package Tcl.Tk.Ada.TtkStyle with
+   SPARK_Mode
+is
 -- ****
 
    -- ****f* TtkStyle/TtkStyle.Element_Create

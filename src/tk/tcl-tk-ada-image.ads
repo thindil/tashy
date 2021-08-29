@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- Tashy is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -26,7 +26,9 @@ with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
 -- FUNCTION
 -- Provides code for manipulate Tk command image
 -- SOURCE
-package Tcl.Tk.Ada.Image is
+package Tcl.Tk.Ada.Image with
+   SPARK_Mode
+is
 -- ****
 
    -- ****f* Image/Image.Delete
