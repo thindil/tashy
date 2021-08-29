@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- Tashy is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -24,16 +24,19 @@
 -- FUNCTION
 -- Provides code for manipulate Tk image of type bitmap
 -- SOURCE
-package Tcl.Tk.Ada.Image.Bitmap is
+package Tcl.Tk.Ada.Image.Bitmap with
+   SPARK_Mode
+is
 -- ****
 
    -- ****t* Bitmap/Bitmap.Tk_Bitmap
    -- FUNCTION
-   -- This is a non-abstract type derived directly from Tk_Widget.
-   -- Each of the derived widgets redefines the Create subprogram
-   -- in order to create the correct type of widget.
+   -- This is a type used to store data of Bitmap image.
    -- SOURCE
-   type Tk_Bitmap is new Tk_Widget with private;
+   type Tk_Bitmap is record
+      Name: C.Strings.chars_ptr;
+      Interp: Tcl_Interp;
+   end record;
    -- ****
 
    -- ****f* Bitmap/Bitmap.Create_(function)
@@ -112,13 +115,9 @@ package Tcl.Tk.Ada.Image.Bitmap is
      -- -- Get bitmap image with name .mybitmap on the current Tcl interpreter
      -- My_Bitmap: constant Tk_Bitmap := Get_Widget(".mybitmap");
      -- SOURCE
-   overriding function Get_Widget
+   function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
       return Tk_Bitmap;
      -- ****
-
-private
-
-   type Tk_Bitmap is new Tk_Widget with null record;
 
 end Tcl.Tk.Ada.Image.Bitmap;
