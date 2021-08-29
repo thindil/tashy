@@ -24,7 +24,10 @@
 -- FUNCTION
 -- Provides code for manipulate Tk widget CheckButton
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.Button.CheckButton is
+package Tcl.Tk.Ada.Widgets.Button.CheckButton with
+   SPARK_Mode
+is
+   pragma Elaborate_Body;
 -- ****
 
    -- ****t* CheckButton/CheckButton.Tk_CheckButton
@@ -58,8 +61,7 @@ package Tcl.Tk.Ada.Widgets.Button.CheckButton is
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := Null_Interp) return Tk_CheckButton with
-      Pre => pathName /= "";
+      Interp: in Tcl_Interp := Null_Interp) return Tk_CheckButton;
      -- ****
 
      -- ****f* CheckButton/CheckButton.Create_(procedure)
@@ -91,8 +93,7 @@ package Tcl.Tk.Ada.Widgets.Button.CheckButton is
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_CheckButton; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := Null_Interp) with
-      Pre => pathName /= "";
+      Interp: in Tcl_Interp := Null_Interp);
      -- ****
 
      -- ****f* CheckButton/CheckButton.Deselect
