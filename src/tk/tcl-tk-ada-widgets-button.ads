@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- Tashy is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -24,7 +24,10 @@
 -- FUNCTION
 -- Provides code for manipulate Tk widget Button
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.Button is
+package Tcl.Tk.Ada.Widgets.Button with
+   SPARK_Mode
+is
+   pragma Elaborate_Body;
 -- ****
 
    -- ****t* Button/Button.Tk_Button
@@ -60,8 +63,7 @@ package Tcl.Tk.Ada.Widgets.Button is
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := Null_Interp) return Tk_Button with
-      Pre => pathName /= "";
+      Interp: in Tcl_Interp := Null_Interp) return Tk_Button;
       -- ****
 
      -- ****f* Button/Button.Create_(procedure)
@@ -93,8 +95,7 @@ package Tcl.Tk.Ada.Widgets.Button is
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Button; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := Null_Interp) with
-      Pre => pathName /= "";
+      Interp: in Tcl_Interp := Null_Interp);
      -- ****
 
      -- ****f* Button/Button.Get_Widget
