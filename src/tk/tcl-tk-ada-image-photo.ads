@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- Tashy is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -24,16 +24,20 @@
 -- FUNCTION
 -- Provides code for manipulate Tk image of type photo
 -- SOURCE
-package Tcl.Tk.Ada.Image.Photo is
+package Tcl.Tk.Ada.Image.Photo with
+   SPARK_Mode
+is
+   pragma Elaborate_Body;
 -- ****
 
-   -- ****t* Photo/Tk_Photo
+   -- ****t* Photo/Photo.Tk_Photo
    -- FUNCTION
-   -- This is a non-abstract type derived directly from Tk_Widget.
-   -- Each of the derived widgets redefines the Create subprogram
-   -- in order to create the correct type of widget.
+   -- This is a type used to store data of Photo image.
    -- SOURCE
-   type Tk_Photo is new Tk_Widget with private;
+   type Tk_Photo is record
+      Name: C.Strings.chars_ptr;
+      Interp: Tcl_Interp;
+   end record;
    -- ****
 
    -- ****f* Photo/Photo.Create_(function)
@@ -112,7 +116,7 @@ package Tcl.Tk.Ada.Image.Photo is
      -- -- Get photo image with name .myphoto on the current Tcl interpreter
      -- My_Photo: constant Tk_Photo := Get_Widget(".myphoto");
      -- SOURCE
-   overriding function Get_Widget
+   function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
       return Tk_Photo;
      -- ****
@@ -314,9 +318,5 @@ package Tcl.Tk.Ada.Image.Photo is
      (Image: in Tk_Photo; FileName: in String; Options: in String := "") with
       Pre => FileName /= "";
       -- ****
-
-private
-
-   type Tk_Photo is new Tk_Widget with null record;
 
 end Tcl.Tk.Ada.Image.Photo;
