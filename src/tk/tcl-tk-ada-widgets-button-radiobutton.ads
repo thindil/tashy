@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- Tashy is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -24,7 +24,10 @@
 -- FUNCTION
 -- Provides code for manipulate Tk widget RadioButton
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.Button.RadioButton is
+package Tcl.Tk.Ada.Widgets.Button.RadioButton with
+   SPARK_Mode
+is
+   pragma Elaborate_Body;
 -- ****
 
    -- ****t* RadioButton/RadioButton.Tk_RadioButton
@@ -58,8 +61,7 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := Null_Interp) return Tk_RadioButton with
-      Pre => pathName /= "";
+      Interp: in Tcl_Interp := Null_Interp) return Tk_RadioButton;
      -- ****
 
      -- ****f* RadioButton/RadioButton.Create_(procedure)
@@ -91,8 +93,7 @@ package Tcl.Tk.Ada.Widgets.Button.RadioButton is
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_RadioButton; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := Null_Interp) with
-      Pre => pathName /= "";
+      Interp: in Tcl_Interp := Null_Interp);
      -- ****
 
      -- ****f* RadioButton/RadioButton.Get_Widget
