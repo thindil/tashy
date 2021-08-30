@@ -63,7 +63,8 @@ is
    -- SOURCE
    overriding function Create
      (pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := Null_Interp) return Tk_Button;
+      Interp: in Tcl_Interp := Null_Interp) return Tk_Button with
+      Global => null;
       -- ****
 
      -- ****f* Button/Button.Create_(procedure)
@@ -95,7 +96,8 @@ is
      -- SOURCE
    overriding procedure Create
      (Widgt: out Tk_Button; pathName: in String; options: in String := "";
-      Interp: in Tcl_Interp := Null_Interp);
+      Interp: in Tcl_Interp := Null_Interp) with
+      Global => null;
      -- ****
 
      -- ****f* Button/Button.Get_Widget
@@ -115,7 +117,8 @@ is
      -- SOURCE
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
-      return Tk_Button;
+      return Tk_Button with
+      Global => null;
      -- ****
 
      -- ****f* Button/Button.Flash
