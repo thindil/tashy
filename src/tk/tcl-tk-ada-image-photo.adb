@@ -20,7 +20,6 @@
 -- however invalidate any other reasons why the executable file might be
 -- covered by the GNU Public License.
 
-with Interfaces.C.Strings; use Interfaces.C.Strings;
 with Tcl.Ada;
 
 package body Tcl.Tk.Ada.Image.Photo is
@@ -58,70 +57,63 @@ package body Tcl.Tk.Ada.Image.Photo is
       end return;
    end Get_Widget;
 
-   procedure Execute_Image_Command
-     (Image: in Tk_Photo; command: in String; options: in String := "") is
-   begin
-      Tcl_Eval
-        (Image.Interp, Value(Image.Name) & " " & command & " " & options);
-   end Execute_Image_Command;
-
    procedure Blank(Image: in Tk_Photo) is
    begin
-      Execute_Image_Command(Image, "blank");
+      Execute_Widget_Command(Image, "blank");
    end Blank;
 
    procedure Copy(Source, Target: in Tk_Photo; Options: in String := "") is
    begin
-      Execute_Image_Command
-        (Target, "copy", Value(Source.Name) & " " & Options);
+      Execute_Widget_Command
+        (Target, "copy", Source & " " & Options);
    end Copy;
 
    function Data(Image: in Tk_Photo; Options: in String := "") return String is
    begin
-      Execute_Image_Command(Image, "data", Options);
+      Execute_Widget_Command(Image, "data", Options);
       return Tcl.Ada.Tcl_GetResult(Image.Interp);
    end Data;
 
    function Get(Image: in Tk_Photo; X, Y: in String) return String is
    begin
-      Execute_Image_Command(Image, "get", X & " " & Y);
+      Execute_Widget_Command(Image, "get", X & " " & Y);
       return Tcl.Ada.Tcl_GetResult(Image.Interp);
    end Get;
 
    procedure Put
      (Image: in Tk_Photo; Data: in String; Options: in String := "") is
    begin
-      Execute_Image_Command(Image, "put", Data & " " & Options);
+      Execute_Widget_Command(Image, "put", Data & " " & Options);
    end Put;
 
    procedure Read
      (Image: in Tk_Photo; FileName: in String; Options: in String := "") is
    begin
-      Execute_Image_Command(Image, "read", FileName & " " & Options);
+      Execute_Widget_Command(Image, "read", FileName & " " & Options);
    end Read;
 
    procedure Redither(Image: in Tk_Photo) is
    begin
-      Execute_Image_Command(Image, "redither");
+      Execute_Widget_Command(Image, "redither");
    end Redither;
 
    function Transparency_Get
      (Image: in Tk_Photo; X, Y: in String) return String is
    begin
-      Execute_Image_Command(Image, "transparency get", X & " " & Y);
+      Execute_Widget_Command(Image, "transparency get", X & " " & Y);
       return Tcl.Ada.Tcl_GetResult(Image.Interp);
    end Transparency_Get;
 
    procedure Transparency_Set(Image: in Tk_Photo; X, Y, Enable: in String) is
    begin
-      Execute_Image_Command
+      Execute_Widget_Command
         (Image, "transparency set", X & " " & Y & " " & Enable);
    end Transparency_Set;
 
    procedure Write
      (Image: in Tk_Photo; FileName: in String; Options: in String := "") is
    begin
-      Execute_Image_Command(Image, "write", "{" & FileName & "} " & Options);
+      Execute_Widget_Command(Image, "write", "{" & FileName & "} " & Options);
    end Write;
 
 end Tcl.Tk.Ada.Image.Photo;

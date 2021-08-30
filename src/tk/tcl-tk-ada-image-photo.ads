@@ -32,12 +32,11 @@ is
 
    -- ****t* Photo/Photo.Tk_Photo
    -- FUNCTION
-   -- This is a type used to store data of Photo image.
+   -- This is a non-abstract type derived directly from Tk_Widget.
+   -- Each of the derived widgets redefines the Create subprogram
+   -- in order to create the correct type of widget.
    -- SOURCE
-   type Tk_Photo is record
-      Name: C.Strings.chars_ptr;
-      Interp: Tcl_Interp;
-   end record;
+   type Tk_Photo is new Tk_Widget with private;
    -- ****
 
    -- ****f* Photo/Photo.Create_(function)
@@ -65,7 +64,7 @@ is
    function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) return Tk_Photo with
-      Pre => (pathName /= "");
+      Global => null;
       -- ****
 
       -- ****f* Photo/Create_(procedure)
@@ -98,7 +97,7 @@ is
    procedure Create
      (Widgt: out Tk_Photo; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) with
-      Pre => (pathName /= "");
+      Global => null;
       -- ****
 
      -- ****f* Photo/Photo.Get_Widget
@@ -118,7 +117,8 @@ is
      -- SOURCE
    function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
-      return Tk_Photo;
+      return Tk_Photo with
+      Global => null;
      -- ****
 
       -- ****f* Photo/Photo.Blank
@@ -193,7 +193,7 @@ is
    -- imageName get x y
    -- SOURCE
    function Get(Image: in Tk_Photo; X, Y: in String) return String with
-      Pre => X /= "" and Y /= "";
+      Pre'Class => X /= "" and Y /= "";
       -- ****
 
       -- ****f* Photo/Photo.Put
@@ -214,7 +214,7 @@ is
       -- SOURCE
    procedure Put
      (Image: in Tk_Photo; Data: in String; Options: in String := "") with
-      Pre => Data /= "";
+      Pre'Class => Data /= "";
       -- ****
 
       -- ****f* Photo/Photo.Read
@@ -236,7 +236,7 @@ is
       -- SOURCE
    procedure Read
      (Image: in Tk_Photo; FileName: in String; Options: in String := "") with
-      Pre => FileName /= "";
+      Pre'Class => FileName /= "";
       -- ****
 
       -- ****f* Photo/Photo.Redither
@@ -274,7 +274,7 @@ is
    -- SOURCE
    function Transparency_Get
      (Image: in Tk_Photo; X, Y: in String) return String with
-      Pre => X /= "" and Y /= "";
+      Pre'Class => X /= "" and Y /= "";
       -- ****
 
       -- ****f* Photo/Photo.Transparency_Set
@@ -295,7 +295,7 @@ is
       -- imageName transparency set x y enable
       -- SOURCE
    procedure Transparency_Set(Image: in Tk_Photo; X, Y, Enable: in String) with
-      Pre => X /= "" and Y /= "" and Enable in "true" | "false";
+      Pre'Class => X /= "" and Y /= "" and Enable in "true" | "false";
       -- ****
 
       -- ****f* Photo/Photo.Write
@@ -316,7 +316,11 @@ is
       -- SOURCE
    procedure Write
      (Image: in Tk_Photo; FileName: in String; Options: in String := "") with
-      Pre => FileName /= "";
+      Pre'Class => FileName /= "";
       -- ****
+
+private
+
+   type Tk_Photo is new Tk_Widget with null record;
 
 end Tcl.Tk.Ada.Image.Photo;
