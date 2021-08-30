@@ -27,16 +27,16 @@
 package Tcl.Tk.Ada.Image.Bitmap with
    SPARK_Mode
 is
+   pragma Elaborate_Body;
 -- ****
 
    -- ****t* Bitmap/Bitmap.Tk_Bitmap
    -- FUNCTION
-   -- This is a type used to store data of Bitmap image.
+   -- This is a non-abstract type derived directly from Tk_Widget.
+   -- Each of the derived widgets redefines the Create subprogram
+   -- in order to create the correct type of widget.
    -- SOURCE
-   type Tk_Bitmap is record
-      Name: C.Strings.chars_ptr;
-      Interp: Tcl_Interp;
-   end record;
+   type Tk_Bitmap is new Tk_Widget with private;
    -- ****
 
    -- ****f* Bitmap/Bitmap.Create_(function)
@@ -64,7 +64,7 @@ is
    function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) return Tk_Bitmap with
-      Pre => (pathName /= "");
+      Global => null;
       -- ****
 
       -- ****f* Bitmap/Bitmap.Create_(procedure)
@@ -97,7 +97,7 @@ is
    procedure Create
      (Widgt: out Tk_Bitmap; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) with
-      Pre => (pathName /= "");
+      Global => null;
       -- ****
 
      -- ****f* Bitmap/Bitmap.Get_Widget
@@ -117,7 +117,12 @@ is
      -- SOURCE
    function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
-      return Tk_Bitmap;
+      return Tk_Bitmap with
+      Global => null;
      -- ****
+
+private
+
+   type Tk_Bitmap is new Tk_Widget with null record;
 
 end Tcl.Tk.Ada.Image.Bitmap;
