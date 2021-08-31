@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -31,7 +31,10 @@
 -- FUNCTION
 -- Provides code for manipulate Tk widget SpinBox
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
+package Tcl.Tk.Ada.Widgets.Tentry.SpinBox with
+   SPARK_Mode
+is
+   pragma Elaborate_Body;
 -- ****
 
    -- ****t* SpinBox/SpinBox.Tk_SpinBox
@@ -68,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
    overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) return Tk_SpinBox with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* SpinBox/SpinBox.Create_(procedure)
@@ -101,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
    overriding procedure Create
      (Widgt: out Tk_SpinBox; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* SpinBox/SpinBox.Identify
@@ -125,7 +128,7 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
      -- SOURCE
    function Identify
      (SpinBoxWidget: in Tk_SpinBox; X, Y: in String) return String with
-      Pre => X /= "" and Y /= "";
+      Pre'Class => X /= "" and Y /= "";
       -- ****
 
       -- ****f* SpinBox/SpinBox.Invoke
@@ -145,7 +148,7 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
       -- SpinBoxWidget invoke element
       -- SOURCE
    procedure Invoke(SpinBoxWidget: in Tk_SpinBox; Element: in String) with
-      Pre => Element in "buttondown" | "buttonup";
+      Pre'Class => Element in "buttondown" | "buttonup";
       -- ****
 
       -- ****f* SpinBox/SpinBox.Selection_Element_(procedure)
@@ -167,7 +170,7 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
       -- SOURCE
    procedure Selection_Element
      (SpinBoxWidget: in Tk_SpinBox; Element: in String) with
-      Pre => Element in "buttondown" | "buttonup" | "entry" | "none";
+      Pre'Class => Element in "buttondown" | "buttonup" | "entry" | "none";
       -- ****
 
       -- ****f* SpinBox/SpinBox.Selection_Element_(function)
@@ -208,7 +211,7 @@ package Tcl.Tk.Ada.Widgets.Tentry.SpinBox is
    -- SpinBox.Set_(function)
    -- SOURCE
    procedure Set(SpinBoxWidget: in Tk_SpinBox; Value: in String) with
-      Pre => Value /= "";
+      Pre'Class => Value /= "";
       -- ****
 
       -- ****f* SpinBox/SpinBox.Set_(function)

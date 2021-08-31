@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -17,7 +17,9 @@
 -- FUNCTION
 -- Provides code for manipulate main window widget
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.Toplevel.MainWindow is
+package Tcl.Tk.Ada.Widgets.Toplevel.MainWindow with
+   SPARK_Mode
+is
 -- ****
 
    -- ****f* MainWindow/MainWindow.Get_Main_Window

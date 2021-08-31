@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -24,7 +24,10 @@
 -- FUNCTION
 -- Provides code for manipulate Tk widget Text
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.Text is
+package Tcl.Tk.Ada.Widgets.Text with
+   SPARK_Mode
+is
+   pragma Elaborate_Body;
 -- ****
 
    -- ****t* Text/Text.Tk_Text
@@ -61,7 +64,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) return Tk_Text with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* Text/Text.Create_(procedure)
@@ -94,7 +97,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    overriding procedure Create
      (Widgt: out Tk_Text; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* Text/Text.Get_Widget
@@ -114,7 +117,8 @@ package Tcl.Tk.Ada.Widgets.Text is
      -- SOURCE
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
-      return Tk_Text;
+      return Tk_Text with
+      Global => null;
      -- ****
 
      -- ****f* Text/Text.BBox
@@ -137,7 +141,7 @@ package Tcl.Tk.Ada.Widgets.Text is
      -- TextWidget bbox index
      -- SOURCE
    function BBox(TextWidget: in Tk_Text; Index: in String) return String with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
       -- ****f* Text/Text.Compare
@@ -162,7 +166,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- SOURCE
    function Compare
      (TextWidget: in Tk_Text; Index1, Op, Index2: in String) return String with
-      Pre => Index1 /= "" and Op in "<" | "<=" | "==" | ">=" | ">" | "!=" and
+      Pre'Class => Index1 /= "" and Op in "<" | "<=" | "==" | ">=" | ">" | "!=" and
       Index2 /= "";
       -- ****
 
@@ -196,7 +200,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    function Count
      (TextWidget: in Tk_Text; Options, Index1, Index2: in String)
       return String with
-      Pre => Options /= "" and Index1 /= "" and Index2 /= "";
+      Pre'Class => Options /= "" and Index1 /= "" and Index2 /= "";
       -- ****
 
       -- ****f* Text/Text.Debug_(procedure)
@@ -217,7 +221,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- Text.Debug_(function)
       -- SOURCE
    procedure Debug(TextWidget: in Tk_Text; Enable: in String) with
-      Pre => Enable in "true" | "false";
+      Pre'Class => Enable in "true" | "false";
       -- ****
 
       -- ****f* Text/Text.Debug_(function)
@@ -262,7 +266,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    procedure Delete
      (TextWidget: in Tk_Text; StartIndex: in String;
       Indexes: in String := "") with
-      Pre => StartIndex /= "";
+      Pre'Class => StartIndex /= "";
       -- ****
 
       -- ****f* Text/Text.DLineInfo
@@ -296,7 +300,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- SOURCE
    function DLineInfo
      (TextWidget: in Tk_Text; Index: in String) return String with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
       -- ****f* Text/Text.Dump
@@ -327,7 +331,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    function Dump
      (TextWidget: in Tk_Text; Switches: in String := "-all"; Index1: in String;
       Index2: in String := "") return String with
-      Pre => Index1 /= "";
+      Pre'Class => Index1 /= "";
       -- ****
 
       -- ****f* Text/Text.Edit_CanRedo
@@ -384,7 +388,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- Text.Edit_Modified_(function)
    -- SOURCE
    procedure Edit_Modified(TextWidget: in Tk_Text; Value: in String) with
-      Pre => Value in "0" | "1" | "true" | "false";
+      Pre'Class => Value in "0" | "1" | "true" | "false";
       -- ****
 
       -- ****f* Text/Text.Edit_Modified_(function)
@@ -499,7 +503,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- TextWidget get options
    -- SOURCE
    function Get(TextWidget: in Tk_Text; Options: in String) return String with
-      Pre => Options /= "";
+      Pre'Class => Options /= "";
       -- ****
 
       -- ****f* Text/Text.Image_Cget
@@ -523,7 +527,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- SOURCE
    function Image_Cget
      (TextWidget: in Tk_Text; Index, Option: in String) return String with
-      Pre => Index /= "" and Option /= "";
+      Pre'Class => Index /= "" and Option /= "";
       -- ****
 
       -- ****f* Text/Text.Image_Configure_(procedure)
@@ -546,7 +550,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- SOURCE
    procedure Image_Configure
      (TextWidget: in Tk_Text; Index, Options: in String) with
-      Pre => Index /= "" and Options /= "";
+      Pre'Class => Index /= "" and Options /= "";
       -- ****
 
       -- ****f* Text/Text.Image_Configure_(function)
@@ -573,7 +577,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    function Image_Configure
      (TextWidget: in Tk_Text; Index: in String; Option: in String := "")
       return String with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
       -- ****f* Text/Text.Image_Create
@@ -596,7 +600,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    function Image_Create
      (TextWidget: in Tk_Text; Index: in String; Options: in String := "")
       return String with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
       -- ****f* Text/Text.Image_Names
@@ -636,7 +640,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- SOURCE
    function Index
      (TextWidget: in Tk_Text; TextIndex: in String) return String with
-      Pre => TextIndex /= "";
+      Pre'Class => TextIndex /= "";
       -- ****
 
       -- ****f* Text/Text.Insert
@@ -657,7 +661,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- TextWidget insert index text
       -- SOURCE
    procedure Insert(TextWidget: in Tk_Text; Index, Text: in String) with
-      Pre => Index /= "" and Text /= "";
+      Pre'Class => Index /= "" and Text /= "";
       -- ****
 
       -- ****f* Text/Text.Mark_Gravity_(procedure)
@@ -680,7 +684,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- SOURCE
    procedure Mark_Gravity
      (TextWidget: in Tk_Text; MarkName, Direction: in String) with
-      Pre => MarkName /= "" and Direction in "left" | "right";
+      Pre'Class => MarkName /= "" and Direction in "left" | "right";
       -- ****
 
       -- ****f* Text/Text.Mark_Gravity_(function)
@@ -704,7 +708,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- SOURCE
    function Mark_Gravity
      (TextWidget: in Tk_Text; MarkName: in String) return String with
-      Pre => MarkName /= "";
+      Pre'Class => MarkName /= "";
       -- ****
 
       -- ****f* Text/Text.Mark_Names
@@ -746,7 +750,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- SOURCE
    function Mark_Next
      (TextWidget: in Tk_Text; Index: in String) return String with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
       -- ****f* Text/Text.Mark_Previous
@@ -771,7 +775,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- SOURCE
    function Mark_Previous
      (TextWidget: in Tk_Text; Index: in String) return String with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
       -- ****f* Text/Text.Mark_Set
@@ -794,7 +798,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- TextWidget mark set markName index
       -- SOURCE
    procedure Mark_Set(TextWidget: in Tk_Text; MarkName, Index: in String) with
-      Pre => MarkName /= "" and Index /= "";
+      Pre'Class => MarkName /= "" and Index /= "";
       -- ****
 
       -- ****f* Text/Text.Mark_Unset
@@ -813,7 +817,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- pathName mark unset markName
       -- SOURCE
    procedure Mark_Unset(TextWidget: in Tk_Text; MarkName: in String) with
-      Pre => MarkName /= "";
+      Pre'Class => MarkName /= "";
       -- ****
 
       -- ****f* Text/Text.Peer_Create
@@ -835,7 +839,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    procedure Peer_Create
      (TextWidget: in Tk_Text; NewPathName: in String;
       Options: in String := "") with
-      Pre => NewPathName /= "";
+      Pre'Class => NewPathName /= "";
       -- ****
 
       -- ****f* Text/Text.Peer_Names
@@ -894,7 +898,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- SOURCE
    procedure Replace
      (TextWidget: in Tk_Text; Index1, Index2, Chars: in String) with
-      Pre => Index1 /= "" and Index2 /= "" and Chars /= "";
+      Pre'Class => Index1 /= "" and Index2 /= "" and Chars /= "";
       -- ****
 
       -- ****f* Text/Text.Scan_Mark
@@ -915,7 +919,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- Text.Scan_DragTo
       -- SOURCE
    procedure Scan_Mark(TextWidget: in Tk_Text; X, Y: in String) with
-      Pre => X /= "" and Y /= "";
+      Pre'Class => X /= "" and Y /= "";
       -- ****
 
       -- ****f* Text/Text.Scan_DragTo
@@ -938,7 +942,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- Text.Scan_Mark
       -- SOURCE
    procedure Scan_DragTo(TextWidget: in Tk_Text; X, Y: in String) with
-      Pre => X /= "" and Y /= "";
+      Pre'Class => X /= "" and Y /= "";
       -- ****
 
       -- ****f* Text/Text.Search
@@ -964,7 +968,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    function Search
      (TextWidget: in Tk_Text; Switches: in String := "";
       Pattern, Index: in String; StopIndex: in String := "") return String with
-      Pre => Pattern /= "" and Index /= "";
+      Pre'Class => Pattern /= "" and Index /= "";
       -- ****
 
       -- ****f* Text/Text.See
@@ -982,7 +986,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- TextWidget see index
       -- SOURCE
    procedure See(TextWidget: in Tk_Text; Index: in String) with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
       -- ****f* Text/Text.Sync
@@ -1020,7 +1024,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- Text.Sync
    -- SOURCE
    procedure Sync_Command(TextWidget: in Tk_Text; Command: in String) with
-      Pre => Command /= "";
+      Pre'Class => Command /= "";
       -- ****
 
       -- ****f* Text/Text.Tag_Add
@@ -1044,7 +1048,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    procedure Tag_Add
      (TextWidget: in Tk_Text; TagName, StartIndex: in String;
       Indexes: in String := "") with
-      Pre => TagName /= "" and StartIndex /= "";
+      Pre'Class => TagName /= "" and StartIndex /= "";
       -- ****
 
       -- ****f* Text/Text.Tag_Bind_(procedure)
@@ -1067,7 +1071,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- SOURCE
    procedure Tag_Bind
      (TextWidget: in Tk_Text; TagName, Sequence, Script: in String) with
-      Pre => TagName /= "" and Sequence /= "" and Script /= "";
+      Pre'Class => TagName /= "" and Sequence /= "" and Script /= "";
       -- ****
 
       -- ****f* Text/Text.Tag_Bind_(function)
@@ -1094,7 +1098,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    function Tag_Bind
      (TextWidget: in Tk_Text; TagName: in String; Sequence: in String := "")
       return String with
-      Pre => TagName /= "";
+      Pre'Class => TagName /= "";
       -- ****
 
       -- ****f* Text/Text.Tag_Cget
@@ -1119,7 +1123,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- SOURCE
    function Tag_Cget
      (TextWidget: in Tk_Text; TagName, Option: in String) return String with
-      Pre => TagName /= "" and Option /= "";
+      Pre'Class => TagName /= "" and Option /= "";
       -- ****
 
       -- ****f* Text/Text.Tag_Configure_(procedure)
@@ -1141,7 +1145,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- SOURCE
    procedure Tag_Configure
      (TextWidget: in Tk_Text; TagName, Options: in String) with
-      Pre => TagName /= "" and Options /= "";
+      Pre'Class => TagName /= "" and Options /= "";
       -- ****
 
       -- ****f* Text/Text.Tag_Configure_(function)
@@ -1168,7 +1172,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    function Tag_Configure
      (TextWidget: in Tk_Text; TagName: in String; Option: in String := "")
       return String with
-      Pre => TagName /= "";
+      Pre'Class => TagName /= "";
       -- ****
 
       -- ****f* Text/Text.Tag_Delete
@@ -1187,7 +1191,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- TextWidget tag delete tagName
       -- SOURCE
    procedure Tag_Delete(TextWidget: in Tk_Text; TagName: in String) with
-      Pre => TagName /= "";
+      Pre'Class => TagName /= "";
       -- ****
 
       -- ****f* Text/Text.Tag_Lower
@@ -1211,7 +1215,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    procedure Tag_Lower
      (TextWidget: in Tk_Text; TagName: in String;
       BelowThis: in String := "") with
-      Pre => TagName /= "";
+      Pre'Class => TagName /= "";
       -- ****
 
       -- ****f* Text/Text.Tag_Names
@@ -1261,7 +1265,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    function Tag_NextRange
      (TextWidget: in Tk_Text; TagName, Index1: in String;
       Index2: in String := "") return String with
-      Pre => TagName /= "" and Index1 /= "";
+      Pre'Class => TagName /= "" and Index1 /= "";
       -- ****
 
       -- ****f* Text/Text.Tag_PrevRange
@@ -1290,7 +1294,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    function Tag_PrevRange
      (TextWidget: in Tk_Text; TagName, Index1: in String;
       Index2: in String := "") return String with
-      Pre => TagName /= "" and Index1 /= "";
+      Pre'Class => TagName /= "" and Index1 /= "";
       -- ****
 
       -- ****f* Text/Text.Tag_Raise
@@ -1314,7 +1318,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    procedure Tag_Raise
      (TextWidget: in Tk_Text; TagName: in String;
       AboveThis: in String := "") with
-      Pre => TagName /= "";
+      Pre'Class => TagName /= "";
       -- ****
 
       -- ****f* Text/Text.Tag_Ranges
@@ -1338,7 +1342,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- SOURCE
    function Tag_Ranges
      (TextWidget: in Tk_Text; TagName: in String) return String with
-      Pre => TagName /= "";
+      Pre'Class => TagName /= "";
       -- ****
 
       -- ****f* Text/Text.Tag_Remove
@@ -1365,7 +1369,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    procedure Tag_Remove
      (TextWidget: in Tk_Text; TagName, Index1: in String;
       Index2: in String := "") with
-      Pre => TagName /= "" and Index1 /= "";
+      Pre'Class => TagName /= "" and Index1 /= "";
       -- ****
 
       -- ****f* Text/Text.Window_Cget
@@ -1389,7 +1393,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- SOURCE
    function Window_Cget
      (TextWidget: in Tk_Text; Index, Option: in String) return String with
-      Pre => Index /= "" and Option /= "";
+      Pre'Class => Index /= "" and Option /= "";
       -- ****
 
       -- ****f* Text/Text.Window_Configure_(procedure)
@@ -1412,7 +1416,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- SOURCE
    procedure Window_Configure
      (TextWidget: in Tk_Text; Index, Options: in String) with
-      Pre => Index /= "" and Options /= "";
+      Pre'Class => Index /= "" and Options /= "";
       -- ****
 
       -- ****f* Text/Text.Window_Configure_(function)
@@ -1439,7 +1443,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    function Window_Configure
      (TextWidget: in Tk_Text; Index: in String; Option: in String := "")
       return String with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
       -- ****f* Text/Text.Window_Create
@@ -1462,7 +1466,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    function Window_Create
      (TextWidget: in Tk_Text; Index: in String; Options: in String := "")
       return String with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
       -- ****f* Text/Text.Window_Names
@@ -1524,7 +1528,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- Text.Yview_Move_To
    -- SOURCE
    procedure Xview_Move_To(TextWidget: in Tk_Text; Fraction: in String) with
-      Pre => Fraction /= "";
+      Pre'Class => Fraction /= "";
       -- ****
 
       -- ****f* Text/Text.Xview_Scroll
@@ -1546,7 +1550,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- Text.Yview_Scroll
       -- SOURCE
    procedure Xview_Scroll(TextWidget: in Tk_Text; Number, What: in String) with
-      Pre => Number /= "" and (What = "units" or What = "pages");
+      Pre'Class => Number /= "" and (What = "units" or What = "pages");
       -- ****
 
       -- ****f* Text/Text.YView
@@ -1590,7 +1594,7 @@ package Tcl.Tk.Ada.Widgets.Text is
    -- Text.Xview_Move_To
    -- SOURCE
    procedure Yview_Move_To(TextWidget: in Tk_Text; Fraction: in String) with
-      Pre => Fraction /= "";
+      Pre'Class => Fraction /= "";
       -- ****
 
       -- ****f* Text/Text.Yview_Scroll
@@ -1612,7 +1616,7 @@ package Tcl.Tk.Ada.Widgets.Text is
       -- Text.Xview_Scroll
       -- SOURCE
    procedure Yview_Scroll(TextWidget: in Tk_Text; Number, What: in String) with
-      Pre => Number /= "" and (What = "units" or What = "pages");
+      Pre'Class => Number /= "" and (What = "units" or What = "pages");
       -- ****
 
 private

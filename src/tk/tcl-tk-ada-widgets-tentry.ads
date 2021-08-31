@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- Tashy is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -24,7 +24,10 @@
 -- FUNCTION
 -- Provides code for manipulate Tk widget Entry
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.TEntry is
+package Tcl.Tk.Ada.Widgets.TEntry with
+   SPARK_Mode
+is
+   pragma Elaborate_Body;
 -- ****
 
    -- ****t* TEntry/TEntry.Tk_Entry
@@ -60,7 +63,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
    overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) return Tk_Entry with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* TEntry/TEntry.Create_(procedure)
@@ -92,7 +95,7 @@ package Tcl.Tk.Ada.Widgets.TEntry is
    overriding procedure Create
      (Widgt: out Tk_Entry; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* TEntry/TEntry.Get_Widget
@@ -112,7 +115,8 @@ package Tcl.Tk.Ada.Widgets.TEntry is
      -- SOURCE
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
-      return Tk_Entry;
+      return Tk_Entry with
+      Global => null;
      -- ****
 
      -- ****f* TEntry/TEntry.BBox
