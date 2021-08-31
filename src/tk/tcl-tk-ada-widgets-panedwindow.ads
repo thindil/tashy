@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -31,7 +31,10 @@
 -- FUNCTION
 -- Provides code for manipulate Tk widget PanedWindow
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.PanedWindow is
+package Tcl.Tk.Ada.Widgets.PanedWindow with
+   SPARK_Mode
+is
+   pragma Elaborate_Body;
 -- ****
 
    -- ****t* PanedWindow/PanedWindow.Tk_Paned_Window
@@ -68,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) return Tk_PanedWindow with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* PanedWindow/PanedWindow.Create_(procedure)
@@ -101,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    overriding procedure Create
      (Widgt: out Tk_PanedWindow; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* PanedWindow/PanedWindow.Get_Widget
@@ -121,7 +124,8 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
      -- SOURCE
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
-      return Tk_PanedWindow;
+      return Tk_PanedWindow with
+      Global => null;
      -- ****
 
      -- ****f* PanedWindow/PanedWindow.Add
@@ -185,7 +189,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    -- SOURCE
    function Identify
      (Paned: in Tk_PanedWindow; X, Y: in String) return String with
-      Pre => X /= "" and Y /= "";
+      Pre'Class => X /= "" and Y /= "";
       -- ****
 
       -- ****f*  PanedWindow/PanedWindow.Pane_Cget
@@ -210,7 +214,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- SOURCE
    function Pane_Cget
      (Paned: in Tk_PanedWindow; Window, Option: in String) return String with
-      Pre => Window /= "" and Option /= "";
+      Pre'Class => Window /= "" and Option /= "";
       -- ****
 
       -- ****f* PanedWindow/PanedWindow.Pane_Configure_(procedure)
@@ -234,7 +238,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- SOURCE
    procedure Pane_Configure
      (Paned: in Tk_PanedWindow; Window, Options: in String) with
-      Pre => Window /= "" and Options /= "";
+      Pre'Class => Window /= "" and Options /= "";
       -- ****
 
       -- ****f* PanedWindow/PanedWindow.Pane_Configure_(function)
@@ -264,7 +268,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    function Pane_Configure
      (Paned: in Tk_PanedWindow; Window: in String; Options: in String := "")
       return String with
-      Pre => Window /= "";
+      Pre'Class => Window /= "";
       -- ****
 
       -- ****f* PanedWindow/PanedWindow.Panes
@@ -335,7 +339,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
    -- Paned proxy place x y
    -- SOURCE
    procedure Proxy_Place(Paned: in Tk_PanedWindow; X, Y: in String) with
-      Pre => X /= "" and Y /= "";
+      Pre'Class => X /= "" and Y /= "";
       -- ****
 
       -- ****f* PanedWindow/PanedWindow.Sash_Coord
@@ -356,7 +360,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- SOURCE
    function Sash_Coord
      (Paned: in Tk_PanedWindow; Index: in String) return String with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
       -- ****f* PanedWindow/PanedWindow.Sash_DragTo
@@ -379,7 +383,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- PanedWindow.Sash_Mark
       -- SOURCE
    procedure Sash_DragTo(Paned: in Tk_PanedWindow; Index, X, Y: in String) with
-      Pre => Index /= "" and X /= "" and Y /= "";
+      Pre'Class => Index /= "" and X /= "" and Y /= "";
       -- ****
 
       -- ****f* PanedWindow/PanedWindow.Sash_Mark
@@ -403,7 +407,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- PanedWindow.Sash_DragTo
       -- SOURCE
    procedure Sash_Mark(Paned: in Tk_PanedWindow; Index, X, Y: in String) with
-      Pre => Index /= "" and X /= "" and Y /= "";
+      Pre'Class => Index /= "" and X /= "" and Y /= "";
       -- ****
 
       -- ****f* PanedWindow/PanedWindow.Sash_Place
@@ -423,7 +427,7 @@ package Tcl.Tk.Ada.Widgets.PanedWindow is
       -- Paned sash place index x y
       -- SOURCE
    procedure Sash_Place(Paned: in Tk_PanedWindow; Index, X, Y: in String) with
-      Pre => Index /= "" and X /= "" and Y /= "";
+      Pre'Class => Index /= "" and X /= "" and Y /= "";
       -- ****
 
 private

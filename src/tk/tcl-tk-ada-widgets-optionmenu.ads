@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -24,7 +24,10 @@
 -- FUNCTION
 -- Provides code for manipulate Tk widget OptionMenu
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.OptionMenu is
+package Tcl.Tk.Ada.Widgets.OptionMenu with
+   SPARK_Mode
+is
+   pragma Elaborate_Body;
 -- ****
 
    -- ****t* OptionMenu/OptionMenu.Tk_OptionMenu
@@ -62,7 +65,7 @@ package Tcl.Tk.Ada.Widgets.OptionMenu is
    overriding function Create
      (pathName, options: in String; Interp: in Tcl_Interp := Null_Interp)
       return Tk_OptionMenu with
-      Pre => pathName /= "" and options /= "";
+      Global => null;
      -- ****
 
      -- ****f* OptionMenu/OptionMenu.Create_(procedure)
@@ -96,7 +99,7 @@ package Tcl.Tk.Ada.Widgets.OptionMenu is
    overriding procedure Create
      (Widgt: out Tk_OptionMenu; pathName, options: in String;
       Interp: in Tcl_Interp := Null_Interp) with
-      Pre => pathName /= "" and options /= "";
+      Global => null;
       -- ****
 
      -- ****f* OptionMenu/OptionMenu.Get_Widget
@@ -116,7 +119,8 @@ package Tcl.Tk.Ada.Widgets.OptionMenu is
      -- SOURCE
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
-      return Tk_OptionMenu;
+      return Tk_OptionMenu with
+      Global => null;
      -- ****
 
 private

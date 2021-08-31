@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- Tashy is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -24,7 +24,10 @@
 -- FUNCTION
 -- Provides code for manipulate Tk widget Message
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.Message is
+package Tcl.Tk.Ada.Widgets.Message with
+   SPARK_Mode
+is
+   pragma Elaborate_Body;
 -- ****
 
    -- ****t* Message/Message.Tk_Message
@@ -61,7 +64,7 @@ package Tcl.Tk.Ada.Widgets.Message is
    overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) return Tk_Message with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* Message/Message.Create_(procedure)
@@ -94,7 +97,7 @@ package Tcl.Tk.Ada.Widgets.Message is
    overriding procedure Create
      (Widgt: out Tk_Message; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) with
-      Pre => pathName /= "";
+      Global => null;
       -- ****
 
      -- ****f* Message/Message.Get_Widget
@@ -114,7 +117,8 @@ package Tcl.Tk.Ada.Widgets.Message is
      -- SOURCE
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
-      return Tk_Message;
+      return Tk_Message with
+      Global => null;
      -- ****
 
 private

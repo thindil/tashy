@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -31,7 +31,10 @@
 -- FUNCTION
 -- Provides code for manipulate Tk widget MenuButton
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.MenuButton is
+package Tcl.Tk.Ada.Widgets.MenuButton with
+   SPARK_Mode
+is
+   pragma Elaborate_Body;
 -- ****
 
    -- ****t* MenuButton/MenuButton.Tk_MenuButton
@@ -68,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.MenuButton is
    overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) return Tk_MenuButton with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* MenuButton/MenuButton.Create_(procedure)
@@ -101,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.MenuButton is
    overriding procedure Create
      (Widgt: out Tk_MenuButton; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) with
-      Pre => pathName /= "";
+      Global => null;
       -- ****
 
      -- ****f* MenuButton/MenuButton.Get_Widget
@@ -121,7 +124,8 @@ package Tcl.Tk.Ada.Widgets.MenuButton is
      -- SOURCE
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
-      return Tk_MenuButton;
+      return Tk_MenuButton with
+      Global => null;
      -- ****
 
 private

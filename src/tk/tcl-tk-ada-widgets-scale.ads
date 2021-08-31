@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -31,7 +31,10 @@
 -- FUNCTION
 -- Provides code for manipulate Tk widget Scale
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.Scale is
+package Tcl.Tk.Ada.Widgets.Scale with
+   SPARK_Mode
+is
+   pragma Elaborate_Body;
 -- ****
 
    -- ****t* TkScale/TkScale.Tk_Scale
@@ -68,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.Scale is
    overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) return Tk_Scale with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* TkScale/TkScale.Create_(procedure)
@@ -101,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.Scale is
    overriding procedure Create
      (Widgt: out Tk_Scale; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* TkScale/TkScale.Get_Widget
@@ -121,7 +124,8 @@ package Tcl.Tk.Ada.Widgets.Scale is
      -- SOURCE
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
-      return Tk_Scale;
+      return Tk_Scale with
+      Global => null;
      -- ****
 
      -- ****f* TkScale/TkScale.Coords
@@ -187,7 +191,7 @@ package Tcl.Tk.Ada.Widgets.Scale is
    -- TkScale.Get_(current_value)
    -- SOURCE
    function Get(ScaleWidget: in Tk_Scale; X, Y: in String) return String with
-      Pre => X /= "" and Y /= "";
+      Pre'Class => X /= "" and Y /= "";
       -- ****
 
       -- ****f* TkScale/TkScale.Identify
@@ -211,7 +215,7 @@ package Tcl.Tk.Ada.Widgets.Scale is
       -- SOURCE
    function Identify
      (ScaleWidget: in Tk_Scale; X, Y: in String) return String with
-      Pre => X /= "" and Y /= "";
+      Pre'Class => X /= "" and Y /= "";
       -- ****
 
       -- ****f* TkScale/TkScale.Set
@@ -229,7 +233,7 @@ package Tcl.Tk.Ada.Widgets.Scale is
       -- ScaleWidget set value
       -- SOURCE
    procedure Set(ScaleWidget: in Tk_Scale; Value: in String) with
-      Pre => Value /= "";
+      Pre'Class => Value /= "";
       -- ****
 
 private
