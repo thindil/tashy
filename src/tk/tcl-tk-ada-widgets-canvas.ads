@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -1085,7 +1085,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- SOURCE
    procedure Yview_Scroll
      (CanvasWidget: in Tk_Canvas; Number, What: in String) with
-      Pre => Number /= "" and (What = "units" or What = "pages");
+      Pre'Class => Number /= "" and (What = "units" or What = "pages");
       -- ****
 
 private

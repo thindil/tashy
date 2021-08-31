@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- Tashy is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -24,7 +24,10 @@
 -- FUNCTION
 -- Provides code for manipulate Tk widget Menu
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.Menu is
+package Tcl.Tk.Ada.Widgets.Menu with
+   SPARK_Mode
+is
+   pragma Elaborate_Body;
 -- ****
 
    -- ****t* Menu/Menu.Tk_Menu
@@ -61,7 +64,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
    overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) return Tk_Menu with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* Menu/Menu.Create_(procedure)
@@ -94,7 +97,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
    overriding procedure Create
      (Widgt: out Tk_Menu; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* Menu/Menu.Get_Widget
@@ -114,7 +117,8 @@ package Tcl.Tk.Ada.Widgets.Menu is
      -- SOURCE
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
-      return Tk_Menu;
+      return Tk_Menu with
+      Global => null;
      -- ****
 
      -- ****f* Menu/Menu.Activate
@@ -199,7 +203,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
    procedure Delete
      (MenuWidget: in Tk_Menu; StartIndex: in String;
       EndIndex: in String := "") with
-      Pre => StartIndex /= "";
+      Pre'Class => StartIndex /= "";
       -- ****
 
       -- ****f* Menu/Menu.Entry_Cget
@@ -224,7 +228,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- SOURCE
    function Entry_Cget
      (MenuWidget: in Tk_Menu; Index, Option: in String) return String with
-      Pre => Index /= "" and Option /= "";
+      Pre'Class => Index /= "" and Option /= "";
       -- ****
 
       -- ****f* Menu/Menu.Entry_Configure_(procedure)
@@ -246,7 +250,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- SOURCE
    procedure Entry_Configure
      (MenuWidget: in Tk_Menu; Index, Options: in String) with
-      Pre => Index /= "" and Options /= "";
+      Pre'Class => Index /= "" and Options /= "";
       -- ****
 
       -- ****f* Menu/Menu.Entry_Configure_(function)
@@ -271,7 +275,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- SOURCE
    function Entry_Configure
      (MenuWidget: in Tk_Menu; Index: in String) return String with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
       -- ****f* Menu/Menu.Index
@@ -293,7 +297,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- MenuWidget index index
       -- SOURCE
    function Index(MenuWidget: in Tk_Menu; Index: in String) return String with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
       -- ****f* Menu/Menu.Insert
@@ -339,7 +343,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- MenuWidget invoke index
       -- SOURCE
    function Invoke(MenuWidget: in Tk_Menu; Index: in String) return String with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
       -- ****f* Menu/Menu.Post_(procedure)
@@ -362,7 +366,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- Menu.Post_(function)
       -- SOURCE
    procedure Post(MenuWidget: in Tk_Menu; X, Y: in String) with
-      Pre => X /= "" and Y /= "";
+      Pre'Class => X /= "" and Y /= "";
       -- ****
 
       -- ****f* Menu/Menu.Post_(function)
@@ -389,7 +393,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- Menu.Post_(procedure)
       -- SOURCE
    function Post(MenuWidget: in Tk_Menu; X, Y: in String) return String with
-      Pre => X /= "" and Y /= "";
+      Pre'Class => X /= "" and Y /= "";
       -- ****
 
       -- ****f* Menu/Menu.PostCascade
@@ -408,7 +412,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- MenuWidget postcascade index
       -- SOURCE
    procedure PostCascade(MenuWidget: in Tk_Menu; Index: in String) with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
       -- ****f* Menu/Menu.Menu_Type
@@ -429,7 +433,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- SOURCE
    function Menu_Type
      (MenuWidget: in Tk_Menu; Index: in String) return String with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
       -- ****f* Menu/Menu.Tk_Popup
@@ -452,7 +456,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- SOURCE
    procedure Tk_Popup
      (MenuWidget: in Tk_Menu; X, Y: in String; MenuEntry: in String := "") with
-      Pre => X /= "" and Y /= "";
+      Pre'Class => X /= "" and Y /= "";
       -- ****
 
       -- ****f* Menu/Menu.Unpost
@@ -495,7 +499,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
    -- SOURCE
    function XPosition
      (MenuWidget: in Tk_Menu; Index: in String) return String with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
       -- ****f* Menu/Menu.YPosition
@@ -520,7 +524,7 @@ package Tcl.Tk.Ada.Widgets.Menu is
       -- SOURCE
    function YPosition
      (MenuWidget: in Tk_Menu; Index: in String) return String with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
 private

@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -24,7 +24,10 @@
 -- FUNCTION
 -- Provides code for manipulate Tk widget ListBox
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.ListBox is
+package Tcl.Tk.Ada.Widgets.ListBox with
+   SPARK_Mode
+is
+   pragma Elaborate_Body;
 -- ****
 
    -- ****t* ListBox/ListBox.Tk_ListBox
@@ -61,7 +64,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) return Tk_ListBox with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* ListBox/ListBox.Create_(procedure)
@@ -94,7 +97,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    overriding procedure Create
      (Widgt: out Tk_ListBox; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* ListBox/ListBox.Get_Widget
@@ -114,7 +117,8 @@ package Tcl.Tk.Ada.Widgets.ListBox is
      -- SOURCE
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
-      return Tk_ListBox;
+      return Tk_ListBox with
+      Global => null;
      -- ****
 
      -- ****f* ListBox/ListBox.Activate
@@ -132,7 +136,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
      -- ListboxWidget activate index
      -- SOURCE
    procedure Activate(ListboxWidget: in Tk_ListBox; Index: in String) with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
       -- ****f* ListBox/ListBox.BBox
@@ -157,7 +161,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- SOURCE
    function BBox
      (ListboxWidget: in Tk_ListBox; Index: in String) return String with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
       -- ****f* ListBox/ListBox.CurSelection
@@ -198,7 +202,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    procedure Delete
      (ListboxWidget: in Tk_ListBox; First: in String;
       Last: in String := "") with
-      Pre => First /= "";
+      Pre'Class => First /= "";
       -- ****
 
       -- ****f* ListBox/ListBox.Get
@@ -223,7 +227,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    function Get
      (ListboxWidget: in Tk_ListBox; First: in String; Last: in String := "")
       return String with
-      Pre => First /= "";
+      Pre'Class => First /= "";
       -- ****
 
       -- ****f* ListBox/ListBox.Index
@@ -245,7 +249,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- SOURCE
    function Index
      (ListboxWidget: in Tk_ListBox; Index: in String) return String with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
       -- ****f* ListBox/ListBox.Insert
@@ -266,7 +270,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    procedure Insert
      (ListboxWidget: in Tk_ListBox; Index: in String;
       Elements: in String := "") with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
       -- ****f* ListBox/ListBox.Item_Cget
@@ -288,7 +292,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    function Item_Cget
      (ListboxWidget: in Tk_ListBox; Index, Option: in String)
       return String with
-      Pre => Index /= "" and Option /= "";
+      Pre'Class => Index /= "" and Option /= "";
       -- ****
 
       -- ****f* ListBox/ListBox.Item_Configure_(procedure)
@@ -310,7 +314,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- SOURCE
    procedure Item_Configure
      (ListBoxWidget: in Tk_ListBox; Index, Options: in String) with
-      Pre => Index /= "" and Options /= "";
+      Pre'Class => Index /= "" and Options /= "";
       -- ****
 
       -- ****f* ListBox/ListBox.Item_Configure_(function)
@@ -339,7 +343,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    function Item_Configure
      (ListBoxWidget: in Tk_ListBox; Index: in String; Options: in String := "")
       return String with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
       -- ****f* ListBox/ListBox.Nearest
@@ -360,7 +364,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- SOURCE
    function Nearest
      (ListboxWidget: in Tk_ListBox; Y: in String) return String with
-      Pre => Y /= "";
+      Pre'Class => Y /= "";
       -- ****
 
       -- ****f* ListBox/ListBox.Scan_Mark
@@ -379,7 +383,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- ListboxWidget scan mark x y
       -- SOURCE
    procedure Scan_Mark(ListboxWidget: in Tk_ListBox; X, Y: in String) with
-      Pre => X /= "" and Y /= "";
+      Pre'Class => X /= "" and Y /= "";
       -- ****
 
       -- ****f* ListBox/ListBox.Scan_DragTo
@@ -400,7 +404,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- ListboxWidget scan dragto x y
       -- SOURCE
    procedure Scan_DragTo(ListboxWidget: in Tk_ListBox; X, Y: in String) with
-      Pre => X /= "" and Y /= "";
+      Pre'Class => X /= "" and Y /= "";
       -- ****
 
       -- ****f* ListBox/ListBox.See
@@ -420,7 +424,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- ListboxWidget see index
       -- SOURCE
    procedure See(ListboxWidget: in Tk_ListBox; Index: in String) with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
       -- ****f* ListBox/ListBox.Selection_Anchor
@@ -442,7 +446,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- SOURCE
    procedure Selection_Anchor
      (ListboxWidget: in Tk_ListBox; Index: in String) with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
       -- ****f* ListBox/ListBox.Selection_Clear
@@ -464,7 +468,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    procedure Selection_Clear
      (ListboxWidget: in Tk_ListBox; First: in String;
       Last: in String := "") with
-      Pre => First /= "";
+      Pre'Class => First /= "";
       -- ****
 
       -- ****f* ListBox/ListBox.Selection_Includes
@@ -486,7 +490,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- SOURCE
    function Selection_Includes
      (ListboxWidget: in Tk_ListBox; Index: in String) return String with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
       -- ****f* ListBox/ListBox.Selection_Set
@@ -509,7 +513,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    procedure Selection_Set
      (ListboxWidget: in Tk_ListBox; First: in String;
       Last: in String := "") with
-      Pre => First /= "";
+      Pre'Class => First /= "";
       -- ****
 
       -- ****f* ListBox/ListBox.Size
@@ -573,7 +577,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    -- ListBox.YView_(procedure)
    -- SOURCE
    procedure XView(ListboxWidget: in Tk_ListBox; Index: in String) with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
       -- ****f* ListBox/ListBox.Xview_Move_To
@@ -596,7 +600,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- SOURCE
    procedure Xview_Move_To
      (ListboxWidget: in Tk_ListBox; Fraction: in String) with
-      Pre => Fraction /= "";
+      Pre'Class => Fraction /= "";
       -- ****
 
       -- ****f* ListBox/ListBox.Xview_Scroll
@@ -619,7 +623,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- SOURCE
    procedure Xview_Scroll
      (ListboxWidget: in Tk_ListBox; Number, What: in String) with
-      Pre => Number /= "" and (What = "units" or What = "pages");
+      Pre'Class => Number /= "" and (What = "units" or What = "pages");
       -- ****
 
       -- ****f* ListBox/ListBox.YView_(function)
@@ -665,7 +669,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
    -- ListBox.YView_(procedure)
    -- SOURCE
    procedure YView(ListboxWidget: in Tk_ListBox; Index: in String) with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
       -- ****f* ListBox/ListBox.Yview_Move_To
@@ -688,7 +692,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- SOURCE
    procedure Yview_Move_To
      (ListboxWidget: in Tk_ListBox; Fraction: in String) with
-      Pre => Fraction /= "";
+      Pre'Class => Fraction /= "";
       -- ****
 
       -- ****f* ListBox/ListBox.Yview_Scroll
@@ -711,7 +715,7 @@ package Tcl.Tk.Ada.Widgets.ListBox is
       -- SOURCE
    procedure Yview_Scroll
      (ListboxWidget: in Tk_ListBox; Number, What: in String) with
-      Pre => Number /= "" and (What = "units" or What = "pages");
+      Pre'Class => Number /= "" and (What = "units" or What = "pages");
       -- ****
 
 private
