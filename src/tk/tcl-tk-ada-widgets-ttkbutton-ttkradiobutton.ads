@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- Tashy is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -24,7 +24,10 @@
 -- FUNCTION
 -- Provides code for Tk TtkR::RadioButton
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.TtkButton.TtkRadioButton is
+package Tcl.Tk.Ada.Widgets.TtkButton.TtkRadioButton with
+   SPARK_Mode
+is
+   pragma Elaborate_Body;
 -- ****
 
    -- ****t* TtkRadioButton/TtkRadioButton.Ttk_RadioButton
@@ -61,7 +64,7 @@ package Tcl.Tk.Ada.Widgets.TtkButton.TtkRadioButton is
    overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) return Ttk_RadioButton with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* TtkRadioButton/TtkRadioButton.Create_(procedure)
@@ -94,7 +97,7 @@ package Tcl.Tk.Ada.Widgets.TtkButton.TtkRadioButton is
    overriding procedure Create
      (Widgt: out Ttk_RadioButton; pathName: in String;
       options: in String := ""; Interp: in Tcl_Interp := Null_Interp) with
-      Pre => pathName /= "";
+      Global => null;
       -- ****
 
      -- ****f* TtkRadioButton/TtkRadioButton.Get_Widget
@@ -114,7 +117,8 @@ package Tcl.Tk.Ada.Widgets.TtkButton.TtkRadioButton is
      -- SOURCE
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
-      return Ttk_RadioButton;
+      return Ttk_RadioButton with
+      Global => null;
      -- ****
 
 private

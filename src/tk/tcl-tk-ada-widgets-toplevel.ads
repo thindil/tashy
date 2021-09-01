@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -17,7 +17,10 @@
 -- FUNCTION
 -- Provides code for manipulate Tk widget Toplevel
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.Toplevel is
+package Tcl.Tk.Ada.Widgets.Toplevel with
+   SPARK_Mode
+is
+   pragma Elaborate_Body;
 -- ****
 
    -- ****t* Toplevel/Toplevel.Tk_Toplevel
@@ -54,7 +57,7 @@ package Tcl.Tk.Ada.Widgets.Toplevel is
    overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) return Tk_Toplevel with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* Toplevel/Toplevel.Create_(procedure)
@@ -87,7 +90,7 @@ package Tcl.Tk.Ada.Widgets.Toplevel is
    overriding procedure Create
      (Widgt: out Tk_Toplevel; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) with
-      Pre => pathName /= "";
+      Global => null;
       -- ****
 
      -- ****f* Toplevel/Toplevel.Get_Widget
@@ -107,7 +110,8 @@ package Tcl.Tk.Ada.Widgets.Toplevel is
      -- SOURCE
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
-      return Tk_Toplevel;
+      return Tk_Toplevel with
+      Global => null;
      -- ****
 
 private

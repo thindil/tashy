@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -31,7 +31,10 @@
 -- FUNCTION
 -- Provides code for manipulate Tk widget ComboBox
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
+package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox with
+   SPARK_Mode
+is
+   pragma Elaborate_Body;
 -- ****
 
    -- ****t* TtkComboBox/TtkComboBox.Ttk_ComboBox
@@ -68,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
    function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) return Ttk_ComboBox with
-      Pre => pathName /= "";
+      Global => null;
       -- ****
 
       -- ****f* TtkComboBox/TtkComboBox.Create_(procedure)
@@ -101,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
    procedure Create
      (Widgt: out Ttk_ComboBox; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) with
-      Pre => pathName /= "";
+      Global => null;
       -- ****
 
      -- ****f* TtkComboBox/TtkComboBox.Get_Widget
@@ -121,7 +124,8 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
      -- SOURCE
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
-      return Ttk_ComboBox;
+      return Ttk_ComboBox with
+      Global => null;
      -- ****
 
       -- ****f* TtkComboBox/TtkComboBox.Current_(function)
@@ -163,7 +167,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry.TtkComboBox is
    -- TtkComboBox.Current_(function), Set
    -- SOURCE
    procedure Current(ComboBox: in Ttk_ComboBox; NewIndex: in String) with
-      Pre => NewIndex /= "";
+      Pre'Class => NewIndex /= "";
       -- ****
 
       -- ****f* TtkComboBox/TtkComboBox.Set
