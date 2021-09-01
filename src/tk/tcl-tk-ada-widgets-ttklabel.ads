@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -24,7 +24,10 @@
 -- FUNCTION
 -- Provides code for manipulate Tk widget Ttk::Label
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.TtkLabel is
+package Tcl.Tk.Ada.Widgets.TtkLabel with
+   SPARK_Mode
+is
+   pragma Elaborate_Body;
 -- ****
 
    -- ****t* TtkLabel/TtkLabel.Ttk_Label
@@ -61,7 +64,7 @@ package Tcl.Tk.Ada.Widgets.TtkLabel is
    overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) return Ttk_Label with
-      Pre => pathName /= "";
+      Global => null;
       -- ****
 
      -- ****f* TtkLabel/TtkLabel.Create_(procedure)
@@ -94,7 +97,7 @@ package Tcl.Tk.Ada.Widgets.TtkLabel is
    overriding procedure Create
      (Widgt: out Ttk_Label; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) with
-      Pre => pathName /= "";
+      Global => null;
       -- ****
 
      -- ****f* TtkLabel/TtkLabel.Get_Widget
@@ -114,7 +117,8 @@ package Tcl.Tk.Ada.Widgets.TtkLabel is
      -- SOURCE
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
-      return Ttk_Label;
+      return Ttk_Label with
+      Global => null;
      -- ****
 
 private

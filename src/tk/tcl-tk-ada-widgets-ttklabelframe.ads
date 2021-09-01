@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -31,7 +31,10 @@
 -- FUNCTION
 -- Provides code for manipulate Tk widget Ttk::LabelFrame
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.TtkLabelFrame is
+package Tcl.Tk.Ada.Widgets.TtkLabelFrame with
+   SPARK_Mode
+is
+   pragma Elaborate_Body;
 -- ****
 
    -- ****t* TtkLabelFrame/TtkLabelFrame.Ttk_LabelFrame
@@ -68,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.TtkLabelFrame is
    overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) return Ttk_LabelFrame with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* TtkLabelFrame/TtkLabelFrame.Create_(procedure)
@@ -101,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.TtkLabelFrame is
    overriding procedure Create
      (Widgt: out Ttk_LabelFrame; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) with
-      Pre => pathName /= "";
+      Global => null;
       -- ****
 
      -- ****f* TtkLabelFrame/TtkLabelFrame.Get_Widget
@@ -121,7 +124,8 @@ package Tcl.Tk.Ada.Widgets.TtkLabelFrame is
      -- SOURCE
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
-      return Ttk_LabelFrame;
+      return Ttk_LabelFrame with
+      Global => null;
      -- ****
 
 private

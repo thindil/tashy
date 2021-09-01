@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -31,7 +31,10 @@
 -- FUNCTION
 -- Provides code for manipulate Tk widget Entry
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.TtkEntry is
+package Tcl.Tk.Ada.Widgets.TtkEntry with
+   SPARK_Mode
+is
+   pragma Elaborate_Body;
 -- ****
 
    -- ****t* TtkEntry/TtkEntry.Ttk_Entry
@@ -68,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
    overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) return Ttk_Entry with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* TtkEntry/TtkEntry.Create_(procedure)
@@ -101,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
    overriding procedure Create
      (Widgt: out Ttk_Entry; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) with
-      Pre => pathName /= "";
+      Global => null;
       -- ****
 
      -- ****f* TtkEntry/TtkEntry.Get_Widget
@@ -121,7 +124,8 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
      -- SOURCE
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
-      return Ttk_Entry;
+      return Ttk_Entry with
+      Global => null;
      -- ****
 
       -- ****f* TtkEntry/TtkEntry.BBox
@@ -168,7 +172,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
    procedure Delete
      (TextEntry: in Ttk_Entry; FirstIndex: in String;
       LastIndex: in String := "") with
-      Pre => FirstIndex /= "";
+      Pre'Class => FirstIndex /= "";
       -- ****
 
       -- ****f* TtkEntry/TtkEntry.Get
@@ -247,7 +251,7 @@ package Tcl.Tk.Ada.Widgets.TtkEntry is
       -- SOURCE
    procedure Insert
      (TextEntry: in Ttk_Entry; Index: in String; Text: in String) with
-      Pre => Index /= "" and Text /= "";
+      Pre'Class => Index /= "" and Text /= "";
       -- ****
 
       -- ****f* TtkEntry/TtkEntry.Selection_Clear
