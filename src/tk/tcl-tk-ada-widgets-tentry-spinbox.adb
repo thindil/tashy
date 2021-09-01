@@ -53,6 +53,16 @@ package body Tcl.Tk.Ada.Widgets.TEntry.SpinBox is
       return Tcl.Ada.Tcl_GetResult(SpinBoxWidget.Interp);
    end Identify;
 
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_SpinBox is
+   begin
+      return New_SpinBox: Tk_SpinBox do
+         New_SpinBox.Interp := Interp;
+         New_SpinBox.Name := C.Strings.New_String(pathName);
+      end return;
+   end Get_Widget;
+
    procedure Invoke(SpinBoxWidget: in Tk_SpinBox; Element: in String) is
    begin
       Execute_Widget_Command(SpinBoxWidget, "invoke", Element);

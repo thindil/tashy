@@ -107,6 +107,27 @@ is
       Global => null;
      -- ****
 
+     -- ****f* SpinBox/SpinBox.Get_Widget
+     -- FUNCTION
+     -- Get the existing Tk_Spinbox widget
+     -- PARAMETERS
+     -- pathName - Tk path (starts with dot) for the widget
+     -- Interp   - Tcl interpreter on which the widget exists. Can be empty.
+     --            Default value is current Tcl interpreter
+     -- RESULT
+     -- Existing Tk_Spinbox widget
+     -- HISTORY
+     -- 8.6.12 - Added
+     -- EXAMPLE
+     -- -- Get spinbox widget with name .myspinbox on the current Tcl interpreter
+     -- My_Spinbox: constant Tk_SpinBox := Get_Widget(".myspinbox");
+     -- SOURCE
+   overriding function Get_Widget
+     (pathName: in String; Interp: in Tcl_Interp := Get_Context)
+      return Tk_SpinBox with
+      Global => null;
+     -- ****
+
      -- ****f* SpinBox/SpinBox.Identify
      -- FUNCTION
      -- Get the name of the Tk_SpinBox element at the selected coordinates
