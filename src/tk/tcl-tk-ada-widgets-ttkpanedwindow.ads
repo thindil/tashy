@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -31,7 +31,10 @@
 -- FUNCTION
 -- Provides code for manipulate Tk widget Ttk::PanedWindow
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
+package Tcl.Tk.Ada.Widgets.TtkPanedWindow with
+   SPARK_Mode
+is
+   pragma Elaborate_Body;
 -- ****
 
    -- ****t* TtkPanedWindow/TtkPanedWindow.Ttk_PanedWindow
@@ -68,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) return Ttk_PanedWindow with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* TtkPanedWindow/TtkPanedWindow.Create_(procedure)
@@ -101,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    overriding procedure Create
      (Widgt: out Ttk_PanedWindow; pathName: in String;
       options: in String := ""; Interp: in Tcl_Interp := Null_Interp) with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* TtkPanedWindow/TtkPanedWindow.Get_Widget
@@ -121,7 +124,8 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
      -- SOURCE
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
-      return Ttk_PanedWindow;
+      return Ttk_PanedWindow with
+      Global => null;
      -- ****
 
      -- ****f* TtkPanedWindow/TtkPanedWindow.Add
@@ -182,7 +186,7 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    -- SOURCE
    function Identify_Element
      (Paned: in Ttk_PanedWindow; X, Y: in String) return String with
-      Pre => X /= "" and Y /= "";
+      Pre'Class => X /= "" and Y /= "";
       -- ****
 
       -- ****f* TtkPanedWindow/TtkPanedWindow.Identify_Sash
@@ -205,7 +209,7 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       -- SOURCE
    function Identify_Sash
      (Paned: in Ttk_PanedWindow; X, Y: in String) return String with
-      Pre => X /= "" and Y /= "";
+      Pre'Class => X /= "" and Y /= "";
       -- ****
 
       -- ****f* TtkPanedWindow/TtkPanedWindow.Insert
@@ -229,7 +233,7 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    procedure Insert
      (Paned: in Ttk_PanedWindow; Position: in String;
       SubWindow: in Tk_Widget'Class; Options: in String := "") with
-      Pre => Position /= "";
+      Pre'Class => Position /= "";
       -- ****
 
       -- ****f* TtkPanedWindow/TtkPanedWindow.Pane_(procedure)
@@ -251,7 +255,7 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       -- TtkPanedWindow.Pane_(function)
       -- SOURCE
    procedure Pane(Paned: in Ttk_PanedWindow; Index, Options: in String) with
-      Pre => Index /= "" and Options /= "";
+      Pre'Class => Index /= "" and Options /= "";
       -- ****
 
       -- ****f* TtkPanedWindow/TtkPanedWindow.Pane_(function)
@@ -279,7 +283,7 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    function Pane
      (Paned: in Ttk_PanedWindow; Index: in String; Option: in String := "")
       return String with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
       -- ****f* TtkPanedWindow/Panes
@@ -319,7 +323,7 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
    -- TtkPanedWindow.SashPos_(function)
    -- SOURCE
    procedure SashPos(Paned: in Ttk_PanedWindow; Index, NewPos: in String) with
-      Pre => Index /= "" and NewPos /= "";
+      Pre'Class => Index /= "" and NewPos /= "";
       -- ****
 
       -- ****f* TtkPanedWindow/TtkPanedWindow.SashPos_(function)
@@ -344,7 +348,7 @@ package Tcl.Tk.Ada.Widgets.TtkPanedWindow is
       -- SOURCE
    function SashPos
      (Paned: in Ttk_PanedWindow; Index: in String) return String with
-      Pre => Index /= "";
+      Pre'Class => Index /= "";
       -- ****
 
 private

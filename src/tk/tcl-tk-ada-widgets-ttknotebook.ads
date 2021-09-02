@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -31,7 +31,10 @@
 -- FUNCTION
 -- Provides code for manipulate Tk widget Ttk::Notebook
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.TtkNotebook is
+package Tcl.Tk.Ada.Widgets.TtkNotebook with
+   SPARK_Mode
+is
+   pragma Elaborate_Body;
 -- ****
 
    -- ****t* TtkNotebook/TtkNotebook.Ttk_Notebook
@@ -68,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
    overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) return Ttk_Notebook with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* TtkNotebook/TtkNotebook.Create_(procedure)
@@ -101,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
    overriding procedure Create
      (Widgt: out Ttk_Notebook; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* TtkNotebook/TtkNotebook.Get_Widget
@@ -121,7 +124,8 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
      -- SOURCE
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
-      return Ttk_Notebook;
+      return Ttk_Notebook with
+      Global => null;
      -- ****
 
      -- ****f* TtkNotebook/TtkNotebook.Add
@@ -142,7 +146,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
    procedure Add
      (Notebook: in Ttk_Notebook; WindowName: in String;
       Options: String := "") with
-      Pre => WindowName /= "";
+      Pre'Class => WindowName /= "";
       -- ****
 
       -- ****f* TtkNotebook/TtkNotebook.Forget
@@ -160,7 +164,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- Notebook forget tabid
       -- SOURCE
    procedure Forget(Notebook: in Ttk_Notebook; TabId: in String) with
-      Pre => TabId /= "";
+      Pre'Class => TabId /= "";
       -- ****
 
       -- ****f* TtkNotebook/TtkNotebook.Hide
@@ -178,7 +182,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- Notebook hide tabid
       -- SOURCE
    procedure Hide(Notebook: in Ttk_Notebook; TabId: in String) with
-      Pre => TabId /= "";
+      Pre'Class => TabId /= "";
       -- ****
 
       -- ****f* TtkNotebook/TtkNotebook.Identify_Element
@@ -201,7 +205,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- SOURCE
    function Identify_Element
      (Notebook: in Ttk_Notebook; X, Y: in String) return String with
-      Pre => X /= "" and Y /= "";
+      Pre'Class => X /= "" and Y /= "";
       -- ****
 
       -- ****f* TtkNotebook/TtkNotebook.Identify_Tab
@@ -224,7 +228,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- SOURCE
    function Identify_Tab
      (Notebook: in Ttk_Notebook; X, Y: in String) return String with
-      Pre => X /= "" and Y /= "";
+      Pre'Class => X /= "" and Y /= "";
       -- ****
 
       -- ****f* TtkNotebook/TtkNotebook.Index
@@ -246,7 +250,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- SOURCE
    function Index
      (Notebook: in Ttk_Notebook; TabId: in String) return String with
-      Pre => TabId /= "";
+      Pre'Class => TabId /= "";
       -- ****
 
       -- ****f* TtkNotebook/TtkNotebook.Insert
@@ -271,7 +275,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
    procedure Insert
      (Notebook: in Ttk_Notebook; Pos: in String; SubWindow: in Tk_Widget'Class;
       Options: in String) with
-      Pre => Pos /= "" and Options /= "";
+      Pre'Class => Pos /= "" and Options /= "";
       -- ****
 
       -- ****f* TtkNotebook/TtkNotebook.Notebook_Select
@@ -289,7 +293,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
       -- Notebook select tabid
       -- SOURCE
    procedure Notebook_Select(Notebook: in Ttk_Notebook; TabId: in String) with
-      Pre => TabId /= "";
+      Pre'Class => TabId /= "";
       -- ****
 
       -- ****f* TtkNotebook/TtkNotebook.Get_Selected
@@ -329,7 +333,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
    -- TtkNotebook.Tab_(function)
    -- SOURCE
    procedure Tab(Notebook: in Ttk_Notebook; TabId, Options: in String) with
-      Pre => TabId /= "" and Options /= "";
+      Pre'Class => TabId /= "" and Options /= "";
       -- ****
 
       -- ****f* TtkNotebook/TtkNotebook.Tab_(function)
@@ -357,7 +361,7 @@ package Tcl.Tk.Ada.Widgets.TtkNotebook is
    function Tab
      (Notebook: in Ttk_Notebook; TabId: in String; Option: in String := "")
       return String with
-      Pre => TabId /= "";
+      Pre'Class => TabId /= "";
       -- ****
 
       -- ****f* TtkNotebook/TtkNotebook.Tabs
