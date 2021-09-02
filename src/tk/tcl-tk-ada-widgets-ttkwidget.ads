@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -24,7 +24,9 @@
 -- FUNCTION
 -- Provides code for manipulate Ttk widgets
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.TtkWidget is
+package Tcl.Tk.Ada.Widgets.TtkWidget with
+   SPARK_Mode
+is
 -- ****
 
    -- ****f* TtkWidget/TtkWidget.Identify_Element

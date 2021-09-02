@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- Tashy is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -24,7 +24,10 @@
 -- FUNCTION
 -- Provides code for Tk Ttk::Tree_View
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.TtkTreeView is
+package Tcl.Tk.Ada.Widgets.TtkTreeView with
+   SPARK_Mode
+is
+   pragma Elaborate_Body;
 -- ****
 
    -- ****t* TtkTreeView/TtkTreeView.Ttk_Tree_View
@@ -61,7 +64,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) return Ttk_Tree_View with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* TtkTreeView/TtkTreeView.Create_(procedure)
@@ -94,7 +97,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    overriding procedure Create
      (Widgt: out Ttk_Tree_View; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* TtkTreeView/TtkTreeView.Get_Widget
@@ -114,7 +117,8 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
      -- SOURCE
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
-      return Ttk_Tree_View;
+      return Ttk_Tree_View with
+      Global => null;
      -- ****
 
      -- ****f* TtkTreeView/TtkTreeView.Children
@@ -135,7 +139,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
      -- SOURCE
    function Children
      (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
-      Pre => Item /= "";
+      Pre'Class => Item /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Column_(procedure)
@@ -158,7 +162,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    procedure Column
      (TreeViewWidget: in Ttk_Tree_View; Col: in String;
       Options: in String) with
-      Pre => Col /= "" and Options /= "";
+      Pre'Class => Col /= "" and Options /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Column_(function)
@@ -188,7 +192,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    function Column
      (TreeViewWidget: in Ttk_Tree_View; Col: in String;
       Option: in String := "") return String with
-      Pre => Col /= "";
+      Pre'Class => Col /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Delete
@@ -208,7 +212,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- SOURCE
    procedure Delete
      (TreeViewWidget: in Ttk_Tree_View; ItemsList: in String) with
-      Pre => ItemsList /= "";
+      Pre'Class => ItemsList /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Detach
@@ -230,7 +234,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- SOURCE
    procedure Detach
      (TreeViewWidget: in Ttk_Tree_View; ItemsList: in String) with
-      Pre => ItemsList /= "";
+      Pre'Class => ItemsList /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Exists
@@ -251,7 +255,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- SOURCE
    function Exists
      (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
-      Pre => Item /= "";
+      Pre'Class => Item /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Focus_(procedure)
@@ -271,7 +275,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- TtkTreeView.Focus_(function)
       -- SOURCE
    procedure Focus(TreeViewWidget: in Ttk_Tree_View; Item: in String) with
-      Pre => Item /= "";
+      Pre'Class => Item /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Focus_(function)
@@ -314,7 +318,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- SOURCE
    procedure Heading
      (TreeViewWidget: in Ttk_Tree_View; Column, Options: in String) with
-      Pre => Column /= "" and Options /= "";
+      Pre'Class => Column /= "" and Options /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Heading_(function)
@@ -340,7 +344,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    function Heading
      (TreeViewWidget: in Ttk_Tree_View; Column: in String;
       Option: in String := "") return String with
-      Pre => Column /= "";
+      Pre'Class => Column /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Identify_Column
@@ -363,7 +367,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- SOURCE
    function Identify_Column
      (TreeViewWidget: in Ttk_Tree_View; X, Y: in String) return String with
-      Pre => X /= "" and Y /= "";
+      Pre'Class => X /= "" and Y /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Identify_Element
@@ -386,7 +390,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- SOURCE
    function Identify_Element
      (TreeViewWidget: in Ttk_Tree_View; X, Y: in String) return String with
-      Pre => X /= "" and Y /= "";
+      Pre'Class => X /= "" and Y /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Identify_Item
@@ -409,7 +413,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- SOURCE
    function Identify_Item
      (TreeViewWidget: in Ttk_Tree_View; X, Y: in String) return String with
-      Pre => X /= "" and Y /= "";
+      Pre'Class => X /= "" and Y /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Identify_Region
@@ -433,7 +437,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- SOURCE
    function Identify_Region
      (TreeViewWidget: in Ttk_Tree_View; X, Y: in String) return String with
-      Pre => X /= "" and Y /= "";
+      Pre'Class => X /= "" and Y /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Index
@@ -455,7 +459,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- SOURCE
    function Index
      (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
-      Pre => Item /= "";
+      Pre'Class => Item /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Insert_(procedure)
@@ -475,7 +479,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- TtkTreeView.Insert_(function)
       -- SOURCE
    procedure Insert(TreeViewWidget: in Ttk_Tree_View; Options: in String) with
-      Pre => Options /= "";
+      Pre'Class => Options /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Insert_(function)
@@ -498,7 +502,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- SOURCE
    function Insert
      (TreeViewWidget: in Ttk_Tree_View; Options: in String) return String with
-      Pre => Options /= "";
+      Pre'Class => Options /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Item_(procedure)
@@ -520,7 +524,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- SOURCE
    procedure Item
      (TreeViewWidget: in Ttk_Tree_View; Item, Options: in String) with
-      Pre => Item /= "" and Options /= "";
+      Pre'Class => Item /= "" and Options /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Item_(function)
@@ -544,7 +548,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    function Item
      (TreeViewWidget: in Ttk_Tree_View; Item: in String;
       Options: in String := "") return String with
-      Pre => Item /= "";
+      Pre'Class => Item /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Move
@@ -567,7 +571,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- SOURCE
    procedure Move
      (TreeViewWidget: in Ttk_Tree_View; Item, Parent, Index: in String) with
-      Pre => Item /= "" and Parent /= "" and Index /= "";
+      Pre'Class => Item /= "" and Parent /= "" and Index /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Next
@@ -591,7 +595,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- SOURCE
    function Next
      (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
-      Pre => Item /= "";
+      Pre'Class => Item /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Parent
@@ -614,7 +618,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- SOURCE
    function Parent
      (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
-      Pre => Item /= "";
+      Pre'Class => Item /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Prev
@@ -638,7 +642,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- SOURCE
    function Prev
      (TreeViewWidget: in Ttk_Tree_View; Item: in String) return String with
-      Pre => Item /= "";
+      Pre'Class => Item /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.See
@@ -657,7 +661,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- TreeViewWidget see item
       -- SOURCE
    procedure See(TreeViewWidget: in Ttk_Tree_View; Item: in String) with
-      Pre => Item /= "";
+      Pre'Class => Item /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Selection
@@ -694,7 +698,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- SOURCE
    procedure Selection_Set
      (TreeViewWidget: in Ttk_Tree_View; Items: in String) with
-      Pre => Items /= "";
+      Pre'Class => Items /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Selection_Add
@@ -713,7 +717,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- SOURCE
    procedure Selection_Add
      (TreeViewWidget: in Ttk_Tree_View; Items: in String) with
-      Pre => Items /= "";
+      Pre'Class => Items /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Selection_Remove
@@ -732,7 +736,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- SOURCE
    procedure Selection_Remove
      (TreeViewWidget: in Ttk_Tree_View; Items: in String) with
-      Pre => Items /= "";
+      Pre'Class => Items /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Selection_Toggle
@@ -752,7 +756,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- SOURCE
    procedure Selection_Toggle
      (TreeViewWidget: in Ttk_Tree_View; Items: in String) with
-      Pre => Items /= "";
+      Pre'Class => Items /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Set_(function)
@@ -780,7 +784,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    function Set
      (TreeViewWidget: in Ttk_Tree_View; Item: in String;
       Column: in String := "") return String with
-      Pre => Item /= "";
+      Pre'Class => Item /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Set_(procedure)
@@ -804,7 +808,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- SOURCE
    procedure Set
      (TreeViewWidget: in Ttk_Tree_View; Item, Column, Value: in String) with
-      Pre => Item /= "" and Column /= "" and Value /= "";
+      Pre'Class => Item /= "" and Column /= "" and Value /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Tag_Add
@@ -825,7 +829,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- SOURCE
    procedure Tag_Add
      (TreeViewWidget: in Ttk_Tree_View; Tag, Items: in String) with
-      Pre => Tag /= "" and Items /= "";
+      Pre'Class => Tag /= "" and Items /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Tag_Bind_(procedure)
@@ -849,7 +853,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    procedure Tag_Bind
      (TreeViewWidget: in Ttk_Tree_View;
       TagName, Sequence, Script: in String) with
-      Pre => TagName /= "" and Sequence /= "" and Script /= "";
+      Pre'Class => TagName /= "" and Sequence /= "" and Script /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Tag_Bind_(function)
@@ -876,7 +880,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    function Tag_Bind
      (TreeViewWidget: in Ttk_Tree_View; TagName: in String;
       Sequence: in String := "") return String with
-      Pre => TagName /= "";
+      Pre'Class => TagName /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Tag_Configure_(procedure)
@@ -898,7 +902,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- SOURCE
    procedure Tag_Configure
      (TreeViewWidget: in Ttk_Tree_View; TagName, Options: in String) with
-      Pre => TagName /= "" and Options /= "";
+      Pre'Class => TagName /= "" and Options /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Tag_Configure_(function)
@@ -927,7 +931,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    function Tag_Configure
      (TreeViewWidget: in Ttk_Tree_View; TagName: in String;
       Option: in String := "") return String with
-      Pre => TagName /= "";
+      Pre'Class => TagName /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Tag_Has
@@ -955,7 +959,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    function Tag_Has
      (TreeViewWidget: in Ttk_Tree_View; TagName: in String;
       Item: in String := "") return String with
-      Pre => TagName /= "";
+      Pre'Class => TagName /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Tag_Names
@@ -997,7 +1001,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    procedure Tag_Remove
      (TreeViewWidget: in Ttk_Tree_View; Tag: in String;
       Items: in String := "") with
-      Pre => Tag /= "";
+      Pre'Class => Tag /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.XView
@@ -1042,7 +1046,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- SOURCE
    procedure Xview_Move_To
      (TreeViewWidget: in Ttk_Tree_View; Fraction: in String) with
-      Pre => Fraction /= "";
+      Pre'Class => Fraction /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Xview_Scroll
@@ -1065,7 +1069,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- SOURCE
    procedure Xview_Scroll
      (TreeViewWidget: in Ttk_Tree_View; Number, What: in String) with
-      Pre => Number /= "" and (What = "units" or What = "pages");
+      Pre'Class => Number /= "" and (What = "units" or What = "pages");
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.YView
@@ -1110,7 +1114,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
    -- SOURCE
    procedure Yview_Move_To
      (TreeViewWidget: in Ttk_Tree_View; Fraction: in String) with
-      Pre => Fraction /= "";
+      Pre'Class => Fraction /= "";
       -- ****
 
       -- ****f* TtkTreeView/TtkTreeView.Yview_Scroll
@@ -1133,7 +1137,7 @@ package Tcl.Tk.Ada.Widgets.TtkTreeView is
       -- SOURCE
    procedure Yview_Scroll
      (TreeViewWidget: in Ttk_Tree_View; Number, What: in String) with
-      Pre => Number /= "" and (What = "units" or What = "pages");
+      Pre'Class => Number /= "" and (What = "units" or What = "pages");
       -- ****
 private
 

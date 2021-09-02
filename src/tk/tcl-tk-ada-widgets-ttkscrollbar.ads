@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -31,7 +31,10 @@
 -- FUNCTION
 -- Provides code for manipulate Tk widget Ttk::Scrollbar
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.TtkScrollbar is
+package Tcl.Tk.Ada.Widgets.TtkScrollbar with
+   SPARK_Mode
+is
+   pragma Elaborate_Body;
 -- ****
 
    -- ****t* TtkScrollbar/TtkScrollbar.Ttk_Scrollbar
@@ -68,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
    overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) return Ttk_Scrollbar with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* TtkScrollbar/TtkScrollbar.Create_(procedure)
@@ -101,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
    overriding procedure Create
      (Widgt: out Ttk_Scrollbar; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* TtkScrollbar/TtkScrollbar.Get_Widget
@@ -121,7 +124,8 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
      -- SOURCE
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
-      return Ttk_Scrollbar;
+      return Ttk_Scrollbar with
+      Global => null;
      -- ****
 
      -- ****f* TtkScrollbar/TtkScrollbar.Scrollbar_Delta
@@ -148,7 +152,7 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
    function Scrollbar_Delta
      (ScrollbarWidget: in Ttk_Scrollbar; DeltaX, DeltaY: in String)
       return String with
-      Pre => DeltaX /= "" and DeltaY /= "";
+      Pre'Class => DeltaX /= "" and DeltaY /= "";
       -- ****
 
       -- ****f* TtkScrollbar/TtkScrollbar.Fraction
@@ -171,7 +175,7 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
       -- SOURCE
    function Fraction
      (ScrollbarWidget: in Ttk_Scrollbar; X, Y: in String) return String with
-      Pre => X /= "" and Y /= "";
+      Pre'Class => X /= "" and Y /= "";
       -- ****
 
       -- ****f* TtkScrollbar/TtkScrollbar.Get
@@ -214,7 +218,7 @@ package Tcl.Tk.Ada.Widgets.TtkScrollbar is
    -- SOURCE
    procedure Set
      (ScrollbarWidget: in Ttk_Scrollbar; First, Last: in String) with
-      Pre => First /= "" and Last /= "";
+      Pre'Class => First /= "" and Last /= "";
       -- ****
 
 private

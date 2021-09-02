@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -31,7 +31,10 @@
 -- FUNCTION
 -- Provides code for manipulate Tk widget Ttk::Separator
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.TtkSeparator is
+package Tcl.Tk.Ada.Widgets.TtkSeparator with
+   SPARK_Mode
+is
+   pragma Elaborate_Body;
 -- ****
 
    -- ****t* TtkSeparator/TtkSeparator.Ttk_Separator
@@ -68,7 +71,7 @@ package Tcl.Tk.Ada.Widgets.TtkSeparator is
    overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) return Ttk_Separator with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* TtkSeparator/TtkSeparator.Create_(procedure)
@@ -101,7 +104,7 @@ package Tcl.Tk.Ada.Widgets.TtkSeparator is
    overriding procedure Create
      (Widgt: out Ttk_Separator; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) with
-      Pre => pathName /= "";
+      Global => null;
       -- ****
 
      -- ****f* TtkSeparator/TtkSeparator.Get_Widget
@@ -121,7 +124,8 @@ package Tcl.Tk.Ada.Widgets.TtkSeparator is
      -- SOURCE
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
-      return Ttk_Separator;
+      return Ttk_Separator with
+      Global => null;
      -- ****
 
 private
