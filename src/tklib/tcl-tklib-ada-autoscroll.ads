@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- Tashy is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -26,7 +26,9 @@ with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
 -- FUNCTION
 -- Provides code for manipulate Tklib autoscroll package
 -- SOURCE
-package Tcl.Tklib.Ada.Autoscroll is
+package Tcl.Tklib.Ada.Autoscroll with
+   SPARK_Mode
+is
 -- ****
 
    -- ****f* Autoscroll/Autoscroll.Autoscroll_Init

@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- Tashy is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -27,7 +27,10 @@ with Tcl.Tk.Ada.Widgets; use Tcl.Tk.Ada.Widgets;
 -- FUNCTION
 -- Provides code for manipulate Tklib ctext package
 -- SOURCE
-package Tcl.Tklib.Ada.Ctext is
+package Tcl.Tklib.Ada.Ctext with
+   SPARK_Mode
+is
+   pragma Elaborate_Body;
 -- ****
 
    -- ****f* Ctext/Ctext.Ctext_Init
@@ -82,7 +85,7 @@ package Tcl.Tklib.Ada.Ctext is
    overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) return Tklib_Ctext with
-      Pre => pathName /= "";
+      Global => null;
       -- ****
 
      -- ****f* Ctext/Ctext.Create_(procedure)
@@ -115,7 +118,7 @@ package Tcl.Tklib.Ada.Ctext is
    overriding procedure Create
      (Widgt: out Tklib_Ctext; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* Ctext/Ctext.Get_Widget
@@ -135,7 +138,8 @@ package Tcl.Tklib.Ada.Ctext is
      -- SOURCE
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
-      return Tklib_Ctext;
+      return Tklib_Ctext with
+      Global => null;
      -- ****
 
      -- ****f* Ctext/Ctext.Add_Highlight_Class
@@ -157,7 +161,7 @@ package Tcl.Tklib.Ada.Ctext is
      -- SOURCE
    procedure Add_Highlight_Class
      (CtextWidget: in Tklib_Ctext; Class, Color, Keywordlist: in String) with
-      Pre => Class /= "" and Color /= "" and Keywordlist /= "";
+      Pre'Class => Class /= "" and Color /= "" and Keywordlist /= "";
       -- ****
 
       -- ****f* Ctext/Ctext.Add_Highlight_Class_With_Only_Char_Start
@@ -179,7 +183,7 @@ package Tcl.Tklib.Ada.Ctext is
       -- SOURCE
    procedure Add_Highlight_Class_With_Only_Char_Start
      (CtextWidget: in Tklib_Ctext; Class, Color, Char: in String) with
-      Pre => Class /= "" and Color /= "" and Char /= "";
+      Pre'Class => Class /= "" and Color /= "" and Char /= "";
       -- ****
 
       -- ****f* Ctext/Ctext.Add_Highlight_Class_For_Special_Chars
@@ -200,7 +204,7 @@ package Tcl.Tklib.Ada.Ctext is
       -- SOURCE
    procedure Add_Highlight_Class_For_Special_Chars
      (CtextWidget: in Tklib_Ctext; Class, Color, CharString: in String) with
-      Pre => Class /= "" and Color /= "" and CharString /= "";
+      Pre'Class => Class /= "" and Color /= "" and CharString /= "";
       -- ****
 
       -- ****f* Ctext/Ctext.Add_Highlight_Class_For_Regexp
@@ -222,7 +226,7 @@ package Tcl.Tklib.Ada.Ctext is
       -- SOURCE
    procedure Add_Highlight_Class_For_Regexp
      (CtextWidget: in Tklib_Ctext; Class, Color, Pattern: in String) with
-      Pre => Class /= "" and Color /= "" and Pattern /= "";
+      Pre'Class => Class /= "" and Color /= "" and Pattern /= "";
       -- ****
 
       -- ****f* Ctext/Ctext.Append
@@ -307,7 +311,7 @@ package Tcl.Tklib.Ada.Ctext is
    -- SOURCE
    procedure Delete_Highlight_Class
      (CtextWidget: in Tklib_Ctext; Class: in String) with
-      Pre => Class /= "";
+      Pre'Class => Class /= "";
       -- ****
 
       -- ****f* Ctext/Ctext.Disable_Comments
@@ -365,7 +369,7 @@ package Tcl.Tklib.Ada.Ctext is
    procedure Fast_Delete
      (CtextWidget: in Tklib_Ctext; Index1: in String;
       Index2: in String := "") with
-      Pre => Index1 /= "";
+      Pre'Class => Index1 /= "";
       -- ****
 
       -- ****f* Ctext/Ctext.Fast_Insert
@@ -384,7 +388,7 @@ package Tcl.Tklib.Ada.Ctext is
       -- SOURCE
    procedure Fast_Insert
      (CtextWidget: in Tklib_Ctext; Index, Text: in String) with
-      Pre => Index /= "" and Text /= "";
+      Pre'Class => Index /= "" and Text /= "";
       -- ****
 
       -- ****f* Ctext/Ctext.Get_Highlight_Classes
@@ -422,7 +426,7 @@ package Tcl.Tklib.Ada.Ctext is
    -- SOURCE
    procedure Highlight
      (CtextWidget: in Tklib_Ctext; StartIndex, EndIndex: in String) with
-      Pre => StartIndex /= "" and EndIndex /= "";
+      Pre'Class => StartIndex /= "" and EndIndex /= "";
       -- ****
 
       -- ****f* Ctext/Ctext.Paste
