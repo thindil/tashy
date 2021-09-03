@@ -1,4 +1,4 @@
--- Copyright (c) 2020 Bartek thindil Jasicki <thindil@laeran.pl>
+-- Copyright (c) 2020-2021 Bartek thindil Jasicki <thindil@laeran.pl>
 --
 -- Tashy is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -24,7 +24,9 @@
 -- FUNCTION
 -- Provide code for manipulate Tcl package msgcat
 -- SOURCE
-package Tcl.MsgCat.Ada is
+package Tcl.MsgCat.Ada with
+   SPARK_Mode
+is
 -- ****
 
    -- ****f* MsgCatAda/MsgCatAda.MsgCat_Init

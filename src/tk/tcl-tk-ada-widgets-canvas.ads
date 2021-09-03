@@ -24,7 +24,10 @@
 -- FUNCTION
 -- Provides code for manipulate Tk widget Canvas
 -- SOURCE
-package Tcl.Tk.Ada.Widgets.Canvas is
+package Tcl.Tk.Ada.Widgets.Canvas with
+   SPARK_Mode
+is
+   pragma Elaborate_Body;
 -- ****
 
    -- ****t* Canvas/Canvas.Tk_Canvas
@@ -61,7 +64,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    overriding function Create
      (pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) return Tk_Canvas with
-      Pre => pathName /= "";
+      Global => null;
       -- ****
 
      -- ****f* Canvas/Canvas.Create_(procedure)
@@ -94,7 +97,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    overriding procedure Create
      (Widgt: out Tk_Canvas; pathName: in String; options: in String := "";
       Interp: in Tcl_Interp := Null_Interp) with
-      Pre => pathName /= "";
+      Global => null;
      -- ****
 
      -- ****f* Canvas/Canvas.Get_Widget
@@ -114,7 +117,8 @@ package Tcl.Tk.Ada.Widgets.Canvas is
      -- SOURCE
    overriding function Get_Widget
      (pathName: in String; Interp: in Tcl_Interp := Get_Context)
-      return Tk_Canvas;
+      return Tk_Canvas with
+      Global => null;
      -- ****
 
      -- ****f* Canvas/Canvas.Add_Tag
@@ -135,7 +139,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    procedure Add_Tag
      (CanvasWidget: in Tk_Canvas; Tag, SearchSpec: in String;
       Arguments: in String := "") with
-      Pre => Tag /= "" and
+      Pre'Class => Tag /= "" and
       SearchSpec in "above" | "all" | "below" | "closest" | "enclosed" |
           "overlapping" | "withtag";
       -- ****
@@ -162,7 +166,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- SOURCE
    function BBox
      (CanvasWidget: in Tk_Canvas; TagOrId: in String) return String with
-      Pre => TagOrId /= "";
+      Pre'Class => TagOrId /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.Bind_(procedure)
@@ -186,7 +190,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- SOURCE
    procedure Bind
      (CanvasWidget: in Tk_Canvas; TagOrId, Sequence, Command: in String) with
-      Pre => TagOrId /= "" and Sequence /= "" and Command /= "";
+      Pre'Class => TagOrId /= "" and Sequence /= "" and Command /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.Bind_(function)
@@ -214,7 +218,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    function Bind
      (CanvasWidget: in Tk_Canvas; TagOrId: in String;
       Sequence: in String := "") return String with
-      Pre => TagOrId /= "";
+      Pre'Class => TagOrId /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.CanvasX
@@ -239,7 +243,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    function CanvasX
      (CanvasWidget: in Tk_Canvas; ScreenX: in String;
       GridSpacing: in String := "") return String with
-      Pre => ScreenX /= "";
+      Pre'Class => ScreenX /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.CanvasY
@@ -264,7 +268,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    function CanvasY
      (CanvasWidget: in Tk_Canvas; ScreenY: in String;
       GridSpacing: in String := "") return String with
-      Pre => ScreenY /= "";
+      Pre'Class => ScreenY /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.Coords_(procedure)
@@ -288,7 +292,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- SOURCE
    procedure Coords
      (CanvasWidget: in Tk_Canvas; TagOrId, Coordinates: in String) with
-      Pre => TagOrId /= "" and Coordinates /= "";
+      Pre'Class => TagOrId /= "" and Coordinates /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.Coords_(function)
@@ -311,7 +315,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- SOURCE
    function Coords
      (CanvasWidget: in Tk_Canvas; TagOrId: in String) return String with
-      Pre => TagOrId /= "";
+      Pre'Class => TagOrId /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.Canvas_Create_(procedure)
@@ -334,7 +338,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    procedure Canvas_Create
      (Parent: in Tk_Canvas; Child_Type: in String;
       Options: in String := "") with
-      Pre => Child_Type /= "";
+      Pre'Class => Child_Type /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.Canvas_Create_(function)
@@ -359,7 +363,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    function Canvas_Create
      (Parent: in Tk_Canvas; Child_Type: in String; Options: in String := "")
       return String with
-      Pre => Child_Type /= "";
+      Pre'Class => Child_Type /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.Dchars
@@ -383,7 +387,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    procedure Dchars
      (CanvasWidget: in Tk_Canvas; TagOrId, First: in String;
       Last: in String := "") with
-      Pre => TagOrId /= "" and First /= "";
+      Pre'Class => TagOrId /= "" and First /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.Delete
@@ -401,7 +405,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- CanvasWidget delete ?tagOrId tagOrId ...?
       -- SOURCE
    procedure Delete(CanvasWidget: in Tk_Canvas; TagOrId: in String) with
-      Pre => TagOrId /= "";
+      Pre'Class => TagOrId /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.DTag
@@ -423,7 +427,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    procedure DTag
      (CanvasWidget: in Tk_Canvas; TagOrId: in String;
       TagToDelete: in String := "") with
-      Pre => TagOrId /= "";
+      Pre'Class => TagOrId /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.Find
@@ -449,7 +453,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    function Find
      (CanvasWidget: in Tk_Canvas; SearchCommand: in String;
       Arguments: in String := "") return String with
-      Pre => SearchCommand /= "";
+      Pre'Class => SearchCommand /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.Focus
@@ -494,7 +498,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    -- SOURCE
    function Get_Tags
      (CanvasWidget: in Tk_Canvas; TagOrId: in String) return String with
-      Pre => TagOrId /= "";
+      Pre'Class => TagOrId /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.ICursor
@@ -518,7 +522,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- SOURCE
    procedure ICursor
      (CanvasWidget: in Tk_Canvas; TagOrId, Index: in String) with
-      Pre => TagOrId /= "" and Index /= "";
+      Pre'Class => TagOrId /= "" and Index /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.IMove
@@ -541,7 +545,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- SOURCE
    procedure IMove
      (CanvasWidget: in Tk_Canvas; TagOrId, Index, X, Y: in String) with
-      Pre => TagOrId /= "" and Index /= "" and X /= "" and Y /= "";
+      Pre'Class => TagOrId /= "" and Index /= "" and X /= "" and Y /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.Index
@@ -564,7 +568,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- SOURCE
    function Index
      (CanvasWidget: in Tk_Canvas; TagOrId, Index: in String) return String with
-      Pre => TagOrId /= "" and Index /= "";
+      Pre'Class => TagOrId /= "" and Index /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.Insert
@@ -588,7 +592,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- SOURCE
    procedure Insert
      (CanvasWidget: in Tk_Canvas; TagOrId, BeforeThis, Item: in String) with
-      Pre => TagOrId /= "" and BeforeThis /= "" and Item /= "";
+      Pre'Class => TagOrId /= "" and BeforeThis /= "" and Item /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.Item_Cget
@@ -612,7 +616,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    function Item_Cget
      (CanvasWidget: in Tk_Canvas; TagOrId, Option: in String)
       return String with
-      Pre => TagOrId /= "" and Option /= "";
+      Pre'Class => TagOrId /= "" and Option /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.Item_Configure_(procedure)
@@ -634,7 +638,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- SOURCE
    procedure Item_Configure
      (CanvasWidget: in Tk_Canvas; TagOrId, Options: in String) with
-      Pre => TagOrId /= "" and Options /= "";
+      Pre'Class => TagOrId /= "" and Options /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.Item_Configure_(function)
@@ -662,7 +666,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    function Item_Configure
      (CanvasWidget: in Tk_Canvas; TagOrId: in String; Options: in String := "")
       return String with
-      Pre => TagOrId /= "";
+      Pre'Class => TagOrId /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.Lower
@@ -686,7 +690,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    procedure Lower
      (CanvasWidget: in Tk_Canvas; TagOrId: in String;
       BelowThis: in String := "") with
-      Pre => TagOrId /= "";
+      Pre'Class => TagOrId /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.Move
@@ -707,7 +711,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- SOURCE
    procedure Move
      (CanvasWidget: in Tk_Canvas; TagOrId, XAmount, YAmount: in String) with
-      Pre => TagOrId /= "" and XAmount /= "" and YAmount /= "";
+      Pre'Class => TagOrId /= "" and XAmount /= "" and YAmount /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.MoveTo
@@ -728,7 +732,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- SOURCE
    procedure MoveTo
      (CanvasWidget: in Tk_Canvas; TagOrId, XPos, YPos: in String) with
-      Pre => XPos /= "" and YPos /= "";
+      Pre'Class => XPos /= "" and YPos /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.Postscript
@@ -751,7 +755,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- SOURCE
    function Postscript
      (CanvasWidget: in Tk_Canvas; Options: in String) return String with
-      Pre => Options /= "";
+      Pre'Class => Options /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.Canvas_Raise
@@ -775,7 +779,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    procedure Canvas_Raise
      (CanvasWidget: in Tk_Canvas; TagOrId: in String;
       AboveThis: in String := "") with
-      Pre => TagOrId /= "";
+      Pre'Class => TagOrId /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.Rchars
@@ -800,7 +804,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- SOURCE
    procedure Rchars
      (CanvasWidget: in Tk_Canvas; TagOrId, First, Last, Text: in String) with
-      Pre => TagOrId /= "" and First /= "" and Last /= "" and Text /= "";
+      Pre'Class => TagOrId /= "" and First /= "" and Last /= "" and Text /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.Scale
@@ -826,7 +830,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    procedure Scale
      (CanvasWidget: in Tk_Canvas;
       TagOrId, XOrgin, YOrgin, XScale, YScale: in String) with
-      Pre => TagOrId /= "" and XOrgin /= "" and YOrgin /= "" and
+      Pre'Class => TagOrId /= "" and XOrgin /= "" and YOrgin /= "" and
       XScale /= "" and YScale /= "";
       -- ****
 
@@ -848,7 +852,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- SOURCE
    procedure Select_Adjust
      (CanvasWidget: in Tk_Canvas; TagOrId, Index: in String) with
-      Pre => TagOrId /= "" and Index /= "";
+      Pre'Class => TagOrId /= "" and Index /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.Select_Clear
@@ -886,7 +890,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    -- SOURCE
    procedure Select_From
      (CanvasWidget: in Tk_Canvas; TagOrId, Index: in String) with
-      Pre => TagOrId /= "" and Index /= "";
+      Pre'Class => TagOrId /= "" and Index /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.Select_Item
@@ -926,7 +930,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    -- SOURCE
    procedure Select_To
      (CanvasWidget: in Tk_Canvas; TagOrId, Index: in String) with
-      Pre => TagOrId /= "" and Index /= "";
+      Pre'Class => TagOrId /= "" and Index /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.Canvas_Type
@@ -949,7 +953,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- SOURCE
    function Canvas_Type
      (CanvasWidget: in Tk_Canvas; TagOrId: in String) return String with
-      Pre => TagOrId /= "";
+      Pre'Class => TagOrId /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.XView
@@ -994,7 +998,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    -- SOURCE
    procedure Xview_Move_To
      (CanvasWidget: in Tk_Canvas; Fraction: in String) with
-      Pre => Fraction /= "";
+      Pre'Class => Fraction /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.Xview_Scroll
@@ -1017,7 +1021,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
       -- SOURCE
    procedure Xview_Scroll
      (CanvasWidget: in Tk_Canvas; Number, What: in String) with
-      Pre => Number /= "" and (What = "units" or What = "pages");
+      Pre'Class => Number /= "" and (What = "units" or What = "pages");
       -- ****
 
       -- ****f* Canvas/Canvas.YView
@@ -1062,7 +1066,7 @@ package Tcl.Tk.Ada.Widgets.Canvas is
    -- SOURCE
    procedure Yview_Move_To
      (CanvasWidget: in Tk_Canvas; Fraction: in String) with
-      Pre => Fraction /= "";
+      Pre'Class => Fraction /= "";
       -- ****
 
       -- ****f* Canvas/Canvas.Yview_Scroll
