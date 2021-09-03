@@ -95,8 +95,7 @@ proc CreateGprFile {} {
    --  libraries.
    Linker_Options :=
    (
-   \"[string range $library_switches 0 [string first "-ltcl" $library_switches]-2]\",
-      \"[join [string range $library_switches [string first "-ltcl" $library_switches] [string length $library_switches]] "\",\n      \""]\"
+   \"[join $tashvar(LARGS) "\",\n      \""]\"
    );
 
    end Tash_Options;"
@@ -124,7 +123,7 @@ proc Save_GUI {g} {
          }
       }
    }
-   set library_switches ""
+   set library_switches "-fpic"
    set tclhome $tashvar(TCLHOME)
    regsub -all {[ \t]+} $tcl_platform(os) "_" os
    switch $tcl_platform(platform) {
@@ -214,6 +213,7 @@ proc Save {} {
       puts $f $tashvar(AARGS)
       puts $f $tashvar(BARGS)
       puts $f $tashvar(EXE)
+      puts $f $tashvar(LARGS)
       puts $f "$buildoption"
       puts $f "$installtklib"
       puts $f "$installmsgcat"
@@ -246,7 +246,7 @@ proc Set_Macros {platform os} {
             set tcl_include [file join $tcl_include [file tail $tcl_library]]
          }
       }
-      set library_switches  ""
+      set library_switches  "-fpic "
 
       set pwd               [pwd]
 
@@ -346,6 +346,7 @@ proc Set_Macros {platform os} {
          {Ada compiler switches}
       setvar BARGS             "-E"                 {gnatbind switches}
       setvar EXE               "$exec_suffix"       {suffix for executable files}
+      setvar LARGS             "$library_switches"  {linker switches}
    } else {
       set f [open "settings.txt"]
       setvar PLATFORM          "[gets $f]"   {OS platform}
@@ -364,6 +365,7 @@ proc Set_Macros {platform os} {
       setvar AARGS             "[gets $f]"   {Ada compiler switches}
       setvar BARGS             "[gets $f]"   {gnatbind switches}
       setvar EXE               "[gets $f]"   {suffix for executable files}
+      setvar LARGS             "[gets $f]"   {linker switches}
       set buildoption "[gets $f]"
       set installtklib "[gets $f]"
       set installmsgcat "[gets $f]"
