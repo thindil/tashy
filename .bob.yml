@@ -96,6 +96,6 @@ version: 3.0
 - command:
    name: push
    execute:
-      - fossil sync
+      - fossil push
       - fossil git export
    description: Update remove Fossil repository and its Git mirror
