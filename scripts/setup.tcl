@@ -385,6 +385,14 @@ if {[lindex $argv 0] == "--nogui"} {
    Save
    exit
 }
+# Build only Tcl and its children (no GUI)
+#-----------------------------------------
+if {[lindex $argv 0] == "--headless"} {
+   set buildoption "tcl"
+   set installmsgcat "1"
+   Save
+   exit
+}
 
 # Create window for installer to review and edit macro values
 #------------------------------------------------------------
