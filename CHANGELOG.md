@@ -14,6 +14,7 @@ of the project.
 - **BREAKING:** Type Tcl_Interp to System.Address. In the most cases it
   should'nt not break anything.
 - Updated code documentation
+- Ability to use the library in SPARK code
 
 ## [8.6.11] - 2020-12-18
 
