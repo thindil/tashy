@@ -313,7 +313,7 @@ proc Set_Macros {platform os} {
                append library_switches " -ltcl$tcl_version -ltk$tk_version"
             } else {
                # Must be Linux
-               append library_switches " -ltcl$tcl_version -ltk$tk_version"
+               append library_switches "-ltcl$tcl_version -ltk$tk_version"
             }
          }
       }
