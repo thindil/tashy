@@ -15,6 +15,7 @@ of the project.
   should'nt not break anything.
 - Updated code documentation
 - Ability to use the library in SPARK code
+- Default compilation flags for the library
 
 ## [8.6.11] - 2020-12-18
 
