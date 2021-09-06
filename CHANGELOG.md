@@ -9,6 +9,7 @@ of the project.
 ### Added
 - Constant Null_Interp
 - Procedure `Dialog` to `Dialogs` package
+- Option to build only console version of binding (Tcl + msgcat)
 
 ### Changed
 - **BREAKING:** Type Tcl_Interp to System.Address. In the most cases it
