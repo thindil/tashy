@@ -123,7 +123,7 @@ proc Save_GUI {g} {
          }
       }
    }
-   set library_switches "-fpic"
+   set library_switches "-fpic -lto"
    set tclhome $tashvar(TCLHOME)
    regsub -all {[ \t]+} $tcl_platform(os) "_" os
    switch $tcl_platform(platform) {
@@ -341,8 +341,8 @@ proc Set_Macros {platform os} {
       setvar TCL_LIBRARY       "$libtcl"            {Tcl library}
       setvar TK_VERSION        "$tk_version"        {Tk version}
       setvar TK_LIBRARY        "$libtk"             {Tk library}
-      setvar CARGS             "-O2 -fpic"          {C compiler switches}
-      setvar AARGS             "-O2 -gnatafo -gnatwaL -fpic" \
+      setvar CARGS             "-O2 -fpic -lto"          {C compiler switches}
+      setvar AARGS             "-O2 -gnatafo -gnatwaL -fpic -lto" \
          {Ada compiler switches}
       setvar BARGS             "-E"                 {gnatbind switches}
       setvar EXE               "$exec_suffix"       {suffix for executable files}
