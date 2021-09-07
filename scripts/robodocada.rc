@@ -10,7 +10,7 @@ options:
   --html
   --multidoc
   --index
-  --documenttitle "TASHY v8.6.11 code documentation"
+  --documenttitle "TASHY v8.6.12 code documentation"
   --syntaxcolors
   --sections
   --toc
