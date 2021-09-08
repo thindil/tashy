@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.11 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.12 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,24 +27,24 @@
 <ul>
 <li>1. <a href="#robo51">Widgets/PanedWindow</a></li>
 <ul>
-<li>1.1. <a href="#robo94">PanedWindow/PanedWindow.Tk_Paned_Window</a></li>
-<li>1.2. <a href="#robo365">PanedWindow/PanedWindow.Add</a></li>
-<li>1.3. <a href="#robo366">PanedWindow/PanedWindow.Create_(function)</a></li>
-<li>1.4. <a href="#robo367">PanedWindow/PanedWindow.Create_(procedure)</a></li>
-<li>1.5. <a href="#robo368">PanedWindow/PanedWindow.Forget</a></li>
-<li>1.6. <a href="#robo369">PanedWindow/PanedWindow.Get_Widget</a></li>
-<li>1.7. <a href="#robo370">PanedWindow/PanedWindow.Identify</a></li>
-<li>1.8. <a href="#robo371">PanedWindow/PanedWindow.Pane_Cget</a></li>
-<li>1.9. <a href="#robo372">PanedWindow/PanedWindow.Pane_Configure_(function)</a></li>
-<li>1.10. <a href="#robo373">PanedWindow/PanedWindow.Pane_Configure_(procedure)</a></li>
-<li>1.11. <a href="#robo374">PanedWindow/PanedWindow.Panes</a></li>
-<li>1.12. <a href="#robo375">PanedWindow/PanedWindow.Proxy_Coord</a></li>
-<li>1.13. <a href="#robo376">PanedWindow/PanedWindow.Proxy_Forget</a></li>
-<li>1.14. <a href="#robo377">PanedWindow/PanedWindow.Proxy_Place</a></li>
-<li>1.15. <a href="#robo378">PanedWindow/PanedWindow.Sash_Coord</a></li>
-<li>1.16. <a href="#robo379">PanedWindow/PanedWindow.Sash_DragTo</a></li>
-<li>1.17. <a href="#robo380">PanedWindow/PanedWindow.Sash_Mark</a></li>
-<li>1.18. <a href="#robo381">PanedWindow/PanedWindow.Sash_Place</a></li>
+<li>1.1. <a href="#robo95">PanedWindow/PanedWindow.Tk_Paned_Window</a></li>
+<li>1.2. <a href="#robo369">PanedWindow/PanedWindow.Add</a></li>
+<li>1.3. <a href="#robo370">PanedWindow/PanedWindow.Create_(function)</a></li>
+<li>1.4. <a href="#robo371">PanedWindow/PanedWindow.Create_(procedure)</a></li>
+<li>1.5. <a href="#robo372">PanedWindow/PanedWindow.Forget</a></li>
+<li>1.6. <a href="#robo373">PanedWindow/PanedWindow.Get_Widget</a></li>
+<li>1.7. <a href="#robo374">PanedWindow/PanedWindow.Identify</a></li>
+<li>1.8. <a href="#robo375">PanedWindow/PanedWindow.Pane_Cget</a></li>
+<li>1.9. <a href="#robo376">PanedWindow/PanedWindow.Pane_Configure_(function)</a></li>
+<li>1.10. <a href="#robo377">PanedWindow/PanedWindow.Pane_Configure_(procedure)</a></li>
+<li>1.11. <a href="#robo378">PanedWindow/PanedWindow.Panes</a></li>
+<li>1.12. <a href="#robo379">PanedWindow/PanedWindow.Proxy_Coord</a></li>
+<li>1.13. <a href="#robo380">PanedWindow/PanedWindow.Proxy_Forget</a></li>
+<li>1.14. <a href="#robo381">PanedWindow/PanedWindow.Proxy_Place</a></li>
+<li>1.15. <a href="#robo382">PanedWindow/PanedWindow.Sash_Coord</a></li>
+<li>1.16. <a href="#robo383">PanedWindow/PanedWindow.Sash_DragTo</a></li>
+<li>1.17. <a href="#robo384">PanedWindow/PanedWindow.Sash_Mark</a></li>
+<li>1.18. <a href="#robo385">PanedWindow/PanedWindow.Sash_Place</a></li>
 </ul>
 </ul>
 <hr />
@@ -56,12 +56,15 @@
 <pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo14">Tk</a> widget <strong>PanedWindow</strong>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo29">Widgets</a><span class="sign">.</span><strong>PanedWindow</strong> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo29">Widgets</a><span class="sign">.</span><strong>PanedWindow</strong> <span class="keyword">with</span>
+   SPARK_Mode
+<span class="keyword">is</span>
+   <span class="keyword">pragma</span> Elaborate_Body<span class="sign">;</span>
 </pre>
 
 <hr />
 <a name="PanedWindow2fPanedWindow2eTk5fPaned5fWindow"></a>
-<a name="robo94"></a><h2>PanedWindow/PanedWindow.Tk_Paned_Window [ Types ]</h2>
+<a name="robo95"></a><h2>PanedWindow/PanedWindow.Tk_Paned_Window [ Types ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">PanedWindow</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -75,7 +78,7 @@
 
 <hr />
 <a name="PanedWindow2fPanedWindow2eAdd"></a>
-<a name="robo365"></a><h2>PanedWindow/PanedWindow.Add [ Subprograms ]</h2>
+<a name="robo369"></a><h2>PanedWindow/PanedWindow.Add [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">PanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -105,7 +108,7 @@
 
 <hr />
 <a name="PanedWindow2fPanedWindow2eCreate5f28function29"></a>
-<a name="robo366"></a><h2>PanedWindow/PanedWindow.Create_(function) [ Subprograms ]</h2>
+<a name="robo370"></a><h2>PanedWindow/PanedWindow.Create_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">PanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -114,8 +117,8 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> Create
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> Tk_PanedWindow <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Null_Interp<span class="sign">)</span> <span class="keyword">return</span> Tk_PanedWindow <span class="keyword">with</span>
+      Global <span class="sign">=</span><span class="sign">&gt;</span> <span class="keyword">null</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
@@ -133,7 +136,7 @@
    My_Paned<span class="sign">:</span> <span class="keyword">constant</span> Tk_PanedWindow <span class="sign">:</span><span class="sign">=</span> Create<span class="sign">(</span><span class="quote">".mypaned"</span><span class="sign">,</span> <span class="quote">"-relief solid"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo367">PanedWindow.Create_(procedure)</a>
+<pre> <a href="#robo371">PanedWindow.Create_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> panedwindow pathName ?options?
@@ -144,7 +147,7 @@
 
 <hr />
 <a name="PanedWindow2fPanedWindow2eCreate5f28procedure29"></a>
-<a name="robo367"></a><h2>PanedWindow/PanedWindow.Create_(procedure) [ Subprograms ]</h2>
+<a name="robo371"></a><h2>PanedWindow/PanedWindow.Create_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">PanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -153,8 +156,8 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> Create
      <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> Tk_PanedWindow<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Null_Interp<span class="sign">)</span> <span class="keyword">with</span>
+      Global <span class="sign">=</span><span class="sign">&gt;</span> <span class="keyword">null</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Widgt    - Tk_PanedWindow which will be created
@@ -177,7 +180,7 @@
      <span class="keyword">end</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo366">PanedWindow.Create_(function)</a>
+<pre> <a href="#robo370">PanedWindow.Create_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> panedwindow pathName ?options?
@@ -188,7 +191,7 @@
 
 <hr />
 <a name="PanedWindow2fPanedWindow2eForget"></a>
-<a name="robo368"></a><h2>PanedWindow/PanedWindow.Forget [ Subprograms ]</h2>
+<a name="robo372"></a><h2>PanedWindow/PanedWindow.Forget [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">PanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -214,7 +217,7 @@
 
 <hr />
 <a name="PanedWindow2fPanedWindow2eGet5fWidget"></a>
-<a name="robo369"></a><h2>PanedWindow/PanedWindow.Get_Widget [ Subprograms ]</h2>
+<a name="robo373"></a><h2>PanedWindow/PanedWindow.Get_Widget [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">PanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -223,7 +226,8 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> Get_Widget
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Get_Context<span class="sign">)</span>
-      <span class="keyword">return</span> Tk_PanedWindow<span class="sign">;</span>
+      <span class="keyword">return</span> Tk_PanedWindow <span class="keyword">with</span>
+      Global <span class="sign">=</span><span class="sign">&gt;</span> <span class="keyword">null</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
@@ -243,7 +247,7 @@
 
 <hr />
 <a name="PanedWindow2fPanedWindow2eIdentify"></a>
-<a name="robo370"></a><h2>PanedWindow/PanedWindow.Identify [ Subprograms ]</h2>
+<a name="robo374"></a><h2>PanedWindow/PanedWindow.Identify [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">PanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -253,7 +257,7 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Identify
      <span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Tk_PanedWindow<span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> X /= "" and Y /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Paned - Tk_PanedWindow which will be queried
@@ -279,7 +283,7 @@
 
 <hr />
 <a name="PanedWindow2fPanedWindow2ePane5fCget"></a>
-<a name="robo371"></a><h2>PanedWindow/PanedWindow.Pane_Cget [ Subprograms ]</h2>
+<a name="robo375"></a><h2>PanedWindow/PanedWindow.Pane_Cget [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">PanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -289,7 +293,7 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Pane_Cget
      <span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Tk_PanedWindow<span class="sign">;</span> Window<span class="sign">,</span> <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Window <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Window /= "" and <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a> /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Paned  - Tk_PanedWindow in which option will be queried
@@ -304,7 +308,7 @@
       Visibility<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Pane_Cget<span class="sign">(</span>My_Paned<span class="sign">,</span> <span class="quote">".mypaned.myframe"</span><span class="sign">,</span> <span class="quote">"-hide"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo372">PanedWindow.Pane_Configure_(function)</a>
+<pre> <a href="#robo376">PanedWindow.Pane_Configure_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> Paned panecget window option
@@ -315,7 +319,7 @@
 
 <hr />
 <a name="PanedWindow2fPanedWindow2ePane5fConfigure5f28function29"></a>
-<a name="robo372"></a><h2>PanedWindow/PanedWindow.Pane_Configure_(function) [ Subprograms ]</h2>
+<a name="robo376"></a><h2>PanedWindow/PanedWindow.Pane_Configure_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">PanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -326,7 +330,7 @@
 <pre class="source">   <span class="keyword">function</span> Pane_Configure
      <span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Tk_PanedWindow<span class="sign">;</span> Window<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span>
       <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Window <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Window /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Paned   - Tk_PanedWindow in which options will be modified or
@@ -345,7 +349,7 @@
       Height<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Pane_Configure<span class="sign">(</span>My_Paned<span class="sign">,</span> <span class="quote">".mypaned.myframe"</span><span class="sign">,</span> <span class="quote">"-height"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo373">PanedWindow.Pane_Configure_(procedure)</a>, <a href="#robo371">PanedWindow.Pane_Cget</a>
+<pre> <a href="#robo377">PanedWindow.Pane_Configure_(procedure)</a>, <a href="#robo375">PanedWindow.Pane_Cget</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> Paned paneconfigure window ?options?
@@ -356,7 +360,7 @@
 
 <hr />
 <a name="PanedWindow2fPanedWindow2ePane5fConfigure5f28procedure29"></a>
-<a name="robo373"></a><h2>PanedWindow/PanedWindow.Pane_Configure_(procedure) [ Subprograms ]</h2>
+<a name="robo377"></a><h2>PanedWindow/PanedWindow.Pane_Configure_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">PanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -366,7 +370,7 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Pane_Configure
      <span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Tk_PanedWindow<span class="sign">;</span> Window<span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Window <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Window /= "" and Options /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Paned   - Tk_PanedWindow in which options will be modified
@@ -379,7 +383,7 @@
       Pane_Configure<span class="sign">(</span>My_Paned<span class="sign">,</span> <span class="quote">".mypaned.myframe"</span><span class="sign">,</span> <span class="quote">"-sticky n"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo372">PanedWindow.Pane_Configure_(function)</a>
+<pre> <a href="#robo376">PanedWindow.Pane_Configure_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> Paned paneconfigure window options
@@ -390,14 +394,14 @@
 
 <hr />
 <a name="PanedWindow2fPanedWindow2ePanes"></a>
-<a name="robo374"></a><h2>PanedWindow/PanedWindow.Panes [ Subprograms ]</h2>
+<a name="robo378"></a><h2>PanedWindow/PanedWindow.Panes [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">PanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Get list of names of all widgets managed by the Tk_PanedWindow
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">function</span> <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo639">Panes</a><span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Tk_PanedWindow<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
+<pre class="source">   <span class="keyword">function</span> <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo644">Panes</a><span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Tk_PanedWindow<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Paned - Tk_PanedWindow which will be queried for widgets
@@ -407,7 +411,7 @@
 </pre>
 <p class="item_name">EXAMPLE</p>
 <pre class="source">      <span class="comment">-- Get the names of all widget <span class="keyword">in</span> the My_Paned panedwindow</span>
-      Children<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo639">Panes</a><span class="sign">(</span>My_Paned<span class="sign">)</span><span class="sign">;</span>
+      Children<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> <a href="./tcl-tk-ada-widgets-ttkpanedwindow_ads.html#robo644">Panes</a><span class="sign">(</span>My_Paned<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> Paned panes
@@ -418,7 +422,7 @@
 
 <hr />
 <a name="PanedWindow2fPanedWindow2eProxy5fCoord"></a>
-<a name="robo375"></a><h2>PanedWindow/PanedWindow.Proxy_Coord [ Subprograms ]</h2>
+<a name="robo379"></a><h2>PanedWindow/PanedWindow.Proxy_Coord [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">PanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -446,7 +450,7 @@
 
 <hr />
 <a name="PanedWindow2fPanedWindow2eProxy5fForget"></a>
-<a name="robo376"></a><h2>PanedWindow/PanedWindow.Proxy_Forget [ Subprograms ]</h2>
+<a name="robo380"></a><h2>PanedWindow/PanedWindow.Proxy_Forget [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">PanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -471,7 +475,7 @@
 
 <hr />
 <a name="PanedWindow2fPanedWindow2eProxy5fPlace"></a>
-<a name="robo377"></a><h2>PanedWindow/PanedWindow.Proxy_Place [ Subprograms ]</h2>
+<a name="robo381"></a><h2>PanedWindow/PanedWindow.Proxy_Place [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">PanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -479,7 +483,7 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Proxy_Place<span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Tk_PanedWindow<span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> X /= "" and Y /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Paned - Tk_PanedWindow in which the proxy will be placed
@@ -499,7 +503,7 @@
 
 <hr />
 <a name="PanedWindow2fPanedWindow2eSash5fCoord"></a>
-<a name="robo378"></a><h2>PanedWindow/PanedWindow.Sash_Coord [ Subprograms ]</h2>
+<a name="robo382"></a><h2>PanedWindow/PanedWindow.Sash_Coord [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">PanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -508,7 +512,7 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Sash_Coord
      <span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Tk_PanedWindow<span class="sign">;</span> Index<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Index <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Index /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Paned - Tk_PanedWindow which will be queried for sash coordinates
@@ -530,7 +534,7 @@
 
 <hr />
 <a name="PanedWindow2fPanedWindow2eSash5fDragTo"></a>
-<a name="robo379"></a><h2>PanedWindow/PanedWindow.Sash_DragTo [ Subprograms ]</h2>
+<a name="robo383"></a><h2>PanedWindow/PanedWindow.Sash_DragTo [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">PanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -539,7 +543,7 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Sash_DragTo<span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Tk_PanedWindow<span class="sign">;</span> Index<span class="sign">,</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Index <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Index /= "" and X /= "" and Y /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Paned - Tk_PanedWindow in which the selected sash will be moved
@@ -552,7 +556,7 @@
       Sash_DragTo<span class="sign">(</span>My_Paned<span class="sign">,</span> <span class="quote">"1"</span><span class="sign">,</span> <span class="quote">"22"</span><span class="sign">,</span> <span class="quote">"54"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo380">PanedWindow.Sash_Mark</a>
+<pre> <a href="#robo384">PanedWindow.Sash_Mark</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> Paned sash dragto index x y
@@ -563,7 +567,7 @@
 
 <hr />
 <a name="PanedWindow2fPanedWindow2eSash5fMark"></a>
-<a name="robo380"></a><h2>PanedWindow/PanedWindow.Sash_Mark [ Subprograms ]</h2>
+<a name="robo384"></a><h2>PanedWindow/PanedWindow.Sash_Mark [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">PanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -572,7 +576,7 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Sash_Mark<span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Tk_PanedWindow<span class="sign">;</span> Index<span class="sign">,</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Index <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Index /= "" and X /= "" and Y /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Paned - Tk_PanedWindow in which the selected sash coordinates will be
@@ -586,7 +590,7 @@
       Sash_Mark<span class="sign">(</span>My_Paned<span class="sign">,</span> <span class="quote">"1"</span><span class="sign">,</span> <span class="quote">"89"</span><span class="sign">,</span> <span class="quote">"34"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo379">PanedWindow.Sash_DragTo</a>
+<pre> <a href="#robo383">PanedWindow.Sash_DragTo</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> Paned sash mark index x y
@@ -597,7 +601,7 @@
 
 <hr />
 <a name="PanedWindow2fPanedWindow2eSash5fPlace"></a>
-<a name="robo381"></a><h2>PanedWindow/PanedWindow.Sash_Place [ Subprograms ]</h2>
+<a name="robo385"></a><h2>PanedWindow/PanedWindow.Sash_Place [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo51">PanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -605,7 +609,7 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Sash_Place<span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Tk_PanedWindow<span class="sign">;</span> Index<span class="sign">,</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Index <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Index /= "" and X /= "" and Y /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Paned - Tk_PanedWindow in which sash will be moved
@@ -626,7 +630,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-panedwindow.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Dec 18 2020 07:13:51
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-panedwindow.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 08 2021 07:13:11
 </p>
 </div> <!-- footer -->
 </body>

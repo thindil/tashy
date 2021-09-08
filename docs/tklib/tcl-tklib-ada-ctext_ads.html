@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.11 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.12 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -28,26 +28,26 @@
 <li>1. <a href="#robo34">TklibAda/Ctext</a></li>
 <ul>
 <li>1.1. <a href="#robo83">Ctext/Ctext.Tklib_Ctext</a></li>
-<li>1.2. <a href="#robo208">Ctext/Ctext.Add_Highlight_Class</a></li>
-<li>1.3. <a href="#robo209">Ctext/Ctext.Add_Highlight_Class_For_Regexp</a></li>
-<li>1.4. <a href="#robo210">Ctext/Ctext.Add_Highlight_Class_For_Special_Chars</a></li>
-<li>1.5. <a href="#robo211">Ctext/Ctext.Add_Highlight_Class_With_Only_Char_Start</a></li>
-<li>1.6. <a href="#robo212">Ctext/Ctext.Append</a></li>
-<li>1.7. <a href="#robo213">Ctext/Ctext.Clear_Highlight_Classes</a></li>
-<li>1.8. <a href="#robo214">Ctext/Ctext.Copy</a></li>
-<li>1.9. <a href="#robo215">Ctext/Ctext.Create_(function)</a></li>
-<li>1.10. <a href="#robo216">Ctext/Ctext.Create_(procedure)</a></li>
-<li>1.11. <a href="#robo217">Ctext/Ctext.Ctext_Init</a></li>
-<li>1.12. <a href="#robo218">Ctext/Ctext.Cut</a></li>
-<li>1.13. <a href="#robo219">Ctext/Ctext.Delete_Highlight_Class</a></li>
-<li>1.14. <a href="#robo220">Ctext/Ctext.Disable_Comments</a></li>
-<li>1.15. <a href="#robo221">Ctext/Ctext.Enable_Comments</a></li>
-<li>1.16. <a href="#robo222">Ctext/Ctext.Fast_Delete</a></li>
-<li>1.17. <a href="#robo223">Ctext/Ctext.Fast_Insert</a></li>
-<li>1.18. <a href="#robo224">Ctext/Ctext.Get_Highlight_Classes</a></li>
-<li>1.19. <a href="#robo225">Ctext/Ctext.Get_Widget</a></li>
-<li>1.20. <a href="#robo226">Ctext/Ctext.Highlight</a></li>
-<li>1.21. <a href="#robo227">Ctext/Ctext.Paste</a></li>
+<li>1.2. <a href="#robo211">Ctext/Ctext.Add_Highlight_Class</a></li>
+<li>1.3. <a href="#robo212">Ctext/Ctext.Add_Highlight_Class_For_Regexp</a></li>
+<li>1.4. <a href="#robo213">Ctext/Ctext.Add_Highlight_Class_For_Special_Chars</a></li>
+<li>1.5. <a href="#robo214">Ctext/Ctext.Add_Highlight_Class_With_Only_Char_Start</a></li>
+<li>1.6. <a href="#robo215">Ctext/Ctext.Append</a></li>
+<li>1.7. <a href="#robo216">Ctext/Ctext.Clear_Highlight_Classes</a></li>
+<li>1.8. <a href="#robo217">Ctext/Ctext.Copy</a></li>
+<li>1.9. <a href="#robo218">Ctext/Ctext.Create_(function)</a></li>
+<li>1.10. <a href="#robo219">Ctext/Ctext.Create_(procedure)</a></li>
+<li>1.11. <a href="#robo220">Ctext/Ctext.Ctext_Init</a></li>
+<li>1.12. <a href="#robo221">Ctext/Ctext.Cut</a></li>
+<li>1.13. <a href="#robo222">Ctext/Ctext.Delete_Highlight_Class</a></li>
+<li>1.14. <a href="#robo223">Ctext/Ctext.Disable_Comments</a></li>
+<li>1.15. <a href="#robo224">Ctext/Ctext.Enable_Comments</a></li>
+<li>1.16. <a href="#robo225">Ctext/Ctext.Fast_Delete</a></li>
+<li>1.17. <a href="#robo226">Ctext/Ctext.Fast_Insert</a></li>
+<li>1.18. <a href="#robo227">Ctext/Ctext.Get_Highlight_Classes</a></li>
+<li>1.19. <a href="#robo228">Ctext/Ctext.Get_Widget</a></li>
+<li>1.20. <a href="#robo229">Ctext/Ctext.Highlight</a></li>
+<li>1.21. <a href="#robo230">Ctext/Ctext.Paste</a></li>
 </ul>
 </ul>
 <hr />
@@ -59,7 +59,10 @@
 <pre> Provides code for manipulate <a href="./tcl-tklib_ads.html#robo15">Tklib</a> ctext package
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tklib_ads.html#robo15">Tklib</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><strong>Ctext</strong> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tklib_ads.html#robo15">Tklib</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><strong>Ctext</strong> <span class="keyword">with</span>
+   SPARK_Mode
+<span class="keyword">is</span>
+   <span class="keyword">pragma</span> Elaborate_Body<span class="sign">;</span>
 </pre>
 
 <hr />
@@ -78,7 +81,7 @@
 
 <hr />
 <a name="Ctext2fCtext2eAdd5fHighlight5fClass"></a>
-<a name="robo208"></a><h2>Ctext/Ctext.Add_Highlight_Class [ Subprograms ]</h2>
+<a name="robo211"></a><h2>Ctext/Ctext.Add_Highlight_Class [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -87,7 +90,7 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Add_Highlight_Class
      <span class="sign">(</span>CtextWidget<span class="sign">:</span> <span class="keyword">in</span> Tklib_Ctext<span class="sign">;</span> Class<span class="sign">,</span> Color<span class="sign">,</span> Keywordlist<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Class <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Color <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Keywordlist <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Class /= "" and Color /= "" and Keywordlist /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> CtextWidget - <a href="#robo34">Ctext</a> widget to which a new highlighting Class will be
@@ -109,7 +112,7 @@
 
 <hr />
 <a name="Ctext2fCtext2eAdd5fHighlight5fClass5fFor5fRegexp"></a>
-<a name="robo209"></a><h2>Ctext/Ctext.Add_Highlight_Class_For_Regexp [ Subprograms ]</h2>
+<a name="robo212"></a><h2>Ctext/Ctext.Add_Highlight_Class_For_Regexp [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -124,11 +127,11 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Add_Highlight_Class_For_Regexp
      <span class="sign">(</span>CtextWidget<span class="sign">:</span> <span class="keyword">in</span> Tklib_Ctext<span class="sign">;</span> Class<span class="sign">,</span> Color<span class="sign">,</span> Pattern<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Class <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Color <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Pattern <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Class /= "" and Color /= "" and Pattern /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- Add yellow highlight to words which ends <span class="keyword">with</span> my <span class="keyword">in</span> class mycolor to My_Ctext ctext</span>
-      Add_Highlight_Class_For_Regexp<span class="sign">(</span>My_Ctext<span class="sign">,</span> <span class="quote">"mycolor"</span><span class="sign">,</span> <span class="quote">"yellow"</span><span class="sign">,</span> <span class="quote">"[<span class="sign">:</span>alnum<span class="sign">:</span>]+my"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">      -- -- Add yellow highlight to words which ends <span class="keyword">with</span> my <span class="keyword">in</span> class mycolor to My_Ctext ctext
+      -- Add_Highlight_Class_For_Regexp<span class="sign">(</span>My_Ctext<span class="sign">,</span> "mycolor"<span class="sign">,</span> "yellow"<span class="sign">,</span> "[<span class="sign">:</span>alnum<span class="sign">:</span>]+my"<span class="sign">);</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ::ctext::addHighlightClassForRegexp CtextWidget class color pattern
@@ -139,7 +142,7 @@
 
 <hr />
 <a name="Ctext2fCtext2eAdd5fHighlight5fClass5fFor5fSpecial5fChars"></a>
-<a name="robo210"></a><h2>Ctext/Ctext.Add_Highlight_Class_For_Special_Chars [ Subprograms ]</h2>
+<a name="robo213"></a><h2>Ctext/Ctext.Add_Highlight_Class_For_Special_Chars [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -153,11 +156,11 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Add_Highlight_Class_For_Special_Chars
      <span class="sign">(</span>CtextWidget<span class="sign">:</span> <span class="keyword">in</span> Tklib_Ctext<span class="sign">;</span> Class<span class="sign">,</span> Color<span class="sign">,</span> CharString<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Class <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Color <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> CharString <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Class /= "" and Color /= "" and CharString /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- Add white highlight to characters p w do <span class="keyword">in</span> class pwdcolor to My_Ctext ctext</span>
-      Add_Highlight_Class_For_Special_Chars<span class="sign">(</span>My_Ctext<span class="sign">,</span> <span class="quote">"pwdcolor"</span><span class="sign">,</span> <span class="quote">"white"</span><span class="sign">,</span> <span class="quote">"pwd"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">      -- -- Add white highlight to characters p w d <span class="keyword">in</span> class pwdcolor to My_Ctext ctext
+      -- Add_Highlight_Class_For_Special_Chars<span class="sign">(</span>My_Ctext<span class="sign">,</span> "pwdcolor"<span class="sign">,</span> "white"<span class="sign">,</span> "pwd"<span class="sign">);</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ::ctext::addHighlightClassForSpecialChars CtextWidget class color charstring
@@ -168,7 +171,7 @@
 
 <hr />
 <a name="Ctext2fCtext2eAdd5fHighlight5fClass5fWith5fOnly5fChar5fStart"></a>
-<a name="robo211"></a><h2>Ctext/Ctext.Add_Highlight_Class_With_Only_Char_Start [ Subprograms ]</h2>
+<a name="robo214"></a><h2>Ctext/Ctext.Add_Highlight_Class_With_Only_Char_Start [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -183,11 +186,11 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Add_Highlight_Class_With_Only_Char_Start
      <span class="sign">(</span>CtextWidget<span class="sign">:</span> <span class="keyword">in</span> Tklib_Ctext<span class="sign">;</span> Class<span class="sign">,</span> Color<span class="sign">,</span> Char<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Class <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Color <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Char <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Class /= "" and Color /= "" and Char /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">EXAMPLE</p>
-<pre class="source">      <span class="comment">-- Add blue highlight to words which starts <span class="keyword">with</span> p <span class="keyword">in</span> class pwords to My_Ctext ctext</span>
-      Add_Highlight_Class_With_Only_Char_Start<span class="sign">(</span>My_Ctext<span class="sign">,</span> <span class="quote">"pwords"</span><span class="sign">,</span> <span class="quote">"blue"</span><span class="sign">,</span> <span class="quote">"p"</span><span class="sign">)</span><span class="sign">;</span>
+<pre class="source">      -- -- Add blue highlight to words which starts <span class="keyword">with</span> p <span class="keyword">in</span> class pwords to My_Ctext ctext
+      -- Add_Highlight_Class_With_Only_Char_Start<span class="sign">(</span>My_Ctext<span class="sign">,</span> "pwords"<span class="sign">,</span> "blue"<span class="sign">,</span> "p"<span class="sign">);</span>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ::ctext::addHighlightClassWithOnlyCharStart CtextWidget class color char
@@ -198,7 +201,7 @@
 
 <hr />
 <a name="Ctext2fCtext2eAppend"></a>
-<a name="robo212"></a><h2>Ctext/Ctext.Append [ Subprograms ]</h2>
+<a name="robo215"></a><h2>Ctext/Ctext.Append [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -223,7 +226,7 @@
 
 <hr />
 <a name="Ctext2fCtext2eClear5fHighlight5fClasses"></a>
-<a name="robo213"></a><h2>Ctext/Ctext.Clear_Highlight_Classes [ Subprograms ]</h2>
+<a name="robo216"></a><h2>Ctext/Ctext.Clear_Highlight_Classes [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -249,7 +252,7 @@
 
 <hr />
 <a name="Ctext2fCtext2eCopy"></a>
-<a name="robo214"></a><h2>Ctext/Ctext.Copy [ Subprograms ]</h2>
+<a name="robo217"></a><h2>Ctext/Ctext.Copy [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -274,7 +277,7 @@
 
 <hr />
 <a name="Ctext2fCtext2eCreate5f28function29"></a>
-<a name="robo215"></a><h2>Ctext/Ctext.Create_(function) [ Subprograms ]</h2>
+<a name="robo218"></a><h2>Ctext/Ctext.Create_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -283,8 +286,8 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> Create
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> Tklib_Ctext <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Null_Interp<span class="sign">)</span> <span class="keyword">return</span> Tklib_Ctext <span class="keyword">with</span>
+      Global <span class="sign">=</span><span class="sign">&gt;</span> <span class="keyword">null</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> pathName - <a href="../tk/tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
@@ -302,7 +305,7 @@
    My_Ctext<span class="sign">:</span> <span class="keyword">constant</span> Tklib_Ctext <span class="sign">:</span><span class="sign">=</span> Create<span class="sign">(</span><span class="quote">".mytext"</span><span class="sign">,</span> <span class="quote">"-linemap 0"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo216">Ctext.Create_(procedure)</a>
+<pre> <a href="#robo219">Ctext.Create_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ctext pathName ?options?
@@ -313,7 +316,7 @@
 
 <hr />
 <a name="Ctext2fCtext2eCreate5f28procedure29"></a>
-<a name="robo216"></a><h2>Ctext/Ctext.Create_(procedure) [ Subprograms ]</h2>
+<a name="robo219"></a><h2>Ctext/Ctext.Create_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -322,8 +325,8 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> Create
      <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> Tklib_Ctext<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Null_Interp<span class="sign">)</span> <span class="keyword">with</span>
+      Global <span class="sign">=</span><span class="sign">&gt;</span> <span class="keyword">null</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Widgt    - Tklib_Ctext which will be created
@@ -346,7 +349,7 @@
      <span class="keyword">end</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo215">Ctext.Create_(function)</a>
+<pre> <a href="#robo218">Ctext.Create_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ctext pathName ?options?
@@ -357,7 +360,7 @@
 
 <hr />
 <a name="Ctext2fCtext2eCtext5fInit"></a>
-<a name="robo217"></a><h2>Ctext/Ctext.Ctext_Init [ Subprograms ]</h2>
+<a name="robo220"></a><h2>Ctext/Ctext.Ctext_Init [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -385,7 +388,7 @@
 
 <hr />
 <a name="Ctext2fCtext2eCut"></a>
-<a name="robo218"></a><h2>Ctext/Ctext.Cut [ Subprograms ]</h2>
+<a name="robo221"></a><h2>Ctext/Ctext.Cut [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -410,7 +413,7 @@
 
 <hr />
 <a name="Ctext2fCtext2eDelete5fHighlight5fClass"></a>
-<a name="robo219"></a><h2>Ctext/Ctext.Delete_Highlight_Class [ Subprograms ]</h2>
+<a name="robo222"></a><h2>Ctext/Ctext.Delete_Highlight_Class [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -419,7 +422,7 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Delete_Highlight_Class
      <span class="sign">(</span>CtextWidget<span class="sign">:</span> <span class="keyword">in</span> Tklib_Ctext<span class="sign">;</span> Class<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Class <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Class /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> CtextWidget - <a href="#robo34">Ctext</a> widget from which the selected highlight class will
@@ -439,7 +442,7 @@
 
 <hr />
 <a name="Ctext2fCtext2eDisable5fComments"></a>
-<a name="robo220"></a><h2>Ctext/Ctext.Disable_Comments [ Subprograms ]</h2>
+<a name="robo223"></a><h2>Ctext/Ctext.Disable_Comments [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -465,7 +468,7 @@
 
 <hr />
 <a name="Ctext2fCtext2eEnable5fComments"></a>
-<a name="robo221"></a><h2>Ctext/Ctext.Enable_Comments [ Subprograms ]</h2>
+<a name="robo224"></a><h2>Ctext/Ctext.Enable_Comments [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -491,7 +494,7 @@
 
 <hr />
 <a name="Ctext2fCtext2eFast5fDelete"></a>
-<a name="robo222"></a><h2>Ctext/Ctext.Fast_Delete [ Subprograms ]</h2>
+<a name="robo225"></a><h2>Ctext/Ctext.Fast_Delete [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -501,7 +504,7 @@
 <pre class="source">   <span class="keyword">procedure</span> Fast_Delete
      <span class="sign">(</span>CtextWidget<span class="sign">:</span> <span class="keyword">in</span> Tklib_Ctext<span class="sign">;</span> Index1<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
       Index2<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Index1 <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Index1 /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> CtextWidget - Tk_Text in which text will be deleted
@@ -524,7 +527,7 @@
 
 <hr />
 <a name="Ctext2fCtext2eFast5fInsert"></a>
-<a name="robo223"></a><h2>Ctext/Ctext.Fast_Insert [ Subprograms ]</h2>
+<a name="robo226"></a><h2>Ctext/Ctext.Fast_Insert [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -533,7 +536,7 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Fast_Insert
      <span class="sign">(</span>CtextWidget<span class="sign">:</span> <span class="keyword">in</span> Tklib_Ctext<span class="sign">;</span> Index<span class="sign">,</span> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo54">Text</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Index <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo54">Text</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Index /= "" and <a href="../tk/tcl-tk-ada-widgets-text_ads.html#robo54">Text</a> /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> CtextWidget - Tklib_Ctext to which text will be inserted
@@ -551,7 +554,7 @@
 
 <hr />
 <a name="Ctext2fCtext2eGet5fHighlight5fClasses"></a>
-<a name="robo224"></a><h2>Ctext/Ctext.Get_Highlight_Classes [ Subprograms ]</h2>
+<a name="robo227"></a><h2>Ctext/Ctext.Get_Highlight_Classes [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -579,7 +582,7 @@
 
 <hr />
 <a name="Ctext2fCtext2eGet5fWidget"></a>
-<a name="robo225"></a><h2>Ctext/Ctext.Get_Widget [ Subprograms ]</h2>
+<a name="robo228"></a><h2>Ctext/Ctext.Get_Widget [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -588,7 +591,8 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> Get_Widget
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Get_Context<span class="sign">)</span>
-      <span class="keyword">return</span> Tklib_Ctext<span class="sign">;</span>
+      <span class="keyword">return</span> Tklib_Ctext <span class="keyword">with</span>
+      Global <span class="sign">=</span><span class="sign">&gt;</span> <span class="keyword">null</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> pathName - <a href="../tk/tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
@@ -608,7 +612,7 @@
 
 <hr />
 <a name="Ctext2fCtext2eHighlight"></a>
-<a name="robo226"></a><h2>Ctext/Ctext.Highlight [ Subprograms ]</h2>
+<a name="robo229"></a><h2>Ctext/Ctext.Highlight [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -617,7 +621,7 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Highlight
      <span class="sign">(</span>CtextWidget<span class="sign">:</span> <span class="keyword">in</span> Tklib_Ctext<span class="sign">;</span> StartIndex<span class="sign">,</span> EndIndex<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> StartIndex <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> EndIndex <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> StartIndex /= "" and EndIndex /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> CtextWidget - <a href="#robo34">Ctext</a> widget in which the text will be highlighted
@@ -637,7 +641,7 @@
 
 <hr />
 <a name="Ctext2fCtext2ePaste"></a>
-<a name="robo227"></a><h2>Ctext/Ctext.Paste [ Subprograms ]</h2>
+<a name="robo230"></a><h2>Ctext/Ctext.Paste [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo34">Ctext</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -662,7 +666,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tklib/tcl-tklib-ada-ctext.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Dec 18 2020 07:13:51
+<p>Generated from ./src/tklib/tcl-tklib-ada-ctext.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 08 2021 07:13:11
 </p>
 </div> <!-- footer -->
 </body>

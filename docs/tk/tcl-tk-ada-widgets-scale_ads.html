@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.11 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.12 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,15 +27,15 @@
 <ul>
 <li>1. <a href="#robo55">Widgets/TkScale</a></li>
 <ul>
-<li>1.1. <a href="#robo101">TkScale/TkScale.Tk_Scale</a></li>
-<li>1.2. <a href="#robo563">TkScale/TkScale.Coords</a></li>
-<li>1.3. <a href="#robo564">TkScale/TkScale.Create_(function)</a></li>
-<li>1.4. <a href="#robo565">TkScale/TkScale.Create_(procedure)</a></li>
-<li>1.5. <a href="#robo566">TkScale/TkScale.Get_(at_selected_pixel)</a></li>
-<li>1.6. <a href="#robo567">TkScale/TkScale.Get_(current_value)</a></li>
-<li>1.7. <a href="#robo568">TkScale/TkScale.Get_Widget</a></li>
-<li>1.8. <a href="#robo569">TkScale/TkScale.Identify</a></li>
-<li>1.9. <a href="#robo570">TkScale/TkScale.Set</a></li>
+<li>1.1. <a href="#robo102">TkScale/TkScale.Tk_Scale</a></li>
+<li>1.2. <a href="#robo568">TkScale/TkScale.Coords</a></li>
+<li>1.3. <a href="#robo569">TkScale/TkScale.Create_(function)</a></li>
+<li>1.4. <a href="#robo570">TkScale/TkScale.Create_(procedure)</a></li>
+<li>1.5. <a href="#robo571">TkScale/TkScale.Get_(at_selected_pixel)</a></li>
+<li>1.6. <a href="#robo572">TkScale/TkScale.Get_(current_value)</a></li>
+<li>1.7. <a href="#robo573">TkScale/TkScale.Get_Widget</a></li>
+<li>1.8. <a href="#robo574">TkScale/TkScale.Identify</a></li>
+<li>1.9. <a href="#robo575">TkScale/TkScale.Set</a></li>
 </ul>
 </ul>
 <hr />
@@ -47,12 +47,15 @@
 <pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo14">Tk</a> widget Scale
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo29">Widgets</a><span class="sign">.</span>Scale <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo29">Widgets</a><span class="sign">.</span>Scale <span class="keyword">with</span>
+   SPARK_Mode
+<span class="keyword">is</span>
+   <span class="keyword">pragma</span> Elaborate_Body<span class="sign">;</span>
 </pre>
 
 <hr />
 <a name="TkScale2fTkScale2eTk5fScale"></a>
-<a name="robo101"></a><h2>TkScale/TkScale.Tk_Scale [ Types ]</h2>
+<a name="robo102"></a><h2>TkScale/TkScale.Tk_Scale [ Types ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo55">TkScale</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -66,7 +69,7 @@
 
 <hr />
 <a name="TkScale2fTkScale2eCoords"></a>
-<a name="robo563"></a><h2>TkScale/TkScale.Coords [ Subprograms ]</h2>
+<a name="robo568"></a><h2>TkScale/TkScale.Coords [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo55">TkScale</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -99,7 +102,7 @@
 
 <hr />
 <a name="TkScale2fTkScale2eCreate5f28function29"></a>
-<a name="robo564"></a><h2>TkScale/TkScale.Create_(function) [ Subprograms ]</h2>
+<a name="robo569"></a><h2>TkScale/TkScale.Create_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo55">TkScale</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -108,8 +111,8 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> Create
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> Tk_Scale <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Null_Interp<span class="sign">)</span> <span class="keyword">return</span> Tk_Scale <span class="keyword">with</span>
+      Global <span class="sign">=</span><span class="sign">&gt;</span> <span class="keyword">null</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
@@ -127,7 +130,7 @@
    My_Scale<span class="sign">:</span> <span class="keyword">constant</span> Tk_Scale <span class="sign">:</span><span class="sign">=</span> Create<span class="sign">(</span><span class="quote">".myscale"</span><span class="sign">,</span> <span class="quote">"-orient horizontal"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo565">TkScale.Create_(procedure)</a>
+<pre> <a href="#robo570">TkScale.Create_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> scale pathName ?options?
@@ -138,7 +141,7 @@
 
 <hr />
 <a name="TkScale2fTkScale2eCreate5f28procedure29"></a>
-<a name="robo565"></a><h2>TkScale/TkScale.Create_(procedure) [ Subprograms ]</h2>
+<a name="robo570"></a><h2>TkScale/TkScale.Create_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo55">TkScale</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -147,8 +150,8 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> Create
      <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> Tk_Scale<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Null_Interp<span class="sign">)</span> <span class="keyword">with</span>
+      Global <span class="sign">=</span><span class="sign">&gt;</span> <span class="keyword">null</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Widgt    - Tk_Scale which will be created
@@ -171,7 +174,7 @@
      <span class="keyword">end</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo564">TkScale.Create_(function)</a>
+<pre> <a href="#robo569">TkScale.Create_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> scale pathName ?options?
@@ -182,7 +185,7 @@
 
 <hr />
 <a name="TkScale2fTkScale2eGet5f28at5fselected5fpixel29"></a>
-<a name="robo566"></a><h2>TkScale/TkScale.Get_(at_selected_pixel) [ Subprograms ]</h2>
+<a name="robo571"></a><h2>TkScale/TkScale.Get_(at_selected_pixel) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo55">TkScale</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -190,7 +193,7 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Get<span class="sign">(</span>ScaleWidget<span class="sign">:</span> <span class="keyword">in</span> Tk_Scale<span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> X /= "" and Y /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> ScaleWidget - Tk_Scale which will be queried for value
@@ -205,7 +208,7 @@
    Value <span class="sign">:</span><span class="sign">=</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Get<span class="sign">(</span>My_Scale<span class="sign">,</span> <span class="quote">"45"</span><span class="sign">,</span> <span class="quote">"21"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo567">TkScale.Get_(current_value)</a>
+<pre> <a href="#robo572">TkScale.Get_(current_value)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ScaleWidget get x y
@@ -216,7 +219,7 @@
 
 <hr />
 <a name="TkScale2fTkScale2eGet5f28current5fvalue29"></a>
-<a name="robo567"></a><h2>TkScale/TkScale.Get_(current_value) [ Subprograms ]</h2>
+<a name="robo572"></a><h2>TkScale/TkScale.Get_(current_value) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo55">TkScale</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -236,7 +239,7 @@
      Value<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Get<span class="sign">(</span>My_Scale<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo566">TkScale.Get_(at_selected_pixel)</a>
+<pre> <a href="#robo571">TkScale.Get_(at_selected_pixel)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ScaleWidget get
@@ -247,7 +250,7 @@
 
 <hr />
 <a name="TkScale2fTkScale2eGet5fWidget"></a>
-<a name="robo568"></a><h2>TkScale/TkScale.Get_Widget [ Subprograms ]</h2>
+<a name="robo573"></a><h2>TkScale/TkScale.Get_Widget [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo55">TkScale</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -256,7 +259,8 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> Get_Widget
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Get_Context<span class="sign">)</span>
-      <span class="keyword">return</span> Tk_Scale<span class="sign">;</span>
+      <span class="keyword">return</span> Tk_Scale <span class="keyword">with</span>
+      Global <span class="sign">=</span><span class="sign">&gt;</span> <span class="keyword">null</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
@@ -276,7 +280,7 @@
 
 <hr />
 <a name="TkScale2fTkScale2eIdentify"></a>
-<a name="robo569"></a><h2>TkScale/TkScale.Identify [ Subprograms ]</h2>
+<a name="robo574"></a><h2>TkScale/TkScale.Identify [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo55">TkScale</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -285,7 +289,7 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Identify
      <span class="sign">(</span>ScaleWidget<span class="sign">:</span> <span class="keyword">in</span> Tk_Scale<span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> X /= "" and Y /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> ScaleWidget - Tk_Scale which will be queried
@@ -310,7 +314,7 @@
 
 <hr />
 <a name="TkScale2fTkScale2eSet"></a>
-<a name="robo570"></a><h2>TkScale/TkScale.Set [ Subprograms ]</h2>
+<a name="robo575"></a><h2>TkScale/TkScale.Set [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo55">TkScale</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -318,7 +322,7 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Set<span class="sign">(</span>ScaleWidget<span class="sign">:</span> <span class="keyword">in</span> Tk_Scale<span class="sign">;</span> Value<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Value <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Value /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> ScaleWidget - Tk_Scale which value will be set
@@ -337,7 +341,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-scale.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Dec 18 2020 07:13:51
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-scale.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 08 2021 07:13:11
 </p>
 </div> <!-- footer -->
 </body>

@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.11 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.12 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,22 +27,22 @@
 <ul>
 <li>1. <a href="#robo63">Widgets/TtkNotebook</a></li>
 <ul>
-<li>1.1. <a href="#robo111">TtkNotebook/TtkNotebook.Ttk_Notebook</a></li>
-<li>1.2. <a href="#robo624">TtkNotebook/TtkNotebook.Add</a></li>
-<li>1.3. <a href="#robo625">TtkNotebook/TtkNotebook.Create_(function)</a></li>
-<li>1.4. <a href="#robo626">TtkNotebook/TtkNotebook.Create_(procedure)</a></li>
-<li>1.5. <a href="#robo627">TtkNotebook/TtkNotebook.Forget</a></li>
-<li>1.6. <a href="#robo628">TtkNotebook/TtkNotebook.Get_Selected</a></li>
-<li>1.7. <a href="#robo629">TtkNotebook/TtkNotebook.Get_Widget</a></li>
-<li>1.8. <a href="#robo630">TtkNotebook/TtkNotebook.Hide</a></li>
-<li>1.9. <a href="#robo631">TtkNotebook/TtkNotebook.Identify_Element</a></li>
-<li>1.10. <a href="#robo632">TtkNotebook/TtkNotebook.Identify_Tab</a></li>
-<li>1.11. <a href="#robo633">TtkNotebook/TtkNotebook.Index</a></li>
-<li>1.12. <a href="#robo634">TtkNotebook/TtkNotebook.Insert</a></li>
-<li>1.13. <a href="#robo635">TtkNotebook/TtkNotebook.Notebook_Select</a></li>
-<li>1.14. <a href="#robo636">TtkNotebook/TtkNotebook.Tab_(function)</a></li>
-<li>1.15. <a href="#robo637">TtkNotebook/TtkNotebook.Tab_(procedure)</a></li>
-<li>1.16. <a href="#robo638">TtkNotebook/TtkNotebook.Tabs</a></li>
+<li>1.1. <a href="#robo112">TtkNotebook/TtkNotebook.Ttk_Notebook</a></li>
+<li>1.2. <a href="#robo629">TtkNotebook/TtkNotebook.Add</a></li>
+<li>1.3. <a href="#robo630">TtkNotebook/TtkNotebook.Create_(function)</a></li>
+<li>1.4. <a href="#robo631">TtkNotebook/TtkNotebook.Create_(procedure)</a></li>
+<li>1.5. <a href="#robo632">TtkNotebook/TtkNotebook.Forget</a></li>
+<li>1.6. <a href="#robo633">TtkNotebook/TtkNotebook.Get_Selected</a></li>
+<li>1.7. <a href="#robo634">TtkNotebook/TtkNotebook.Get_Widget</a></li>
+<li>1.8. <a href="#robo635">TtkNotebook/TtkNotebook.Hide</a></li>
+<li>1.9. <a href="#robo636">TtkNotebook/TtkNotebook.Identify_Element</a></li>
+<li>1.10. <a href="#robo637">TtkNotebook/TtkNotebook.Identify_Tab</a></li>
+<li>1.11. <a href="#robo638">TtkNotebook/TtkNotebook.Index</a></li>
+<li>1.12. <a href="#robo639">TtkNotebook/TtkNotebook.Insert</a></li>
+<li>1.13. <a href="#robo640">TtkNotebook/TtkNotebook.Notebook_Select</a></li>
+<li>1.14. <a href="#robo641">TtkNotebook/TtkNotebook.Tab_(function)</a></li>
+<li>1.15. <a href="#robo642">TtkNotebook/TtkNotebook.Tab_(procedure)</a></li>
+<li>1.16. <a href="#robo643">TtkNotebook/TtkNotebook.Tabs</a></li>
 </ul>
 </ul>
 <hr />
@@ -54,12 +54,15 @@
 <pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo14">Tk</a> widget Ttk::Notebook
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo29">Widgets</a><span class="sign">.</span><strong>TtkNotebook</strong> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo29">Widgets</a><span class="sign">.</span><strong>TtkNotebook</strong> <span class="keyword">with</span>
+   SPARK_Mode
+<span class="keyword">is</span>
+   <span class="keyword">pragma</span> Elaborate_Body<span class="sign">;</span>
 </pre>
 
 <hr />
 <a name="TtkNotebook2fTtkNotebook2eTtk5fNotebook"></a>
-<a name="robo111"></a><h2>TtkNotebook/TtkNotebook.Ttk_Notebook [ Types ]</h2>
+<a name="robo112"></a><h2>TtkNotebook/TtkNotebook.Ttk_Notebook [ Types ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -73,7 +76,7 @@
 
 <hr />
 <a name="TtkNotebook2fTtkNotebook2eAdd"></a>
-<a name="robo624"></a><h2>TtkNotebook/TtkNotebook.Add [ Subprograms ]</h2>
+<a name="robo629"></a><h2>TtkNotebook/TtkNotebook.Add [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -83,7 +86,7 @@
 <pre class="source">   <span class="keyword">procedure</span> Add
      <span class="sign">(</span>Notebook<span class="sign">:</span> <span class="keyword">in</span> Ttk_Notebook<span class="sign">;</span> WindowName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
       Options<span class="sign">:</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> WindowName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> WindowName /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Notebook   - Ttk_Notebook to which window will be added
@@ -103,7 +106,7 @@
 
 <hr />
 <a name="TtkNotebook2fTtkNotebook2eCreate5f28function29"></a>
-<a name="robo625"></a><h2>TtkNotebook/TtkNotebook.Create_(function) [ Subprograms ]</h2>
+<a name="robo630"></a><h2>TtkNotebook/TtkNotebook.Create_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -112,8 +115,8 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> Create
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> Ttk_Notebook <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Null_Interp<span class="sign">)</span> <span class="keyword">return</span> Ttk_Notebook <span class="keyword">with</span>
+      Global <span class="sign">=</span><span class="sign">&gt;</span> <span class="keyword">null</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
@@ -131,7 +134,7 @@
    My_Notebook<span class="sign">:</span> <span class="keyword">constant</span> Ttk_Notebook <span class="sign">:</span><span class="sign">=</span> Create<span class="sign">(</span><span class="quote">".mynotebook"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo626">TtkNotebook.Create_(procedure)</a>
+<pre> <a href="#robo631">TtkNotebook.Create_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ttk::notebook pathName ?options?
@@ -142,7 +145,7 @@
 
 <hr />
 <a name="TtkNotebook2fTtkNotebook2eCreate5f28procedure29"></a>
-<a name="robo626"></a><h2>TtkNotebook/TtkNotebook.Create_(procedure) [ Subprograms ]</h2>
+<a name="robo631"></a><h2>TtkNotebook/TtkNotebook.Create_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -151,8 +154,8 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> Create
      <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> Ttk_Notebook<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Null_Interp<span class="sign">)</span> <span class="keyword">with</span>
+      Global <span class="sign">=</span><span class="sign">&gt;</span> <span class="keyword">null</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Widgt    - Ttk_Notebook which will be created
@@ -175,7 +178,7 @@
      <span class="keyword">end</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo625">TtkNotebook.Create_(function)</a>
+<pre> <a href="#robo630">TtkNotebook.Create_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ttk::notebook pathName ?options?
@@ -186,7 +189,7 @@
 
 <hr />
 <a name="TtkNotebook2fTtkNotebook2eForget"></a>
-<a name="robo627"></a><h2>TtkNotebook/TtkNotebook.Forget [ Subprograms ]</h2>
+<a name="robo632"></a><h2>TtkNotebook/TtkNotebook.Forget [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -194,7 +197,7 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Forget<span class="sign">(</span>Notebook<span class="sign">:</span> <span class="keyword">in</span> Ttk_Notebook<span class="sign">;</span> TabId<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> TabId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> TabId /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Notebook - Ttk_Notebook in which the tab will be removed
@@ -213,7 +216,7 @@
 
 <hr />
 <a name="TtkNotebook2fTtkNotebook2eGet5fSelected"></a>
-<a name="robo628"></a><h2>TtkNotebook/TtkNotebook.Get_Selected [ Subprograms ]</h2>
+<a name="robo633"></a><h2>TtkNotebook/TtkNotebook.Get_Selected [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -241,7 +244,7 @@
 
 <hr />
 <a name="TtkNotebook2fTtkNotebook2eGet5fWidget"></a>
-<a name="robo629"></a><h2>TtkNotebook/TtkNotebook.Get_Widget [ Subprograms ]</h2>
+<a name="robo634"></a><h2>TtkNotebook/TtkNotebook.Get_Widget [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -250,7 +253,8 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> Get_Widget
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Get_Context<span class="sign">)</span>
-      <span class="keyword">return</span> Ttk_Notebook<span class="sign">;</span>
+      <span class="keyword">return</span> Ttk_Notebook <span class="keyword">with</span>
+      Global <span class="sign">=</span><span class="sign">&gt;</span> <span class="keyword">null</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
@@ -270,7 +274,7 @@
 
 <hr />
 <a name="TtkNotebook2fTtkNotebook2eHide"></a>
-<a name="robo630"></a><h2>TtkNotebook/TtkNotebook.Hide [ Subprograms ]</h2>
+<a name="robo635"></a><h2>TtkNotebook/TtkNotebook.Hide [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -278,7 +282,7 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Hide<span class="sign">(</span>Notebook<span class="sign">:</span> <span class="keyword">in</span> Ttk_Notebook<span class="sign">;</span> TabId<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> TabId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> TabId /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Notebook - Ttk_Notebook in which tab will be hidden
@@ -297,7 +301,7 @@
 
 <hr />
 <a name="TtkNotebook2fTtkNotebook2eIdentify5fElement"></a>
-<a name="robo631"></a><h2>TtkNotebook/TtkNotebook.Identify_Element [ Subprograms ]</h2>
+<a name="robo636"></a><h2>TtkNotebook/TtkNotebook.Identify_Element [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -306,7 +310,7 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Identify_Element
      <span class="sign">(</span>Notebook<span class="sign">:</span> <span class="keyword">in</span> Ttk_Notebook<span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> X /= "" and Y /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Notebook - Ttk_Notebook in which element will be queried
@@ -330,7 +334,7 @@
 
 <hr />
 <a name="TtkNotebook2fTtkNotebook2eIdentify5fTab"></a>
-<a name="robo632"></a><h2>TtkNotebook/TtkNotebook.Identify_Tab [ Subprograms ]</h2>
+<a name="robo637"></a><h2>TtkNotebook/TtkNotebook.Identify_Tab [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -339,7 +343,7 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Identify_Tab
      <span class="sign">(</span>Notebook<span class="sign">:</span> <span class="keyword">in</span> Ttk_Notebook<span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> X /= "" and Y /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Notebook - Ttk_Notebook in which tabs will be queried
@@ -363,7 +367,7 @@
 
 <hr />
 <a name="TtkNotebook2fTtkNotebook2eIndex"></a>
-<a name="robo633"></a><h2>TtkNotebook/TtkNotebook.Index [ Subprograms ]</h2>
+<a name="robo638"></a><h2>TtkNotebook/TtkNotebook.Index [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -372,7 +376,7 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Index
      <span class="sign">(</span>Notebook<span class="sign">:</span> <span class="keyword">in</span> Ttk_Notebook<span class="sign">;</span> TabId<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> TabId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> TabId /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Notebook - Ttk_Notebook which will be queried
@@ -395,7 +399,7 @@
 
 <hr />
 <a name="TtkNotebook2fTtkNotebook2eInsert"></a>
-<a name="robo634"></a><h2>TtkNotebook/TtkNotebook.Insert [ Subprograms ]</h2>
+<a name="robo639"></a><h2>TtkNotebook/TtkNotebook.Insert [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -407,7 +411,7 @@
 <pre class="source">   <span class="keyword">procedure</span> Insert
      <span class="sign">(</span>Notebook<span class="sign">:</span> <span class="keyword">in</span> Ttk_Notebook<span class="sign">;</span> Pos<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> SubWindow<span class="sign">:</span> <span class="keyword">in</span> Tk_Widget<span class="keyword">'Class</span><span class="sign">;</span>
       Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre =<span class="sign">&gt;</span> Pos /= "" and Options /= ""<span class="sign">;</span>
+      Pre'</span>Class <span class="sign">=</span><span class="sign">&gt;</span> Pos <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Notebook  - Ttk_Notebook in which the selected SubWindow will be
@@ -429,7 +433,7 @@
 
 <hr />
 <a name="TtkNotebook2fTtkNotebook2eNotebook5fSelect"></a>
-<a name="robo635"></a><h2>TtkNotebook/TtkNotebook.Notebook_Select [ Subprograms ]</h2>
+<a name="robo640"></a><h2>TtkNotebook/TtkNotebook.Notebook_Select [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -437,7 +441,7 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Notebook_Select<span class="sign">(</span>Notebook<span class="sign">:</span> <span class="keyword">in</span> Ttk_Notebook<span class="sign">;</span> TabId<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> TabId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> TabId /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Notebook - Ttk_Notebook in which the tab will be selected
@@ -456,7 +460,7 @@
 
 <hr />
 <a name="TtkNotebook2fTtkNotebook2eTab5f28function29"></a>
-<a name="robo636"></a><h2>TtkNotebook/TtkNotebook.Tab_(function) [ Subprograms ]</h2>
+<a name="robo641"></a><h2>TtkNotebook/TtkNotebook.Tab_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -467,7 +471,7 @@
 <pre class="source">   <span class="keyword">function</span> Tab
      <span class="sign">(</span>Notebook<span class="sign">:</span> <span class="keyword">in</span> Ttk_Notebook<span class="sign">;</span> TabId<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a><span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span>
       <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> TabId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> TabId /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Notebook - Ttk_Notebook in which tab will be queried for the options
@@ -484,7 +488,7 @@
       Title<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Tab<span class="sign">(</span>My_Notebook<span class="sign">,</span> <span class="quote">"end"</span><span class="sign">,</span> <span class="quote">"-text"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo637">TtkNotebook.Tab_(procedure)</a>
+<pre> <a href="#robo642">TtkNotebook.Tab_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> Notebook tab tabid
@@ -495,7 +499,7 @@
 
 <hr />
 <a name="TtkNotebook2fTtkNotebook2eTab5f28procedure29"></a>
-<a name="robo637"></a><h2>TtkNotebook/TtkNotebook.Tab_(procedure) [ Subprograms ]</h2>
+<a name="robo642"></a><h2>TtkNotebook/TtkNotebook.Tab_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -504,7 +508,7 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Tab<span class="sign">(</span>Notebook<span class="sign">:</span> <span class="keyword">in</span> Ttk_Notebook<span class="sign">;</span> TabId<span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> TabId <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> TabId /= "" and Options /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Notebook - Ttk_Notebook in which the tab will be set
@@ -516,7 +520,7 @@
    Tab<span class="sign">(</span>My_Notebook<span class="sign">,</span> <span class="quote">"1"</span><span class="sign">,</span> <span class="quote">"-text {my new tab}"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo636">TtkNotebook.Tab_(function)</a>
+<pre> <a href="#robo641">TtkNotebook.Tab_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> Notebook tab tabid ?options?
@@ -527,7 +531,7 @@
 
 <hr />
 <a name="TtkNotebook2fTtkNotebook2eTabs"></a>
-<a name="robo638"></a><h2>TtkNotebook/TtkNotebook.Tabs [ Subprograms ]</h2>
+<a name="robo643"></a><h2>TtkNotebook/TtkNotebook.Tabs [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo63">TtkNotebook</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -555,7 +559,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-ttknotebook.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Dec 18 2020 07:13:51
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-ttknotebook.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 08 2021 07:13:11
 </p>
 </div> <!-- footer -->
 </body>

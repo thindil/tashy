@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.11 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.12 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,28 +27,28 @@
 <ul>
 <li>1. <a href="#robo47">Widgets/Menu</a></li>
 <ul>
-<li>1.1. <a href="#robo90">Menu/Menu.Tk_Menu</a></li>
-<li>1.2. <a href="#robo314">Menu/Menu.Activate</a></li>
-<li>1.3. <a href="#robo315">Menu/Menu.AddMenu</a></li>
-<li>1.4. <a href="#robo316">Menu/Menu.Clone</a></li>
-<li>1.5. <a href="#robo317">Menu/Menu.Create_(function)</a></li>
-<li>1.6. <a href="#robo318">Menu/Menu.Create_(procedure)</a></li>
-<li>1.7. <a href="#robo319">Menu/Menu.Delete</a></li>
-<li>1.8. <a href="#robo320">Menu/Menu.Entry_Cget</a></li>
-<li>1.9. <a href="#robo321">Menu/Menu.Entry_Configure_(function)</a></li>
-<li>1.10. <a href="#robo322">Menu/Menu.Entry_Configure_(procedure)</a></li>
-<li>1.11. <a href="#robo323">Menu/Menu.Get_Widget</a></li>
-<li>1.12. <a href="#robo324">Menu/Menu.Index</a></li>
-<li>1.13. <a href="#robo325">Menu/Menu.Insert</a></li>
-<li>1.14. <a href="#robo326">Menu/Menu.Invoke</a></li>
-<li>1.15. <a href="#robo327">Menu/Menu.Menu_Type</a></li>
-<li>1.16. <a href="#robo328">Menu/Menu.Post_(function)</a></li>
-<li>1.17. <a href="#robo329">Menu/Menu.Post_(procedure)</a></li>
-<li>1.18. <a href="#robo330">Menu/Menu.PostCascade</a></li>
-<li>1.19. <a href="#robo331">Menu/Menu.Tk_Popup</a></li>
-<li>1.20. <a href="#robo332">Menu/Menu.Unpost</a></li>
-<li>1.21. <a href="#robo333">Menu/Menu.XPosition</a></li>
-<li>1.22. <a href="#robo334">Menu/Menu.YPosition</a></li>
+<li>1.1. <a href="#robo91">Menu/Menu.Tk_Menu</a></li>
+<li>1.2. <a href="#robo318">Menu/Menu.Activate</a></li>
+<li>1.3. <a href="#robo319">Menu/Menu.AddMenu</a></li>
+<li>1.4. <a href="#robo320">Menu/Menu.Clone</a></li>
+<li>1.5. <a href="#robo321">Menu/Menu.Create_(function)</a></li>
+<li>1.6. <a href="#robo322">Menu/Menu.Create_(procedure)</a></li>
+<li>1.7. <a href="#robo323">Menu/Menu.Delete</a></li>
+<li>1.8. <a href="#robo324">Menu/Menu.Entry_Cget</a></li>
+<li>1.9. <a href="#robo325">Menu/Menu.Entry_Configure_(function)</a></li>
+<li>1.10. <a href="#robo326">Menu/Menu.Entry_Configure_(procedure)</a></li>
+<li>1.11. <a href="#robo327">Menu/Menu.Get_Widget</a></li>
+<li>1.12. <a href="#robo328">Menu/Menu.Index</a></li>
+<li>1.13. <a href="#robo329">Menu/Menu.Insert</a></li>
+<li>1.14. <a href="#robo330">Menu/Menu.Invoke</a></li>
+<li>1.15. <a href="#robo331">Menu/Menu.Menu_Type</a></li>
+<li>1.16. <a href="#robo332">Menu/Menu.Post_(function)</a></li>
+<li>1.17. <a href="#robo333">Menu/Menu.Post_(procedure)</a></li>
+<li>1.18. <a href="#robo334">Menu/Menu.PostCascade</a></li>
+<li>1.19. <a href="#robo335">Menu/Menu.Tk_Popup</a></li>
+<li>1.20. <a href="#robo336">Menu/Menu.Unpost</a></li>
+<li>1.21. <a href="#robo337">Menu/Menu.XPosition</a></li>
+<li>1.22. <a href="#robo338">Menu/Menu.YPosition</a></li>
 </ul>
 </ul>
 <hr />
@@ -60,12 +60,15 @@
 <pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo14">Tk</a> widget <strong>Menu</strong>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo29">Widgets</a><span class="sign">.</span><strong>Menu</strong> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo29">Widgets</a><span class="sign">.</span><strong>Menu</strong> <span class="keyword">with</span>
+   SPARK_Mode
+<span class="keyword">is</span>
+   <span class="keyword">pragma</span> Elaborate_Body<span class="sign">;</span>
 </pre>
 
 <hr />
 <a name="Menu2fMenu2eTk5fMenu"></a>
-<a name="robo90"></a><h2>Menu/Menu.Tk_Menu [ Types ]</h2>
+<a name="robo91"></a><h2>Menu/Menu.Tk_Menu [ Types ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo47">Menu</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -79,7 +82,7 @@
 
 <hr />
 <a name="Menu2fMenu2eActivate"></a>
-<a name="robo314"></a><h2>Menu/Menu.Activate [ Subprograms ]</h2>
+<a name="robo318"></a><h2>Menu/Menu.Activate [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo47">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -107,7 +110,7 @@
 
 <hr />
 <a name="Menu2fMenu2eAddMenu"></a>
-<a name="robo315"></a><h2>Menu/Menu.AddMenu [ Subprograms ]</h2>
+<a name="robo319"></a><h2>Menu/Menu.AddMenu [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo47">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -140,7 +143,7 @@
 
 <hr />
 <a name="Menu2fMenu2eClone"></a>
-<a name="robo316"></a><h2>Menu/Menu.Clone [ Subprograms ]</h2>
+<a name="robo320"></a><h2>Menu/Menu.Clone [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo47">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -170,7 +173,7 @@
 
 <hr />
 <a name="Menu2fMenu2eCreate5f28function29"></a>
-<a name="robo317"></a><h2>Menu/Menu.Create_(function) [ Subprograms ]</h2>
+<a name="robo321"></a><h2>Menu/Menu.Create_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo47">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -179,8 +182,8 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> Create
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> Tk_Menu <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Null_Interp<span class="sign">)</span> <span class="keyword">return</span> Tk_Menu <span class="keyword">with</span>
+      Global <span class="sign">=</span><span class="sign">&gt;</span> <span class="keyword">null</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
@@ -198,7 +201,7 @@
    My_Menu<span class="sign">:</span> <span class="keyword">constant</span> Tk_Menu <span class="sign">:</span><span class="sign">=</span> Create<span class="sign">(</span><span class="quote">".mymenu"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo318">Menu.Create_(procedure)</a>
+<pre> <a href="#robo322">Menu.Create_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> menu pathName ?options?
@@ -209,7 +212,7 @@
 
 <hr />
 <a name="Menu2fMenu2eCreate5f28procedure29"></a>
-<a name="robo318"></a><h2>Menu/Menu.Create_(procedure) [ Subprograms ]</h2>
+<a name="robo322"></a><h2>Menu/Menu.Create_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo47">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -218,8 +221,8 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> Create
      <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> Tk_Menu<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Null_Interp<span class="sign">)</span> <span class="keyword">with</span>
+      Global <span class="sign">=</span><span class="sign">&gt;</span> <span class="keyword">null</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Widgt    - Tk_Menu which will be created
@@ -242,7 +245,7 @@
      <span class="keyword">end</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo317">Menu.Create_(function)</a>
+<pre> <a href="#robo321">Menu.Create_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> menu pathName ?options?
@@ -253,7 +256,7 @@
 
 <hr />
 <a name="Menu2fMenu2eDelete"></a>
-<a name="robo319"></a><h2>Menu/Menu.Delete [ Subprograms ]</h2>
+<a name="robo323"></a><h2>Menu/Menu.Delete [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo47">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -263,7 +266,7 @@
 <pre class="source">   <span class="keyword">procedure</span> Delete
      <span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> Tk_Menu<span class="sign">;</span> StartIndex<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
       EndIndex<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> StartIndex <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> StartIndex /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> MenuWidget - Tk_Menu widget from which elementrs will be deleted
@@ -284,7 +287,7 @@
 
 <hr />
 <a name="Menu2fMenu2eEntry5fCget"></a>
-<a name="robo320"></a><h2>Menu/Menu.Entry_Cget [ Subprograms ]</h2>
+<a name="robo324"></a><h2>Menu/Menu.Entry_Cget [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo47">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -294,7 +297,7 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Entry_Cget
      <span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> Tk_Menu<span class="sign">;</span> Index<span class="sign">,</span> <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a><span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Index <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a> <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Index /= "" and <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a> /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> MenuWidget - Tk_Menu widget in which option will be queried
@@ -309,7 +312,7 @@
       <a href="./tcl-tk-ada-font_ads.html#robo21">Font</a><span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Entry_Cget<span class="sign">(</span>My_Menu<span class="sign">,</span> <span class="quote">"0"</span><span class="sign">,</span> <span class="quote">"-font"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo321">Menu.Entry_Configure_(function)</a>
+<pre> <a href="#robo325">Menu.Entry_Configure_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> MenuWidget entrycget index option
@@ -320,7 +323,7 @@
 
 <hr />
 <a name="Menu2fMenu2eEntry5fConfigure5f28function29"></a>
-<a name="robo321"></a><h2>Menu/Menu.Entry_Configure_(function) [ Subprograms ]</h2>
+<a name="robo325"></a><h2>Menu/Menu.Entry_Configure_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo47">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -329,7 +332,7 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Entry_Configure
      <span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> Tk_Menu<span class="sign">;</span> Index<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Index <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Index /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> MenuWidget - Tk_Menu widget from which entry configuration will be
@@ -345,7 +348,7 @@
       Options<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Entry_Configure<span class="sign">(</span>My_Menu<span class="sign">,</span> <span class="quote">"active"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo322">Menu.Entry_Configure_(procedure)</a>, <a href="#robo320">Menu.Entry_Cget</a>
+<pre> <a href="#robo326">Menu.Entry_Configure_(procedure)</a>, <a href="#robo324">Menu.Entry_Cget</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> MenuWidget entryconfigure index
@@ -356,7 +359,7 @@
 
 <hr />
 <a name="Menu2fMenu2eEntry5fConfigure5f28procedure29"></a>
-<a name="robo322"></a><h2>Menu/Menu.Entry_Configure_(procedure) [ Subprograms ]</h2>
+<a name="robo326"></a><h2>Menu/Menu.Entry_Configure_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo47">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -365,7 +368,7 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Entry_Configure
      <span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> Tk_Menu<span class="sign">;</span> Index<span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Index <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Index /= "" and Options /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> MenuWidget - Tk_Menu widget from which entry will be configured
@@ -377,7 +380,7 @@
       Entry_Configure<span class="sign">(</span>My_Menu<span class="sign">,</span> <span class="quote">"2"</span><span class="sign">,</span> <span class="quote">"-label {hello world}"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo321">Menu.Entry_Configure_(function)</a>
+<pre> <a href="#robo325">Menu.Entry_Configure_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> MenuWidget entryconfigure index options
@@ -388,7 +391,7 @@
 
 <hr />
 <a name="Menu2fMenu2eGet5fWidget"></a>
-<a name="robo323"></a><h2>Menu/Menu.Get_Widget [ Subprograms ]</h2>
+<a name="robo327"></a><h2>Menu/Menu.Get_Widget [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo47">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -397,7 +400,8 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> Get_Widget
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Get_Context<span class="sign">)</span>
-      <span class="keyword">return</span> Tk_Menu<span class="sign">;</span>
+      <span class="keyword">return</span> Tk_Menu <span class="keyword">with</span>
+      Global <span class="sign">=</span><span class="sign">&gt;</span> <span class="keyword">null</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
@@ -417,7 +421,7 @@
 
 <hr />
 <a name="Menu2fMenu2eIndex"></a>
-<a name="robo324"></a><h2>Menu/Menu.Index [ Subprograms ]</h2>
+<a name="robo328"></a><h2>Menu/Menu.Index [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo47">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -426,7 +430,7 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Index<span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> Tk_Menu<span class="sign">;</span> Index<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Index <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Index /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> MenuWidget - Tk_Menu widget in which entry will be queried
@@ -449,7 +453,7 @@
 
 <hr />
 <a name="Menu2fMenu2eInsert"></a>
-<a name="robo325"></a><h2>Menu/Menu.Insert [ Subprograms ]</h2>
+<a name="robo329"></a><h2>Menu/Menu.Insert [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo47">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -473,7 +477,7 @@
       Add<span class="sign">(</span>My_Menu<span class="sign">,</span> <span class="quote">"2"</span> <span class="sign">,</span><span class="quote">"command"</span><span class="sign">,</span> <span class="quote">"-label Quit -command exit"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo315">Menu.AddMenu</a>
+<pre> <a href="#robo319">Menu.AddMenu</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> MenuWidget insert index EntryType ?options?
@@ -484,7 +488,7 @@
 
 <hr />
 <a name="Menu2fMenu2eInvoke"></a>
-<a name="robo326"></a><h2>Menu/Menu.Invoke [ Subprograms ]</h2>
+<a name="robo330"></a><h2>Menu/Menu.Invoke [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo47">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -493,7 +497,7 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Invoke<span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> Tk_Menu<span class="sign">;</span> Index<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Index <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Index /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> MenuWidget - Tk_Menu widget from which entry will be activated
@@ -515,7 +519,7 @@
 
 <hr />
 <a name="Menu2fMenu2eMenu5fType"></a>
-<a name="robo327"></a><h2>Menu/Menu.Menu_Type [ Subprograms ]</h2>
+<a name="robo331"></a><h2>Menu/Menu.Menu_Type [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo47">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -524,7 +528,7 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Menu_Type
      <span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> Tk_Menu<span class="sign">;</span> Index<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Index <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Index /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> MenuWidget - Tk_Menu in which the selected entry will be queried
@@ -546,7 +550,7 @@
 
 <hr />
 <a name="Menu2fMenu2ePost5f28function29"></a>
-<a name="robo328"></a><h2>Menu/Menu.Post_(function) [ Subprograms ]</h2>
+<a name="robo332"></a><h2>Menu/Menu.Post_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo47">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -554,7 +558,7 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Post<span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> Tk_Menu<span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> X /= "" and Y /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> MenuWidget - Tk_Menu widget which will be shown
@@ -573,7 +577,7 @@
       Result<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Post<span class="sign">(</span>My_Menu<span class="sign">,</span> <span class="quote">"34"</span><span class="sign">,</span> <span class="quote">"67"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo329">Menu.Post_(procedure)</a>
+<pre> <a href="#robo333">Menu.Post_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> MenuWidget post x y
@@ -584,7 +588,7 @@
 
 <hr />
 <a name="Menu2fMenu2ePost5f28procedure29"></a>
-<a name="robo329"></a><h2>Menu/Menu.Post_(procedure) [ Subprograms ]</h2>
+<a name="robo333"></a><h2>Menu/Menu.Post_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo47">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -592,7 +596,7 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Post<span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> Tk_Menu<span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> X /= "" and Y /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> MenuWidget - Tk_Menu widget which will be shown
@@ -606,7 +610,7 @@
       Post<span class="sign">(</span>My_Menu<span class="sign">,</span> <span class="quote">"10"</span><span class="sign">,</span> <span class="quote">"87"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo328">Menu.Post_(function)</a>
+<pre> <a href="#robo332">Menu.Post_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> MenuWidget post x y
@@ -617,7 +621,7 @@
 
 <hr />
 <a name="Menu2fMenu2ePostCascade"></a>
-<a name="robo330"></a><h2>Menu/Menu.PostCascade [ Subprograms ]</h2>
+<a name="robo334"></a><h2>Menu/Menu.PostCascade [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo47">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -626,7 +630,7 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> PostCascade<span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> Tk_Menu<span class="sign">;</span> Index<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Index <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Index /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> MenuWidget - Tk_Menu from which submenu will be taken
@@ -645,7 +649,7 @@
 
 <hr />
 <a name="Menu2fMenu2eTk5fPopup"></a>
-<a name="robo331"></a><h2>Menu/Menu.Tk_Popup [ Subprograms ]</h2>
+<a name="robo335"></a><h2>Menu/Menu.Tk_Popup [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo47">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -654,7 +658,7 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Tk_Popup
      <span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> Tk_Menu<span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> MenuEntry<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> X /= "" and Y /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> MenuWidget - Tk_Menu which will be posted
@@ -677,7 +681,7 @@
 
 <hr />
 <a name="Menu2fMenu2eUnpost"></a>
-<a name="robo332"></a><h2>Menu/Menu.Unpost [ Subprograms ]</h2>
+<a name="robo336"></a><h2>Menu/Menu.Unpost [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo47">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -704,7 +708,7 @@
 
 <hr />
 <a name="Menu2fMenu2eXPosition"></a>
-<a name="robo333"></a><h2>Menu/Menu.XPosition [ Subprograms ]</h2>
+<a name="robo337"></a><h2>Menu/Menu.XPosition [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo47">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -714,7 +718,7 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> XPosition
      <span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> Tk_Menu<span class="sign">;</span> Index<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Index <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Index /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> MenuWidget - Tk_Menu in which the selected entry will be queried
@@ -729,7 +733,7 @@
    X_Position<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> XPosition<span class="sign">(</span>My_Menu<span class="sign">,</span> <span class="quote">"0"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo334">Menu.YPosition</a>
+<pre> <a href="#robo338">Menu.YPosition</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> MenuWidget xposition index
@@ -740,7 +744,7 @@
 
 <hr />
 <a name="Menu2fMenu2eYPosition"></a>
-<a name="robo334"></a><h2>Menu/Menu.YPosition [ Subprograms ]</h2>
+<a name="robo338"></a><h2>Menu/Menu.YPosition [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo47">Menu</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -750,7 +754,7 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> YPosition
      <span class="sign">(</span>MenuWidget<span class="sign">:</span> <span class="keyword">in</span> Tk_Menu<span class="sign">;</span> Index<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Index <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Index /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> MenuWidget - Tk_Menu in which the selected entry will be queried
@@ -765,7 +769,7 @@
       Y_Position<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> YPosition<span class="sign">(</span>My_Menu<span class="sign">,</span> <span class="quote">"0"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo333">Menu.XPosition</a>
+<pre> <a href="#robo337">Menu.XPosition</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> MenuWidget yposition index
@@ -776,7 +780,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-menu.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Dec 18 2020 07:13:51
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-menu.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 08 2021 07:13:11
 </p>
 </div> <!-- footer -->
 </body>

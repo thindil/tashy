@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.11 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.12 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,17 +27,17 @@
 <ul>
 <li>1. <a href="#robo28">TkAda/TtkStyle</a></li>
 <ul>
-<li>1.1. <a href="#robo686">TtkStyle/TtkStyle.Element_Create</a></li>
-<li>1.2. <a href="#robo687">TtkStyle/TtkStyle.Element_Names</a></li>
-<li>1.3. <a href="#robo688">TtkStyle/TtkStyle.Element_Options</a></li>
-<li>1.4. <a href="#robo689">TtkStyle/TtkStyle.Style_Configure</a></li>
-<li>1.5. <a href="#robo690">TtkStyle/TtkStyle.Style_Layout_(function)</a></li>
-<li>1.6. <a href="#robo691">TtkStyle/TtkStyle.Style_Layout_(procedure)</a></li>
-<li>1.7. <a href="#robo692">TtkStyle/TtkStyle.Style_Lookup</a></li>
-<li>1.8. <a href="#robo693">TtkStyle/TtkStyle.Style_Map</a></li>
-<li>1.9. <a href="#robo694">TtkStyle/TtkStyle.Theme_Names</a></li>
-<li>1.10. <a href="#robo695">TtkStyle/TtkStyle.Theme_Use_(function)</a></li>
-<li>1.11. <a href="#robo696">TtkStyle/TtkStyle.Theme_Use_(procedure)</a></li>
+<li>1.1. <a href="#robo691">TtkStyle/TtkStyle.Element_Create</a></li>
+<li>1.2. <a href="#robo692">TtkStyle/TtkStyle.Element_Names</a></li>
+<li>1.3. <a href="#robo693">TtkStyle/TtkStyle.Element_Options</a></li>
+<li>1.4. <a href="#robo694">TtkStyle/TtkStyle.Style_Configure</a></li>
+<li>1.5. <a href="#robo695">TtkStyle/TtkStyle.Style_Layout_(function)</a></li>
+<li>1.6. <a href="#robo696">TtkStyle/TtkStyle.Style_Layout_(procedure)</a></li>
+<li>1.7. <a href="#robo697">TtkStyle/TtkStyle.Style_Lookup</a></li>
+<li>1.8. <a href="#robo698">TtkStyle/TtkStyle.Style_Map</a></li>
+<li>1.9. <a href="#robo699">TtkStyle/TtkStyle.Theme_Names</a></li>
+<li>1.10. <a href="#robo700">TtkStyle/TtkStyle.Theme_Use_(function)</a></li>
+<li>1.11. <a href="#robo701">TtkStyle/TtkStyle.Theme_Use_(procedure)</a></li>
 </ul>
 </ul>
 <hr />
@@ -49,12 +49,14 @@
 <pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo14">Tk</a> command ttk::style
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><strong>TtkStyle</strong> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><strong>TtkStyle</strong> <span class="keyword">with</span>
+   SPARK_Mode
+<span class="keyword">is</span>
 </pre>
 
 <hr />
 <a name="TtkStyle2fTtkStyle2eElement5fCreate"></a>
-<a name="robo686"></a><h2>TtkStyle/TtkStyle.Element_Create [ Subprograms ]</h2>
+<a name="robo691"></a><h2>TtkStyle/TtkStyle.Element_Create [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo28">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -83,7 +85,7 @@
 
 <hr />
 <a name="TtkStyle2fTtkStyle2eElement5fNames"></a>
-<a name="robo687"></a><h2>TtkStyle/TtkStyle.Element_Names [ Subprograms ]</h2>
+<a name="robo692"></a><h2>TtkStyle/TtkStyle.Element_Names [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo28">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -104,7 +106,7 @@
 
 <hr />
 <a name="TtkStyle2fTtkStyle2eElement5fOptions"></a>
-<a name="robo688"></a><h2>TtkStyle/TtkStyle.Element_Options [ Subprograms ]</h2>
+<a name="robo693"></a><h2>TtkStyle/TtkStyle.Element_Options [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo28">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -133,7 +135,7 @@
 
 <hr />
 <a name="TtkStyle2fTtkStyle2eStyle5fConfigure"></a>
-<a name="robo689"></a><h2>TtkStyle/TtkStyle.Style_Configure [ Subprograms ]</h2>
+<a name="robo694"></a><h2>TtkStyle/TtkStyle.Style_Configure [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo28">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -160,7 +162,7 @@
 
 <hr />
 <a name="TtkStyle2fTtkStyle2eStyle5fLayout5f28function29"></a>
-<a name="robo690"></a><h2>TtkStyle/TtkStyle.Style_Layout_(function) [ Subprograms ]</h2>
+<a name="robo695"></a><h2>TtkStyle/TtkStyle.Style_Layout_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo28">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -181,7 +183,7 @@
       Layout<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Style_Layout<span class="sign">(</span><span class="quote">"Toolbutton"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo691">TtkStyle.Style_Layout_(procedure)</a>
+<pre> <a href="#robo696">TtkStyle.Style_Layout_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ttk::style layout name
@@ -192,7 +194,7 @@
 
 <hr />
 <a name="TtkStyle2fTtkStyle2eStyle5fLayout5f28procedure29"></a>
-<a name="robo691"></a><h2>TtkStyle/TtkStyle.Style_Layout_(procedure) [ Subprograms ]</h2>
+<a name="robo696"></a><h2>TtkStyle/TtkStyle.Style_Layout_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo28">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -211,7 +213,7 @@
       Style_Layout<span class="sign">(</span><span class="quote">"TButton"</span><span class="sign">,</span> <span class="quote">"{<a href="./tcl-tk-ada-widgets-button_ads.html#robo42">Button</a>.button -children { <a href="./tcl-tk-ada-widgets-button_ads.html#robo42">Button</a>.padding -children { <a href="./tcl-tk-ada-widgets-button_ads.html#robo42">Button</a>.label -side left -expand true } } }"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo690">TtkStyle.Style_Layout_(function)</a>
+<pre> <a href="#robo695">TtkStyle.Style_Layout_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ttk::style layout name options
@@ -222,7 +224,7 @@
 
 <hr />
 <a name="TtkStyle2fTtkStyle2eStyle5fLookup"></a>
-<a name="robo692"></a><h2>TtkStyle/TtkStyle.Style_Lookup [ Subprograms ]</h2>
+<a name="robo697"></a><h2>TtkStyle/TtkStyle.Style_Lookup [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo28">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -258,7 +260,7 @@
 
 <hr />
 <a name="TtkStyle2fTtkStyle2eStyle5fMap"></a>
-<a name="robo693"></a><h2>TtkStyle/TtkStyle.Style_Map [ Subprograms ]</h2>
+<a name="robo698"></a><h2>TtkStyle/TtkStyle.Style_Map [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo28">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -285,7 +287,7 @@
 
 <hr />
 <a name="TtkStyle2fTtkStyle2eTheme5fNames"></a>
-<a name="robo694"></a><h2>TtkStyle/TtkStyle.Theme_Names [ Subprograms ]</h2>
+<a name="robo699"></a><h2>TtkStyle/TtkStyle.Theme_Names [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo28">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -310,7 +312,7 @@
 
 <hr />
 <a name="TtkStyle2fTtkStyle2eTheme5fUse5f28function29"></a>
-<a name="robo695"></a><h2>TtkStyle/TtkStyle.Theme_Use_(function) [ Subprograms ]</h2>
+<a name="robo700"></a><h2>TtkStyle/TtkStyle.Theme_Use_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo28">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -327,7 +329,7 @@
       Current_Theme<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Theme_Use<span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo696">TtkStyle.Theme_Use_(procedure)</a>
+<pre> <a href="#robo701">TtkStyle.Theme_Use_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ttk::style theme use
@@ -338,7 +340,7 @@
 
 <hr />
 <a name="TtkStyle2fTtkStyle2eTheme5fUse5f28procedure29"></a>
-<a name="robo696"></a><h2>TtkStyle/TtkStyle.Theme_Use_(procedure) [ Subprograms ]</h2>
+<a name="robo701"></a><h2>TtkStyle/TtkStyle.Theme_Use_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo28">TtkStyle</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -356,7 +358,7 @@
    Theme_Use<span class="sign">(</span><span class="quote">"clam"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo695">TtkStyle.Theme_Use_(function)</a>
+<pre> <a href="#robo700">TtkStyle.Theme_Use_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ttk::style theme use ThemeName
@@ -367,7 +369,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-ttkstyle.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Dec 18 2020 07:13:51
+<p>Generated from ./src/tk/tcl-tk-ada-ttkstyle.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 08 2021 07:13:11
 </p>
 </div> <!-- footer -->
 </body>

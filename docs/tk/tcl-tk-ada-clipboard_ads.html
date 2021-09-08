@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.11 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.12 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,14 +27,14 @@
 <ul>
 <li>1. <a href="#robo18">TkAda/Clipboard</a></li>
 <ul>
-<li>1.1. <a href="#robo200">Clipboard/Clipboard.Append</a></li>
-<li>1.2. <a href="#robo201">Clipboard/Clipboard.Clear</a></li>
-<li>1.3. <a href="#robo202">Clipboard/Clipboard.Get</a></li>
-<li>1.4. <a href="#robo203">Clipboard/Clipboard.Selection_Clear</a></li>
-<li>1.5. <a href="#robo204">Clipboard/Clipboard.Selection_Get</a></li>
-<li>1.6. <a href="#robo205">Clipboard/Clipboard.Selection_Handle</a></li>
-<li>1.7. <a href="#robo206">Clipboard/Clipboard.Selection_Own_(function)</a></li>
-<li>1.8. <a href="#robo207">Clipboard/Clipboard.Selection_Own_(procedure)</a></li>
+<li>1.1. <a href="#robo203">Clipboard/Clipboard.Append</a></li>
+<li>1.2. <a href="#robo204">Clipboard/Clipboard.Clear</a></li>
+<li>1.3. <a href="#robo205">Clipboard/Clipboard.Get</a></li>
+<li>1.4. <a href="#robo206">Clipboard/Clipboard.Selection_Clear</a></li>
+<li>1.5. <a href="#robo207">Clipboard/Clipboard.Selection_Get</a></li>
+<li>1.6. <a href="#robo208">Clipboard/Clipboard.Selection_Handle</a></li>
+<li>1.7. <a href="#robo209">Clipboard/Clipboard.Selection_Own_(function)</a></li>
+<li>1.8. <a href="#robo210">Clipboard/Clipboard.Selection_Own_(procedure)</a></li>
 </ul>
 </ul>
 <hr />
@@ -46,12 +46,12 @@
 <pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo14">Tk</a> clipboard and selection
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><strong>Clipboard</strong> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><strong>Clipboard</strong> <span class="keyword">with</span> SPARK_Mode <span class="keyword">is</span>
 </pre>
 
 <hr />
 <a name="Clipboard2fClipboard2eAppend"></a>
-<a name="robo200"></a><h2>Clipboard/Clipboard.Append [ Subprograms ]</h2>
+<a name="robo203"></a><h2>Clipboard/Clipboard.Append [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">Clipboard</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -85,7 +85,7 @@
 
 <hr />
 <a name="Clipboard2fClipboard2eClear"></a>
-<a name="robo201"></a><h2>Clipboard/Clipboard.Clear [ Subprograms ]</h2>
+<a name="robo204"></a><h2>Clipboard/Clipboard.Clear [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">Clipboard</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -102,7 +102,7 @@
       Clear<span class="sign">(</span>My_Main_Window<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo203">Clipboard.Selection_Clear</a>
+<pre> <a href="#robo206">Clipboard.Selection_Clear</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> clipboard clear -displayof window
@@ -113,7 +113,7 @@
 
 <hr />
 <a name="Clipboard2fClipboard2eGet"></a>
-<a name="robo202"></a><h2>Clipboard/Clipboard.Get [ Subprograms ]</h2>
+<a name="robo205"></a><h2>Clipboard/Clipboard.Get [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">Clipboard</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -139,7 +139,7 @@
    Clipboard_Content<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Get<span class="sign">(</span>My_Main_Window<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo204">Clipboard.Selection_Get</a>
+<pre> <a href="#robo207">Clipboard.Selection_Get</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> clipboard get -displayof window -type ctype
@@ -150,7 +150,7 @@
 
 <hr />
 <a name="Clipboard2fClipboard2eSelection5fClear"></a>
-<a name="robo203"></a><h2>Clipboard/Clipboard.Selection_Clear [ Subprograms ]</h2>
+<a name="robo206"></a><h2>Clipboard/Clipboard.Selection_Clear [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">Clipboard</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -173,7 +173,7 @@
       Selection_Clear<span class="sign">(</span>My_Main_Window<span class="sign">,</span> <span class="quote">"CLIPBOARD"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo201">Clipboard.Clear</a>
+<pre> <a href="#robo204">Clipboard.Clear</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> selection clear -displayof window -selection selection
@@ -184,7 +184,7 @@
 
 <hr />
 <a name="Clipboard2fClipboard2eSelection5fGet"></a>
-<a name="robo204"></a><h2>Clipboard/Clipboard.Selection_Get [ Subprograms ]</h2>
+<a name="robo207"></a><h2>Clipboard/Clipboard.Selection_Get [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">Clipboard</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -219,7 +219,7 @@
                                                   <span class="quote">"FILE_NAME"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo202">Clipboard.Get</a>
+<pre> <a href="#robo205">Clipboard.Get</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> selection get -displayof window -selection selection -type stype
@@ -230,7 +230,7 @@
 
 <hr />
 <a name="Clipboard2fClipboard2eSelection5fHandle"></a>
-<a name="robo205"></a><h2>Clipboard/Clipboard.Selection_Handle [ Subprograms ]</h2>
+<a name="robo208"></a><h2>Clipboard/Clipboard.Selection_Handle [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">Clipboard</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -275,7 +275,7 @@
 
 <hr />
 <a name="Clipboard2fClipboard2eSelection5fOwn5f28function29"></a>
-<a name="robo206"></a><h2>Clipboard/Clipboard.Selection_Own_(function) [ Subprograms ]</h2>
+<a name="robo209"></a><h2>Clipboard/Clipboard.Selection_Own_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">Clipboard</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -307,7 +307,7 @@
       Owner_Name<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Selection_Own<span class="sign">(</span>My_Main_Window<span class="sign">,</span> <span class="quote">"CLIPBOARD"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo207">Clipboard.Selection_Own_(procedure)</a>
+<pre> <a href="#robo210">Clipboard.Selection_Own_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> selection own -displayof window -selection selection
@@ -318,7 +318,7 @@
 
 <hr />
 <a name="Clipboard2fClipboard2eSelection5fOwn5f28procedure29"></a>
-<a name="robo207"></a><h2>Clipboard/Clipboard.Selection_Own_(procedure) [ Subprograms ]</h2>
+<a name="robo210"></a><h2>Clipboard/Clipboard.Selection_Own_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo18">Clipboard</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -348,7 +348,7 @@
       Selection_Own<span class="sign">(</span>My_Main_Window<span class="sign">,</span> <span class="quote">"{puts hello}"</span><span class="sign">,</span> <span class="quote">"CLIPBOARD"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo206">Clipboard.Selection_Own_(function)</a>
+<pre> <a href="#robo209">Clipboard.Selection_Own_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> selection own -command command -selection selection window
@@ -359,7 +359,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-clipboard.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Dec 18 2020 07:13:51
+<p>Generated from ./src/tk/tcl-tk-ada-clipboard.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 08 2021 07:13:11
 </p>
 </div> <!-- footer -->
 </body>

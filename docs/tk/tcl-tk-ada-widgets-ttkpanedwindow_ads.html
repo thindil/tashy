@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.11 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.12 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,20 +27,20 @@
 <ul>
 <li>1. <a href="#robo64">Widgets/TtkPanedWindow</a></li>
 <ul>
-<li>1.1. <a href="#robo112">TtkPanedWindow/TtkPanedWindow.Ttk_PanedWindow</a></li>
-<li>1.2. <a href="#robo639">TtkPanedWindow/Panes</a></li>
-<li>1.3. <a href="#robo640">TtkPanedWindow/TtkPanedWindow.Add</a></li>
-<li>1.4. <a href="#robo641">TtkPanedWindow/TtkPanedWindow.Create_(function)</a></li>
-<li>1.5. <a href="#robo642">TtkPanedWindow/TtkPanedWindow.Create_(procedure)</a></li>
-<li>1.6. <a href="#robo643">TtkPanedWindow/TtkPanedWindow.Forget</a></li>
-<li>1.7. <a href="#robo644">TtkPanedWindow/TtkPanedWindow.Get_Widget</a></li>
-<li>1.8. <a href="#robo645">TtkPanedWindow/TtkPanedWindow.Identify_Element</a></li>
-<li>1.9. <a href="#robo646">TtkPanedWindow/TtkPanedWindow.Identify_Sash</a></li>
-<li>1.10. <a href="#robo647">TtkPanedWindow/TtkPanedWindow.Insert</a></li>
-<li>1.11. <a href="#robo648">TtkPanedWindow/TtkPanedWindow.Pane_(function)</a></li>
-<li>1.12. <a href="#robo649">TtkPanedWindow/TtkPanedWindow.Pane_(procedure)</a></li>
-<li>1.13. <a href="#robo650">TtkPanedWindow/TtkPanedWindow.SashPos_(function)</a></li>
-<li>1.14. <a href="#robo651">TtkPanedWindow/TtkPanedWindow.SashPos_(procedure)</a></li>
+<li>1.1. <a href="#robo113">TtkPanedWindow/TtkPanedWindow.Ttk_PanedWindow</a></li>
+<li>1.2. <a href="#robo644">TtkPanedWindow/Panes</a></li>
+<li>1.3. <a href="#robo645">TtkPanedWindow/TtkPanedWindow.Add</a></li>
+<li>1.4. <a href="#robo646">TtkPanedWindow/TtkPanedWindow.Create_(function)</a></li>
+<li>1.5. <a href="#robo647">TtkPanedWindow/TtkPanedWindow.Create_(procedure)</a></li>
+<li>1.6. <a href="#robo648">TtkPanedWindow/TtkPanedWindow.Forget</a></li>
+<li>1.7. <a href="#robo649">TtkPanedWindow/TtkPanedWindow.Get_Widget</a></li>
+<li>1.8. <a href="#robo650">TtkPanedWindow/TtkPanedWindow.Identify_Element</a></li>
+<li>1.9. <a href="#robo651">TtkPanedWindow/TtkPanedWindow.Identify_Sash</a></li>
+<li>1.10. <a href="#robo652">TtkPanedWindow/TtkPanedWindow.Insert</a></li>
+<li>1.11. <a href="#robo653">TtkPanedWindow/TtkPanedWindow.Pane_(function)</a></li>
+<li>1.12. <a href="#robo654">TtkPanedWindow/TtkPanedWindow.Pane_(procedure)</a></li>
+<li>1.13. <a href="#robo655">TtkPanedWindow/TtkPanedWindow.SashPos_(function)</a></li>
+<li>1.14. <a href="#robo656">TtkPanedWindow/TtkPanedWindow.SashPos_(procedure)</a></li>
 </ul>
 </ul>
 <hr />
@@ -52,12 +52,15 @@
 <pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo14">Tk</a> widget Ttk::<a href="./tcl-tk-ada-widgets-panedwindow_ads.html#robo51">PanedWindow</a>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo29">Widgets</a><span class="sign">.</span><strong>TtkPanedWindow</strong> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo29">Widgets</a><span class="sign">.</span><strong>TtkPanedWindow</strong> <span class="keyword">with</span>
+   SPARK_Mode
+<span class="keyword">is</span>
+   <span class="keyword">pragma</span> Elaborate_Body<span class="sign">;</span>
 </pre>
 
 <hr />
 <a name="TtkPanedWindow2fTtkPanedWindow2eTtk5fPanedWindow"></a>
-<a name="robo112"></a><h2>TtkPanedWindow/TtkPanedWindow.Ttk_PanedWindow [ Types ]</h2>
+<a name="robo113"></a><h2>TtkPanedWindow/TtkPanedWindow.Ttk_PanedWindow [ Types ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -71,7 +74,7 @@
 
 <hr />
 <a name="TtkPanedWindow2fPanes"></a>
-<a name="robo639"></a><h2>TtkPanedWindow/Panes [ Subprograms ]</h2>
+<a name="robo644"></a><h2>TtkPanedWindow/Panes [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -99,7 +102,7 @@
 
 <hr />
 <a name="TtkPanedWindow2fTtkPanedWindow2eAdd"></a>
-<a name="robo640"></a><h2>TtkPanedWindow/TtkPanedWindow.Add [ Subprograms ]</h2>
+<a name="robo645"></a><h2>TtkPanedWindow/TtkPanedWindow.Add [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -129,7 +132,7 @@
 
 <hr />
 <a name="TtkPanedWindow2fTtkPanedWindow2eCreate5f28function29"></a>
-<a name="robo641"></a><h2>TtkPanedWindow/TtkPanedWindow.Create_(function) [ Subprograms ]</h2>
+<a name="robo646"></a><h2>TtkPanedWindow/TtkPanedWindow.Create_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -138,8 +141,8 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> Create
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> Ttk_PanedWindow <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Null_Interp<span class="sign">)</span> <span class="keyword">return</span> Ttk_PanedWindow <span class="keyword">with</span>
+      Global <span class="sign">=</span><span class="sign">&gt;</span> <span class="keyword">null</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
@@ -157,7 +160,7 @@
    My_Paned<span class="sign">:</span> <span class="keyword">constant</span> Ttk_PanedWindow <span class="sign">:</span><span class="sign">=</span> Create<span class="sign">(</span><span class="quote">".mypaned"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo642">TtkPanedWindow.Create_(procedure)</a>
+<pre> <a href="#robo647">TtkPanedWindow.Create_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ttk::panedwindow pathName ?options?
@@ -168,7 +171,7 @@
 
 <hr />
 <a name="TtkPanedWindow2fTtkPanedWindow2eCreate5f28procedure29"></a>
-<a name="robo642"></a><h2>TtkPanedWindow/TtkPanedWindow.Create_(procedure) [ Subprograms ]</h2>
+<a name="robo647"></a><h2>TtkPanedWindow/TtkPanedWindow.Create_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -177,8 +180,8 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> Create
      <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> Ttk_PanedWindow<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
-      options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Null_Interp<span class="sign">)</span> <span class="keyword">with</span>
+      Global <span class="sign">=</span><span class="sign">&gt;</span> <span class="keyword">null</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Widgt    - Ttk_PanedWindow which will be created
@@ -201,7 +204,7 @@
      <span class="keyword">end</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo641">TtkPanedWindow.Create_(function)</a>
+<pre> <a href="#robo646">TtkPanedWindow.Create_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ttk::panedwindow pathName ?options?
@@ -212,7 +215,7 @@
 
 <hr />
 <a name="TtkPanedWindow2fTtkPanedWindow2eForget"></a>
-<a name="robo643"></a><h2>TtkPanedWindow/TtkPanedWindow.Forget [ Subprograms ]</h2>
+<a name="robo648"></a><h2>TtkPanedWindow/TtkPanedWindow.Forget [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -238,7 +241,7 @@
 
 <hr />
 <a name="TtkPanedWindow2fTtkPanedWindow2eGet5fWidget"></a>
-<a name="robo644"></a><h2>TtkPanedWindow/TtkPanedWindow.Get_Widget [ Subprograms ]</h2>
+<a name="robo649"></a><h2>TtkPanedWindow/TtkPanedWindow.Get_Widget [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -247,7 +250,8 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> Get_Widget
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Get_Context<span class="sign">)</span>
-      <span class="keyword">return</span> Ttk_PanedWindow<span class="sign">;</span>
+      <span class="keyword">return</span> Ttk_PanedWindow <span class="keyword">with</span>
+      Global <span class="sign">=</span><span class="sign">&gt;</span> <span class="keyword">null</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
@@ -267,7 +271,7 @@
 
 <hr />
 <a name="TtkPanedWindow2fTtkPanedWindow2eIdentify5fElement"></a>
-<a name="robo645"></a><h2>TtkPanedWindow/TtkPanedWindow.Identify_Element [ Subprograms ]</h2>
+<a name="robo650"></a><h2>TtkPanedWindow/TtkPanedWindow.Identify_Element [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -276,7 +280,7 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Identify_Element
      <span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Ttk_PanedWindow<span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> X /= "" and Y /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Paned - Ttk_PanedWindow which will be queried for elements
@@ -300,7 +304,7 @@
 
 <hr />
 <a name="TtkPanedWindow2fTtkPanedWindow2eIdentify5fSash"></a>
-<a name="robo646"></a><h2>TtkPanedWindow/TtkPanedWindow.Identify_Sash [ Subprograms ]</h2>
+<a name="robo651"></a><h2>TtkPanedWindow/TtkPanedWindow.Identify_Sash [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -309,7 +313,7 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Identify_Sash
      <span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Ttk_PanedWindow<span class="sign">;</span> X<span class="sign">,</span> Y<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> X <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Y <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> X /= "" and Y /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Paned - Ttk_PanedWindow which will be queried for sash
@@ -333,7 +337,7 @@
 
 <hr />
 <a name="TtkPanedWindow2fTtkPanedWindow2eInsert"></a>
-<a name="robo647"></a><h2>TtkPanedWindow/TtkPanedWindow.Insert [ Subprograms ]</h2>
+<a name="robo652"></a><h2>TtkPanedWindow/TtkPanedWindow.Insert [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -344,7 +348,7 @@
 <pre class="source">   <span class="keyword">procedure</span> Insert
      <span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Ttk_PanedWindow<span class="sign">;</span> Position<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span>
       SubWindow<span class="sign">:</span> <span class="keyword">in</span> Tk_Widget<span class="keyword">'Class</span><span class="sign">;</span> Options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:=</span> ""<span class="sign">)</span> <span class="keyword">with</span>
-      Pre =<span class="sign">&gt;</span> Position /= ""<span class="sign">;</span>
+      Pre'</span>Class <span class="sign">=</span><span class="sign">&gt;</span> Position <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Paned     - Ttk_PanedWindow in which SubWindow will be inserted
@@ -366,7 +370,7 @@
 
 <hr />
 <a name="TtkPanedWindow2fTtkPanedWindow2ePane5f28function29"></a>
-<a name="robo648"></a><h2>TtkPanedWindow/TtkPanedWindow.Pane_(function) [ Subprograms ]</h2>
+<a name="robo653"></a><h2>TtkPanedWindow/TtkPanedWindow.Pane_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -377,7 +381,7 @@
 <pre class="source">   <span class="keyword">function</span> Pane
      <span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Ttk_PanedWindow<span class="sign">;</span> Index<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> <a href="./tcl-tk-ada-option_ads.html#robo23">Option</a><span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span>
       <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Index <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Index /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Paned  - Ttk_PanedWindow in which widget's options will be queried
@@ -394,7 +398,7 @@
       Options<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Pane<span class="sign">(</span>My_Paned<span class="sign">,</span> <span class="quote">"0"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo649">TtkPanedWindow.Pane_(procedure)</a>
+<pre> <a href="#robo654">TtkPanedWindow.Pane_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> Paned pane pane ?option?
@@ -405,7 +409,7 @@
 
 <hr />
 <a name="TtkPanedWindow2fTtkPanedWindow2ePane5f28procedure29"></a>
-<a name="robo649"></a><h2>TtkPanedWindow/TtkPanedWindow.Pane_(procedure) [ Subprograms ]</h2>
+<a name="robo654"></a><h2>TtkPanedWindow/TtkPanedWindow.Pane_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -414,7 +418,7 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Pane<span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Ttk_PanedWindow<span class="sign">;</span> Index<span class="sign">,</span> Options<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Index <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> Options <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Index /= "" and Options /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Paned   - Ttk_PanedWindow in which widget's options will be set
@@ -426,7 +430,7 @@
       Pane<span class="sign">(</span>My_Paned<span class="sign">,</span> <span class="quote">"0"</span><span class="sign">,</span> <span class="quote">"-weight 2"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo648">TtkPanedWindow.Pane_(function)</a>
+<pre> <a href="#robo653">TtkPanedWindow.Pane_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> Paned pane index ?options?
@@ -437,7 +441,7 @@
 
 <hr />
 <a name="TtkPanedWindow2fTtkPanedWindow2eSashPos5f28function29"></a>
-<a name="robo650"></a><h2>TtkPanedWindow/TtkPanedWindow.SashPos_(function) [ Subprograms ]</h2>
+<a name="robo655"></a><h2>TtkPanedWindow/TtkPanedWindow.SashPos_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -447,7 +451,7 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> SashPos
      <span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Ttk_PanedWindow<span class="sign">;</span> Index<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">return</span> String <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Index <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Index /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Paned  - Ttk_PanedWindow in which the position of the sash will be
@@ -462,7 +466,7 @@
       Position<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> SashPos<span class="sign">(</span>My_Paned<span class="sign">,</span> <span class="quote">"1"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo651">TtkPanedWindow.SashPos_(procedure)</a>
+<pre> <a href="#robo656">TtkPanedWindow.SashPos_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> Paned sashpos index
@@ -473,7 +477,7 @@
 
 <hr />
 <a name="TtkPanedWindow2fTtkPanedWindow2eSashPos5f28procedure29"></a>
-<a name="robo651"></a><h2>TtkPanedWindow/TtkPanedWindow.SashPos_(procedure) [ Subprograms ]</h2>
+<a name="robo656"></a><h2>TtkPanedWindow/TtkPanedWindow.SashPos_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo64">TtkPanedWindow</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -482,7 +486,7 @@
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> SashPos<span class="sign">(</span>Paned<span class="sign">:</span> <span class="keyword">in</span> Ttk_PanedWindow<span class="sign">;</span> Index<span class="sign">,</span> NewPos<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> Index <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span> <span class="keyword">and</span> NewPos <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Pre<span class="keyword">'Class</span> =<span class="sign">&gt;</span> Index /= "" and NewPos /= ""<span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Paned  - Ttk_PanedWindow in which the selected sash will be moved
@@ -494,7 +498,7 @@
    SashPos<span class="sign">(</span>My_Paned<span class="sign">,</span> <span class="quote">"0"</span><span class="sign">,</span> <span class="quote">"35"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo650">TtkPanedWindow.SashPos_(function)</a>
+<pre> <a href="#robo655">TtkPanedWindow.SashPos_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> Paned sashpos index newpos
@@ -505,7 +509,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-ttkpanedwindow.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Dec 18 2020 07:13:51
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-ttkpanedwindow.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 08 2021 07:13:11
 </p>
 </div> <!-- footer -->
 </body>

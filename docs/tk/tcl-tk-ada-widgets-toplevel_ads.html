@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.11 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.12 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -29,16 +29,16 @@
 <ul>
 <li>1.1. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo37">Toplevel/MainWindow</a></li>
 <ul>
-<li>1.1.1. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo309">MainWindow/MainWindow.Bind_To_Main_Window_(function)</a></li>
-<li>1.1.2. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo310">MainWindow/MainWindow.Bind_To_Main_Window_(procedure)</a></li>
-<li>1.1.3. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo311">MainWindow/MainWindow.Get_Main_Window</a></li>
-<li>1.1.4. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo312">MainWindow/MainWindow.Unbind_From_Main_Window_(function)</a></li>
-<li>1.1.5. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo313">MainWindow/MainWindow.Unbind_From_Main_Window_(procedure)</a></li>
+<li>1.1.1. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo313">MainWindow/MainWindow.Bind_To_Main_Window_(function)</a></li>
+<li>1.1.2. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo314">MainWindow/MainWindow.Bind_To_Main_Window_(procedure)</a></li>
+<li>1.1.3. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo315">MainWindow/MainWindow.Get_Main_Window</a></li>
+<li>1.1.4. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo316">MainWindow/MainWindow.Unbind_From_Main_Window_(function)</a></li>
+<li>1.1.5. <a href="./tcl-tk-ada-widgets-toplevel-mainwindow_ads.html#robo317">MainWindow/MainWindow.Unbind_From_Main_Window_(procedure)</a></li>
 </ul>
-<li>1.2. <a href="#robo102">Toplevel/Toplevel.Tk_Toplevel</a></li>
-<li>1.3. <a href="#robo579">Toplevel/Toplevel.Create_(function)</a></li>
-<li>1.4. <a href="#robo580">Toplevel/Toplevel.Create_(procedure)</a></li>
-<li>1.5. <a href="#robo581">Toplevel/Toplevel.Get_Widget</a></li>
+<li>1.2. <a href="#robo103">Toplevel/Toplevel.Tk_Toplevel</a></li>
+<li>1.3. <a href="#robo584">Toplevel/Toplevel.Create_(function)</a></li>
+<li>1.4. <a href="#robo585">Toplevel/Toplevel.Create_(procedure)</a></li>
+<li>1.5. <a href="#robo586">Toplevel/Toplevel.Get_Widget</a></li>
 </ul>
 </ul>
 <hr />
@@ -50,12 +50,15 @@
 <pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo14">Tk</a> widget <strong>Toplevel</strong>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo29">Widgets</a><span class="sign">.</span><strong>Toplevel</strong> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-widgets_ads.html#robo29">Widgets</a><span class="sign">.</span><strong>Toplevel</strong> <span class="keyword">with</span>
+   SPARK_Mode
+<span class="keyword">is</span>
+   <span class="keyword">pragma</span> Elaborate_Body<span class="sign">;</span>
 </pre>
 
 <hr />
 <a name="Toplevel2fToplevel2eTk5fToplevel"></a>
-<a name="robo102"></a><h2>Toplevel/Toplevel.Tk_Toplevel [ Types ]</h2>
+<a name="robo103"></a><h2>Toplevel/Toplevel.Tk_Toplevel [ Types ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo56">Toplevel</a> ] [ <a href="../robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -69,7 +72,7 @@
 
 <hr />
 <a name="Toplevel2fToplevel2eCreate5f28function29"></a>
-<a name="robo579"></a><h2>Toplevel/Toplevel.Create_(function) [ Subprograms ]</h2>
+<a name="robo584"></a><h2>Toplevel/Toplevel.Create_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo56">Toplevel</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -78,8 +81,8 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> Create
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> Tk_Toplevel <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Null_Interp<span class="sign">)</span> <span class="keyword">return</span> Tk_Toplevel <span class="keyword">with</span>
+      Global <span class="sign">=</span><span class="sign">&gt;</span> <span class="keyword">null</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
@@ -97,7 +100,7 @@
    My_Window<span class="sign">:</span> <span class="keyword">constant</span> Tk_Toplevel <span class="sign">:</span><span class="sign">=</span> Create<span class="sign">(</span><span class="quote">".mywindow"</span><span class="sign">,</span> <span class="quote">"-background black"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo580">Toplevel.Create_(procedure)</a>
+<pre> <a href="#robo585">Toplevel.Create_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> toplevel pathName ?options?
@@ -108,7 +111,7 @@
 
 <hr />
 <a name="Toplevel2fToplevel2eCreate5f28procedure29"></a>
-<a name="robo580"></a><h2>Toplevel/Toplevel.Create_(procedure) [ Subprograms ]</h2>
+<a name="robo585"></a><h2>Toplevel/Toplevel.Create_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo56">Toplevel</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -117,8 +120,8 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">overriding</span> <span class="keyword">procedure</span> Create
      <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> Tk_Toplevel<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Null_Interp<span class="sign">)</span> <span class="keyword">with</span>
+      Global <span class="sign">=</span><span class="sign">&gt;</span> <span class="keyword">null</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Widgt    - Tk_Toplevel which will be created
@@ -141,7 +144,7 @@
      <span class="keyword">end</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo579">Toplevel.Create_(function)</a>
+<pre> <a href="#robo584">Toplevel.Create_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> toplevel pathName ?options?
@@ -152,7 +155,7 @@
 
 <hr />
 <a name="Toplevel2fToplevel2eGet5fWidget"></a>
-<a name="robo581"></a><h2>Toplevel/Toplevel.Get_Widget [ Subprograms ]</h2>
+<a name="robo586"></a><h2>Toplevel/Toplevel.Get_Widget [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo56">Toplevel</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -161,7 +164,8 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> Get_Widget
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Get_Context<span class="sign">)</span>
-      <span class="keyword">return</span> Tk_Toplevel<span class="sign">;</span>
+      <span class="keyword">return</span> Tk_Toplevel <span class="keyword">with</span>
+      Global <span class="sign">=</span><span class="sign">&gt;</span> <span class="keyword">null</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the widget
@@ -181,7 +185,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-widgets-toplevel.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Dec 18 2020 07:13:51
+<p>Generated from ./src/tk/tcl-tk-ada-widgets-toplevel.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 08 2021 07:13:11
 </p>
 </div> <!-- footer -->
 </body>

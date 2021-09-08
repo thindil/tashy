@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.11 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.12 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -28,9 +28,9 @@
 <li>1. <a href="#robo5">Image/Bitmap</a></li>
 <ul>
 <li>1.1. <a href="#robo72">Bitmap/Bitmap.Tk_Bitmap</a></li>
-<li>1.2. <a href="#robo135">Bitmap/Bitmap.Create_(function)</a></li>
-<li>1.3. <a href="#robo136">Bitmap/Bitmap.Create_(procedure)</a></li>
-<li>1.4. <a href="#robo137">Bitmap/Bitmap.Get_Widget</a></li>
+<li>1.2. <a href="#robo136">Bitmap/Bitmap.Create_(function)</a></li>
+<li>1.3. <a href="#robo137">Bitmap/Bitmap.Create_(procedure)</a></li>
+<li>1.4. <a href="#robo138">Bitmap/Bitmap.Get_Widget</a></li>
 </ul>
 </ul>
 <hr />
@@ -42,7 +42,10 @@
 <pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo14">Tk</a> image of type bitmap
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-image_ads.html#robo22">Image</a><span class="sign">.</span><strong>Bitmap</strong> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><a href="./tcl-tk-ada-image_ads.html#robo22">Image</a><span class="sign">.</span><strong>Bitmap</strong> <span class="keyword">with</span>
+   SPARK_Mode
+<span class="keyword">is</span>
+   <span class="keyword">pragma</span> Elaborate_Body<span class="sign">;</span>
 </pre>
 
 <hr />
@@ -61,7 +64,7 @@
 
 <hr />
 <a name="Bitmap2fBitmap2eCreate5f28function29"></a>
-<a name="robo135"></a><h2>Bitmap/Bitmap.Create_(function) [ Subprograms ]</h2>
+<a name="robo136"></a><h2>Bitmap/Bitmap.Create_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">Bitmap</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -70,8 +73,8 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Create
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">return</span> Tk_Bitmap <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <span class="sign">(</span>pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Null_Interp<span class="sign">)</span> <span class="keyword">return</span> Tk_Bitmap <span class="keyword">with</span>
+      Global <span class="sign">=</span><span class="sign">&gt;</span> <span class="keyword">null</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> name of the image
@@ -89,7 +92,7 @@
    Arrow_Up<span class="sign">:</span> <span class="keyword">constant</span> Tk_Bitmap <span class="sign">:</span><span class="sign">=</span> Create<span class="sign">(</span><span class="quote">"arrow-up"</span><span class="sign">,</span> <span class="quote">"-data {#define arrowUp_width 7  #define arrowUp_height 4 static char arrowUp_bits[] = { 0x08<span class="sign">,</span> 0x1c<span class="sign">,</span> 0x3e<span class="sign">,</span> 0x7f }<span class="sign">;</span>}"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo136">Bitmap.Create_(procedure)</a>
+<pre> <a href="#robo137">Bitmap.Create_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> image create bitmap name ?options?
@@ -100,7 +103,7 @@
 
 <hr />
 <a name="Bitmap2fBitmap2eCreate5f28procedure29"></a>
-<a name="robo136"></a><h2>Bitmap/Bitmap.Create_(procedure) [ Subprograms ]</h2>
+<a name="robo137"></a><h2>Bitmap/Bitmap.Create_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">Bitmap</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -109,8 +112,8 @@
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">procedure</span> Create
      <span class="sign">(</span>Widgt<span class="sign">:</span> <span class="keyword">out</span> Tk_Bitmap<span class="sign">;</span> pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> options<span class="sign">:</span> <span class="keyword">in</span> String <span class="sign">:</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">;</span>
-      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> <span class="keyword">null</span><span class="sign">)</span> <span class="keyword">with</span>
-      Pre <span class="sign">=</span><span class="sign">&gt;</span> <span class="sign">(</span>pathName <span class="sign">/</span><span class="sign">=</span> <span class="quote">""</span><span class="sign">)</span><span class="sign">;</span>
+      Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Null_Interp<span class="sign">)</span> <span class="keyword">with</span>
+      Global <span class="sign">=</span><span class="sign">&gt;</span> <span class="keyword">null</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> Widgt    - Tk_Bitmap which will be created
@@ -133,7 +136,7 @@
       <span class="keyword">end</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo135">Bitmap.Create_(function)</a>
+<pre> <a href="#robo136">Bitmap.Create_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> image create bitmap name ?options?
@@ -144,16 +147,17 @@
 
 <hr />
 <a name="Bitmap2fBitmap2eGet5fWidget"></a>
-<a name="robo137"></a><h2>Bitmap/Bitmap.Get_Widget [ Subprograms ]</h2>
+<a name="robo138"></a><h2>Bitmap/Bitmap.Get_Widget [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">Bitmap</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre> Get the existing Tk_Bitmap image
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">overriding</span> <span class="keyword">function</span> Get_Widget
+<pre class="source">   <span class="keyword">function</span> Get_Widget
      <span class="sign">(</span>pathName<span class="sign">:</span> <span class="keyword">in</span> String<span class="sign">;</span> Interp<span class="sign">:</span> <span class="keyword">in</span> Tcl_Interp <span class="sign">:</span><span class="sign">=</span> Get_Context<span class="sign">)</span>
-      <span class="keyword">return</span> Tk_Bitmap<span class="sign">;</span>
+      <span class="keyword">return</span> Tk_Bitmap <span class="keyword">with</span>
+      Global <span class="sign">=</span><span class="sign">&gt;</span> <span class="keyword">null</span><span class="sign">;</span>
 </pre>
 <p class="item_name">PARAMETERS</p>
 <pre> pathName - <a href="./tcl-tk_ads.html#robo14">Tk</a> path (starts with dot) for the image
@@ -173,7 +177,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-image-bitmap.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Dec 18 2020 07:13:51
+<p>Generated from ./src/tk/tcl-tk-ada-image-bitmap.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 08 2021 07:13:11
 </p>
 </div> <!-- footer -->
 </body>

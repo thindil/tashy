@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.11 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.12 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,20 +27,20 @@
 <ul>
 <li>1. <a href="#robo21">TkAda/Font</a></li>
 <ul>
-<li>1.1. <a href="#robo242">Font/Font.Actual_(current_interpreter)</a></li>
-<li>1.2. <a href="#robo243">Font/Font.Actual_(selected_interpreter)</a></li>
-<li>1.3. <a href="#robo244">Font/Font.Configure_(function)</a></li>
-<li>1.4. <a href="#robo245">Font/Font.Configure_(procedure)</a></li>
-<li>1.5. <a href="#robo246">Font/Font.Create_(function)</a></li>
-<li>1.6. <a href="#robo247">Font/Font.Create_(procedure)</a></li>
-<li>1.7. <a href="#robo248">Font/Font.Delete</a></li>
-<li>1.8. <a href="#robo249">Font/Font.Families_(current_interpreter_main_window)</a></li>
-<li>1.9. <a href="#robo250">Font/Font.Families_(selected_window)</a></li>
-<li>1.10. <a href="#robo251">Font/Font.Measure_(selected_interpreter_main_window)</a></li>
-<li>1.11. <a href="#robo252">Font/Font.Measure_(selected_window)</a></li>
-<li>1.12. <a href="#robo253">Font/Font.Metrics_(selected_intepreter)</a></li>
-<li>1.13. <a href="#robo254">Font/Font.Metrics_(selected_window)</a></li>
-<li>1.14. <a href="#robo255">Font/Font.Names</a></li>
+<li>1.1. <a href="#robo246">Font/Font.Actual_(current_interpreter)</a></li>
+<li>1.2. <a href="#robo247">Font/Font.Actual_(selected_interpreter)</a></li>
+<li>1.3. <a href="#robo248">Font/Font.Configure_(function)</a></li>
+<li>1.4. <a href="#robo249">Font/Font.Configure_(procedure)</a></li>
+<li>1.5. <a href="#robo250">Font/Font.Create_(function)</a></li>
+<li>1.6. <a href="#robo251">Font/Font.Create_(procedure)</a></li>
+<li>1.7. <a href="#robo252">Font/Font.Delete</a></li>
+<li>1.8. <a href="#robo253">Font/Font.Families_(current_interpreter_main_window)</a></li>
+<li>1.9. <a href="#robo254">Font/Font.Families_(selected_window)</a></li>
+<li>1.10. <a href="#robo255">Font/Font.Measure_(selected_interpreter_main_window)</a></li>
+<li>1.11. <a href="#robo256">Font/Font.Measure_(selected_window)</a></li>
+<li>1.12. <a href="#robo257">Font/Font.Metrics_(selected_intepreter)</a></li>
+<li>1.13. <a href="#robo258">Font/Font.Metrics_(selected_window)</a></li>
+<li>1.14. <a href="#robo259">Font/Font.Names</a></li>
 </ul>
 </ul>
 <hr />
@@ -52,12 +52,14 @@
 <pre> Provides code for manipulate <a href="./tcl-tk_ads.html#robo14">Tk</a> command <strong>Font</strong>
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><strong>Font</strong> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-tk_ads.html#robo14">Tk</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a><span class="sign">.</span><strong>Font</strong> <span class="keyword">with</span>
+   SPARK_Mode
+<span class="keyword">is</span>
 </pre>
 
 <hr />
 <a name="Font2fFont2eActual5f28current5finterpreter29"></a>
-<a name="robo242"></a><h2>Font/Font.Actual_(current_interpreter) [ Subprograms ]</h2>
+<a name="robo246"></a><h2>Font/Font.Actual_(current_interpreter) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -85,7 +87,7 @@
    Font_Attributes<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Actual<span class="sign">(</span><span class="quote">"system"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo243">Font.Actual_(selected_interpreter)</a>
+<pre> <a href="#robo247">Font.Actual_(selected_interpreter)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> font actual font -displayof . ?option? ?--? ?char?
@@ -96,7 +98,7 @@
 
 <hr />
 <a name="Font2fFont2eActual5f28selected5finterpreter29"></a>
-<a name="robo243"></a><h2>Font/Font.Actual_(selected_interpreter) [ Subprograms ]</h2>
+<a name="robo247"></a><h2>Font/Font.Actual_(selected_interpreter) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -126,7 +128,7 @@
       Font_Attributes<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Actual<span class="sign">(</span>Main_Tk<span class="sign">,</span> <span class="quote">"system"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo242">Font.Actual_(current_interpreter)</a>
+<pre> <a href="#robo246">Font.Actual_(current_interpreter)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> font actual font -displayof . ?option? ?--? ?char?
@@ -137,7 +139,7 @@
 
 <hr />
 <a name="Font2fFont2eConfigure5f28function29"></a>
-<a name="robo244"></a><h2>Font/Font.Configure_(function) [ Subprograms ]</h2>
+<a name="robo248"></a><h2>Font/Font.Configure_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -166,7 +168,7 @@
       Font_Family<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Configure<span class="sign">(</span><span class="quote">"My_Font"</span><span class="sign">,</span> <span class="quote">"-family"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo245">Font.Configure_(procedure)</a>
+<pre> <a href="#robo249">Font.Configure_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> font configure fontname ?option?
@@ -177,7 +179,7 @@
 
 <hr />
 <a name="Font2fFont2eConfigure5f28procedure29"></a>
-<a name="robo245"></a><h2>Font/Font.Configure_(procedure) [ Subprograms ]</h2>
+<a name="robo249"></a><h2>Font/Font.Configure_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -200,7 +202,7 @@
       Configure<span class="sign">(</span><span class="quote">"My_Font"</span><span class="sign">,</span> <span class="quote">"-slant roman"</span><span class="sign">,</span> My_Interpreter<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo244">Font.Configure_(function)</a>
+<pre> <a href="#robo248">Font.Configure_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> font configure fontname option value ?option value ...?
@@ -211,7 +213,7 @@
 
 <hr />
 <a name="Font2fFont2eCreate5f28function29"></a>
-<a name="robo246"></a><h2>Font/Font.Create_(function) [ Subprograms ]</h2>
+<a name="robo250"></a><h2>Font/Font.Create_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -239,7 +241,7 @@
       FontName<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Create<span class="sign">(</span>Options <span class="sign">=</span><span class="sign">&gt;</span> <span class="quote">"-slant roman"</span><span class="sign">,</span> Interp <span class="sign">=</span><span class="sign">&gt;</span> My_Interpreter<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo247">Font.Create_(procedure)</a>
+<pre> <a href="#robo251">Font.Create_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> font create ?fontname? ?option value ...?
@@ -250,7 +252,7 @@
 
 <hr />
 <a name="Font2fFont2eCreate5f28procedure29"></a>
-<a name="robo247"></a><h2>Font/Font.Create_(procedure) [ Subprograms ]</h2>
+<a name="robo251"></a><h2>Font/Font.Create_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -274,7 +276,7 @@
       Create<span class="sign">(</span><span class="quote">"My_Font"</span><span class="sign">,</span> <span class="quote">"-size 10"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo246">Font.Create_(function)</a>
+<pre> <a href="#robo250">Font.Create_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> font create ?fontname? ?option value ...?
@@ -285,7 +287,7 @@
 
 <hr />
 <a name="Font2fFont2eDelete"></a>
-<a name="robo248"></a><h2>Font/Font.Delete [ Subprograms ]</h2>
+<a name="robo252"></a><h2>Font/Font.Delete [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -316,7 +318,7 @@
 
 <hr />
 <a name="Font2fFont2eFamilies5f28current5finterpreter5fmain5fwindow29"></a>
-<a name="robo249"></a><h2>Font/Font.Families_(current_interpreter_main_window) [ Subprograms ]</h2>
+<a name="robo253"></a><h2>Font/Font.Families_(current_interpreter_main_window) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -334,7 +336,7 @@
       Font_Families<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Families<span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo250">Font.Families_(selected_window)</a>
+<pre> <a href="#robo254">Font.Families_(selected_window)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> font families
@@ -345,7 +347,7 @@
 
 <hr />
 <a name="Font2fFont2eFamilies5f28selected5fwindow29"></a>
-<a name="robo250"></a><h2>Font/Font.Families_(selected_window) [ Subprograms ]</h2>
+<a name="robo254"></a><h2>Font/Font.Families_(selected_window) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -366,7 +368,7 @@
    -- Font_Families<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:=</span> Families<span class="sign">(</span>My_Window<span class="sign">);</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo249">Font.Families_(current_interpreter_main_window)</a>
+<pre> <a href="#robo253">Font.Families_(current_interpreter_main_window)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> font families -displayof widget
@@ -377,7 +379,7 @@
 
 <hr />
 <a name="Font2fFont2eMeasure5f28selected5finterpreter5fmain5fwindow29"></a>
-<a name="robo251"></a><h2>Font/Font.Measure_(selected_interpreter_main_window) [ Subprograms ]</h2>
+<a name="robo255"></a><h2>Font/Font.Measure_(selected_interpreter_main_window) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -403,7 +405,7 @@
    Font_Width<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Measure<span class="sign">(</span><span class="quote">"My_Font"</span><span class="sign">,</span> <span class="quote">"text"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo252">Font.Measure_(selected_window)</a>
+<pre> <a href="#robo256">Font.Measure_(selected_window)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> font measure font -displayof interp text
@@ -414,7 +416,7 @@
 
 <hr />
 <a name="Font2fFont2eMeasure5f28selected5fwindow29"></a>
-<a name="robo252"></a><h2>Font/Font.Measure_(selected_window) [ Subprograms ]</h2>
+<a name="robo256"></a><h2>Font/Font.Measure_(selected_window) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -438,7 +440,7 @@
       Font_Width<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Measure<span class="sign">(</span><span class="quote">"My_Font"</span><span class="sign">,</span> <span class="quote">"text"</span><span class="sign">,</span> My_Window<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo251">Font.Measure_(selected_interpreter_main_window)</a>
+<pre> <a href="#robo255">Font.Measure_(selected_interpreter_main_window)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> font measure font -displayof interp text
@@ -449,7 +451,7 @@
 
 <hr />
 <a name="Font2fFont2eMetrics5f28selected5fintepreter29"></a>
-<a name="robo253"></a><h2>Font/Font.Metrics_(selected_intepreter) [ Subprograms ]</h2>
+<a name="robo257"></a><h2>Font/Font.Metrics_(selected_intepreter) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -475,7 +477,7 @@
       Is_Monospace<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Metrics<span class="sign">(</span><span class="quote">"MyFont"</span><span class="sign">,</span> <span class="quote">"-fixed"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo254">Font.Metrics_(selected_window)</a>
+<pre> <a href="#robo258">Font.Metrics_(selected_window)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> font metrics font -displayof interp ?option?
@@ -486,7 +488,7 @@
 
 <hr />
 <a name="Font2fFont2eMetrics5f28selected5fwindow29"></a>
-<a name="robo254"></a><h2>Font/Font.Metrics_(selected_window) [ Subprograms ]</h2>
+<a name="robo258"></a><h2>Font/Font.Metrics_(selected_window) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -512,7 +514,7 @@
       Font_Metrics<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Metrics<span class="sign">(</span><span class="quote">"My_Font"</span><span class="sign">,</span> <span class="quote">""</span><span class="sign">,</span> My_Window<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo253">Font.Metrics_(selected_intepreter)</a>
+<pre> <a href="#robo257">Font.Metrics_(selected_intepreter)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> font metrics font -displayof interp ?option?
@@ -523,7 +525,7 @@
 
 <hr />
 <a name="Font2fFont2eNames"></a>
-<a name="robo255"></a><h2>Font/Font.Names [ Subprograms ]</h2>
+<a name="robo259"></a><h2>Font/Font.Names [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo21">Font</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -553,7 +555,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/tk/tcl-tk-ada-font.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Dec 18 2020 07:13:51
+<p>Generated from ./src/tk/tcl-tk-ada-font.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 08 2021 07:13:11
 </p>
 </div> <!-- footer -->
 </body>

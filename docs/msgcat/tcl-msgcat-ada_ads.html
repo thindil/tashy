@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="logo">
-<a name="robo_top_of_doc">TASHY v8.6.11 code documentation</a>
+<a name="robo_top_of_doc">TASHY v8.6.12 code documentation</a>
 </div> <!-- logo -->
 <div id="navigation">
 <a class="menuitem" href="../toc_index.html#top">Table of Contents</a>
@@ -27,23 +27,23 @@
 <ul>
 <li>1. <a href="#robo7">MsgCat/MsgCatAda</a></li>
 <ul>
-<li>1.1. <a href="#robo341">MsgCatAda/MsgCatAda.Mc</a></li>
-<li>1.2. <a href="#robo342">MsgCatAda/MsgCatAda.Mc_Exists</a></li>
-<li>1.3. <a href="#robo343">MsgCatAda/MsgCatAda.Mc_Forget_Package</a></li>
-<li>1.4. <a href="#robo344">MsgCatAda/MsgCatAda.Mc_Load_(function)</a></li>
-<li>1.5. <a href="#robo345">MsgCatAda/MsgCatAda.Mc_Load_(procedure)</a></li>
-<li>1.6. <a href="#robo346">MsgCatAda/MsgCatAda.Mc_LoadedLocales_Clear</a></li>
-<li>1.7. <a href="#robo347">MsgCatAda/MsgCatAda.Mc_LoadedLocales_Get</a></li>
-<li>1.8. <a href="#robo348">MsgCatAda/MsgCatAda.Mc_LoadedLocales_Present</a></li>
-<li>1.9. <a href="#robo349">MsgCatAda/MsgCatAda.Mc_Locale_(function)</a></li>
-<li>1.10. <a href="#robo350">MsgCatAda/MsgCatAda.Mc_Locale_(procedure)</a></li>
-<li>1.11. <a href="#robo351">MsgCatAda/MsgCatAda.Mc_Max</a></li>
-<li>1.12. <a href="#robo352">MsgCatAda/MsgCatAda.Mc_Mset_(function)</a></li>
-<li>1.13. <a href="#robo353">MsgCatAda/MsgCatAda.Mc_Mset_(procedure)</a></li>
-<li>1.14. <a href="#robo354">MsgCatAda/MsgCatAda.Mc_Preferences</a></li>
-<li>1.15. <a href="#robo355">MsgCatAda/MsgCatAda.Mc_Set_(function)</a></li>
-<li>1.16. <a href="#robo356">MsgCatAda/MsgCatAda.Mc_Set_(procedure)</a></li>
-<li>1.17. <a href="#robo357">MsgCatAda/MsgCatAda.MsgCat_Init</a></li>
+<li>1.1. <a href="#robo345">MsgCatAda/MsgCatAda.Mc</a></li>
+<li>1.2. <a href="#robo346">MsgCatAda/MsgCatAda.Mc_Exists</a></li>
+<li>1.3. <a href="#robo347">MsgCatAda/MsgCatAda.Mc_Forget_Package</a></li>
+<li>1.4. <a href="#robo348">MsgCatAda/MsgCatAda.Mc_Load_(function)</a></li>
+<li>1.5. <a href="#robo349">MsgCatAda/MsgCatAda.Mc_Load_(procedure)</a></li>
+<li>1.6. <a href="#robo350">MsgCatAda/MsgCatAda.Mc_LoadedLocales_Clear</a></li>
+<li>1.7. <a href="#robo351">MsgCatAda/MsgCatAda.Mc_LoadedLocales_Get</a></li>
+<li>1.8. <a href="#robo352">MsgCatAda/MsgCatAda.Mc_LoadedLocales_Present</a></li>
+<li>1.9. <a href="#robo353">MsgCatAda/MsgCatAda.Mc_Locale_(function)</a></li>
+<li>1.10. <a href="#robo354">MsgCatAda/MsgCatAda.Mc_Locale_(procedure)</a></li>
+<li>1.11. <a href="#robo355">MsgCatAda/MsgCatAda.Mc_Max</a></li>
+<li>1.12. <a href="#robo356">MsgCatAda/MsgCatAda.Mc_Mset_(function)</a></li>
+<li>1.13. <a href="#robo357">MsgCatAda/MsgCatAda.Mc_Mset_(procedure)</a></li>
+<li>1.14. <a href="#robo358">MsgCatAda/MsgCatAda.Mc_Preferences</a></li>
+<li>1.15. <a href="#robo359">MsgCatAda/MsgCatAda.Mc_Set_(function)</a></li>
+<li>1.16. <a href="#robo360">MsgCatAda/MsgCatAda.Mc_Set_(procedure)</a></li>
+<li>1.17. <a href="#robo361">MsgCatAda/MsgCatAda.MsgCat_Init</a></li>
 </ul>
 </ul>
 <hr />
@@ -55,12 +55,14 @@
 <pre> Provide code for manipulate <a href="../tcl_ads.html#robo10">Tcl</a> package msgcat
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-msgcat_ads.html#robo13">MsgCat</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a> <span class="keyword">is</span>
+<pre class="source"><span class="keyword">package</span> <a href="../tcl_ads.html#robo10">Tcl</a><span class="sign">.</span><a href="./tcl-msgcat_ads.html#robo13">MsgCat</a><span class="sign">.</span><a href="../tcl-ada_ads.html#robo11">Ada</a> <span class="keyword">with</span>
+   SPARK_Mode
+<span class="keyword">is</span>
 </pre>
 
 <hr />
 <a name="MsgCatAda2fMsgCatAda2eMc"></a>
-<a name="robo341"></a><h2>MsgCatAda/MsgCatAda.Mc [ Subprograms ]</h2>
+<a name="robo345"></a><h2>MsgCatAda/MsgCatAda.Mc [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -96,7 +98,7 @@
 
 <hr />
 <a name="MsgCatAda2fMsgCatAda2eMc5fExists"></a>
-<a name="robo342"></a><h2>MsgCatAda/MsgCatAda.Mc_Exists [ Subprograms ]</h2>
+<a name="robo346"></a><h2>MsgCatAda/MsgCatAda.Mc_Exists [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -129,7 +131,7 @@
 
 <hr />
 <a name="MsgCatAda2fMsgCatAda2eMc5fForget5fPackage"></a>
-<a name="robo343"></a><h2>MsgCatAda/MsgCatAda.Mc_Forget_Package [ Subprograms ]</h2>
+<a name="robo347"></a><h2>MsgCatAda/MsgCatAda.Mc_Forget_Package [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -153,7 +155,7 @@
 
 <hr />
 <a name="MsgCatAda2fMsgCatAda2eMc5fLoad5f28function29"></a>
-<a name="robo344"></a><h2>MsgCatAda/MsgCatAda.Mc_Load_(function) [ Subprograms ]</h2>
+<a name="robo348"></a><h2>MsgCatAda/MsgCatAda.Mc_Load_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -178,7 +180,7 @@
       Loaded_Files<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Mc_Load<span class="sign">(</span><span class="quote">"messages"</span><span class="sign">,</span> My_Interp<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo345">MsgCatAda.Mc_Load_(procedure)</a>
+<pre> <a href="#robo349">MsgCatAda.Mc_Load_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ::msgcat::mcload dirname
@@ -189,7 +191,7 @@
 
 <hr />
 <a name="MsgCatAda2fMsgCatAda2eMc5fLoad5f28procedure29"></a>
-<a name="robo345"></a><h2>MsgCatAda/MsgCatAda.Mc_Load_(procedure) [ Subprograms ]</h2>
+<a name="robo349"></a><h2>MsgCatAda/MsgCatAda.Mc_Load_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -210,7 +212,7 @@
       Mc_Load<span class="sign">(</span><span class="quote">"messages"</span><span class="sign">,</span> My_Interp<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo344">MsgCatAda.Mc_Load_(function)</a>
+<pre> <a href="#robo348">MsgCatAda.Mc_Load_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ::msgcat::mcload dirname
@@ -221,7 +223,7 @@
 
 <hr />
 <a name="MsgCatAda2fMsgCatAda2eMc5fLoadedLocales5fClear"></a>
-<a name="robo346"></a><h2>MsgCatAda/MsgCatAda.Mc_LoadedLocales_Clear [ Subprograms ]</h2>
+<a name="robo350"></a><h2>MsgCatAda/MsgCatAda.Mc_LoadedLocales_Clear [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -247,7 +249,7 @@
 
 <hr />
 <a name="MsgCatAda2fMsgCatAda2eMc5fLoadedLocales5fGet"></a>
-<a name="robo347"></a><h2>MsgCatAda/MsgCatAda.Mc_LoadedLocales_Get [ Subprograms ]</h2>
+<a name="robo351"></a><h2>MsgCatAda/MsgCatAda.Mc_LoadedLocales_Get [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -275,7 +277,7 @@
 
 <hr />
 <a name="MsgCatAda2fMsgCatAda2eMc5fLoadedLocales5fPresent"></a>
-<a name="robo348"></a><h2>MsgCatAda/MsgCatAda.Mc_LoadedLocales_Present [ Subprograms ]</h2>
+<a name="robo352"></a><h2>MsgCatAda/MsgCatAda.Mc_LoadedLocales_Present [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -306,7 +308,7 @@
 
 <hr />
 <a name="MsgCatAda2fMsgCatAda2eMc5fLocale5f28function29"></a>
-<a name="robo349"></a><h2>MsgCatAda/MsgCatAda.Mc_Locale_(function) [ Subprograms ]</h2>
+<a name="robo353"></a><h2>MsgCatAda/MsgCatAda.Mc_Locale_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -326,7 +328,7 @@
       Locale_Name<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Mc_Locale<span class="sign">(</span>My_Interp<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo350">MsgCatAda.Mc_Locale_(procedure)</a>
+<pre> <a href="#robo354">MsgCatAda.Mc_Locale_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ::msgcat::mclocale
@@ -337,7 +339,7 @@
 
 <hr />
 <a name="MsgCatAda2fMsgCatAda2eMc5fLocale5f28procedure29"></a>
-<a name="robo350"></a><h2>MsgCatAda/MsgCatAda.Mc_Locale_(procedure) [ Subprograms ]</h2>
+<a name="robo354"></a><h2>MsgCatAda/MsgCatAda.Mc_Locale_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -360,7 +362,7 @@
       Mc_Locale<span class="sign">(</span><span class="quote">"en_US"</span><span class="sign">,</span> My_Interp<span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo349">MsgCatAda.Mc_Locale_(function)</a>
+<pre> <a href="#robo353">MsgCatAda.Mc_Locale_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ::msgcat::mclocale newlocale
@@ -371,7 +373,7 @@
 
 <hr />
 <a name="MsgCatAda2fMsgCatAda2eMc5fMax"></a>
-<a name="robo351"></a><h2>MsgCatAda/MsgCatAda.Mc_Max [ Subprograms ]</h2>
+<a name="robo355"></a><h2>MsgCatAda/MsgCatAda.Mc_Max [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -402,7 +404,7 @@
 
 <hr />
 <a name="MsgCatAda2fMsgCatAda2eMc5fMset5f28function29"></a>
-<a name="robo352"></a><h2>MsgCatAda/MsgCatAda.Mc_Mset_(function) [ Subprograms ]</h2>
+<a name="robo356"></a><h2>MsgCatAda/MsgCatAda.Mc_Mset_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -438,7 +440,7 @@
 
 <hr />
 <a name="MsgCatAda2fMsgCatAda2eMc5fMset5f28procedure29"></a>
-<a name="robo353"></a><h2>MsgCatAda/MsgCatAda.Mc_Mset_(procedure) [ Subprograms ]</h2>
+<a name="robo357"></a><h2>MsgCatAda/MsgCatAda.Mc_Mset_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -459,7 +461,7 @@
       Mc_Mset<span class="sign">(</span>My_Interp<span class="sign">,</span> <span class="quote">"en_US"</span><span class="sign">,</span> <span class="quote">"[list {hello world} {helloword} {my word} {myword}]"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo352">MsgCatAda.Mc_Mset_(function)</a>
+<pre> <a href="#robo356">MsgCatAda.Mc_Mset_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ::msgcat::mcmset locale list
@@ -470,7 +472,7 @@
 
 <hr />
 <a name="MsgCatAda2fMsgCatAda2eMc5fPreferences"></a>
-<a name="robo354"></a><h2>MsgCatAda/MsgCatAda.Mc_Preferences [ Subprograms ]</h2>
+<a name="robo358"></a><h2>MsgCatAda/MsgCatAda.Mc_Preferences [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -499,7 +501,7 @@
 
 <hr />
 <a name="MsgCatAda2fMsgCatAda2eMc5fSet5f28function29"></a>
-<a name="robo355"></a><h2>MsgCatAda/MsgCatAda.Mc_Set_(function) [ Subprograms ]</h2>
+<a name="robo359"></a><h2>MsgCatAda/MsgCatAda.Mc_Set_(function) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -529,7 +531,7 @@
       Translation<span class="sign">:</span> <span class="keyword">constant</span> String <span class="sign">:</span><span class="sign">=</span> Mc_Set<span class="sign">(</span>My_Interp<span class="sign">,</span> <span class="quote">"en_US"</span><span class="sign">,</span> <span class="quote">"{hello world}"</span><span class="sign">,</span> <span class="quote">"{helloword1}"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo356">MsgCatAda.Mc_Set_(procedure)</a>
+<pre> <a href="#robo360">MsgCatAda.Mc_Set_(procedure)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ::msgcat::mcset locale src-string ?translate-string?
@@ -540,7 +542,7 @@
 
 <hr />
 <a name="MsgCatAda2fMsgCatAda2eMc5fSet5f28procedure29"></a>
-<a name="robo356"></a><h2>MsgCatAda/MsgCatAda.Mc_Set_(procedure) [ Subprograms ]</h2>
+<a name="robo360"></a><h2>MsgCatAda/MsgCatAda.Mc_Set_(procedure) [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -567,7 +569,7 @@
    Mc_Set<span class="sign">(</span>My_Interp<span class="sign">,</span> <span class="quote">"en_US"</span><span class="sign">,</span> <span class="quote">"{hello world}"</span><span class="sign">,</span> <span class="quote">"{helloword1}"</span><span class="sign">)</span><span class="sign">;</span>
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre> <a href="#robo355">MsgCatAda.Mc_Set_(function)</a>
+<pre> <a href="#robo359">MsgCatAda.Mc_Set_(function)</a>
 </pre>
 <p class="item_name">COMMANDS</p>
 <pre> ::msgcat::mcset locale src-string ?translate-string?
@@ -578,7 +580,7 @@
 
 <hr />
 <a name="MsgCatAda2fMsgCatAda2eMsgCat5fInit"></a>
-<a name="robo357"></a><h2>MsgCatAda/MsgCatAda.MsgCat_Init [ Subprograms ]</h2>
+<a name="robo361"></a><h2>MsgCatAda/MsgCatAda.MsgCat_Init [ Subprograms ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo7">MsgCatAda</a> ] [ <a href="../robo_subprograms.html#robo_top_of_doc">Subprograms</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -603,7 +605,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/msgcat/tcl-msgcat-ada.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Dec 18 2020 07:13:51
+<p>Generated from ./src/msgcat/tcl-msgcat-ada.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Wed Sep 08 2021 07:13:11
 </p>
 </div> <!-- footer -->
 </body>
