@@ -8,6 +8,8 @@ file on Github: **please don't send pull requests here**. All will be
 automatically closed. Any code propositions should go to the [Fossil](https://www.laeran.pl/repositories/tashy)
 repository.
 
+**INFO:** This project is no longer maintained. Feel free to clone it and take care about it.
+
 TASHY is the Ada 2012 binding to Tcl/Tk. It allows using Tcl code in Ada code
 and vice versa. Included bindings:
 
